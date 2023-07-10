@@ -100,7 +100,9 @@ do an automatic commit on the branch that was executed from. To see the output e
 action ran successfully is mandatory.
 The scripts will generate automatically folders and transformation files under a specific structure that is presented
 below.
-###Output folders structure and content
+
+### Output folders structure and content
+
 Glossaries will be stored at the top level of this project outside the implementation folder, and it will 
 contain the individual glossaries for the UML model and a unified glossary if there are more than one UML model to
 be processed by GitHub action scripts
