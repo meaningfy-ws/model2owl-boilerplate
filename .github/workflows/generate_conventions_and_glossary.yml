@@ -53,8 +53,8 @@ jobs:
             ls -la
             cd model2owl
             ls -la
-            make generate-convention-report XMI_INPUT_FILE_PATH=$CM_FILE_PATH
-            make generate-glossary XMI_INPUT_FILE_PATH=$CM_FILE_PATH
+            make generate-convention-report XMI_INPUT_FILE_PATH=../$CM_FILE_PATH
+            make generate-glossary XMI_INPUT_FILE_PATH=../$CM_FILE_PATH
 
             sed -i "s/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" model2owl/config-proxy.xsl
           done
