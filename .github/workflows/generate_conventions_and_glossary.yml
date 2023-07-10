@@ -48,8 +48,8 @@ jobs:
             echo "OUTPUT_REPORT_PATH is $OUTPUT_REPORT_PATH"
             echo "OUTPUT_GLOSSARY_FILE_NAME is $OUTPUT_GLOSSARY_FILE_NAME"
 
-            mkdir -p $OUTPUT_REPORT_PATH
-            rm -f $OUTPUT_REPORT_PATH*.html || true
+            mkdir -p $OUTPUT_CONVENTION_REPORT_PATH
+            rm -f $OUTPUT_CONVENTION_REPORT_PATH*.html || true
 
             cd model2owl
             make generate-convention-report
