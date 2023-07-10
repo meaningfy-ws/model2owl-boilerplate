@@ -33,6 +33,7 @@ implementation
 ## Adjust GitHub actions
 In the folder .GitHub from this repository are 2 action scripts that will transform the UML model/models.
 ### Generate convention report and glossary
+
 **File name:** generate_conventions_and_glossary.yml
 
 Configure the trigger for this action changing the following lines
@@ -63,6 +64,7 @@ To include both models for generating the convention report and glossary the var
 AVAILABLE_IMPLEMENTATIONS=(modelOne modelTwo)
 ```
 ### Transform UML model
+
 **File name:** transform_ontology.yml
 
 Configure the trigger for this action changing the following lines
