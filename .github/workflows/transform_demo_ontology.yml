@@ -30,7 +30,7 @@ jobs:
 
       - name: transform step
         run: |
-          AVAILABLE_IMPLEMENTATIONS=${{ env.IMPLEMENTATIONS }}
+          AVAILABLE_IMPLEMENTATIONS=$IMPLEMENTATIONS
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation} transform---------------------------------"
