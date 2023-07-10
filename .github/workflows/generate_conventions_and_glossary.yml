@@ -60,7 +60,7 @@ jobs:
 
       - name: merge implementations xmi files into one
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(demo_ontology demo_ontology_module)
+          AVAILABLE_IMPLEMENTATIONS=(demo_ontology)
           cd model2owl
           mkdir -p merge-xmis
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
