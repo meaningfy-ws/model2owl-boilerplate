@@ -19,7 +19,7 @@ jobs:
 
       - name: get model2owl
         run: |
-          git clone --branch 2.0.0 https://github.com/OP-TED/model2owl.git
+          git clone https://github.com/OP-TED/model2owl.git
           pwd
           ls -la
 #          cp ./model2owl/Makefile /home/runner/work/ePO/ePO/
@@ -34,7 +34,7 @@ jobs:
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
-            sed -i "s/test\/ePO-default-config/..\/..\/implementation\/${implementation}\/model2owl-config/g" model2owl/config-proxy.xsl
+            sed -i "s/test\/ePO-default-config/..\/implementation\/${implementation}\/model2owl-config/g" model2owl/config-proxy.xsl
             cat model2owl/config-proxy.xsl
 
 
@@ -55,7 +55,7 @@ jobs:
             make generate-convention-report
             make generate-glossary
 
-            sed -i "s/..\/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" model2owl/config-proxy.xsl
+            sed -i "s/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" model2owl/config-proxy.xsl
           done
         shell: bash
 
