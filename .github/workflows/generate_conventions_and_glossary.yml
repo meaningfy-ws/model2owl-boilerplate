@@ -54,6 +54,7 @@ jobs:
             make generate-glossary XMI_INPUT_FILE_PATH=../$CM_FILE_PATH OUTPUT_GLOSSARY_PATH=../$OUTPUT_GLOSSARY_PATH
 
             sed -i "s/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" config-proxy.xsl
+            cd ..
           done
         shell: bash
 
