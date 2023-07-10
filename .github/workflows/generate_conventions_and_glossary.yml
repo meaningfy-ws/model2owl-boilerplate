@@ -78,7 +78,7 @@ jobs:
       - name: generate combined glossary from the merged xmi
         run: |
           cd model2owl
-          make XMI_INPUT_FILE_PATH=output/combined-xmi/ontologies-combined.xmi OUTPUT_GLOSSARY_PATH=../$OUTPUT_GLOSSARY_PATH
+          make generate-glossary XMI_INPUT_FILE_PATH=output/combined-xmi/ontologies-combined.xmi OUTPUT_GLOSSARY_PATH=../$OUTPUT_GLOSSARY_PATH
 
       - name: remove unnecessary files
         run: |
