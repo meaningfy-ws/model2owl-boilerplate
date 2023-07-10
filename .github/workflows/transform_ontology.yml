@@ -30,7 +30,7 @@ jobs:
 
       - name: transform step
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(demo_ontology)
+          AVAILABLE_IMPLEMENTATIONS=(demo_ontology demo_ontology_module)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation} transform---------------------------------"
