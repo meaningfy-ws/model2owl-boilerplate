@@ -25,7 +25,7 @@ jobs:
         run: pwd && cd model2owl && make get-saxon
 
       - name: get-rdflib
-        run: cd model2owl && make get-rdflib
+        run: cd model2owl && make create-virtual-env && make get-rdflib
 
       - name: transform step
         run: |
