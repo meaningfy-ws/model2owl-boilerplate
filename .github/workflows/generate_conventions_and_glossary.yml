@@ -17,13 +17,9 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - name: make transform process directories
-        run: |
-          mkdir -p transform
-
       - name: get model2owl
         run: |
-          cd transform && git clone --branch 2.0.0 https://github.com/OP-TED/model2owl.git
+          git clone --branch 2.0.0 https://github.com/OP-TED/model2owl.git
           pwd
 #          cp ./model2owl/Makefile /home/runner/work/ePO/ePO/
 
@@ -86,7 +82,7 @@ jobs:
 
       - name: remove unnecessary files
         run: |
-          sudo rm -rf transform
+          sudo rm -rf model2owl
         shell: bash
 
       - name: commit files
