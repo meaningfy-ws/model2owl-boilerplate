@@ -21,6 +21,7 @@ jobs:
         run: |
           git clone --branch 2.0.0 https://github.com/OP-TED/model2owl.git
           pwd
+          ls -la
 #          cp ./model2owl/Makefile /home/runner/work/ePO/ePO/
 
       - name: get-saxon
@@ -30,7 +31,6 @@ jobs:
       - name: transform step
         run: |
           AVAILABLE_IMPLEMENTATIONS=(demo_ontology)
-          cd model2owl
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
@@ -51,6 +51,7 @@ jobs:
             mkdir -p $OUTPUT_REPORT_PATH
             rm -f $OUTPUT_REPORT_PATH*.html || true
 
+            cd model2owl
             make generate-convention-report
             make generate-glossary
 
