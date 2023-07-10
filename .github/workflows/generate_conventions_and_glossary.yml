@@ -74,7 +74,7 @@ jobs:
                if [ -z "$(git status --porcelain)" ]; then
                echo "::set-output name=push::false"
                else
-               git commit -m "Adding transformation files"
+               git commit -m "Adding convention report and glossary files"
                echo "::set-output name=push::true"
                fi
         shell: bash
