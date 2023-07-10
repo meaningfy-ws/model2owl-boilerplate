@@ -1,4 +1,4 @@
-name: transform demo ontology
+name: transform UML model
 on:
   push:
     branches:
@@ -10,8 +10,6 @@ on:
 jobs:
   transform:
     runs-on: ubuntu-latest
-    env:
-      OUTPUT_GLOSSARY_PATH: glossary/
     steps:
       - uses: actions/checkout@master
         with:
