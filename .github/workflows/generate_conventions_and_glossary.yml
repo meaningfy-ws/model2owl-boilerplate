@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       OUTPUT_GLOSSARY_PATH: glossary/
-      MODEL2OWL_FOLDER: transform/model2owl
+      MODEL2OWL_FOLDER: model2owl/
     steps:
       - uses: actions/checkout@master
         with:
@@ -54,7 +54,7 @@ jobs:
             make generate-convention-report
             make generate-glossary
 
-            sed -i "s/..\/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" transform/model2owl/config-proxy.xsl
+            sed -i "s/..\/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" model2owl/config-proxy.xsl
           done
         shell: bash
 
