@@ -62,6 +62,7 @@ jobs:
             echo "-------------------end transform---------------------------------"
 
             sed -i "s/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" config-proxy.xsl
+            cd ..
           done
         shell: bash
 
