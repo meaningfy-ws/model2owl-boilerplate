@@ -1,0 +1,487 @@
+<!DOCTYPE HTML><html xmlns:dct="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta charset="utf-8">
+      <meta name="description" content="Model glossary">
+      <meta name="author" content="Publications Office of the European Union">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="static/css/jquery-ui.min.css">
+      <link rel="stylesheet" href="static/css/bootstrap.min.css">
+      <link rel="stylesheet" href="static/css/pubcss-acm-sig.css">
+      <link rel="stylesheet" href="static/css/toc_adjustments.css">
+      <link href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet">
+      <link rel="shortcut icon" href="">
+      <style>
+                #toc {
+                font-size: 1.2em;
+                width: 10%;
+                }
+                @media print{@page {size: landscape}}
+                
+            </style>
+      <title>Model glossary</title>
+   </head>
+   <body>
+      <main class="container-fluid">
+         <div id="toc" class="tocify">
+            <div class="text-center">
+               <p><strong>Table of contents</strong></p>
+            </div>
+         </div>
+         <div class="container">
+            <h1 xmlns:f="http://https://github.com/costezki/model2owl#">Glossary</h1>
+            <h2 xmlns:f="http://https://github.com/costezki/model2owl#">Class names and definitions</h2>
+            <table xmlns:f="http://https://github.com/costezki/model2owl#" class="display">
+               <thead class="center aligned">
+                  <tr>
+                     <th>Class name</th>
+                     <th>Definition</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>adms:Identifier</td>
+                     <td>A structured reference that identifies an entity.</td>
+                  </tr>
+                  <tr>
+                     <td>clv:AdminUnit</td>
+                     <td>A detailed administrative unit organized in a hierarchy.</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:Person</td>
+                     <td>A individual human being who may be dead or alive, but not imaginary.</td>
+                  </tr>
+                  <tr>
+                     <td>cv:ContactPoint</td>
+                     <td>Information (e.g. e-mail address, telephone number) of a person or department through
+                        which the user can get in touch with.</td>
+                  </tr>
+                  <tr>
+                     <td>dct:Jurisdiction</td>
+                     <td>The limits or territory within which authority may be exercised.</td>
+                  </tr>
+                  <tr>
+                     <td>dct:Location</td>
+                     <td>An identifiable geographic place or named place.
+                        </td>
+                  </tr>
+                  <tr>
+                     <td>foaf:Agent</td>
+                     <td>Entity that is able to carry out action.</td>
+                  </tr>
+                  <tr>
+                     <td>foaf:Person</td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>A spatial object that in a human-readable way identifies a fixed location.</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Geometry</td>
+                     <td>A shape or form of a Location.</td>
+                  </tr>
+                  <tr>
+                     <td>rdfs:Resource</td>
+                     <td>Anything that can be described.</td>
+                  </tr>
+               </tbody>
+            </table>
+            <h2 xmlns:f="http://https://github.com/costezki/model2owl#">Attributes (datatype properties) names and definitions</h2>
+            <table xmlns:f="http://https://github.com/costezki/model2owl#" class="display">
+               <thead class="center aligned">
+                  <tr>
+                     <th>Class name</th>
+                     <th>Attribute name</th>
+                     <th>Definition</th>
+                     <th>Data type / cardinality</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>adms:Identifier</td>
+                     <td>adms:schemeAgency</td>
+                     <td>The name of the agency responsible for issuing the Identifier.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Geometry</td>
+                     <td>clv:coordinates</td>
+                     <td>A list of geographic coordinates that define the extent of the Geometry.</td>
+                     <td>xsd:string [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Geometry</td>
+                     <td>clv:crs</td>
+                     <td>An identifier for the coordinate reference system.</td>
+                     <td>xsd:anyURI [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Geometry</td>
+                     <td>clv:latitude</td>
+                     <td>The geographic coordinate that specifies the north / south position of the Geomerty
+                        on the Earth's surface.</td>
+                     <td>xsd:string [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Geometry</td>
+                     <td>clv:longitude</td>
+                     <td>The geographic coordinate that specifies the east / west position of the Geometry
+                        on the Earth's surface.</td>
+                     <td>xsd:string [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:Person</td>
+                     <td>cpv:birthDate</td>
+                     <td>The point in time on which the Person was born.</td>
+                     <td>cpv:GenericDate [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:Person</td>
+                     <td>cpv:deathDate</td>
+                     <td>The point in time on which the Person died.</td>
+                     <td>cpv:GenericDate [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:Person</td>
+                     <td>cpv:matronymicName</td>
+                     <td>Name based on the given name of the Person's mother.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:Person</td>
+                     <td>cpv:patronymicName</td>
+                     <td>Name based on the given name of the Person's father.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cv:ContactPoint</td>
+                     <td>cv:contactPage</td>
+                     <td>A web page that could be used to reach out the Contact Point.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cv:ContactPoint</td>
+                     <td>cv:email</td>
+                     <td>An electronic address through which the Contact Point can be contacted.</td>
+                     <td>rdfs:Literal [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cv:ContactPoint</td>
+                     <td>cv:telephone</td>
+                     <td>A telephone number through which the Contact Point can be contacted.</td>
+                     <td>rdfs:Literal [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:Person</td>
+                     <td>dct:alternative</td>
+                     <td>Any name by which a Person is known, other than their full name.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>adms:Identifier</td>
+                     <td>dct:conformsTo</td>
+                     <td></td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>dct:Jurisdiction</td>
+                     <td>dct:identifier</td>
+                     <td>A reference in the form of a Uniform Resource Identifier to the Jurisdiction.</td>
+                     <td>xsd:anyURI [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>adms:Identifier</td>
+                     <td>dct:issued</td>
+                     <td>The date on which the Identifier was assigned.</td>
+                     <td>xsd:date [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>foaf:Agent</td>
+                     <td>dct:title</td>
+                     <td>The noun given to the Agent.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:Person</td>
+                     <td>foaf:familyName</td>
+                     <td></td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:Person</td>
+                     <td>foaf:givenName</td>
+                     <td>The name(s) that identify the Person within a family with a common surname.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:Person</td>
+                     <td>foaf:name</td>
+                     <td>The complete name of the Person as one string.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Geometry</td>
+                     <td>geosparql:asGML</td>
+                     <td>The expression of the Geometry in Geography Markup Language.</td>
+                     <td>rdfs:Literal [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Geometry</td>
+                     <td>geosparql:asWKT</td>
+                     <td>An expression of the Geometry in WKT, the Well-Known Text markup language.</td>
+                     <td>rdfs:Literal [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>lcon:fullAddress</td>
+                     <td>The complete address written as a string.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>locn:addressArea</td>
+                     <td>The name of a geographic area that groups Addresses.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>locn:addressID</td>
+                     <td>A globally unique identifier for each instance of an Address.</td>
+                     <td>rdfs:Literal [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>locn:adminUnitL1</td>
+                     <td>The name of the uppermost level of the address, almost always a country.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>locn:adminUnitL2</td>
+                     <td>The name of a secondary level/region of the address, usually a county, state or other
+                        such area that typically encompasses several localities.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>dct:Location</td>
+                     <td>locn:geographicName</td>
+                     <td>A textual description for a Location. </td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>locn:locatorDesignator</td>
+                     <td>A number or sequence of characters that uniquely identifies the locator within the
+                        relevant scope.</td>
+                     <td>rdfs:Literal [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>locn:locatorName</td>
+                     <td>Proper noun(s) applied to the real world entity identified by the locator.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>locn:poBox</td>
+                     <td>A location designator for a postal delivery point at a post office, usually a number.</td>
+                     <td>rdfs:Literal [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>locn:postCode</td>
+                     <td>The code created and maintained for postal purposes to identify a subdivision of addresses
+                        and postal delivery points.</td>
+                     <td>rdfs:Literal [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>locn:postName</td>
+                     <td>A name created and maintained for postal purposes to identify a subdivision of addresses
+                        and postal delivery points.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:Address</td>
+                     <td>locn:thoroughfare</td>
+                     <td>The name of a passage or way through from one location to another. </td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:Person</td>
+                     <td>person:birthName</td>
+                     <td>Full name of the Person given upon their birth.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>adms:Identifier<br>dct:Jurisdiction<br></td>
+                     <td>rdfs:label</td>
+                     <td> A string of characters that represents a Jurisdiction.</td>
+                     <td>rdf:langString [0..*]<br>rdf:langString [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>dct:Location</td>
+                     <td>rdfs:seeAlso</td>
+                     <td>A reference in the form of a Uniform Resource Identifier to the Location.</td>
+                     <td>xsd:anyURI [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>adms:Identifier</td>
+                     <td>skos:notation</td>
+                     <td>A string of characters to uniquely identify a concept.</td>
+                     <td>rdfs:Literal [0..*]</td>
+                  </tr>
+               </tbody>
+            </table>
+            <h2 xmlns:f="http://https://github.com/costezki/model2owl#">Predicates (object properties) and definitions</h2>
+            <table xmlns:f="http://https://github.com/costezki/model2owl#" class="display">
+               <thead class="center aligned">
+                  <tr>
+                     <th>Predicate name</th>
+                     <th>Definition</th>
+                     <th>Domain, Range and Cardinality</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>clv:adminUnit</td>
+                     <td>The adminUnit relationship links an Address with the Administrative Unit class.</td>
+                     <td>locn:Address -&gt; clv:AdminUnit [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>clv:code</td>
+                     <td>The classification of the administrative unit.</td>
+                     <td>clv:AdminUnit -&gt; clv:code [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>clv:geometryType</td>
+                     <td>The classification of the Geometry.</td>
+                     <td>locn:Geometry -&gt; clv:geometryType [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>clv:level</td>
+                     <td>The level of the administrative unit in the hierarchy.</td>
+                     <td>clv:AdminUnit -&gt; clv:level [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>clv:registeredAddress</td>
+                     <td></td>
+                     <td>rdfs:Resource -&gt; locn:Address [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:contactPoint</td>
+                     <td>The main contact information of the resource.  The main contact information of the resource.</td>
+                     <td>cpv:Person -&gt; cv:ContactPoint [0..*]<br><br></td>
+                  </tr>
+                  <tr>
+                     <td>cpv:domicile</td>
+                     <td>The place that the Person treats as permanent home. The place that the Person treats as permanent home.</td>
+                     <td>cpv:Person -&gt; locn:Address [0..*]<br>cpv:Person -&gt; locn:Address [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>cpv:gender</td>
+                     <td>The organism's biological sex. The identities, expressions and societal roles of the Person.</td>
+                     <td>cpv:Person -&gt; cpv:sex [0..*]<br>cpv:Person -&gt; cpv:gender [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>cpv:identifies</td>
+                     <td>The entity that is referenced by the Identifier.</td>
+                     <td>adms:Identifier -&gt; cpv:Person [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>dct:creator</td>
+                     <td>The reference in the form of a Uniform Resource Identifier to the issuing authority.</td>
+                     <td>adms:Identifier -&gt; foaf:Agent [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>dct:identifier</td>
+                     <td>The unambiguous structured reference to the Person.</td>
+                     <td>cpv:Person -&gt; adms:Identifier [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>dct:type</td>
+                     <td>A classification assigned to an Agent.</td>
+                     <td>foaf:Agent -&gt; cpv:type [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:address</td>
+                     <td>Associates any Resource with the corresponding Address. The Address of a Public Organization.</td>
+                     <td>rdfs:Resource -&gt; locn:Address [0..*]<br><br></td>
+                  </tr>
+                  <tr>
+                     <td>locn:geometry</td>
+                     <td>Associates any Resource with the corresponding Geometry.</td>
+                     <td>rdfs:Resource -&gt; locn:Geometry [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:location</td>
+                     <td>Associates any Resource with the corresponding Location.</td>
+                     <td>rdfs:Resource -&gt; dct:Location [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>person:citizenship</td>
+                     <td>The Jurisdiction that has conferred citizenship rights on the Person such as the right
+                        to vote, to receive certain protection from the community or the issuance of a passport.</td>
+                     <td>cpv:Person -&gt; dct:Jurisdiction [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>person:countryOfBirth</td>
+                     <td>The country in which the Person was born. The country in which the Person was born.</td>
+                     <td>cpv:Person -&gt; dct:Location [0..*]<br>cpv:Person -&gt; dct:Location [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>person:countryOfDeath</td>
+                     <td>The country in which the Person died. The country in which the Person died.</td>
+                     <td>cpv:Person -&gt; dct:Location [0..*]<br>cpv:Person -&gt; dct:Location [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>person:placeOfBirth</td>
+                     <td>The Location where the Person was born. The Location where the Person was born.</td>
+                     <td>cpv:Person -&gt; dct:Location [0..*]<br>cpv:Person -&gt; dct:Location [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>person:placeOfDeath</td>
+                     <td>The Location where the Person died. The Location where the Person died.</td>
+                     <td>cpv:Person -&gt; dct:Location [0..*]<br>cpv:Person -&gt; dct:Location [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>person:residency</td>
+                     <td>Jurisdiction where the Person has their dwelling.</td>
+                     <td>cpv:Person -&gt; dct:Jurisdiction [0..*]</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </main>
+      <footer class="text-center"><br><br><p> This document is generated automatically by the <a href="https://github.com/costezki/model2owl" target="_blank">model2owl tool</a>
+            developed in the context of <a href="https://joinup.ec.europa.eu/solution/eprocurement-ontology">the
+               eProcurement Ontology initiative</a>.</p>
+         <p>The template of this report is based on the <a href="https://github.com/thomaspark/pubcss">PubCSS library</a>.</p>
+         <p>© Publications Office of the European Union, 2023</p>
+      </footer><script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script><script src="static/js/jquery-3.4.1.min.js"></script><script src="static/js/jquery-ui.min.js"></script><script src="static/js/bootstrap.min.js"></script><script src="static/js/jquery.tocify.min.js"></script><script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script><script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script><script type="text/javascript" src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js"></script><script>
+            $(function () {
+            //Calls the tocify method on your HTML div.
+            $("#toc").tocify({
+            selectors: "h2",
+            theme: "bootstrap",
+            hashGenerator: "pretty",
+            ignoreSelector: ".skip-toc"
+            });
+            });
+            
+        </script><script>
+            $(document).ready(function () {
+            
+            $("table.display").DataTable({
+            buttons: [],
+            "lengthMenu": [[-1], ["All"]],
+            responsive: {
+            details: true
+            }
+            });
+            
+            });
+        </script></body>
+</html>
