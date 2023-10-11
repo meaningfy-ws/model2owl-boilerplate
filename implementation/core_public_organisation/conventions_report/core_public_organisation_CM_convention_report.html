@@ -55,140 +55,146 @@
                   and
                   Generalisations</em>. Each major section lists model items that need correction of errors
                or consideration of warnings.</p>
-            <p>The UML model in file <em>core_location_CM.xml</em> 
+            <p>The UML model in file <em>core_public_organisation_CM.xml</em> 
                was tested at 08:16 on October 11, 2023.</p>
          </div>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="nomenclature">Nomenclature</h1>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classNames">Class names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#" class="display-in-two-columns">
-            <li><a href="#clv:AdminUnit">clv:AdminUnit</a></li>
-            <li><a href="#dct:Location">dct:Location</a></li>
-            <li><a href="#locn:Address">locn:Address</a></li>
-            <li><a href="#locn:Geometry">locn:Geometry</a></li>
-            <li><a href="#rdfs:Resource">rdfs:Resource</a></li>
+            <li><a href="#cccev:ReferenceFramework">cccev:ReferenceFramework</a></li>
+            <li><a href="#cpov:ImageObject">cpov:ImageObject</a></li>
+            <li><a href="#cpov:PublicOrganisation">cpov:PublicOrganisation</a></li>
+            <li><a href="#foaf:Document">foaf:Document</a></li>
+            <li><a href="#org:ChangeEvent">org:ChangeEvent</a></li>
+            <li><a href="#org:Organization">org:Organization</a></li>
+            <li><a href="#org:OrganizationalUnit">org:OrganizationalUnit</a></li>
+            <li><a href="#time:TemporalEntity">time:TemporalEntity</a></li>
          </ul>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="classAttributesNames">Class attribute names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#">
-            <li><a href="#attribute-clv:coordinates">clv:coordinates</a></li>
-            <li><a href="#attribute-clv:crs">clv:crs</a></li>
-            <li><a href="#attribute-clv:latitude">clv:latitude</a></li>
-            <li><a href="#attribute-clv:longitude">clv:longitude</a></li>
-            <li><a href="#attribute-geosparql:asGML">geosparql:asGML</a></li>
-            <li><a href="#attribute-geosparql:asWKT">geosparql:asWKT</a></li>
-            <li><a href="#attribute-locn:addressArea">locn:addressArea</a></li>
-            <li><a href="#attribute-locn:addressID">locn:addressID</a></li>
-            <li><a href="#attribute-locn:adminUnitL1">locn:adminUnitL1</a></li>
-            <li><a href="#attribute-locn:adminUnitL2">locn:adminUnitL2</a></li>
-            <li><a href="#attribute-locn:fullAddress">locn:fullAddress</a></li>
-            <li><a href="#attribute-locn:geographicName">locn:geographicName</a></li>
-            <li><a href="#attribute-locn:locatorDesignator">locn:locatorDesignator</a></li>
-            <li><a href="#attribute-locn:locatorName">locn:locatorName</a></li>
-            <li><a href="#attribute-locn:poBox">locn:poBox</a></li>
-            <li><a href="#attribute-locn:postCode">locn:postCode</a></li>
-            <li><a href="#attribute-locn:postName">locn:postName</a></li>
-            <li><a href="#attribute-locn:thoroughfare">locn:thoroughfare</a></li>
-            <li><a href="#attribute-rdfs:seeAlso">rdfs:seeAlso</a></li>
+            <li><a href="#attribute-dct:description-usage">dct:description (3)</a><ul><em>
+                     <li>cpov:PublicOrganisation (rdf:langString) [0..*]</li>
+                     <li>org:ChangeEvent (rdf:langString) [0..*]</li>
+                     <li>time:TemporalEntity (rdf:langString) [0..*]</li></em></ul>
+            </li>
+            <li><a href="#attribute-dct:identifier">dct:identifier</a></li>
+            <li><a href="#attribute-prov:endedAtTime">prov:endedAtTime</a></li>
+            <li><a href="#attribute-prov:startedAtTime">prov:startedAtTime</a></li>
+            <li><a href="#attribute-skos:altLabel">skos:altLabel</a></li>
+            <li><a href="#attribute-skos:prefLabel">skos:prefLabel</a></li>
          </ul>
          <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="connectorNames">Connector names</h2>
          <ul xmlns:f="http://https://github.com/costezki/model2owl#">
-            <li>clv:adminUnit</li>
-            <li>clv:code</li>
-            <li>clv:geometryType</li>
-            <li>clv:level</li>
-            <li>clv:registeredAddress</li>
-            <li>cpv:domicile</li>
-            <li><a href="#connector-locn:address">locn:address (2)</a><ul><em>
-                     <li>rdfs:Resource -&gt; locn:Address [0..*]</li>
-                     <li> -&gt; locn:Address [0..*]</li></em></ul>
-            </li>
-            <li>locn:geometry</li>
-            <li>locn:location</li>
-            <li>person:countryOfBirth</li>
-            <li>person:countryOfDeath</li>
-            <li>person:placeOfBirth</li>
-            <li>person:placeOfDeath</li>
+            <li>adms:identifier</li>
+            <li>cpov:frequency</li>
+            <li>cpov:hasFormalFramework</li>
+            <li>cpov:logo</li>
+            <li>cpov:openingHours</li>
+            <li>cpov:specialOpeningHoursSpecification</li>
+            <li>cpsv:implements</li>
+            <li>cpv:contactPoint</li>
+            <li>dct:spatial</li>
+            <li>foaf:homepage</li>
+            <li>locn:address</li>
+            <li>org:changedBy</li>
+            <li>org:classification</li>
+            <li>org:hasMember</li>
+            <li>org:hasSubOrganization</li>
+            <li>org:hasUnit</li>
+            <li>org:memberOf</li>
+            <li>org:originalOrganization</li>
+            <li>org:purpose</li>
+            <li>org:resultedFrom</li>
+            <li>org:resultingOrganization</li>
+            <li>org:subOrganizationOf</li>
+            <li>org:unitOf</li>
+            <li>xhtml:next</li>
+            <li>xhtml:prev</li>
          </ul>
          <h1 class="selector-heading" id="classes">Classes</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="clv:AdminUnit">clv:AdminUnit</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="cpov:ImageObject">cpov:ImageObject</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class clv:AdminUnit has no attributes provided. A class should define some attributes.</dd>
+               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class cpov:ImageObject has no attributes provided. A class should define some
+                  attributes.</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="locn:Address">locn:Address</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="foaf:Document">foaf:Document</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name is possibly in plural grammatical number. Names shall be usually provided
-                  in singular number.</dd>
-            </dl>
-            <dl id="attribute-locn:fullAddress">
-               <dt>locn:fullAddress</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name is possibly in plural grammatical number. Names shall be usually provided
-                  in singular number.</dd>
+               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class foaf:Document has no attributes provided. A class should define some attributes.</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="locn:Geometry">locn:Geometry</h2>
-         <section xmlns:f="http://https://github.com/costezki/model2owl#">
-            <dl id="attribute-clv:coordinates">
-               <dt>clv:coordinates</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name is possibly in plural grammatical number. Names shall be usually provided
-                  in singular number.</dd>
-            </dl>
-            <dl id="attribute-clv:crs">
-               <dt>clv:crs</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The name is possibly in plural grammatical number. Names shall be usually provided
-                  in singular number.</dd>
-            </dl>
-         </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="rdfs:Resource">rdfs:Resource</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="org:Organization">org:Organization</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet class conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class rdfs:Resource has no attributes provided. A class should define some attributes.</dd>
+               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class org:Organization has no attributes provided. A class should define some
+                  attributes.</dd>
+            </dl>
+         </section>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#" id="org:OrganizationalUnit">org:OrganizationalUnit</h2>
+         <section xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dl>
+               <dt>Unmet class conventions</dt>
+               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The class org:OrganizationalUnit has no attributes provided. A class should define
+                  some attributes.</dd>
             </dl>
          </section>
          <h1 class="selector-heading" id="enumerations">Enumerations</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">clv:code</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">cpov:frequency</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet enumeration conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>clv:code is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name clv:code is not unique. The Concept names should be unique within the model.
-                  The following specifies the names of the which things are not to be reused as the
-                  names of which other things: elements (Class, Datatype, Enumeration, Object) -&gt; elements,
-                  attributes, connector roles (dependency and association)</dd>
+               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>cpov:frequency is missing a description. All concepts should be defined or described.</dd>
+               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name cpov:frequency is not unique. The Concept names should be unique within the
+                  model. The following specifies the names of the which things are not to be reused
+                  as the names of which other things: elements (Class, Datatype, Enumeration, Object)
+                  -&gt; elements, attributes, connector roles (dependency and association)</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">clv:geometryType</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">org:classification</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet enumeration conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>clv:geometryType is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name clv:geometryType is not unique. The Concept names should be unique within
+               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>org:classification is missing a description. All concepts should be defined or described.</dd>
+               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name org:classification is not unique. The Concept names should be unique within
                   the model. The following specifies the names of the which things are not to be reused
                   as the names of which other things: elements (Class, Datatype, Enumeration, Object)
                   -&gt; elements, attributes, connector roles (dependency and association)</dd>
             </dl>
          </section>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">clv:level</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">org:purpose</h2>
          <section xmlns:f="http://https://github.com/costezki/model2owl#">
             <dl>
                <dt>Unmet enumeration conventions</dt>
-               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>clv:level is missing a description. All concepts should be defined or described.</dd>
-               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name clv:level is not unique. The Concept names should be unique within the model.
-                  The following specifies the names of the which things are not to be reused as the
-                  names of which other things: elements (Class, Datatype, Enumeration, Object) -&gt; elements,
-                  attributes, connector roles (dependency and association)</dd>
+               <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>org:purpose is missing a description. All concepts should be defined or described.</dd>
+               <dd class="filter errors"><i class="fa fa-times-circle error"></i>The name org:purpose is not unique. The Concept names should be unique within the
+                  model. The following specifies the names of the which things are not to be reused
+                  as the names of which other things: elements (Class, Datatype, Enumeration, Object)
+                  -&gt; elements, attributes, connector roles (dependency and association)</dd>
             </dl>
          </section>
          <h1 class="selector-heading" id="dataTypes">Data-types</h1>
          <h1 class="selector-heading" id="packages">Packages</h1>
          <h1 class="selector-heading" id="object">Object</h1>
          <h1 class="selector-heading" id="generalizations">Generalizations</h1>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">cpov:PublicOrganisation -&gt; org:Organization (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet generalisation conventions </dt>
+            <dd class="filter infos"><i class="fa fa-info-circle info"></i>The class org:Organization has only one sub-class cpov:PublicOrganisation. Class inheritance
+               should be built employing at least two subclasses for each class or not at all.</dd>
+         </dl>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">org:OrganizationalUnit -&gt; org:Organization (+)</h2>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#">
+            <dt> Unmet generalisation conventions </dt>
+            <dd class="filter infos"><i class="fa fa-info-circle info"></i>The class org:Organization has only one sub-class org:OrganizationalUnit. Class inheritance
+               should be built employing at least two subclasses for each class or not at all.</dd>
+         </dl>
          <h1 class="selector-heading" id="associations">Associations</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">rdfs:Resource -&gt; locn:Address (+clv:registeredAddress)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">cpov:PublicOrganisation -&gt; cpov:ImageObject (+cpov:logo)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt>
                Unmet association conventions
@@ -197,46 +203,58 @@
                define and describe all the relations.</dd>
          </dl>
          <h1 class="selector-heading" id="dependencies">Dependencies</h1>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">clv:AdminUnit -&gt; clv:code (+clv:code)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">cpov:PublicOrganisation -&gt; org:purpose (+org:purpose)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
-            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector target role name clv:code is not unique.The Connector role names can
-               be reused within the model, but only as connector role names on the same type of connector.I.e.
-               the  name of (dependecy and association) connector roles should not be reused as the
-               name of elements  (Class, Datatype, Enumeration, Object) or attributes.</dd>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector target role name org:purpose is not unique.The Connector role names
+               can be reused within the model, but only as connector role names on the same type
+               of connector.I.e. the  name of (dependecy and association) connector roles should
+               not be reused as the name of elements  (Class, Datatype, Enumeration, Object) or attributes.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">clv:AdminUnit -&gt; clv:level (+clv:level)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">cpov:PublicOrganisation -&gt; org:classification (+org:classification)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
-            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector target role name clv:level is not unique.The Connector role names can
-               be reused within the model, but only as connector role names on the same type of connector.I.e.
-               the  name of (dependecy and association) connector roles should not be reused as the
-               name of elements  (Class, Datatype, Enumeration, Object) or attributes.</dd>
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector target role name org:classification is not unique.The Connector role
+               names can be reused within the model, but only as connector role names on the same
+               type of connector.I.e. the  name of (dependecy and association) connector roles should
+               not be reused as the name of elements  (Class, Datatype, Enumeration, Object) or attributes.</dd>
          </dl>
-         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">locn:Geometry -&gt; clv:geometryType (+clv:geometryType)</h2>
+         <h2 xmlns:f="http://https://github.com/costezki/model2owl#">time:TemporalEntity -&gt; cpov:frequency (+cpov:frequency)</h2>
          <dl xmlns:f="http://https://github.com/costezki/model2owl#">
             <dt> Unmet dependency conventions </dt>
-            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector target role name clv:geometryType is not unique.The Connector role names
+            <dd class="filter errors"><i class="fa fa-times-circle error"></i>The connector target role name cpov:frequency is not unique.The Connector role names
                can be reused within the model, but only as connector role names on the same type
                of connector.I.e. the  name of (dependecy and association) connector roles should
                not be reused as the name of elements  (Class, Datatype, Enumeration, Object) or attributes.</dd>
          </dl>
          <h1 class="selector-heading" id="realisations">Realisations</h1>
          <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="connectorsUsage">Connectors with multiple usages</h1>
-         <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="connector-locn:address">
-            <dt>locn:address</dt>
+         <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="classAttributesUsage">Class attributes with multiple usages</h1>
+         <dl xmlns:f="http://https://github.com/costezki/model2owl#" id="attribute-dct:description-usage">
+            <dt>dct:description</dt>
+            <dd class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>The attribute dct:description is defined differently in reuse contexts. When a property
+               is reused in multiple contexts, the meaning given by the definition is expected to
+               be the same.In this case, multiple definitions are found: 
+               <ul>
+                  <li>The textual description of the Public Organization. (cpov:PublicOrganisation) </li>
+                  <li>A textual explanation of the event. (org:ChangeEvent) </li>
+                  <li>A textual representation of the Temporal Entity. (time:TemporalEntity) </li>
+               </ul>
+            </dd>
          </dl>
-         <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>When a property is reused in multiple contexts, the meaning given by the definition
-            is expected to be the same. In this case, multiple definitions are found: 
+         <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="generalConventions">General conventions</h1>
+         <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>Only associations, dependecies, generalisations and realisation connectors are supported.
+            The following connector types were found in model and are not supported
             <ul>
-               <li>Associates any Resource with the corresponding Address. (rdfs:Resource -&gt; locn:Address
-                  (+locn:address)) </li>
-               <li>The Address of a Public Organization. (cpov:PublicOrganisation -&gt; locn:Address (+locn:address))
-                  </li>
+               <li>NoteLink</li>
             </ul>
          </dd>
-         <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="classAttributesUsage">Class attributes with multiple usages</h1>
-         <h1 xmlns:f="http://https://github.com/costezki/model2owl#" id="generalConventions">General conventions</h1>
+         <dd xmlns:f="http://https://github.com/costezki/model2owl#" class="filter warnings"><i class="fa fa-exclamation-triangle warning"></i>Only Class, Package, Datatype, Enumeration, and Object elements are supported. The
+            following element types were found in model and are not supported
+            <ul>
+               <li>uml:Note</li>
+            </ul>
+         </dd>
       </main>
       <footer class="text-center"><br><br><p> This document is generated automatically by the <a href="https://github.com/costezki/model2owl" target="_blank">model2owl tool</a>
             developed in the context of <a href="https://joinup.ec.europa.eu/solution/eprocurement-ontology">the

@@ -45,8 +45,21 @@
                      <td>A structured reference that identifies an entity.</td>
                   </tr>
                   <tr>
+                     <td>cccev:ReferenceFramework</td>
+                     <td>Legislation or official policy from which Requirements are derived.</td>
+                  </tr>
+                  <tr>
                      <td>clv:AdminUnit</td>
                      <td>A detailed administrative unit organized in a hierarchy.</td>
+                  </tr>
+                  <tr>
+                     <td>cpov:ImageObject</td>
+                     <td>A logo to describe / represent the PublicOrganization.</td>
+                  </tr>
+                  <tr>
+                     <td>cpov:PublicOrganisation</td>
+                     <td>An Organization that is defined as being part of the public sector by a legal framework
+                        at any level.</td>
                   </tr>
                   <tr>
                      <td>cpv:Person</td>
@@ -71,6 +84,10 @@
                      <td>Entity that is able to carry out action.</td>
                   </tr>
                   <tr>
+                     <td>foaf:Document</td>
+                     <td>A self-contained collection of information in a readable format.</td>
+                  </tr>
+                  <tr>
                      <td>foaf:Person</td>
                      <td></td>
                   </tr>
@@ -83,8 +100,28 @@
                      <td>A shape or form of a Location.</td>
                   </tr>
                   <tr>
+                     <td>org:ChangeEvent</td>
+                     <td>An event which resulted in a major change to an Organization such as a merger or complete
+                        restructuring.</td>
+                  </tr>
+                  <tr>
+                     <td>org:Organization</td>
+                     <td>A collection of people organized together into a community or other social, commercial
+                        or political structure. The group has some common purpose or reason for existence
+                        which goes beyond the set of people belonging to it and can act as an Agent. Organizations
+                        are often decomposable into hierarchical structures.</td>
+                  </tr>
+                  <tr>
+                     <td>org:OrganizationalUnit</td>
+                     <td>A subdivision of Organization which is part of this Organization.</td>
+                  </tr>
+                  <tr>
                      <td>rdfs:Resource</td>
                      <td>Anything that can be described.</td>
+                  </tr>
+                  <tr>
+                     <td>time:TemporalEntity</td>
+                     <td>A temporal interval or instant.</td>
                   </tr>
                </tbody>
             </table>
@@ -186,10 +223,16 @@
                      <td>rdf:langString [0..*]</td>
                   </tr>
                   <tr>
-                     <td>dct:Jurisdiction</td>
+                     <td>cpov:PublicOrganisation<br>org:ChangeEvent<br>time:TemporalEntity<br></td>
+                     <td>dct:description</td>
+                     <td>The textual description of the Public Organization. A textual explanation of the event. A textual representation of the Temporal Entity.</td>
+                     <td>rdf:langString [0..*]<br>rdf:langString [0..*]<br>rdf:langString [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>dct:Jurisdiction<br>cccev:ReferenceFramework<br></td>
                      <td>dct:identifier</td>
-                     <td>A reference in the form of a Uniform Resource Identifier to the Jurisdiction.</td>
-                     <td>xsd:anyURI [0..*]</td>
+                     <td>A reference in the form of a Uniform Resource Identifier to the Jurisdiction. An unambiguous reference to a Reference Framework.</td>
+                     <td>xsd:anyURI [0..*]<br>rdfs:Literal [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>adms:Identifier</td>
@@ -316,6 +359,18 @@
                      <td>rdf:langString [0..*]</td>
                   </tr>
                   <tr>
+                     <td>org:ChangeEvent</td>
+                     <td>prov:endedAtTime</td>
+                     <td>The time instant when the state of the organisation update was terminated</td>
+                     <td>xsd:dateTime [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>org:ChangeEvent</td>
+                     <td>prov:startedAtTime</td>
+                     <td>The time instant when the state of the organisation update was initiated.</td>
+                     <td>xsd:dateTime [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>adms:Identifier<br>dct:Jurisdiction<br></td>
                      <td>rdfs:label</td>
                      <td> A string of characters that represents a Jurisdiction.</td>
@@ -328,10 +383,23 @@
                      <td>xsd:anyURI [0..*]</td>
                   </tr>
                   <tr>
+                     <td>cpov:PublicOrganisation</td>
+                     <td>skos:altLabel</td>
+                     <td>An alternative or informal name(s) of a Public Organization, irrespective of language.</td>
+                     <td>rdf:langString [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>adms:Identifier</td>
                      <td>skos:notation</td>
                      <td>A string of characters to uniquely identify a concept.</td>
                      <td>rdfs:Literal [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpov:PublicOrganisation</td>
+                     <td>skos:prefLabel</td>
+                     <td>A preferred label is used to provide the primary, legally recognised name of the Public
+                        Organization, as defined in the ORG Ontology.</td>
+                     <td>rdf:langString [0..*]</td>
                   </tr>
                </tbody>
             </table>
@@ -345,6 +413,11 @@
                   </tr>
                </thead>
                <tbody>
+                  <tr>
+                     <td>adms:identifier</td>
+                     <td> </td>
+                     <td>cpov:PublicOrganisation -&gt; adms:Identifier [0..*]<br>cpov:PublicOrganisation -&gt; adms:Identifier [0..*]<br></td>
+                  </tr>
                   <tr>
                      <td>clv:adminUnit</td>
                      <td>The adminUnit relationship links an Address with the Administrative Unit class.</td>
@@ -371,9 +444,42 @@
                      <td>rdfs:Resource -&gt; locn:Address [0..*]</td>
                   </tr>
                   <tr>
+                     <td>cpov:frequency</td>
+                     <td>The recurrence of an instant or period.
+                        </td>
+                     <td>time:TemporalEntity -&gt; cpov:frequency [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpov:hasFormalFramework</td>
+                     <td>A Change Event linked to relevant legislation or policy documents.A piece of legislation
+                        or a policy document that prompted the change.</td>
+                     <td>org:ChangeEvent -&gt; cccev:ReferenceFramework [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpov:logo</td>
+                     <td></td>
+                     <td>cpov:PublicOrganisation -&gt; cpov:ImageObject [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpov:openingHours</td>
+                     <td>The time at which the Contact Point is normally available. The time at which the Contact Point is normally available.</td>
+                     <td>cv:ContactPoint -&gt; time:TemporalEntity [0..*]<br>cv:ContactPoint -&gt; time:TemporalEntity [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>cpov:specialOpeningHoursSpecification</td>
+                     <td>The time during which the Contact Point is not available. The time during which the Contact Point is not available.</td>
+                     <td>cv:ContactPoint -&gt; time:TemporalEntity [0..*]<br>cv:ContactPoint -&gt; time:TemporalEntity [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>cpsv:implements</td>
+                     <td>A Change Event linked to relevant legislation or policy documents.A piece of legislation
+                        or a policy document that prompted the change.</td>
+                     <td>org:ChangeEvent [,0..*] &lt;- cccev:ReferenceFramework</td>
+                  </tr>
+                  <tr>
                      <td>cpv:contactPoint</td>
-                     <td>The main contact information of the resource.  The main contact information of the resource.</td>
-                     <td>cpv:Person -&gt; cv:ContactPoint [0..*]<br><br></td>
+                     <td>The main contact information of the resource.  The main contact information of the resource. The main contact information of the resource.</td>
+                     <td>cpv:Person -&gt; cv:ContactPoint [0..*]<br>cpov:PublicOrganisation -&gt; cv:ContactPoint [0..*]<br>cpov:PublicOrganisation -&gt; cv:ContactPoint [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>cpv:domicile</td>
@@ -401,14 +507,24 @@
                      <td>cpv:Person -&gt; adms:Identifier [0..*]</td>
                   </tr>
                   <tr>
+                     <td>dct:spatial</td>
+                     <td>This property links an Organization to the Administrative Region(s) that it covers.</td>
+                     <td>cpov:PublicOrganisation -&gt; at-voc:atu-type [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>dct:type</td>
                      <td>A classification assigned to an Agent.</td>
                      <td>foaf:Agent -&gt; cpv:type [0..*]</td>
                   </tr>
                   <tr>
+                     <td>foaf:homepage</td>
+                     <td>The official home page of the Public Organization.</td>
+                     <td>cpov:PublicOrganisation -&gt; foaf:Document [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>locn:address</td>
-                     <td>Associates any Resource with the corresponding Address. The Address of a Public Organization.</td>
-                     <td>rdfs:Resource -&gt; locn:Address [0..*]<br><br></td>
+                     <td>Associates any Resource with the corresponding Address. The Address of a Public Organization. The Address of a Public Organization.</td>
+                     <td>rdfs:Resource -&gt; locn:Address [0..*]<br>cpov:PublicOrganisation -&gt; locn:Address [0..*]<br>cpov:PublicOrganisation -&gt; locn:Address [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>locn:geometry</td>
@@ -419,6 +535,82 @@
                      <td>locn:location</td>
                      <td>Associates any Resource with the corresponding Location.</td>
                      <td>rdfs:Resource -&gt; dct:Location [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>org:changedBy</td>
+                     <td>The Organization that existed before the change.The Change Event that changed the
+                        Organization.</td>
+                     <td>cpov:PublicOrganisation -&gt; org:ChangeEvent [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>org:classification</td>
+                     <td>The categorisation of the Public Organization.</td>
+                     <td>cpov:PublicOrganisation -&gt; org:classification [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>org:hasMember</td>
+                     <td>An Organization of which the Public Organisation is a member without being a sub organization,
+                        they are independent entities.An Organization which is a member of another without
+                        being a sub organization, they are independent entities.</td>
+                     <td>cpov:PublicOrganisation -&gt; cpov:PublicOrganisation [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>org:hasSubOrganization</td>
+                     <td>Represents hierarchical containment of Organizations or OrganizationalUnits; indicates
+                        an organization which is a sub-part or child of this organization.Represents hierarchical
+                        containment of Organizations or OrganizationalUnits; indicates an Organization which
+                        contains this Organization.</td>
+                     <td>org:Organization [,0..*] &lt;- org:Organization</td>
+                  </tr>
+                  <tr>
+                     <td>org:hasUnit</td>
+                     <td>The Public Organisation of which the Organizational Unit is an operational department.An
+                        operational department within the Public Organization.</td>
+                     <td>cpov:PublicOrganisation -&gt; org:OrganizationalUnit [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>org:memberOf</td>
+                     <td>An Organization of which the Public Organisation is a member without being a sub organization,
+                        they are independent entities.An Organization which is a member of another without
+                        being a sub organization, they are independent entities.</td>
+                     <td>cpov:PublicOrganisation [,0..*] &lt;- cpov:PublicOrganisation</td>
+                  </tr>
+                  <tr>
+                     <td>org:originalOrganization</td>
+                     <td>The Organization that existed before the change.The Change Event that changed the
+                        Organization.</td>
+                     <td>cpov:PublicOrganisation [,0..*] &lt;- org:ChangeEvent</td>
+                  </tr>
+                  <tr>
+                     <td>org:purpose</td>
+                     <td>This property describes the reasons of existence of an Organization.</td>
+                     <td>cpov:PublicOrganisation -&gt; org:purpose [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>org:resultedFrom</td>
+                     <td>This property links a Change Event or a Foundation Event to the Organization that
+                        resulted from it.A Change Event from which the Public Organisation resulted.</td>
+                     <td>cpov:PublicOrganisation -&gt; org:ChangeEvent [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>org:resultingOrganization</td>
+                     <td>This property links a Change Event or a Foundation Event to the Organization that
+                        resulted from it.A Change Event from which the Public Organisation resulted.</td>
+                     <td>cpov:PublicOrganisation [,0..*] &lt;- org:ChangeEvent</td>
+                  </tr>
+                  <tr>
+                     <td>org:subOrganizationOf</td>
+                     <td>Represents hierarchical containment of Organizations or OrganizationalUnits; indicates
+                        an organization which is a sub-part or child of this organization.Represents hierarchical
+                        containment of Organizations or OrganizationalUnits; indicates an Organization which
+                        contains this Organization.</td>
+                     <td>org:Organization -&gt; org:Organization [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>org:unitOf</td>
+                     <td>The Public Organisation of which the Organizational Unit is an operational department.An
+                        operational department within the Public Organization.</td>
+                     <td>cpov:PublicOrganisation [,0..*] &lt;- org:OrganizationalUnit</td>
                   </tr>
                   <tr>
                      <td>person:citizenship</td>
@@ -450,6 +642,26 @@
                      <td>person:residency</td>
                      <td>Jurisdiction where the Person has their dwelling.</td>
                      <td>cpv:Person -&gt; dct:Jurisdiction [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>xhtml:next</td>
+                     <td>In some cases, it is necessary to be able to create an ordered sequence of an organization
+                        that precede and succeed each other. To support this, the CPOV includes the well-known
+                        relationships of previous and next to allow such sequences to be captured and computed.In
+                        some cases, it is necessary to be able to create an ordered sequence of organizations
+                        that precede and succeed each other. To support this, the CPOV includes the well-known
+                        relationships of previous and next to allow such sequences to be captured and computed.</td>
+                     <td>cpov:PublicOrganisation -&gt; cpov:PublicOrganisation [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>xhtml:prev</td>
+                     <td>In some cases, it is necessary to be able to create an ordered sequence of an organization
+                        that precede and succeed each other. To support this, the CPOV includes the well-known
+                        relationships of previous and next to allow such sequences to be captured and computed.In
+                        some cases, it is necessary to be able to create an ordered sequence of organizations
+                        that precede and succeed each other. To support this, the CPOV includes the well-known
+                        relationships of previous and next to allow such sequences to be captured and computed.</td>
+                     <td>cpov:PublicOrganisation [,0..*] &lt;- cpov:PublicOrganisation</td>
                   </tr>
                </tbody>
             </table>
