@@ -8,6 +8,7 @@ on:
 #      - "implementation/demo_ontology_module/xmi_conceptual_model/demo_ontology_module_CM.xml"
       - "implementation/core_person/xmi_conceptual_model/core_person_CM.xml"
       - "implementation/core_location/xmi_conceptual_model/core_location_CM.xml"
+      - "implementation/core_public_organisation/xmi_conceptual_model/core_public_organisation_CM.xml"
 
 jobs:
   transform:
@@ -30,7 +31,7 @@ jobs:
 
       - name: transform step
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(core_person core_location)
+          AVAILABLE_IMPLEMENTATIONS=(core_person core_location core_public_organisation)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation} transform---------------------------------"
