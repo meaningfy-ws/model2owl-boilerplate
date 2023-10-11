@@ -7,6 +7,7 @@ on:
 #      - "implementation/demo_ontology/xmi_conceptual_model/demo_ontology_CM.xml"
 #      - "implementation/demo_ontology_module/xmi_conceptual_model/demo_ontology_module_CM.xml"
       - "implementation/core_person/xmi_conceptual_model/core_person_CM.xml"
+      - "implementation/core_location/xmi_conceptual_model/core_location_CM.xml"
 
 jobs:
   report_and_glossary:
@@ -29,7 +30,7 @@ jobs:
 
       - name: generate convention report and glossary
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(core_person)
+          AVAILABLE_IMPLEMENTATIONS=(core_person core_location)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
@@ -60,27 +61,27 @@ jobs:
           done
         shell: bash
 
-#      - name: merge implementations xmi files into one
-#        run: |
-#          AVAILABLE_IMPLEMENTATIONS=(demo_ontology demo_ontology_module)
-#          cd model2owl
-#          mkdir -p merge-xmis
-#          for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
-#          do
-#            cp ../implementation/$implementation/xmi_conceptual_model/*_CM.xml merge-xmis
-#          done
-#          ls merge-xmis
-#
-#          make merge-xmi FIRST_XMI_TO_BE_MERGED_FILE_PATH=merge-xmis/demo_ontology_CM.xml
-#
-#          echo "merged XMI file"
-#          ls output/combined-xmi
-#        shell: bash
-#
-#      - name: generate combined glossary from the merged xmi
-#        run: |
-#          cd model2owl
-#          make generate-glossary XMI_INPUT_FILE_PATH=output/combined-xmi/ontologies-combined.xmi OUTPUT_GLOSSARY_PATH=../$OUTPUT_GLOSSARY_PATH
+      - name: merge implementations xmi files into one
+        run: |
+          AVAILABLE_IMPLEMENTATIONS=(core_person core_location)
+          cd model2owl
+          mkdir -p merge-xmis
+          for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
+          do
+            cp ../implementation/$implementation/xmi_conceptual_model/*_CM.xml merge-xmis
+          done
+          ls merge-xmis
+
+          make merge-xmi FIRST_XMI_TO_BE_MERGED_FILE_PATH=merge-xmis/core_person_CM.xml
+
+          echo "merged XMI file"
+          ls output/combined-xmi
+        shell: bash
+
+      - name: generate combined glossary from the merged xmi
+        run: |
+          cd model2owl
+          make generate-glossary XMI_INPUT_FILE_PATH=output/combined-xmi/ontologies-combined.xmi OUTPUT_GLOSSARY_PATH=../$OUTPUT_GLOSSARY_PATH
 
       - name: remove unnecessary files
         run: |
