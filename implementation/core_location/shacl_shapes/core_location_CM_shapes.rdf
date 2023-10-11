@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:at-voc="http://publications.europa.eu/resource/authority/"
+         xmlns:bibo="http://purl.org/ontology/bibo/"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:cccev="http://data.europa.eu/m8g/"
+         xmlns:clv="http://data.europa.eu/m8g/"
+         xmlns:core-res="http://data.europa.eu/a4g/ontology#"
+         xmlns:core-shape="http://data.europa.eu/a4g/data-shape#"
+         xmlns:cpov="http://data.europa.eu/m8g/"
+         xmlns:cpsv="http://data.europa.eu/m8g/"
+         xmlns:cpv="http://data.europa.eu/m8g/"
+         xmlns:cv="http://data.europa.eu/m8g/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+         xmlns:locn="http://www.w3.org/ns/locn#"
+         xmlns:org="http://www.w3.org/ns/org#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:person="http://www.w3.org/ns/person#"
+         xmlns:prov="https://www.w3.org/ns/prov#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sh="http://www.w3.org/ns/shacl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:time="http://www.w3.org/2006/time#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:xhtml="https://www.w3.org/1999/xhtml/vocab#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+   <owl:Ontology rdf:about="http://data.europa.eu/a4g/data-shape#core-shape">
+      <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+      <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+      <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
+      <owl:imports rdf:resource="https://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="https://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/person"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
+      <owl:imports rdf:resource="https://www.w3.org/ns/prov"/>
+      <owl:imports rdf:resource="https://www.w3.org/1999/xhtml/vocab"/>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#core"/>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#core-restriction"/>
+      <dct:title xml:lang="en">ePO Core shapes</dct:title>
+      <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
+      <dct:description xml:lang="en">This artefact provides the generic datashape specifications for the eProcurement Ontology Core.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</dct:description>
+      <rdfs:comment>This version is automatically generated from core_location_CM.xml on 2023-10-11</rdfs:comment>
+      <rdfs:seeAlso rdf:resource="https://github.com/eprocurementontology/eprocurementontology"/>
+      <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
+      <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
+      <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/EPO/latest/index.html"/>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-11</dct:issued>
+      <owl:versionInfo>3.1.0</owl:versionInfo>
+      <owl:incompatibleWith>2.1.0</owl:incompatibleWith>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape-3.1.0"/>
+      <bibo:status>Semantic Specification Realease</bibo:status>
+      <owl:priorVersion>3.0.1</owl:priorVersion>
+      <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
+      <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
+      <dct:rights>The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated.</dct:rights>
+      <dct:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0"/>
+      <cc:attributionName>European Union</cc:attributionName>
+      <cc:attributionURL rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EURUN"/>
+   </owl:Ontology>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit">
+      <sh:targetClass rdf:resource="http://data.europa.eu/m8g/AdminUnit"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit">
+      <rdfs:label>Admin unit</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit">
+      <rdfs:comment>A detailed administrative unit organized in a hierarchy.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
+      <sh:targetClass rdf:resource="http://purl.org/dc/terms/Location"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
+      <rdfs:label>Location</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
+      <rdfs:comment>An identifiable geographic place or named place.
+</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:targetClass rdf:resource="http://www.w3.org/ns/locn#Address"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <rdfs:label>Address</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <rdfs:comment>A spatial object that in a human-readable way identifies a fixed location.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <sh:targetClass rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <rdfs:label>Geometry</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <rdfs:comment>A shape or form of a Location.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource">
+      <sh:targetClass rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource">
+      <rdfs:label>Resource</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource">
+      <rdfs:comment>Anything that can be described.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#dct-Location-rdfs-seeAlso"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rdfs-seeAlso">
+      <sh:path rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rdfs-seeAlso">
+      <sh:name>See also</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rdfs-seeAlso">
+      <sh:description>A reference in the form of a Uniform Resource Identifier to the Location.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rdfs-seeAlso">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-rdfs-seeAlso">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#geographicName"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+      <sh:name>Geographic name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+      <sh:description>A textual description for a Location. </sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Location-locn-geographicName">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressArea"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressArea">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#addressArea"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressArea">
+      <sh:name>Address area</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressArea">
+      <sh:description>The name of a geographic area that groups Addresses.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressArea">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressArea">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressID"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressID">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#addressID"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressID">
+      <sh:name>Address i d</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressID">
+      <sh:description>A globally unique identifier for each instance of an Address.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressID">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-addressID">
+      <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL1"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL1">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#adminUnitL1"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL1">
+      <sh:name>Admin unit l1</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL1">
+      <sh:description>The name of the uppermost level of the address, almost always a country.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL1">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL1">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL2"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL2">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#adminUnitL2"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL2">
+      <sh:name>Admin unit l2</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL2">
+      <sh:description>The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL2">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-adminUnitL2">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-fullAddress"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-fullAddress">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#fullAddress"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-fullAddress">
+      <sh:name>Full address</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-fullAddress">
+      <sh:description>The complete address written as a string.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-fullAddress">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-fullAddress">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorDesignator"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorDesignator">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#locatorDesignator"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorDesignator">
+      <sh:name>Locator designator</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorDesignator">
+      <sh:description>A number or sequence of characters that uniquely identifies the locator within the relevant scope.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorDesignator">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorDesignator">
+      <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorName"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorName">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#locatorName"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorName">
+      <sh:name>Locator name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorName">
+      <sh:description>Proper noun(s) applied to the real world entity identified by the locator.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorName">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-locatorName">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postCode"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postCode">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#postCode"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postCode">
+      <sh:name>Post code</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postCode">
+      <sh:description>The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postCode">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postCode">
+      <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postName"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postName">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#postName"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postName">
+      <sh:name>Post name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postName">
+      <sh:description>A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postName">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-postName">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-poBox"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-poBox">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#poBox"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-poBox">
+      <sh:name>Po box</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-poBox">
+      <sh:description>A location designator for a postal delivery point at a post office, usually a number.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-poBox">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-poBox">
+      <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-locn-thoroughfare"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-thoroughfare">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#thoroughfare"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-thoroughfare">
+      <sh:name>Thoroughfare</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-thoroughfare">
+      <sh:description>The name of a passage or way through from one location to another. </sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-thoroughfare">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-locn-thoroughfare">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-coordinates"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-coordinates">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/coordinates"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-coordinates">
+      <sh:name>Coordinates</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-coordinates">
+      <sh:description>A list of geographic coordinates that define the extent of the Geometry.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-coordinates">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-coordinates">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-crs"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-crs">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/crs"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-crs">
+      <sh:name>Crs</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-crs">
+      <sh:description>An identifier for the coordinate reference system.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-crs">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-crs">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asGML"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asGML">
+      <sh:path rdf:resource="http://www.opengis.net/ont/geosparql#asGML"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asGML">
+      <sh:name>As g m l</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asGML">
+      <sh:description>The expression of the Geometry in Geography Markup Language.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asGML">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asGML">
+      <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-latitude"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-latitude">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/latitude"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-latitude">
+      <sh:name>Latitude</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-latitude">
+      <sh:description>The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-latitude">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-latitude">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-longitude"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-longitude">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/longitude"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-longitude">
+      <sh:name>Longitude</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-longitude">
+      <sh:description>The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-longitude">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-longitude">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asWKT"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asWKT">
+      <sh:path rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asWKT">
+      <sh:name>As w k t</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asWKT">
+      <sh:description>An expression of the Geometry in WKT, the Well-Known Text markup language.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asWKT">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-geosparql-asWKT">
+      <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-clv-adminUnit">
+      <sh:class rdf:resource="http://data.europa.eu/m8g/AdminUnit"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-clv-adminUnit">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/adminUnit&gt; ?that . ?that &lt;http://data.europa.eu/m8g/adminUnit&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Address-clv-adminUnit"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-clv-adminUnit">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/adminUnit"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-clv-adminUnit">
+      <sh:name>Admin unit</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Address-clv-adminUnit">
+      <sh:description>The adminUnit relationship links an Address with the Administrative Unit class.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-location">
+      <sh:class rdf:resource="http://purl.org/dc/terms/Location"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-location">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/locn#location&gt; ?that . ?that &lt;http://www.w3.org/ns/locn#location&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-location"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-location">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#location"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-location">
+      <sh:name>Location</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-location">
+      <sh:description>Associates any Resource with the corresponding Location.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-clv-registeredAddress">
+      <sh:class rdf:resource="http://www.w3.org/ns/locn#Address"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-clv-registeredAddress">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/registeredAddress&gt; ?that . ?that &lt;http://data.europa.eu/m8g/registeredAddress&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rdfs-Resource-clv-registeredAddress"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-clv-registeredAddress">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/registeredAddress"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-clv-registeredAddress">
+      <sh:name>Registered address</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-address">
+      <sh:class rdf:resource="http://www.w3.org/ns/locn#Address"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-address">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/locn#address&gt; ?that . ?that &lt;http://www.w3.org/ns/locn#address&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-address"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-address">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#address"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-address">
+      <sh:name>Address</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-address">
+      <sh:description>Associates any Resource with the corresponding Address.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-geometry">
+      <sh:class rdf:resource="http://www.w3.org/ns/locn#Geometry"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-geometry">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/locn#geometry&gt; ?that . ?that &lt;http://www.w3.org/ns/locn#geometry&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-geometry"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-geometry">
+      <sh:path rdf:resource="http://www.w3.org/ns/locn#geometry"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-geometry">
+      <sh:name>Geometry</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#rdfs-Resource-locn-geometry">
+      <sh:description>Associates any Resource with the corresponding Geometry.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit-clv-code">
+      <sh:class rdf:resource="http://data.europa.eu/m8g/code"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#clv-AdminUnit-clv-code"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit-clv-code">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/code"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit-clv-code">
+      <sh:name>Code</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit-clv-code">
+      <sh:description>The classification of the administrative unit.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit-clv-level">
+      <sh:class rdf:resource="http://data.europa.eu/m8g/level"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#clv-AdminUnit-clv-level"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit-clv-level">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/level"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit-clv-level">
+      <sh:name>Level</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#clv-AdminUnit-clv-level">
+      <sh:description>The level of the administrative unit in the hierarchy.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-geometryType">
+      <sh:class rdf:resource="http://data.europa.eu/m8g/geometryType"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-geometryType"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-geometryType">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/geometryType"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-geometryType">
+      <sh:name>Geometry type</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#locn-Geometry-clv-geometryType">
+      <sh:description>The classification of the Geometry.</sh:description>
+   </rdf:Description>
+</rdf:RDF>

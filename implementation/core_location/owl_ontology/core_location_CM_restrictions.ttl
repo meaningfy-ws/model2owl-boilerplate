@@ -1,0 +1,153 @@
+@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix core-res: <http://data.europa.eu/a4g/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+core-res:core-restriction a owl:Ontology ;
+    cc:attributionName "European Union" ;
+    cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
+    dcterms:description "This artefact provides the restrictions and inference-related specifications for the eProcurement Ontology Core.         This artefact excludes the definitions of concepts.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:issued "2023-10-11"^^xsd:date ;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated." ;
+    dcterms:title "ePO Core restrictions"@en ;
+    bibo:status "Semantic Specification Realease" ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment """This version is automatically generated from core_location_CM.xml on 
+                2023-10-11""" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports core-res:core,
+        cccev:,
+        at-voc:,
+        dcterms:,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <https://www.w3.org/1999/xhtml/vocab>,
+        <https://www.w3.org/ns/prov> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "3.0.1" ;
+    owl:versionIRI core-res:core-restriction-3.1.0 ;
+    owl:versionInfo "3.1.0" .
+
+cccev:adminUnit rdfs:domain locn:Address ;
+    rdfs:range cccev:AdminUnit .
+
+cccev:code rdfs:domain cccev:AdminUnit ;
+    rdfs:range skos:Concept .
+
+cccev:coordinates rdfs:domain locn:Geometry ;
+    rdfs:range xsd:string .
+
+cccev:crs rdfs:domain locn:Geometry ;
+    rdfs:range xsd:anyURI .
+
+cccev:domicile rdfs:domain cccev:Person ;
+    rdfs:range locn:Address .
+
+cccev:geometryType rdfs:domain locn:Geometry ;
+    rdfs:range skos:Concept .
+
+cccev:latitude rdfs:domain locn:Geometry ;
+    rdfs:range xsd:string .
+
+cccev:level rdfs:domain cccev:AdminUnit ;
+    rdfs:range skos:Concept .
+
+cccev:longitude rdfs:domain locn:Geometry ;
+    rdfs:range xsd:string .
+
+cccev:registeredAddress rdfs:domain rdfs:Resource ;
+    rdfs:range locn:Address .
+
+geo:asGML rdfs:domain locn:Geometry ;
+    rdfs:range rdfs:Literal .
+
+geo:asWKT rdfs:domain locn:Geometry ;
+    rdfs:range rdfs:Literal .
+
+rdfs:seeAlso rdfs:domain dcterms:Location ;
+    rdfs:range xsd:anyURI .
+
+locn:address rdfs:domain [ a owl:Class ;
+            owl:unionOf ( rdfs:Resource cccev:PublicOrganisation ) ] ;
+    rdfs:range locn:Address .
+
+locn:addressArea rdfs:domain locn:Address ;
+    rdfs:range rdf:langString .
+
+locn:addressID rdfs:domain locn:Address ;
+    rdfs:range rdfs:Literal .
+
+locn:adminUnitL1 rdfs:domain locn:Address ;
+    rdfs:range rdf:langString .
+
+locn:adminUnitL2 rdfs:domain locn:Address ;
+    rdfs:range rdf:langString .
+
+locn:fullAddress rdfs:domain locn:Address ;
+    rdfs:range rdf:langString .
+
+locn:geographicName rdfs:domain dcterms:Location ;
+    rdfs:range rdf:langString .
+
+locn:geometry rdfs:domain rdfs:Resource ;
+    rdfs:range locn:Geometry .
+
+locn:location rdfs:domain rdfs:Resource ;
+    rdfs:range dcterms:Location .
+
+locn:locatorDesignator rdfs:domain locn:Address ;
+    rdfs:range rdfs:Literal .
+
+locn:locatorName rdfs:domain locn:Address ;
+    rdfs:range rdf:langString .
+
+locn:poBox rdfs:domain locn:Address ;
+    rdfs:range rdfs:Literal .
+
+locn:postCode rdfs:domain locn:Address ;
+    rdfs:range rdfs:Literal .
+
+locn:postName rdfs:domain locn:Address ;
+    rdfs:range rdf:langString .
+
+locn:thoroughfare rdfs:domain locn:Address ;
+    rdfs:range rdf:langString .
+
+person:countryOfBirth rdfs:domain cccev:Person ;
+    rdfs:range dcterms:Location .
+
+person:countryOfDeath rdfs:domain cccev:Person ;
+    rdfs:range dcterms:Location .
+
+person:placeOfBirth rdfs:domain cccev:Person ;
+    rdfs:range dcterms:Location .
+
+person:placeOfDeath rdfs:domain cccev:Person ;
+    rdfs:range dcterms:Location .
+
