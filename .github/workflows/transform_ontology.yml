@@ -57,9 +57,9 @@ jobs:
 
             echo "+++++++++++++++++transform to turtle++++++++++++++++++++++++++++"
             echo $(ls ${OUTPUT_PATH_OWL}*.rdf)
-            make convert-to-turtle ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_OWL
+            make convert-rdf-to-turtle ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_OWL
             echo $(ls ${OUTPUT_PATH_SHACL}*.rdf)
-            make convert-to-turtle ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_SHACL
+            make convert-rdf-to-turtle ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_SHACL
             echo "-------------------end transform---------------------------------"
 
             sed -i "s/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" config-proxy.xsl
