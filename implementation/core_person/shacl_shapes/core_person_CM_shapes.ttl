@@ -1,0 +1,311 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix core-res: <http://data.europa.eu/a4g/ontology#> .
+@prefix core-shape: <http://data.europa.eu/a4g/data-shape#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+core-shape:adms-Identifier a sh:NodeShape ;
+    rdfs:label "Identifier" ;
+    rdfs:comment "A structured reference that identifies an entity." ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:adms-Identifier-adms-schemeAgency,
+        core-shape:adms-Identifier-cpv-identifies,
+        core-shape:adms-Identifier-dct-conformsTo,
+        core-shape:adms-Identifier-dct-creator,
+        core-shape:adms-Identifier-dct-issued,
+        core-shape:adms-Identifier-rdfs-label,
+        core-shape:adms-Identifier-skos-notation ;
+    sh:targetClass adms:Identifier .
+
+core-shape:cpv-Person a sh:NodeShape ;
+    rdfs:label "Person" ;
+    rdfs:comment "A individual human being who may be dead or alive, but not imaginary." ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:cpv-Person-cpv-birthDate,
+        core-shape:cpv-Person-cpv-contactPoint,
+        core-shape:cpv-Person-cpv-deathDate,
+        core-shape:cpv-Person-cpv-gender,
+        core-shape:cpv-Person-cpv-matronymicName,
+        core-shape:cpv-Person-cpv-patronymicName,
+        core-shape:cpv-Person-dct-alternative,
+        core-shape:cpv-Person-dct-identifier,
+        core-shape:cpv-Person-foaf-familyName,
+        core-shape:cpv-Person-foaf-givenName,
+        core-shape:cpv-Person-foaf-name,
+        core-shape:cpv-Person-person-birthName,
+        core-shape:cpv-Person-person-citizenship,
+        core-shape:cpv-Person-person-residency ;
+    sh:targetClass cccev:Person .
+
+core-shape:cv-ContactPoint a sh:NodeShape ;
+    rdfs:label "Contact point" ;
+    rdfs:comment "Information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with." ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:cv-ContactPoint-cv-contactPage,
+        core-shape:cv-ContactPoint-cv-email,
+        core-shape:cv-ContactPoint-cv-telephone ;
+    sh:targetClass cccev:ContactPoint .
+
+core-shape:dct-Jurisdiction a sh:NodeShape ;
+    rdfs:label "Jurisdiction" ;
+    rdfs:comment "The limits or territory within which authority may be exercised." ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:dct-Jurisdiction-dct-identifier,
+        core-shape:dct-Jurisdiction-rdfs-label ;
+    sh:targetClass dcterms:Jurisdiction .
+
+core-shape:foaf-Agent a sh:NodeShape ;
+    rdfs:label "Agent" ;
+    rdfs:comment "Entity that is able to carry out action." ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:property core-shape:foaf-Agent-dct-title,
+        core-shape:foaf-Agent-dct-type ;
+    sh:targetClass foaf:Agent .
+
+core-shape:foaf-Person a sh:NodeShape ;
+    rdfs:label "Person" ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:targetClass foaf:Person .
+
+core-shape:adms-Identifier-adms-schemeAgency a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "The name of the agency responsible for issuing the Identifier." ;
+    sh:name "Scheme agency" ;
+    sh:path adms:schemeAgency .
+
+core-shape:adms-Identifier-cpv-identifies a sh:PropertyShape ;
+    sh:class cccev:Person ;
+    sh:description "The entity that is referenced by the Identifier." ;
+    sh:name "Identifies" ;
+    sh:path cccev:identifies ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/identifies> ?that . ?that <http://data.europa.eu/m8g/identifies> ?this .} " ] .
+
+core-shape:adms-Identifier-dct-conformsTo a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:name "Conforms to" ;
+    sh:path dcterms:conformsTo .
+
+core-shape:adms-Identifier-dct-creator a sh:PropertyShape ;
+    sh:class foaf:Agent ;
+    sh:description "The reference in the form of a Uniform Resource Identifier to the issuing authority." ;
+    sh:name "Creator" ;
+    sh:path dcterms:creator ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/creator> ?that . ?that <http://purl.org/dc/terms/creator> ?this .} " ] .
+
+core-shape:adms-Identifier-dct-issued a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:date ;
+    sh:description "The date on which the Identifier was assigned." ;
+    sh:name "Issued" ;
+    sh:path dcterms:issued .
+
+core-shape:adms-Identifier-rdfs-label a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:name "Label" ;
+    sh:path rdfs:label .
+
+core-shape:adms-Identifier-skos-notation a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdfs:Literal ;
+    sh:description "A string of characters to uniquely identify a concept." ;
+    sh:name "Notation" ;
+    sh:path skos:notation .
+
+core-shape:cpv-Person-cpv-birthDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:description "The point in time on which the Person was born." ;
+    sh:name "Birth date" ;
+    sh:path cccev:birthDate .
+
+core-shape:cpv-Person-cpv-contactPoint a sh:PropertyShape ;
+    sh:class cccev:ContactPoint ;
+    sh:description "The main contact information of the resource. " ;
+    sh:name "Contact point" ;
+    sh:path cccev:contactPoint ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/contactPoint> ?that . ?that <http://data.europa.eu/m8g/contactPoint> ?this .} " ] .
+
+core-shape:cpv-Person-cpv-deathDate a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:description "The point in time on which the Person died." ;
+    sh:name "Death date" ;
+    sh:path cccev:deathDate .
+
+core-shape:cpv-Person-cpv-gender a sh:PropertyShape ;
+    sh:class cccev:gender,
+        cccev:sex ;
+    sh:description "The identities, expressions and societal roles of the Person.",
+        "The organism's biological sex." ;
+    sh:name "Gender" ;
+    sh:path cccev:gender .
+
+core-shape:cpv-Person-cpv-matronymicName a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "Name based on the given name of the Person's mother." ;
+    sh:name "Matronymic name" ;
+    sh:path cccev:matronymicName .
+
+core-shape:cpv-Person-cpv-patronymicName a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "Name based on the given name of the Person's father." ;
+    sh:name "Patronymic name" ;
+    sh:path cccev:patronymicName .
+
+core-shape:cpv-Person-dct-alternative a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "Any name by which a Person is known, other than their full name." ;
+    sh:name "Alternative" ;
+    sh:path dcterms:alternative .
+
+core-shape:cpv-Person-dct-identifier a sh:PropertyShape ;
+    sh:class adms:Identifier ;
+    sh:description "The unambiguous structured reference to the Person." ;
+    sh:name "Identifier" ;
+    sh:path dcterms:identifier ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/identifier> ?that . ?that <http://purl.org/dc/terms/identifier> ?this .} " ] .
+
+core-shape:cpv-Person-foaf-familyName a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:name "Family name" ;
+    sh:path foaf:familyName .
+
+core-shape:cpv-Person-foaf-givenName a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "The name(s) that identify the Person within a family with a common surname." ;
+    sh:name "Given name" ;
+    sh:path foaf:givenName .
+
+core-shape:cpv-Person-foaf-name a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "The complete name of the Person as one string." ;
+    sh:name "Name" ;
+    sh:path foaf:name .
+
+core-shape:cpv-Person-person-birthName a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "Full name of the Person given upon their birth." ;
+    sh:name "Birth name" ;
+    sh:path person:birthName .
+
+core-shape:cpv-Person-person-citizenship a sh:PropertyShape ;
+    sh:class dcterms:Jurisdiction ;
+    sh:description "The Jurisdiction that has conferred citizenship rights on the Person such as the right to vote, to receive certain protection from the community or the issuance of a passport." ;
+    sh:name "Citizenship" ;
+    sh:path person:citizenship ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/person#citizenship> ?that . ?that <http://www.w3.org/ns/person#citizenship> ?this .} " ] .
+
+core-shape:cpv-Person-person-residency a sh:PropertyShape ;
+    sh:class dcterms:Jurisdiction ;
+    sh:description "Jurisdiction where the Person has their dwelling." ;
+    sh:name "Residency" ;
+    sh:path person:residency ;
+    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/person#residency> ?that . ?that <http://www.w3.org/ns/person#residency> ?this .} " ] .
+
+core-shape:cv-ContactPoint-cv-contactPage a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "A web page that could be used to reach out the Contact Point." ;
+    sh:name "Contact page" ;
+    sh:path cccev:contactPage .
+
+core-shape:cv-ContactPoint-cv-email a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdfs:Literal ;
+    sh:description "An electronic address through which the Contact Point can be contacted." ;
+    sh:name "Email" ;
+    sh:path cccev:email .
+
+core-shape:cv-ContactPoint-cv-telephone a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdfs:Literal ;
+    sh:description "A telephone number through which the Contact Point can be contacted." ;
+    sh:name "Telephone" ;
+    sh:path cccev:telephone .
+
+core-shape:dct-Jurisdiction-dct-identifier a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype xsd:anyURI ;
+    sh:description "A reference in the form of a Uniform Resource Identifier to the Jurisdiction." ;
+    sh:name "Identifier" ;
+    sh:path dcterms:identifier .
+
+core-shape:dct-Jurisdiction-rdfs-label a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "A string of characters that represents a Jurisdiction." ;
+    sh:name "Label" ;
+    sh:path rdfs:label .
+
+core-shape:foaf-Agent-dct-title a sh:PropertyShape ;
+    rdfs:isDefinedBy core-shape:core-shape ;
+    sh:datatype rdf:langString ;
+    sh:description "The noun given to the Agent." ;
+    sh:name "Title" ;
+    sh:path dcterms:title .
+
+core-shape:foaf-Agent-dct-type a sh:PropertyShape ;
+    sh:class cccev:type ;
+    sh:description "A classification assigned to an Agent." ;
+    sh:name "Type" ;
+    sh:path dcterms:type .
+
+core-shape:core-shape a owl:Ontology ;
+    cc:attributionName "European Union" ;
+    cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
+    dcterms:description "This artefact provides the generic datashape specifications for the eProcurement Ontology Core.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:issued "2023-10-11"^^xsd:date ;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated." ;
+    dcterms:title "ePO Core shapes"@en ;
+    bibo:status "Semantic Specification Realease" ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from core_person_CM.xml on 2023-10-11" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports core-res:core,
+        core-res:core-restriction,
+        cccev:,
+        at-voc:,
+        dcterms:,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <https://www.w3.org/1999/xhtml/vocab>,
+        <https://www.w3.org/ns/prov> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "3.0.1" ;
+    owl:versionIRI core-shape:core-shape-3.1.0 ;
+    owl:versionInfo "3.1.0" .
+

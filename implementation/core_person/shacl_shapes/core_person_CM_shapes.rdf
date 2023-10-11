@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:at-voc="http://publications.europa.eu/resource/authority/"
+         xmlns:bibo="http://purl.org/ontology/bibo/"
+         xmlns:cc="http://creativecommons.org/ns#"
+         xmlns:cccev="http://data.europa.eu/m8g/"
+         xmlns:clv="http://data.europa.eu/m8g/"
+         xmlns:core-res="http://data.europa.eu/a4g/ontology#"
+         xmlns:core-shape="http://data.europa.eu/a4g/data-shape#"
+         xmlns:cpov="http://data.europa.eu/m8g/"
+         xmlns:cpsv="http://data.europa.eu/m8g/"
+         xmlns:cpv="http://data.europa.eu/m8g/"
+         xmlns:cv="http://data.europa.eu/m8g/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+         xmlns:locn="http://www.w3.org/ns/locn#"
+         xmlns:org="http://www.w3.org/ns/org#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:person="http://www.w3.org/ns/person#"
+         xmlns:prov="https://www.w3.org/ns/prov#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sh="http://www.w3.org/ns/shacl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:time="http://www.w3.org/2006/time#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:xhtml="https://www.w3.org/1999/xhtml/vocab#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+   <owl:Ontology rdf:about="http://data.europa.eu/a4g/data-shape#core-shape">
+      <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+      <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
+      <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+      <owl:imports rdf:resource="http://publications.europa.eu/resource/authority/"/>
+      <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
+      <owl:imports rdf:resource="https://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="https://data.europa.eu/m8g/"/>
+      <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/person"/>
+      <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
+      <owl:imports rdf:resource="https://www.w3.org/ns/prov"/>
+      <owl:imports rdf:resource="https://www.w3.org/1999/xhtml/vocab"/>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#core"/>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#core-restriction"/>
+      <dct:title xml:lang="en">ePO Core shapes</dct:title>
+      <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
+      <dct:description xml:lang="en">This artefact provides the generic datashape specifications for the eProcurement Ontology Core.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</dct:description>
+      <rdfs:comment>This version is automatically generated from core_person_CM.xml on 2023-10-11</rdfs:comment>
+      <rdfs:seeAlso rdf:resource="https://github.com/eprocurementontology/eprocurementontology"/>
+      <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
+      <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
+      <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/EPO/latest/index.html"/>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-11</dct:issued>
+      <owl:versionInfo>3.1.0</owl:versionInfo>
+      <owl:incompatibleWith>2.1.0</owl:incompatibleWith>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape-3.1.0"/>
+      <bibo:status>Semantic Specification Realease</bibo:status>
+      <owl:priorVersion>3.0.1</owl:priorVersion>
+      <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
+      <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
+      <dct:rights>The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated.</dct:rights>
+      <dct:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0"/>
+      <cc:attributionName>European Union</cc:attributionName>
+      <cc:attributionURL rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EURUN"/>
+   </owl:Ontology>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <sh:targetClass rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <rdfs:label>Identifier</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <rdfs:comment>A structured reference that identifies an entity.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:targetClass rdf:resource="http://data.europa.eu/m8g/Person"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <rdfs:label>Person</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <rdfs:comment>A individual human being who may be dead or alive, but not imaginary.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint">
+      <sh:targetClass rdf:resource="http://data.europa.eu/m8g/ContactPoint"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint">
+      <rdfs:label>Contact point</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint">
+      <rdfs:comment>Information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction">
+      <sh:targetClass rdf:resource="http://purl.org/dc/terms/Jurisdiction"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction">
+      <rdfs:label>Jurisdiction</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction">
+      <rdfs:comment>The limits or territory within which authority may be exercised.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent">
+      <sh:targetClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent">
+      <rdfs:label>Agent</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent">
+      <rdfs:comment>Entity that is able to carry out action.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Person">
+      <sh:targetClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Person">
+      <rdfs:label>Person</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Person">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-issued"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-issued">
+      <sh:path rdf:resource="http://purl.org/dc/terms/issued"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-issued">
+      <sh:name>Issued</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-issued">
+      <sh:description>The date on which the Identifier was assigned.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-issued">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-issued">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#adms-Identifier-adms-schemeAgency"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-adms-schemeAgency">
+      <sh:path rdf:resource="http://www.w3.org/ns/adms#schemeAgency"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-adms-schemeAgency">
+      <sh:name>Scheme agency</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-adms-schemeAgency">
+      <sh:description>The name of the agency responsible for issuing the Identifier.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-adms-schemeAgency">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-adms-schemeAgency">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#adms-Identifier-skos-notation"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-skos-notation">
+      <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-skos-notation">
+      <sh:name>Notation</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-skos-notation">
+      <sh:description>A string of characters to uniquely identify a concept.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-skos-notation">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-skos-notation">
+      <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#adms-Identifier-rdfs-label"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-rdfs-label">
+      <sh:path rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-rdfs-label">
+      <sh:name>Label</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-rdfs-label">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-rdfs-label">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-conformsTo"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-conformsTo">
+      <sh:path rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-conformsTo">
+      <sh:name>Conforms to</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-conformsTo">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-conformsTo">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-alternative"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-alternative">
+      <sh:path rdf:resource="http://purl.org/dc/terms/alternative"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-alternative">
+      <sh:name>Alternative</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-alternative">
+      <sh:description>Any name by which a Person is known, other than their full name.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-alternative">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-alternative">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-person-birthName"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-birthName">
+      <sh:path rdf:resource="http://www.w3.org/ns/person#birthName"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-birthName">
+      <sh:name>Birth name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-birthName">
+      <sh:description>Full name of the Person given upon their birth.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-birthName">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-birthName">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-birthDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-birthDate">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/birthDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-birthDate">
+      <sh:name>Birth date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-birthDate">
+      <sh:description>The point in time on which the Person was born.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-birthDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-deathDate"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-deathDate">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/deathDate"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-deathDate">
+      <sh:name>Death date</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-deathDate">
+      <sh:description>The point in time on which the Person died.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-deathDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-familyName"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-familyName">
+      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/familyName"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-familyName">
+      <sh:name>Family name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-familyName">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-familyName">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-name"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-name">
+      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-name">
+      <sh:name>Name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-name">
+      <sh:description>The complete name of the Person as one string.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-name">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-name">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-givenName"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-givenName">
+      <sh:path rdf:resource="http://xmlns.com/foaf/0.1/givenName"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-givenName">
+      <sh:name>Given name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-givenName">
+      <sh:description>The name(s) that identify the Person within a family with a common surname.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-givenName">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-foaf-givenName">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-matronymicName"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-matronymicName">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/matronymicName"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-matronymicName">
+      <sh:name>Matronymic name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-matronymicName">
+      <sh:description>Name based on the given name of the Person's mother.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-matronymicName">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-matronymicName">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-patronymicName"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-patronymicName">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/patronymicName"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-patronymicName">
+      <sh:name>Patronymic name</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-patronymicName">
+      <sh:description>Name based on the given name of the Person's father.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-patronymicName">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-patronymicName">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-contactPage"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-contactPage">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/contactPage"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-contactPage">
+      <sh:name>Contact page</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-contactPage">
+      <sh:description>A web page that could be used to reach out the Contact Point.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-contactPage">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-contactPage">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-email"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-email">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/email"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-email">
+      <sh:name>Email</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-email">
+      <sh:description>An electronic address through which the Contact Point can be contacted.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-email">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-email">
+      <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-telephone"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-telephone">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/telephone"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-telephone">
+      <sh:name>Telephone</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-telephone">
+      <sh:description>A telephone number through which the Contact Point can be contacted.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-telephone">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cv-ContactPoint-cv-telephone">
+      <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-dct-identifier"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-dct-identifier">
+      <sh:path rdf:resource="http://purl.org/dc/terms/identifier"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-dct-identifier">
+      <sh:name>Identifier</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-dct-identifier">
+      <sh:description>A reference in the form of a Uniform Resource Identifier to the Jurisdiction.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-dct-identifier">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-dct-identifier">
+      <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-rdfs-label"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-rdfs-label">
+      <sh:path rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-rdfs-label">
+      <sh:name>Label</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-rdfs-label">
+      <sh:description>A string of characters that represents a Jurisdiction.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-rdfs-label">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#dct-Jurisdiction-rdfs-label">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-title"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-title">
+      <sh:path rdf:resource="http://purl.org/dc/terms/title"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-title">
+      <sh:name>Title</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-title">
+      <sh:description>The noun given to the Agent.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-title">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-title">
+      <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-creator">
+      <sh:class rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-creator">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://purl.org/dc/terms/creator&gt; ?that . ?that &lt;http://purl.org/dc/terms/creator&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-creator"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-creator">
+      <sh:path rdf:resource="http://purl.org/dc/terms/creator"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-creator">
+      <sh:name>Creator</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-dct-creator">
+      <sh:description>The reference in the form of a Uniform Resource Identifier to the issuing authority.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-cpv-identifies">
+      <sh:class rdf:resource="http://data.europa.eu/m8g/Person"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-cpv-identifies">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/identifies&gt; ?that . ?that &lt;http://data.europa.eu/m8g/identifies&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#adms-Identifier-cpv-identifies"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-cpv-identifies">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/identifies"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-cpv-identifies">
+      <sh:name>Identifies</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier-cpv-identifies">
+      <sh:description>The entity that is referenced by the Identifier.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-identifier">
+      <sh:class rdf:resource="http://www.w3.org/ns/adms#Identifier"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-identifier">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://purl.org/dc/terms/identifier&gt; ?that . ?that &lt;http://purl.org/dc/terms/identifier&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-identifier"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-identifier">
+      <sh:path rdf:resource="http://purl.org/dc/terms/identifier"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-identifier">
+      <sh:name>Identifier</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-dct-identifier">
+      <sh:description>The unambiguous structured reference to the Person.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-contactPoint">
+      <sh:class rdf:resource="http://data.europa.eu/m8g/ContactPoint"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-contactPoint">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/contactPoint&gt; ?that . ?that &lt;http://data.europa.eu/m8g/contactPoint&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-contactPoint"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-contactPoint">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/contactPoint"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-contactPoint">
+      <sh:name>Contact point</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-contactPoint">
+      <sh:description>The main contact information of the resource. </sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-citizenship">
+      <sh:class rdf:resource="http://purl.org/dc/terms/Jurisdiction"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-citizenship">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/person#citizenship&gt; ?that . ?that &lt;http://www.w3.org/ns/person#citizenship&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-person-citizenship"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-citizenship">
+      <sh:path rdf:resource="http://www.w3.org/ns/person#citizenship"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-citizenship">
+      <sh:name>Citizenship</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-citizenship">
+      <sh:description>The Jurisdiction that has conferred citizenship rights on the Person such as the right to vote, to receive certain protection from the community or the issuance of a passport.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-residency">
+      <sh:class rdf:resource="http://purl.org/dc/terms/Jurisdiction"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-residency">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/person#residency&gt; ?that . ?that &lt;http://www.w3.org/ns/person#residency&gt; ?this .} </sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-person-residency"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-residency">
+      <sh:path rdf:resource="http://www.w3.org/ns/person#residency"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-residency">
+      <sh:name>Residency</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-residency">
+      <sh:description>Jurisdiction where the Person has their dwelling.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
+      <sh:class rdf:resource="http://data.europa.eu/m8g/sex"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/gender"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
+      <sh:name>Gender</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
+      <sh:description>The organism's biological sex.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
+      <sh:class rdf:resource="http://data.europa.eu/m8g/gender"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/gender"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
+      <sh:name>Gender</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
+      <sh:description>The identities, expressions and societal roles of the Person.</sh:description>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-type">
+      <sh:class rdf:resource="http://data.europa.eu/m8g/type"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-type"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-type">
+      <sh:path rdf:resource="http://purl.org/dc/terms/type"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-type">
+      <sh:name>Type</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-type">
+      <sh:description>A classification assigned to an Agent.</sh:description>
+   </rdf:Description>
+</rdf:RDF>

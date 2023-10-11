@@ -1,0 +1,212 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/a4g/ontology#core> a owl:Ontology ;
+    cc:attributionName "European Union" ;
+    cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
+    dcterms:description "This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:issued "2023-10-11"^^xsd:date ;
+    dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated." ;
+    dcterms:title "ePO Core core"@en ;
+    bibo:status "Semantic Specification Realease" ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from core_person_CM.xml on 2023-10-11" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports cccev:,
+        at-voc:,
+        dcterms:,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person>,
+        foaf:,
+        <https://data.europa.eu/m8g/>,
+        <https://www.w3.org/1999/xhtml/vocab>,
+        <https://www.w3.org/ns/prov> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "3.0.1" ;
+    owl:versionIRI <http://data.europa.eu/a4g/ontology#core-3.1.0> ;
+    owl:versionInfo "3.1.0" .
+
+cccev:ContactPoint a owl:Class ;
+    skos:definition "Information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with."@en ;
+    skos:prefLabel "Contact point"@en .
+
+cccev:Person a owl:Class ;
+    rdfs:subClassOf foaf:Person ;
+    skos:definition "A individual human being who may be dead or alive, but not imaginary."@en ;
+    skos:prefLabel "Person"@en .
+
+cccev:birthDate a rdf:Property ;
+    skos:definition "The point in time on which the Person was born. (cpv:Person) "@en ;
+    skos:prefLabel "Birth date"@en .
+
+cccev:contactPage a owl:DatatypeProperty ;
+    skos:definition "A web page that could be used to reach out the Contact Point. (cv:ContactPoint) "@en ;
+    skos:prefLabel "Contact page"@en .
+
+cccev:contactPoint a owl:ObjectProperty ;
+    skos:definition "The main contact information of the resource.  (cpv:Person -> cv:ContactPoint (+cpv:contactPoint)) The main contact information of the resource. (cpov:PublicOrganisation -> cv:ContactPoint (+cpv:contactPoint)) "@en ;
+    skos:prefLabel "Contact point"@en .
+
+cccev:deathDate a rdf:Property ;
+    skos:definition "The point in time on which the Person died. (cpv:Person) "@en ;
+    skos:prefLabel "Death date"@en .
+
+cccev:domicile a owl:ObjectProperty ;
+    skos:definition "The place that the Person treats as permanent home. (cpv:Person -> locn:Address (+cpv:domicile)) "@en ;
+    skos:prefLabel "Domicile"@en .
+
+cccev:email a owl:DatatypeProperty ;
+    skos:definition "An electronic address through which the Contact Point can be contacted. (cv:ContactPoint) "@en ;
+    skos:prefLabel "Email"@en .
+
+cccev:gender a owl:ObjectProperty ;
+    skos:definition "The organism's biological sex. (cpv:Person -> cpv:sex (+cpv:gender)) The identities, expressions and societal roles of the Person. (cpv:Person -> cpv:gender (+cpv:gender)) "@en ;
+    skos:prefLabel "Gender"@en .
+
+cccev:identifies a owl:ObjectProperty ;
+    skos:definition "The entity that is referenced by the Identifier. (adms:Identifier -> cpv:Person (+cpv:identifies)) "@en ;
+    skos:prefLabel "Identifies"@en .
+
+cccev:matronymicName a owl:DatatypeProperty ;
+    skos:definition "Name based on the given name of the Person's mother. (cpv:Person) "@en ;
+    skos:prefLabel "Matronymic name"@en .
+
+cccev:openingHours a owl:ObjectProperty ;
+    skos:definition "The time at which the Contact Point is normally available. (cv:ContactPoint -> time:TemporalEntity (+cpov:openingHours)) "@en ;
+    skos:prefLabel "Opening hours"@en .
+
+cccev:patronymicName a owl:DatatypeProperty ;
+    skos:definition "Name based on the given name of the Person's father. (cpv:Person) "@en ;
+    skos:prefLabel "Patronymic name"@en .
+
+cccev:specialOpeningHoursSpecification a owl:ObjectProperty ;
+    skos:definition "The time during which the Contact Point is not available. (cv:ContactPoint -> time:TemporalEntity (+cpov:specialOpeningHoursSpecification)) "@en ;
+    skos:prefLabel "Special opening hours specification"@en .
+
+cccev:telephone a owl:DatatypeProperty ;
+    skos:definition "A telephone number through which the Contact Point can be contacted. (cv:ContactPoint) "@en ;
+    skos:prefLabel "Telephone"@en .
+
+dcterms:Jurisdiction a owl:Class ;
+    skos:definition "The limits or territory within which authority may be exercised."@en ;
+    skos:prefLabel "Jurisdiction"@en .
+
+dcterms:alternative a owl:DatatypeProperty ;
+    skos:definition "Any name by which a Person is known, other than their full name. (cpv:Person) "@en ;
+    skos:prefLabel "Alternative"@en .
+
+dcterms:conformsTo a owl:DatatypeProperty ;
+    skos:prefLabel "Conforms to"@en .
+
+dcterms:creator a owl:ObjectProperty ;
+    skos:definition "The reference in the form of a Uniform Resource Identifier to the issuing authority. (adms:Identifier -> foaf:Agent (+dct:creator)) "@en ;
+    skos:prefLabel "Creator"@en .
+
+dcterms:identifier a owl:DatatypeProperty,
+        owl:ObjectProperty ;
+    skos:definition "A reference in the form of a Uniform Resource Identifier to the Jurisdiction. (dct:Jurisdiction) "@en,
+        "The unambiguous structured reference to the Person. (cpv:Person -> adms:Identifier (+dct:identifier)) "@en ;
+    skos:prefLabel "Identifier"@en .
+
+dcterms:issued a owl:DatatypeProperty ;
+    skos:definition "The date on which the Identifier was assigned. (adms:Identifier) "@en ;
+    skos:prefLabel "Issued"@en .
+
+dcterms:title a owl:DatatypeProperty ;
+    skos:definition "The noun given to the Agent. (foaf:Agent) "@en ;
+    skos:prefLabel "Title"@en .
+
+dcterms:type a owl:ObjectProperty ;
+    skos:definition "A classification assigned to an Agent. (foaf:Agent -> cpv:type (+dct:type)) "@en ;
+    skos:prefLabel "Type"@en .
+
+rdfs:label a owl:DatatypeProperty ;
+    skos:definition "A string of characters that represents a Jurisdiction. (dct:Jurisdiction) "@en ;
+    skos:prefLabel "Label"@en .
+
+skos:notation a owl:DatatypeProperty ;
+    skos:definition "A string of characters to uniquely identify a concept. (adms:Identifier) "@en ;
+    skos:prefLabel "Notation"@en .
+
+adms:Identifier a owl:Class ;
+    skos:definition "A structured reference that identifies an entity."@en ;
+    skos:prefLabel "Identifier"@en .
+
+adms:identifier a owl:ObjectProperty ;
+    skos:prefLabel "Identifier"@en .
+
+adms:schemeAgency a owl:DatatypeProperty ;
+    skos:definition "The name of the agency responsible for issuing the Identifier. (adms:Identifier) "@en ;
+    skos:prefLabel "Scheme agency"@en .
+
+person:birthName a owl:DatatypeProperty ;
+    skos:definition "Full name of the Person given upon their birth. (cpv:Person) "@en ;
+    skos:prefLabel "Birth name"@en .
+
+person:citizenship a owl:ObjectProperty ;
+    skos:definition "The Jurisdiction that has conferred citizenship rights on the Person such as the right to vote, to receive certain protection from the community or the issuance of a passport. (cpv:Person -> dct:Jurisdiction (+person:citizenship)) "@en ;
+    skos:prefLabel "Citizenship"@en .
+
+person:countryOfBirth a owl:ObjectProperty ;
+    skos:definition "The country in which the Person was born. (cpv:Person -> dct:Location (+person:countryOfBirth)) "@en ;
+    skos:prefLabel "Country of birth"@en .
+
+person:countryOfDeath a owl:ObjectProperty ;
+    skos:definition "The country in which the Person died. (cpv:Person -> dct:Location (+person:countryOfDeath)) "@en ;
+    skos:prefLabel "Country of death"@en .
+
+person:placeOfBirth a owl:ObjectProperty ;
+    skos:definition "The Location where the Person was born. (cpv:Person -> dct:Location (+person:placeOfBirth)) "@en ;
+    skos:prefLabel "Place of birth"@en .
+
+person:placeOfDeath a owl:ObjectProperty ;
+    skos:definition "The Location where the Person died. (cpv:Person -> dct:Location (+person:placeOfDeath)) "@en ;
+    skos:prefLabel "Place of death"@en .
+
+person:residency a owl:ObjectProperty ;
+    skos:definition "Jurisdiction where the Person has their dwelling. (cpv:Person -> dct:Jurisdiction (+person:residency)) "@en ;
+    skos:prefLabel "Residency"@en .
+
+foaf:familyName a owl:DatatypeProperty ;
+    skos:prefLabel "Family name"@en .
+
+foaf:givenName a owl:DatatypeProperty ;
+    skos:definition "The name(s) that identify the Person within a family with a common surname. (cpv:Person) "@en ;
+    skos:prefLabel "Given name"@en .
+
+foaf:name a owl:DatatypeProperty ;
+    skos:definition "The complete name of the Person as one string. (cpv:Person) "@en ;
+    skos:prefLabel "Name"@en .
+
+foaf:Agent a owl:Class ;
+    skos:definition "Entity that is able to carry out action."@en ;
+    skos:prefLabel "Agent"@en .
+
+foaf:Person a owl:Class ;
+    rdfs:subClassOf foaf:Agent ;
+    skos:prefLabel "Person"@en .
+
