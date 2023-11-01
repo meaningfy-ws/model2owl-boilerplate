@@ -75,6 +75,7 @@
 
     <!--Allowed characters for a normalized string-->
     <xsl:variable name="allowedStrings" select="'^[\w\d-_:]+$'"/>
+
     <!--    Generate reused classes, attributes and connectors-->
     <xsl:variable name="generateReusedConcepts" select="fn:true()"/>
 
@@ -93,36 +94,25 @@
     <!--                            METADATA SECTION                               -->
     <!-- _______________________________________________________________________   -->
     <!--    This section contains the variables used to build the ontology metadata-->
-    <xsl:variable name="moduleReference" select="'core'"/>
+    <xsl:variable name="moduleReference" select="'cat'"/>
     <!--    dct:title -->
-    <xsl:variable name="ontologyTitle" select="'eProcurement Ontology - core'"/>
+    <xsl:variable name="ontologyTitleCore" select="'eProcurement Ontology Catalogue - core'"/>
+    <xsl:variable name="ontologyTitleRestrictions" select="'eProcurement Ontology Catalogue - core restrictions'"/>
+    <xsl:variable name="ontologyTitleShapes" select="'eProcurement Ontology Catalogue - core shapes'"/>
     <!--    dct:description-->
-    <xsl:variable name="ontologyDescription"
-        select="
-            'This module provides the definitions for the eProcurement ontology core.
-        Procurement data has been identified as data with a high-reuse potential.
-        Given the increasing importance of data standards for eProcurement, a number of initiatives
-        driven by the public sector, the industry and academia have been kick-started in recent years.
-        Some have grown organically, while others are the result of standardisation work.
-        The vocabularies and the semantics that they are introducing, the phases of public procurement that they are covering,
-        and the technologies that they are using all differ. These differences hamper data interoperability and thus its reuse by them or by the wider public.
-        This creates the need for a common data standard for publishing procurement data, hence allowing data
-        from different sources to be easily accessed and linked, and consequently reused.'"/>
-    <!--    dct:abstract-->
-    <xsl:variable name="abstractCore"
-        select="'This artefact provides the ontology core specification.'"/>
-    <xsl:variable name="abstractResctrictions"
-        select="'This artefact provides the ontology extention with restrictions and inference-relaated specification.'"/>
-    <xsl:variable name="abstractShapes"
-        select="'This artefact provides the datashape specification. '"/>
+    <xsl:variable name="ontologyDescriptionCore"
+        select="'The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
+    <xsl:variable name="ontologyDescriptionRestrictions"
+        select="'The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core.'"/>
+    <xsl:variable name="ontologyDescriptionShapes"
+        select="'The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.'"/>
     <!--    rdfs:seeAlso -->
     <xsl:variable name="seeAlsoResources"
         select="
-            ('https://github.com/eprocurementontology/eprocurementontology',
-            'https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about', 'https://op.europa.eu/en/web/eu-vocabularies/e-procurement',
-            'https://docs.ted.europa.eu/EPO/latest/index.html')"/>
-    <!--    dct:created-->
-    <xsl:variable name="createdDate" select="''"/>
+            ('https://github.com/OP-TED/ePO/releases',
+            'https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about',
+            'https://op.europa.eu/en/web/eu-vocabularies/e-procurement',
+            'https://docs.ted.europa.eu/home/index.html')"/>
     <!--    dct:issued-->
     <xsl:variable name="issuedDate" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
     <!--    owl:incompatibleWith -->
@@ -130,19 +120,17 @@
     <!--    owl:versionInfo -->
     <xsl:variable name="versionInfo" select="'4.0.0'"/>
     <!--    bibo:status-->
-    <xsl:variable name="ontologyStatus" select="'Semantic Specification Realease'"/>
+    <xsl:variable name="ontologyStatus" select="'Semantic Specification Release'"/>
     <!--    owl:priorVersion -->
     <xsl:variable name="priorVersion" select="'3.1.0'"/>
     <!--    vann:preferredNamespaceUri -->
     <xsl:variable name="preferredNamespaceUri" select="'http://data.europa.eu/a4g/ontology#'"/>
     <!--    vann:preferredNamespacePrefix -->
     <xsl:variable name="preferredNamespacePrefix" select="'epo'"/>
-
     <!--    dct:license-->
     <xsl:variable name="licenseLiteral" select="'© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).'"/>
     <!--    dct:created-->
     <xsl:variable name="createdDate" select="'2021-06-01'"/>
     <!--    dct:publisher-->
     <xsl:variable name="publisher" select="'http://publications.europa.eu/resource/authority/corporate-body/PUBL'"/>
-
 </xsl:stylesheet>
