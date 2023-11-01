@@ -1,7 +1,5 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix cc: <http://creativecommons.org/ns#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -17,18 +15,15 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://data.europa.eu/a4g/ontology#core> a owl:Ontology ;
-    cc:attributionName "European Union" ;
-    cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
+    dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
-    dcterms:issued "2023-10-11"^^xsd:date ;
-    dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+    dcterms:issued "2023-11-01"^^xsd:date ;
+    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated." ;
     dcterms:title "ePO Core core"@en ;
-    bibo:status "Semantic Specification Realease" ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from core_public_organisation_CM.xml on 2023-10-11" ;
+    rdfs:comment "This version is automatically generated from core_public_organisation_CM.xml on 2023-11-01" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
         <https://github.com/eprocurementontology/eprocurementontology>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -48,7 +43,7 @@
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "2.1.0" ;
-    owl:priorVersion "3.0.1" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#core-3.0.1" ;
     owl:versionIRI <http://data.europa.eu/a4g/ontology#core-3.1.0> ;
     owl:versionInfo "3.1.0" .
 
@@ -66,12 +61,11 @@ cccev:ReferenceFramework a owl:Class ;
     skos:prefLabel "Reference framework"@en .
 
 cccev:contactPoint a owl:ObjectProperty ;
-    skos:definition "The main contact information of the resource. (cpov:PublicOrganisation -> cv:ContactPoint (+cpv:contactPoint)) "@en ;
+    skos:definition "The main contact information of the resource. (cpov:PublicOrganisation -> cv:ContactPoint (+cpv:contactPoint))"@en ;
     skos:prefLabel "Contact point"@en .
 
 cccev:frequency a owl:ObjectProperty ;
-    skos:definition """The recurrence of an instant or period.
- (time:TemporalEntity -> cpov:frequency (+cpov:frequency)) """@en ;
+    skos:definition "The recurrence of an instant or period. (time:TemporalEntity -> cpov:frequency (+cpov:frequency))"@en ;
     skos:prefLabel "Frequency"@en .
 
 cccev:hasFormalFramework a owl:ObjectProperty ;
@@ -84,33 +78,33 @@ cccev:logo a owl:ObjectProperty ;
     skos:prefLabel "Logo"@en .
 
 cccev:openingHours a owl:ObjectProperty ;
-    skos:definition "The time at which the Contact Point is normally available. (cv:ContactPoint -> time:TemporalEntity (+cpov:openingHours)) "@en ;
+    skos:definition "The time at which the Contact Point is normally available. (cv:ContactPoint -> time:TemporalEntity (+cpov:openingHours))"@en ;
     skos:prefLabel "Opening hours"@en .
 
 cccev:specialOpeningHoursSpecification a owl:ObjectProperty ;
-    skos:definition "The time during which the Contact Point is not available. (cv:ContactPoint -> time:TemporalEntity (+cpov:specialOpeningHoursSpecification)) "@en ;
+    skos:definition "The time during which the Contact Point is not available. (cv:ContactPoint -> time:TemporalEntity (+cpov:specialOpeningHoursSpecification))"@en ;
     skos:prefLabel "Special opening hours specification"@en .
 
 at-voc:atu-type skos:editorialNote "the URI in core voc is wrong; a dataset URI instead the conceptScheme URI."@en .
 
 dcterms:description a owl:DatatypeProperty ;
-    skos:definition "The textual description of the Public Organization. (cpov:PublicOrganisation) A textual explanation of the event. (org:ChangeEvent) A textual representation of the Temporal Entity. (time:TemporalEntity) "@en ;
+    skos:definition "The textual description of the Public Organization. (cpov:PublicOrganisation) A textual explanation of the event. (org:ChangeEvent) A textual representation of the Temporal Entity. (time:TemporalEntity)"@en ;
     skos:prefLabel "Description"@en .
 
 dcterms:identifier a owl:DatatypeProperty ;
-    skos:definition "An unambiguous reference to a Reference Framework. (cccev:ReferenceFramework) "@en ;
+    skos:definition "An unambiguous reference to a Reference Framework. (cccev:ReferenceFramework)"@en ;
     skos:prefLabel "Identifier"@en .
 
 dcterms:spatial a owl:ObjectProperty ;
-    skos:definition "This property links an Organization to the Administrative Region(s) that it covers. (cpov:PublicOrganisation -> at-voc:atu-type (+dct:spatial)) "@en ;
+    skos:definition "This property links an Organization to the Administrative Region(s) that it covers. (cpov:PublicOrganisation -> at-voc:atu-type (+dct:spatial))"@en ;
     skos:prefLabel "Spatial"@en .
 
 skos:altLabel a owl:DatatypeProperty ;
-    skos:definition "An alternative or informal name(s) of a Public Organization, irrespective of language. (cpov:PublicOrganisation) "@en ;
+    skos:definition "An alternative or informal name(s) of a Public Organization, irrespective of language. (cpov:PublicOrganisation)"@en ;
     skos:prefLabel "Alt label"@en .
 
 skos:prefLabel a owl:DatatypeProperty ;
-    skos:definition "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology. (cpov:PublicOrganisation) "@en ;
+    skos:definition "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology. (cpov:PublicOrganisation)"@en ;
     skos:prefLabel "Pref label"@en .
 
 time:TemporalEntity a owl:Class ;
@@ -121,7 +115,7 @@ adms:identifier a owl:ObjectProperty ;
     skos:prefLabel "Identifier"@en .
 
 locn:address a owl:ObjectProperty ;
-    skos:definition "The Address of a Public Organization. (cpov:PublicOrganisation -> locn:Address (+locn:address)) "@en ;
+    skos:definition "The Address of a Public Organization. (cpov:PublicOrganisation -> locn:Address (+locn:address))"@en ;
     skos:prefLabel "Address"@en .
 
 org:ChangeEvent a owl:Class ;
@@ -137,7 +131,7 @@ org:changedBy a owl:ObjectProperty ;
     skos:prefLabel "Changed by"@en .
 
 org:classification a owl:ObjectProperty ;
-    skos:definition "The categorisation of the Public Organization. (cpov:PublicOrganisation -> org:classification (+org:classification)) "@en ;
+    skos:definition "The categorisation of the Public Organization. (cpov:PublicOrganisation -> org:classification (+org:classification))"@en ;
     skos:prefLabel "Classification"@en .
 
 org:hasMember a owl:ObjectProperty ;
@@ -156,7 +150,7 @@ org:originalOrganization a owl:ObjectProperty ;
     skos:prefLabel "Original organization"@en .
 
 org:purpose a owl:ObjectProperty ;
-    skos:definition "This property describes the reasons of existence of an Organization. (cpov:PublicOrganisation -> org:purpose (+org:purpose)) "@en ;
+    skos:definition "This property describes the reasons of existence of an Organization. (cpov:PublicOrganisation -> org:purpose (+org:purpose))"@en ;
     skos:prefLabel "Purpose"@en .
 
 org:resultedFrom a owl:ObjectProperty ;
@@ -176,7 +170,7 @@ foaf:Document a owl:Class ;
     skos:prefLabel "Document"@en .
 
 foaf:homepage a owl:ObjectProperty ;
-    skos:definition "The official home page of the Public Organization. (cpov:PublicOrganisation -> foaf:Document (+foaf:homepage)) "@en ;
+    skos:definition "The official home page of the Public Organization. (cpov:PublicOrganisation -> foaf:Document (+foaf:homepage))"@en ;
     skos:prefLabel "Homepage"@en .
 
 xhtml:next a owl:ObjectProperty ;
@@ -186,11 +180,11 @@ xhtml:prev a owl:ObjectProperty ;
     skos:prefLabel "Prev"@en .
 
 prov1:endedAtTime a owl:DatatypeProperty ;
-    skos:definition "The time instant when the state of the organisation update was terminated (org:ChangeEvent) "@en ;
+    skos:definition "The time instant when the state of the organisation update was terminated (org:ChangeEvent)"@en ;
     skos:prefLabel "Ended at time"@en .
 
 prov1:startedAtTime a owl:DatatypeProperty ;
-    skos:definition "The time instant when the state of the organisation update was initiated. (org:ChangeEvent) "@en ;
+    skos:definition "The time instant when the state of the organisation update was initiated. (org:ChangeEvent)"@en ;
     skos:prefLabel "Started at time"@en .
 
 org:Organization a owl:Class ;

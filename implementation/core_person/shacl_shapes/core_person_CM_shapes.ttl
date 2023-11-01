@@ -1,7 +1,5 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix cc: <http://creativecommons.org/ns#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix core-res: <http://data.europa.eu/a4g/ontology#> .
 @prefix core-shape: <http://data.europa.eu/a4g/data-shape#> .
@@ -92,7 +90,7 @@ core-shape:adms-Identifier-cpv-identifies a sh:PropertyShape ;
     sh:description "The entity that is referenced by the Identifier." ;
     sh:name "Identifies" ;
     sh:path cccev:identifies ;
-    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/identifies> ?that . ?that <http://data.europa.eu/m8g/identifies> ?this .} " ] .
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/identifies> ?that . ?that <http://data.europa.eu/m8g/identifies> ?this .}" ] .
 
 core-shape:adms-Identifier-dct-conformsTo a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
@@ -105,7 +103,7 @@ core-shape:adms-Identifier-dct-creator a sh:PropertyShape ;
     sh:description "The reference in the form of a Uniform Resource Identifier to the issuing authority." ;
     sh:name "Creator" ;
     sh:path dcterms:creator ;
-    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/creator> ?that . ?that <http://purl.org/dc/terms/creator> ?this .} " ] .
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/creator> ?that . ?that <http://purl.org/dc/terms/creator> ?this .}" ] .
 
 core-shape:adms-Identifier-dct-issued a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
@@ -135,10 +133,10 @@ core-shape:cpv-Person-cpv-birthDate a sh:PropertyShape ;
 
 core-shape:cpv-Person-cpv-contactPoint a sh:PropertyShape ;
     sh:class cccev:ContactPoint ;
-    sh:description "The main contact information of the resource. " ;
+    sh:description "The main contact information of the resource." ;
     sh:name "Contact point" ;
     sh:path cccev:contactPoint ;
-    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/contactPoint> ?that . ?that <http://data.europa.eu/m8g/contactPoint> ?this .} " ] .
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/contactPoint> ?that . ?that <http://data.europa.eu/m8g/contactPoint> ?this .}" ] .
 
 core-shape:cpv-Person-cpv-deathDate a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
@@ -180,7 +178,7 @@ core-shape:cpv-Person-dct-identifier a sh:PropertyShape ;
     sh:description "The unambiguous structured reference to the Person." ;
     sh:name "Identifier" ;
     sh:path dcterms:identifier ;
-    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/identifier> ?that . ?that <http://purl.org/dc/terms/identifier> ?this .} " ] .
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/identifier> ?that . ?that <http://purl.org/dc/terms/identifier> ?this .}" ] .
 
 core-shape:cpv-Person-foaf-familyName a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
@@ -214,14 +212,14 @@ core-shape:cpv-Person-person-citizenship a sh:PropertyShape ;
     sh:description "The Jurisdiction that has conferred citizenship rights on the Person such as the right to vote, to receive certain protection from the community or the issuance of a passport." ;
     sh:name "Citizenship" ;
     sh:path person:citizenship ;
-    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/person#citizenship> ?that . ?that <http://www.w3.org/ns/person#citizenship> ?this .} " ] .
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/person#citizenship> ?that . ?that <http://www.w3.org/ns/person#citizenship> ?this .}" ] .
 
 core-shape:cpv-Person-person-residency a sh:PropertyShape ;
     sh:class dcterms:Jurisdiction ;
     sh:description "Jurisdiction where the Person has their dwelling." ;
     sh:name "Residency" ;
     sh:path person:residency ;
-    sh:sparql [ sh:select " SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/person#residency> ?that . ?that <http://www.w3.org/ns/person#residency> ?this .} " ] .
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/person#residency> ?that . ?that <http://www.w3.org/ns/person#residency> ?this .}" ] .
 
 core-shape:cv-ContactPoint-cv-contactPage a sh:PropertyShape ;
     rdfs:isDefinedBy core-shape:core-shape ;
@@ -272,18 +270,15 @@ core-shape:foaf-Agent-dct-type a sh:PropertyShape ;
     sh:path dcterms:type .
 
 core-shape:core-shape a owl:Ontology ;
-    cc:attributionName "European Union" ;
-    cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
+    dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "This artefact provides the generic datashape specifications for the eProcurement Ontology Core.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
-    dcterms:issued "2023-10-11"^^xsd:date ;
-    dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
+    dcterms:issued "2023-11-01"^^xsd:date ;
+    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated." ;
     dcterms:title "ePO Core shapes"@en ;
-    bibo:status "Semantic Specification Realease" ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from core_person_CM.xml on 2023-10-11" ;
+    rdfs:comment "This version is automatically generated from core_person_CM.xml on 2023-11-01" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
         <https://github.com/eprocurementontology/eprocurementontology>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -305,7 +300,7 @@ core-shape:core-shape a owl:Ontology ;
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "2.1.0" ;
-    owl:priorVersion "3.0.1" ;
+    owl:priorVersion "http://data.europa.eu/a4g/data-shape#core-shape-3.0.1" ;
     owl:versionIRI core-shape:core-shape-3.1.0 ;
     owl:versionInfo "3.1.0" .
 

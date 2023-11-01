@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:adms="http://www.w3.org/ns/adms#"
          xmlns:at-voc="http://publications.europa.eu/resource/authority/"
-         xmlns:bibo="http://purl.org/ontology/bibo/"
-         xmlns:cc="http://creativecommons.org/ns#"
          xmlns:cccev="http://data.europa.eu/m8g/"
          xmlns:clv="http://data.europa.eu/m8g/"
          xmlns:cpov="http://data.europa.eu/m8g/"
@@ -47,23 +45,20 @@
       <dct:title xml:lang="en">ePO Core core</dct:title>
       <dct:description xml:lang="en">This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-      <rdfs:comment>This version is automatically generated from core_location_CM.xml on 2023-10-11</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from core_location_CM.xml on 2023-11-01</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/eprocurementontology/eprocurementontology"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/EPO/latest/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-11</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-01</dct:issued>
+      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>3.1.0</owl:versionInfo>
       <owl:incompatibleWith>2.1.0</owl:incompatibleWith>
       <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology#core-3.1.0"/>
-      <bibo:status>Semantic Specification Realease</bibo:status>
-      <owl:priorVersion>3.0.1</owl:priorVersion>
+      <owl:priorVersion>http://data.europa.eu/a4g/ontology#core-3.0.1</owl:priorVersion>
       <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
-      <dct:rights>The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated.</dct:rights>
-      <dct:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0"/>
-      <cc:attributionName>European Union</cc:attributionName>
-      <cc:attributionURL rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EURUN"/>
+      <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
    <owl:Class rdf:about="http://data.europa.eu/m8g/AdminUnit"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/AdminUnit">
@@ -77,8 +72,7 @@
       <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
-      <skos:definition xml:lang="en">An identifiable geographic place or named place.
-</skos:definition>
+      <skos:definition xml:lang="en">An identifiable geographic place or named place.</skos:definition>
    </rdf:Description>
    <owl:Class rdf:about="http://www.w3.org/ns/locn#Address"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#Address">
@@ -106,63 +100,63 @@
       <skos:prefLabel xml:lang="en">Code</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/code">
-      <skos:definition xml:lang="en">The classification of the administrative unit. (clv:AdminUnit -&gt; clv:code (+clv:code)) </skos:definition>
+      <skos:definition xml:lang="en">The classification of the administrative unit. (clv:AdminUnit -&gt; clv:code (+clv:code))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/level"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/level">
       <skos:prefLabel xml:lang="en">Level</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/level">
-      <skos:definition xml:lang="en">The level of the administrative unit in the hierarchy. (clv:AdminUnit -&gt; clv:level (+clv:level)) </skos:definition>
+      <skos:definition xml:lang="en">The level of the administrative unit in the hierarchy. (clv:AdminUnit -&gt; clv:level (+clv:level))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/adminUnit"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/adminUnit">
       <skos:prefLabel xml:lang="en">Admin unit</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/adminUnit">
-      <skos:definition xml:lang="en">The adminUnit relationship links an Address with the Administrative Unit class. (locn:Address -&gt; clv:AdminUnit (+clv:adminUnit)) </skos:definition>
+      <skos:definition xml:lang="en">The adminUnit relationship links an Address with the Administrative Unit class. (locn:Address -&gt; clv:AdminUnit (+clv:adminUnit))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/person#placeOfDeath"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
       <skos:prefLabel xml:lang="en">Place of death</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
-      <skos:definition xml:lang="en">The Location where the Person died. (cpv:Person -&gt; dct:Location (+person:placeOfDeath)) </skos:definition>
+      <skos:definition xml:lang="en">The Location where the Person died. (cpv:Person -&gt; dct:Location (+person:placeOfDeath))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/person#placeOfBirth"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
       <skos:prefLabel xml:lang="en">Place of birth</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
-      <skos:definition xml:lang="en">The Location where the Person was born. (cpv:Person -&gt; dct:Location (+person:placeOfBirth)) </skos:definition>
+      <skos:definition xml:lang="en">The Location where the Person was born. (cpv:Person -&gt; dct:Location (+person:placeOfBirth))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/locn#location"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#location">
       <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#location">
-      <skos:definition xml:lang="en">Associates any Resource with the corresponding Location. (rdfs:Resource -&gt; dct:Location (+locn:location)) </skos:definition>
+      <skos:definition xml:lang="en">Associates any Resource with the corresponding Location. (rdfs:Resource -&gt; dct:Location (+locn:location))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/person#countryOfBirth"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
       <skos:prefLabel xml:lang="en">Country of birth</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
-      <skos:definition xml:lang="en">The country in which the Person was born. (cpv:Person -&gt; dct:Location (+person:countryOfBirth)) </skos:definition>
+      <skos:definition xml:lang="en">The country in which the Person was born. (cpv:Person -&gt; dct:Location (+person:countryOfBirth))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/person#countryOfDeath"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
       <skos:prefLabel xml:lang="en">Country of death</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
-      <skos:definition xml:lang="en">The country in which the Person died. (cpv:Person -&gt; dct:Location (+person:countryOfDeath)) </skos:definition>
+      <skos:definition xml:lang="en">The country in which the Person died. (cpv:Person -&gt; dct:Location (+person:countryOfDeath))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/domicile"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/domicile">
       <skos:prefLabel xml:lang="en">Domicile</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/domicile">
-      <skos:definition xml:lang="en">The place that the Person treats as permanent home. (cpv:Person -&gt; locn:Address (+cpv:domicile)) </skos:definition>
+      <skos:definition xml:lang="en">The place that the Person treats as permanent home. (cpv:Person -&gt; locn:Address (+cpv:domicile))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/registeredAddress"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/registeredAddress">
@@ -173,153 +167,153 @@
       <skos:prefLabel xml:lang="en">Address</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#address">
-      <skos:definition xml:lang="en">Associates any Resource with the corresponding Address. (rdfs:Resource -&gt; locn:Address (+locn:address)) The Address of a Public Organization. (cpov:PublicOrganisation -&gt; locn:Address (+locn:address)) </skos:definition>
+      <skos:definition xml:lang="en">Associates any Resource with the corresponding Address. (rdfs:Resource -&gt; locn:Address (+locn:address)) The Address of a Public Organization. (cpov:PublicOrganisation -&gt; locn:Address (+locn:address))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/geometryType"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/geometryType">
       <skos:prefLabel xml:lang="en">Geometry type</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/geometryType">
-      <skos:definition xml:lang="en">The classification of the Geometry. (locn:Geometry -&gt; clv:geometryType (+clv:geometryType)) </skos:definition>
+      <skos:definition xml:lang="en">The classification of the Geometry. (locn:Geometry -&gt; clv:geometryType (+clv:geometryType))</skos:definition>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/locn#geometry"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
       <skos:prefLabel xml:lang="en">Geometry</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
-      <skos:definition xml:lang="en">Associates any Resource with the corresponding Geometry. (rdfs:Resource -&gt; locn:Geometry (+locn:geometry)) </skos:definition>
+      <skos:definition xml:lang="en">Associates any Resource with the corresponding Geometry. (rdfs:Resource -&gt; locn:Geometry (+locn:geometry))</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
       <skos:prefLabel xml:lang="en">See also</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso">
-      <skos:definition xml:lang="en">A reference in the form of a Uniform Resource Identifier to the Location. (dct:Location) </skos:definition>
+      <skos:definition xml:lang="en">A reference in the form of a Uniform Resource Identifier to the Location. (dct:Location)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#geographicName"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#geographicName">
       <skos:prefLabel xml:lang="en">Geographic name</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#geographicName">
-      <skos:definition xml:lang="en">A textual description for a Location.  (dct:Location) </skos:definition>
+      <skos:definition xml:lang="en">A textual description for a Location. (dct:Location)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#addressArea"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#addressArea">
       <skos:prefLabel xml:lang="en">Address area</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#addressArea">
-      <skos:definition xml:lang="en">The name of a geographic area that groups Addresses. (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">The name of a geographic area that groups Addresses. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#addressID"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#addressID">
       <skos:prefLabel xml:lang="en">Address i d</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#addressID">
-      <skos:definition xml:lang="en">A globally unique identifier for each instance of an Address. (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">A globally unique identifier for each instance of an Address. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#adminUnitL1"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#adminUnitL1">
       <skos:prefLabel xml:lang="en">Admin unit l1</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#adminUnitL1">
-      <skos:definition xml:lang="en">The name of the uppermost level of the address, almost always a country. (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">The name of the uppermost level of the address, almost always a country. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#adminUnitL2"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#adminUnitL2">
       <skos:prefLabel xml:lang="en">Admin unit l2</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#adminUnitL2">
-      <skos:definition xml:lang="en">The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities. (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#fullAddress"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#fullAddress">
       <skos:prefLabel xml:lang="en">Full address</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#fullAddress">
-      <skos:definition xml:lang="en">The complete address written as a string. (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">The complete address written as a string. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#locatorDesignator"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#locatorDesignator">
       <skos:prefLabel xml:lang="en">Locator designator</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#locatorDesignator">
-      <skos:definition xml:lang="en">A number or sequence of characters that uniquely identifies the locator within the relevant scope. (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">A number or sequence of characters that uniquely identifies the locator within the relevant scope. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#locatorName"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#locatorName">
       <skos:prefLabel xml:lang="en">Locator name</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#locatorName">
-      <skos:definition xml:lang="en">Proper noun(s) applied to the real world entity identified by the locator. (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">Proper noun(s) applied to the real world entity identified by the locator. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#postCode"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#postCode">
       <skos:prefLabel xml:lang="en">Post code</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#postCode">
-      <skos:definition xml:lang="en">The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#postName"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#postName">
       <skos:prefLabel xml:lang="en">Post name</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#postName">
-      <skos:definition xml:lang="en">A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#poBox"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#poBox">
       <skos:prefLabel xml:lang="en">Po box</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#poBox">
-      <skos:definition xml:lang="en">A location designator for a postal delivery point at a post office, usually a number. (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">A location designator for a postal delivery point at a post office, usually a number. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/locn#thoroughfare"/>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#thoroughfare">
       <skos:prefLabel xml:lang="en">Thoroughfare</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.w3.org/ns/locn#thoroughfare">
-      <skos:definition xml:lang="en">The name of a passage or way through from one location to another.  (locn:Address) </skos:definition>
+      <skos:definition xml:lang="en">The name of a passage or way through from one location to another. (locn:Address)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://data.europa.eu/m8g/coordinates"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/coordinates">
       <skos:prefLabel xml:lang="en">Coordinates</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/coordinates">
-      <skos:definition xml:lang="en">A list of geographic coordinates that define the extent of the Geometry. (locn:Geometry) </skos:definition>
+      <skos:definition xml:lang="en">A list of geographic coordinates that define the extent of the Geometry. (locn:Geometry)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://data.europa.eu/m8g/crs"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/crs">
       <skos:prefLabel xml:lang="en">Crs</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/crs">
-      <skos:definition xml:lang="en">An identifier for the coordinate reference system. (locn:Geometry) </skos:definition>
+      <skos:definition xml:lang="en">An identifier for the coordinate reference system. (locn:Geometry)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#asGML"/>
    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asGML">
       <skos:prefLabel xml:lang="en">As g m l</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asGML">
-      <skos:definition xml:lang="en">The expression of the Geometry in Geography Markup Language. (locn:Geometry) </skos:definition>
+      <skos:definition xml:lang="en">The expression of the Geometry in Geography Markup Language. (locn:Geometry)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://data.europa.eu/m8g/latitude"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/latitude">
       <skos:prefLabel xml:lang="en">Latitude</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/latitude">
-      <skos:definition xml:lang="en">The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface. (locn:Geometry) </skos:definition>
+      <skos:definition xml:lang="en">The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface. (locn:Geometry)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://data.europa.eu/m8g/longitude"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/longitude">
       <skos:prefLabel xml:lang="en">Longitude</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/longitude">
-      <skos:definition xml:lang="en">The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface. (locn:Geometry) </skos:definition>
+      <skos:definition xml:lang="en">The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface. (locn:Geometry)</skos:definition>
    </rdf:Description>
    <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT"/>
    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
       <skos:prefLabel xml:lang="en">As w k t</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
-      <skos:definition xml:lang="en">An expression of the Geometry in WKT, the Well-Known Text markup language. (locn:Geometry) </skos:definition>
+      <skos:definition xml:lang="en">An expression of the Geometry in WKT, the Well-Known Text markup language. (locn:Geometry)</skos:definition>
    </rdf:Description>
 </rdf:RDF>

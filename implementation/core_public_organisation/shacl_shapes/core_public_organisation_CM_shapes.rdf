@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:adms="http://www.w3.org/ns/adms#"
          xmlns:at-voc="http://publications.europa.eu/resource/authority/"
-         xmlns:bibo="http://purl.org/ontology/bibo/"
-         xmlns:cc="http://creativecommons.org/ns#"
          xmlns:cccev="http://data.europa.eu/m8g/"
          xmlns:clv="http://data.europa.eu/m8g/"
          xmlns:core-res="http://data.europa.eu/a4g/ontology#"
@@ -52,23 +50,20 @@
       <dct:title xml:lang="en">ePO Core shapes</dct:title>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">This artefact provides the generic datashape specifications for the eProcurement Ontology Core.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</dct:description>
-      <rdfs:comment>This version is automatically generated from core_public_organisation_CM.xml on 2023-10-11</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from core_public_organisation_CM.xml on 2023-11-01</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/eprocurementontology/eprocurementontology"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/EPO/latest/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-11</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-01</dct:issued>
+      <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>3.1.0</owl:versionInfo>
       <owl:incompatibleWith>2.1.0</owl:incompatibleWith>
       <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/data-shape#core-shape-3.1.0"/>
-      <bibo:status>Semantic Specification Realease</bibo:status>
-      <owl:priorVersion>3.0.1</owl:priorVersion>
+      <owl:priorVersion>http://data.europa.eu/a4g/data-shape#core-shape-3.0.1</owl:priorVersion>
       <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
-      <dct:rights>The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated.</dct:rights>
-      <dct:license rdf:resource="http://creativecommons.org/licenses/by-sa/4.0"/>
-      <cc:attributionName>European Union</cc:attributionName>
-      <cc:attributionURL rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EURUN"/>
+      <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework">
       <sh:targetClass rdf:resource="http://data.europa.eu/m8g/ReferenceFramework"/>
@@ -322,12 +317,12 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/hasFormalFramework&gt; ?that . ?that &lt;http://data.europa.eu/m8g/hasFormalFramework&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/hasFormalFramework&gt; ?that . ?that &lt;http://data.europa.eu/m8g/hasFormalFramework&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-cpsv-implements">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/implements&gt; ?that . ?that &lt;http://data.europa.eu/m8g/implements&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/implements&gt; ?that . ?that &lt;http://data.europa.eu/m8g/implements&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
@@ -359,7 +354,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-cpov-logo">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/logo&gt; ?that . ?that &lt;http://data.europa.eu/m8g/logo&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/logo&gt; ?that . ?that &lt;http://data.europa.eu/m8g/logo&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
@@ -379,12 +374,12 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasMember">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#hasMember&gt; ?that . ?that &lt;http://www.w3.org/ns/org#hasMember&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#hasMember&gt; ?that . ?that &lt;http://www.w3.org/ns/org#hasMember&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-memberOf">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#memberOf&gt; ?that . ?that &lt;http://www.w3.org/ns/org#memberOf&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#memberOf&gt; ?that . ?that &lt;http://www.w3.org/ns/org#memberOf&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
@@ -419,12 +414,12 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-next">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;https://www.w3.org/1999/xhtml/vocab#next&gt; ?that . ?that &lt;https://www.w3.org/1999/xhtml/vocab#next&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;https://www.w3.org/1999/xhtml/vocab#next&gt; ?that . ?that &lt;https://www.w3.org/1999/xhtml/vocab#next&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-prev">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;https://www.w3.org/1999/xhtml/vocab#prev&gt; ?that . ?that &lt;https://www.w3.org/1999/xhtml/vocab#prev&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;https://www.w3.org/1999/xhtml/vocab#prev&gt; ?that . ?that &lt;https://www.w3.org/1999/xhtml/vocab#prev&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
@@ -459,12 +454,12 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-changedBy">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#changedBy&gt; ?that . ?that &lt;http://www.w3.org/ns/org#changedBy&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#changedBy&gt; ?that . ?that &lt;http://www.w3.org/ns/org#changedBy&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-originalOrganization">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#originalOrganization&gt; ?that . ?that &lt;http://www.w3.org/ns/org#originalOrganization&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#originalOrganization&gt; ?that . ?that &lt;http://www.w3.org/ns/org#originalOrganization&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
@@ -499,12 +494,12 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#resultedFrom&gt; ?that . ?that &lt;http://www.w3.org/ns/org#resultedFrom&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#resultedFrom&gt; ?that . ?that &lt;http://www.w3.org/ns/org#resultedFrom&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-resultingOrganization">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#resultingOrganization&gt; ?that . ?that &lt;http://www.w3.org/ns/org#resultingOrganization&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#resultingOrganization&gt; ?that . ?that &lt;http://www.w3.org/ns/org#resultingOrganization&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
@@ -536,7 +531,7 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-foaf-homepage">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://xmlns.com/foaf/0.1/homepage&gt; ?that . ?that &lt;http://xmlns.com/foaf/0.1/homepage&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://xmlns.com/foaf/0.1/homepage&gt; ?that . ?that &lt;http://xmlns.com/foaf/0.1/homepage&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
@@ -559,12 +554,12 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasUnit">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#hasUnit&gt; ?that . ?that &lt;http://www.w3.org/ns/org#hasUnit&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#hasUnit&gt; ?that . ?that &lt;http://www.w3.org/ns/org#hasUnit&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit-org-unitOf">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#unitOf&gt; ?that . ?that &lt;http://www.w3.org/ns/org#unitOf&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#unitOf&gt; ?that . ?that &lt;http://www.w3.org/ns/org#unitOf&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
@@ -599,12 +594,12 @@
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-subOrganizationOf">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#subOrganizationOf&gt; ?that . ?that &lt;http://www.w3.org/ns/org#subOrganizationOf&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#subOrganizationOf&gt; ?that . ?that &lt;http://www.w3.org/ns/org#subOrganizationOf&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-hasSubOrganization">
       <sh:sparql rdf:parseType="Resource">
-         <sh:select> SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#hasSubOrganization&gt; ?that . ?that &lt;http://www.w3.org/ns/org#hasSubOrganization&gt; ?this .} </sh:select>
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#hasSubOrganization&gt; ?that . ?that &lt;http://www.w3.org/ns/org#hasSubOrganization&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization">
@@ -689,8 +684,7 @@
       <sh:name>Frequency</sh:name>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-cpov-frequency">
-      <sh:description>The recurrence of an instant or period.
-</sh:description>
+      <sh:description>The recurrence of an instant or period.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#at-voc-atu-type">
       <rdfs:comment>the URI in core voc is wrong; a dataset URI instead the conceptScheme URI.</rdfs:comment>
