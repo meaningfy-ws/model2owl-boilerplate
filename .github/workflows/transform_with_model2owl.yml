@@ -156,9 +156,9 @@ jobs:
             make shacl XMI_INPUT_FILE_PATH=../$CM_FILE_PATH OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_SHACL
 
             echo "+++++++++++++++++transform to turtle++++++++++++++++++++++++++++"
-            echo $(ls ${OUTPUT_PATH_OWL}/*.rdf)
+            echo $(ls ${OUTPUT_PATH_OWL}*.rdf)
             make convert-to-turtle ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_OWL
-            echo $(ls ${OUTPUT_PATH_SHACL}/*.rdf)
+            echo $(ls ${OUTPUT_PATH_SHACL}*.rdf)
             make convert-to-turtle ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_SHACL
             echo "-------------------end transform---------------------------------"
 
