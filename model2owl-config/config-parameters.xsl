@@ -121,8 +121,6 @@
             ('https://github.com/eprocurementontology/eprocurementontology',
             'https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about', 'https://op.europa.eu/en/web/eu-vocabularies/e-procurement',
             'https://docs.ted.europa.eu/EPO/latest/index.html')"/>
-    <!--    dct:created-->
-    <xsl:variable name="createdDate" select="''"/>
     <!--    dct:issued-->
     <xsl:variable name="issuedDate" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
     <!--    owl:incompatibleWith -->
