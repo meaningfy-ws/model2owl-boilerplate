@@ -12,18 +12,18 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://data.europa.eu/a4g/ontology#core> a owl:Ontology ;
+<http://data.europa.eu/a4g/ontology#cat> a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
-    dcterms:description "This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:description "The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
     dcterms:issued "2023-11-01"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "ePO Core core"@en ;
+    dcterms:title "eProcurement Ontology Catalogue - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment "This version is automatically generated from core_location_CM.xml on 2023-11-01" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
-        <https://github.com/eprocurementontology/eprocurementontology>,
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
     owl:imports cccev:,
@@ -40,10 +40,10 @@
         <https://data.europa.eu/m8g/>,
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
-    owl:incompatibleWith "2.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#core-3.0.1" ;
-    owl:versionIRI <http://data.europa.eu/a4g/ontology#core-3.1.0> ;
-    owl:versionInfo "3.1.0" .
+    owl:incompatibleWith "3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#cat-3.1.0" ;
+    owl:versionIRI <http://data.europa.eu/a4g/ontology#cat-4.0.0> ;
+    owl:versionInfo "4.0.0" .
 
 cccev:AdminUnit a owl:Class ;
     skos:definition "A detailed administrative unit organized in a hierarchy."@en ;
@@ -53,7 +53,8 @@ cccev:adminUnit a owl:ObjectProperty ;
     skos:definition "The adminUnit relationship links an Address with the Administrative Unit class. (locn:Address -> clv:AdminUnit (+clv:adminUnit))"@en ;
     skos:prefLabel "Admin unit"@en .
 
-cccev:code a owl:ObjectProperty ;
+cccev:code a owl:ObjectProperty,
+        skos:ConceptScheme ;
     skos:definition "The classification of the administrative unit. (clv:AdminUnit -> clv:code (+clv:code))"@en ;
     skos:prefLabel "Code"@en .
 
@@ -69,7 +70,8 @@ cccev:domicile a owl:ObjectProperty ;
     skos:definition "The place that the Person treats as permanent home. (cpv:Person -> locn:Address (+cpv:domicile))"@en ;
     skos:prefLabel "Domicile"@en .
 
-cccev:geometryType a owl:ObjectProperty ;
+cccev:geometryType a owl:ObjectProperty,
+        skos:ConceptScheme ;
     skos:definition "The classification of the Geometry. (locn:Geometry -> clv:geometryType (+clv:geometryType))"@en ;
     skos:prefLabel "Geometry type"@en .
 
@@ -77,7 +79,8 @@ cccev:latitude a owl:DatatypeProperty ;
     skos:definition "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface. (locn:Geometry)"@en ;
     skos:prefLabel "Latitude"@en .
 
-cccev:level a owl:ObjectProperty ;
+cccev:level a owl:ObjectProperty,
+        skos:ConceptScheme ;
     skos:definition "The level of the administrative unit in the hierarchy. (clv:AdminUnit -> clv:level (+clv:level))"@en ;
     skos:prefLabel "Level"@en .
 

@@ -23,7 +23,7 @@
          xmlns:vann="http://purl.org/vocab/vann/"
          xmlns:xhtml="https://www.w3.org/1999/xhtml/vocab#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-   <owl:Ontology rdf:about="http://data.europa.eu/a4g/ontology#core">
+   <owl:Ontology rdf:about="http://data.europa.eu/a4g/ontology#cat">
       <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
       <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
       <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
@@ -42,20 +42,20 @@
       <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
       <owl:imports rdf:resource="https://www.w3.org/ns/prov"/>
       <owl:imports rdf:resource="https://www.w3.org/1999/xhtml/vocab"/>
-      <dct:title xml:lang="en">ePO Core core</dct:title>
-      <dct:description xml:lang="en">This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</dct:description>
+      <dct:title xml:lang="en">eProcurement Ontology Catalogue - core</dct:title>
+      <dct:description xml:lang="en">The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.</dct:description>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <rdfs:comment>This version is automatically generated from core_person_CM.xml on 2023-11-01</rdfs:comment>
-      <rdfs:seeAlso rdf:resource="https://github.com/eprocurementontology/eprocurementontology"/>
+      <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
-      <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/EPO/latest/index.html"/>
+      <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
       <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-01</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
-      <owl:versionInfo>3.1.0</owl:versionInfo>
-      <owl:incompatibleWith>2.1.0</owl:incompatibleWith>
-      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology#core-3.1.0"/>
-      <owl:priorVersion>http://data.europa.eu/a4g/ontology#core-3.0.1</owl:priorVersion>
+      <owl:versionInfo>4.0.0</owl:versionInfo>
+      <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology#cat-4.0.0"/>
+      <owl:priorVersion>http://data.europa.eu/a4g/ontology#cat-3.1.0</owl:priorVersion>
       <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
@@ -98,6 +98,18 @@
    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
       <skos:prefLabel xml:lang="en">Person</skos:prefLabel>
+   </rdf:Description>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/m8g/gender"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/gender">
+      <skos:prefLabel xml:lang="en">Gender</skos:prefLabel>
+   </rdf:Description>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/m8g/sex"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/sex">
+      <skos:prefLabel xml:lang="en">Sex</skos:prefLabel>
+   </rdf:Description>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/m8g/type"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/type">
+      <skos:prefLabel xml:lang="en">Type</skos:prefLabel>
    </rdf:Description>
    <owl:Class rdf:about="http://data.europa.eu/m8g/Person">
       <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>

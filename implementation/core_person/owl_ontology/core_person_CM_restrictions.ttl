@@ -1,7 +1,7 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix cat-res: <http://data.europa.eu/a4g/ontology#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
-@prefix core-res: <http://data.europa.eu/a4g/ontology#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
@@ -15,22 +15,22 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-core-res:core-restriction a owl:Ontology ;
+cat-res:cat-restriction a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
-    dcterms:description "This artefact provides the restrictions and inference-related specifications for the eProcurement Ontology Core.         This artefact excludes the definitions of concepts.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:description "The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core."@en ;
     dcterms:issued "2023-11-01"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "ePO Core restrictions"@en ;
+    dcterms:title "eProcurement Ontology Catalogue - core restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment """This version is automatically generated from core_person_CM.xml on 
                 2023-11-01""" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
-        <https://github.com/eprocurementontology/eprocurementontology>,
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports core-res:core,
+    owl:imports cat-res:cat,
         cccev:,
         at-voc:,
         dcterms:,
@@ -45,10 +45,10 @@ core-res:core-restriction a owl:Ontology ;
         <https://data.europa.eu/m8g/>,
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
-    owl:incompatibleWith "2.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#core-restriction-3.0.1" ;
-    owl:versionIRI core-res:core-restriction-3.1.0 ;
-    owl:versionInfo "3.1.0" .
+    owl:incompatibleWith "3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#cat-restriction-3.1.0" ;
+    owl:versionIRI cat-res:cat-restriction-4.0.0 ;
+    owl:versionInfo "4.0.0" .
 
 cccev:birthDate rdfs:domain cccev:Person ;
     rdfs:range cccev:GenericDate .
@@ -68,9 +68,6 @@ cccev:domicile rdfs:domain cccev:Person ;
 
 cccev:email rdfs:domain cccev:ContactPoint ;
     rdfs:range rdfs:Literal .
-
-cccev:gender rdf:domain cccev:Person ;
-    rdfs:range skos:Concept .
 
 cccev:identifies rdfs:domain adms:Identifier ;
     rdfs:range cccev:Person .
@@ -155,6 +152,26 @@ foaf:givenName rdfs:domain cccev:Person ;
 
 foaf:name rdfs:domain cccev:Person ;
     rdfs:range rdf:langString .
+
+cccev:gender a owl:Class ;
+    rdf:domain cccev:Person ;
+    rdfs:range skos:Concept ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue cccev:gender ;
+            owl:onProperty skos:inScheme ] .
+
+cccev:sex a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue cccev:sex ;
+            owl:onProperty skos:inScheme ] .
+
+cccev:type a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:hasValue cccev:type ;
+            owl:onProperty skos:inScheme ] .
 
 dcterms:Jurisdiction a owl:Class .
 

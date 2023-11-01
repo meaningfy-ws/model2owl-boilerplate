@@ -14,18 +14,18 @@
 @prefix xhtml: <https://www.w3.org/1999/xhtml/vocab#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://data.europa.eu/a4g/ontology#core> a owl:Ontology ;
+<http://data.europa.eu/a4g/ontology#cat> a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
-    dcterms:description "This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:description "The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
     dcterms:issued "2023-11-01"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "ePO Core core"@en ;
+    dcterms:title "eProcurement Ontology Catalogue - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment "This version is automatically generated from core_public_organisation_CM.xml on 2023-11-01" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
-        <https://github.com/eprocurementontology/eprocurementontology>,
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
     owl:imports cccev:,
@@ -42,10 +42,10 @@
         <https://data.europa.eu/m8g/>,
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
-    owl:incompatibleWith "2.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#core-3.0.1" ;
-    owl:versionIRI <http://data.europa.eu/a4g/ontology#core-3.1.0> ;
-    owl:versionInfo "3.1.0" .
+    owl:incompatibleWith "3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#cat-3.1.0" ;
+    owl:versionIRI <http://data.europa.eu/a4g/ontology#cat-4.0.0> ;
+    owl:versionInfo "4.0.0" .
 
 cccev:ImageObject a owl:Class ;
     skos:definition "A logo to describe / represent the PublicOrganization."@en ;
@@ -64,7 +64,8 @@ cccev:contactPoint a owl:ObjectProperty ;
     skos:definition "The main contact information of the resource. (cpov:PublicOrganisation -> cv:ContactPoint (+cpv:contactPoint))"@en ;
     skos:prefLabel "Contact point"@en .
 
-cccev:frequency a owl:ObjectProperty ;
+cccev:frequency a owl:ObjectProperty,
+        skos:ConceptScheme ;
     skos:definition "The recurrence of an instant or period. (time:TemporalEntity -> cpov:frequency (+cpov:frequency))"@en ;
     skos:prefLabel "Frequency"@en .
 
@@ -85,7 +86,10 @@ cccev:specialOpeningHoursSpecification a owl:ObjectProperty ;
     skos:definition "The time during which the Contact Point is not available. (cv:ContactPoint -> time:TemporalEntity (+cpov:specialOpeningHoursSpecification))"@en ;
     skos:prefLabel "Special opening hours specification"@en .
 
-at-voc:atu-type skos:editorialNote "the URI in core voc is wrong; a dataset URI instead the conceptScheme URI."@en .
+at-voc:atu-type a skos:ConceptScheme ;
+    skos:definition "A code from a list that represents the administrative territorial unit of the EU Member States, based on national official / legal information and the ISO 3166-2 standard."@en ;
+    skos:editorialNote "the URI in core voc is wrong; a dataset URI instead the conceptScheme URI."@en ;
+    skos:prefLabel "Atu-type"@en .
 
 dcterms:description a owl:DatatypeProperty ;
     skos:definition "The textual description of the Public Organization. (cpov:PublicOrganisation) A textual explanation of the event. (org:ChangeEvent) A textual representation of the Temporal Entity. (time:TemporalEntity)"@en ;
@@ -130,7 +134,8 @@ org:OrganizationalUnit a owl:Class ;
 org:changedBy a owl:ObjectProperty ;
     skos:prefLabel "Changed by"@en .
 
-org:classification a owl:ObjectProperty ;
+org:classification a owl:ObjectProperty,
+        skos:ConceptScheme ;
     skos:definition "The categorisation of the Public Organization. (cpov:PublicOrganisation -> org:classification (+org:classification))"@en ;
     skos:prefLabel "Classification"@en .
 
@@ -149,7 +154,8 @@ org:memberOf a owl:ObjectProperty ;
 org:originalOrganization a owl:ObjectProperty ;
     skos:prefLabel "Original organization"@en .
 
-org:purpose a owl:ObjectProperty ;
+org:purpose a owl:ObjectProperty,
+        skos:ConceptScheme ;
     skos:definition "This property describes the reasons of existence of an Organization. (cpov:PublicOrganisation -> org:purpose (+org:purpose))"@en ;
     skos:prefLabel "Purpose"@en .
 
