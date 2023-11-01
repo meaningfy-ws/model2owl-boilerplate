@@ -140,6 +140,11 @@
                </thead>
                <tbody>
                   <tr>
+                     <td>adms:identifier</td>
+                     <td></td>
+                     <td>cpov:PublicOrganisation -&gt; adms:Identifier (external) [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>cpov:frequency</td>
                      <td>The recurrence of an instant or period.
                         </td>
@@ -157,10 +162,25 @@
                      <td>cpov:PublicOrganisation -&gt; cpov:ImageObject [0..*]</td>
                   </tr>
                   <tr>
+                     <td>cpov:openingHours</td>
+                     <td>The time at which the Contact Point is normally available.</td>
+                     <td>cv:ContactPoint (external) -&gt; time:TemporalEntity [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpov:specialOpeningHoursSpecification</td>
+                     <td>The time during which the Contact Point is not available.</td>
+                     <td>cv:ContactPoint (external) -&gt; time:TemporalEntity [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>cpsv:implements</td>
                      <td>A Change Event linked to relevant legislation or policy documents.A piece of legislation
                         or a policy document that prompted the change.</td>
                      <td>org:ChangeEvent [,0..*] &lt;- cccev:ReferenceFramework</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:contactPoint</td>
+                     <td>The main contact information of the resource.</td>
+                     <td>cpov:PublicOrganisation -&gt; cv:ContactPoint (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>dct:spatial</td>
@@ -171,6 +191,11 @@
                      <td>foaf:homepage</td>
                      <td>The official home page of the Public Organization.</td>
                      <td>cpov:PublicOrganisation -&gt; foaf:Document [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>locn:address</td>
+                     <td>The Address of a Public Organization.</td>
+                     <td>cpov:PublicOrganisation -&gt; locn:Address (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>org:changedBy</td>

@@ -205,9 +205,29 @@
                </thead>
                <tbody>
                   <tr>
+                     <td>adms:identifier</td>
+                     <td></td>
+                     <td>cpov:PublicOrganisation (external) -&gt; adms:Identifier [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpov:openingHours</td>
+                     <td>The time at which the Contact Point is normally available.</td>
+                     <td>cv:ContactPoint -&gt; time:TemporalEntity (external) [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpov:specialOpeningHoursSpecification</td>
+                     <td>The time during which the Contact Point is not available.</td>
+                     <td>cv:ContactPoint -&gt; time:TemporalEntity (external) [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>cpv:contactPoint</td>
                      <td>The main contact information of the resource.  The main contact information of the resource.</td>
-                     <td>cpv:Person -&gt; cv:ContactPoint [0..*]<br><br></td>
+                     <td>cpv:Person -&gt; cv:ContactPoint [0..*]<br>cpov:PublicOrganisation (external) -&gt; cv:ContactPoint [0..*]<br></td>
+                  </tr>
+                  <tr>
+                     <td>cpv:domicile</td>
+                     <td>The place that the Person treats as permanent home.</td>
+                     <td>cpv:Person -&gt; locn:Address (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>cpv:gender</td>
@@ -239,6 +259,26 @@
                      <td>The Jurisdiction that has conferred citizenship rights on the Person such as the right
                         to vote, to receive certain protection from the community or the issuance of a passport.</td>
                      <td>cpv:Person -&gt; dct:Jurisdiction [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>person:countryOfBirth</td>
+                     <td>The country in which the Person was born.</td>
+                     <td>cpv:Person -&gt; dct:Location (external) [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>person:countryOfDeath</td>
+                     <td>The country in which the Person died.</td>
+                     <td>cpv:Person -&gt; dct:Location (external) [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>person:placeOfBirth</td>
+                     <td>The Location where the Person was born.</td>
+                     <td>cpv:Person -&gt; dct:Location (external) [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>person:placeOfDeath</td>
+                     <td>The Location where the Person died.</td>
+                     <td>cpv:Person -&gt; dct:Location (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>person:residency</td>

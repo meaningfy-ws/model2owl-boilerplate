@@ -232,9 +232,14 @@
                      <td>rdfs:Resource -&gt; locn:Address [0..*]</td>
                   </tr>
                   <tr>
+                     <td>cpv:domicile</td>
+                     <td>The place that the Person treats as permanent home.</td>
+                     <td>cpv:Person (external) -&gt; locn:Address [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>locn:address</td>
                      <td>Associates any Resource with the corresponding Address. The Address of a Public Organization.</td>
-                     <td>rdfs:Resource -&gt; locn:Address [0..*]<br><br></td>
+                     <td>rdfs:Resource -&gt; locn:Address [0..*]<br>cpov:PublicOrganisation (external) -&gt; locn:Address [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>locn:geometry</td>
@@ -245,6 +250,26 @@
                      <td>locn:location</td>
                      <td>Associates any Resource with the corresponding Location.</td>
                      <td>rdfs:Resource -&gt; dct:Location [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>person:countryOfBirth</td>
+                     <td>The country in which the Person was born.</td>
+                     <td>cpv:Person (external) -&gt; dct:Location [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>person:countryOfDeath</td>
+                     <td>The country in which the Person died.</td>
+                     <td>cpv:Person (external) -&gt; dct:Location [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>person:placeOfBirth</td>
+                     <td>The Location where the Person was born.</td>
+                     <td>cpv:Person (external) -&gt; dct:Location [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>person:placeOfDeath</td>
+                     <td>The Location where the Person died.</td>
+                     <td>cpv:Person (external) -&gt; dct:Location [0..*]</td>
                   </tr>
                </tbody>
             </table>
