@@ -96,23 +96,20 @@
     <!--    This section contains the variables used to build the ontology metadata-->
     <xsl:variable name="moduleReference" select="'cpov'"/>
     <!--    dct:title -->
-    <xsl:variable name="ontologyTitleCore" select="'eProcurement Ontology Catalogue - core'"/>
-    <xsl:variable name="ontologyTitleRestrictions" select="'eProcurement Ontology Catalogue - core restrictions'"/>
-    <xsl:variable name="ontologyTitleShapes" select="'eProcurement Ontology Catalogue - core shapes'"/>
+    <xsl:variable name="ontologyTitleCore" select="'Core Public Organisation Vocabulary - core'"/>
+    <xsl:variable name="ontologyTitleRestrictions" select="'Core Public Organisation Vocabulary - core restrictions'"/>
+    <xsl:variable name="ontologyTitleShapes" select="'Core Public Organisation Vocabulary - core shapes'"/>
     <!--    dct:description-->
     <xsl:variable name="ontologyDescriptionCore"
-        select="'The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
+        select="'The Core Public Organisation Vocabulary core describes the concepts and properties representing the Core Public Organisation Vocabulary domain. '"/>
     <xsl:variable name="ontologyDescriptionRestrictions"
-        select="'The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core.'"/>
+        select="'The Core Public Organisation Vocabulary core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the Core Public Organisation Vocabulary core.'"/>
     <xsl:variable name="ontologyDescriptionShapes"
-        select="'The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.'"/>
+        select="'The Core Public Organisation Vocabulary core shapes provides the generic datashape specifications for the Core Public Organisation Vocabulary core.'"/>
     <!--    rdfs:seeAlso -->
     <xsl:variable name="seeAlsoResources"
         select="
-            ('https://github.com/OP-TED/ePO/releases',
-            'https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about',
-            'https://op.europa.eu/en/web/eu-vocabularies/e-procurement',
-            'https://docs.ted.europa.eu/home/index.html')"/>
+            ('https://semiceu.github.io/CPOV/releases/2.1.0/')"/>
     <!--    dct:issued-->
     <xsl:variable name="issuedDate" select="format-date(current-date(), '[Y0001]-[M01]-[D01]')"/>
     <!--    owl:incompatibleWith -->
@@ -124,7 +121,7 @@
     <!--    owl:priorVersion -->
     <xsl:variable name="priorVersion" select="'3.1.0'"/>
     <!--    vann:preferredNamespaceUri -->
-    <xsl:variable name="preferredNamespaceUri" select="'http://data.europa.eu/a4g/ontology#'"/>
+    <xsl:variable name="preferredNamespaceUri" select="'http://data.europa.eu/m8g/ontology#'"/>
     <!--    vann:preferredNamespacePrefix -->
     <xsl:variable name="preferredNamespacePrefix" select="'epo'"/>
     <!--    dct:license-->
