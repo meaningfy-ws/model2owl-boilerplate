@@ -65,6 +65,10 @@
                      <td>foaf:Person</td>
                      <td></td>
                   </tr>
+                  <tr>
+                     <td>skos:Concept</td>
+                     <td></td>
+                  </tr>
                </tbody>
             </table>
             <h2 xmlns:f="http://https://github.com/costezki/model2owl#">Attributes (datatype properties) names and definitions</h2>
@@ -231,13 +235,18 @@
                   </tr>
                   <tr>
                      <td>cpv:gender</td>
-                     <td>The organism's biological sex. The identities, expressions and societal roles of the Person.</td>
-                     <td>cpv:Person -&gt; cpv:sex [0..*]<br>cpv:Person -&gt; cpv:gender [0..*]<br></td>
+                     <td>The identities, expressions and societal roles of the Person.</td>
+                     <td>cpv:Person -&gt; cpv:gender [0..*]</td>
                   </tr>
                   <tr>
                      <td>cpv:identifies</td>
                      <td>The entity that is referenced by the Identifier.</td>
                      <td>adms:Identifier -&gt; cpv:Person [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cpv:sex</td>
+                     <td>The organism's biological sex.</td>
+                     <td>cpv:Person -&gt; cpv:sex [0..*]</td>
                   </tr>
                   <tr>
                      <td>dct:creator</td>
@@ -251,8 +260,8 @@
                   </tr>
                   <tr>
                      <td>dct:type</td>
-                     <td>A classification assigned to an Agent.</td>
-                     <td>foaf:Agent -&gt; cpv:type [0..*]</td>
+                     <td> A classification assigned to an Agent.</td>
+                     <td>foaf:Agent -&gt; skos:Concept []<br>foaf:Agent -&gt; cpv:type [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>person:citizenship</td>
