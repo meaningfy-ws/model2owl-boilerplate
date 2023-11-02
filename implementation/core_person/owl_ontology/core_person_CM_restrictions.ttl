@@ -18,14 +18,14 @@
 cat-res:cat-restriction a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-11-01"^^xsd:date ;
+    dcterms:issued "2023-11-02"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment """This version is automatically generated from core_person_CM.xml on 
-                2023-11-01""" ;
+                2023-11-02""" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -107,7 +107,7 @@ dcterms:issued rdfs:domain adms:Identifier ;
 dcterms:title rdfs:domain foaf:Agent ;
     rdfs:range rdf:langString .
 
-dcterms:type rdfs:domain foaf:Agent ;
+dcterms:type rdf:domain foaf:Agent ;
     rdfs:range skos:Concept .
 
 rdfs:label rdfs:domain [ a owl:Class ;
@@ -154,7 +154,7 @@ foaf:name rdfs:domain cccev:Person ;
     rdfs:range rdf:langString .
 
 cccev:gender a owl:Class ;
-    rdf:domain cccev:Person ;
+    rdfs:domain cccev:Person ;
     rdfs:range skos:Concept ;
     rdfs:subClassOf skos:Concept ;
     owl:equivalentClass [ a owl:Restriction ;
@@ -162,6 +162,8 @@ cccev:gender a owl:Class ;
             owl:onProperty skos:inScheme ] .
 
 cccev:sex a owl:Class ;
+    rdfs:domain cccev:Person ;
+    rdfs:range skos:Concept ;
     rdfs:subClassOf skos:Concept ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:hasValue cccev:sex ;

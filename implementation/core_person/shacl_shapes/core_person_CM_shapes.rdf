@@ -50,12 +50,12 @@
       <dct:title xml:lang="en">eProcurement Ontology Catalogue - core shapes</dct:title>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
-      <rdfs:comment>This version is automatically generated from core_person_CM.xml on 2023-11-01</rdfs:comment>
+      <rdfs:comment>This version is automatically generated from core_person_CM.xml on 2023-11-02</rdfs:comment>
       <rdfs:seeAlso rdf:resource="https://github.com/OP-TED/ePO/releases"/>
       <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
       <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
       <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/home/index.html"/>
-      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-01</dct:issued>
+      <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-11-02</dct:issued>
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
@@ -132,6 +132,15 @@
       <rdfs:label>Person</rdfs:label>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Person">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+   </rdf:Description>
+   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <sh:targetClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </sh:NodeShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
+      <rdfs:label>Concept</rdfs:label>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#skos-Concept">
       <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#adms-Identifier">
@@ -599,19 +608,36 @@
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-person-residency">
       <sh:description>Jurisdiction where the Person has their dwelling.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-type">
+      <sh:class rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-type">
+      <sh:sparql rdf:parseType="Resource">
+         <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://purl.org/dc/terms/type&gt; ?that . ?that &lt;http://purl.org/dc/terms/type&gt; ?this .}</sh:select>
+      </sh:sparql>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent">
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-type"/>
+   </rdf:Description>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-type">
+      <sh:path rdf:resource="http://purl.org/dc/terms/type"/>
+   </sh:PropertyShape>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Agent-dct-type">
+      <sh:name>Type</sh:name>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-sex">
       <sh:class rdf:resource="http://data.europa.eu/m8g/sex"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender"/>
+      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-sex"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
-      <sh:path rdf:resource="http://data.europa.eu/m8g/gender"/>
+   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-sex">
+      <sh:path rdf:resource="http://data.europa.eu/m8g/sex"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
-      <sh:name>Gender</sh:name>
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-sex">
+      <sh:name>Sex</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">
+   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-sex">
       <sh:description>The organism's biological sex.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpv-Person-cpv-gender">

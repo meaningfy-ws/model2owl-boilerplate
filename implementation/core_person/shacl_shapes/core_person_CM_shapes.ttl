@@ -38,6 +38,7 @@ cat-shape:cpv-Person a sh:NodeShape ;
         cat-shape:cpv-Person-cpv-gender,
         cat-shape:cpv-Person-cpv-matronymicName,
         cat-shape:cpv-Person-cpv-patronymicName,
+        cat-shape:cpv-Person-cpv-sex,
         cat-shape:cpv-Person-dct-alternative,
         cat-shape:cpv-Person-dct-identifier,
         cat-shape:cpv-Person-foaf-familyName,
@@ -77,6 +78,11 @@ cat-shape:foaf-Person a sh:NodeShape ;
     rdfs:label "Person" ;
     rdfs:isDefinedBy cat-shape:cat-shape ;
     sh:targetClass foaf:Person .
+
+cat-shape:skos-Concept a sh:NodeShape ;
+    rdfs:label "Concept" ;
+    rdfs:isDefinedBy cat-shape:cat-shape ;
+    sh:targetClass skos:Concept .
 
 cat-shape:adms-Identifier-adms-schemeAgency a sh:PropertyShape ;
     rdfs:isDefinedBy cat-shape:cat-shape ;
@@ -145,10 +151,8 @@ cat-shape:cpv-Person-cpv-deathDate a sh:PropertyShape ;
     sh:path cccev:deathDate .
 
 cat-shape:cpv-Person-cpv-gender a sh:PropertyShape ;
-    sh:class cccev:gender,
-        cccev:sex ;
-    sh:description "The identities, expressions and societal roles of the Person.",
-        "The organism's biological sex." ;
+    sh:class cccev:gender ;
+    sh:description "The identities, expressions and societal roles of the Person." ;
     sh:name "Gender" ;
     sh:path cccev:gender .
 
@@ -165,6 +169,12 @@ cat-shape:cpv-Person-cpv-patronymicName a sh:PropertyShape ;
     sh:description "Name based on the given name of the Person's father." ;
     sh:name "Patronymic name" ;
     sh:path cccev:patronymicName .
+
+cat-shape:cpv-Person-cpv-sex a sh:PropertyShape ;
+    sh:class cccev:sex ;
+    sh:description "The organism's biological sex." ;
+    sh:name "Sex" ;
+    sh:path cccev:sex .
 
 cat-shape:cpv-Person-dct-alternative a sh:PropertyShape ;
     rdfs:isDefinedBy cat-shape:cat-shape ;
@@ -264,21 +274,23 @@ cat-shape:foaf-Agent-dct-title a sh:PropertyShape ;
     sh:path dcterms:title .
 
 cat-shape:foaf-Agent-dct-type a sh:PropertyShape ;
-    sh:class cccev:type ;
+    sh:class cccev:type,
+        skos:Concept ;
     sh:description "A classification assigned to an Agent." ;
     sh:name "Type" ;
-    sh:path dcterms:type .
+    sh:path dcterms:type ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://purl.org/dc/terms/type> ?that . ?that <http://purl.org/dc/terms/type> ?this .}" ] .
 
 cat-shape:cat-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
-    dcterms:issued "2023-11-01"^^xsd:date ;
+    dcterms:issued "2023-11-02"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core shapes"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from core_person_CM.xml on 2023-11-01" ;
+    rdfs:comment "This version is automatically generated from core_person_CM.xml on 2023-11-02" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,

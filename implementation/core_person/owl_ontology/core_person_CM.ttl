@@ -15,13 +15,13 @@
 <http://data.europa.eu/a4g/ontology#cat> a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2023-11-01"^^xsd:date ;
+    dcterms:issued "2023-11-02"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Catalogue - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from core_person_CM.xml on 2023-11-01" ;
+    rdfs:comment "This version is automatically generated from core_person_CM.xml on 2023-11-02" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -48,6 +48,10 @@
 cccev:ContactPoint a owl:Class ;
     skos:definition "Information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with."@en ;
     skos:prefLabel "Contact point"@en .
+
+cccev:GenericDate a rdfs:Datatype ;
+    skos:definition "The date data type is the union of xs:date, xs:gYearMonth and xs:gYear."@en ;
+    skos:prefLabel "Generic date"@en .
 
 cccev:Person a owl:Class ;
     rdfs:subClassOf foaf:Person ;
@@ -80,7 +84,7 @@ cccev:email a owl:DatatypeProperty ;
 
 cccev:gender a owl:ObjectProperty,
         skos:ConceptScheme ;
-    skos:definition "The organism's biological sex. (cpv:Person -> cpv:sex (+cpv:gender)) The identities, expressions and societal roles of the Person. (cpv:Person -> cpv:gender (+cpv:gender))"@en ;
+    skos:definition "The identities, expressions and societal roles of the Person. (cpv:Person -> cpv:gender (+cpv:gender))"@en ;
     skos:prefLabel "Gender"@en .
 
 cccev:identifies a owl:ObjectProperty ;
@@ -99,7 +103,9 @@ cccev:patronymicName a owl:DatatypeProperty ;
     skos:definition "Name based on the given name of the Person's father. (cpv:Person)"@en ;
     skos:prefLabel "Patronymic name"@en .
 
-cccev:sex a skos:ConceptScheme ;
+cccev:sex a owl:ObjectProperty,
+        skos:ConceptScheme ;
+    skos:definition "The organism's biological sex. (cpv:Person -> cpv:sex (+cpv:sex))"@en ;
     skos:prefLabel "Sex"@en .
 
 cccev:specialOpeningHoursSpecification a owl:ObjectProperty ;
@@ -119,7 +125,8 @@ dcterms:Jurisdiction a owl:Class ;
 
 dcterms:alternative a owl:DatatypeProperty ;
     skos:definition "Any name by which a Person is known, other than their full name. (cpv:Person)"@en ;
-    skos:prefLabel "Alternative"@en .
+    skos:prefLabel "Alternative"@en,
+        "alternative name"@en .
 
 dcterms:conformsTo a owl:DatatypeProperty ;
     skos:prefLabel "Conforms to"@en .
@@ -149,6 +156,9 @@ dcterms:type a owl:ObjectProperty ;
 rdfs:label a owl:DatatypeProperty ;
     skos:definition "A string of characters that represents a Jurisdiction. (dct:Jurisdiction)"@en ;
     skos:prefLabel "Label"@en .
+
+skos:Concept a owl:Class ;
+    skos:prefLabel "Concept"@en .
 
 skos:notation a owl:DatatypeProperty ;
     skos:definition "A string of characters to uniquely identify a concept. (adms:Identifier)"@en ;
