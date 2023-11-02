@@ -1,6 +1,5 @@
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
-@prefix clv-res: <http://data.europa.eu/m8g/#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -14,7 +13,10 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-clv-res:clv-restriction a owl:Ontology ;
+cccev:adminUnit rdfs:domain locn:Address ;
+    rdfs:range cccev:AdminUnit .
+
+cccev:clv-restriction a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The Core Location Vocabulary core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the Core Location Vocabulary core."@en ;
     dcterms:issued "2023-11-02"^^xsd:date ;
@@ -27,7 +29,7 @@ clv-res:clv-restriction a owl:Ontology ;
                 2023-11-02""" ;
     rdfs:seeAlso <https://semiceu.github.io/CCCEV/releases/2.00/> ;
     owl:imports cccev:,
-        clv-res:clv,
+        cccev:clv,
         at-voc:,
         dcterms:,
         <http://www.opengis.net/ont/geosparql>,
@@ -42,12 +44,9 @@ clv-res:clv-restriction a owl:Ontology ;
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/m8g/#clv-restriction-3.1.0" ;
-    owl:versionIRI clv-res:clv-restriction-4.0.0 ;
+    owl:priorVersion "http://data.europa.eu/m8g/clv-restriction-3.1.0" ;
+    owl:versionIRI cccev:clv-restriction-4.0.0 ;
     owl:versionInfo "4.0.0" .
-
-cccev:adminUnit rdfs:domain locn:Address ;
-    rdfs:range cccev:AdminUnit .
 
 cccev:coordinates rdfs:domain locn:Geometry ;
     rdfs:range xsd:string .

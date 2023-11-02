@@ -1,8 +1,7 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
-@prefix cpv-res: <http://data.europa.eu/m8g/#> .
-@prefix cpv-shape: <http://data.europa.eu/m8g/data-shape#> .
+@prefix cpv-shape: <http://data.europa.eu/m8g/data-shape/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
@@ -293,8 +292,8 @@ cpv-shape:cpv-shape a owl:Ontology ;
     rdfs:comment "This version is automatically generated from core_person_CM.xml on 2023-11-02" ;
     rdfs:seeAlso <https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/> ;
     owl:imports cccev:,
-        cpv-res:cpv,
-        cpv-res:cpv-restriction,
+        cccev:cpv,
+        cccev:cpv-restriction,
         at-voc:,
         dcterms:,
         <http://www.opengis.net/ont/geosparql>,
@@ -309,7 +308,7 @@ cpv-shape:cpv-shape a owl:Ontology ;
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/m8g/data-shape#cpv-shape-3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/m8g/data-shape/cpv-shape-3.1.0" ;
     owl:versionIRI cpv-shape:cpv-shape-4.0.0 ;
     owl:versionInfo "4.0.0" .
 

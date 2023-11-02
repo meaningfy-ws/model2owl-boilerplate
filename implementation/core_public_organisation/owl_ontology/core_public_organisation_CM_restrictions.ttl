@@ -1,7 +1,6 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
-@prefix cpov-res: <http://data.europa.eu/m8g/#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
@@ -16,7 +15,10 @@
 @prefix xhtml: <https://www.w3.org/1999/xhtml/vocab#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cpov-res:cpov-restriction a owl:Ontology ;
+cccev:contactPoint rdfs:domain cccev:PublicOrganisation ;
+    rdfs:range cccev:ContactPoint .
+
+cccev:cpov-restriction a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The Core Public Organisation Vocabulary core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the Core Public Organisation Vocabulary core."@en ;
     dcterms:issued "2023-11-02"^^xsd:date ;
@@ -29,7 +31,7 @@ cpov-res:cpov-restriction a owl:Ontology ;
                 2023-11-02""" ;
     rdfs:seeAlso <https://semiceu.github.io/CPOV/releases/2.1.0/> ;
     owl:imports cccev:,
-        cpov-res:cpov,
+        cccev:cpov,
         at-voc:,
         dcterms:,
         <http://www.opengis.net/ont/geosparql>,
@@ -44,12 +46,9 @@ cpov-res:cpov-restriction a owl:Ontology ;
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/m8g/#cpov-restriction-3.1.0" ;
-    owl:versionIRI cpov-res:cpov-restriction-4.0.0 ;
+    owl:priorVersion "http://data.europa.eu/m8g/cpov-restriction-3.1.0" ;
+    owl:versionIRI cccev:cpov-restriction-4.0.0 ;
     owl:versionInfo "4.0.0" .
-
-cccev:contactPoint rdfs:domain cccev:PublicOrganisation ;
-    rdfs:range cccev:ContactPoint .
 
 cccev:hasFormalFramework rdfs:domain org:ChangeEvent ;
     rdfs:range cccev:ReferenceFramework ;

@@ -23,7 +23,7 @@
          xmlns:vann="http://purl.org/vocab/vann/"
          xmlns:xhtml="https://www.w3.org/1999/xhtml/vocab#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-   <owl:Ontology rdf:about="http://data.europa.eu/m8g/#cpov">
+   <owl:Ontology rdf:about="http://data.europa.eu/m8g/cpov">
       <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
       <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
       <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
@@ -51,8 +51,8 @@
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
-      <owl:versionIRI rdf:resource="http://data.europa.eu/m8g/#cpov-4.0.0"/>
-      <owl:priorVersion>http://data.europa.eu/m8g/#cpov-3.1.0</owl:priorVersion>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/m8g/cpov-4.0.0"/>
+      <owl:priorVersion>http://data.europa.eu/m8g/cpov-3.1.0</owl:priorVersion>
       <vann:preferredNamespaceUri>http://data.europa.eu/m8g/ontology#</vann:preferredNamespaceUri>
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
@@ -65,7 +65,7 @@
       <skos:definition xml:lang="en">Legislation or official policy from which Requirements are derived.</skos:definition>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/ReferenceFramework">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
    <owl:Class rdf:about="http://data.europa.eu/m8g/ImageObject"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/ImageObject">
@@ -75,7 +75,7 @@
       <skos:definition xml:lang="en">A logo to describe / represent the PublicOrganization.</skos:definition>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/ImageObject">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
    <owl:Class rdf:about="http://data.europa.eu/m8g/PublicOrganisation"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/PublicOrganisation">
@@ -85,14 +85,14 @@
       <skos:definition xml:lang="en">An Organization that is defined as being part of the public sector by a legal framework at any level.</skos:definition>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/PublicOrganisation">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
    <skos:ConceptScheme rdf:about="http://data.europa.eu/m8g/frequency"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/frequency">
       <skos:prefLabel xml:lang="en">Frequency</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/frequency">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/atu-type">
       <skos:editorialNote xml:lang="en">the URI in core voc is wrong; a dataset URI instead the conceptScheme URI.</skos:editorialNote>
@@ -102,21 +102,21 @@
       <skos:prefLabel xml:lang="en">Implements</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/implements">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/hasFormalFramework"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/hasFormalFramework">
       <skos:prefLabel xml:lang="en">Has formal framework</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/hasFormalFramework">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/logo"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/logo">
       <skos:prefLabel xml:lang="en">Logo</skos:prefLabel>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/logo">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/contactPoint"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/contactPoint">
@@ -126,7 +126,7 @@
       <skos:definition xml:lang="en">The main contact information of the resource. (cpov:PublicOrganisation -&gt; cv:ContactPoint (+cpv:contactPoint))</skos:definition>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/contactPoint">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/frequency"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/frequency">
@@ -136,7 +136,7 @@
       <skos:definition xml:lang="en">The recurrence of an instant or period. (time:TemporalEntity -&gt; cpov:frequency (+cpov:frequency))</skos:definition>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/frequency">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/specialOpeningHoursSpecification"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/specialOpeningHoursSpecification">
@@ -146,7 +146,7 @@
       <skos:definition xml:lang="en">The time during which the Contact Point is not available. (cv:ContactPoint -&gt; time:TemporalEntity (+cpov:specialOpeningHoursSpecification))</skos:definition>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/specialOpeningHoursSpecification">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/openingHours"/>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/openingHours">
@@ -156,6 +156,6 @@
       <skos:definition xml:lang="en">The time at which the Contact Point is normally available. (cv:ContactPoint -&gt; time:TemporalEntity (+cpov:openingHours))</skos:definition>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/m8g/openingHours">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/cpov"/>
    </rdf:Description>
 </rdf:RDF>
