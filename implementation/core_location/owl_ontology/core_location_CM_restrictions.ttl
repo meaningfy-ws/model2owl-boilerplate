@@ -1,6 +1,6 @@
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix cat-res: <http://data.europa.eu/a4g/ontology#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix clv-res: <http://data.europa.eu/a4g/ontology#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -14,7 +14,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cat-res:cat-restriction a owl:Ontology ;
+clv-res:clv-restriction a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core."@en ;
     dcterms:issued "2023-11-02"^^xsd:date ;
@@ -29,7 +29,7 @@ cat-res:cat-restriction a owl:Ontology ;
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports cat-res:cat,
+    owl:imports clv-res:clv,
         cccev:,
         at-voc:,
         dcterms:,
@@ -45,8 +45,8 @@ cat-res:cat-restriction a owl:Ontology ;
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#cat-restriction-3.1.0" ;
-    owl:versionIRI cat-res:cat-restriction-4.0.0 ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#clv-restriction-3.1.0" ;
+    owl:versionIRI clv-res:clv-restriction-4.0.0 ;
     owl:versionInfo "4.0.0" .
 
 cccev:adminUnit rdfs:domain locn:Address ;

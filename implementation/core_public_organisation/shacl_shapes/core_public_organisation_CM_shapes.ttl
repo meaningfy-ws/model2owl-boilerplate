@@ -1,7 +1,7 @@
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix cat-res: <http://data.europa.eu/a4g/ontology#> .
-@prefix cat-shape: <http://data.europa.eu/a4g/data-shape#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix cpov-res: <http://data.europa.eu/a4g/ontology#> .
+@prefix cpov-shape: <http://data.europa.eu/a4g/data-shape#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
@@ -16,229 +16,229 @@
 @prefix xhtml: <https://www.w3.org/1999/xhtml/vocab#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cat-shape:at-voc-atu-type rdfs:comment "the URI in core voc is wrong; a dataset URI instead the conceptScheme URI." .
+cpov-shape:at-voc-atu-type rdfs:comment "the URI in core voc is wrong; a dataset URI instead the conceptScheme URI." .
 
-cat-shape:cccev-ReferenceFramework a sh:NodeShape ;
+cpov-shape:cccev-ReferenceFramework a sh:NodeShape ;
     rdfs:label "Reference framework" ;
     rdfs:comment "Legislation or official policy from which Requirements are derived." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:cccev-ReferenceFramework-cpsv-implements,
-        cat-shape:cccev-ReferenceFramework-dct-identifier ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
+    sh:property cpov-shape:cccev-ReferenceFramework-cpsv-implements,
+        cpov-shape:cccev-ReferenceFramework-dct-identifier ;
     sh:targetClass cccev:ReferenceFramework .
 
-cat-shape:cpov-ImageObject a sh:NodeShape ;
+cpov-shape:cpov-ImageObject a sh:NodeShape ;
     rdfs:label "Image object" ;
     rdfs:comment "A logo to describe / represent the PublicOrganization." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
     sh:targetClass cccev:ImageObject .
 
-cat-shape:cpov-PublicOrganisation a sh:NodeShape ;
+cpov-shape:cpov-PublicOrganisation a sh:NodeShape ;
     rdfs:label "Public organisation" ;
     rdfs:comment "An Organization that is defined as being part of the public sector by a legal framework at any level." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:cpov-PublicOrganisation-cpov-logo,
-        cat-shape:cpov-PublicOrganisation-dct-description,
-        cat-shape:cpov-PublicOrganisation-dct-spatial,
-        cat-shape:cpov-PublicOrganisation-foaf-homepage,
-        cat-shape:cpov-PublicOrganisation-org-changedBy,
-        cat-shape:cpov-PublicOrganisation-org-classification,
-        cat-shape:cpov-PublicOrganisation-org-hasMember,
-        cat-shape:cpov-PublicOrganisation-org-hasUnit,
-        cat-shape:cpov-PublicOrganisation-org-memberOf,
-        cat-shape:cpov-PublicOrganisation-org-purpose,
-        cat-shape:cpov-PublicOrganisation-org-resultedFrom,
-        cat-shape:cpov-PublicOrganisation-skos-altLabel,
-        cat-shape:cpov-PublicOrganisation-skos-prefLabel,
-        cat-shape:cpov-PublicOrganisation-xhtml-next,
-        cat-shape:cpov-PublicOrganisation-xhtml-prev ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
+    sh:property cpov-shape:cpov-PublicOrganisation-cpov-logo,
+        cpov-shape:cpov-PublicOrganisation-dct-description,
+        cpov-shape:cpov-PublicOrganisation-dct-spatial,
+        cpov-shape:cpov-PublicOrganisation-foaf-homepage,
+        cpov-shape:cpov-PublicOrganisation-org-changedBy,
+        cpov-shape:cpov-PublicOrganisation-org-classification,
+        cpov-shape:cpov-PublicOrganisation-org-hasMember,
+        cpov-shape:cpov-PublicOrganisation-org-hasUnit,
+        cpov-shape:cpov-PublicOrganisation-org-memberOf,
+        cpov-shape:cpov-PublicOrganisation-org-purpose,
+        cpov-shape:cpov-PublicOrganisation-org-resultedFrom,
+        cpov-shape:cpov-PublicOrganisation-skos-altLabel,
+        cpov-shape:cpov-PublicOrganisation-skos-prefLabel,
+        cpov-shape:cpov-PublicOrganisation-xhtml-next,
+        cpov-shape:cpov-PublicOrganisation-xhtml-prev ;
     sh:targetClass cccev:PublicOrganisation .
 
-cat-shape:foaf-Document a sh:NodeShape ;
+cpov-shape:foaf-Document a sh:NodeShape ;
     rdfs:label "Document" ;
     rdfs:comment "A self-contained collection of information in a readable format." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
     sh:targetClass foaf:Document .
 
-cat-shape:org-ChangeEvent a sh:NodeShape ;
+cpov-shape:org-ChangeEvent a sh:NodeShape ;
     rdfs:label "Change event" ;
     rdfs:comment "An event which resulted in a major change to an Organization such as a merger or complete restructuring." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:org-ChangeEvent-cpov-hasFormalFramework,
-        cat-shape:org-ChangeEvent-dct-description,
-        cat-shape:org-ChangeEvent-org-originalOrganization,
-        cat-shape:org-ChangeEvent-org-resultingOrganization,
-        cat-shape:org-ChangeEvent-prov-endedAtTime,
-        cat-shape:org-ChangeEvent-prov-startedAtTime ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
+    sh:property cpov-shape:org-ChangeEvent-cpov-hasFormalFramework,
+        cpov-shape:org-ChangeEvent-dct-description,
+        cpov-shape:org-ChangeEvent-org-originalOrganization,
+        cpov-shape:org-ChangeEvent-org-resultingOrganization,
+        cpov-shape:org-ChangeEvent-prov-endedAtTime,
+        cpov-shape:org-ChangeEvent-prov-startedAtTime ;
     sh:targetClass org:ChangeEvent .
 
-cat-shape:org-Organization a sh:NodeShape ;
+cpov-shape:org-Organization a sh:NodeShape ;
     rdfs:label "Organization" ;
     rdfs:comment "A collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:org-Organization-org-hasSubOrganization,
-        cat-shape:org-Organization-org-subOrganizationOf ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
+    sh:property cpov-shape:org-Organization-org-hasSubOrganization,
+        cpov-shape:org-Organization-org-subOrganizationOf ;
     sh:targetClass org:Organization .
 
-cat-shape:org-OrganizationalUnit a sh:NodeShape ;
+cpov-shape:org-OrganizationalUnit a sh:NodeShape ;
     rdfs:label "Organizational unit" ;
     rdfs:comment "A subdivision of Organization which is part of this Organization." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:org-OrganizationalUnit-org-unitOf ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
+    sh:property cpov-shape:org-OrganizationalUnit-org-unitOf ;
     sh:targetClass org:OrganizationalUnit .
 
-cat-shape:time-TemporalEntity a sh:NodeShape ;
+cpov-shape:time-TemporalEntity a sh:NodeShape ;
     rdfs:label "Temporal entity" ;
     rdfs:comment "A temporal interval or instant." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:time-TemporalEntity-cpov-frequency,
-        cat-shape:time-TemporalEntity-dct-description ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
+    sh:property cpov-shape:time-TemporalEntity-cpov-frequency,
+        cpov-shape:time-TemporalEntity-dct-description ;
     sh:targetClass time:TemporalEntity .
 
-cat-shape:cccev-ReferenceFramework-cpsv-implements a sh:PropertyShape ;
+cpov-shape:cccev-ReferenceFramework-cpsv-implements a sh:PropertyShape ;
     sh:class org:ChangeEvent ;
     sh:description "A Change Event linked to relevant legislation or policy documents." ;
     sh:name "Implements" ;
     sh:path cccev:implements ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/implements> ?that . ?that <http://data.europa.eu/m8g/implements> ?this .}" ] .
 
-cat-shape:cccev-ReferenceFramework-dct-identifier a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+cpov-shape:cccev-ReferenceFramework-dct-identifier a sh:PropertyShape ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
     sh:datatype rdfs:Literal ;
     sh:description "An unambiguous reference to a Reference Framework." ;
     sh:name "Identifier" ;
     sh:path dcterms:identifier .
 
-cat-shape:cpov-PublicOrganisation-cpov-logo a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-cpov-logo a sh:PropertyShape ;
     sh:class cccev:ImageObject ;
     sh:name "Logo" ;
     sh:path cccev:logo ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/logo> ?that . ?that <http://data.europa.eu/m8g/logo> ?this .}" ] .
 
-cat-shape:cpov-PublicOrganisation-dct-description a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+cpov-shape:cpov-PublicOrganisation-dct-description a sh:PropertyShape ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
     sh:datatype rdf:langString ;
     sh:description "The textual description of the Public Organization." ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
-cat-shape:cpov-PublicOrganisation-dct-spatial a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-dct-spatial a sh:PropertyShape ;
     sh:class at-voc:atu-type ;
     sh:description "This property links an Organization to the Administrative Region(s) that it covers." ;
     sh:name "Spatial" ;
     sh:path dcterms:spatial .
 
-cat-shape:cpov-PublicOrganisation-foaf-homepage a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-foaf-homepage a sh:PropertyShape ;
     sh:class foaf:Document ;
     sh:description "The official home page of the Public Organization." ;
     sh:name "Homepage" ;
     sh:path foaf:homepage ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://xmlns.com/foaf/0.1/homepage> ?that . ?that <http://xmlns.com/foaf/0.1/homepage> ?this .}" ] .
 
-cat-shape:cpov-PublicOrganisation-org-changedBy a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-org-changedBy a sh:PropertyShape ;
     sh:class org:ChangeEvent ;
     sh:description "The Change Event that changed the Organization." ;
     sh:name "Changed by" ;
     sh:path org:changedBy ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#changedBy> ?that . ?that <http://www.w3.org/ns/org#changedBy> ?this .}" ] .
 
-cat-shape:cpov-PublicOrganisation-org-classification a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-org-classification a sh:PropertyShape ;
     sh:class org:classification ;
     sh:description "The categorisation of the Public Organization." ;
     sh:name "Classification" ;
     sh:path org:classification .
 
-cat-shape:cpov-PublicOrganisation-org-hasMember a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-org-hasMember a sh:PropertyShape ;
     sh:class cccev:PublicOrganisation ;
     sh:description "An Organization which is a member of another without being a sub organization, they are independent entities." ;
     sh:name "Has member" ;
     sh:path org:hasMember ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#hasMember> ?that . ?that <http://www.w3.org/ns/org#hasMember> ?this .}" ] .
 
-cat-shape:cpov-PublicOrganisation-org-hasUnit a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-org-hasUnit a sh:PropertyShape ;
     sh:class org:OrganizationalUnit ;
     sh:description "An operational department within the Public Organization." ;
     sh:name "Has unit" ;
     sh:path org:hasUnit ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#hasUnit> ?that . ?that <http://www.w3.org/ns/org#hasUnit> ?this .}" ] .
 
-cat-shape:cpov-PublicOrganisation-org-memberOf a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-org-memberOf a sh:PropertyShape ;
     sh:class cccev:PublicOrganisation ;
     sh:description "An Organization of which the Public Organisation is a member without being a sub organization, they are independent entities." ;
     sh:name "Member of" ;
     sh:path org:memberOf ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#memberOf> ?that . ?that <http://www.w3.org/ns/org#memberOf> ?this .}" ] .
 
-cat-shape:cpov-PublicOrganisation-org-purpose a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-org-purpose a sh:PropertyShape ;
     sh:class org:purpose ;
     sh:description "This property describes the reasons of existence of an Organization." ;
     sh:name "Purpose" ;
     sh:path org:purpose .
 
-cat-shape:cpov-PublicOrganisation-org-resultedFrom a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-org-resultedFrom a sh:PropertyShape ;
     sh:class org:ChangeEvent ;
     sh:description "A Change Event from which the Public Organisation resulted." ;
     sh:name "Resulted from" ;
     sh:path org:resultedFrom ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#resultedFrom> ?that . ?that <http://www.w3.org/ns/org#resultedFrom> ?this .}" ] .
 
-cat-shape:cpov-PublicOrganisation-skos-altLabel a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+cpov-shape:cpov-PublicOrganisation-skos-altLabel a sh:PropertyShape ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
     sh:datatype rdf:langString ;
     sh:description "An alternative or informal name(s) of a Public Organization, irrespective of language." ;
     sh:name "Alt label" ;
     sh:path skos:altLabel .
 
-cat-shape:cpov-PublicOrganisation-skos-prefLabel a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+cpov-shape:cpov-PublicOrganisation-skos-prefLabel a sh:PropertyShape ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
     sh:datatype rdf:langString ;
     sh:description "A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology." ;
     sh:name "Pref label" ;
     sh:path skos:prefLabel .
 
-cat-shape:cpov-PublicOrganisation-xhtml-next a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-xhtml-next a sh:PropertyShape ;
     sh:class cccev:PublicOrganisation ;
     sh:description "In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed." ;
     sh:name "Next" ;
     sh:path xhtml:next ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <https://www.w3.org/1999/xhtml/vocab#next> ?that . ?that <https://www.w3.org/1999/xhtml/vocab#next> ?this .}" ] .
 
-cat-shape:cpov-PublicOrganisation-xhtml-prev a sh:PropertyShape ;
+cpov-shape:cpov-PublicOrganisation-xhtml-prev a sh:PropertyShape ;
     sh:class cccev:PublicOrganisation ;
     sh:description "In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed." ;
     sh:name "Prev" ;
     sh:path xhtml:prev ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <https://www.w3.org/1999/xhtml/vocab#prev> ?that . ?that <https://www.w3.org/1999/xhtml/vocab#prev> ?this .}" ] .
 
-cat-shape:org-ChangeEvent-cpov-hasFormalFramework a sh:PropertyShape ;
+cpov-shape:org-ChangeEvent-cpov-hasFormalFramework a sh:PropertyShape ;
     sh:class cccev:ReferenceFramework ;
     sh:description "A piece of legislation or a policy document that prompted the change." ;
     sh:name "Has formal framework" ;
     sh:path cccev:hasFormalFramework ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/hasFormalFramework> ?that . ?that <http://data.europa.eu/m8g/hasFormalFramework> ?this .}" ] .
 
-cat-shape:org-ChangeEvent-dct-description a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+cpov-shape:org-ChangeEvent-dct-description a sh:PropertyShape ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
     sh:datatype rdf:langString ;
     sh:description "A textual explanation of the event." ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
-cat-shape:org-ChangeEvent-org-originalOrganization a sh:PropertyShape ;
+cpov-shape:org-ChangeEvent-org-originalOrganization a sh:PropertyShape ;
     sh:class cccev:PublicOrganisation ;
     sh:description "The Organization that existed before the change." ;
     sh:name "Original organization" ;
     sh:path org:originalOrganization ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#originalOrganization> ?that . ?that <http://www.w3.org/ns/org#originalOrganization> ?this .}" ] .
 
-cat-shape:org-ChangeEvent-org-resultingOrganization a sh:PropertyShape ;
+cpov-shape:org-ChangeEvent-org-resultingOrganization a sh:PropertyShape ;
     sh:class cccev:PublicOrganisation ;
     sh:description "This property links a Change Event or a Foundation Event to the Organization that resulted from it." ;
     sh:name "Resulting organization" ;
     sh:path org:resultingOrganization ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#resultingOrganization> ?that . ?that <http://www.w3.org/ns/org#resultingOrganization> ?this .}" ] .
 
-cat-shape:org-ChangeEvent-prov-endedAtTime a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+cpov-shape:org-ChangeEvent-prov-endedAtTime a sh:PropertyShape ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
     sh:datatype xsd:dateTime ;
     sh:description "The time instant when the state of the organisation update was terminated" ;
     sh:maxCount 1 ;
@@ -246,48 +246,48 @@ cat-shape:org-ChangeEvent-prov-endedAtTime a sh:PropertyShape ;
     sh:name "Ended at time" ;
     sh:path prov1:endedAtTime .
 
-cat-shape:org-ChangeEvent-prov-startedAtTime a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+cpov-shape:org-ChangeEvent-prov-startedAtTime a sh:PropertyShape ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
     sh:datatype xsd:dateTime ;
     sh:description "The time instant when the state of the organisation update was initiated." ;
     sh:name "Started at time" ;
     sh:path prov1:startedAtTime .
 
-cat-shape:org-Organization-org-hasSubOrganization a sh:PropertyShape ;
+cpov-shape:org-Organization-org-hasSubOrganization a sh:PropertyShape ;
     sh:class org:Organization ;
     sh:description "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an organization which is a sub-part or child of this organization." ;
     sh:name "Has sub organization" ;
     sh:path org:hasSubOrganization ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#hasSubOrganization> ?that . ?that <http://www.w3.org/ns/org#hasSubOrganization> ?this .}" ] .
 
-cat-shape:org-Organization-org-subOrganizationOf a sh:PropertyShape ;
+cpov-shape:org-Organization-org-subOrganizationOf a sh:PropertyShape ;
     sh:class org:Organization ;
     sh:description "Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization." ;
     sh:name "Sub organization of" ;
     sh:path org:subOrganizationOf ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#subOrganizationOf> ?that . ?that <http://www.w3.org/ns/org#subOrganizationOf> ?this .}" ] .
 
-cat-shape:org-OrganizationalUnit-org-unitOf a sh:PropertyShape ;
+cpov-shape:org-OrganizationalUnit-org-unitOf a sh:PropertyShape ;
     sh:class cccev:PublicOrganisation ;
     sh:description "The Public Organisation of which the Organizational Unit is an operational department." ;
     sh:name "Unit of" ;
     sh:path org:unitOf ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#unitOf> ?that . ?that <http://www.w3.org/ns/org#unitOf> ?this .}" ] .
 
-cat-shape:time-TemporalEntity-cpov-frequency a sh:PropertyShape ;
+cpov-shape:time-TemporalEntity-cpov-frequency a sh:PropertyShape ;
     sh:class cccev:frequency ;
     sh:description "The recurrence of an instant or period." ;
     sh:name "Frequency" ;
     sh:path cccev:frequency .
 
-cat-shape:time-TemporalEntity-dct-description a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+cpov-shape:time-TemporalEntity-dct-description a sh:PropertyShape ;
+    rdfs:isDefinedBy cpov-shape:cpov-shape ;
     sh:datatype rdf:langString ;
     sh:description "A textual representation of the Temporal Entity." ;
     sh:name "Description" ;
     sh:path dcterms:description .
 
-cat-shape:cat-shape a owl:Ontology ;
+cpov-shape:cpov-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
     dcterms:issued "2023-11-02"^^xsd:date ;
@@ -301,8 +301,8 @@ cat-shape:cat-shape a owl:Ontology ;
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports cat-res:cat,
-        cat-res:cat-restriction,
+    owl:imports cpov-res:cpov,
+        cpov-res:cpov-restriction,
         cccev:,
         at-voc:,
         dcterms:,
@@ -318,7 +318,7 @@ cat-shape:cat-shape a owl:Ontology ;
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/data-shape#cat-shape-3.1.0" ;
-    owl:versionIRI cat-shape:cat-shape-4.0.0 ;
+    owl:priorVersion "http://data.europa.eu/a4g/data-shape#cpov-shape-3.1.0" ;
+    owl:versionIRI cpov-shape:cpov-shape-4.0.0 ;
     owl:versionInfo "4.0.0" .
 

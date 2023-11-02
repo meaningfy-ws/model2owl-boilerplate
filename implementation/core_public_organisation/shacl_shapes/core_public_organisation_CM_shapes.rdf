@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:adms="http://www.w3.org/ns/adms#"
          xmlns:at-voc="http://publications.europa.eu/resource/authority/"
-         xmlns:cat-res="http://data.europa.eu/a4g/ontology#"
-         xmlns:cat-shape="http://data.europa.eu/a4g/data-shape#"
          xmlns:cccev="http://data.europa.eu/m8g/"
          xmlns:clv="http://data.europa.eu/m8g/"
          xmlns:cpov="http://data.europa.eu/m8g/"
+         xmlns:cpov-res="http://data.europa.eu/a4g/ontology#"
+         xmlns:cpov-shape="http://data.europa.eu/a4g/data-shape#"
          xmlns:cpsv="http://data.europa.eu/m8g/"
          xmlns:cpv="http://data.europa.eu/m8g/"
          xmlns:cv="http://data.europa.eu/m8g/"
@@ -26,7 +26,7 @@
          xmlns:vann="http://purl.org/vocab/vann/"
          xmlns:xhtml="https://www.w3.org/1999/xhtml/vocab#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-   <owl:Ontology rdf:about="http://data.europa.eu/a4g/data-shape#cat-shape">
+   <owl:Ontology rdf:about="http://data.europa.eu/a4g/data-shape#cpov-shape">
       <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
       <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
       <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
@@ -45,8 +45,8 @@
       <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
       <owl:imports rdf:resource="https://www.w3.org/ns/prov"/>
       <owl:imports rdf:resource="https://www.w3.org/1999/xhtml/vocab"/>
-      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#cat"/>
-      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#cat-restriction"/>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#cpov"/>
+      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#cpov-restriction"/>
       <dct:title xml:lang="en">eProcurement Ontology Catalogue - core shapes</dct:title>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.</dct:description>
@@ -59,8 +59,8 @@
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
-      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape-4.0.0"/>
-      <owl:priorVersion>http://data.europa.eu/a4g/data-shape#cat-shape-3.1.0</owl:priorVersion>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape-4.0.0"/>
+      <owl:priorVersion>http://data.europa.eu/a4g/data-shape#cpov-shape-3.1.0</owl:priorVersion>
       <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
@@ -75,7 +75,7 @@
       <rdfs:comment>Legislation or official policy from which Requirements are derived.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-ImageObject">
       <sh:targetClass rdf:resource="http://data.europa.eu/m8g/ImageObject"/>
@@ -87,7 +87,7 @@
       <rdfs:comment>A logo to describe / represent the PublicOrganization.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-ImageObject">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
       <sh:targetClass rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
@@ -99,7 +99,7 @@
       <rdfs:comment>An Organization that is defined as being part of the public sector by a legal framework at any level.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Document">
       <sh:targetClass rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
@@ -111,7 +111,7 @@
       <rdfs:comment>A self-contained collection of information in a readable format.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Document">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
       <sh:targetClass rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
@@ -123,7 +123,7 @@
       <rdfs:comment>An event which resulted in a major change to an Organization such as a merger or complete restructuring.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization">
       <sh:targetClass rdf:resource="http://www.w3.org/ns/org#Organization"/>
@@ -135,7 +135,7 @@
       <rdfs:comment>A collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit">
       <sh:targetClass rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
@@ -147,7 +147,7 @@
       <rdfs:comment>A subdivision of Organization which is part of this Organization.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity">
       <sh:targetClass rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
@@ -159,7 +159,7 @@
       <rdfs:comment>A temporal interval or instant.</rdfs:comment>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework">
       <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-dct-identifier"/>
@@ -174,7 +174,7 @@
       <sh:description>An unambiguous reference to a Reference Framework.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-dct-identifier">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-dct-identifier">
       <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -192,7 +192,7 @@
       <sh:description>An alternative or informal name(s) of a Public Organization, irrespective of language.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-altLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-altLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
@@ -210,7 +210,7 @@
       <sh:description>The textual description of the Public Organization.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
@@ -228,7 +228,7 @@
       <sh:description>A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
@@ -246,7 +246,7 @@
       <sh:description>A textual explanation of the event.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
@@ -264,7 +264,7 @@
       <sh:description>The time instant when the state of the organisation update was terminated</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-endedAtTime">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-endedAtTime">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -286,7 +286,7 @@
       <sh:description>The time instant when the state of the organisation update was initiated.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-startedAtTime">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-startedAtTime">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -304,7 +304,7 @@
       <sh:description>A textual representation of the Temporal Entity.</sh:description>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cat-shape"/>
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
    </rdf:Description>
    <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>

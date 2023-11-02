@@ -1,7 +1,7 @@
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix cat-res: <http://data.europa.eu/a4g/ontology#> .
-@prefix cat-shape: <http://data.europa.eu/a4g/data-shape#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix clv-res: <http://data.europa.eu/a4g/ontology#> .
+@prefix clv-shape: <http://data.europa.eu/a4g/data-shape#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -14,249 +14,249 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cat-shape:clv-AdminUnit a sh:NodeShape ;
+clv-shape:clv-AdminUnit a sh:NodeShape ;
     rdfs:label "Admin unit" ;
     rdfs:comment "A detailed administrative unit organized in a hierarchy." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:clv-AdminUnit-clv-code,
-        cat-shape:clv-AdminUnit-clv-level ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
+    sh:property clv-shape:clv-AdminUnit-clv-code,
+        clv-shape:clv-AdminUnit-clv-level ;
     sh:targetClass cccev:AdminUnit .
 
-cat-shape:dct-Location a sh:NodeShape ;
+clv-shape:dct-Location a sh:NodeShape ;
     rdfs:label "Location" ;
     rdfs:comment "An identifiable geographic place or named place." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:dct-Location-locn-geographicName,
-        cat-shape:dct-Location-rdfs-seeAlso ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
+    sh:property clv-shape:dct-Location-locn-geographicName,
+        clv-shape:dct-Location-rdfs-seeAlso ;
     sh:targetClass dcterms:Location .
 
-cat-shape:locn-Address a sh:NodeShape ;
+clv-shape:locn-Address a sh:NodeShape ;
     rdfs:label "Address" ;
     rdfs:comment "A spatial object that in a human-readable way identifies a fixed location." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:locn-Address-clv-adminUnit,
-        cat-shape:locn-Address-locn-addressArea,
-        cat-shape:locn-Address-locn-addressID,
-        cat-shape:locn-Address-locn-adminUnitL1,
-        cat-shape:locn-Address-locn-adminUnitL2,
-        cat-shape:locn-Address-locn-fullAddress,
-        cat-shape:locn-Address-locn-locatorDesignator,
-        cat-shape:locn-Address-locn-locatorName,
-        cat-shape:locn-Address-locn-poBox,
-        cat-shape:locn-Address-locn-postCode,
-        cat-shape:locn-Address-locn-postName,
-        cat-shape:locn-Address-locn-thoroughfare ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
+    sh:property clv-shape:locn-Address-clv-adminUnit,
+        clv-shape:locn-Address-locn-addressArea,
+        clv-shape:locn-Address-locn-addressID,
+        clv-shape:locn-Address-locn-adminUnitL1,
+        clv-shape:locn-Address-locn-adminUnitL2,
+        clv-shape:locn-Address-locn-fullAddress,
+        clv-shape:locn-Address-locn-locatorDesignator,
+        clv-shape:locn-Address-locn-locatorName,
+        clv-shape:locn-Address-locn-poBox,
+        clv-shape:locn-Address-locn-postCode,
+        clv-shape:locn-Address-locn-postName,
+        clv-shape:locn-Address-locn-thoroughfare ;
     sh:targetClass locn:Address .
 
-cat-shape:locn-Geometry a sh:NodeShape ;
+clv-shape:locn-Geometry a sh:NodeShape ;
     rdfs:label "Geometry" ;
     rdfs:comment "A shape or form of a Location." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:locn-Geometry-clv-coordinates,
-        cat-shape:locn-Geometry-clv-crs,
-        cat-shape:locn-Geometry-clv-geometryType,
-        cat-shape:locn-Geometry-clv-latitude,
-        cat-shape:locn-Geometry-clv-longitude,
-        cat-shape:locn-Geometry-geosparql-asGML,
-        cat-shape:locn-Geometry-geosparql-asWKT ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
+    sh:property clv-shape:locn-Geometry-clv-coordinates,
+        clv-shape:locn-Geometry-clv-crs,
+        clv-shape:locn-Geometry-clv-geometryType,
+        clv-shape:locn-Geometry-clv-latitude,
+        clv-shape:locn-Geometry-clv-longitude,
+        clv-shape:locn-Geometry-geosparql-asGML,
+        clv-shape:locn-Geometry-geosparql-asWKT ;
     sh:targetClass locn:Geometry .
 
-cat-shape:rdfs-Resource a sh:NodeShape ;
+clv-shape:rdfs-Resource a sh:NodeShape ;
     rdfs:label "Resource" ;
     rdfs:comment "Anything that can be described." ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
-    sh:property cat-shape:rdfs-Resource-clv-registeredAddress,
-        cat-shape:rdfs-Resource-locn-address,
-        cat-shape:rdfs-Resource-locn-geometry,
-        cat-shape:rdfs-Resource-locn-location ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
+    sh:property clv-shape:rdfs-Resource-clv-registeredAddress,
+        clv-shape:rdfs-Resource-locn-address,
+        clv-shape:rdfs-Resource-locn-geometry,
+        clv-shape:rdfs-Resource-locn-location ;
     sh:targetClass rdfs:Resource .
 
-cat-shape:clv-AdminUnit-clv-code a sh:PropertyShape ;
+clv-shape:clv-AdminUnit-clv-code a sh:PropertyShape ;
     sh:class cccev:code ;
     sh:description "The classification of the administrative unit." ;
     sh:name "Code" ;
     sh:path cccev:code .
 
-cat-shape:clv-AdminUnit-clv-level a sh:PropertyShape ;
+clv-shape:clv-AdminUnit-clv-level a sh:PropertyShape ;
     sh:class cccev:level ;
     sh:description "The level of the administrative unit in the hierarchy." ;
     sh:name "Level" ;
     sh:path cccev:level .
 
-cat-shape:dct-Location-locn-geographicName a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:dct-Location-locn-geographicName a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdf:langString ;
     sh:description "A textual description for a Location." ;
     sh:name "Geographic name" ;
     sh:path locn:geographicName .
 
-cat-shape:dct-Location-rdfs-seeAlso a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:dct-Location-rdfs-seeAlso a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype xsd:anyURI ;
     sh:description "A reference in the form of a Uniform Resource Identifier to the Location." ;
     sh:name "See also" ;
     sh:path rdfs:seeAlso .
 
-cat-shape:locn-Address-clv-adminUnit a sh:PropertyShape ;
+clv-shape:locn-Address-clv-adminUnit a sh:PropertyShape ;
     sh:class cccev:AdminUnit ;
     sh:description "The adminUnit relationship links an Address with the Administrative Unit class." ;
     sh:name "Admin unit" ;
     sh:path cccev:adminUnit ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/adminUnit> ?that . ?that <http://data.europa.eu/m8g/adminUnit> ?this .}" ] .
 
-cat-shape:locn-Address-locn-addressArea a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-addressArea a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdf:langString ;
     sh:description "The name of a geographic area that groups Addresses." ;
     sh:name "Address area" ;
     sh:path locn:addressArea .
 
-cat-shape:locn-Address-locn-addressID a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-addressID a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdfs:Literal ;
     sh:description "A globally unique identifier for each instance of an Address." ;
     sh:name "Address i d" ;
     sh:path locn:addressID .
 
-cat-shape:locn-Address-locn-adminUnitL1 a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-adminUnitL1 a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdf:langString ;
     sh:description "The name of the uppermost level of the address, almost always a country." ;
     sh:name "Admin unit l1" ;
     sh:path locn:adminUnitL1 .
 
-cat-shape:locn-Address-locn-adminUnitL2 a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-adminUnitL2 a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdf:langString ;
     sh:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities." ;
     sh:name "Admin unit l2" ;
     sh:path locn:adminUnitL2 .
 
-cat-shape:locn-Address-locn-fullAddress a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-fullAddress a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdf:langString ;
     sh:description "The complete address written as a string." ;
     sh:name "Full address" ;
     sh:path locn:fullAddress .
 
-cat-shape:locn-Address-locn-locatorDesignator a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-locatorDesignator a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdfs:Literal ;
     sh:description "A number or sequence of characters that uniquely identifies the locator within the relevant scope." ;
     sh:name "Locator designator" ;
     sh:path locn:locatorDesignator .
 
-cat-shape:locn-Address-locn-locatorName a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-locatorName a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdf:langString ;
     sh:description "Proper noun(s) applied to the real world entity identified by the locator." ;
     sh:name "Locator name" ;
     sh:path locn:locatorName .
 
-cat-shape:locn-Address-locn-poBox a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-poBox a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdfs:Literal ;
     sh:description "A location designator for a postal delivery point at a post office, usually a number." ;
     sh:name "Po box" ;
     sh:path locn:poBox .
 
-cat-shape:locn-Address-locn-postCode a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-postCode a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdfs:Literal ;
     sh:description "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points." ;
     sh:name "Post code" ;
     sh:path locn:postCode .
 
-cat-shape:locn-Address-locn-postName a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-postName a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdf:langString ;
     sh:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points." ;
     sh:name "Post name" ;
     sh:path locn:postName .
 
-cat-shape:locn-Address-locn-thoroughfare a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Address-locn-thoroughfare a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdf:langString ;
     sh:description "The name of a passage or way through from one location to another." ;
     sh:name "Thoroughfare" ;
     sh:path locn:thoroughfare .
 
-cat-shape:locn-Geometry-clv-coordinates a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Geometry-clv-coordinates a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype xsd:string ;
     sh:description "A list of geographic coordinates that define the extent of the Geometry." ;
     sh:name "Coordinates" ;
     sh:path cccev:coordinates .
 
-cat-shape:locn-Geometry-clv-crs a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Geometry-clv-crs a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype xsd:anyURI ;
     sh:description "An identifier for the coordinate reference system." ;
     sh:name "Crs" ;
     sh:path cccev:crs .
 
-cat-shape:locn-Geometry-clv-geometryType a sh:PropertyShape ;
+clv-shape:locn-Geometry-clv-geometryType a sh:PropertyShape ;
     sh:class cccev:geometryType ;
     sh:description "The classification of the Geometry." ;
     sh:name "Geometry type" ;
     sh:path cccev:geometryType .
 
-cat-shape:locn-Geometry-clv-latitude a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Geometry-clv-latitude a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype xsd:string ;
     sh:description "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface." ;
     sh:name "Latitude" ;
     sh:path cccev:latitude .
 
-cat-shape:locn-Geometry-clv-longitude a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Geometry-clv-longitude a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype xsd:string ;
     sh:description "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface." ;
     sh:name "Longitude" ;
     sh:path cccev:longitude .
 
-cat-shape:locn-Geometry-geosparql-asGML a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Geometry-geosparql-asGML a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdfs:Literal ;
     sh:description "The expression of the Geometry in Geography Markup Language." ;
     sh:name "As g m l" ;
     sh:path geo:asGML .
 
-cat-shape:locn-Geometry-geosparql-asWKT a sh:PropertyShape ;
-    rdfs:isDefinedBy cat-shape:cat-shape ;
+clv-shape:locn-Geometry-geosparql-asWKT a sh:PropertyShape ;
+    rdfs:isDefinedBy clv-shape:clv-shape ;
     sh:datatype rdfs:Literal ;
     sh:description "An expression of the Geometry in WKT, the Well-Known Text markup language." ;
     sh:name "As w k t" ;
     sh:path geo:asWKT .
 
-cat-shape:rdfs-Resource-clv-registeredAddress a sh:PropertyShape ;
+clv-shape:rdfs-Resource-clv-registeredAddress a sh:PropertyShape ;
     sh:class locn:Address ;
     sh:name "Registered address" ;
     sh:path cccev:registeredAddress ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/m8g/registeredAddress> ?that . ?that <http://data.europa.eu/m8g/registeredAddress> ?this .}" ] .
 
-cat-shape:rdfs-Resource-locn-address a sh:PropertyShape ;
+clv-shape:rdfs-Resource-locn-address a sh:PropertyShape ;
     sh:class locn:Address ;
     sh:description "Associates any Resource with the corresponding Address." ;
     sh:name "Address" ;
     sh:path locn:address ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/locn#address> ?that . ?that <http://www.w3.org/ns/locn#address> ?this .}" ] .
 
-cat-shape:rdfs-Resource-locn-geometry a sh:PropertyShape ;
+clv-shape:rdfs-Resource-locn-geometry a sh:PropertyShape ;
     sh:class locn:Geometry ;
     sh:description "Associates any Resource with the corresponding Geometry." ;
     sh:name "Geometry" ;
     sh:path locn:geometry ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/locn#geometry> ?that . ?that <http://www.w3.org/ns/locn#geometry> ?this .}" ] .
 
-cat-shape:rdfs-Resource-locn-location a sh:PropertyShape ;
+clv-shape:rdfs-Resource-locn-location a sh:PropertyShape ;
     sh:class dcterms:Location ;
     sh:description "Associates any Resource with the corresponding Location." ;
     sh:name "Location" ;
     sh:path locn:location ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/locn#location> ?that . ?that <http://www.w3.org/ns/locn#location> ?this .}" ] .
 
-cat-shape:cat-shape a owl:Ontology ;
+clv-shape:clv-shape a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core."@en ;
     dcterms:issued "2023-11-02"^^xsd:date ;
@@ -270,8 +270,8 @@ cat-shape:cat-shape a owl:Ontology ;
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports cat-res:cat,
-        cat-res:cat-restriction,
+    owl:imports clv-res:clv,
+        clv-res:clv-restriction,
         cccev:,
         at-voc:,
         dcterms:,
@@ -287,7 +287,7 @@ cat-shape:cat-shape a owl:Ontology ;
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/data-shape#cat-shape-3.1.0" ;
-    owl:versionIRI cat-shape:cat-shape-4.0.0 ;
+    owl:priorVersion "http://data.europa.eu/a4g/data-shape#clv-shape-3.1.0" ;
+    owl:versionIRI clv-shape:clv-shape-4.0.0 ;
     owl:versionInfo "4.0.0" .
 

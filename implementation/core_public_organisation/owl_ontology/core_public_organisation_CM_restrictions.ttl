@@ -1,7 +1,7 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix cat-res: <http://data.europa.eu/a4g/ontology#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix cpov-res: <http://data.europa.eu/a4g/ontology#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
@@ -16,7 +16,7 @@
 @prefix xhtml: <https://www.w3.org/1999/xhtml/vocab#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cat-res:cat-restriction a owl:Ontology ;
+cpov-res:cpov-restriction a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core."@en ;
     dcterms:issued "2023-11-02"^^xsd:date ;
@@ -31,7 +31,7 @@ cat-res:cat-restriction a owl:Ontology ;
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports cat-res:cat,
+    owl:imports cpov-res:cpov,
         cccev:,
         at-voc:,
         dcterms:,
@@ -47,8 +47,8 @@ cat-res:cat-restriction a owl:Ontology ;
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#cat-restriction-3.1.0" ;
-    owl:versionIRI cat-res:cat-restriction-4.0.0 ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#cpov-restriction-3.1.0" ;
+    owl:versionIRI cpov-res:cpov-restriction-4.0.0 ;
     owl:versionInfo "4.0.0" .
 
 cccev:contactPoint rdfs:domain cccev:PublicOrganisation ;
