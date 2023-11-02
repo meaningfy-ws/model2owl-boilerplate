@@ -233,10 +233,10 @@
                      <td>rdf:langString [0..*]<br>rdf:langString [0..*]<br>rdf:langString [0..*]<br></td>
                   </tr>
                   <tr>
-                     <td>dct:Jurisdiction<br>cccev:ReferenceFramework<br></td>
+                     <td>cccev:ReferenceFramework<br>dct:Jurisdiction<br></td>
                      <td>dct:identifier</td>
-                     <td>A reference in the form of a Uniform Resource Identifier to the Jurisdiction. An unambiguous reference to a Reference Framework.</td>
-                     <td>xsd:anyURI [0..*]<br>rdfs:Literal [0..*]<br></td>
+                     <td>An unambiguous reference to a Reference Framework. A reference in the form of a Uniform Resource Identifier to the Jurisdiction.</td>
+                     <td>rdfs:Literal [0..*]<br>xsd:anyURI [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>adms:Identifier</td>
@@ -482,8 +482,8 @@
                   </tr>
                   <tr>
                      <td>cpv:contactPoint</td>
-                     <td>The main contact information of the resource.  The main contact information of the resource. The main contact information of the resource.</td>
-                     <td>cpv:Person -&gt; cv:ContactPoint [0..*]<br>cpov:PublicOrganisation -&gt; cv:ContactPoint [0..*]<br>cpov:PublicOrganisation -&gt; cv:ContactPoint [0..*]<br></td>
+                     <td>The main contact information of the resource. The main contact information of the resource.  The main contact information of the resource.</td>
+                     <td>cpov:PublicOrganisation -&gt; cv:ContactPoint [0..*]<br>cpv:Person -&gt; cv:ContactPoint [0..*]<br>cpov:PublicOrganisation -&gt; cv:ContactPoint [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>cpv:domicile</td>
@@ -532,8 +532,8 @@
                   </tr>
                   <tr>
                      <td>locn:address</td>
-                     <td>Associates any Resource with the corresponding Address. The Address of a Public Organization. The Address of a Public Organization.</td>
-                     <td>rdfs:Resource -&gt; locn:Address [0..*]<br>cpov:PublicOrganisation -&gt; locn:Address [0..*]<br>cpov:PublicOrganisation -&gt; locn:Address [0..*]<br></td>
+                     <td>The Address of a Public Organization. Associates any Resource with the corresponding Address. The Address of a Public Organization.</td>
+                     <td>cpov:PublicOrganisation -&gt; locn:Address [0..*]<br>rdfs:Resource -&gt; locn:Address [0..*]<br>cpov:PublicOrganisation -&gt; locn:Address [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>locn:geometry</td>
