@@ -32,7 +32,7 @@
     <!-- Ontology base URI, configure as necessary. Do not use a trailing local delimiter 
         like in the namespace definition-->
     <!--<xsl:variable name="base-uri" select="'http://publications.europa.eu/ontology/ePO'"/>-->
-    <xsl:variable name="base-ontology-uri" select="'http://data.europa.eu/m8g/'"/>
+    <xsl:variable name="base-ontology-uri" select="'http://data.europa.eu/m8g'"/>
     <xsl:variable name="base-shape-uri" select="'http://data.europa.eu/m8g/data-shape'"/>
     <xsl:variable name="base-restriction-uri" select="$base-ontology-uri"/>
     <!--    Shapes Module URI-->
@@ -46,7 +46,7 @@
         select="fn:concat($base-ontology-uri, $defaultDelimiter, $moduleReference)"/>
 
     <!-- when a delimiter is missing in the base URI of a namespace, use this default value-->
-    <xsl:variable name="defaultDelimiter" select="'#'"/>
+    <xsl:variable name="defaultDelimiter" select="'/'"/>
 
     <!-- types of elements and names for attribute types that are acceptable to produce object properties -->
     <xsl:variable name="acceptableTypesForObjectProperties"
