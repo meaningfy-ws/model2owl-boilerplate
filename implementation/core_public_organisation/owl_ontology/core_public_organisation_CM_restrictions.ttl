@@ -1,7 +1,7 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
-@prefix cpov-res: <http://data.europa.eu/a4g/ontology#> .
+@prefix cpov-res: <http://data.europa.eu/m8g/#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
@@ -28,8 +28,8 @@ cpov-res:cpov-restriction a owl:Ontology ;
     rdfs:comment """This version is automatically generated from core_public_organisation_CM.xml on 
                 2023-11-02""" ;
     rdfs:seeAlso <https://semiceu.github.io/CPOV/releases/2.1.0/> ;
-    owl:imports cpov-res:cpov,
-        cccev:,
+    owl:imports cccev:,
+        cpov-res:cpov,
         at-voc:,
         dcterms:,
         <http://www.opengis.net/ont/geosparql>,
@@ -44,7 +44,7 @@ cpov-res:cpov-restriction a owl:Ontology ;
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#cpov-restriction-3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/m8g/#cpov-restriction-3.1.0" ;
     owl:versionIRI cpov-res:cpov-restriction-4.0.0 ;
     owl:versionInfo "4.0.0" .
 

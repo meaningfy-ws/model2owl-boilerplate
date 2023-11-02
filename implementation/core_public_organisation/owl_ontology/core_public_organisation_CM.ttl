@@ -9,7 +9,57 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://data.europa.eu/a4g/ontology#cpov> a owl:Ontology ;
+cccev:ImageObject a owl:Class ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpov> ;
+    skos:definition "A logo to describe / represent the PublicOrganization."@en ;
+    skos:prefLabel "Image object"@en .
+
+cccev:PublicOrganisation a owl:Class ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpov> ;
+    skos:definition "An Organization that is defined as being part of the public sector by a legal framework at any level."@en ;
+    skos:prefLabel "Public organisation"@en .
+
+cccev:ReferenceFramework a owl:Class ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpov> ;
+    skos:definition "Legislation or official policy from which Requirements are derived."@en ;
+    skos:prefLabel "Reference framework"@en .
+
+cccev:contactPoint a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpov> ;
+    skos:definition "The main contact information of the resource. (cpov:PublicOrganisation -> cv:ContactPoint (+cpv:contactPoint))"@en ;
+    skos:prefLabel "Contact point"@en .
+
+cccev:frequency a owl:ObjectProperty,
+        skos:ConceptScheme ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpov> ;
+    skos:definition "The recurrence of an instant or period. (time:TemporalEntity -> cpov:frequency (+cpov:frequency))"@en ;
+    skos:prefLabel "Frequency"@en .
+
+cccev:hasFormalFramework a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpov> ;
+    skos:prefLabel "Has formal framework"@en .
+
+cccev:implements a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpov> ;
+    skos:prefLabel "Implements"@en .
+
+cccev:logo a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpov> ;
+    skos:prefLabel "Logo"@en .
+
+cccev:openingHours a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpov> ;
+    skos:definition "The time at which the Contact Point is normally available. (cv:ContactPoint -> time:TemporalEntity (+cpov:openingHours))"@en ;
+    skos:prefLabel "Opening hours"@en .
+
+cccev:specialOpeningHoursSpecification a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpov> ;
+    skos:definition "The time during which the Contact Point is not available. (cv:ContactPoint -> time:TemporalEntity (+cpov:specialOpeningHoursSpecification))"@en ;
+    skos:prefLabel "Special opening hours specification"@en .
+
+at-voc:atu-type skos:editorialNote "the URI in core voc is wrong; a dataset URI instead the conceptScheme URI."@en .
+
+<http://data.europa.eu/m8g/#cpov> a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The Core Public Organisation Vocabulary core describes the concepts and properties representing the Core Public Organisation Vocabulary domain. "@en ;
     dcterms:issued "2023-11-02"^^xsd:date ;
@@ -35,9 +85,7 @@
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#cpov-3.1.0" ;
-    owl:versionIRI <http://data.europa.eu/a4g/ontology#cpov-4.0.0> ;
+    owl:priorVersion "http://data.europa.eu/m8g/#cpov-3.1.0" ;
+    owl:versionIRI <http://data.europa.eu/m8g/#cpov-4.0.0> ;
     owl:versionInfo "4.0.0" .
-
-at-voc:atu-type skos:editorialNote "the URI in core voc is wrong; a dataset URI instead the conceptScheme URI."@en .
 

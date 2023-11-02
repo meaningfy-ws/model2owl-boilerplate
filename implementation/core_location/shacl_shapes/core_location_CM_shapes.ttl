@@ -1,7 +1,7 @@
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
-@prefix clv-res: <http://data.europa.eu/a4g/ontology#> .
-@prefix clv-shape: <http://data.europa.eu/a4g/data-shape#> .
+@prefix clv-res: <http://data.europa.eu/m8g/#> .
+@prefix clv-shape: <http://data.europa.eu/m8g/data-shape#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
@@ -267,9 +267,9 @@ clv-shape:clv-shape a owl:Ontology ;
     vann:preferredNamespaceUri "http://data.europa.eu/m8g/ontology#" ;
     rdfs:comment "This version is automatically generated from core_location_CM.xml on 2023-11-02" ;
     rdfs:seeAlso <https://semiceu.github.io/CCCEV/releases/2.00/> ;
-    owl:imports clv-res:clv,
+    owl:imports cccev:,
+        clv-res:clv,
         clv-res:clv-restriction,
-        cccev:,
         at-voc:,
         dcterms:,
         <http://www.opengis.net/ont/geosparql>,
@@ -284,7 +284,7 @@ clv-shape:clv-shape a owl:Ontology ;
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/data-shape#clv-shape-3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/m8g/data-shape#clv-shape-3.1.0" ;
     owl:versionIRI clv-shape:clv-shape-4.0.0 ;
     owl:versionInfo "4.0.0" .
 

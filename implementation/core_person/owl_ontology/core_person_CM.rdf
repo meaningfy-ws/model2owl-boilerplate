@@ -23,7 +23,7 @@
          xmlns:vann="http://purl.org/vocab/vann/"
          xmlns:xhtml="https://www.w3.org/1999/xhtml/vocab#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-   <owl:Ontology rdf:about="http://data.europa.eu/a4g/ontology#cpv">
+   <owl:Ontology rdf:about="http://data.europa.eu/m8g/#cpv">
       <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
       <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
       <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
@@ -51,10 +51,201 @@
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
-      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology#cpv-4.0.0"/>
-      <owl:priorVersion>http://data.europa.eu/a4g/ontology#cpv-3.1.0</owl:priorVersion>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/m8g/#cpv-4.0.0"/>
+      <owl:priorVersion>http://data.europa.eu/m8g/#cpv-3.1.0</owl:priorVersion>
       <vann:preferredNamespaceUri>http://data.europa.eu/m8g/ontology#</vann:preferredNamespaceUri>
       <vann:preferredNamespacePrefix>cv</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
+   <owl:Class rdf:about="http://data.europa.eu/m8g/Person"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/Person">
+      <skos:prefLabel xml:lang="en">Person</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/Person">
+      <skos:definition xml:lang="en">A individual human being who may be dead or alive, but not imaginary.</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/Person">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:Class rdf:about="http://data.europa.eu/m8g/ContactPoint"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/ContactPoint">
+      <skos:prefLabel xml:lang="en">Contact point</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/ContactPoint">
+      <skos:definition xml:lang="en">Information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with.</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/ContactPoint">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/m8g/gender"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/gender">
+      <skos:prefLabel xml:lang="en">Gender</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/gender">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/m8g/sex"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/sex">
+      <skos:prefLabel xml:lang="en">Sex</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/sex">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/m8g/type"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/type">
+      <skos:prefLabel xml:lang="en">Type</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/type">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <rdfs:Datatype rdf:about="http://data.europa.eu/m8g/GenericDate"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/GenericDate">
+      <skos:prefLabel xml:lang="en">Generic date</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/GenericDate">
+      <skos:definition xml:lang="en">The date data type is the union of xs:date, xs:gYearMonth and xs:gYear.</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/GenericDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/identifies"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/identifies">
+      <skos:prefLabel xml:lang="en">Identifies</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/identifies">
+      <skos:definition xml:lang="en">The entity that is referenced by the Identifier. (adms:Identifier -&gt; cpv:Person (+cpv:identifies))</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/identifies">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/domicile"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/domicile">
+      <skos:prefLabel xml:lang="en">Domicile</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/domicile">
+      <skos:definition xml:lang="en">The place that the Person treats as permanent home. (cpv:Person -&gt; locn:Address (+cpv:domicile))</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/domicile">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/sex"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/sex">
+      <skos:prefLabel xml:lang="en">Sex</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/sex">
+      <skos:definition xml:lang="en">The organism's biological sex. (cpv:Person -&gt; cpv:sex (+cpv:sex))</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/sex">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/contactPoint"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/contactPoint">
+      <skos:prefLabel xml:lang="en">Contact point</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/contactPoint">
+      <skos:definition xml:lang="en">The main contact information of the resource. (cpv:Person -&gt; cv:ContactPoint (+cpv:contactPoint)) The main contact information of the resource. (cpov:PublicOrganisation -&gt; cv:ContactPoint (+cpv:contactPoint))</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/contactPoint">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/gender"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/gender">
+      <skos:prefLabel xml:lang="en">Gender</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/gender">
+      <skos:definition xml:lang="en">The identities, expressions and societal roles of the Person. (cpv:Person -&gt; cpv:gender (+cpv:gender))</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/gender">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/specialOpeningHoursSpecification"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/specialOpeningHoursSpecification">
+      <skos:prefLabel xml:lang="en">Special opening hours specification</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/specialOpeningHoursSpecification">
+      <skos:definition xml:lang="en">The time during which the Contact Point is not available. (cv:ContactPoint -&gt; time:TemporalEntity (+cpov:specialOpeningHoursSpecification))</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/specialOpeningHoursSpecification">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/openingHours"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/openingHours">
+      <skos:prefLabel xml:lang="en">Opening hours</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/openingHours">
+      <skos:definition xml:lang="en">The time at which the Contact Point is normally available. (cv:ContactPoint -&gt; time:TemporalEntity (+cpov:openingHours))</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/openingHours">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <rdf:Property rdf:about="http://data.europa.eu/m8g/birthDate"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/birthDate">
+      <skos:prefLabel xml:lang="en">Birth date</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/birthDate">
+      <skos:definition xml:lang="en">The point in time on which the Person was born. (cpv:Person)</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/birthDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <rdf:Property rdf:about="http://data.europa.eu/m8g/deathDate"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/deathDate">
+      <skos:prefLabel xml:lang="en">Death date</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/deathDate">
+      <skos:definition xml:lang="en">The point in time on which the Person died. (cpv:Person)</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/deathDate">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://data.europa.eu/m8g/matronymicName"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/matronymicName">
+      <skos:prefLabel xml:lang="en">Matronymic name</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/matronymicName">
+      <skos:definition xml:lang="en">Name based on the given name of the Person's mother. (cpv:Person)</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/matronymicName">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://data.europa.eu/m8g/patronymicName"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/patronymicName">
+      <skos:prefLabel xml:lang="en">Patronymic name</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/patronymicName">
+      <skos:definition xml:lang="en">Name based on the given name of the Person's father. (cpv:Person)</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/patronymicName">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://data.europa.eu/m8g/contactPage"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/contactPage">
+      <skos:prefLabel xml:lang="en">Contact page</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/contactPage">
+      <skos:definition xml:lang="en">A web page that could be used to reach out the Contact Point. (cv:ContactPoint)</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/contactPage">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://data.europa.eu/m8g/email"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/email">
+      <skos:prefLabel xml:lang="en">Email</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/email">
+      <skos:definition xml:lang="en">An electronic address through which the Contact Point can be contacted. (cv:ContactPoint)</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/email">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
+   <owl:DatatypeProperty rdf:about="http://data.europa.eu/m8g/telephone"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/telephone">
+      <skos:prefLabel xml:lang="en">Telephone</skos:prefLabel>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/telephone">
+      <skos:definition xml:lang="en">A telephone number through which the Contact Point can be contacted. (cv:ContactPoint)</skos:definition>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/telephone">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/#cpv"/>
+   </rdf:Description>
 </rdf:RDF>

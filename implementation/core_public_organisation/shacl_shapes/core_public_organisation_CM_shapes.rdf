@@ -4,8 +4,8 @@
          xmlns:cccev="http://data.europa.eu/m8g/"
          xmlns:clv="http://data.europa.eu/m8g/"
          xmlns:cpov="http://data.europa.eu/m8g/"
-         xmlns:cpov-res="http://data.europa.eu/a4g/ontology#"
-         xmlns:cpov-shape="http://data.europa.eu/a4g/data-shape#"
+         xmlns:cpov-res="http://data.europa.eu/m8g/#"
+         xmlns:cpov-shape="http://data.europa.eu/m8g/data-shape#"
          xmlns:cpsv="http://data.europa.eu/m8g/"
          xmlns:cpv="http://data.europa.eu/m8g/"
          xmlns:cv="http://data.europa.eu/m8g/"
@@ -26,7 +26,7 @@
          xmlns:vann="http://purl.org/vocab/vann/"
          xmlns:xhtml="https://www.w3.org/1999/xhtml/vocab#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-   <owl:Ontology rdf:about="http://data.europa.eu/a4g/data-shape#cpov-shape">
+   <owl:Ontology rdf:about="http://data.europa.eu/m8g/data-shape#cpov-shape">
       <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
       <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
       <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
@@ -45,8 +45,8 @@
       <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
       <owl:imports rdf:resource="https://www.w3.org/ns/prov"/>
       <owl:imports rdf:resource="https://www.w3.org/1999/xhtml/vocab"/>
-      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#cpov"/>
-      <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#cpov-restriction"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/#cpov"/>
+      <owl:imports rdf:resource="http://data.europa.eu/m8g/#cpov-restriction"/>
       <dct:title xml:lang="en">Core Public Organisation Vocabulary - core shapes</dct:title>
       <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
       <dct:description xml:lang="en">The Core Public Organisation Vocabulary core shapes provides the generic datashape specifications for the Core Public Organisation Vocabulary core.</dct:description>
@@ -56,634 +56,634 @@
       <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-06-01</dct:created>
       <owl:versionInfo>4.0.0</owl:versionInfo>
       <owl:incompatibleWith>3.1.0</owl:incompatibleWith>
-      <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape-4.0.0"/>
-      <owl:priorVersion>http://data.europa.eu/a4g/data-shape#cpov-shape-3.1.0</owl:priorVersion>
+      <owl:versionIRI rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape-4.0.0"/>
+      <owl:priorVersion>http://data.europa.eu/m8g/data-shape#cpov-shape-3.1.0</owl:priorVersion>
       <vann:preferredNamespaceUri>http://data.europa.eu/m8g/ontology#</vann:preferredNamespaceUri>
       <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
       <dct:license>© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/).</dct:license>
    </owl:Ontology>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework">
+   <sh:NodeShape rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework">
       <sh:targetClass rdf:resource="http://data.europa.eu/m8g/ReferenceFramework"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework">
       <rdfs:label>Reference framework</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework">
       <rdfs:comment>Legislation or official policy from which Requirements are derived.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-ImageObject">
+   <sh:NodeShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-ImageObject">
       <sh:targetClass rdf:resource="http://data.europa.eu/m8g/ImageObject"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-ImageObject">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-ImageObject">
       <rdfs:label>Image object</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-ImageObject">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-ImageObject">
       <rdfs:comment>A logo to describe / represent the PublicOrganization.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-ImageObject">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-ImageObject">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
+   <sh:NodeShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
       <sh:targetClass rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
       <rdfs:label>Public organisation</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
       <rdfs:comment>An Organization that is defined as being part of the public sector by a legal framework at any level.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Document">
+   <sh:NodeShape rdf:about="http://data.europa.eu/m8g/data-shape#foaf-Document">
       <sh:targetClass rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Document">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#foaf-Document">
       <rdfs:label>Document</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Document">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#foaf-Document">
       <rdfs:comment>A self-contained collection of information in a readable format.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#foaf-Document">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#foaf-Document">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
+   <sh:NodeShape rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent">
       <sh:targetClass rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent">
       <rdfs:label>Change event</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent">
       <rdfs:comment>An event which resulted in a major change to an Organization such as a merger or complete restructuring.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization">
+   <sh:NodeShape rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization">
       <sh:targetClass rdf:resource="http://www.w3.org/ns/org#Organization"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization">
       <rdfs:label>Organization</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization">
       <rdfs:comment>A collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit">
+   <sh:NodeShape rdf:about="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit">
       <sh:targetClass rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit">
       <rdfs:label>Organizational unit</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit">
       <rdfs:comment>A subdivision of Organization which is part of this Organization.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <sh:NodeShape rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity">
+   <sh:NodeShape rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity">
       <sh:targetClass rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
    </sh:NodeShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity">
       <rdfs:label>Temporal entity</rdfs:label>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity">
       <rdfs:comment>A temporal interval or instant.</rdfs:comment>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-dct-identifier"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-dct-identifier"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-dct-identifier">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-dct-identifier">
       <sh:path rdf:resource="http://purl.org/dc/terms/identifier"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-dct-identifier">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-dct-identifier">
       <sh:name>Identifier</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-dct-identifier">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-dct-identifier">
       <sh:description>An unambiguous reference to a Reference Framework.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-dct-identifier">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-dct-identifier">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-dct-identifier">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-dct-identifier">
       <sh:datatype rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-altLabel"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-altLabel"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-altLabel">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-altLabel">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#altLabel"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-altLabel">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-altLabel">
       <sh:name>Alt label</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-altLabel">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-altLabel">
       <sh:description>An alternative or informal name(s) of a Public Organization, irrespective of language.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-altLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-altLabel">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-altLabel">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-altLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-description"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-description"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-description">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-description">
       <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-description">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-description">
       <sh:name>Description</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-description">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-description">
       <sh:description>The textual description of the Public Organization.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-description">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-description">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-prefLabel"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-prefLabel"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
       <sh:path rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
       <sh:name>Pref label</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
       <sh:description>A preferred label is used to provide the primary, legally recognised name of the Public Organization, as defined in the ORG Ontology.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-skos-prefLabel">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-dct-description"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-dct-description"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-dct-description">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-dct-description">
       <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-dct-description">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-dct-description">
       <sh:name>Description</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-dct-description">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-dct-description">
       <sh:description>A textual explanation of the event.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-dct-description">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-dct-description">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-endedAtTime"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-endedAtTime"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-endedAtTime">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-endedAtTime">
       <sh:path rdf:resource="https://www.w3.org/ns/prov#endedAtTime"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-endedAtTime">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-endedAtTime">
       <sh:name>Ended at time</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-endedAtTime">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-endedAtTime">
       <sh:description>The time instant when the state of the organisation update was terminated</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-endedAtTime">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-endedAtTime">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-endedAtTime">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-endedAtTime">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-endedAtTime">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-endedAtTime">
       <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
       <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-startedAtTime"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-startedAtTime"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-startedAtTime">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-startedAtTime">
       <sh:path rdf:resource="https://www.w3.org/ns/prov#startedAtTime"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-startedAtTime">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-startedAtTime">
       <sh:name>Started at time</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-startedAtTime">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-startedAtTime">
       <sh:description>The time instant when the state of the organisation update was initiated.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-startedAtTime">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-startedAtTime">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-prov-startedAtTime">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-prov-startedAtTime">
       <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-dct-description"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-dct-description"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-dct-description">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-dct-description">
       <sh:path rdf:resource="http://purl.org/dc/terms/description"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-dct-description">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-dct-description">
       <sh:name>Description</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-dct-description">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-dct-description">
       <sh:description>A textual representation of the Temporal Entity.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-dct-description">
-      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-shape"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-dct-description">
+      <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-shape"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-dct-description">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-dct-description">
       <sh:datatype rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
       <sh:class rdf:resource="http://data.europa.eu/m8g/ReferenceFramework"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-cpsv-implements">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-cpsv-implements">
       <sh:class rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/hasFormalFramework&gt; ?that . ?that &lt;http://data.europa.eu/m8g/hasFormalFramework&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-cpsv-implements">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-cpsv-implements">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/implements&gt; ?that . ?that &lt;http://data.europa.eu/m8g/implements&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-cpov-hasFormalFramework"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-cpov-hasFormalFramework"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
       <sh:path rdf:resource="http://data.europa.eu/m8g/hasFormalFramework"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
       <sh:name>Has formal framework</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-cpov-hasFormalFramework">
       <sh:description>A piece of legislation or a policy document that prompted the change.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-cpsv-implements"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-cpsv-implements"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-cpsv-implements">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-cpsv-implements">
       <sh:path rdf:resource="http://data.europa.eu/m8g/implements"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-cpsv-implements">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-cpsv-implements">
       <sh:name>Implements</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cccev-ReferenceFramework-cpsv-implements">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cccev-ReferenceFramework-cpsv-implements">
       <sh:description>A Change Event linked to relevant legislation or policy documents.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-cpov-logo">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-cpov-logo">
       <sh:class rdf:resource="http://data.europa.eu/m8g/ImageObject"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-cpov-logo">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-cpov-logo">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/m8g/logo&gt; ?that . ?that &lt;http://data.europa.eu/m8g/logo&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-cpov-logo"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-cpov-logo"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-cpov-logo">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-cpov-logo">
       <sh:path rdf:resource="http://data.europa.eu/m8g/logo"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-cpov-logo">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-cpov-logo">
       <sh:name>Logo</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasMember">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasMember">
       <sh:class rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-memberOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-memberOf">
       <sh:class rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasMember">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasMember">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#hasMember&gt; ?that . ?that &lt;http://www.w3.org/ns/org#hasMember&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-memberOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-memberOf">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#memberOf&gt; ?that . ?that &lt;http://www.w3.org/ns/org#memberOf&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasMember"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasMember"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasMember">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasMember">
       <sh:path rdf:resource="http://www.w3.org/ns/org#hasMember"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasMember">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasMember">
       <sh:name>Has member</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasMember">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasMember">
       <sh:description>An Organization which is a member of another without being a sub organization, they are independent entities.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-memberOf"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-memberOf"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-memberOf">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-memberOf">
       <sh:path rdf:resource="http://www.w3.org/ns/org#memberOf"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-memberOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-memberOf">
       <sh:name>Member of</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-memberOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-memberOf">
       <sh:description>An Organization of which the Public Organisation is a member without being a sub organization, they are independent entities.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-next">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-next">
       <sh:class rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-prev">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-prev">
       <sh:class rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-next">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-next">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;https://www.w3.org/1999/xhtml/vocab#next&gt; ?that . ?that &lt;https://www.w3.org/1999/xhtml/vocab#next&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-prev">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-prev">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;https://www.w3.org/1999/xhtml/vocab#prev&gt; ?that . ?that &lt;https://www.w3.org/1999/xhtml/vocab#prev&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-next"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-next"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-next">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-next">
       <sh:path rdf:resource="https://www.w3.org/1999/xhtml/vocab#next"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-next">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-next">
       <sh:name>Next</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-next">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-next">
       <sh:description>In some cases, it is necessary to be able to create an ordered sequence of organizations that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-prev"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-prev"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-prev">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-prev">
       <sh:path rdf:resource="https://www.w3.org/1999/xhtml/vocab#prev"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-prev">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-prev">
       <sh:name>Prev</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-xhtml-prev">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-xhtml-prev">
       <sh:description>In some cases, it is necessary to be able to create an ordered sequence of an organization that precede and succeed each other. To support this, the CPOV includes the well-known relationships of previous and next to allow such sequences to be captured and computed.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-changedBy">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-changedBy">
       <sh:class rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-originalOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-originalOrganization">
       <sh:class rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-changedBy">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-changedBy">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#changedBy&gt; ?that . ?that &lt;http://www.w3.org/ns/org#changedBy&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-originalOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-originalOrganization">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#originalOrganization&gt; ?that . ?that &lt;http://www.w3.org/ns/org#originalOrganization&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-changedBy"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-changedBy"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-changedBy">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-changedBy">
       <sh:path rdf:resource="http://www.w3.org/ns/org#changedBy"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-changedBy">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-changedBy">
       <sh:name>Changed by</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-changedBy">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-changedBy">
       <sh:description>The Change Event that changed the Organization.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-originalOrganization"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-originalOrganization"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-originalOrganization">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-originalOrganization">
       <sh:path rdf:resource="http://www.w3.org/ns/org#originalOrganization"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-originalOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-originalOrganization">
       <sh:name>Original organization</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-originalOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-originalOrganization">
       <sh:description>The Organization that existed before the change.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
       <sh:class rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-resultingOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-resultingOrganization">
       <sh:class rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#resultedFrom&gt; ?that . ?that &lt;http://www.w3.org/ns/org#resultedFrom&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-resultingOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-resultingOrganization">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#resultingOrganization&gt; ?that . ?that &lt;http://www.w3.org/ns/org#resultingOrganization&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-resultedFrom"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-resultedFrom"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
       <sh:path rdf:resource="http://www.w3.org/ns/org#resultedFrom"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
       <sh:name>Resulted from</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-resultedFrom">
       <sh:description>A Change Event from which the Public Organisation resulted.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-resultingOrganization"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-resultingOrganization"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-resultingOrganization">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-resultingOrganization">
       <sh:path rdf:resource="http://www.w3.org/ns/org#resultingOrganization"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-resultingOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-resultingOrganization">
       <sh:name>Resulting organization</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-ChangeEvent-org-resultingOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-ChangeEvent-org-resultingOrganization">
       <sh:description>This property links a Change Event or a Foundation Event to the Organization that resulted from it.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-foaf-homepage">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-foaf-homepage">
       <sh:class rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-foaf-homepage">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-foaf-homepage">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://xmlns.com/foaf/0.1/homepage&gt; ?that . ?that &lt;http://xmlns.com/foaf/0.1/homepage&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-foaf-homepage"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-foaf-homepage"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-foaf-homepage">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-foaf-homepage">
       <sh:path rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-foaf-homepage">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-foaf-homepage">
       <sh:name>Homepage</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-foaf-homepage">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-foaf-homepage">
       <sh:description>The official home page of the Public Organization.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasUnit">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasUnit">
       <sh:class rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit-org-unitOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit-org-unitOf">
       <sh:class rdf:resource="http://data.europa.eu/m8g/PublicOrganisation"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasUnit">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasUnit">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#hasUnit&gt; ?that . ?that &lt;http://www.w3.org/ns/org#hasUnit&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit-org-unitOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit-org-unitOf">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#unitOf&gt; ?that . ?that &lt;http://www.w3.org/ns/org#unitOf&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasUnit"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasUnit"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasUnit">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasUnit">
       <sh:path rdf:resource="http://www.w3.org/ns/org#hasUnit"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasUnit">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasUnit">
       <sh:name>Has unit</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-hasUnit">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-hasUnit">
       <sh:description>An operational department within the Public Organization.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit-org-unitOf"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit-org-unitOf"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit-org-unitOf">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit-org-unitOf">
       <sh:path rdf:resource="http://www.w3.org/ns/org#unitOf"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit-org-unitOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit-org-unitOf">
       <sh:name>Unit of</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-OrganizationalUnit-org-unitOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-OrganizationalUnit-org-unitOf">
       <sh:description>The Public Organisation of which the Organizational Unit is an operational department.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-subOrganizationOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization-org-subOrganizationOf">
       <sh:class rdf:resource="http://www.w3.org/ns/org#Organization"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-hasSubOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization-org-hasSubOrganization">
       <sh:class rdf:resource="http://www.w3.org/ns/org#Organization"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-subOrganizationOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization-org-subOrganizationOf">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#subOrganizationOf&gt; ?that . ?that &lt;http://www.w3.org/ns/org#subOrganizationOf&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-hasSubOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization-org-hasSubOrganization">
       <sh:sparql rdf:parseType="Resource">
          <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://www.w3.org/ns/org#hasSubOrganization&gt; ?that . ?that &lt;http://www.w3.org/ns/org#hasSubOrganization&gt; ?this .}</sh:select>
       </sh:sparql>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#org-Organization-org-subOrganizationOf"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#org-Organization-org-subOrganizationOf"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-subOrganizationOf">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization-org-subOrganizationOf">
       <sh:path rdf:resource="http://www.w3.org/ns/org#subOrganizationOf"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-subOrganizationOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization-org-subOrganizationOf">
       <sh:name>Sub organization of</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-subOrganizationOf">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization-org-subOrganizationOf">
       <sh:description>Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#org-Organization-org-hasSubOrganization"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#org-Organization-org-hasSubOrganization"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-hasSubOrganization">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization-org-hasSubOrganization">
       <sh:path rdf:resource="http://www.w3.org/ns/org#hasSubOrganization"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-hasSubOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization-org-hasSubOrganization">
       <sh:name>Has sub organization</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#org-Organization-org-hasSubOrganization">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#org-Organization-org-hasSubOrganization">
       <sh:description>Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an organization which is a sub-part or child of this organization.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-purpose">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-purpose">
       <sh:class rdf:resource="http://www.w3.org/ns/org#purpose"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-purpose"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-purpose"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-purpose">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-purpose">
       <sh:path rdf:resource="http://www.w3.org/ns/org#purpose"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-purpose">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-purpose">
       <sh:name>Purpose</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-purpose">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-purpose">
       <sh:description>This property describes the reasons of existence of an Organization.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-classification">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-classification">
       <sh:class rdf:resource="http://www.w3.org/ns/org#classification"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-classification"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-classification"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-classification">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-classification">
       <sh:path rdf:resource="http://www.w3.org/ns/org#classification"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-classification">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-classification">
       <sh:name>Classification</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-org-classification">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-org-classification">
       <sh:description>The categorisation of the Public Organization.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-spatial">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-spatial">
       <sh:class rdf:resource="http://publications.europa.eu/resource/authority/atu-type"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-spatial"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-spatial"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-spatial">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-spatial">
       <sh:path rdf:resource="http://purl.org/dc/terms/spatial"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-spatial">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-spatial">
       <sh:name>Spatial</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#cpov-PublicOrganisation-dct-spatial">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#cpov-PublicOrganisation-dct-spatial">
       <sh:description>This property links an Organization to the Administrative Region(s) that it covers.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-cpov-frequency">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-cpov-frequency">
       <sh:class rdf:resource="http://data.europa.eu/m8g/frequency"/>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity">
-      <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-cpov-frequency"/>
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity">
+      <sh:property rdf:resource="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-cpov-frequency"/>
    </rdf:Description>
-   <sh:PropertyShape rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-cpov-frequency">
+   <sh:PropertyShape rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-cpov-frequency">
       <sh:path rdf:resource="http://data.europa.eu/m8g/frequency"/>
    </sh:PropertyShape>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-cpov-frequency">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-cpov-frequency">
       <sh:name>Frequency</sh:name>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#time-TemporalEntity-cpov-frequency">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#time-TemporalEntity-cpov-frequency">
       <sh:description>The recurrence of an instant or period.</sh:description>
    </rdf:Description>
-   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#at-voc-atu-type">
+   <rdf:Description rdf:about="http://data.europa.eu/m8g/data-shape#at-voc-atu-type">
       <rdfs:comment>the URI in core voc is wrong; a dataset URI instead the conceptScheme URI.</rdfs:comment>
    </rdf:Description>
 </rdf:RDF>

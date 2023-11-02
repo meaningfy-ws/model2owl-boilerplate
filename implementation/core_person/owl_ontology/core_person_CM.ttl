@@ -4,11 +4,104 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://data.europa.eu/a4g/ontology#cpv> a owl:Ontology ;
+cccev:ContactPoint a owl:Class ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "Information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with."@en ;
+    skos:prefLabel "Contact point"@en .
+
+cccev:GenericDate a rdfs:Datatype ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "The date data type is the union of xs:date, xs:gYearMonth and xs:gYear."@en ;
+    skos:prefLabel "Generic date"@en .
+
+cccev:Person a owl:Class ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "A individual human being who may be dead or alive, but not imaginary."@en ;
+    skos:prefLabel "Person"@en .
+
+cccev:birthDate a rdf:Property ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "The point in time on which the Person was born. (cpv:Person)"@en ;
+    skos:prefLabel "Birth date"@en .
+
+cccev:contactPage a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "A web page that could be used to reach out the Contact Point. (cv:ContactPoint)"@en ;
+    skos:prefLabel "Contact page"@en .
+
+cccev:contactPoint a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "The main contact information of the resource. (cpv:Person -> cv:ContactPoint (+cpv:contactPoint)) The main contact information of the resource. (cpov:PublicOrganisation -> cv:ContactPoint (+cpv:contactPoint))"@en ;
+    skos:prefLabel "Contact point"@en .
+
+cccev:deathDate a rdf:Property ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "The point in time on which the Person died. (cpv:Person)"@en ;
+    skos:prefLabel "Death date"@en .
+
+cccev:domicile a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "The place that the Person treats as permanent home. (cpv:Person -> locn:Address (+cpv:domicile))"@en ;
+    skos:prefLabel "Domicile"@en .
+
+cccev:email a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "An electronic address through which the Contact Point can be contacted. (cv:ContactPoint)"@en ;
+    skos:prefLabel "Email"@en .
+
+cccev:gender a owl:ObjectProperty,
+        skos:ConceptScheme ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "The identities, expressions and societal roles of the Person. (cpv:Person -> cpv:gender (+cpv:gender))"@en ;
+    skos:prefLabel "Gender"@en .
+
+cccev:identifies a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "The entity that is referenced by the Identifier. (adms:Identifier -> cpv:Person (+cpv:identifies))"@en ;
+    skos:prefLabel "Identifies"@en .
+
+cccev:matronymicName a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "Name based on the given name of the Person's mother. (cpv:Person)"@en ;
+    skos:prefLabel "Matronymic name"@en .
+
+cccev:openingHours a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "The time at which the Contact Point is normally available. (cv:ContactPoint -> time:TemporalEntity (+cpov:openingHours))"@en ;
+    skos:prefLabel "Opening hours"@en .
+
+cccev:patronymicName a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "Name based on the given name of the Person's father. (cpv:Person)"@en ;
+    skos:prefLabel "Patronymic name"@en .
+
+cccev:sex a owl:ObjectProperty,
+        skos:ConceptScheme ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "The organism's biological sex. (cpv:Person -> cpv:sex (+cpv:sex))"@en ;
+    skos:prefLabel "Sex"@en .
+
+cccev:specialOpeningHoursSpecification a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "The time during which the Contact Point is not available. (cv:ContactPoint -> time:TemporalEntity (+cpov:specialOpeningHoursSpecification))"@en ;
+    skos:prefLabel "Special opening hours specification"@en .
+
+cccev:telephone a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:definition "A telephone number through which the Contact Point can be contacted. (cv:ContactPoint)"@en ;
+    skos:prefLabel "Telephone"@en .
+
+cccev:type a skos:ConceptScheme ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#cpv> ;
+    skos:prefLabel "Type"@en .
+
+<http://data.europa.eu/m8g/#cpv> a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The Core Person Vocabulary core describes the concepts and properties representing the Core Person Vocabulary domain."@en ;
     dcterms:issued "2023-11-02"^^xsd:date ;
@@ -34,7 +127,7 @@
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#cpv-3.1.0" ;
-    owl:versionIRI <http://data.europa.eu/a4g/ontology#cpv-4.0.0> ;
+    owl:priorVersion "http://data.europa.eu/m8g/#cpv-3.1.0" ;
+    owl:versionIRI <http://data.europa.eu/m8g/#cpv-4.0.0> ;
     owl:versionInfo "4.0.0" .
 

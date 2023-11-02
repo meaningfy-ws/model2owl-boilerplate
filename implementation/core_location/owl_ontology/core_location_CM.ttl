@@ -5,10 +5,68 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://data.europa.eu/a4g/ontology#clv> a owl:Ontology ;
+cccev:AdminUnit a owl:Class ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:definition "A detailed administrative unit organized in a hierarchy."@en ;
+    skos:prefLabel "Admin unit"@en .
+
+cccev:adminUnit a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:definition "The adminUnit relationship links an Address with the Administrative Unit class. (locn:Address -> clv:AdminUnit (+clv:adminUnit))"@en ;
+    skos:prefLabel "Admin unit"@en .
+
+cccev:code a owl:ObjectProperty,
+        skos:ConceptScheme ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:definition "The classification of the administrative unit. (clv:AdminUnit -> clv:code (+clv:code))"@en ;
+    skos:prefLabel "Code"@en .
+
+cccev:coordinates a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:definition "A list of geographic coordinates that define the extent of the Geometry. (locn:Geometry)"@en ;
+    skos:prefLabel "Coordinates"@en .
+
+cccev:crs a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:definition "An identifier for the coordinate reference system. (locn:Geometry)"@en ;
+    skos:prefLabel "Crs"@en .
+
+cccev:domicile a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:definition "The place that the Person treats as permanent home. (cpv:Person -> locn:Address (+cpv:domicile))"@en ;
+    skos:prefLabel "Domicile"@en .
+
+cccev:geometryType a owl:ObjectProperty,
+        skos:ConceptScheme ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:definition "The classification of the Geometry. (locn:Geometry -> clv:geometryType (+clv:geometryType))"@en ;
+    skos:prefLabel "Geometry type"@en .
+
+cccev:latitude a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:definition "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface. (locn:Geometry)"@en ;
+    skos:prefLabel "Latitude"@en .
+
+cccev:level a owl:ObjectProperty,
+        skos:ConceptScheme ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:definition "The level of the administrative unit in the hierarchy. (clv:AdminUnit -> clv:level (+clv:level))"@en ;
+    skos:prefLabel "Level"@en .
+
+cccev:longitude a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:definition "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface. (locn:Geometry)"@en ;
+    skos:prefLabel "Longitude"@en .
+
+cccev:registeredAddress a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://data.europa.eu/m8g/#clv> ;
+    skos:prefLabel "Registered address"@en .
+
+<http://data.europa.eu/m8g/#clv> a owl:Ontology ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The Core Location Vocabulary core describes the concepts and properties representing the Core Location Vocabulary domain."@en ;
     dcterms:issued "2023-11-02"^^xsd:date ;
@@ -34,7 +92,7 @@
         <https://www.w3.org/1999/xhtml/vocab>,
         <https://www.w3.org/ns/prov> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#clv-3.1.0" ;
-    owl:versionIRI <http://data.europa.eu/a4g/ontology#clv-4.0.0> ;
+    owl:priorVersion "http://data.europa.eu/m8g/#clv-3.1.0" ;
+    owl:versionIRI <http://data.europa.eu/m8g/#clv-4.0.0> ;
     owl:versionInfo "4.0.0" .
 
