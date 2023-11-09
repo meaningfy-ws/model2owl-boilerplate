@@ -95,6 +95,10 @@
     <!-- _______________________________________________________________________   -->
     <!--    This section contains the variables used to build the ontology metadata-->
     <xsl:variable name="moduleReference" select="'clv'"/>
+        <!--    rdfs:label -->
+    <xsl:variable name="ontologyLabelCore" select="'Core Location Vocabulary - core'"/>
+    <xsl:variable name="ontologyLabelRestrictions" select="'Core Location Vocabulary - core restrictions'"/>
+    <xsl:variable name="ontologyLabelShapes" select="'Core Location Vocabulary - core shapes'"/>
     <!--    dct:title -->
     <xsl:variable name="ontologyTitleCore" select="'Core Location Vocabulary - core'"/>
     <xsl:variable name="ontologyTitleRestrictions" select="'Core Location Vocabulary - core restrictions'"/>
