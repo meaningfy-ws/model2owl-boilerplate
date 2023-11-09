@@ -106,6 +106,11 @@
     rdfs:subClassOf :Estimate ;
     skos:prefLabel "Concession estimate"@en .
 
+:ContextSpecificDescription a owl:Class ;
+    rdfs:isDefinedBy :core ;
+    skos:definition "A description concerning a Procurement Object or a Notice in a specific Situation Context. Additional Information: The description has its own identity (+I) but is dependent (+D) on the concerned Entity. We say that ContextSpecificDescription *concerns* an Entity."@en ;
+    skos:prefLabel "Context specific description"@en .
+
 :ContractLotCompletionInformation a owl:Class ;
     rdfs:isDefinedBy :core ;
     rdfs:subClassOf :ContextualProjection ;
@@ -339,7 +344,6 @@
 
 :NoticeAwardInformation a owl:Class ;
     rdfs:isDefinedBy :core ;
-    rdfs:subClassOf :ContextSpecificDescription ;
     skos:definition "Information about an Award Notice."@en ;
     skos:prefLabel "Notice award information"@en .
 
@@ -479,7 +483,6 @@
 
 :ProcurementProcessInformation a owl:Class ;
     rdfs:isDefinedBy :core ;
-    rdfs:subClassOf :ContextSpecificDescription ;
     skos:definition "Information about the temporal unfolding or succession of Procurement Objects."@en ;
     skos:prefLabel "Procurement process information"@en .
 
@@ -3736,11 +3739,6 @@ foaf:Person a owl:Class ;
     skos:definition "Role of an Agent who may be mentioned in the information exchanged during the Procurement Process but who does not play an active part in it."@en ;
     skos:prefLabel "Auxiliary party"@en .
 
-:ContextSpecificDescription a owl:Class ;
-    rdfs:isDefinedBy :core ;
-    skos:definition "A description concerning a Procurement Object or a Notice in a specific Situation Context. Additional Information: The description has its own identity (+I) but is dependent (+D) on the concerned Entity. We say that ContextSpecificDescription *concerns* an Entity."@en ;
-    skos:prefLabel "Context specific description"@en .
-
 :ContextualProjection a owl:Class ;
     rdfs:isDefinedBy :core ;
     skos:definition "Projection of an Entity and all of its properties that hold in a given Situation Context. Additional Information: The contextual projection does not have its own identity (-I), is dependent (+D) on the described Entity, and is anti-rigid (~R) We say that ContextualProjection *describes* an Entity. Adaptation of ContextSlices pattern encoding a 4D view. http://ontologydesignpatterns.org/wiki/Submissions:Context_Slices"@en ;
@@ -3775,7 +3773,6 @@ foaf:Person a owl:Class ;
 
 :StatisticalInformation a owl:Class ;
     rdfs:isDefinedBy :core ;
-    rdfs:subClassOf :ContextSpecificDescription ;
     skos:definition "Statistical data on the Procedure and the Lot. Additional Information At the present time Procurement Procedures are not fully electronic. At a later date, information on the Tenders received could be inferred by the data in the eProcurement System. Therefore this class is temporal and should cease to exist in fully electronic Procurement. The need for its presence responds also to the alignment with the Regulation (EU) 2019/1780 (eForms). Attention will have to be paid in the future to possible inconsistencies derived from data placed in other classes and data held in the Statistical Information class; e.g. the TenderEvaluation class (see eEvaluation diagram) has the attribute admissibileTender indicator, which in case of being false, may enter in contradiction with the highest or lowest Tender value for that very same inadmissible Tender. WG Approval 12/12/2019"@en ;
     skos:prefLabel "Statistical information"@en .
 
@@ -3852,15 +3849,16 @@ foaf:Agent a owl:Class ;
     skos:prefLabel "Acquiring party"@en .
 
 :core a owl:Ontology ;
+    rdfs:label "eProcurement Ontology Ordering - core"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology core describes the concepts and properties representing the European Public Procurement domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2023-11-01"^^xsd:date ;
+    dcterms:issued "2023-11-09"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology - core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from demo_ontology_CM.xml on 2023-11-01" ;
+    rdfs:comment "This version is automatically generated from demo_ontology_CM.xml on 2023-11-09" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
