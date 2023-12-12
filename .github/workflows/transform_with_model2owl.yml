@@ -18,14 +18,17 @@ jobs:
 
       - name: get model2owl
         run: |
-          git clone https://github.com/OP-TED/model2owl.git
+          git clone --branch feature/SM15-67  https://github.com/meaningfy-ws/model2owl.git
           pwd
 
       - name: get-saxon
         run: pwd && cd model2owl && make get-saxon
 
+      - name: get-jinja
+        run: cd model2owl && make create-virtual-env && make get-jinja
 
-      - name: generate convention report and glossary
+
+      - name: generate convention report and glossary and respec
         run: |
           AVAILABLE_IMPLEMENTATIONS=(demo_ontology demo_ontology_module)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
@@ -39,6 +42,7 @@ jobs:
             CM_FILE_PATH=$(echo "implementation/$implementation/xmi_conceptual_model/${CM_FILE_NAME}")
 
             OUTPUT_CONVENTION_REPORT_PATH=$(echo "implementation/$implementation/conventions_report/")
+            OUTPUT_RESPEC_REPORT_PATH=$(echo "implementation/$implementation/respec_report/$implementation-respec.html")
             OUTPUT_GLOSSARY_FILE_NAME=$(echo "${implementation}_glossary.html")
             ls -la implementation/$implementation/xmi_conceptual_model/
             echo "CM_FILE_PATH is $CM_FILE_PATH"
@@ -52,6 +56,10 @@ jobs:
             ls -la
             make generate-convention-report XMI_INPUT_FILE_PATH=../$CM_FILE_PATH OUTPUT_CONVENTION_REPORT_PATH=../$OUTPUT_CONVENTION_REPORT_PATH
             make generate-glossary XMI_INPUT_FILE_PATH=../$CM_FILE_PATH OUTPUT_GLOSSARY_PATH=../$OUTPUT_GLOSSARY_PATH
+
+            make respec-json XMI_INPUT_FILE_PATH=../$CM_FILE_PATH OUTPUT_FOLDER_PATH=.
+            make generate-respec RESPEC_INPUT_JSON_PATH=${CM_FILE_NAME}_respec.json RESPEC_OUTPUT_FILE_PATH=OUTPUT_RESPEC_REPORT_PATH
+
 
             sed -i "s/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" config-proxy.xsl
             cd ..
@@ -161,6 +169,7 @@ jobs:
             echo $(ls ../${OUTPUT_PATH_SHACL}*.rdf)
             make convert-rdf-to-turtle ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_SHACL
             echo "-------------------end transform---------------------------------"
+
 
             sed -i "s/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" config-proxy.xsl
             cd ..
