@@ -1,557 +1,552 @@
 @prefix : <http://data.europa.eu/a4g/ontology#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
+@prefix at-voc-new: <http://publications.europa.eu/resource/authority/new/> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix not-shape: <http://data.europa.eu/a4g/data-shape#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-not-shape:epo-not-CANDefence-D81 a sh:NodeShape ;
-    rdfs:label "C a n defence- d81" ;
-    rdfs:comment "What is the notice type here?" ;
+not-shape:epo-ful-AbstractContainer a sh:NodeShape ;
+    rdfs:label "Abstract container" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-AbstractContainer-epo-ful-hasTemperatureSpecification,
+        not-shape:epo-ful-AbstractContainer-epo-ful-isHazardousRisk,
+        not-shape:epo-ful-AbstractContainer-epo-ful-isReturnableMaterial ;
+    sh:targetClass :AbstractContainer .
+
+not-shape:epo-ful-Carrier a sh:NodeShape ;
+    rdfs:label "Carrier" ;
+    rdfs:comment "The Role of an Agent who handles the physical Delivery/Transportation of the (Despatched) Shipment. Additional Information: This Role is also known as Deliverer. WG approval: 11/10/2022" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:targetClass :Carrier .
+
+not-shape:epo-ful-Consignment a sh:NodeShape ;
+    rdfs:label "Consignment" ;
+    rdfs:comment "A batch of goods destined for or delivered to someone. Additional information: Consignment it is a Transport Agreement. They do not care about the content of what is being shipped. (only if there are dangerous goods, and temperature requirements). How to move from place a to place B." ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-Consignment-epo-ful-containsTransportHandlingUnit,
+        not-shape:epo-ful-Consignment-epo-ful-hasCarrierServiceInstruction,
+        not-shape:epo-ful-Consignment-epo-ful-hasDeliveryInstruction,
+        not-shape:epo-ful-Consignment-epo-ful-hasHandlingInstruction,
+        not-shape:epo-ful-Consignment-epo-ful-hasHandlingInstructionCode,
+        not-shape:epo-ful-Consignment-epo-ful-hasMainCarriageShipmentStage,
+        not-shape:epo-ful-Consignment-epo-ful-hasOnCarriageShipmentStage,
+        not-shape:epo-ful-Consignment-epo-ful-hasPreCarriageShipmentStage,
+        not-shape:epo-ful-Consignment-epo-ful-hasRequestedPickUpInformation,
+        not-shape:epo-ful-Consignment-epo-ful-hasSpecialInstruction,
+        not-shape:epo-ful-Consignment-epo-ful-hasSpecialServiceInstruction,
+        not-shape:epo-ful-Consignment-epo-ful-hasVehicleDescription,
+        not-shape:epo-ful-Consignment-epo-ful-isHazardousRisk,
+        not-shape:epo-ful-Consignment-epo-specifiesFreightForwarder,
+        not-shape:epo-ful-Consignment-epo-specifiesNotifier ;
+    sh:targetClass :Consignment .
+
+not-shape:epo-ful-DespatchAdvice a sh:NodeShape ;
+    rdfs:label "Despatch advice" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-DespatchAdvice-epo-ful-comprisesDespatchLine,
+        not-shape:epo-ful-DespatchAdvice-epo-ful-hasDespatchAdviceType,
+        not-shape:epo-ful-DespatchAdvice-epo-ful-refersToConsignment,
+        not-shape:epo-ful-DespatchAdvice-epo-ful-refersToShipmentAgreement,
+        not-shape:epo-ful-DespatchAdvice-epo-ful-specifiesDespatcher,
+        not-shape:epo-ful-DespatchAdvice-epo-ful-specifiesShipment,
+        not-shape:epo-ful-DespatchAdvice-epo-ful-specifiesTransportHandlingUnits ;
+    sh:targetClass :DespatchAdvice .
+
+not-shape:epo-ful-DespatchLine a sh:NodeShape ;
+    rdfs:label "Despatch line" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-DespatchLine-epo-ful-hasOutstandingQuantityReason ;
+    sh:targetClass :DespatchLine .
+
+not-shape:epo-ful-Despatcher a sh:NodeShape ;
+    rdfs:label "Despatcher" ;
+    rdfs:comment "Role of an Agent who sends the goods or notifies of the service or works execution. Additional Information: The Role is carried out by the Supplier or on behalf of the Supplier. Despatcher is also known as Despatch Party, Consignor, Deliverer." ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:targetClass :Despatcher .
+
+not-shape:epo-ful-FreightForwarder a sh:NodeShape ;
+    rdfs:label "Freight forwarder" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:targetClass :FreightForwarder .
+
+not-shape:epo-ful-GoodsItem a sh:NodeShape ;
+    rdfs:label "Goods item" ;
+    rdfs:comment "An Item including its initial packaging during transportation. Additional information: For example, the Item being bought is the computer. The weight of the computer is X. The weight of the Goods Item is the weight of the computer plus the weight of the initial packaging. During transportation you have for example trace ID which is applied to the GoodsItem, rather than on the Item itself. The declared statistical value can only apply once you have a GoodsItem. WG approval 30/03/2023" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-GoodsItem-epo-ful-refersToDespatchLine ;
+    sh:targetClass :GoodsItem .
+
+not-shape:epo-ful-Notifier a sh:NodeShape ;
+    rdfs:label "Notifier" ;
+    rdfs:comment "The party to be notified upon arrival of goods and when special occurrences (usually pre-defined) take place during a transportation service. (UBL)" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:targetClass :Notifier .
+
+not-shape:epo-ful-Package a sh:NodeShape ;
+    rdfs:label "Package" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-Package-epo-ful-containsGoodsItem,
+        not-shape:epo-ful-Package-epo-ful-containsPackage,
+        not-shape:epo-ful-Package-epo-ful-hasPackagingType,
+        not-shape:epo-ful-Package-epo-ful-hasPackagingTypeDescription ;
+    sh:targetClass :Package .
+
+not-shape:epo-ful-ShipmentAgreement a sh:NodeShape ;
+    rdfs:label "Shipment agreement" ;
+    rdfs:comment "The Commercial Agreement between the Commercial Parties. Additional Information: It describes items being shipped. What is being moved." ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:targetClass :ShipmentAgreement .
+
+not-shape:epo-ful-ShipmentInformation a sh:NodeShape ;
+    rdfs:label "Shipment information" ;
+    rdfs:comment "The Transportation of an identifiable collection of Goods Items from one party (the Despatch Party) to another party (the Consignee) via one or more modes of transport. Addition Information This represents the \"where\" and \"when\"." ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-ShipmentInformation-dct-description,
+        not-shape:epo-ful-ShipmentInformation-epo-ful-despatchDate,
+        not-shape:epo-ful-ShipmentInformation-epo-ful-isSpecificToDespatchLine ;
+    sh:targetClass :ShipmentInformation .
+
+not-shape:epo-ful-ShipmentStage a sh:NodeShape ;
+    rdfs:label "Shipment stage" ;
     rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CANDefence-D81 .
-
-not-shape:epo-not-CANSocial-D25 a sh:NodeShape ;
-    rdfs:label "C a n social- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CANSocial-D25 .
-
-not-shape:epo-not-CANSocialNotice a sh:NodeShape ;
-    rdfs:label "C a n social notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CANSocialNotice .
-
-not-shape:epo-not-CANSocialNotice-D25 a sh:NodeShape ;
-    rdfs:label "C a n social notice- d25" ;
-    rdfs:comment "Additional information: Social and other specific services – utilities" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CANSocialNotice-D25 .
-
-not-shape:epo-not-CANStandard-D24 a sh:NodeShape ;
-    rdfs:label "C a n standard- d24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CANStandard-D24 .
-
-not-shape:epo-not-CANStandardNotice a sh:NodeShape ;
-    rdfs:label "C a n standard notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CANStandardNotice .
-
-not-shape:epo-not-CNDefence-D81 a sh:NodeShape ;
-    rdfs:label "C n defence- d81" ;
-    rdfs:comment "What is the notice type here?" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CNDefence-D81 .
-
-not-shape:epo-not-CNSocial-D25 a sh:NodeShape ;
-    rdfs:label "C n social- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CNSocial-D25 .
-
-not-shape:epo-not-CNSocialNotice a sh:NodeShape ;
-    rdfs:label "C n social notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CNSocialNotice .
-
-not-shape:epo-not-CNSocialNotice-D25 a sh:NodeShape ;
-    rdfs:label "C n social notice- d25" ;
-    rdfs:comment "Additional information: Social and other specific services – utilities" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CNSocialNotice-D25 .
-
-not-shape:epo-not-CNStandard-D24 a sh:NodeShape ;
-    rdfs:label "C n standard- d24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CNStandard-D24 .
-
-not-shape:epo-not-CNStandardNotice a sh:NodeShape ;
-    rdfs:label "C n standard notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CNStandardNotice .
-
-not-shape:epo-not-CompetitionNotice a sh:NodeShape ;
-    rdfs:label "Competition notice" ;
-    rdfs:comment "An announcement of the launch of a Procurement Procedure by a Procuring Entity. WG approval 18/05/2018" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CompetitionNotice .
-
-not-shape:epo-not-CompletionNotice a sh:NodeShape ;
-    rdfs:label "Completion notice" ;
-    rdfs:comment "An announcement of the end of a Procurement by a Buyer.",
-        "What is the Form type here? There is no form type, because this is a new notice type. What is the Notice type here? This will be added to the codelist." ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :CompletionNotice .
-
-not-shape:epo-not-CompletionNotice-epo-announcesRole sh:description "for ReviewBody" .
-
-not-shape:epo-not-ConcessionAwardNotice-D23 a sh:NodeShape ;
-    rdfs:label "Concession award notice- d23" ;
-    rdfs:comment "where does this belong to?" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :ConcessionAwardNotice-D23 .
-
-not-shape:epo-not-ConcessionNotice-D23 a sh:NodeShape ;
-    rdfs:label "Concession notice- d23" ;
-    rdfs:comment "where does this belong to?" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :ConcessionNotice-D23 .
-
-not-shape:epo-not-ContractModificationNotice a sh:NodeShape ;
-    rdfs:label "Contract modification notice" ;
-    rdfs:comment "An announcement of the Modification Of a Contract/Concession during its term by a Procuring Entity.",
-        "should we move refersToOriginalNotice at this level or should we use refersToNotice relation from the Notice level?" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :ContractModificationNotice .
-
-not-shape:epo-not-DesignContest-D24 a sh:NodeShape ;
-    rdfs:label "Design contest- d24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :DesignContest-D24 .
-
-not-shape:epo-not-DesignContest-D25 a sh:NodeShape ;
-    rdfs:label "Design contest- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :DesignContest-D25 .
-
-not-shape:epo-not-DesignContestNotice a sh:NodeShape ;
-    rdfs:label "Design contest notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :DesignContestNotice .
-
-not-shape:epo-not-DesignContestResult-D24 a sh:NodeShape ;
-    rdfs:label "Design contest result- d24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :DesignContestResult-D24 .
-
-not-shape:epo-not-DesignContestResult-D25 a sh:NodeShape ;
-    rdfs:label "Design contest result- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :DesignContestResult-D25 .
-
-not-shape:epo-not-DesignContestResultNotice a sh:NodeShape ;
-    rdfs:label "Design contest result notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :DesignContestResultNotice .
-
-not-shape:epo-not-DirectAwardPrenotificationNotice a sh:NodeShape ;
-    rdfs:label "Direct award prenotification notice" ;
-    rdfs:comment "Notice which sets out the Buyer's purchasing intention to award a Contract without prior notification of Competition." ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :DirectAwardPrenotificationNotice .
-
-not-shape:epo-not-Modification-D23 a sh:NodeShape ;
-    rdfs:label "Modification- d23" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Modification-D23 .
-
-not-shape:epo-not-Modification-D24 a sh:NodeShape ;
-    rdfs:label "Modification- d24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Modification-D24 .
-
-not-shape:epo-not-Modification-D25 a sh:NodeShape ;
-    rdfs:label "Modification- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Modification-D25 .
-
-not-shape:epo-not-Notice1 a sh:NodeShape ;
-    rdfs:label "Notice1" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice1 .
-
-not-shape:epo-not-Notice10 a sh:NodeShape ;
-    rdfs:label "Notice10" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice10 .
-
-not-shape:epo-not-Notice11 a sh:NodeShape ;
-    rdfs:label "Notice11" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice11 .
-
-not-shape:epo-not-Notice12 a sh:NodeShape ;
-    rdfs:label "Notice12" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice12 .
-
-not-shape:epo-not-Notice13 a sh:NodeShape ;
-    rdfs:label "Notice13" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice13 .
-
-not-shape:epo-not-Notice14 a sh:NodeShape ;
-    rdfs:label "Notice14" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice14 .
-
-not-shape:epo-not-Notice15 a sh:NodeShape ;
-    rdfs:label "Notice15" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice15 .
-
-not-shape:epo-not-Notice16 a sh:NodeShape ;
-    rdfs:label "Notice16" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice16 .
-
-not-shape:epo-not-Notice17 a sh:NodeShape ;
-    rdfs:label "Notice17" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice17 .
-
-not-shape:epo-not-Notice18 a sh:NodeShape ;
-    rdfs:label "Notice18" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice18 .
-
-not-shape:epo-not-Notice19 a sh:NodeShape ;
-    rdfs:label "Notice19" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice19 .
-
-not-shape:epo-not-Notice2 a sh:NodeShape ;
-    rdfs:label "Notice2" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice2 .
-
-not-shape:epo-not-Notice20 a sh:NodeShape ;
-    rdfs:label "Notice20" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice20 .
-
-not-shape:epo-not-Notice21 a sh:NodeShape ;
-    rdfs:label "Notice21" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice21 .
-
-not-shape:epo-not-Notice22 a sh:NodeShape ;
-    rdfs:label "Notice22" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice22 .
-
-not-shape:epo-not-Notice23 a sh:NodeShape ;
-    rdfs:label "Notice23" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice23 .
-
-not-shape:epo-not-Notice24 a sh:NodeShape ;
-    rdfs:label "Notice24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice24 .
-
-not-shape:epo-not-Notice25 a sh:NodeShape ;
-    rdfs:label "Notice25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice25 .
-
-not-shape:epo-not-Notice26 a sh:NodeShape ;
-    rdfs:label "Notice26" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice26 .
-
-not-shape:epo-not-Notice27 a sh:NodeShape ;
-    rdfs:label "Notice27" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice27 .
-
-not-shape:epo-not-Notice28 a sh:NodeShape ;
-    rdfs:label "Notice28" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice28 .
-
-not-shape:epo-not-Notice29 a sh:NodeShape ;
-    rdfs:label "Notice29" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice29 .
-
-not-shape:epo-not-Notice3 a sh:NodeShape ;
-    rdfs:label "Notice3" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice3 .
-
-not-shape:epo-not-Notice30 a sh:NodeShape ;
-    rdfs:label "Notice30" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice30 .
-
-not-shape:epo-not-Notice31 a sh:NodeShape ;
-    rdfs:label "Notice31" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice31 .
-
-not-shape:epo-not-Notice32 a sh:NodeShape ;
-    rdfs:label "Notice32" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice32 .
-
-not-shape:epo-not-Notice33 a sh:NodeShape ;
-    rdfs:label "Notice33" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice33 .
-
-not-shape:epo-not-Notice34 a sh:NodeShape ;
-    rdfs:label "Notice34" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice34 .
-
-not-shape:epo-not-Notice35 a sh:NodeShape ;
-    rdfs:label "Notice35" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice35 .
-
-not-shape:epo-not-Notice36 a sh:NodeShape ;
-    rdfs:label "Notice36" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice36 .
-
-not-shape:epo-not-Notice37 a sh:NodeShape ;
-    rdfs:label "Notice37" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice37 .
-
-not-shape:epo-not-Notice38 a sh:NodeShape ;
-    rdfs:label "Notice38" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice38 .
-
-not-shape:epo-not-Notice39 a sh:NodeShape ;
-    rdfs:label "Notice39" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice39 .
-
-not-shape:epo-not-Notice4 a sh:NodeShape ;
-    rdfs:label "Notice4" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice4 .
-
-not-shape:epo-not-Notice40 a sh:NodeShape ;
-    rdfs:label "Notice40" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice40 .
-
-not-shape:epo-not-Notice5 a sh:NodeShape ;
-    rdfs:label "Notice5" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice5 .
-
-not-shape:epo-not-Notice6 a sh:NodeShape ;
-    rdfs:label "Notice6" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice6 .
-
-not-shape:epo-not-Notice7 a sh:NodeShape ;
-    rdfs:label "Notice7" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice7 .
-
-not-shape:epo-not-Notice8 a sh:NodeShape ;
-    rdfs:label "Notice8" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice8 .
-
-not-shape:epo-not-Notice9 a sh:NodeShape ;
-    rdfs:label "Notice9" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Notice9 .
-
-not-shape:epo-not-PIN-CFCSocial-D25 a sh:NodeShape ;
-    rdfs:label "P i n- c f c social- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PIN-CFCSocial-D25 .
-
-not-shape:epo-not-PIN-CFCSocialNotice a sh:NodeShape ;
-    rdfs:label "P i n- c f c social notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PIN-CFCSocialNotice .
-
-not-shape:epo-not-PIN-CFCSocialNotice-D25 a sh:NodeShape ;
-    rdfs:label "P i n- c f c social notice- d25" ;
-    rdfs:comment "Additional information: Social and other specific services – utilities" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PIN-CFCSocialNotice-D25 .
-
-not-shape:epo-not-PIN-CFCStandard-D24 a sh:NodeShape ;
-    rdfs:label "P i n- c f c standard- d24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PIN-CFCStandard-D24 .
-
-not-shape:epo-not-PIN-CFCStandardNotice a sh:NodeShape ;
-    rdfs:label "P i n- c f c standard notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PIN-CFCStandardNotice .
-
-not-shape:epo-not-PIN-RTL-D24 a sh:NodeShape ;
-    rdfs:label "P i n- r t l- d24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PIN-RTL-D24 .
-
-not-shape:epo-not-PIN-RTL-D25 a sh:NodeShape ;
-    rdfs:label "P i n- r t l- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PIN-RTL-D25 .
-
-not-shape:epo-not-PINDefence-D81 a sh:NodeShape ;
-    rdfs:label "P i n defence- d81" ;
-    rdfs:comment "What is the notice type here?" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PINDefence-D81 .
-
-not-shape:epo-not-PINOnly-D24 a sh:NodeShape ;
-    rdfs:label "P i n only- d24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PINOnly-D24 .
-
-not-shape:epo-not-PINOnly-D25 a sh:NodeShape ;
-    rdfs:label "P i n only- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PINOnly-D25 .
-
-not-shape:epo-not-PINOnlyNotice a sh:NodeShape ;
-    rdfs:label "P i n only notice" ;
-    rdfs:comment "PriorInformationNotice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PINOnlyNotice .
-
-not-shape:epo-not-PINProfile-D24 a sh:NodeShape ;
-    rdfs:label "P i n profile- d24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PINProfile-D24 .
-
-not-shape:epo-not-PINProfile-D25 a sh:NodeShape ;
-    rdfs:label "P i n profile- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PINProfile-D25 .
-
-not-shape:epo-not-PINProfile-D81 a sh:NodeShape ;
-    rdfs:label "P i n profile- d81" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PINProfile-D81 .
-
-not-shape:epo-not-PINProfileNotice a sh:NodeShape ;
-    rdfs:label "P i n profile notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PINProfileNotice .
-
-not-shape:epo-not-PINTimeLimitNotice a sh:NodeShape ;
-    rdfs:label "P i n time limit notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PINTimeLimitNotice .
-
-not-shape:epo-not-PMCNotice a sh:NodeShape ;
-    rdfs:label "P m c notice" ;
-    rdfs:comment "Preliminary Market Consultation This should be implemented in the future." ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PMCNotice .
-
-not-shape:epo-not-PlanningNotice a sh:NodeShape ;
-    rdfs:label "Planning notice" ;
-    rdfs:comment "Notice which sets out the Contracting Authority's purchasing intentions. It is used by Contracting Authorities to provide Suppliers with information about a Procurement Process.",
-        "When backwards compatibility to StandardForms is no longer required, switch to establishing the notice type constraint at this level." ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :PlanningNotice .
-
-not-shape:epo-not-QS-D25 a sh:NodeShape ;
-    rdfs:label "Q s- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :QS-D25 .
-
-not-shape:epo-not-QSNotice a sh:NodeShape ;
-    rdfs:label "Q s notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :QSNotice .
-
-not-shape:epo-not-QSNotice-D25 a sh:NodeShape ;
-    rdfs:label "Q s notice- d25" ;
-    rdfs:comment "Additional information: Social and other specific services – utilities" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :QSNotice-D25 .
-
-not-shape:epo-not-ResultNotice a sh:NodeShape ;
-    rdfs:label "Result notice" ;
-    rdfs:comment "An announcement of the award or non-award of a Contract by a Buyer. (WG approval 27/03/2019)" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :ResultNotice .
-
-not-shape:epo-not-SocialAndOtherSpecificServices-D23 a sh:NodeShape ;
-    rdfs:label "Social and other specific services- d23" ;
-    rdfs:comment "This can be PIN or Concession award notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :SocialAndOtherSpecificServices-D23 .
-
-not-shape:epo-not-SocialAndOtherSpecificServices-D24 a sh:NodeShape ;
-    rdfs:label "Social and other specific services- d24" ;
-    rdfs:comment "This can be PIN (maybe CFC), CN or CAN.",
-        "public contracts" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :SocialAndOtherSpecificServices-D24 .
-
-not-shape:epo-not-StandardFormsNotice a sh:NodeShape ;
-    rdfs:label "Standard forms notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :StandardFormsNotice .
-
-not-shape:epo-not-Subcontract-D81 a sh:NodeShape ;
-    rdfs:label "Subcontract- d81" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :Subcontract-D81 .
-
-not-shape:epo-not-SubcontractNotice a sh:NodeShape ;
-    rdfs:label "Subcontract notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :SubcontractNotice .
-
-not-shape:epo-not-VEAT-D23 a sh:NodeShape ;
-    rdfs:label "V e a t- d23" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :VEAT-D23 .
-
-not-shape:epo-not-VEAT-D24 a sh:NodeShape ;
-    rdfs:label "V e a t- d24" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :VEAT-D24 .
-
-not-shape:epo-not-VEAT-D25 a sh:NodeShape ;
-    rdfs:label "V e a t- d25" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :VEAT-D25 .
-
-not-shape:epo-not-VEAT-D81 a sh:NodeShape ;
-    rdfs:label "V e a t- d81" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :VEAT-D81 .
-
-not-shape:epo-not-VoluntaryEx-AnteTransparencyNotice a sh:NodeShape ;
-    rdfs:label "Voluntary ex- ante transparency notice" ;
-    rdfs:comment "A Notice informing of the intention to award a Contract without prior publication of a Contract Notice. Additional Information: For European Notices above the threshold \"A means of advertising the intention to award the Contract without opening it up to formal Competition. A Contracting Authority may decide that a Contract does not require prior publication through a Contract Notice in the O.J.E.U. A reason for this decision may be that the Contract meets the exceptional conditions described in Article 31 of Directive 2004/18/EC. In a recent V.E.A.T notice the reason was listed as “extreme urgency brought about by events unforeseeable by the Contracting Entity and in accordance with the strict conditions stated in the Directive” . \"Voluntary Ex-Ante Transparency Notice\" (VEAT) where a Contracting Authority deems that a Contract does not require prior publication of a Contract Notice in the European Journal (OJEU). This may apply, for example, if the Contract meets the exceptional conditions justifying direct award of contracts. <b>This definition is still to be worked on.</b>" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :VoluntaryEx-AnteTransparencyNotice .
-
-not-shape:epo-not-eFormsNotice a sh:NodeShape ;
-    rdfs:label "E forms notice" ;
-    rdfs:isDefinedBy not-shape:not-shape ;
-    sh:targetClass :eFormsNotice .
-
-not-shape:pin-buyer rdfs:comment "this is a buyer profile, not a PIN." .
-
-not-shape:pmc rdfs:comment "This value is NOT yet part of the notice-type controlled vocabulary." .
+    sh:property not-shape:epo-ful-ShipmentStage-epo-ful-hasDepartureShipmentInformation,
+        not-shape:epo-ful-ShipmentStage-epo-ful-isHazardousRisk,
+        not-shape:epo-ful-ShipmentStage-epo-ful-usesTransportMeans,
+        not-shape:epo-ful-ShipmentStage-epo-hasArrivalShipmentInformation,
+        not-shape:epo-ful-ShipmentStage-epo-specifiesCarrier ;
+    sh:targetClass :ShipmentStage .
+
+not-shape:epo-ful-TemperatureSpecification a sh:NodeShape ;
+    rdfs:label "Temperature specification" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-TemperatureSpecification-dct-description ;
+    sh:targetClass :TemperatureSpecification .
+
+not-shape:epo-ful-TransportEquipment a sh:NodeShape ;
+    rdfs:label "Transport equipment" ;
+    rdfs:comment "isReturnable attribute needs to be checked on whether it is useful or not." ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-TransportEquipment-dct-description,
+        not-shape:epo-ful-TransportEquipment-epo-ful-hasSizeType,
+        not-shape:epo-ful-TransportEquipment-epo-ful-hasTransportEquipmentSeal,
+        not-shape:epo-ful-TransportEquipment-epo-ful-hasTransportEquipmentType,
+        not-shape:epo-ful-TransportEquipment-epo-ful-isPowerIndicated,
+        not-shape:epo-ful-TransportEquipment-epo-ful-isRefrigerated,
+        not-shape:epo-ful-TransportEquipment-epo-ful-isReturnable ;
+    sh:targetClass :TransportEquipment .
+
+not-shape:epo-ful-TransportEquipmentSeal a sh:NodeShape ;
+    rdfs:label "Transport equipment seal" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:targetClass :TransportEquipmentSeal .
+
+not-shape:epo-ful-TransportHandlingUnit a sh:NodeShape ;
+    rdfs:label "Transport handling unit" ;
+    rdfs:comment "A description of Individual Handling Units in which the Line Items are packed." ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-TransportHandlingUnit-epo-ful-hasHandlingInstruction,
+        not-shape:epo-ful-TransportHandlingUnit-epo-ful-hasHandlingInstructionCode,
+        not-shape:epo-ful-TransportHandlingUnit-epo-ful-hasShippingMark,
+        not-shape:epo-ful-TransportHandlingUnit-epo-ful-transportsItemFrom,
+        not-shape:epo-ful-TransportHandlingUnit-epo-ful-usesTransportEquipment ;
+    sh:targetClass :TransportHandlingUnit .
+
+not-shape:epo-ful-TransportMeans a sh:NodeShape ;
+    rdfs:label "Transport means" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:property not-shape:epo-ful-TransportMeans-epo-ful-hasTransportMeansType,
+        not-shape:epo-ful-TransportMeans-epo-ful-hasTransportMode,
+        not-shape:epo-ful-TransportMeans-epo-hasDriverPerson ;
+    sh:targetClass :TransportMeans .
+
+not-shape:epo-ful-TransportMeansOperator a sh:NodeShape ;
+    rdfs:label "Transport means operator" ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:targetClass :TransportMeansOperator .
+
+not-shape:epo-ful-AbstractContainer-epo-ful-hasTemperatureSpecification a sh:PropertyShape ;
+    sh:class :TemperatureSpecification ;
+    sh:maxCount 1 ;
+    sh:name "Has temperature specification" ;
+    sh:path :hasTemperatureSpecification ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasTemperatureSpecification> ?that . ?that <http://data.europa.eu/a4g/ontology#hasTemperatureSpecification> ?this .}" ] .
+
+not-shape:epo-ful-AbstractContainer-epo-ful-isHazardousRisk a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Is hazardous risk" ;
+    sh:path :isHazardousRisk .
+
+not-shape:epo-ful-AbstractContainer-epo-ful-isReturnableMaterial a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Is returnable material" ;
+    sh:path :isReturnableMaterial .
+
+not-shape:epo-ful-Consignment-epo-ful-containsTransportHandlingUnit a sh:PropertyShape ;
+    sh:class :TransportHandlingUnit ;
+    sh:minCount 1 ;
+    sh:name "Contains transport handling unit" ;
+    sh:path :containsTransportHandlingUnit ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#containsTransportHandlingUnit> ?that . ?that <http://data.europa.eu/a4g/ontology#containsTransportHandlingUnit> ?this .}" ] .
+
+not-shape:epo-ful-Consignment-epo-ful-hasCarrierServiceInstruction a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:name "Has carrier service instruction" ;
+    sh:path :hasCarrierServiceInstruction .
+
+not-shape:epo-ful-Consignment-epo-ful-hasDeliveryInstruction a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:name "Has delivery instruction" ;
+    sh:path :hasDeliveryInstruction .
+
+not-shape:epo-ful-Consignment-epo-ful-hasHandlingInstruction a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:name "Has handling instruction" ;
+    sh:path :hasHandlingInstruction .
+
+not-shape:epo-ful-Consignment-epo-ful-hasHandlingInstructionCode a sh:PropertyShape ;
+    sh:class at-voc-new:handling-instruction ;
+    sh:maxCount 1 ;
+    sh:name "Has handling instruction code" ;
+    sh:path :hasHandlingInstructionCode .
+
+not-shape:epo-ful-Consignment-epo-ful-hasMainCarriageShipmentStage a sh:PropertyShape ;
+    sh:class :ShipmentStage ;
+    sh:maxCount 1 ;
+    sh:name "Has main carriage shipment stage" ;
+    sh:path :hasMainCarriageShipmentStage ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasMainCarriageShipmentStage> ?that . ?that <http://data.europa.eu/a4g/ontology#hasMainCarriageShipmentStage> ?this .}" ] .
+
+not-shape:epo-ful-Consignment-epo-ful-hasOnCarriageShipmentStage a sh:PropertyShape ;
+    sh:class :ShipmentStage ;
+    sh:name "Has on carriage shipment stage" ;
+    sh:path :hasOnCarriageShipmentStage ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasOnCarriageShipmentStage> ?that . ?that <http://data.europa.eu/a4g/ontology#hasOnCarriageShipmentStage> ?this .}" ] .
+
+not-shape:epo-ful-Consignment-epo-ful-hasPreCarriageShipmentStage a sh:PropertyShape ;
+    sh:class :ShipmentStage ;
+    sh:name "Has pre carriage shipment stage" ;
+    sh:path :hasPreCarriageShipmentStage ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasPreCarriageShipmentStage> ?that . ?that <http://data.europa.eu/a4g/ontology#hasPreCarriageShipmentStage> ?this .}" ] .
+
+not-shape:epo-ful-Consignment-epo-ful-hasRequestedPickUpInformation a sh:PropertyShape ;
+    sh:class :ShipmentInformation ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Has requested pick up information" ;
+    sh:path :hasRequestedPickUpInformation ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasRequestedPickUpInformation> ?that . ?that <http://data.europa.eu/a4g/ontology#hasRequestedPickUpInformation> ?this .}" ] .
+
+not-shape:epo-ful-Consignment-epo-ful-hasSpecialInstruction a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:name "Has special instruction" ;
+    sh:path :hasSpecialInstruction .
+
+not-shape:epo-ful-Consignment-epo-ful-hasSpecialServiceInstruction a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:name "Has special service instruction" ;
+    sh:path :hasSpecialServiceInstruction .
+
+not-shape:epo-ful-Consignment-epo-ful-hasVehicleDescription a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:maxCount 1 ;
+    sh:name "Has vehicle description" ;
+    sh:path :hasVehicleDescription .
+
+not-shape:epo-ful-Consignment-epo-ful-isHazardousRisk a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Is hazardous risk" ;
+    sh:path :isHazardousRisk .
+
+not-shape:epo-ful-Consignment-epo-specifiesFreightForwarder a sh:PropertyShape ;
+    sh:class :FreightForwarder ;
+    sh:name "Specifies freight forwarder" ;
+    sh:path :specifiesFreightForwarder ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#specifiesFreightForwarder> ?that . ?that <http://data.europa.eu/a4g/ontology#specifiesFreightForwarder> ?this .}" ] .
+
+not-shape:epo-ful-Consignment-epo-specifiesNotifier a sh:PropertyShape ;
+    sh:class :Notifier ;
+    sh:name "Specifies notifier" ;
+    sh:path :specifiesNotifier ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#specifiesNotifier> ?that . ?that <http://data.europa.eu/a4g/ontology#specifiesNotifier> ?this .}" ] .
+
+not-shape:epo-ful-DespatchAdvice-epo-ful-comprisesDespatchLine a sh:PropertyShape ;
+    sh:class :DespatchLine ;
+    sh:minCount 1 ;
+    sh:name "Comprises despatch line" ;
+    sh:path :comprisesDespatchLine ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#comprisesDespatchLine> ?that . ?that <http://data.europa.eu/a4g/ontology#comprisesDespatchLine> ?this .}" ] .
+
+not-shape:epo-ful-DespatchAdvice-epo-ful-hasDespatchAdviceType a sh:PropertyShape ;
+    sh:class at-voc-new:despatch-advice-type ;
+    sh:description "https://test-docs.peppol.eu/logistics/transport-execution/codelist/DespatchAdviceTypeCode/" ;
+    sh:maxCount 1 ;
+    sh:name "Has despatch advice type" ;
+    sh:path :hasDespatchAdviceType .
+
+not-shape:epo-ful-DespatchAdvice-epo-ful-refersToConsignment a sh:PropertyShape ;
+    sh:class :Consignment ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Refers to consignment" ;
+    sh:path :refersToConsignment ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#refersToConsignment> ?that . ?that <http://data.europa.eu/a4g/ontology#refersToConsignment> ?this .}" ] .
+
+not-shape:epo-ful-DespatchAdvice-epo-ful-refersToShipmentAgreement a sh:PropertyShape ;
+    sh:class :ShipmentAgreement ;
+    sh:maxCount 1 ;
+    sh:name "Refers to shipment agreement" ;
+    sh:path :refersToShipmentAgreement ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#refersToShipmentAgreement> ?that . ?that <http://data.europa.eu/a4g/ontology#refersToShipmentAgreement> ?this .}" ] .
+
+not-shape:epo-ful-DespatchAdvice-epo-ful-specifiesDespatcher a sh:PropertyShape ;
+    sh:class :Despatcher ;
+    sh:minCount 1 ;
+    sh:name "Specifies despatcher" ;
+    sh:path :specifiesDespatcher ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#specifiesDespatcher> ?that . ?that <http://data.europa.eu/a4g/ontology#specifiesDespatcher> ?this .}" ] .
+
+not-shape:epo-ful-DespatchAdvice-epo-ful-specifiesShipment a sh:PropertyShape ;
+    sh:class :ShipmentInformation ;
+    sh:maxCount 1 ;
+    sh:name "Specifies shipment" ;
+    sh:path :specifiesShipment ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#specifiesShipment> ?that . ?that <http://data.europa.eu/a4g/ontology#specifiesShipment> ?this .}" ] .
+
+not-shape:epo-ful-DespatchAdvice-epo-ful-specifiesTransportHandlingUnits a sh:PropertyShape ;
+    sh:class :TransportHandlingUnit ;
+    sh:name "Specifies transport handling units" ;
+    sh:path :specifiesTransportHandlingUnits ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#specifiesTransportHandlingUnits> ?that . ?that <http://data.europa.eu/a4g/ontology#specifiesTransportHandlingUnits> ?this .}" ] .
+
+not-shape:epo-ful-DespatchLine-epo-ful-hasOutstandingQuantityReason a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:maxCount 1 ;
+    sh:name "Has outstanding quantity reason" ;
+    sh:path :hasOutstandingQuantityReason .
+
+not-shape:epo-ful-GoodsItem-epo-ful-refersToDespatchLine a sh:PropertyShape ;
+    sh:class :DespatchLine ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Refers to despatch line" ;
+    sh:path :refersToDespatchLine ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#refersToDespatchLine> ?that . ?that <http://data.europa.eu/a4g/ontology#refersToDespatchLine> ?this .}" ] .
+
+not-shape:epo-ful-Package-epo-ful-containsGoodsItem a sh:PropertyShape ;
+    sh:class :GoodsItem ;
+    sh:minCount 1 ;
+    sh:name "Contains goods item" ;
+    sh:path :containsGoodsItem ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#containsGoodsItem> ?that . ?that <http://data.europa.eu/a4g/ontology#containsGoodsItem> ?this .}" ] .
+
+not-shape:epo-ful-Package-epo-ful-containsPackage a sh:PropertyShape ;
+    sh:class :Package ;
+    sh:name "Contains package" ;
+    sh:path :containsPackage ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#containsPackage> ?that . ?that <http://data.europa.eu/a4g/ontology#containsPackage> ?this .}" ] .
+
+not-shape:epo-ful-Package-epo-ful-hasPackagingType a sh:PropertyShape ;
+    sh:class at-voc-new:packaging-type ;
+    sh:maxCount 1 ;
+    sh:name "Has packaging type" ;
+    sh:path :hasPackagingType .
+
+not-shape:epo-ful-Package-epo-ful-hasPackagingTypeDescription a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:maxCount 1 ;
+    sh:name "Has packaging type description" ;
+    sh:path :hasPackagingTypeDescription .
+
+not-shape:epo-ful-ShipmentInformation-dct-description a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
+    sh:name "Description" ;
+    sh:path dcterms:description .
+
+not-shape:epo-ful-ShipmentInformation-epo-ful-despatchDate a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:name "Despatch date" ;
+    sh:path :despatchDate .
+
+not-shape:epo-ful-ShipmentInformation-epo-ful-isSpecificToDespatchLine a sh:PropertyShape ;
+    sh:class :DespatchLine ;
+    sh:maxCount 1 ;
+    sh:name "Is specific to despatch line" ;
+    sh:path :isSpecificToDespatchLine ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#isSpecificToDespatchLine> ?that . ?that <http://data.europa.eu/a4g/ontology#isSpecificToDespatchLine> ?this .}" ] .
+
+not-shape:epo-ful-ShipmentStage-epo-ful-hasDepartureShipmentInformation a sh:PropertyShape ;
+    sh:class :ShipmentInformation ;
+    sh:name "Has departure shipment information" ;
+    sh:path :hasDepartureShipmentInformation ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasDepartureShipmentInformation> ?that . ?that <http://data.europa.eu/a4g/ontology#hasDepartureShipmentInformation> ?this .}" ] .
+
+not-shape:epo-ful-ShipmentStage-epo-ful-isHazardousRisk a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Is hazardous risk" ;
+    sh:path :isHazardousRisk .
+
+not-shape:epo-ful-ShipmentStage-epo-ful-usesTransportMeans a sh:PropertyShape ;
+    sh:class :TransportMeans ;
+    sh:minCount 1 ;
+    sh:name "Uses transport means" ;
+    sh:path :usesTransportMeans ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#usesTransportMeans> ?that . ?that <http://data.europa.eu/a4g/ontology#usesTransportMeans> ?this .}" ] .
+
+not-shape:epo-ful-ShipmentStage-epo-hasArrivalShipmentInformation a sh:PropertyShape ;
+    sh:class :ShipmentInformation ;
+    sh:name "Has arrival shipment information" ;
+    sh:path :hasArrivalShipmentInformation ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasArrivalShipmentInformation> ?that . ?that <http://data.europa.eu/a4g/ontology#hasArrivalShipmentInformation> ?this .}" ] .
+
+not-shape:epo-ful-ShipmentStage-epo-specifiesCarrier a sh:PropertyShape ;
+    sh:class :Carrier ;
+    sh:maxCount 1 ;
+    sh:name "Specifies carrier" ;
+    sh:path :specifiesCarrier ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#specifiesCarrier> ?that . ?that <http://data.europa.eu/a4g/ontology#specifiesCarrier> ?this .}" ] .
+
+not-shape:epo-ful-TemperatureSpecification-dct-description a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
+    sh:maxCount 1 ;
+    sh:name "Description" ;
+    sh:path dcterms:description .
+
+not-shape:epo-ful-TransportEquipment-dct-description a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:description "An account of the resource. Additional Information: Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource. WG Approval 30/05/2023" ;
+    sh:name "Description" ;
+    sh:path dcterms:description .
+
+not-shape:epo-ful-TransportEquipment-epo-ful-hasSizeType a sh:PropertyShape ;
+    sh:class at-voc-new:size-type ;
+    sh:name "Has size type" ;
+    sh:path :hasSizeType .
+
+not-shape:epo-ful-TransportEquipment-epo-ful-hasTransportEquipmentSeal a sh:PropertyShape ;
+    sh:class :TransportEquipmentSeal ;
+    sh:name "Has transport equipment seal" ;
+    sh:path :hasTransportEquipmentSeal ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasTransportEquipmentSeal> ?that . ?that <http://data.europa.eu/a4g/ontology#hasTransportEquipmentSeal> ?this .}" ] .
+
+not-shape:epo-ful-TransportEquipment-epo-ful-hasTransportEquipmentType a sh:PropertyShape ;
+    sh:class at-voc-new:transport-equipment-type ;
+    sh:name "Has transport equipment type" ;
+    sh:path :hasTransportEquipmentType .
+
+not-shape:epo-ful-TransportEquipment-epo-ful-isPowerIndicated a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Is power indicated" ;
+    sh:path :isPowerIndicated .
+
+not-shape:epo-ful-TransportEquipment-epo-ful-isRefrigerated a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Is refrigerated" ;
+    sh:path :isRefrigerated .
+
+not-shape:epo-ful-TransportEquipment-epo-ful-isReturnable a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype xsd:boolean ;
+    sh:maxCount 1 ;
+    sh:name "Is returnable" ;
+    sh:path :isReturnable .
+
+not-shape:epo-ful-TransportHandlingUnit-epo-ful-hasHandlingInstruction a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:name "Has handling instruction" ;
+    sh:path :hasHandlingInstruction .
+
+not-shape:epo-ful-TransportHandlingUnit-epo-ful-hasHandlingInstructionCode a sh:PropertyShape ;
+    sh:class at-voc-new:handling-instruction ;
+    sh:maxCount 1 ;
+    sh:name "Has handling instruction code" ;
+    sh:path :hasHandlingInstructionCode .
+
+not-shape:epo-ful-TransportHandlingUnit-epo-ful-hasShippingMark a sh:PropertyShape ;
+    rdfs:isDefinedBy not-shape:not-shape ;
+    sh:datatype rdf:PlainLiteral ;
+    sh:name "Has shipping mark" ;
+    sh:path :hasShippingMark .
+
+not-shape:epo-ful-TransportHandlingUnit-epo-ful-transportsItemFrom a sh:PropertyShape ;
+    sh:class :DespatchLine ;
+    sh:minCount 1 ;
+    sh:name "Transports item from" ;
+    sh:path :transportsItemFrom ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#transportsItemFrom> ?that . ?that <http://data.europa.eu/a4g/ontology#transportsItemFrom> ?this .}" ] .
+
+not-shape:epo-ful-TransportHandlingUnit-epo-ful-usesTransportEquipment a sh:PropertyShape ;
+    sh:class :TransportEquipment ;
+    sh:name "Uses transport equipment" ;
+    sh:path :usesTransportEquipment ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#usesTransportEquipment> ?that . ?that <http://data.europa.eu/a4g/ontology#usesTransportEquipment> ?this .}" ] .
+
+not-shape:epo-ful-TransportMeans-epo-ful-hasTransportMeansType a sh:PropertyShape ;
+    sh:class at-voc-new:transport-means-type ;
+    sh:maxCount 1 ;
+    sh:name "Has transport means type" ;
+    sh:path :hasTransportMeansType .
+
+not-shape:epo-ful-TransportMeans-epo-ful-hasTransportMode a sh:PropertyShape ;
+    sh:class at-voc-new:transport-mode ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Has transport mode" ;
+    sh:path :hasTransportMode .
+
+not-shape:epo-ful-TransportMeans-epo-hasDriverPerson a sh:PropertyShape ;
+    sh:class :TransportMeansOperator ;
+    sh:minCount 1 ;
+    sh:name "Has driver person" ;
+    sh:path :hasDriverPerson ;
+    sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://data.europa.eu/a4g/ontology#hasDriverPerson> ?that . ?that <http://data.europa.eu/a4g/ontology#hasDriverPerson> ?this .}" ] .
 
 not-shape:not-shape a owl:Ontology ;
     rdfs:label "eProcurement Ontology Ordering - core shapes"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The eProcurement Ontology Notice core shapes provides the generic datashape specifications for the eProcurement Ontology Notice core."@en ;
-    dcterms:issued "2023-11-09"^^xsd:date ;
+    dcterms:issued "2023-12-12"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "eProcurement Ontology Notice - core shapes"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from demo_ontology_module_CM.xml on 2023-11-09" ;
+    rdfs:comment "This version is automatically generated from demo_ontology_module_CM.xml on 2023-12-12" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
         <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
