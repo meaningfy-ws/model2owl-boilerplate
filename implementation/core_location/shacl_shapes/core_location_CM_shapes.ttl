@@ -256,15 +256,16 @@ clv-shape:rdfs-Resource-locn-location a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/locn#location> ?that . ?that <http://www.w3.org/ns/locn#location> ?this .}" ] .
 
 clv-shape:clv-shape a owl:Ontology ;
+    rdfs:label "Core Location Vocabulary - core shapes"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The Core Location Vocabulary core shapes provides the generic datashape specifications for the Core Location Vocabulary core."@en ;
-    dcterms:issued "2023-11-02"^^xsd:date ;
+    dcterms:issued "2024-02-09"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "Core Location Vocabulary - core shapes"@en ;
     vann:preferredNamespacePrefix "cv" ;
     vann:preferredNamespaceUri "http://data.europa.eu/m8g/ontology#" ;
-    rdfs:comment "This version is automatically generated from core_location_CM.xml on 2023-11-02" ;
+    rdfs:comment "This version is automatically generated from core_location_CM.xml on 2024-02-09" ;
     rdfs:seeAlso <https://semiceu.github.io/CCCEV/releases/2.00/> ;
     owl:imports cccev:,
         cccev:clv,
