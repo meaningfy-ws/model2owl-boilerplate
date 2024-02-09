@@ -1,7 +1,5 @@
 @prefix : <http://data.europa.eu/a4g/ontology#> .
 @prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix cc: <http://creativecommons.org/ns#> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -16,6 +14,7 @@
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :ResultNotice,
         :StandardFormsNotice ;
+    skos:editorialNote "What is the notice type here?"@en ;
     skos:prefLabel "C a n defence- d81"@en .
 
 :CANSocial-D25 a owl:Class ;
@@ -28,9 +27,7 @@
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :CANSocialNotice,
         :StandardFormsNotice ;
-    skos:definition """Additional information:
-Social and other specific services – utilities
-"""@en ;
+    skos:definition "Additional information: Social and other specific services – utilities"@en ;
     skos:prefLabel "C a n social notice- d25"@en .
 
 :CANStandard-D24 a owl:Class ;
@@ -42,6 +39,7 @@ Social and other specific services – utilities
 :CNDefence-D81 a owl:Class ;
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :StandardFormsNotice ;
+    skos:editorialNote "What is the notice type here?"@en ;
     skos:prefLabel "C n defence- d81"@en .
 
 :CNSocial-D25 a owl:Class ;
@@ -54,9 +52,7 @@ Social and other specific services – utilities
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :CNSocialNotice,
         :StandardFormsNotice ;
-    skos:definition """Additional information:
-Social and other specific services – utilities
-"""@en ;
+    skos:definition "Additional information: Social and other specific services – utilities"@en ;
     skos:prefLabel "C n social notice- d25"@en .
 
 :CNStandard-D24 a owl:Class ;
@@ -67,17 +63,21 @@ Social and other specific services – utilities
 
 :CompletionNotice a owl:Class ;
     rdfs:isDefinedBy :not ;
+    rdfs:subClassOf :Notice ;
     skos:definition "An announcement of the end of a Procurement by a Buyer."@en ;
+    skos:editorialNote "What is the Form type here? There is no form type, because this is a new notice type. What is the Notice type here? This will be added to the codelist."@en ;
     skos:prefLabel "Completion notice"@en .
 
 :ConcessionAwardNotice-D23 a owl:Class ;
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :StandardFormsNotice ;
+    skos:editorialNote "where does this belong to?"@en ;
     skos:prefLabel "Concession award notice- d23"@en .
 
 :ConcessionNotice-D23 a owl:Class ;
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :StandardFormsNotice ;
+    skos:editorialNote "where does this belong to?"@en ;
     skos:prefLabel "Concession notice- d23"@en .
 
 :DesignContest-D24 a owl:Class ;
@@ -372,9 +372,7 @@ Social and other specific services – utilities
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :StandardFormsNotice ;
-    skos:definition """Additional information:
-Social and other specific services – utilities
-"""@en ;
+    skos:definition "Additional information: Social and other specific services – utilities"@en ;
     skos:prefLabel "P i n- c f c social notice- d25"@en .
 
 :PIN-CFCStandard-D24 a owl:Class ;
@@ -398,6 +396,7 @@ Social and other specific services – utilities
 :PINDefence-D81 a owl:Class ;
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :PlanningNotice ;
+    skos:editorialNote "What is the notice type here?"@en ;
     skos:prefLabel "P i n defence- d81"@en .
 
 :PINOnly-D24 a owl:Class ;
@@ -433,6 +432,7 @@ Social and other specific services – utilities
 :PMCNotice a owl:Class ;
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :PlanningNotice ;
+    skos:editorialNote "Preliminary Market Consultation This should be implemented in the future."@en ;
     skos:prefLabel "P m c notice"@en .
 
 :QS-D25 a owl:Class ;
@@ -445,20 +445,20 @@ Social and other specific services – utilities
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :QSNotice,
         :StandardFormsNotice ;
-    skos:definition """Additional information:
-Social and other specific services – utilities
-"""@en ;
+    skos:definition "Additional information: Social and other specific services – utilities"@en ;
     skos:prefLabel "Q s notice- d25"@en .
 
 :SocialAndOtherSpecificServices-D23 a owl:Class ;
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :StandardFormsNotice ;
+    skos:editorialNote "This can be PIN or Concession award notice"@en ;
     skos:prefLabel "Social and other specific services- d23"@en .
 
 :SocialAndOtherSpecificServices-D24 a owl:Class ;
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:definition "public contracts"@en ;
+    skos:editorialNote "This can be PIN (maybe CFC), CN or CAN."@en ;
     skos:prefLabel "Social and other specific services- d24"@en .
 
 :StandardForm a skos:ConceptScheme ;
@@ -521,10 +521,7 @@ Social and other specific services – utilities
 
 :announcesNonPublishedElement a owl:ObjectProperty ;
     rdfs:isDefinedBy :not ;
-    skos:definition """Relation indicating which parts of a document are not published. 
-
-Additional Information:
-For example, elements in the Contract Award Notice that should be published at a later date. (epo-not:ResultNotice -> epo:PublicationProvision (+epo:announcesNonPublishedElement)) """@en ;
+    skos:definition "Relation indicating which parts of a document are not published. Additional Information: For example, elements in the Contract Award Notice that should be published at a later date. (epo-not:ResultNotice -> epo:PublicationProvision (+epo:announcesNonPublishedElement))"@en ;
     skos:prefLabel "Announces non published element"@en .
 
 :announcesNoticeAwardInformation a owl:ObjectProperty ;
@@ -546,6 +543,7 @@ For example, elements in the Contract Award Notice that should be published at a
 
 :announcesRole a owl:ObjectProperty ;
     rdfs:isDefinedBy :not ;
+    skos:editorialNote "for ReviewBody"@en ;
     skos:prefLabel "Announces role"@en .
 
 :describesContractModification a owl:ObjectProperty ;
@@ -571,6 +569,10 @@ For example, elements in the Contract Award Notice that should be published at a
 :hasNoticeType a owl:ObjectProperty ;
     rdfs:isDefinedBy :not ;
     skos:prefLabel "Has notice type"@en .
+
+:pin-buyer skos:editorialNote "this is a buyer profile, not a PIN."@en .
+
+:pmc skos:editorialNote "This value is NOT yet part of the notice-type controlled vocabulary."@en .
 
 :refersToAwardDecision a owl:ObjectProperty ;
     rdfs:isDefinedBy :not ;
@@ -606,6 +608,7 @@ For example, elements in the Contract Award Notice that should be published at a
 
 :DirectAwardPrenotificationNotice a owl:Class ;
     rdfs:isDefinedBy :not ;
+    rdfs:subClassOf :Notice ;
     skos:definition "Notice which sets out the Buyer's purchasing intention to award a Contract without prior notification of Competition."@en ;
     skos:prefLabel "Direct award prenotification notice"@en .
 
@@ -645,9 +648,8 @@ For example, elements in the Contract Award Notice that should be published at a
 
 :ResultNotice a owl:Class ;
     rdfs:isDefinedBy :not ;
-    skos:definition """An announcement of the award or non-award of a Contract by a Buyer.
-
-(WG approval 27/03/2019)"""@en ;
+    rdfs:subClassOf :Notice ;
+    skos:definition "An announcement of the award or non-award of a Contract by a Buyer. (WG approval 27/03/2019)"@en ;
     skos:prefLabel "Result notice"@en .
 
 :CANSocialNotice a owl:Class ;
@@ -683,13 +685,16 @@ For example, elements in the Contract Award Notice that should be published at a
 
 :PlanningNotice a owl:Class ;
     rdfs:isDefinedBy :not ;
-    skos:definition """Notice which sets out the Contracting Authority's purchasing intentions. It is used by Contracting Authorities to provide Suppliers with information about a Procurement Process. 
-"""@en ;
+    rdfs:subClassOf :Notice ;
+    skos:definition "Notice which sets out the Contracting Authority's purchasing intentions. It is used by Contracting Authorities to provide Suppliers with information about a Procurement Process."@en ;
+    skos:editorialNote "When backwards compatibility to StandardForms is no longer required, switch to establishing the notice type constraint at this level."@en ;
     skos:prefLabel "Planning notice"@en .
 
 :ContractModificationNotice a owl:Class ;
     rdfs:isDefinedBy :not ;
+    rdfs:subClassOf :Notice ;
     skos:definition "An announcement of the Modification Of a Contract/Concession during its term by a Procuring Entity."@en ;
+    skos:editorialNote "should we move refersToOriginalNotice at this level or should we use refersToNotice relation from the Notice level?"@en ;
     skos:prefLabel "Contract modification notice"@en .
 
 :PINProfileNotice a owl:Class ;
@@ -699,26 +704,14 @@ For example, elements in the Contract Award Notice that should be published at a
 
 :CompetitionNotice a owl:Class ;
     rdfs:isDefinedBy :not ;
-    skos:definition """An announcement of the launch of a Procurement Procedure by a Procuring Entity.
-
-WG approval 18/05/2018
-"""@en ;
+    rdfs:subClassOf :Notice ;
+    skos:definition "An announcement of the launch of a Procurement Procedure by a Procuring Entity. WG approval 18/05/2018"@en ;
     skos:prefLabel "Competition notice"@en .
 
 :VoluntaryEx-AnteTransparencyNotice a owl:Class ;
     rdfs:isDefinedBy :not ;
     rdfs:subClassOf :DirectAwardPrenotificationNotice ;
-    skos:definition """A Notice informing of the intention to award  a Contract without prior publication of a Contract Notice.
-
-Additional Information:
-
-For European Notices above the threshold
-
-"A means of advertising the intention to award the Contract without opening it up to formal Competition. A Contracting Authority may decide that a Contract does not require prior publication through a Contract Notice in the O.J.E.U. A reason for this decision may be that the Contract meets the exceptional conditions described in Article 31 of Directive 2004/18/EC. In a recent V.E.A.T notice the reason was listed as “extreme urgency brought about by events unforeseeable by the Contracting Entity and in accordance with the strict conditions stated in the Directive” .
-"Voluntary Ex-Ante Transparency Notice" (VEAT) where a Contracting Authority deems that a Contract does not require prior publication of a Contract Notice in the European Journal (OJEU). This may apply, for example, if the Contract meets the exceptional conditions justifying direct award of contracts.
-
-<b>This definition is still to be worked on.</b>
-"""@en ;
+    skos:definition "A Notice informing of the intention to award a Contract without prior publication of a Contract Notice. Additional Information: For European Notices above the threshold \"A means of advertising the intention to award the Contract without opening it up to formal Competition. A Contracting Authority may decide that a Contract does not require prior publication through a Contract Notice in the O.J.E.U. A reason for this decision may be that the Contract meets the exceptional conditions described in Article 31 of Directive 2004/18/EC. In a recent V.E.A.T notice the reason was listed as “extreme urgency brought about by events unforeseeable by the Contracting Entity and in accordance with the strict conditions stated in the Directive” . \"Voluntary Ex-Ante Transparency Notice\" (VEAT) where a Contracting Authority deems that a Contract does not require prior publication of a Contract Notice in the European Journal (OJEU). This may apply, for example, if the Contract meets the exceptional conditions justifying direct award of contracts. <b>This definition is still to be worked on.</b>"@en ;
     skos:prefLabel "Voluntary ex- ante transparency notice"@en .
 
 :StandardFormsNotice a owl:Class ;
@@ -730,20 +723,18 @@ For European Notices above the threshold
     skos:prefLabel "E forms notice"@en .
 
 :not a owl:Ontology ;
-    cc:attributionName "European Union" ;
-    cc:attributionURL <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
-    dcterms:abstract "This artefact provides the ontology core specification." ;
-    dcterms:created ""^^xsd:date ;
-    dcterms:description "This module provides the definitions for the eProcurement ontology core.         Procurement data has been identified as data with a high-reuse potential.         Given the increasing importance of data standards for eProcurement, a number of initiatives         driven by the public sector, the industry and academia have been kick-started in recent years.         Some have grown organically, while others are the result of standardisation work.         The vocabularies and the semantics that they are introducing, the phases of public procurement that they are covering,         and the technologies that they are using all differ. These differences hamper data interoperability and thus its reuse by them or by the wider public.         This creates the need for a common data standard for publishing procurement data, hence allowing data         from different sources to be easily accessed and linked, and consequently reused."@en ;
-    dcterms:issued "2023-07-11"^^xsd:date ;
-    dcterms:license <http://creativecommons.org/licenses/by-sa/4.0> ;
-    dcterms:rights "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents         (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the         CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided         that appropriate credit is given and any changes are indicated." ;
-    dcterms:title "eProcurement Ontology - not"@en ;
-    bibo:status "Semantic Specification Realease" ;
-    vann:preferredNamespacePrefix "epo-not" ;
+    rdfs:label "eProcurement Ontology Ordering - core"@en ;
+    dcterms:created "2021-06-01"^^xsd:date ;
+    dcterms:description "The eProcurement Ontology Notice core describes the concepts and properties representing the European Public Procurement Notice domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
+    dcterms:issued "2023-11-09"^^xsd:date ;
+    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:title "eProcurement Ontology Notice - core"@en ;
+    vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
-        <https://github.com/eprocurementontology/eprocurementontology>,
+    rdfs:comment "This version is automatically generated from demo_ontology_module_CM.xml on 2023-11-09" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
+        <https://github.com/OP-TED/ePO/releases>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
     owl:imports cccev:,
@@ -760,8 +751,7 @@ For European Notices above the threshold
         foaf:,
         <https://data.europa.eu/m8g/> ;
     owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "3.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#not-3.1.0" ;
     owl:versionIRI :not-4.0.0 ;
-    owl:versionInfo "4.0.0" ;
-    skos:changeNote "This version is automatically generated from demo_ontology_module_CM.xml on 2023-07-11" .
+    owl:versionInfo "4.0.0" .
 

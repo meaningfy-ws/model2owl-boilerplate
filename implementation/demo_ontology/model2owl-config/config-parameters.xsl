@@ -94,18 +94,22 @@
     <!--                            METADATA SECTION                               -->
     <!-- _______________________________________________________________________   -->
     <!--    This section contains the variables used to build the ontology metadata-->
-    <xsl:variable name="moduleReference" select="'cat'"/>
+    <xsl:variable name="moduleReference" select="'core'"/>
+        <!--    rdfs:label -->
+    <xsl:variable name="ontologyLabelCore" select="'eProcurement Ontology Ordering - core'"/>
+    <xsl:variable name="ontologyLabelRestrictions" select="'eProcurement Ontology Ordering - core restrictions'"/>
+    <xsl:variable name="ontologyLabelShapes" select="'eProcurement Ontology Ordering - core shapes'"/>
     <!--    dct:title -->
-    <xsl:variable name="ontologyTitleCore" select="'eProcurement Ontology Catalogue - core'"/>
-    <xsl:variable name="ontologyTitleRestrictions" select="'eProcurement Ontology Catalogue - core restrictions'"/>
-    <xsl:variable name="ontologyTitleShapes" select="'eProcurement Ontology Catalogue - core shapes'"/>
+    <xsl:variable name="ontologyTitleCore" select="'eProcurement Ontology - core'"/>
+    <xsl:variable name="ontologyTitleRestrictions" select="'eProcurement Ontology - core restrictions'"/>
+    <xsl:variable name="ontologyTitleShapes" select="'eProcurement Ontology - core shapes'"/>
     <!--    dct:description-->
     <xsl:variable name="ontologyDescriptionCore"
-        select="'The eProcurement Ontology Catalogue core describes the concepts and properties representing the European Public Procurement Catalogue domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
+        select="'The eProcurement Ontology core describes the concepts and properties representing the European Public Procurement domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact.'"/>
     <xsl:variable name="ontologyDescriptionRestrictions"
-        select="'The eProcurement Ontology Catalogue core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology Catalogue core.'"/>
+        select="'The eProcurement Ontology core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology core.'"/>
     <xsl:variable name="ontologyDescriptionShapes"
-        select="'The eProcurement Ontology Catalogue core shapes provides the generic datashape specifications for the eProcurement Ontology Catalogue core.'"/>
+        select="'The eProcurement Ontology core shapes provides the generic datashape specifications for the eProcurement Ontology core.'"/>
     <!--    rdfs:seeAlso -->
     <xsl:variable name="seeAlsoResources"
         select="
