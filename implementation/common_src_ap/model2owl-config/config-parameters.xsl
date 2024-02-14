@@ -137,4 +137,14 @@
     <xsl:variable name="createdDate" select="'2021-06-01'"/>
     <!--    dct:publisher-->
     <xsl:variable name="publisher" select="'http://publications.europa.eu/resource/authority/corporate-body/PUBL'"/>
+
+            <!-- _______________________________________________________________________   -->
+    <!--                            RESPEC SECTION                               -->
+    <!-- _______________________________________________________________________   -->
+
+    <xsl:variable name="githubURL" select="'https://github.com/meaningfy-ws/eurovoc-pipelines'"/>
+    <xsl:variable name="respecDescription" select="$ontologyDescriptionCore"/>
+    <xsl:variable name="feedbackURL" select="fn:concat($githubURL, '/issues')"/>
+    <xsl:variable name="authors" select="('Author One', 'Author Two')"/>
+    <xsl:variable name="editors" select="('Editor One', 'Editor Two')"/>
 </xsl:stylesheet>
