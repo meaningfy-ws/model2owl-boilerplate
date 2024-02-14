@@ -6,7 +6,7 @@
     
 	
     <meta charset="utf-8" />
-    <title>eProcurement Ontology Catalogue - core</title>
+    <title>Currency AP</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
     // All config options at https://respec.org/docs/
@@ -69,10 +69,10 @@
     var respecConfig = {
       postProcess: [quickreference],
       publishDate: "2024-02-14",
-      shortName: "eProcurement Ontology Catalogue - core",
+      shortName: "Currency AP",
         editors: editors,
       authors: authors,
-        github: "https://github.com/meaningfy-ws/eurovoc-pipelines",
+        github: "https://github.com/meaningfy-ws/model2owl-boilerplate",
       xref: "web-platform",
       generatedSubtitle: "",
       additionalCopyrightHolders: ""
@@ -158,7 +158,32 @@
         The purpose of a currency Application Profile is to provide a structured knowledge model for concepts associated with currencies and their subunits.
 </section>
 
+<section>
+    <h2>Visual representation</h2>
+     <p>The graphical representation of the Application Profile is provided in
+    the form of an <a
+    href="https://en.wikipedia.org/wiki/Class_diagram"
+    target="_blank">UML Class diagram</a>
+    and is depicted in the figure below. The boxes represent classes while the
+    arrow connections represent properties establishing relations to other
+    classes. The attributes inside boxes represent properties providing either
+    literal data values or relation to other classes that omitted from the
+    diagram. Both, arrows and attributes, are labelled with the property names
+    prefixed with the namespace where they are defined.</p>
 
+    <p>The cardinality specifications on the connector (_ .. _) arrows and
+    next to the attributes, marked in square brackets ( [ ] ) represent
+    constraints on how the property may be employed on the class instances and
+    has a normative meaning. The first number means minimum cardinality
+    constraint and the second means maximum cardinality constraint. The
+    minimum cardinality constraint is zero (0 .. _ ) for optional properties
+    and one (1 .. _) for mandatory properties. The maximum cardinality
+    constraint is usually unspecified ( _ .. *) or limited to one (_ .. 1) and
+    has no normative value in this application profile. If the cardinality is
+    not specified then the implied meaning is exactly one (1..1).</p>
+
+    <img src="../xmi_conceptual_model/Images/currency%20AP.png"/>
+</section>
 
 
 <section id="specterminology">
