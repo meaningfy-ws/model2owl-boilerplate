@@ -143,7 +143,7 @@
     <!-- _______________________________________________________________________   -->
 
     <xsl:variable name="githubURL" select="'https://github.com/meaningfy-ws/eurovoc-pipelines'"/>
-    <xsl:variable name="respecDescription" select="$ontologyDescriptionCore"/>
+    <xsl:variable name="respecDescription" select="'The purpose of a currency Application Profile is to provide a structured knowledge model for concepts associated with currencies and their subunits.'"/>
     <xsl:variable name="feedbackURL" select="fn:concat($githubURL, '/issues')"/>
     <xsl:variable name="authors" select="('Author One', 'Author Two')"/>
     <xsl:variable name="editors" select="('Editor One', 'Editor Two')"/>

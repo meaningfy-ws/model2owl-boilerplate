@@ -143,7 +143,7 @@
     <!-- _______________________________________________________________________   -->
 
     <xsl:variable name="githubURL" select="'https://github.com/meaningfy-ws/eurovoc-pipelines'"/>
-    <xsl:variable name="respecDescription" select="$ontologyDescriptionCore"/>
+    <xsl:variable name="respecDescription" select="'Common AP is an Application Profile designed to includes common entities that can be used as a foundational framework for all other APs.'"/>
     <xsl:variable name="feedbackURL" select="fn:concat($githubURL, '/issues')"/>
     <xsl:variable name="authors" select="('Author One', 'Author Two')"/>
     <xsl:variable name="editors" select="('Editor One', 'Editor Two')"/>
