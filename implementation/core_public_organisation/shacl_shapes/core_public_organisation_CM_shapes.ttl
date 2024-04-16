@@ -15,8 +15,6 @@
 @prefix xhtml: <https://www.w3.org/1999/xhtml/vocab#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cpov-shape:at-voc-atu-type rdfs:comment "the URI in core voc is wrong; a dataset URI instead the conceptScheme URI." .
-
 cpov-shape:cccev-ReferenceFramework a sh:NodeShape ;
     rdfs:label "Reference framework" ;
     rdfs:comment "Legislation or official policy from which Requirements are derived." ;
@@ -141,7 +139,7 @@ cpov-shape:cpov-PublicOrganisation-org-changedBy a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#changedBy> ?that . ?that <http://www.w3.org/ns/org#changedBy> ?this .}" ] .
 
 cpov-shape:cpov-PublicOrganisation-org-classification a sh:PropertyShape ;
-    sh:class org:classification ;
+    sh:class at-voc:classification ;
     sh:description "The categorisation of the Public Organization." ;
     sh:name "Classification" ;
     sh:path org:classification .
@@ -168,7 +166,7 @@ cpov-shape:cpov-PublicOrganisation-org-memberOf a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#memberOf> ?that . ?that <http://www.w3.org/ns/org#memberOf> ?this .}" ] .
 
 cpov-shape:cpov-PublicOrganisation-org-purpose a sh:PropertyShape ;
-    sh:class org:purpose ;
+    sh:class at-voc:purpose ;
     sh:description "This property describes the reasons of existence of an Organization." ;
     sh:name "Purpose" ;
     sh:path org:purpose .
@@ -274,7 +272,7 @@ cpov-shape:org-OrganizationalUnit-org-unitOf a sh:PropertyShape ;
     sh:sparql [ sh:select "SELECT ?this ?that WHERE { ?this <http://www.w3.org/ns/org#unitOf> ?that . ?that <http://www.w3.org/ns/org#unitOf> ?this .}" ] .
 
 cpov-shape:time-TemporalEntity-cpov-frequency a sh:PropertyShape ;
-    sh:class cccev:frequency ;
+    sh:class at-voc:frequency ;
     sh:description "The recurrence of an instant or period." ;
     sh:name "Frequency" ;
     sh:path cccev:frequency .
