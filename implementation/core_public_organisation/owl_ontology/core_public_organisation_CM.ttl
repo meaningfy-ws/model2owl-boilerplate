@@ -29,7 +29,8 @@ cccev:contactPoint a owl:ObjectProperty ;
     skos:definition "The main contact information of the resource. (cpov:PublicOrganisation -> cv:ContactPoint (+cpv:contactPoint))"@en ;
     skos:prefLabel "Contact point"@en .
 
-cccev:frequency a owl:ObjectProperty ;
+cccev:frequency a owl:ObjectProperty,
+        skos:ConceptScheme ;
     rdfs:isDefinedBy cccev:cpov ;
     skos:definition "The recurrence of an instant or period. (time:TemporalEntity -> cpov:frequency (+cpov:frequency))"@en ;
     skos:prefLabel "Frequency"@en .
