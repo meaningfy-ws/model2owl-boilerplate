@@ -22,14 +22,14 @@ cccev:cpov-restriction a owl:Ontology ;
     rdfs:label "Core Public Organisation Vocabulary - core restrictions"@en ;
     dcterms:created "2021-06-01"^^xsd:date ;
     dcterms:description "The Core Public Organisation Vocabulary core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the Core Public Organisation Vocabulary core."@en ;
-    dcterms:issued "2024-02-09"^^xsd:date ;
+    dcterms:issued "2024-04-16"^^xsd:date ;
     dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "Core Public Organisation Vocabulary - core restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/m8g/ontology#" ;
     rdfs:comment """This version is automatically generated from core_public_organisation_CM.xml on 
-                2024-02-09""" ;
+                2024-04-16""" ;
     rdfs:seeAlso <https://semiceu.github.io/CPOV/releases/2.1.0/> ;
     owl:imports cccev:,
         cccev:cpov,
@@ -50,6 +50,9 @@ cccev:cpov-restriction a owl:Ontology ;
     owl:priorVersion "http://data.europa.eu/m8g/cpov-restriction-3.1.0" ;
     owl:versionIRI cccev:cpov-restriction-4.0.0 ;
     owl:versionInfo "4.0.0" .
+
+cccev:frequency rdfs:domain time:TemporalEntity ;
+    rdfs:range skos:Concept .
 
 cccev:hasFormalFramework rdfs:domain org:ChangeEvent ;
     rdfs:range cccev:ReferenceFramework ;
@@ -90,6 +93,9 @@ org:changedBy rdfs:domain cccev:PublicOrganisation ;
     rdfs:range org:ChangeEvent ;
     owl:inverseOf org:originalOrganization .
 
+org:classification rdfs:domain cccev:PublicOrganisation ;
+    rdfs:range skos:Concept .
+
 org:hasMember a owl:AsymmetricProperty ;
     rdfs:domain cccev:PublicOrganisation ;
     rdfs:range cccev:PublicOrganisation ;
@@ -98,6 +104,9 @@ org:hasMember a owl:AsymmetricProperty ;
 org:hasUnit rdfs:domain cccev:PublicOrganisation ;
     rdfs:range org:OrganizationalUnit ;
     owl:inverseOf org:unitOf .
+
+org:purpose rdfs:domain cccev:PublicOrganisation ;
+    rdfs:range skos:Concept .
 
 org:resultedFrom rdfs:domain cccev:PublicOrganisation ;
     rdfs:range org:ChangeEvent ;
@@ -119,30 +128,8 @@ xhtml:next a owl:AsymmetricProperty ;
 prov1:startedAtTime rdfs:domain org:ChangeEvent ;
     rdfs:range xsd:dateTime .
 
-cccev:frequency a owl:Class ;
-    rdfs:domain time:TemporalEntity ;
-    rdfs:range skos:Concept ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue cccev:frequency ;
-            owl:onProperty skos:inScheme ] .
-
 cccev:implements rdfs:domain cccev:ReferenceFramework ;
     rdfs:range org:ChangeEvent .
-
-at-voc:atu-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:atu-type ;
-            owl:onProperty skos:inScheme ] .
-
-org:classification a owl:Class ;
-    rdfs:domain cccev:PublicOrganisation ;
-    rdfs:range skos:Concept ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue org:classification ;
-            owl:onProperty skos:inScheme ] .
 
 org:hasSubOrganization rdfs:domain org:Organization ;
     rdfs:range org:Organization .
@@ -152,14 +139,6 @@ org:memberOf rdfs:domain cccev:PublicOrganisation ;
 
 org:originalOrganization rdfs:domain org:ChangeEvent ;
     rdfs:range cccev:PublicOrganisation .
-
-org:purpose a owl:Class ;
-    rdfs:domain cccev:PublicOrganisation ;
-    rdfs:range skos:Concept ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue org:purpose ;
-            owl:onProperty skos:inScheme ] .
 
 org:resultingOrganization rdfs:domain org:ChangeEvent ;
     rdfs:range cccev:PublicOrganisation .
