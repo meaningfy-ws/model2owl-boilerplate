@@ -1,8 +1,8 @@
 @prefix : <http://data.europa.eu/a4g/ontology#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
-@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
 @prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix org: <http://www.w3.org/ns/org#> .
@@ -15,26 +15,13 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:agreedByBuyer rdfs:domain :ShipmentAgreement ;
-    rdfs:range :Buyer .
-
 :announcesAwardDecision rdfs:domain [ a owl:Class ;
             owl:unionOf ( :ResultNotice :DirectAwardPrenotificationNotice ) ] ;
     rdfs:range :AwardDecision .
 
-:announcesCompletionOfContract rdfs:domain :CompletionNotice ;
-    rdfs:range :Contract .
-
 :announcesContract rdfs:domain [ a owl:Class ;
             owl:unionOf ( :DirectAwardPrenotificationNotice :ResultNotice ) ] ;
     rdfs:range :Contract .
-
-:announcesExclusionGround rdfs:domain :ESPDRequest ;
-    rdfs:range :ExclusionGround .
-
-:announcesLot rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :DirectAwardPrenotificationNotice :CompetitionNotice ) ] ;
-    rdfs:range :Lot .
 
 :announcesLotGroup rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompetitionNotice :DirectAwardPrenotificationNotice ) ] ;
@@ -44,41 +31,11 @@
             owl:unionOf ( :DirectAwardPrenotificationNotice :ResultNotice ) ] ;
     rdfs:range :LotGroupAwardInformation .
 
-:announcesNonPublishedElement rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :ResultNotice :DirectAwardPrenotificationNotice ) ] ;
-    rdfs:range :PublicationProvision .
-
-:announcesNoticeAwardInformation rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :DirectAwardPrenotificationNotice :ResultNotice ) ] ;
-    rdfs:range :NoticeAwardInformation .
-
 :announcesPlannedProcurementPart rdfs:domain :PlanningNotice ;
     rdfs:range :PlannedProcurementPart .
 
-:announcesProcedure rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :DirectAwardPrenotificationNotice :CompetitionNotice ) ] ;
-    rdfs:range :Procedure .
-
-:announcesReviewObject rdfs:domain :CompletionNotice ;
-    rdfs:range :ReviewObject .
-
-:announcesRole rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :DirectAwardPrenotificationNotice :ContractModificationNotice :PlanningNotice :CompetitionNotice :CompletionNotice ) ],
-        :ResultNotice ;
-    rdfs:range :AgentInRole .
-
-:announcesSelectionCriteria rdfs:domain :ESPDRequest ;
-    rdfs:range :SelectionCriterion .
-
-:answersAwardCriteria rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :FinancialOffer :TechnicalOffer ) ] ;
-    rdfs:range :AwardCriterion .
-
-:answersExclusionGround rdfs:domain :ESPDResponse ;
-    rdfs:range :ExclusionGround .
-
-:answersSelectionCriteria rdfs:domain :ESPDResponse ;
-    rdfs:range :SelectionCriterion .
+:answersQuestion rdfs:domain :Response ;
+    rdfs:range cccev:InformationRequirement .
 
 :associatedWith a owl:AsymmetricProperty ;
     rdfs:domain :Document ;
@@ -90,25 +47,19 @@
 :bindsContractor rdfs:domain :Contract ;
     rdfs:range :Contractor .
 
-:comprisesLotAwardDecision rdfs:domain :AwardDecision ;
-    rdfs:range :LotAwardDecision .
+:canProvideNonDiscriminatoryEvidence rdfs:domain org:Organization ;
+    rdfs:range cccev:Evidence .
 
-:comprisesMiniCompetitionAwardDecision rdfs:domain :AwardDecision ;
-    rdfs:range :MiniCompetitionAwardDecision .
+:canProvideTaxAndSocialSecuritiesEvidence rdfs:domain org:Organization ;
+    rdfs:range cccev:Evidence .
 
-:comprisesTenderAwardOutcome rdfs:domain :AwardDecision ;
+:comprisesAwardOutcome rdfs:domain :AwardDecision ;
+    rdfs:range :AwardOutcome .
+
+:comprisesTenderAwardOutcome rdfs:domain :AwardOutcome ;
     rdfs:range :TenderAwardOutcome .
 
-:concernsContract rdfs:domain :ContractInformation ;
-    rdfs:range :Contract .
-
-:concernsOriginatorRequest rdfs:domain :OriginatorInformation ;
-    rdfs:range :OriginatorRequest .
-
 :conformsToLegalBasis rdfs:domain :Notice ;
-    rdfs:range skos:Concept .
-
-:conformsToSpecificLegalBasis rdfs:domain :Notice ;
     rdfs:range skos:Concept .
 
 :containsCandidate rdfs:domain :SelectedCandidateList ;
@@ -118,39 +69,30 @@
     rdfs:range :ProcurementObject .
 
 :core-restriction a owl:Ontology ;
-    rdfs:label "eProcurement Ontology Ordering - core restrictions"@en ;
-    dcterms:created "2021-06-01"^^xsd:date ;
-    dcterms:description "The eProcurement Ontology core restrictions provides the restrictions and the inference-related specifications on the concepts and properties in the eProcurement Ontology core."@en ;
-    dcterms:issued "2023-11-09"^^xsd:date ;
-    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
+    rdfs:label "This artefact provides the restrictions and inference-related specifications for the eProcurement Ontology Core.         This artefact excludes the definitions of concepts.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:created "2025-02-24"^^xsd:date ;
+    dcterms:description "This artefact provides the restrictions and inference-related specifications for the eProcurement Ontology Core.         This artefact excludes the definitions of concepts.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:issued "2025-02-24"^^xsd:date ;
+    dcterms:license "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "eProcurement Ontology - core restrictions"@en ;
+    dcterms:title "ePO Core restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment """This version is automatically generated from demo_ontology_CM.xml on 
-                2023-11-09""" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
-        <https://github.com/OP-TED/ePO/releases>,
+                2025-02-24""" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
     owl:imports :core,
-        cccev:,
-        <http://data.europa.eu/nuts>,
-        at-voc:,
         dcterms:,
-        <http://www.opengis.net/ont/geosparql>,
-        <http://www.w3.org/2004/02/skos/core>,
-        <http://www.w3.org/2006/time>,
+        skos:,
         <http://www.w3.org/ns/adms>,
-        <http://www.w3.org/ns/locn>,
-        org:,
-        <http://www.w3.org/ns/person>,
-        foaf:,
-        <https://data.europa.eu/m8g/> ;
-    owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#core-restriction-3.1.0" ;
-    owl:versionIRI :core-restriction-4.0.0 ;
-    owl:versionInfo "4.0.0" .
+        <https://data.europa.eu/m8g> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#core-restriction-3.0.1" ;
+    owl:versionIRI :core-restriction-3.1.0 ;
+    owl:versionInfo "3.1.0" .
 
 :definesCatalogueProvider rdfs:domain :AccessTerm ;
     rdfs:range :CatalogueProvider .
@@ -164,21 +106,17 @@
 :definesLotGroup rdfs:domain :ProcedureTerm ;
     rdfs:range :LotGroup .
 
-:definesPlaceOfPerformance rdfs:domain :ContractTerm ;
-    rdfs:range dcterms:Location .
-
 :definesPrize rdfs:domain :DesignContestRegimeTerm ;
     rdfs:range :Prize .
 
+:definesReviewer rdfs:domain :ReviewTerm ;
+    rdfs:range :Reviewer .
+
+:definesSpecificPlaceOfPerformance rdfs:domain :ContractTerm ;
+    rdfs:range dcterms:Location .
+
 :delegatesAncillaryActivitiesTo rdfs:domain :Buyer ;
     rdfs:range :ProcurementServiceProvider .
-
-:describesContractModification rdfs:domain :ContractModificationNotice ;
-    rdfs:range :ContractModification .
-
-:describesResultNotice rdf:domain :NoticeAwardInformation ;
-    rdfs:range [ a owl:Class ;
-            owl:unionOf ( :DirectAwardPrenotificationNotice :ResultNotice ) ] .
 
 :distributesOffer rdfs:domain :OfferIssuer ;
     rdfs:range :Offer .
@@ -226,34 +164,17 @@
 :hasAllegedIrregularityType rdfs:domain :ReviewRequest ;
     rdfs:range skos:Concept .
 
-:hasAmount rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :AllowanceChargeInformation :TaxInformation ) ] ;
-    rdfs:range :MonetaryValue .
-
-:hasAmountDueForPayment rdfs:domain :Order ;
-    rdfs:range :MonetaryValue .
-
-:hasAssociatedDocument rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :DespatchAdvice :DespatchLine ) ] ;
-    rdfs:range :Document .
-
 :hasAwardCriteriaEvaluationFormula rdfs:domain :AwardEvaluationTerm ;
     rdfs:range rdf:PlainLiteral .
 
 :hasAwardCriterionType rdfs:domain :AwardCriterion ;
     rdfs:range skos:Concept .
 
-:hasAwardStatus rdfs:domain :AwardDecision ;
+:hasAwardStatus rdfs:domain :AwardOutcome ;
     rdfs:range skos:Concept .
 
-:hasBaseQuantity rdfs:domain :Price ;
-    rdfs:range :Quantity .
-
-:hasBatchID rdfs:domain :Batch ;
-    rdfs:range adms:Identifier .
-
 :hasBeneficialOwner rdfs:domain :Business ;
-    rdfs:range cccev:Person ;
+    rdfs:range person:Person ;
     owl:inverseOf :isBeneficialOwnerOf .
 
 :hasBroadPlaceOfPerformance rdfs:domain :ContractTerm ;
@@ -265,36 +186,21 @@
 :hasBuyerCategoryDescription rdfs:domain :FrameworkAgreementTerm ;
     rdfs:range rdf:PlainLiteral .
 
-:hasBuyerItemID rdfs:domain :Item ;
-    rdfs:range adms:Identifier .
-
 :hasBuyerLegalType rdfs:domain org:Organization ;
     rdfs:range skos:Concept .
 
-:hasCandidateList rdfs:domain :DynamicPurchasingSystem ;
-    rdfs:range :SelectedCandidateList .
-
-:hasCarrierConsignmentID rdfs:domain :Consignment ;
-    rdfs:range adms:Identifier .
-
-:hasCatalogueLineValidity rdfs:domain :CatalogueLine ;
-    rdfs:range :Period .
-
 :hasCertification rdfs:domain [ a owl:Class ;
-            owl:unionOf ( foaf:Person org:Organization ) ] ;
+            owl:unionOf ( foaf:Person org:Organization :Item ) ] ;
     rdfs:range :Certificate .
 
-:hasChangeDescription rdfs:domain :ElementChangeDescription ;
+:hasChangeDescription rdfs:domain :ChangeInformation ;
     rdfs:range rdf:PlainLiteral .
 
-:hasChangeJustification rdfs:domain :ElementChangeDescription ;
+:hasChangeJustification rdfs:domain :ChangeInformation ;
     rdfs:range skos:Concept .
 
-:hasChangeReasonDescription rdfs:domain :ElementChangeDescription ;
+:hasChangeReasonDescription rdfs:domain :ChangeInformation ;
     rdfs:range rdf:PlainLiteral .
-
-:hasChargeableWeight rdfs:domain :Consignment ;
-    rdfs:range :Quantity .
 
 :hasConditionVerificationMethod rdfs:domain :QualificationCriteriaSummary ;
     rdfs:range rdf:PlainLiteral .
@@ -302,26 +208,12 @@
 :hasConfirmedIrregularityType rdfs:domain :ReviewDecision ;
     rdfs:range skos:Concept .
 
-:hasConsigneeConsignmentID rdfs:domain :Consignment ;
-    rdfs:range adms:Identifier .
-
-:hasConsignmentDeclaredStatisticsValue rdfs:domain :Consignment ;
-    rdfs:range :MonetaryValue .
-
-:hasConsignmentFreeOnBoardValue rdfs:domain :Consignment ;
-    rdfs:range :MonetaryValue .
-
-:hasConsignmentInvoiceValue rdfs:domain :Consignment ;
-    rdfs:range :MonetaryValue .
-
-:hasConstraint rdfs:domain :ProcurementCriterion ;
+:hasConstraint rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cccev:InformationRequirement :ProcurementCriterion ) ] ;
     rdfs:range cccev:Constraint .
 
 :hasContactPointInRole rdfs:domain :AgentInRole ;
     rdfs:range cccev:ContactPoint .
-
-:hasContractAmendment rdfs:domain :Contract ;
-    rdfs:range :AmendedContract .
 
 :hasContractNatureType rdfs:domain :ContractTerm ;
     rdfs:range skos:Concept .
@@ -330,7 +222,7 @@
             owl:unionOf ( dcterms:Location locn:Address ) ] ;
     rdfs:range skos:Concept .
 
-:hasCountryOfBirth rdfs:domain cccev:Person ;
+:hasCountryOfBirth rdfs:domain person:Person ;
     rdfs:range skos:Concept .
 
 :hasCountryOfOrigin rdfs:domain :Item ;
@@ -357,25 +249,10 @@
 :hasDeclaredStatisticalValue rdfs:domain :GoodsItem ;
     rdfs:range :MonetaryValue .
 
-:hasDeliveryLocation rdfs:domain :Price ;
-    rdfs:range dcterms:Location .
-
-:hasDeliveryPeriod rdfs:domain :DeliveryInformation ;
-    rdfs:range :Period .
-
-:hasDespatchedQuantity rdfs:domain :DespatchLine ;
-    rdfs:range :Quantity .
-
 :hasDirectAwardJustification rdfs:domain :DirectAwardTerm ;
     rdfs:range skos:Concept .
 
 :hasDocumentRestrictionJustification rdfs:domain :AccessTerm ;
-    rdfs:range skos:Concept .
-
-:hasDocumentStatus rdfs:domain :Document ;
-    rdfs:range skos:Concept .
-
-:hasDocumentType rdfs:domain :Document ;
     rdfs:range skos:Concept .
 
 :hasECataloguePermission rdfs:domain :SubmissionTerm ;
@@ -394,20 +271,11 @@
 :hasElectronicSignature rdfs:domain :Document ;
     rdfs:range :ElectronicSignature .
 
-:hasElementDescription rdfs:domain :NoticeDescription ;
-    rdfs:range :ElementDescription .
+:hasElementReference rdfs:domain :ReviewObject ;
+    rdfs:range xsd:anyURI .
 
 :hasEndpointIdentifier rdfs:domain cccev:Channel ;
     rdfs:range adms:Identifier .
-
-:hasEstimatedDeliveryPeriod rdfs:domain :ShipmentInformation ;
-    rdfs:range :Period .
-
-:hasEvaluationMember rdfs:domain :EvaluationBoard ;
-    rdfs:range :JuryMember .
-
-:hasExpectedDeliveryTime rdfs:domain :Price ;
-    rdfs:range :Duration .
 
 :hasExternalSpecification rdfs:domain :Item ;
     rdfs:range :Document .
@@ -427,19 +295,8 @@
 :hasFrameworkAgreementType rdfs:domain :FrameworkAgreementTerm ;
     rdfs:range skos:Concept .
 
-:hasFreightForwarderConsignmentID rdfs:domain :Consignment ;
-    rdfs:range adms:Identifier .
-
 :hasFundProgramme rdfs:domain :Fund ;
     rdfs:range skos:Concept .
-
-:hasGrossVolume rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :AbstractContainer :Consignment ) ] ;
-    rdfs:range :Quantity .
-
-:hasGrossWeight rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :AbstractContainer :Consignment ) ] ;
-    rdfs:range :Quantity .
 
 :hasGroupLotEvaluationMethod rdfs:domain :ProcedureTerm ;
     rdfs:range rdf:PlainLiteral .
@@ -450,10 +307,8 @@
 :hasGuaranteeDescription rdfs:domain :SubmissionTerm ;
     rdfs:range rdf:PlainLiteral .
 
-:hasHeight rdfs:domain :AbstractContainer ;
-    rdfs:range :Quantity .
-
-:hasInternalIdentifier rdfs:domain :ProcurementElement ;
+:hasInternalIdentifier rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :LotGroup :ProcurementElement ) ] ;
     rdfs:range adms:Identifier .
 
 :hasIrregularityType rdfs:domain :ReviewIrregularitySummary ;
@@ -467,6 +322,9 @@
 
 :hasJustification rdfs:domain :DirectAwardTerm ;
     rdfs:range rdf:PlainLiteral .
+
+:hasLabelType rdfs:domain :CertificationLabel ;
+    rdfs:range skos:Concept .
 
 :hasLanguage rdfs:domain :SubmissionTerm ;
     rdfs:range skos:Concept .
@@ -489,15 +347,6 @@
 :hasLegalName rdfs:domain org:Organization ;
     rdfs:range rdf:PlainLiteral .
 
-:hasLegalRegime rdfs:domain :ProcurementObject ;
-    rdfs:range skos:Concept .
-
-:hasLength rdfs:domain :AbstractContainer ;
-    rdfs:range :Quantity .
-
-:hasLoadingLength rdfs:domain :Consignment ;
-    rdfs:range :Quantity .
-
 :hasMainActivity rdfs:domain org:Organization ;
     rdfs:range skos:Concept .
 
@@ -507,57 +356,19 @@
 :hasMainFeature rdfs:domain :Procedure ;
     rdfs:range rdf:PlainLiteral .
 
-:hasManufacturerID rdfs:domain :Manufacturer ;
-    rdfs:range adms:Identifier .
-
-:hasManufacturerItemID rdfs:domain :Item ;
-    rdfs:range adms:Identifier .
-
-:hasMaximumOrderQuantity rdfs:domain :CatalogueLine ;
-    rdfs:range :Quantity .
-
-:hasMaximumTemperature rdfs:domain :TemperatureSpecification ;
-    rdfs:range :Quantity .
-
-:hasMinimumQuantityGuaranteedForDelivery rdfs:domain :CatalogueLine ;
-    rdfs:range :Quantity .
-
-:hasMinimumTemperature rdfs:domain :TemperatureSpecification ;
-    rdfs:range :Quantity .
-
-:hasModificationDescription rdfs:domain :ElementModificationDescription ;
-    rdfs:range rdf:PlainLiteral .
-
-:hasModificationJustification rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :ElementModificationDescription :AmendedContract ) ] ;
+:hasModificationJustification rdfs:domain :ContractModificationInformation ;
     rdfs:range skos:Concept .
-
-:hasModificationReasonDescription rdfs:domain :ElementModificationDescription ;
-    rdfs:range rdf:PlainLiteral .
 
 :hasNationalProcedureRules rdfs:domain :ProcedureTerm ;
     rdfs:range xsd:anyURI .
 
-:hasNationality rdfs:domain cccev:Person ;
+:hasNationality rdfs:domain person:Person ;
     rdfs:range skos:Concept .
-
-:hasNetMonetaryValue rdfs:domain :Price ;
-    rdfs:range :MonetaryValue .
-
-:hasNetQuantity rdfs:domain :Item ;
-    rdfs:range :Quantity .
-
-:hasNetVolume rdfs:domain :AbstractContainer ;
-    rdfs:range :Quantity .
-
-:hasNetWeight rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :AbstractContainer :Consignment ) ] ;
-    rdfs:range :Quantity .
 
 :hasNonAccessibilityCriterionJustification rdfs:domain :StrategicProcurement ;
     rdfs:range rdf:PlainLiteral .
 
-:hasNonAwardJustification rdfs:domain :AwardDecision ;
+:hasNonAwardJustification rdfs:domain :AwardOutcome ;
     rdfs:range skos:Concept .
 
 :hasNonElectronicSubmissionDescription rdfs:domain :SubmissionTerm ;
@@ -566,13 +377,10 @@
 :hasNonElectronicSubmissionJustification rdfs:domain :SubmissionTerm ;
     rdfs:range skos:Concept .
 
-:hasNonPublicationJustification rdfs:domain :ElementConfidentialityDescription ;
+:hasNonPublicationJustification rdfs:domain :NonPublishedInformation ;
     rdfs:range skos:Concept .
 
 :hasNoticeType rdfs:domain :Notice ;
-    rdfs:range skos:Concept .
-
-:hasNotificationContentType rdfs:domain :Notice ;
     rdfs:range skos:Concept .
 
 :hasNutsCode rdfs:domain [ a owl:Class ;
@@ -585,17 +393,8 @@
 :hasOpeningDescription rdfs:domain :OpeningTerm ;
     rdfs:range rdf:PlainLiteral .
 
-:hasOperatorLicenceID rdfs:domain :TransportMeansOperator ;
-    rdfs:range adms:Identifier .
-
 :hasOptionsDescription rdfs:domain :ContractTerm ;
     rdfs:range rdf:PlainLiteral .
-
-:hasOrderabableUnitFactorRate rdfs:domain :Price ;
-    rdfs:range :Quantity .
-
-:hasOutstandingQuantity rdfs:domain :DespatchLine ;
-    rdfs:range :Quantity .
 
 :hasPaymentArrangement rdfs:domain :ContractTerm ;
     rdfs:range rdf:PlainLiteral .
@@ -609,33 +408,11 @@
 :hasPlaceOfPerformanceAdditionalInformation rdfs:domain :ContractTerm ;
     rdfs:range rdf:PlainLiteral .
 
-:hasPrepaidAmount rdfs:domain :Order ;
-    rdfs:range :MonetaryValue .
-
-:hasPriceValidity rdfs:domain :Price ;
-    rdfs:range :Period .
-
-:hasPrimaryContactPoint rdfs:domain org:Organization ;
-    rdfs:range cccev:ContactPoint .
-
 :hasProcedureType rdfs:domain :Procedure ;
-    rdfs:range skos:Concept .
-
-:hasProcurementClassification rdfs:domain :Contract ;
     rdfs:range skos:Concept .
 
 :hasQualificationCondition rdfs:domain :QualificationCriteriaSummary ;
     rdfs:range rdf:PlainLiteral .
-
-:hasQualifiedValue rdfs:domain :ItemProperty ;
-    rdfs:range :Quantity .
-
-:hasQuantity rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :OrderLine :Deliverable ) ] ;
-    rdfs:range :Quantity .
-
-:hasQuantityThreshold rdfs:domain :Price ;
-    rdfs:range :Quantity .
 
 :hasReceivedSubmissionType rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range skos:Concept .
@@ -646,6 +423,9 @@
 :hasRenewalDescription rdfs:domain :ContractTerm ;
     rdfs:range rdf:PlainLiteral .
 
+:hasReservedExecution rdfs:domain :ContractTerm ;
+    rdfs:range skos:Concept .
+
 :hasReservedProcurement rdfs:domain [ a owl:Class ;
             owl:unionOf ( :ParticipationCondition :ParticipationConditionsSummary ) ] ;
     rdfs:range skos:Concept .
@@ -653,14 +433,17 @@
 :hasReviewBodyType rdfs:domain :Reviewer ;
     rdfs:range skos:Concept .
 
+:hasReviewDeadlineInformation rdfs:domain :ReviewTerm ;
+    rdfs:range rdf:PlainLiteral .
+
 :hasReviewDecisionType rdfs:domain :ReviewDecision ;
     rdfs:range skos:Concept .
 
 :hasReviewIrregularitySummary rdfs:domain :ReviewRequestSummary ;
     rdfs:range :ReviewIrregularitySummary .
 
-:hasRoundingAmount rdfs:domain :Order ;
-    rdfs:range :MonetaryValue .
+:hasReviewProcedure rdfs:domain :ReviewTerm ;
+    rdfs:range rdf:PlainLiteral .
 
 :hasScheme rdfs:domain adms:Identifier ;
     rdfs:range rdf:PlainLiteral .
@@ -674,14 +457,11 @@
 :hasSelectionCriterionType rdfs:domain :SelectionCriterion ;
     rdfs:range skos:Concept .
 
-:hasSellerItemID rdfs:domain :Item ;
-    rdfs:range adms:Identifier .
-
-:hasSerialID rdfs:domain :Item ;
-    rdfs:range adms:Identifier .
-
 :hasStrategicProcurementDescription rdfs:domain :StrategicProcurement ;
     rdfs:range rdf:PlainLiteral .
+
+:hasSubcontracting rdfs:domain :Tender ;
+    rdfs:range skos:Concept .
 
 :hasSubcontractingObligation rdfs:domain :SubcontractTerm ;
     rdfs:range skos:Concept .
@@ -695,10 +475,6 @@
 :hasTaxIdentifier rdfs:domain org:Organization ;
     rdfs:range adms:Identifier .
 
-:hasTaxInformation rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :Tender :Contract ) ] ;
-    rdfs:range :TaxInformation .
-
 :hasTenderSubcontractingInformation rdfs:domain :SubmissionTerm ;
     rdfs:range skos:Concept .
 
@@ -707,34 +483,6 @@
 
 :hasTimePeriod rdfs:domain :Period ;
     rdfs:range skos:Concept .
-
-:hasTotalAllowanceAmount rdfs:domain :Order ;
-    rdfs:range :MonetaryValue .
-
-:hasTotalChargeAmount rdfs:domain :Order ;
-    rdfs:range :MonetaryValue .
-
-:hasTotalGoodsItemQuantity rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :AbstractContainer :Consignment ) ] ;
-    rdfs:range :Quantity .
-
-:hasTotalLineAmount rdfs:domain :Order ;
-    rdfs:range :MonetaryValue .
-
-:hasTotalTaxExclusiveAmount rdfs:domain :Order ;
-    rdfs:range :MonetaryValue .
-
-:hasTotalTaxInclusiveAmount rdfs:domain :Order ;
-    rdfs:range :MonetaryValue .
-
-:hasTraceID rdfs:domain :GoodsItem ;
-    rdfs:range adms:Identifier .
-
-:hasTrackingID rdfs:domain :DeliveryInformation ;
-    rdfs:range adms:Identifier .
-
-:hasTransportHandlingUnitQuantity rdfs:domain :Consignment ;
-    rdfs:range :Quantity .
 
 :hasUnitCode rdfs:domain :Quantity ;
     rdfs:range skos:Concept .
@@ -751,23 +499,15 @@
 :hasVariantPermission rdfs:domain :SubmissionTerm ;
     rdfs:range skos:Concept .
 
-:hasVehicleID rdfs:domain :TransportMeans ;
-    rdfs:range adms:Identifier .
-
-:hasVehicleSegmentID rdfs:domain :TransportMeans ;
-    rdfs:range adms:Identifier .
-
 :hasWeightValueType rdfs:domain :ProcurementCriterion ;
     rdfs:range skos:Concept .
 
-:hasWidth rdfs:domain :AbstractContainer ;
-    rdfs:range :Quantity .
-
-:implementsContract rdfs:domain :OrderResponse ;
-    rdfs:range :Contract .
-
 :includesAccessibilityCriterion rdfs:domain :StrategicProcurement ;
     rdfs:range skos:Concept .
+
+:includesNationalCriterion a owl:AsymmetricProperty ;
+    rdfs:domain :QualificationCriterion ;
+    rdfs:range :QualificationCriterion .
 
 :includesTender rdfs:domain :Contract ;
     rdfs:range :Tender .
@@ -778,21 +518,15 @@
 :involvesBuyer rdfs:domain :Procedure ;
     rdfs:range :Buyer .
 
-:isAppointedBy rdfs:domain :EvaluationBoard ;
-    rdfs:range :Buyer .
-
-:isAssignedForEvaluationOf rdfs:domain :EvaluationBoard ;
-    rdfs:range :Lot .
-
 :isBasedOnImplementingRegulation rdfs:domain :Notice ;
     rdfs:range skos:Concept .
 
-:isCalculatedOn rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :AllowanceChargeInformation :TaxInformation ) ] ;
-    rdfs:range :MonetaryValue .
-
-:isFundedBy rdfs:domain :ProcurementObject ;
+:isFundedBy rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :Contract :ProcurementObject ) ] ;
     rdfs:range :Fund .
+
+:isReinforcedBy rdfs:domain :Response ;
+    rdfs:range cccev:Evidence .
 
 :isResponsibilityOfBuyer rdfs:domain :Procedure ;
     rdfs:range :Buyer .
@@ -806,12 +540,11 @@
 :isSubjectToTerm rdfs:domain :ProcurementObject ;
     rdfs:range :Term .
 
-:isSubordinatedToContract rdfs:domain :Catalogue ;
-    rdfs:range :Contract .
+:providesInformationOn rdfs:domain :ESPD ;
+    rdfs:range org:Organization .
 
-:isSupportedBy rdf:domain :Tender ;
-    rdfs:range [ a owl:Class ;
-            owl:unionOf ( :TechnicalOffer :ESPDResponse :FinancialOffer ) ] .
+:providesOrganisationPreQualificationListingIdentifier rdfs:domain :NationalPreQualificationData ;
+    rdfs:range adms:Identifier .
 
 :providesRulingOnRemedy rdfs:domain :ReviewDecision ;
     rdfs:range skos:Concept .
@@ -820,9 +553,6 @@
             owl:unionOf ( :CompletionNotice :ContractModificationNotice ) ] ;
     rdfs:range :AwardDecision .
 
-:refersToContractToBeModified rdfs:domain :ContractModificationNotice ;
-    rdfs:range :Contract .
-
 :refersToLotGroup rdfs:domain [ a owl:Class ;
             owl:unionOf ( :ContractModificationNotice :ResultNotice :CompletionNotice ) ] ;
     rdfs:range :LotGroup .
@@ -830,12 +560,6 @@
 :refersToLotGroupAwardInformation rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompletionNotice :ContractModificationNotice ) ] ;
     rdfs:range :LotGroupAwardInformation .
-
-:refersToNonPublishedElement rdfs:domain :CompletionNotice ;
-    rdfs:range :PublicationProvision .
-
-:refersToNoticeAwardInformation rdfs:domain :CompletionNotice ;
-    rdfs:range :NoticeAwardInformation .
 
 :refersToPlannedPart rdfs:domain :AccessTerm ;
     rdfs:range :PlannedProcurementPart .
@@ -847,19 +571,12 @@
 :refersToPreviousProcedureLot rdfs:domain :DirectAwardTerm ;
     rdfs:range :Lot .
 
-:refersToProject rdfs:domain :Order ;
-    rdfs:range :Project .
-
-:refersToRole rdfs:domain :CompletionNotice,
-        :ResultNotice ;
-    rdfs:range :AgentInRole .
-
 :requestsRemedyType rdfs:domain :ReviewRequest ;
     rdfs:range skos:Concept .
 
-:resultsFromLotAwardDecision rdfs:domain [ a owl:Class ;
+:resultsFromLotAwardOutcome rdfs:domain [ a owl:Class ;
             owl:unionOf ( :DirectContract :FrameworkAgreement ) ] ;
-    rdfs:range :LotAwardDecision .
+    rdfs:range :LotAwardOutcome .
 
 :signedByBuyer rdfs:domain :Contract ;
     rdfs:range :Buyer .
@@ -870,38 +587,17 @@
 :signsAwardDecision rdfs:domain :Buyer ;
     rdfs:range :AwardDecision .
 
-:specifiesAwardCriterion rdfs:domain :MiniCompetition ;
-    rdfs:range :AwardCriterion .
+:specifiesCleanVehicleDirectiveContractType rdfs:domain :VehicleInformation ;
+    rdfs:range skos:Concept .
 
-:specifiesBuyer rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :Catalogue :Order ) ],
-        :OrderResponse ;
-    rdfs:range :Buyer .
-
-:specifiesCatalogueProvider rdfs:domain :Catalogue ;
-    rdfs:range :CatalogueProvider .
-
-:specifiesCatalogueReceiver rdfs:domain :Catalogue ;
-    rdfs:range :CatalogueReceiver .
+:specifiesCleanVehicleDirectiveVehicleCategory rdfs:domain :VehicleInformation ;
+    rdfs:range skos:Concept .
 
 :specifiesDeliverable rdfs:domain :Contract ;
     rdfs:range :Deliverable .
 
-:specifiesDeliveryAgreementLocation rdfs:domain :DeliveryAgreement ;
-    rdfs:range dcterms:Location .
-
-:specifiesPlaceOfDelivery rdfs:domain :DeliveryInformation ;
-    rdfs:range dcterms:Location .
-
-:specifiesPlaceOfDespatch rdfs:domain :ShipmentInformation ;
-    rdfs:range dcterms:Location .
-
 :specifiesProcurementCriteriaSummary rdfs:domain :Procedure ;
     rdfs:range :ProcurementCriteriaSummary .
-
-:specifiesProcurementCriterion rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :Lot :LotGroup ) ] ;
-    rdfs:range :ProcurementCriterion .
 
 :specifiesSubcontractors rdfs:domain :Tender ;
     rdfs:range :Subcontractor .
@@ -912,7 +608,12 @@
 :usesTechnique rdfs:domain :ProcurementObject ;
     rdfs:range :Technique .
 
-cccev:confidentialityLevelType rdfs:domain cccev:Evidence ;
+eli:uri_schema rdfs:domain [ a owl:Class ;
+            owl:unionOf ( eli:LegalResourceSubdivision eli:LegalExpression ) ] ;
+    rdfs:range adms:Identifier .
+
+cccev:confidentialityLevelType rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cccev:Evidence :Response ) ] ;
     rdfs:range skos:Concept .
 
 cccev:constrains rdfs:domain cccev:Constraint ;
@@ -921,9 +622,21 @@ cccev:constrains rdfs:domain cccev:Constraint ;
 cccev:coordinates rdfs:domain locn:Geometry ;
     rdfs:range rdf:PlainLiteral .
 
+cccev:email rdfs:domain cccev:ContactPoint ;
+    rdfs:range rdf:PlainLiteral .
+
+cccev:hasConcept rdfs:domain cccev:Requirement ;
+    rdfs:range cccev:InformationConcept .
+
+cccev:hasEvidenceTypeList rdfs:domain cccev:Requirement ;
+    rdfs:range cccev:EvidenceTypeList .
+
 cccev:hasRequirement a owl:AsymmetricProperty ;
     rdfs:domain cccev:Requirement ;
     rdfs:range cccev:Requirement .
+
+cccev:isDerivedFrom rdfs:domain cccev:Requirement ;
+    rdfs:range eli:LegalResource .
 
 cccev:latitude rdfs:domain locn:Geometry ;
     rdfs:range rdf:PlainLiteral .
@@ -931,17 +644,32 @@ cccev:latitude rdfs:domain locn:Geometry ;
 cccev:longitude rdfs:domain locn:Geometry ;
     rdfs:range rdf:PlainLiteral .
 
+cccev:providesValueFor rdfs:domain cccev:SupportedValue ;
+    rdfs:range cccev:InformationConcept .
+
 cccev:supportsConcept rdfs:domain cccev:Evidence ;
     rdfs:range cccev:InformationConcept .
 
 cccev:supportsRequirement rdfs:domain cccev:Evidence ;
     rdfs:range cccev:Requirement .
 
+cccev:supportsValue rdfs:domain cccev:Evidence ;
+    rdfs:range cccev:SupportedValue .
+
 cccev:telephone rdfs:domain cccev:ContactPoint ;
     rdfs:range rdf:PlainLiteral .
 
-dcterms:alternative rdfs:domain cccev:Person ;
-    rdfs:range rdf:langString .
+cccev:validityPeriodConstraint rdfs:domain cccev:EvidenceType ;
+    rdfs:range :Period .
+
+dcterms:alternative rdfs:domain person:Person ;
+    rdfs:range rdf:PlainLiteral .
+
+dcterms:conformsTo rdfs:domain cccev:Evidence ;
+    rdfs:range cccev:EvidenceType .
+
+dcterms:language rdfs:domain eli:LegalExpression ;
+    rdfs:range skos:Concept .
 
 dcterms:type rdfs:domain cccev:Criterion ;
     rdfs:range skos:Concept .
@@ -952,41 +680,131 @@ time:unitType rdfs:domain :SpecificDuration ;
 adms:schemaAgency rdfs:domain adms:Identifier ;
     rdfs:range rdf:PlainLiteral .
 
-locn:postCode rdfs:domain locn:Address ;
+org:subOrganizationOf a owl:AsymmetricProperty ;
+    rdfs:domain org:Organization ;
+    rdfs:range org:Organization .
+
+person:birthName rdfs:domain person:Person ;
     rdfs:range rdf:PlainLiteral .
 
-locn:postName rdfs:domain locn:Address ;
-    rdfs:range rdf:langString .
+person:patronymicName rdfs:domain person:Person ;
+    rdfs:range rdf:PlainLiteral .
 
-locn:thoroughfare rdfs:domain locn:Address ;
-    rdfs:range rdf:langString .
+foaf:familyName rdfs:domain person:Person ;
+    rdfs:range rdf:PlainLiteral .
 
-person:birthName rdfs:domain cccev:Person ;
-    rdfs:range rdf:langString .
+foaf:givenName rdfs:domain person:Person ;
+    rdfs:range rdf:PlainLiteral .
 
-person:patronymicName rdfs:domain cccev:Person ;
-    rdfs:range rdf:langString .
+foaf:name rdfs:domain person:Person ;
+    rdfs:range rdf:PlainLiteral .
 
-foaf:familyName rdfs:domain cccev:Person ;
-    rdfs:range rdf:langString .
+:Batch rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasBatchID ] .
 
-foaf:givenName rdfs:domain cccev:Person ;
-    rdfs:range rdf:langString .
+:CatalogueResponseLine rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :hasUUID ] .
 
-foaf:name rdfs:domain cccev:Person ;
-    rdfs:range rdf:langString .
+:CertificateInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :summarisesInformationAboutCertificate ] .
 
-:actsOnBehalfOf rdfs:domain :ProcurementServiceProvider ;
+:ContractInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :concernsContract ] .
+
+:DeliveryAgreement rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :specifiesDeliveryAgreementLocation ] .
+
+:DespatchAdvice rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasAssociatedDocument ] .
+
+:ItemProperty rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasQualifiedValue ] .
+
+:LegalRepresentative rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :actsOnBehalfOf ] .
+
+:Line rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ] .
+
+:Manufacturer rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasManufacturerID ] .
+
+:OrderLine rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :hasQuantity ] .
+
+:OrderResponseInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasDeliveryPeriod ] .
+
+:OriginatorInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :concernsOriginatorRequest ] .
+
+:ShipmentAgreement rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :agreedByBuyer ] .
+
+:ShipmentStage rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ] .
+
+:TransportEquipment rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ] .
+
+:TransportEquipmentSeal rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ] .
+
+:TransportMeansOperator rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :playedBy ] .
+
+:agreedByBuyer rdfs:domain :ShipmentAgreement ;
     rdfs:range :Buyer .
+
+:amendsContract a owl:FunctionalProperty ;
+    rdfs:domain :ContractAmendment ;
+    rdfs:range :Contract .
+
+:announcesCompletionOfContract a owl:FunctionalProperty ;
+    rdfs:domain :CompletionNotice ;
+    rdfs:range :Contract .
+
+:announcesReviewObject rdfs:domain :CompletionNotice ;
+    rdfs:range :ReviewObject .
+
+:attestedByLabel rdfs:domain :Certificate ;
+    rdfs:range :CertificationLabel .
 
 :comprisesTender rdfs:domain :TenderGroup ;
     rdfs:range :Tender .
 
-:concernsMiniCompetition rdfs:domain :MiniCompetitionAwardDecision ;
-    rdfs:range :MiniCompetition .
+:concernsContract a owl:FunctionalProperty ;
+    rdfs:domain :ContractInformation ;
+    rdfs:range :Contract .
 
-:concernsProcedure rdfs:domain :ProcurementProcessInformation ;
-    rdfs:range :Procedure .
+:concernsGreenProcurement a owl:FunctionalProperty ;
+    rdfs:domain :VehicleInformation ;
+    rdfs:range :GreenProcurement .
+
+:concernsOrganisation a owl:FunctionalProperty ;
+    rdfs:domain :NationalPreQualificationData ;
+    rdfs:range org:Organization .
+
+:concernsOriginatorRequest rdfs:domain :OriginatorInformation ;
+    rdfs:range :OriginatorRequest .
 
 :concernsReviewSummaryForLot a owl:FunctionalProperty ;
     rdfs:domain :ReviewRequestSummary ;
@@ -995,10 +813,6 @@ foaf:name rdfs:domain cccev:Person ;
 :concernsTender a owl:FunctionalProperty ;
     rdfs:domain :TenderAwardOutcome ;
     rdfs:range :Tender .
-
-:containsModificationsOf a owl:AsymmetricProperty ;
-    rdfs:domain owl:Thing ;
-    rdfs:range owl:Thing .
 
 :definesBudgetProvider rdfs:domain :ProcedureTerm ;
     rdfs:range :BudgetProvider .
@@ -1030,6 +844,9 @@ foaf:name rdfs:domain cccev:Person ;
 :definesProcurementProcedureInformationProvider rdfs:domain :AccessTerm ;
     rdfs:range :ProcurementProcedureInformationProvider .
 
+:definesReviewProcedureInformationProvider rdfs:domain :ReviewTerm ;
+    rdfs:range :ReviewProcedureInformationProvider .
+
 :definesSubcontractingTerm rdfs:domain :ContractTerm ;
     rdfs:range :SubcontractTerm .
 
@@ -1038,6 +855,9 @@ foaf:name rdfs:domain cccev:Person ;
 
 :definesTenderReceiver rdfs:domain :SubmissionTerm ;
     rdfs:range :TenderReceiver .
+
+:describesDirectAwardPrenotificationNotice rdfs:domain :NoticeAwardInformation ;
+    rdfs:range :DirectAwardPrenotificationNotice .
 
 :describesLotCompletion a owl:FunctionalProperty ;
     rdfs:domain :ContractLotCompletionInformation ;
@@ -1050,10 +870,6 @@ foaf:name rdfs:domain cccev:Person ;
 :describesMinimumLevelOfStandards rdfs:domain :SelectionCriteriaSummary ;
     rdfs:range rdf:PlainLiteral .
 
-:describesNotice a owl:FunctionalProperty ;
-    rdfs:domain :NoticeDescription ;
-    rdfs:range :Notice .
-
 :describesObjectiveParticipationRules rdfs:domain :ParticipationConditionsSummary ;
     rdfs:range rdf:PlainLiteral .
 
@@ -1063,10 +879,13 @@ foaf:name rdfs:domain cccev:Person ;
 :describesProfessionRelevantLaw rdfs:domain :ProfessionalSuitabilitySummary ;
     rdfs:range rdf:PlainLiteral .
 
+:describesResultNotice rdfs:domain :NoticeAwardInformation ;
+    rdfs:range :ResultNotice .
+
 :describesVerificationMethod rdfs:domain :ParticipationConditionsSummary ;
     rdfs:range rdf:PlainLiteral .
 
-:followsRulesSetBy rdfs:domain :MiniCompetition ;
+:followsRulesSetBy rdfs:domain :PurchaseContract ;
     rdfs:range :FrameworkAgreement .
 
 :foreseesProcurementObject rdfs:domain :PlannedProcurementPart ;
@@ -1075,7 +894,7 @@ foaf:name rdfs:domain cccev:Person ;
 :hasAbnormallyLowTenders rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range xsd:integer .
 
-:hasAccessibilityDate rdfs:domain :ElementConfidentialityDescription ;
+:hasAccessibilityDate rdfs:domain :NonPublishedInformation ;
     rdfs:range xsd:date .
 
 :hasAdditionalInformationDeadline rdfs:domain :AccessTerm ;
@@ -1086,6 +905,10 @@ foaf:name rdfs:domain cccev:Person ;
 
 :hasAddressURL rdfs:domain cccev:Channel ;
     rdfs:range xsd:anyURI .
+
+:hasAmountDueForPayment a owl:FunctionalProperty ;
+    rdfs:domain :Order ;
+    rdfs:range :MonetaryValue .
 
 :hasAmountValue a owl:FunctionalProperty ;
     rdfs:domain :MonetaryValue ;
@@ -1107,17 +930,23 @@ foaf:name rdfs:domain cccev:Person ;
 :hasAwardRank rdfs:domain :TenderAwardOutcome ;
     rdfs:range xsd:integer .
 
-:hasAwardedEstimatedValue rdfs:domain :LotAwardDecision ;
+:hasAwardedValue rdfs:domain :AwardOutcome ;
     rdfs:range :MonetaryValue .
 
-:hasAwardedValue rdfs:domain :AwardDecision ;
+:hasBargainPrice rdfs:domain :AwardOutcome ;
     rdfs:range :MonetaryValue .
 
-:hasBargainPrice rdfs:domain :AwardDecision ;
-    rdfs:range :MonetaryValue .
+:hasBaseQuantity rdfs:domain :Price ;
+    rdfs:range :Quantity .
+
+:hasBatchID rdfs:domain :Batch ;
+    rdfs:range adms:Identifier .
 
 :hasBeginning rdfs:domain :Period ;
     rdfs:range xsd:dateTime .
+
+:hasBuyerItemID rdfs:domain :Item ;
+    rdfs:range adms:Identifier .
 
 :hasBuyerLegalTypeDescription rdfs:domain org:Organization ;
     rdfs:range rdf:PlainLiteral .
@@ -1128,14 +957,38 @@ foaf:name rdfs:domain cccev:Person ;
 :hasCalculationMethod rdfs:domain :ConcessionEstimate ;
     rdfs:range rdf:PlainLiteral .
 
-:hasCleanVehicles rdfs:domain :GreenProcurement ;
+:hasCarrierConsignmentID rdfs:domain :Consignment ;
+    rdfs:range adms:Identifier .
+
+:hasCatalogueLineValidity rdfs:domain :CatalogueLine ;
+    rdfs:range :Period .
+
+:hasCertificationNumber rdfs:domain :Certificate ;
+    rdfs:range rdf:PlainLiteral .
+
+:hasChargeableWeight rdfs:domain :Consignment ;
+    rdfs:range :Quantity .
+
+:hasCleanVehicles rdfs:domain :VehicleInformation ;
     rdfs:range xsd:integer .
 
 :hasConcessionEstimatedValue rdfs:domain :ConcessionEstimate ;
     rdfs:range :MonetaryValue .
 
-:hasConfidentialityJustification rdfs:domain :ElementConfidentialityDescription ;
+:hasConfidentialityJustification rdfs:domain :NonPublishedInformation ;
     rdfs:range rdf:PlainLiteral .
+
+:hasConsigneeConsignmentID rdfs:domain :Consignment ;
+    rdfs:range adms:Identifier .
+
+:hasConsignmentDeclaredStatisticsValue rdfs:domain :Consignment ;
+    rdfs:range :MonetaryValue .
+
+:hasConsignmentFreeOnBoardValue rdfs:domain :Consignment ;
+    rdfs:range :MonetaryValue .
+
+:hasConsignmentInvoiceValue rdfs:domain :Consignment ;
+    rdfs:range :MonetaryValue .
 
 :hasContactName rdfs:domain cccev:ContactPoint ;
     rdfs:range rdf:PlainLiteral .
@@ -1152,8 +1005,18 @@ foaf:name rdfs:domain cccev:Person ;
 :hasDecisionDate rdfs:domain :ReviewDecision ;
     rdfs:range xsd:date .
 
+:hasDeliveryLocation rdfs:domain :Price ;
+    rdfs:range dcterms:Location .
+
+:hasDescriptionOfPrizes rdfs:domain :DesignContestRegimeTerm ;
+    rdfs:range rdf:PlainLiteral .
+
+:hasDespatchedQuantity a owl:FunctionalProperty ;
+    rdfs:domain :DespatchLine ;
+    rdfs:range :Quantity .
+
 :hasDispatchDate rdfs:domain :Document ;
-    rdfs:range xsd:date .
+    rdfs:range xsd:dateTime .
 
 :hasDurationExtensionJustification rdfs:domain :FrameworkAgreementTerm ;
     rdfs:range rdf:PlainLiteral .
@@ -1188,15 +1051,6 @@ foaf:name rdfs:domain cccev:Person ;
 :hasElectronicTenders rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range xsd:integer .
 
-:hasElementChange rdfs:domain :NoticeChange ;
-    rdfs:range :ElementChangeDescription .
-
-:hasElementConfidentiality rdfs:domain :PublicationProvision ;
-    rdfs:range :ElementConfidentialityDescription .
-
-:hasElementModification rdfs:domain :ContractModification ;
-    rdfs:range :ElementModificationDescription .
-
 :hasEnd rdfs:domain :Period ;
     rdfs:range xsd:dateTime .
 
@@ -1208,6 +1062,9 @@ foaf:name rdfs:domain cccev:Person ;
 
 :hasEstimatedContractNoticePublicationDate rdfs:domain :ProcessPlanningTerm ;
     rdfs:range xsd:date .
+
+:hasEstimatedDeliveryPeriod rdfs:domain :ShipmentInformation ;
+    rdfs:range :Period .
 
 :hasEstimatedDuration rdfs:domain :Contract ;
     rdfs:range :Duration .
@@ -1230,8 +1087,8 @@ foaf:name rdfs:domain cccev:Person ;
 :hasEstimatedUserConcessionRevenue rdfs:domain :ConcessionEstimate ;
     rdfs:range :MonetaryValue .
 
-:hasEstimatedValue rdfs:domain :ProcurementElement ;
-    rdfs:range :MonetaryValue .
+:hasExpectedDeliveryTime rdfs:domain :Price ;
+    rdfs:range :Duration .
 
 :hasFinancialOfferValue rdfs:domain :Tender ;
     rdfs:range :MonetaryValue .
@@ -1243,19 +1100,22 @@ foaf:name rdfs:domain cccev:Person ;
     rdfs:range xsd:boolean .
 
 :hasFormNumber rdfs:domain :Notice ;
-    rdfs:range xsd:integer .
+    rdfs:range rdf:PlainLiteral .
 
 :hasFormula rdfs:domain :ProcurementCriterion ;
     rdfs:range rdf:PlainLiteral .
 
-:hasFrameworkAgreementEstimatedValue rdfs:domain :LotAwardDecision ;
+:hasFrameworkAgreementMaximumValue rdfs:domain :LotAwardOutcome ;
     rdfs:range :MonetaryValue .
 
-:hasFrameworkAgreementMaximumValue rdfs:domain :LotAwardDecision ;
-    rdfs:range :MonetaryValue .
+:hasFreightForwarderConsignmentID rdfs:domain :Consignment ;
+    rdfs:range adms:Identifier .
 
 :hasGroupFrameworkAgreementMaximumValue rdfs:domain :LotGroupAwardInformation ;
     rdfs:range :MonetaryValue .
+
+:hasHeight rdfs:domain :AbstractContainer ;
+    rdfs:range :Quantity .
 
 :hasHighestReceivedTenderValue rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range :MonetaryValue .
@@ -1263,19 +1123,9 @@ foaf:name rdfs:domain cccev:Person ;
 :hasInadmissibleTenders rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range xsd:integer .
 
-:hasInstanceReference a owl:FunctionalProperty ;
-    rdfs:domain :ElementConfidentialityDescription ;
-    rdfs:range xsd:anyURI .
-
 :hasInternetAddress rdfs:domain [ a owl:Class ;
-            owl:unionOf ( org:Organization cccev:ContactPoint ) ] ;
+            owl:unionOf ( cccev:ContactPoint org:Organization ) ] ;
     rdfs:range xsd:anyURI .
-
-:hasLaunchFrameworkAgreementMaximumValue rdfs:domain :FrameworkAgreementTerm ;
-    rdfs:range :MonetaryValue .
-
-:hasLaunchGroupFrameworkAgreementMaximumValue rdfs:domain :FrameworkAgreementTerm ;
-    rdfs:range :MonetaryValue .
 
 :hasLegalFormRequirement rdfs:domain :ContractTerm ;
     rdfs:range rdf:PlainLiteral .
@@ -1283,8 +1133,11 @@ foaf:name rdfs:domain cccev:Person ;
 :hasLegalFormType rdfs:domain org:Organization ;
     rdfs:range rdf:PlainLiteral .
 
-:hasLongTitle rdfs:domain :Notice ;
-    rdfs:range rdf:PlainLiteral .
+:hasLength rdfs:domain :AbstractContainer ;
+    rdfs:range :Quantity .
+
+:hasLoadingLength rdfs:domain :Consignment ;
+    rdfs:range :Quantity .
 
 :hasLotAwardCombination rdfs:domain :ProcedureTerm ;
     rdfs:range rdf:PlainLiteral .
@@ -1297,6 +1150,12 @@ foaf:name rdfs:domain cccev:Person ;
 
 :hasMainActivityDescription rdfs:domain org:Organization ;
     rdfs:range rdf:PlainLiteral .
+
+:hasManufacturerID rdfs:domain :Manufacturer ;
+    rdfs:range adms:Identifier .
+
+:hasManufacturerItemID rdfs:domain :Item ;
+    rdfs:range adms:Identifier .
 
 :hasMaximumFrameworkAgreementAwardedValue rdfs:domain :NoticeAwardInformation ;
     rdfs:range :MonetaryValue .
@@ -1313,11 +1172,17 @@ foaf:name rdfs:domain cccev:Person ;
 :hasMaximumNumberOfRenewals rdfs:domain :ContractTerm ;
     rdfs:range xsd:integer .
 
+:hasMaximumOrderQuantity rdfs:domain :CatalogueLine ;
+    rdfs:range :Quantity .
+
 :hasMaximumParticipantsNumber rdfs:domain :FrameworkAgreementTerm ;
     rdfs:range xsd:integer .
 
 :hasMaximumShare rdfs:domain :SubcontractTerm ;
     rdfs:range xsd:decimal .
+
+:hasMaximumTemperature rdfs:domain :TemperatureSpecification ;
+    rdfs:range :Quantity .
 
 :hasMediumTenderPerLots rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range xsd:integer .
@@ -1328,19 +1193,35 @@ foaf:name rdfs:domain cccev:Person ;
 :hasMinimumNumberOfCandidates rdfs:domain :MultipleStageProcedureTerm ;
     rdfs:range xsd:integer .
 
+:hasMinimumQuantityGuaranteedForDelivery rdfs:domain :CatalogueLine ;
+    rdfs:range :Quantity .
+
 :hasMinimumShare rdfs:domain :SubcontractTerm ;
     rdfs:range xsd:decimal .
 
 :hasMinimumSubcontractorsProposedObligation rdfs:domain :SubcontractTerm ;
     rdfs:range xsd:decimal .
 
+:hasMinimumTemperature rdfs:domain :TemperatureSpecification ;
+    rdfs:range :Quantity .
+
+:hasNetMonetaryValue a owl:FunctionalProperty ;
+    rdfs:domain :Price ;
+    rdfs:range :MonetaryValue .
+
+:hasNetQuantity rdfs:domain :Item ;
+    rdfs:range :Quantity .
+
+:hasNetVolume rdfs:domain :AbstractContainer ;
+    rdfs:range :Quantity .
+
 :hasNoNegotiationNecessary rdfs:domain :MultipleStageProcedureTerm ;
     rdfs:range xsd:boolean .
 
-:hasNonAwardedContractNumber rdfs:domain :LotAwardDecision ;
+:hasNonAwardedContractNumber rdfs:domain :LotAwardOutcome ;
     rdfs:range rdf:PlainLiteral .
 
-:hasNonAwardedContractTitle rdfs:domain :LotAwardDecision ;
+:hasNonAwardedContractTitle rdfs:domain :LotAwardOutcome ;
     rdfs:range rdf:PlainLiteral .
 
 :hasNonEEAReceivedTenders rdfs:domain :SubmissionStatisticalInformation ;
@@ -1375,11 +1256,14 @@ foaf:name rdfs:domain cccev:Person ;
 :hasOptions rdfs:domain :ContractTerm ;
     rdfs:range xsd:boolean .
 
-:hasOrganisationUnitName rdfs:domain org:Organization ;
-    rdfs:range rdf:PlainLiteral .
+:hasOrderabableUnitFactorRate rdfs:domain :Price ;
+    rdfs:range :Quantity .
 
 :hasOtherCountriesReceivedTenders rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range xsd:integer .
+
+:hasOutstandingQuantity rdfs:domain :DespatchLine ;
+    rdfs:range :Quantity .
 
 :hasOverallCostAwardCriteriaPonderation rdfs:domain :AwardEvaluationTerm ;
     rdfs:range xsd:decimal .
@@ -1389,6 +1273,9 @@ foaf:name rdfs:domain cccev:Person ;
 
 :hasOverallQualityAwardCriteriaPonderation rdfs:domain :AwardEvaluationTerm ;
     rdfs:range xsd:decimal .
+
+:hasOversupplyQuantity rdfs:domain :ReceiptAdviceLine ;
+    rdfs:range :Quantity .
 
 :hasParticipationPayment rdfs:domain :DesignContestRegimeTerm ;
     rdfs:range rdf:PlainLiteral .
@@ -1402,11 +1289,15 @@ foaf:name rdfs:domain cccev:Person ;
 :hasPlannedPeriod rdfs:domain :PlannedProcurementPart ;
     rdfs:range :Period .
 
-:hasPreferredPublicationDate rdfs:domain :PublicationProvision ;
-    rdfs:range xsd:date .
+:hasPrepaidAmount rdfs:domain :Order ;
+    rdfs:range :MonetaryValue .
 
-:hasPreviousVersionOfElementReference rdfs:domain :ElementChangeDescription ;
-    rdfs:range xsd:anyURI .
+:hasPriceValidity a owl:FunctionalProperty ;
+    rdfs:domain :Price ;
+    rdfs:range :Period .
+
+:hasPrimaryContactPoint rdfs:domain org:Organization ;
+    rdfs:range cccev:ContactPoint .
 
 :hasPrizeRank rdfs:domain :Prize ;
     rdfs:range xsd:integer .
@@ -1414,8 +1305,8 @@ foaf:name rdfs:domain cccev:Person ;
 :hasPrizeValue rdfs:domain :Prize ;
     rdfs:range :MonetaryValue .
 
-:hasProcurementDocumentChangeDate rdfs:domain :ElementChangeDescription ;
-    rdfs:range xsd:date .
+:hasProcurementDocumentChangeDate rdfs:domain :ChangeInformation ;
+    rdfs:range xsd:dateTime .
 
 :hasProcurementHighestReceivedTenderValue rdfs:domain :NoticeAwardInformation ;
     rdfs:range :MonetaryValue .
@@ -1426,24 +1317,23 @@ foaf:name rdfs:domain cccev:Person ;
 :hasProcurementScopeDividedIntoLot rdfs:domain :Procedure ;
     rdfs:range :Lot .
 
-:hasPropertyReference a owl:FunctionalProperty ;
-    rdfs:domain :ElementConfidentialityDescription ;
-    rdfs:range xsd:anyURI .
-
 :hasPublicAccessURL rdfs:domain :AccessTerm ;
     rdfs:range xsd:anyURI .
 
 :hasPublicationDate rdfs:domain :Document ;
     rdfs:range xsd:date .
 
-:hasPurpose rdfs:domain :ProcurementObject ;
-    rdfs:range :Purpose .
-
 :hasQualificationSystemDuration rdfs:domain :MultipleStageProcedureTerm ;
     rdfs:range :Duration .
 
 :hasQualificationSystemRenewalDescription rdfs:domain :MultipleStageProcedureTerm ;
     rdfs:range rdf:PlainLiteral .
+
+:hasQualifiedValue rdfs:domain :ItemProperty ;
+    rdfs:range :Quantity .
+
+:hasQuantityThreshold rdfs:domain :Price ;
+    rdfs:range :Quantity .
 
 :hasQuantityValue a owl:FunctionalProperty ;
     rdfs:domain :Quantity ;
@@ -1470,6 +1360,9 @@ foaf:name rdfs:domain cccev:Person ;
 :hasReceivedParticipationRequests rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range xsd:integer .
 
+:hasReceivedQuantity rdfs:domain :ReceiptAdviceLine ;
+    rdfs:range :Quantity .
+
 :hasReceivedSmallTenders rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range xsd:integer .
 
@@ -1482,18 +1375,23 @@ foaf:name rdfs:domain cccev:Person ;
 :hasRecurrenceDescription rdfs:domain :ProcurementObject ;
     rdfs:range rdf:PlainLiteral .
 
+:hasReferenceURI rdfs:domain :CertificationLabel ;
+    rdfs:range xsd:anyURI .
+
+:hasRejectedQuantity rdfs:domain :ReceiptAdviceLine ;
+    rdfs:range :Quantity .
+
 :hasRemedyValue rdfs:domain :ReviewDecision ;
     rdfs:range :MonetaryValue .
 
 :hasRequestDate rdfs:domain :ReviewRequest ;
     rdfs:range xsd:date .
 
-:hasReservedExecution rdfs:domain :ContractTerm ;
-    rdfs:range xsd:boolean,
-        skos:Concept .
-
 :hasRestrictedAccessURL rdfs:domain :AccessTerm ;
     rdfs:range xsd:anyURI .
+
+:hasReviewDeadline rdfs:domain :ReviewTerm ;
+    rdfs:range xsd:dateTime .
 
 :hasReviewIrregularityCount a owl:FunctionalProperty ;
     rdfs:domain :ReviewIrregularitySummary ;
@@ -1505,14 +1403,32 @@ foaf:name rdfs:domain cccev:Person ;
 :hasReviewURL rdfs:domain :ReviewObject ;
     rdfs:range xsd:anyURI .
 
+:hasRoundingAmount rdfs:domain :Order ;
+    rdfs:range :MonetaryValue .
+
 :hasSMEReceivedTenders rdfs:domain :SubmissionStatisticalInformation ;
+    rdfs:range xsd:integer .
+
+:hasSMEReceivedTendersExcludingSubcontractors rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range xsd:integer .
 
 :hasSelectionCriteriaStatedInProcurementDocuments rdfs:domain :SelectionCriteriaSummary ;
     rdfs:range xsd:boolean .
 
+:hasSellerItemID rdfs:domain :Item ;
+    rdfs:range adms:Identifier .
+
+:hasSellerOrderID rdfs:domain :Order ;
+    rdfs:range adms:Identifier .
+
+:hasSerialID rdfs:domain :Item ;
+    rdfs:range adms:Identifier .
+
 :hasServiceReservedToParticularProfession rdfs:domain :ProfessionalSuitabilitySummary ;
     rdfs:range xsd:boolean .
+
+:hasShortQuantity rdfs:domain :ReceiptAdviceLine ;
+    rdfs:range :Quantity .
 
 :hasStartDate rdfs:domain :SelectedCandidateList ;
     rdfs:range :Period .
@@ -1529,6 +1445,12 @@ foaf:name rdfs:domain cccev:Person ;
 :hasSuccessiveReduction rdfs:domain :MultipleStageProcedureTerm ;
     rdfs:range xsd:boolean .
 
+:hasTaxInformation rdfs:domain :Contract ;
+    rdfs:range :TaxInformation .
+
+:hasTenderValidityDuration rdfs:domain :SubmissionTerm ;
+    rdfs:range :Duration .
+
 :hasTenderValidityPeriod rdfs:domain :SubmissionTerm ;
     rdfs:range :Period .
 
@@ -1536,7 +1458,17 @@ foaf:name rdfs:domain cccev:Person ;
     rdfs:domain cccev:Constraint ;
     rdfs:range xsd:decimal .
 
+:hasTotalAllowanceAmount rdfs:domain :Order ;
+    rdfs:range :MonetaryValue .
+
 :hasTotalAwardedValue rdfs:domain :NoticeAwardInformation ;
+    rdfs:range :MonetaryValue .
+
+:hasTotalChargeAmount rdfs:domain :Order ;
+    rdfs:range :MonetaryValue .
+
+:hasTotalLineAmount a owl:FunctionalProperty ;
+    rdfs:domain :Order ;
     rdfs:range :MonetaryValue .
 
 :hasTotalNumberOfComplainants rdfs:domain :ReviewRequestSummary ;
@@ -1545,29 +1477,39 @@ foaf:name rdfs:domain cccev:Person ;
 :hasTotalQuantity rdfs:domain :Purpose ;
     rdfs:range :Quantity .
 
-:hasTotalValue a owl:FunctionalProperty ;
-    rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :TenderGroup :Deliverable ) ] ;
+:hasTotalTaxExclusiveAmount rdfs:domain :Order ;
     rdfs:range :MonetaryValue .
 
-:hasTotalVehicles rdfs:domain :GreenProcurement ;
+:hasTotalTaxInclusiveAmount rdfs:domain :Order ;
+    rdfs:range :MonetaryValue .
+
+:hasTotalVehicles rdfs:domain :VehicleInformation ;
     rdfs:range xsd:integer .
 
-:hasURL rdfs:domain :Fund ;
-    rdfs:range xsd:anyURI .
-
-:hasUUID rdfs:domain :Document ;
+:hasTraceID rdfs:domain :GoodsItem ;
     rdfs:range adms:Identifier .
+
+:hasTrackingID rdfs:domain :DeliveryInformation ;
+    rdfs:range adms:Identifier .
+
+:hasTransportHandlingUnitQuantity rdfs:domain :Consignment ;
+    rdfs:range :Quantity .
 
 :hasUnverifiedTenders rdfs:domain :SubmissionStatisticalInformation ;
     rdfs:range xsd:integer .
 
-:hasValidityPeriod rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :Technique :Certificate ) ] ;
-    rdfs:range :Period .
+:hasVehicleID a owl:FunctionalProperty ;
+    rdfs:domain :TransportMeans ;
+    rdfs:range adms:Identifier .
+
+:hasVehicleSegmentID rdfs:domain :TransportMeans ;
+    rdfs:range adms:Identifier .
 
 :hasVersion rdfs:domain :Document ;
     rdfs:range rdf:PlainLiteral .
+
+:hasWidth rdfs:domain :AbstractContainer ;
+    rdfs:range :Quantity .
 
 :hasWithdrawalDate rdfs:domain :ReviewRequest ;
     rdfs:range xsd:date .
@@ -1575,8 +1517,11 @@ foaf:name rdfs:domain cccev:Person ;
 :hasWithdrawalReason rdfs:domain :ReviewRequest ;
     rdfs:range rdf:PlainLiteral .
 
-:hasZeroEmissionVehicles rdfs:domain :GreenProcurement ;
+:hasZeroEmissionVehicles rdfs:domain :VehicleInformation ;
     rdfs:range xsd:integer .
+
+:implementsContract rdfs:domain :OrderResponse ;
+    rdfs:range :Contract .
 
 :indicatesAwardToWinner rdfs:domain :TenderAwardOutcome ;
     rdfs:range :Winner .
@@ -1584,8 +1529,7 @@ foaf:name rdfs:domain cccev:Person ;
 :indicatesPerformingStaffInformationRequirement rdfs:domain :ProcurementCriteriaSummary ;
     rdfs:range xsd:boolean .
 
-:involvesProcurementDocument a owl:FunctionalProperty ;
-    rdfs:domain :AccessTerm ;
+:involvesProcurementDocument rdfs:domain :AccessTerm ;
     rdfs:range :ProcurementDocument .
 
 :isAccelerated rdfs:domain :Procedure ;
@@ -1597,7 +1541,7 @@ foaf:name rdfs:domain cccev:Person ;
 :isAwardedByCPB rdfs:domain :ProcedureTerm ;
     rdfs:range xsd:boolean .
 
-:isBeneficialOwnerOf rdfs:domain cccev:Person ;
+:isBeneficialOwnerOf rdfs:domain person:Person ;
     rdfs:range :Business .
 
 :isCompetitionTerminated rdfs:domain :ProcurementProcessInformation ;
@@ -1613,9 +1557,6 @@ foaf:name rdfs:domain cccev:Person ;
     rdfs:range xsd:boolean .
 
 :isDesignContest rdfs:domain :Procedure ;
-    rdfs:range xsd:boolean .
-
-:isEUInstitution rdfs:domain :Notice ;
     rdfs:range xsd:boolean .
 
 :isExecutedByProcurementServiceProvider rdfs:domain :Procedure ;
@@ -1646,7 +1587,7 @@ foaf:name rdfs:domain cccev:Person ;
     rdfs:range foaf:Agent ;
     owl:inverseOf :ownsSystem .
 
-:isProcurementDocumentChanged rdfs:domain :ElementChangeDescription ;
+:isProcurementDocumentChanged rdfs:domain :ChangeInformation ;
     rdfs:range xsd:boolean .
 
 :isProcurementDocumentRestricted rdfs:domain :AccessTerm ;
@@ -1670,7 +1611,7 @@ foaf:name rdfs:domain cccev:Person ;
 :isSubjectToProcedureSpecificTerm rdfs:domain :Procedure ;
     rdfs:range :ProcedureSpecificTerm .
 
-:isSubmissionForAllLotsAllowed rdfs:domain :ProcedureTerm ;
+:isSubmissionForAllLotsRequired rdfs:domain :ProcedureTerm ;
     rdfs:range xsd:boolean .
 
 :isSubmitedBy rdfs:domain :Tender ;
@@ -1683,6 +1624,13 @@ foaf:name rdfs:domain cccev:Person ;
 :isSubmittedForLotGroup a owl:FunctionalProperty ;
     rdfs:domain :TenderGroup ;
     rdfs:range :LotGroup .
+
+:isSubordinatedToContract rdfs:domain :Catalogue ;
+    rdfs:range :Contract .
+
+:isSupportedBy a owl:FunctionalProperty ;
+    rdfs:domain :Tender ;
+    rdfs:range :ESPD .
 
 :isToBeRelaunched rdfs:domain :ProcurementProcessInformation ;
     rdfs:range xsd:boolean .
@@ -1699,26 +1647,17 @@ foaf:name rdfs:domain cccev:Person ;
 :isWithdrawn rdfs:domain :ReviewRequest ;
     rdfs:range xsd:boolean .
 
+:issuedByCertifier rdfs:domain :Certificate ;
+    rdfs:range :Certifier .
+
 :leadBy rdfs:domain :OrganisationGroup ;
     rdfs:range org:Organization .
-
-:legal-regime a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue :legal-regime ;
-            owl:onProperty skos:inScheme ] .
 
 :needsToBeATenderer rdfs:domain :Winner ;
     rdfs:range :Tenderer .
 
 :needsToBeAWinner rdfs:domain :Contractor ;
     rdfs:range :Winner .
-
-:notification-phases-content-types a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue :notification-phases-content-types ;
-            owl:onProperty skos:inScheme ] .
 
 :ownsSystem rdfs:domain foaf:Agent ;
     rdfs:range :System .
@@ -1729,22 +1668,30 @@ foaf:name rdfs:domain cccev:Person ;
 :providesContractTotalPenaltyValue rdfs:domain :ContractLotCompletionInformation ;
     rdfs:range :MonetaryValue .
 
+:providesOrganisationEmployeeQuantity rdfs:domain :NationalPreQualificationData ;
+    rdfs:range :Quantity .
+
+:providesOrganisationFinancialCapability rdfs:domain :NationalPreQualificationData ;
+    rdfs:range :MonetaryValue .
+
+:refersToApplicablePeriod rdfs:domain :Response ;
+    rdfs:range :Period .
+
 :refersToContract a owl:FunctionalProperty ;
     rdfs:domain :ContractLotCompletionInformation ;
     rdfs:range :Contract .
 
-:refersToLot rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :Notice :CompletionNotice :ContractModificationNotice :ResultNotice ) ] ;
-    rdfs:range :Lot .
+:refersToContractToBeModified a owl:FunctionalProperty ;
+    rdfs:domain :ContractModificationNotice ;
+    rdfs:range :Contract .
 
 :refersToNotice a owl:AsymmetricProperty ;
-    rdfs:domain :Notice ;
+    rdfs:domain :ESPDRequest,
+        :Notice ;
     rdfs:range :Notice .
 
-:refersToOriginalNotice rdfs:domain :ContractModification ;
-    rdfs:range :Notice .
-
-:refersToPreviousNotice rdfs:domain :NoticeChange ;
+:refersToPreviousNotice a owl:FunctionalProperty ;
+    rdfs:domain :ChangeInformation ;
     rdfs:range :Notice .
 
 :refersToPreviousProcedure rdfs:domain :DirectAwardTerm ;
@@ -1754,47 +1701,61 @@ foaf:name rdfs:domain cccev:Person ;
     rdfs:domain :ReviewObject ;
     rdfs:range :ReviewObject .
 
-:refersToProcedure a owl:FunctionalProperty ;
-    rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :ResultNotice :ContractModificationNotice :CompletionNotice :Notice ) ] ;
-    rdfs:range :Procedure .
+:refersToProject rdfs:domain :Order ;
+    rdfs:range :Project .
+
+:refersToRole rdfs:domain :CompletionNotice,
+        :ResultNotice ;
+    rdfs:range :AgentInRole .
 
 :resolvesReviewRequest a owl:FunctionalProperty ;
     rdfs:domain :ReviewDecision ;
     rdfs:range :ReviewRequest .
 
-:resultsFromMiniCompetitionAwardDecision rdfs:domain :PurchaseContract ;
-    rdfs:range :MiniCompetitionAwardDecision .
+:resultsFromMiniCompetitionAwardOutcome rdfs:domain :PurchaseContract ;
+    rdfs:range :MiniCompetitionAwardOutcome .
 
-:resultsInDynamicPurchasingSystem a owl:FunctionalProperty ;
-    rdfs:domain :DynamicPurchaseSystemTechnique ;
-    rdfs:range :DynamicPurchasingSystem .
+:resultsFromUsingCandidateList rdfs:domain :MiniCompetitionAwardOutcome ;
+    rdfs:range :SelectedCandidateList .
 
 :setsGroupingContextForLot rdfs:domain :LotGroup ;
     rdfs:range :Lot .
 
+:specifiesDeliveryAgreementLocation rdfs:domain :DeliveryAgreement ;
+    rdfs:range dcterms:Location .
+
+:specifiesPlaceOfDelivery rdfs:domain :DeliveryInformation ;
+    rdfs:range dcterms:Location .
+
+:specifiesPlaceOfDespatch rdfs:domain :ShipmentInformation ;
+    rdfs:range dcterms:Location .
+
+:specifiesProcurementCriterion rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ESPDRequest :Lot :LotGroup ) ] ;
+    rdfs:range :ProcurementCriterion .
+
 :substantiatesExclusionGround rdfs:domain :Tenderer ;
     rdfs:range :ExclusionGround .
 
-:summarisesInformationForAwardDecision a owl:FunctionalProperty ;
+:summarisesInformationAboutCertificate a owl:FunctionalProperty ;
+    rdfs:domain :CertificateInformation ;
+    rdfs:range :Certificate .
+
+:summarisesInformationForAwardOutcome a owl:FunctionalProperty ;
     rdfs:domain :SubmissionStatisticalInformation ;
-    rdfs:range :AwardDecision .
+    rdfs:range :AwardOutcome .
 
-:usesCandidateList rdfs:domain :MiniCompetition ;
-    rdfs:range :SelectedCandidateList .
+:updatesContractValue rdfs:domain :ContractAmendment ;
+    rdfs:range :MonetaryValue .
 
-cccev:address rdfs:domain [ a owl:Class ;
-            owl:unionOf ( org:Organization cccev:ContactPoint ) ] ;
-    rdfs:range locn:Address .
+:usesCleanVehicleDirective rdfs:domain :GreenProcurement ;
+    rdfs:range xsd:boolean .
 
 cccev:bias rdfs:domain cccev:Criterion ;
     rdfs:range xsd:decimal .
 
-cccev:birthDate rdfs:domain cccev:Person ;
+cccev:birthDate rdfs:domain person:Person ;
     rdfs:range xsd:date .
-
-cccev:email rdfs:domain cccev:ContactPoint ;
-    rdfs:range rdf:PlainLiteral .
 
 cccev:weight rdfs:domain cccev:Criterion ;
     rdfs:range xsd:decimal .
@@ -1802,311 +1763,11 @@ cccev:weight rdfs:domain cccev:Criterion ;
 cccev:weightingConsiderationDescription rdfs:domain cccev:Criterion ;
     rdfs:range rdf:PlainLiteral .
 
-at-voc:EU-programme a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:EU-programme ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:accessibility a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:accessibility ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:applicability a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:applicability ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:award-criterion-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:award-criterion-type ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:buyer-legal-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:buyer-legal-type ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:change-corrig-justification a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:change-corrig-justification ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:communication-justification a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:communication-justification ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:confidentiality-level a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:confidentiality-level ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:contract-nature a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:contract-nature ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:country a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:country ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:cpv a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:cpv ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:criterion a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:criterion ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:currency a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:currency ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:direct-award-justification a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:direct-award-justification ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:dps-usage a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:dps-usage ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:economic-operator-size a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:economic-operator-size ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:environmental-impact a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:environmental-impact ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:form-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:form-type ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:framework-agreement a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:framework-agreement ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:innovative-acquisition a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:innovative-acquisition ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:irregularity-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:irregularity-type ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:language a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:language ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:legal-basis a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:legal-basis ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:main-activity a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:main-activity ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:measurement-unit a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:measurement-unit ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:missing-info-submission a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:missing-info-submission ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:modification-justification a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:modification-justification ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:non-award-justification a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:non-award-justification ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:non-publication-justification a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:non-publication-justification ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:notice-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:notice-type ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:number-fixed a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:number-fixed ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:number-threshold a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:number-threshold ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:number-weight a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:number-weight ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:nuts a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:nuts ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:other-place-service a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:other-place-service ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:permission a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:permission ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:procurement-procedure-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:procurement-procedure-type ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:received-submission-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:received-submission-type ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:remedy-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:remedy-type ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:requirement-stage a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:requirement-stage ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:reserved-procurement a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:reserved-procurement ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:review-body-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:review-body-type ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:review-decision-type a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:review-decision-type ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:selection-criterion a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:selection-criterion ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:social-objective a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:social-objective ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:subcontracting-indication a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:subcontracting-indication ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:subcontracting-obligation a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:subcontracting-obligation ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:timeperiod a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:timeperiod ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:usage a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:usage ;
-            owl:onProperty skos:inScheme ] .
-
-at-voc:winner-selection-status a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue at-voc:winner-selection-status ;
-            owl:onProperty skos:inScheme ] .
-
 dcterms:issued rdfs:domain :Document ;
     rdfs:range xsd:dateTime .
 
 dcterms:title rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :ProcurementElement foaf:Agent :AgentInRole :Document :Fund ) ] ;
+            owl:unionOf ( :AgentInRole :Document :Fund foaf:Agent :LotGroup :ProcurementElement :TenderGroup ) ] ;
     rdfs:range rdf:PlainLiteral .
 
 skos:notation a owl:FunctionalProperty ;
@@ -2117,39 +1778,30 @@ skos:prefLabel rdfs:domain [ a owl:Class ;
             owl:unionOf ( cccev:InformationConcept cccev:Requirement ) ] ;
     rdfs:range rdf:PlainLiteral .
 
-time:TemporalUnit a owl:Class ;
-    rdfs:subClassOf skos:Concept ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:hasValue time:TemporalUnit ;
-            owl:onProperty skos:inScheme ] .
-
 time:numericDuration a owl:FunctionalProperty ;
     rdfs:domain :SpecificDuration ;
     rdfs:range xsd:decimal .
 
-locn:address rdfs:domain dcterms:Location ;
-    rdfs:range locn:Address .
-
 locn:addressArea rdfs:domain locn:Address ;
-    rdfs:range rdf:langString .
+    rdfs:range rdf:PlainLiteral .
 
 locn:addressID rdfs:domain locn:Address ;
     rdfs:range adms:Identifier .
 
 locn:adminUnitL1 rdfs:domain locn:Address ;
-    rdfs:range rdf:langString .
+    rdfs:range rdf:PlainLiteral .
 
 locn:adminUnitL2 rdfs:domain locn:Address ;
-    rdfs:range rdf:langString .
+    rdfs:range rdf:PlainLiteral .
 
 locn:fullAddress rdfs:domain locn:Address ;
-    rdfs:range rdf:langString .
+    rdfs:range rdf:PlainLiteral .
 
 locn:geographicIdentifier rdfs:domain dcterms:Location ;
     rdfs:range adms:Identifier .
 
 locn:geographicName rdfs:domain dcterms:Location ;
-    rdfs:range rdf:langString .
+    rdfs:range rdf:PlainLiteral .
 
 locn:geometry rdfs:domain dcterms:Location ;
     rdfs:range locn:Geometry .
@@ -2158,73 +1810,268 @@ locn:locatorDesignator rdfs:domain locn:Address ;
     rdfs:range rdf:PlainLiteral .
 
 locn:locatorName rdfs:domain locn:Address ;
-    rdfs:range rdf:langString .
+    rdfs:range rdf:PlainLiteral .
 
-person:placeOfBirth rdfs:domain cccev:Person ;
-    rdfs:range dcterms:Location .
+locn:postCode rdfs:domain locn:Address ;
+    rdfs:range rdf:PlainLiteral .
 
-person:placeOfDeath rdfs:domain cccev:Person ;
-    rdfs:range dcterms:Location .
+locn:postName rdfs:domain locn:Address ;
+    rdfs:range rdf:PlainLiteral .
+
+locn:thoroughfare rdfs:domain locn:Address ;
+    rdfs:range rdf:PlainLiteral .
+
+:AllowanceChargeInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isCalculatedOn ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :hasAmount ] .
+
+:CatalogueResponse rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :specifiesCatalogueReceiver ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :specifiesCatalogueProvider ] .
+
+:ContractAmendment rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :updatesContractValue ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :amendsContract ] .
+
+:ContractModificationInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :relatesToEFormSectionIdentifier ] .
 
 :ElectronicSignature a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty dcterms:description ] .
 
-:NoticeDescription rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty :describesNotice ] .
+:GoodsItem rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasTraceID ] .
+
+:JuryMember rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :playedBy ] .
+
+:OrderResponse rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :specifiesBuyer ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :implementsContract ] .
+
+:PlanningNotice rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :announcesRole ] .
 
 :Project rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty adms:identifier ] .
 
-:PurchaseContract rdfs:subClassOf [ a owl:Restriction ;
+:ReceiptAdvice rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :resultsFromMiniCompetitionAwardDecision ] .
+            owl:onProperty :hasAssociatedDocument ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :specifiesBuyer ] .
+
+:TemperatureSpecification rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasMinimumTemperature ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasMaximumTemperature ] .
+
+:TransportMeans rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasVehicleSegmentID ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :hasVehicleID ] .
+
+:actsOnBehalfOf rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ProcurementServiceProvider :LegalRepresentative ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( :Buyer :OfferingParty ) ] .
+
+:announcesLot rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :DirectAwardPrenotificationNotice :CompetitionNotice ) ] ;
+    rdfs:range :Lot .
+
+:announcesNoticeAwardInformation rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :DirectAwardPrenotificationNotice :ResultNotice ) ] ;
+    rdfs:range :NoticeAwardInformation .
+
+:announcesProcedure a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :DirectAwardPrenotificationNotice :CompetitionNotice ) ] ;
+    rdfs:range :Procedure .
 
 :concernsLot a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :ProcurementProcessInformation :LotAwardDecision ) ] ;
+            owl:unionOf ( :LotAwardOutcome :ProcurementProcessInformation ) ] ;
     rdfs:range :Lot .
 
+:concernsNotice a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ChangeInformation :NonPublishedInformation ) ] ;
+    rdfs:range :Notice .
+
+:concernsProcedure a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ProcurementProcessInformation :ESPDRequest ) ] ;
+    rdfs:range :Procedure .
+
 :foreseesConcession rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :ProcurementObject :Tender ) ] ;
+            owl:unionOf ( :Tender :ProcurementObject ) ] ;
     rdfs:range :ConcessionEstimate .
 
-:hasAdditionalInformation rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :ProcurementObject :Notice :ElementChangeDescription ) ] ;
-    rdfs:range rdf:PlainLiteral .
-
-:hasApproximateFrameworkAgreementValue rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :LotAwardDecision :NoticeAwardInformation ) ] ;
+:hasAmount a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :AllowanceChargeInformation :TaxInformation ) ] ;
     rdfs:range :MonetaryValue .
 
-:hasElementReference rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :ReviewObject :ElementChangeDescription :ElementModificationDescription ) ] ;
+:hasApproximateFrameworkAgreementValue rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :LotAwardOutcome :NoticeAwardInformation ) ] ;
+    rdfs:range :MonetaryValue .
+
+:hasDeliveryPeriod rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :OrderResponseInformation :DeliveryInformation ) ] ;
+    rdfs:range :Period .
+
+:hasEstimatedValue rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :LotGroup :ProcurementElement ) ] ;
+    rdfs:range :MonetaryValue .
+
+:hasGrossVolume rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :AbstractContainer :Consignment ) ] ;
+    rdfs:range :Quantity .
+
+:hasGrossWeight rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :AbstractContainer :Consignment ) ] ;
+    rdfs:range :Quantity .
+
+:hasLaunchFrameworkAgreementMaximumValue rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ProcurementObject :LotGroup ) ] ;
+    rdfs:range :MonetaryValue .
+
+:hasNetWeight rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :AbstractContainer :Consignment ) ] ;
+    rdfs:range :Quantity .
+
+:hasPurpose rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :Contract :ProcurementObject ) ] ;
+    rdfs:range :Purpose .
+
+:hasQuantity a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :OrderLine :Deliverable ) ] ;
+    rdfs:range :Quantity .
+
+:hasTotalGoodsItemQuantity rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :AbstractContainer :Consignment ) ] ;
+    rdfs:range :Quantity .
+
+:hasTotalValue rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :TenderGroup :Deliverable ) ] ;
+    rdfs:range :MonetaryValue .
+
+:hasURL rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cccev:Evidence :Fund ) ] ;
     rdfs:range xsd:anyURI .
 
-:playedBy a owl:FunctionalProperty ;
+:hasUUID a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :AgentInRole :TransportMeansOperator :JuryMember ) ] ;
-    rdfs:range [ a owl:Class ;
-            owl:unionOf ( foaf:Agent foaf:Person ) ] .
+            owl:unionOf ( :Document :CatalogueResponseLine ) ] ;
+    rdfs:range adms:Identifier .
+
+:isCalculatedOn rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :AllowanceChargeInformation :TaxInformation ) ] ;
+    rdfs:range :MonetaryValue .
+
+:refersToNoticeAwardInformation rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ContractModificationNotice :CompletionNotice ) ] ;
+    rdfs:range :NoticeAwardInformation .
+
+:specifiesCatalogueProvider a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :Catalogue :CatalogueResponse ) ] ;
+    rdfs:range :CatalogueProvider .
+
+:specifiesCatalogueReceiver a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :Catalogue :CatalogueResponse ) ] ;
+    rdfs:range :CatalogueReceiver .
+
+cccev:EvidenceTypeList rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ] .
 
 cccev:registeredAddress rdfs:domain [ a owl:Class ;
-            owl:unionOf ( cccev:Person org:Organization ) ] ;
+            owl:unionOf ( person:Person org:Organization ) ] ;
     rdfs:range locn:Address .
 
-owl:Thing rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :containsModificationsOf ] .
+locn:address rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cccev:ContactPoint dcterms:Location org:Organization ) ] ;
+    rdfs:range locn:Address .
 
-:DynamicPurchaseSystemTechnique rdfs:subClassOf [ a owl:Restriction ;
+:CatalogueLine rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasMinimumQuantityGuaranteedForDelivery ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasCatalogueLineValidity ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasMaximumOrderQuantity ] .
+
+:CertificationLabel rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasReferenceURI ] .
+
+:Deliverable rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasTotalValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasQuantity ] .
+
+:DeliveryInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :specifiesPlaceOfDelivery ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasTrackingID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasDeliveryPeriod ] .
+
+:DespatchLine rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasAssociatedDocument ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasOutstandingQuantity ],
+        [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty :resultsInDynamicPurchasingSystem ] .
+            owl:onProperty :hasDespatchedQuantity ] .
 
-:JuryMember rdfs:subClassOf [ a owl:Restriction ;
+:ESPDRequest rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :concernsProcedure ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :specifiesProcurementCriterion ] .
+
+:MiniCompetitionAwardOutcome rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :playedBy ] .
+            owl:onProperty :resultsFromUsingCandidateList ] .
 
 :NonDisclosureAgreementTerm a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -2233,13 +2080,6 @@ owl:Thing rdfs:subClassOf [ a owl:Restriction ;
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty dcterms:description ] .
-
-:NoticeChange rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty :hasElementChange ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :refersToPreviousNotice ] .
 
 :ParticipationRequestTerm rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
@@ -2250,14 +2090,25 @@ owl:Thing rdfs:subClassOf [ a owl:Restriction ;
 
 :Prize rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasPrizeRank ],
+            owl:onProperty :hasPrizeValue ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasPrizeValue ] .
+            owl:onProperty :hasPrizeRank ] .
 
 :ProcurementCriteriaSummary rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :indicatesPerformingStaffInformationRequirement ] .
+
+:PurchaseContract rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :followsRulesSetBy ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :resultsFromMiniCompetitionAwardOutcome ] .
+
+:SelectedCandidateList rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasStartDate ] .
 
 :SelectionCriteriaSummary rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
@@ -2266,41 +2117,92 @@ owl:Thing rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :describesMinimumLevelOfStandards ] .
 
+:ShipmentInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :specifiesPlaceOfDespatch ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasEstimatedDeliveryPeriod ] .
+
 :SpecificDuration rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty time:numericDuration ] .
 
-:TenderGroup rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty :isSubmittedForLotGroup ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty :hasTotalValue ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty :comprisesTender ] .
-
-:ContractModification rdfs:subClassOf [ a owl:Restriction ;
+:TaxInformation rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :refersToOriginalNotice ],
+            owl:onProperty :hasAmount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isCalculatedOn ] .
+
+:announcesRole rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :DirectAwardPrenotificationNotice :ContractModificationNotice :PlanningNotice :CompetitionNotice :CompletionNotice ) ],
+        :ResultNotice ;
+    rdfs:range :AgentInRole .
+
+:hasAdditionalInformation rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ChangeInformation :Notice :ProcurementCriterion :ProcurementObject ) ] ;
+    rdfs:range rdf:PlainLiteral .
+
+:hasAssociatedDocument rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ReceiptAdvice :DespatchAdvice :DespatchLine ) ] ;
+    rdfs:range :Document .
+
+:hasValidityPeriod rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cccev:Evidence :Technique :Catalogue ) ] ;
+    rdfs:range :Period .
+
+:playedBy a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :AgentInRole :JuryMember :TransportMeansOperator ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( foaf:Agent person:Person foaf:Person ) ] .
+
+:relatesToEFormSectionIdentifier rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ChangeInformation :NonPublishedInformation :ContractModificationInformation ) ] ;
+    rdfs:range adms:Identifier .
+
+:specifiesBuyer a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :Catalogue :Order ) ],
+        :OrderResponse,
+        :ReceiptAdvice ;
+    rdfs:range :Buyer .
+
+cccev:EvidenceType rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ] .
+
+:CompetitionNotice rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :announcesRole ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
-            owl:onProperty :hasElementModification ] .
+            owl:onProperty :announcesLot ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :announcesProcedure ] .
 
 :Contractor rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :needsToBeAWinner ] .
 
-:MiniCompetition rdfs:subClassOf [ a owl:Restriction ;
+:GreenProcurement rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :usesCandidateList ],
+            owl:onProperty :usesCleanVehicleDirective ] .
+
+:NationalPreQualificationData rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :providesOrganisationFinancialCapability ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :concernsOrganisation ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :followsRulesSetBy ] .
-
-:MiniCompetitionAwardDecision rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :concernsMiniCompetition ] .
+            owl:onProperty :providesOrganisationEmployeeQuantity ] .
 
 :OrganisationGroup rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 1 ;
@@ -2318,10 +2220,10 @@ owl:Thing rdfs:subClassOf [ a owl:Restriction ;
 
 :ProcessPlanningTerm rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasEstimatedContractNoticePublicationDate ],
+            owl:onProperty :hasAwardDateScheduled ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasAwardDateScheduled ],
+            owl:onProperty :hasEstimatedContractNoticePublicationDate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasEstimatedTenderInvitationDate ] .
@@ -2335,14 +2237,31 @@ owl:Thing rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty :describesProfessionRelevantLaw ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasServiceReservedToParticularProfession ],
+            owl:onProperty :describesProfession ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :describesProfession ] .
+            owl:onProperty :hasServiceReservedToParticularProfession ] .
 
 :Purpose rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasTotalQuantity ] .
+
+:ReceiptAdviceLine rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasReceivedQuantity ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasShortQuantity ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasRejectedQuantity ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasOversupplyQuantity ] .
+
+:Response rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :refersToApplicablePeriod ] .
 
 :ReviewIrregularitySummary rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
@@ -2363,9 +2282,9 @@ owl:Thing rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasDeadline ] .
 
-:SelectedCandidateList rdfs:subClassOf [ a owl:Restriction ;
+:SelectionCriterion rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasStartDate ] .
+            owl:onProperty :isUsedForCandidateRestriction ] .
 
 :System a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -2380,67 +2299,59 @@ owl:Thing rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :needsToBeATenderer ] .
 
+:refersToLot rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :Notice :CompletionNotice :ContractModificationNotice :ResultNotice ) ] ;
+    rdfs:range :Lot .
+
+:refersToProcedure a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :Notice :ResultNotice :ContractModificationNotice :CompletionNotice ) ] ;
+    rdfs:range :Procedure .
+
+:AwardCriterion rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasFixedValue ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :hasAwardCriteriaStatedInProcurementDocuments ] .
+
 :Business rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :isListedCompany ] .
+
+:Catalogue rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasValidityPeriod ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :specifiesCatalogueProvider ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isSubordinatedToContract ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :specifiesCatalogueReceiver ] .
+
+:Certificate rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :attestedByLabel ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasCertificationNumber ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :issuedByCertifier ] .
 
 :DirectAwardTerm rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :refersToPreviousProcedure ] .
 
-:GreenProcurement rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasTotalVehicles ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasCleanVehicles ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasZeroEmissionVehicles ] .
-
 :LotGroupAwardInformation rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasGroupFrameworkAgreementMaximumValue ],
-        [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty :describesLotGroup ] .
-
-:OpeningTerm rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :definesOpeningPlace ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty :hasOpeningDateTime ],
+            owl:onProperty :describesLotGroup ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasOpeningURL ] .
-
-:ProcurementCriterion rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasFormula ] .
-
-:ProcurementProcessInformation rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :concernsLot ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :concernsProcedure ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isCompetitionTerminated ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isToBeRelaunched ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isDPSTerminated ] .
-
-:PublicationProvision rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasPreferredPublicationDate ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty :hasElementConfidentiality ] .
+            owl:onProperty :hasGroupFrameworkAgreementMaximumValue ] .
 
 :Technique a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -2448,11 +2359,11 @@ owl:Thing rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty :hasValidityPeriod ] .
 
 :TenderAwardOutcome rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasAwardRank ],
-        [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty :concernsTender ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasAwardRank ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :indicatesAwardToWinner ] .
@@ -2471,40 +2382,20 @@ cccev:Criterion rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty cccev:weightingConsiderationDescription ] .
 
-cccev:InformationConcept a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty adms:identifier ] .
-
-cccev:Requirement a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty skos:prefLabel ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty dcterms:description ] .
-
-dcterms:description rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :ProcurementElement :System :AgentInRole cccev:ContactPoint cccev:Channel :NonDisclosureAgreementTerm :SecurityClearanceTerm :SubcontractTerm cccev:InformationConcept cccev:Requirement :Technique :SubcontractingEstimate :ElectronicSignature :Document :Fund ) ] ;
-    rdfs:range rdf:PlainLiteral .
-
 :AwardEvaluationTerm rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasOverallQualityAwardCriteriaPonderation ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasOverallCostAwardCriteriaPonderation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty :hasAwardCriteriaOrderJustification ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasOverallPriceAwardCriteriaPonderation ] .
+            owl:onProperty :hasOverallPriceAwardCriteriaPonderation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasOverallCostAwardCriteriaPonderation ] .
 
 :ConcessionEstimate rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasEstimatedUserConcessionRevenue ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasEstimatedBuyerConcessionRevenue ],
         [ a owl:Restriction ;
@@ -2512,38 +2403,26 @@ dcterms:description rdfs:domain [ a owl:Class ;
             owl:onProperty :hasCalculationMethod ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty :hasEstimatedUserConcessionRevenue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty :hasConcessionEstimatedValue ] .
 
 :ContractLotCompletionInformation rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :providesContractTotalPenaltyValue ],
-        [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty :refersToContract ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasPaymentValueDiscrepancyJustification ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty :describesLotCompletion ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasPaymentValueDiscrepancyJustification ],
+            owl:onProperty :providesContractTotalPenaltyValue ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :providesContractTotalPaymentValue ] .
-
-:DesignContestRegimeTerm rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasParticipationPayment ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasFollowupContract ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isJuryDecisionBinding ] .
-
-:ElementModificationDescription a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasElementReference ] .
 
 :Fund a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -2553,6 +2432,37 @@ dcterms:description rdfs:domain [ a owl:Class ;
             owl:maxCardinality 1 ;
             owl:onProperty adms:identifier ] .
 
+:NonPublishedInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :concernsNotice ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasConfidentialityJustification ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :relatesToEFormSectionIdentifier ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasAccessibilityDate ] .
+
+:OpeningTerm rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :definesOpeningPlace ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :hasOpeningDateTime ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasOpeningURL ] .
+
+:ProcurementCriterion a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasFormula ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasAdditionalInformation ] .
+
 :ProcurementElement a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
@@ -2561,25 +2471,63 @@ dcterms:description rdfs:domain [ a owl:Class ;
             owl:cardinality 1 ;
             owl:onProperty adms:identifier ] .
 
-:ReviewObject a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
+:ProcurementProcessInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isDPSTerminated ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :concernsLot ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isCompetitionTerminated ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :concernsProcedure ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isToBeRelaunched ] .
+
+:ReviewObject rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasReviewURL ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :refersToPreviousReview ] .
 
-:SelectionCriterion rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isUsedForCandidateRestriction ] .
-
 :SubcontractingEstimate a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasSubcontractingEstimatedValue ],
+            owl:onProperty :hasEstimatedPercentage ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasEstimatedPercentage ] .
+            owl:onProperty :hasSubcontractingEstimatedValue ] .
+
+:TenderGroup a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :comprisesTender ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasTotalValue ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :isSubmittedForLotGroup ] .
+
+:VehicleInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasCleanVehicles ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasTotalVehicles ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :concernsGreenProcurement ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasZeroEmissionVehicles ] .
 
 cccev:Channel a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -2589,42 +2537,73 @@ cccev:Channel a owl:Class ;
             owl:maxCardinality 1 ;
             owl:onProperty dcterms:description ] .
 
-adms:identifier a owl:FunctionalProperty ;
-    rdfs:domain [ a owl:Class ;
-            owl:unionOf ( :Project :LotGroup :ProcurementElement foaf:Agent dcterms:Location cccev:InformationConcept :Document :Fund :Consignment :TransportEquipment :ShipmentStage :TransportEquipmentSeal :ShipmentInformation :Line :AbstractContainer ) ] ;
-    rdfs:range adms:Identifier .
+dcterms:description rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cccev:Evidence cccev:InformationConcept cccev:Requirement cccev:ContactPoint cccev:Channel :AgentInRole :Document :ElectronicSignature :Fund :NonDisclosureAgreementTerm :SecurityClearanceTerm :SubcontractingEstimate :SubcontractTerm :System :Technique :LotGroup :ProcurementElement :TenderGroup ) ] ;
+    rdfs:range rdf:PlainLiteral .
 
 foaf:Agent a owl:Class .
 
-:AwardCriterion rdfs:subClassOf [ a owl:Restriction ;
+:AwardDecision rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasFixedValue ],
+            owl:onProperty :hasAdditionalNonAwardJustification ],
         [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty :hasAwardCriteriaStatedInProcurementDocuments ] .
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasAwardDecisionDate ] .
 
-:ElementConfidentialityDescription rdfs:subClassOf [ a owl:Restriction ;
+:FrameworkAgreementTerm rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasConfidentialityJustification ],
+            owl:onProperty :hasDurationExtensionJustification ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasAccessibilityDate ],
+            owl:onProperty :hasMaximumParticipantsNumber ] .
+
+:LotAwardOutcome rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasApproximateFrameworkAgreementValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasFrameworkAgreementMaximumValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasNonAwardedContractNumber ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty :hasInstanceReference ],
+            owl:onProperty :concernsLot ],
         [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty :hasPropertyReference ] .
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasNonAwardedContractTitle ] .
 
 :PlannedProcurementPart rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasPlannedDuration ],
+            owl:onProperty :foreseesProcurementObject ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasPlannedPeriod ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :foreseesProcurementObject ] .
+            owl:onProperty :hasPlannedDuration ] .
+
+:Price rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :hasPriceValidity ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasBaseQuantity ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :hasNetMonetaryValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasQuantityThreshold ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasExpectedDeliveryTime ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasDeliveryLocation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasOrderabableUnitFactorRate ] .
 
 :ReviewDecision rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
@@ -2636,143 +2615,252 @@ foaf:Agent a owl:Class .
             owl:maxCardinality 1 ;
             owl:onProperty :hasDecisionDate ] .
 
+:ReviewTerm rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :definesReviewProcedureInformationProvider ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasReviewDeadline ] .
+
+cccev:InformationConcept a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ] .
+
 :AgentInRole a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty :playedBy ] .
 
-:FrameworkAgreementTerm rdfs:subClassOf [ a owl:Restriction ;
+:AwardOutcome rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasLaunchFrameworkAgreementMaximumValue ],
+            owl:onProperty :hasAwardedValue ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasLaunchGroupFrameworkAgreementMaximumValue ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasDurationExtensionJustification ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasMaximumParticipantsNumber ] .
+            owl:onProperty :hasBargainPrice ] .
 
-:NoticeAwardInformation rdfs:subClassOf [ a owl:Restriction ;
+:ContractModificationNotice rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasProcurementHighestReceivedTenderValue ],
+            owl:onProperty :refersToNoticeAwardInformation ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasMaximumFrameworkAgreementAwardedValue ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasTotalAwardedValue ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasApproximateFrameworkAgreementValue ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasProcurementLowestReceivedTenderValue ] .
-
-:LotGroup rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 1 ;
-            owl:onProperty :setsGroupingContextForLot ],
+            owl:onProperty :refersToLot ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :refersToProcedure ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :refersToContractToBeModified ] .
+
+:DesignContestRegimeTerm rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasFollowupContract ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty adms:identifier ] .
+            owl:onProperty :isJuryDecisionBinding ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasDescriptionOfPrizes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasParticipationPayment ] .
+
+:AbstractContainer rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasLength ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasNetVolume ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasWidth ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasHeight ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasNetWeight ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasGrossWeight ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasGrossVolume ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasTotalGoodsItemQuantity ] .
+
+:DirectAwardPrenotificationNotice rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :announcesProcedure ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :announcesNoticeAwardInformation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :announcesLot ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :announcesRole ] .
+
+:Item rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasManufacturerItemID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasSellerItemID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasNetQuantity ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasSerialID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasBuyerItemID ] .
 
 :MultipleStageProcedureTerm rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasSuccessiveReduction ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasMinimumNumberOfCandidates ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasEstimatedInvitationToExpressInterestDate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty :hasQualificationSystemRenewalDescription ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasQualificationSystemDuration ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasMaximumNumberOfCandidates ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasNoNegotiationNecessary ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasEstimatedInvitationToTenderDate ] .
+            owl:onProperty :hasSuccessiveReduction ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasEstimatedInvitationToTenderDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasEstimatedInvitationToExpressInterestDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasMaximumNumberOfCandidates ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasMinimumNumberOfCandidates ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasQualificationSystemDuration ] .
 
 :SubcontractTerm a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasMinimumSubcontractorsProposedObligation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty :hasMinimumShare ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasSubcontractorsProposedAboveObligation ],
+            owl:onProperty :hasMinimumSubcontractorsProposedObligation ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasMaximumShare ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasSubcontractingInvolved ] .
+            owl:onProperty :hasSubcontractingInvolved ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasSubcontractorsProposedAboveObligation ] .
 
-:ElementChangeDescription a owl:Class ;
+cccev:Requirement a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasPreviousVersionOfElementReference ],
+            owl:onProperty dcterms:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty skos:prefLabel ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ] .
+
+:ChangeInformation a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :concernsNotice ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasAdditionalInformation ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :isProcurementDocumentChanged ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty :hasProcurementDocumentChangeDate ],
         [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :relatesToEFormSectionIdentifier ],
+        [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty :hasElementReference ] .
+            owl:onProperty :refersToPreviousNotice ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isProcurementDocumentChanged ] .
 
-:LotAwardDecision rdfs:subClassOf [ a owl:Restriction ;
+:CompletionNotice rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :refersToNoticeAwardInformation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :announcesReviewObject ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :announcesCompletionOfContract ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :refersToLot ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :refersToProcedure ] .
+
+:NoticeAwardInformation rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :describesResultNotice ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasApproximateFrameworkAgreementValue ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasNonAwardedContractTitle ],
+            owl:onProperty :describesDirectAwardPrenotificationNotice ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasNonAwardedContractNumber ],
+            owl:onProperty :hasTotalAwardedValue ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasAwardedEstimatedValue ],
+            owl:onProperty :hasMaximumFrameworkAgreementAwardedValue ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasFrameworkAgreementEstimatedValue ],
+            owl:onProperty :hasProcurementHighestReceivedTenderValue ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasFrameworkAgreementMaximumValue ],
+            owl:onProperty :hasProcurementLowestReceivedTenderValue ] .
+
+:ResultNotice rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :refersToRole ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :announcesNoticeAwardInformation ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty :concernsLot ] .
+            owl:onProperty :refersToProcedure ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :refersToLot ] .
 
 :ReviewRequest rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :isWithdrawn ],
+            owl:onProperty :hasRequestDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasReviewRequestFee ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasWithdrawalDate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasRequestDate ],
+            owl:onProperty :isWithdrawn ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty :hasNumberOfReviewRequests ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasReviewRequestFee ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasWithdrawalReason ] .
@@ -2783,126 +2871,237 @@ cccev:ContactPoint a owl:Class ;
             owl:onProperty :hasContactName ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cccev:email ],
+            owl:onProperty locn:address ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasInternetAddress ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cccev:address ] .
+            owl:onProperty :hasInternetAddress ] .
 
-:Period rdfs:subClassOf [ a owl:Restriction ;
+:Order rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasBeginning ],
+            owl:onProperty :hasTotalTaxInclusiveAmount ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasEnd ] .
-
-:AccessTerm rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isProcurementDocumentRestricted ],
+            owl:onProperty :hasTotalAllowanceAmount ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :definesProcurementProcedureInformationProvider ],
+            owl:onProperty :hasTotalChargeAmount ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasRestrictedAccessURL ],
+            owl:onProperty :hasPrepaidAmount ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasPublicAccessURL ],
+            owl:onProperty :hasRoundingAmount ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasAdditionalInformationDeadline ],
+            owl:onProperty :hasTotalTaxExclusiveAmount ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasSellerOrderID ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty :involvesProcurementDocument ],
+            owl:onProperty :hasTotalLineAmount ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :hasAmountDueForPayment ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :specifiesBuyer ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :definesOfflineAccessProvider ] .
+            owl:onProperty :refersToProject ] .
 
-:AwardDecision rdfs:subClassOf [ a owl:Restriction ;
+cccev:Evidence a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasBargainPrice ],
+            owl:onProperty dcterms:description ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasAwardedValue ],
+            owl:onProperty :hasURL ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasAwardDecisionDate ],
+            owl:onProperty :hasValidityPeriod ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasAdditionalNonAwardJustification ] .
-
-:ProcedureTerm rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :definesBudgetProvider ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isSubmissionForAllLotsAllowed ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isAwardedByCPB ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasMaximumNumberOfLotsToBeAwarded ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasMaximumLotSubmissionAllowed ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isOneLotOnlyAllowed ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :definesMediator ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasLotAwardCombination ] .
-
-cccev:Person rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty person:placeOfDeath ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty person:placeOfBirth ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cccev:registeredAddress ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty cccev:birthDate ] .
+            owl:cardinality 1 ;
+            owl:onProperty adms:identifier ] .
 
 dcterms:Location rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty adms:identifier ],
+            owl:onProperty locn:geographicName ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty locn:geographicIdentifier ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty locn:address ],
+            owl:onProperty locn:geometry ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty locn:geographicName ],
+            owl:onProperty adms:identifier ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty locn:geometry ] .
+            owl:onProperty locn:address ] .
+
+:AccessTerm rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasPublicAccessURL ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :definesOfflineAccessProvider ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :involvesProcurementDocument ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :definesProcurementProcedureInformationProvider ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isProcurementDocumentRestricted ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasAdditionalInformationDeadline ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasRestrictedAccessURL ] .
+
+person:Person rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cccev:birthDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cccev:registeredAddress ] .
+
+:Consignment rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasConsigneeConsignmentID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasCarrierConsignmentID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasGrossVolume ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasChargeableWeight ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasFreightForwarderConsignmentID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasTransportHandlingUnitQuantity ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasTotalGoodsItemQuantity ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasConsignmentInvoiceValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasLoadingLength ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasConsignmentFreeOnBoardValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasGrossWeight ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasNetWeight ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasConsignmentDeclaredStatisticsValue ] .
+
+:LotGroup a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:identifier ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :setsGroupingContextForLot ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasEstimatedValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasLaunchFrameworkAgreementMaximumValue ] .
+
+:Period rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasEnd ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasBeginning ] .
+
+:ProcedureTerm rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isOneLotOnlyAllowed ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :definesBudgetProvider ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :definesMediator ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isAwardedByCPB ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isSubmissionForAllLotsRequired ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasMaximumNumberOfLotsToBeAwarded ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasLotAwardCombination ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasMaximumLotSubmissionAllowed ] .
 
 :Buyer rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :isContractingEntity ],
+            owl:onProperty :hasBuyerProfile ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasBuyerProfile ] .
+            owl:onProperty :isContractingEntity ] .
+
+locn:Address rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:addressArea ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:fullAddress ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:adminUnitL2 ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:postName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:addressID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:locatorName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:locatorDesignator ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:thoroughfare ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:adminUnitL1 ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty locn:postCode ] .
 
 :Tender rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :foreseesConcession ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasElectronicSubmission ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty :isSubjectToGrouping ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :isSupportedBy ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty :isSubmittedForLot ],
@@ -2914,65 +3113,69 @@ dcterms:Location rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty :isVariant ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty :hasElectronicSubmission ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :foreseesConcession ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty :hasFinancialOfferValue ] .
 
-locn:Address rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty locn:adminUnitL1 ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty locn:locatorName ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty locn:fullAddress ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty locn:addressArea ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty locn:addressID ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty locn:adminUnitL2 ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty locn:locatorDesignator ] .
-
 :Procedure rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :hasProcurementScopeDividedIntoLot ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :isAccelerated ],
+            owl:onProperty :isExecutedByProcurementServiceProvider ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isJointProcurement ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :isDesignContest ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :isJointProcurement ],
+            owl:onProperty :isAccelerated ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
-            owl:onProperty :isSubjectToProcedureSpecificTerm ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isExecutedByProcurementServiceProvider ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty :hasProcurementScopeDividedIntoLot ] .
+            owl:onProperty :isSubjectToProcedureSpecificTerm ] .
 
-org:Organization a owl:Class ;
+:Notice a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasMainActivityDescription ],
+            owl:onProperty :hasNoticePublicationNumber ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasLegalFormType ],
+            owl:onProperty :hasAdditionalInformation ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasBuyerLegalTypeDescription ],
+            owl:onProperty :hasESenderDispatchDate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty cccev:registeredAddress ],
+            owl:onProperty :hasOJSIssueNumber ],
+        [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :refersToProcedure ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasOrganisationUnitName ] .
+            owl:onProperty :hasFormNumber ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :refersToNotice ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :refersToLot ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasOJSType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasEFormsSubtype ] .
+
+adms:identifier a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( cccev:Evidence cccev:InformationConcept cccev:Requirement dcterms:Location :Document :Fund :Project foaf:Agent :LotGroup :ProcurementElement :TenderGroup cccev:EvidenceType :Consignment :TransportEquipment :ShipmentStage :TransportEquipmentSeal cccev:EvidenceTypeList :ShipmentInformation :Line :AbstractContainer ) ] ;
+    rdfs:range adms:Identifier .
 
 :ProcurementObject a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -2980,103 +3183,67 @@ org:Organization a owl:Class ;
             owl:onProperty :isCoveredByGPA ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :isUsingEUFunds ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasPurpose ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty :isRecurrent ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :foreseesConcession ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasRecurrenceDescription ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty :hasLaunchFrameworkAgreementMaximumValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty :isSMESuitable ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :foreseesConcession ] .
+            owl:onProperty :hasPurpose ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isUsingEUFunds ] .
 
-:SubmissionStatisticalInformation rdfs:subClassOf [ a owl:Restriction ;
+:Document a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasNonEEAReceivedTenders ],
+            owl:onProperty :hasReceptionDate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasSMEReceivedTenders ],
+            owl:onProperty :hasPublicationDate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasMediumTenderPerLots ],
+            owl:onProperty dcterms:description ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasNonEUReceivedTenders ],
+            owl:onProperty :hasUUID ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasLowestReceivedTenderValue ],
+            owl:onProperty :hasDispatchDate ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasHighestReceivedTenderValue ],
+            owl:onProperty :hasVersion ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasUnverifiedTenders ],
+            owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasNumberOfTenderersInvited ],
-        [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty :summarisesInformationForAwardDecision ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasEEAReceivedTenders ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasElectronicTenders ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasReceivedTenders ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasReceivedSmallTenders ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasReceivedMicroTenders ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasEstimatedTotalSubcontracts ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasOtherCountriesReceivedTenders ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasReceivedParticipationRequests ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasAbnormallyLowTenders ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasEUReceivedTenders ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasInadmissibleTenders ] .
-
-:Contract rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasContractValue ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasEstimatedDuration ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasContractConclusionDate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasEntryIntoForceDate ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty :hasLotReference ] .
+            owl:onProperty dcterms:issued ] .
 
 :ContractTerm rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty :hasLegalFormRequirement ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty :hasMaximumNumberOfRenewals ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :definesContractPeriod ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :definesContractDuration ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasOptions ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasEInvoicing ],
@@ -3085,241 +3252,265 @@ org:Organization a owl:Class ;
             owl:onProperty :hasEOrdering ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :definesSubcontractingTerm ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty :definesPaymentExecutor ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasOptions ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasEPayment ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasReservedExecution ],
+            owl:onProperty :definesSubcontractingTerm ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :definesContractDuration ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasLegalFormRequirement ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isRenewalIndicator ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :definesContractPeriod ] .
+            owl:onProperty :isRenewalIndicator ] .
 
-:Document a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
+:SubmissionStatisticalInformation rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:issued ],
+            owl:onProperty :hasNumberOfTenderersInvited ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasReceptionDate ],
+            owl:onProperty :hasReceivedParticipationRequests ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasDispatchDate ],
+            owl:onProperty :hasSMEReceivedTendersExcludingSubcontractors ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:description ],
+            owl:onProperty :hasReceivedMicroTenders ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasPublicationDate ],
+            owl:onProperty :hasSMEReceivedTenders ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty dcterms:title ],
+            owl:onProperty :hasEEAReceivedTenders ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasVersion ],
+            owl:onProperty :hasNonEEAReceivedTenders ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasUUID ] .
-
-:Notice a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasFormNumber ],
+            owl:onProperty :hasUnverifiedTenders ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :isEUInstitution ],
+            owl:onProperty :hasOtherCountriesReceivedTenders ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasOJSType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty :refersToLot ],
+            owl:onProperty :hasReceivedTenders ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasLongTitle ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :refersToNotice ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasAdditionalInformation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasOJSIssueNumber ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasNoticePublicationNumber ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasESenderDispatchDate ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasEFormsSubtype ],
+            owl:onProperty :hasEstimatedTotalSubcontracts ],
         [ a owl:Restriction ;
             owl:cardinality 1 ;
-            owl:onProperty :refersToProcedure ] .
+            owl:onProperty :summarisesInformationForAwardOutcome ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasMediumTenderPerLots ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasLowestReceivedTenderValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasElectronicTenders ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasHighestReceivedTenderValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasAbnormallyLowTenders ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasEUReceivedTenders ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasNonEUReceivedTenders ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasReceivedSmallTenders ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasInadmissibleTenders ] .
+
+org:Organization a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasLegalFormType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasPrimaryContactPoint ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasBuyerLegalTypeDescription ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasMainActivityDescription ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty cccev:registeredAddress ] .
+
+:Contract rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasContractValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasEntryIntoForceDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasTaxInformation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasContractConclusionDate ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasEstimatedDuration ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty :hasLotReference ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasPurpose ] .
 
 :SubmissionTerm rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :isGuaranteeRequired ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :hasTenderValidityPeriod ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty :hasEAuctionURL ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasTenderValidityDuration ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :hasReceiptExpressionDeadline ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasReceiptParticipationRequestDeadline ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty :hasReceiptDeadline ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty :isAdvancedElectronicSignatureRequired ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :definesTenderProcessor ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasReceiptPreliminaryMarketConsultationDeadline ],
+            owl:onProperty :hasTenderValidityPeriod ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasReceiptParticipationRequestDeadline ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty :isMultipleTenderSubmissionAllowed ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty :isGuaranteeRequired ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty :definesTenderReceiver ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty :hasReceiptTenderDeadline ] .
-
-:Quantity rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality 1 ;
-            owl:onProperty :hasQuantityValue ] .
+            owl:onProperty :hasReceiptTenderDeadline ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :hasReceiptPreliminaryMarketConsultationDeadline ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty :isAdvancedElectronicSignatureRequired ] .
 
 adms:Identifier rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty skos:notation ] .
+
+:Quantity rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality 1 ;
+            owl:onProperty :hasQuantityValue ] .
 
 :MonetaryValue rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality 1 ;
             owl:onProperty :hasAmountValue ] .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :ExclusionGround :SelectionCriterion ) .
+    owl:members ( :AcquiringParty :OfferingParty :AuxiliaryParty ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :AwardOutcome :TenderAwardOutcome ) .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( :AwardEvaluationTerm :SelectionEvaluationTerm ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :AcquiringParty :OfferingParty :AuxiliaryParty ) .
+    owl:members ( :Procedure :Lot ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :SecurityClearanceTerm :ParticipationRequestTerm :DesignContestRegimeTerm :OpeningTerm :SubmissionTerm :EvaluationTerm :NonDisclosureAgreementTerm :AccessTerm :MultipleStageProcedureTerm :FrameworkAgreementTerm ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :System org:Organization foaf:Person ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :AccessTerm :ProcedureTerm :SubmissionTerm :FrameworkAgreementTerm :DirectAwardTerm ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :AwardCriterion :ParticipationCondition :QualificationCriterion ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :OriginatorRequest :Tender :Offer :ProcurementDocument :Notice :RequestForClarification :Contract :ReviewObject :AwardDecision :ExpressionOfInterest :RequestForParticipation ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :SubmissionStatisticalInformation :ReviewRequestSummary :ReviewIrregularitySummary ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :DynamicPurchaseSystemTechnique :EAuctionTechnique :FrameworkAgreementTechnique ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :SubcontractingEstimate :ConcessionEstimate ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :SubcontractTerm :ContractTerm ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :ExclusionGroundsSummary :SelectionCriteriaSummary ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :TaxInformationProvider :EnvironmentalProtectionInformationProvider :EmploymentInformationProvider ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :ContractModification :NoticeChange :PublicationProvision ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( cccev:Constraint cccev:Criterion :ProcurementCriteriaSummary ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :MiniCompetitionAwardDecision :LotAwardDecision ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :IndefiniteDuration :SpecificDuration ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :GreenProcurement :InnovativeProcurement :SocialProcurement ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :ReviewDecision :ReviewRequest ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :Mediator :JuryMember :ParticipationRequestProcessor :ProcurementServiceProvider :ProcurementProcedureInformationProvider :Reviewer :TenderReceiver :PaymentExecutor :Awarder :BudgetProvider :Buyer :OfflineAccessProvider :TenderProcessor :ReviewProcedureInformationProvider :CatalogueReceiver :ParticipationRequestReceiver ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :AcquiringCentralPurchasingBody :AwardingCentralPurchasingBody ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :AwardCriteriaSummary :ParticipationConditionsSummary :QualificationCriteriaSummary ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :DirectContract :ConcessionContract :PurchaseContract :FrameworkAgreement ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :LeadBuyer :CentralPurchasingBody ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :ProcurementObject :PlannedProcurementPart ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :LotGroupAwardInformation :TenderAwardOutcome :ContractLotCompletionInformation ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( :Candidate :CatalogueProvider :Contractor :Tenderer :OtherEntity :ReviewRequester :Subcontractor :OfferIssuer :Winner ) .
-
-[] a owl:AllDisjointClasses ;
-    owl:members ( cccev:PublicOrganisation :Business :OrganisationGroup ) .
+    owl:members ( :SubcontractTerm :ContractTerm :FrameworkAgreementTerm ) .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( :ContractSpecificTerm :LotSpecificTerm :ProcedureSpecificTerm :ProcessPlanningTerm ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :Procedure :Lot ) .
+    owl:members ( :ConcessionContract :PurchaseContract :DirectContract :FrameworkAgreement ) .
 
 [] a owl:AllDisjointClasses ;
-    owl:members ( :ElementChangeDescription :ElementConfidentialityDescription :ElementModificationDescription ) .
+    owl:members ( :Mediator :JuryMember :ParticipationRequestProcessor :ProcurementServiceProvider :ProcurementProcedureInformationProvider :Reviewer :TenderReceiver :PaymentExecutor :Awarder :BudgetProvider :Buyer :OfflineAccessProvider :TenderProcessor :ReviewProcedureInformationProvider :CatalogueReceiver :ParticipationRequestReceiver ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cccev:Constraint cccev:Criterion cccev:InformationRequirement :ProcurementCriteriaSummary ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :AccessTerm :DesignContestRegimeTerm :EvaluationTerm :FrameworkAgreementTerm :SecurityClearanceTerm :ParticipationRequestTerm :OpeningTerm :SubmissionTerm :NonDisclosureAgreementTerm :ReviewTerm :MultipleStageProcedureTerm ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Contract :ProcurementDocument :Offer :RequestForClarification :OriginatorRequest :ReviewObject :AwardDecision :Notice :Tender :ExpressionOfInterest :RequestForParticipation ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :ProcurementObject :PlannedProcurementPart ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :ConcessionEstimate :SubcontractingEstimate ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :AccessTerm :DesignContestRegimeTerm :DirectAwardTerm :FrameworkAgreementTerm :OpeningTerm :ProcedureTerm :SubmissionTerm :ReviewTerm ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :ExclusionGround :SelectionCriterion ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( cccev:PublicOrganisation :Business :OrganisationGroup ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Candidate :CatalogueProvider :Contractor :Tenderer :OtherEntity :ReviewRequester :Subcontractor :OfferIssuer :Winner ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :MiniCompetitionAwardOutcome :LotAwardOutcome ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :AcquiringCentralPurchasingBody :AwardingCentralPurchasingBody ) .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( :EconomicStandingSummary :ProfessionalSuitabilitySummary :TechnicalAbilitySummary ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :IndefiniteDuration :SpecificDuration ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :ReviewDecision :ReviewRequest ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :ReviewIrregularitySummary :ReviewRequestSummary :SubmissionStatisticalInformation ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :GreenProcurement :InnovativeProcurement :SocialProcurement ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :TaxInformationProvider :Certifier :EnvironmentalProtectionInformationProvider :EmploymentInformationProvider ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :System org:Organization foaf:Person ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :ChangeInformation :StatisticalInformation :ProcurementProcessInformation :LotGroupAwardInformation :NoticeAwardInformation :NonPublishedInformation :Estimate :ContractLotCompletionInformation ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :LeadBuyer :CentralPurchasingBody ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :AwardCriterion :ParticipationCondition :QualificationCriterion ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :ExclusionGroundsSummary :SelectionCriteriaSummary ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :AwardCriteriaSummary :ParticipationConditionsSummary :QualificationCriteriaSummary ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :DynamicPurchaseSystemTechnique :EAuctionTechnique :FrameworkAgreementTechnique ) .
 

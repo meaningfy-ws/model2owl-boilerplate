@@ -1,757 +1,752 @@
 @prefix : <http://data.europa.eu/a4g/ontology#> .
-@prefix at-voc: <http://publications.europa.eu/resource/authority/> .
-@prefix cccev: <http://data.europa.eu/m8g/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :CANDefence-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :ResultNotice,
         :StandardFormsNotice ;
     skos:editorialNote "What is the notice type here?"@en ;
-    skos:prefLabel "C a n defence- d81"@en .
+    skos:prefLabel "CAN Defence- D81"@en .
 
 :CANSocial-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CANSocialNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "C a n social- d25"@en .
+    skos:prefLabel "CAN Social- D25"@en .
 
 :CANSocialNotice-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CANSocialNotice,
         :StandardFormsNotice ;
     skos:definition "Additional information: Social and other specific services – utilities"@en ;
-    skos:prefLabel "C a n social notice- d25"@en .
+    skos:prefLabel "CAN Social Notice- D25"@en .
 
 :CANStandard-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CANStandardNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "C a n standard- d24"@en .
+    skos:prefLabel "CAN Standard- D24"@en .
 
 :CNDefence-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:editorialNote "What is the notice type here?"@en ;
-    skos:prefLabel "C n defence- d81"@en .
+    skos:prefLabel "CN Defence- D81"@en .
 
 :CNSocial-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CNSocialNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "C n social- d25"@en .
+    skos:prefLabel "CN Social- D25"@en .
 
 :CNSocialNotice-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CNSocialNotice,
         :StandardFormsNotice ;
     skos:definition "Additional information: Social and other specific services – utilities"@en ;
-    skos:prefLabel "C n social notice- d25"@en .
+    skos:prefLabel "CN Social Notice- D25"@en .
 
 :CNStandard-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CNStandardNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "C n standard- d24"@en .
+    skos:prefLabel "CN Standard- D24"@en .
 
 :CompletionNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :Notice ;
     skos:definition "An announcement of the end of a Procurement by a Buyer."@en ;
-    skos:editorialNote "What is the Form type here? There is no form type, because this is a new notice type. What is the Notice type here? This will be added to the codelist."@en ;
-    skos:prefLabel "Completion notice"@en .
+    skos:prefLabel "Completion Notice"@en .
 
 :ConcessionAwardNotice-D23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:editorialNote "where does this belong to?"@en ;
-    skos:prefLabel "Concession award notice- d23"@en .
+    skos:prefLabel "Concession Award Notice- D23"@en .
 
 :ConcessionNotice-D23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:editorialNote "where does this belong to?"@en ;
-    skos:prefLabel "Concession notice- d23"@en .
+    skos:prefLabel "Concession Notice- D23"@en .
 
 :DesignContest-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :DesignContestNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "Design contest- d24"@en .
+    skos:prefLabel "Design Contest- D24"@en .
 
 :DesignContest-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :DesignContestNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "Design contest- d25"@en .
+    skos:prefLabel "Design Contest- D25"@en .
 
 :DesignContestResult-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :DesignContestResultNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "Design contest result- d24"@en .
+    skos:prefLabel "Design Contest Result- D24"@en .
 
 :DesignContestResult-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :DesignContestResultNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "Design contest result- d25"@en .
+    skos:prefLabel "Design Contest Result- D25"@en .
 
 :Modification-D23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :ContractModificationNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "Modification- d23"@en .
+    skos:prefLabel "Modification- D23"@en .
 
 :Modification-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :ContractModificationNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "Modification- d24"@en .
+    skos:prefLabel "Modification- D24"@en .
 
 :Modification-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :ContractModificationNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "Modification- d25"@en .
+    skos:prefLabel "Modification- D25"@en .
 
 :Notice1 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINProfileNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice1"@en .
 
 :Notice10 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PIN-CFCStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice10"@en .
 
 :Notice11 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PIN-CFCStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice11"@en .
 
 :Notice12 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice12"@en .
 
 :Notice13 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice13"@en .
 
 :Notice14 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice14"@en .
 
 :Notice15 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :QSNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice15"@en .
 
 :Notice16 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CNStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice16"@en .
 
 :Notice17 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CNStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice17"@en .
 
 :Notice18 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CNStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice18"@en .
 
 :Notice19 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CNStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice19"@en .
 
 :Notice2 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINProfileNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice2"@en .
 
 :Notice20 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CNSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice20"@en .
 
 :Notice21 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CNSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice21"@en .
 
 :Notice22 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :SubcontractNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice22"@en .
 
 :Notice23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :DesignContestNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice23"@en .
 
 :Notice24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :DesignContestNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice24"@en .
 
 :Notice25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :VoluntaryEx-AnteTransparencyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice25"@en .
 
 :Notice26 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :VoluntaryEx-AnteTransparencyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice26"@en .
 
 :Notice27 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :VoluntaryEx-AnteTransparencyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice27"@en .
 
 :Notice28 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :VoluntaryEx-AnteTransparencyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice28"@en .
 
 :Notice29 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CANStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice29"@en .
 
 :Notice3 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINProfileNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice3"@en .
 
 :Notice30 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CANStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice30"@en .
 
 :Notice31 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CANStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice31"@en .
 
 :Notice32 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CANStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice32"@en .
 
 :Notice33 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CANSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice33"@en .
 
 :Notice34 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CANSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice34"@en .
 
 :Notice35 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CANSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice35"@en .
 
 :Notice36 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :DesignContestResultNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice36"@en .
 
 :Notice37 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :DesignContestResultNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice37"@en .
 
 :Notice38 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :ContractModificationNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice38"@en .
 
 :Notice39 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :ContractModificationNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice39"@en .
 
 :Notice4 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINOnlyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice4"@en .
 
 :Notice40 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :ContractModificationNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice40"@en .
 
 :Notice5 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINOnlyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice5"@en .
 
 :Notice6 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINOnlyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice6"@en .
 
 :Notice7 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINTimeLimitNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice7"@en .
 
 :Notice8 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINTimeLimitNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice8"@en .
 
 :Notice9 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINTimeLimitNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice9"@en .
 
 :PIN-CFCSocial-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "P i n- c f c social- d25"@en .
+    skos:prefLabel "PI N- CFC Social- D25"@en .
 
 :PIN-CFCSocialNotice-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :StandardFormsNotice ;
     skos:definition "Additional information: Social and other specific services – utilities"@en ;
-    skos:prefLabel "P i n- c f c social notice- d25"@en .
+    skos:prefLabel "PI N- CFC Social Notice- D25"@en .
 
 :PIN-CFCStandard-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PIN-CFCStandardNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "P i n- c f c standard- d24"@en .
+    skos:prefLabel "PI N- CFC Standard- D24"@en .
 
 :PIN-RTL-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINTimeLimitNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "P i n- r t l- d24"@en .
+    skos:prefLabel "PI N- RT L- D24"@en .
 
 :PIN-RTL-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINTimeLimitNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "P i n- r t l- d25"@en .
+    skos:prefLabel "PI N- RT L- D25"@en .
 
 :PINDefence-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PlanningNotice ;
     skos:editorialNote "What is the notice type here?"@en ;
-    skos:prefLabel "P i n defence- d81"@en .
+    skos:prefLabel "PIN Defence- D81"@en .
 
 :PINOnly-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINOnlyNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "P i n only- d24"@en .
+    skos:prefLabel "PIN Only- D24"@en .
 
 :PINOnly-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINOnlyNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "P i n only- d25"@en .
+    skos:prefLabel "PIN Only- D25"@en .
 
 :PINProfile-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINProfileNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "P i n profile- d24"@en .
+    skos:prefLabel "PIN Profile- D24"@en .
 
 :PINProfile-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINProfileNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "P i n profile- d25"@en .
+    skos:prefLabel "PIN Profile- D25"@en .
 
 :PINProfile-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PINProfileNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "P i n profile- d81"@en .
+    skos:prefLabel "PIN Profile- D81"@en .
 
-:PMCNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
-    rdfs:subClassOf :PlanningNotice ;
-    skos:editorialNote "Preliminary Market Consultation This should be implemented in the future."@en ;
-    skos:prefLabel "P m c notice"@en .
+:PreMarketConsultationNotice a owl:Class ;
+    rdfs:isDefinedBy :core ;
+    rdfs:subClassOf :Notice ;
+    skos:prefLabel "Pre Market Consultation Notice"@en .
 
 :QS-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :QSNotice,
         :StandardFormsNotice ;
-    skos:prefLabel "Q s- d25"@en .
+    skos:prefLabel "Q S- D25"@en .
 
 :QSNotice-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :QSNotice,
         :StandardFormsNotice ;
     skos:definition "Additional information: Social and other specific services – utilities"@en ;
-    skos:prefLabel "Q s notice- d25"@en .
+    skos:prefLabel "QS Notice- D25"@en .
 
 :SocialAndOtherSpecificServices-D23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:editorialNote "This can be PIN or Concession award notice"@en ;
-    skos:prefLabel "Social and other specific services- d23"@en .
+    skos:prefLabel "Social And Other Specific Services- D23"@en .
 
 :SocialAndOtherSpecificServices-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:definition "public contracts"@en ;
     skos:editorialNote "This can be PIN (maybe CFC), CN or CAN."@en ;
-    skos:prefLabel "Social and other specific services- d24"@en .
-
-:StandardForm a skos:ConceptScheme ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Standard form"@en .
+    skos:prefLabel "Social And Other Specific Services- D24"@en .
 
 :Subcontract-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :StandardFormsNotice,
         :SubcontractNotice ;
-    skos:prefLabel "Subcontract- d81"@en .
+    skos:prefLabel "Subcontract- D81"@en .
 
 :VEAT-D23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :StandardFormsNotice,
         :VoluntaryEx-AnteTransparencyNotice ;
-    skos:prefLabel "V e a t- d23"@en .
+    skos:prefLabel "VEA T- D23"@en .
 
 :VEAT-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :StandardFormsNotice,
         :VoluntaryEx-AnteTransparencyNotice ;
-    skos:prefLabel "V e a t- d24"@en .
+    skos:prefLabel "VEA T- D24"@en .
 
 :VEAT-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :StandardFormsNotice,
         :VoluntaryEx-AnteTransparencyNotice ;
-    skos:prefLabel "V e a t- d25"@en .
+    skos:prefLabel "VEA T- D25"@en .
 
 :VEAT-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :StandardFormsNotice,
         :VoluntaryEx-AnteTransparencyNotice ;
-    skos:prefLabel "V e a t- d81"@en .
+    skos:prefLabel "VEA T- D81"@en .
 
 :announcesAwardDecision a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Announces award decision"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "announces Award Decision"@en .
 
 :announcesCompletionOfContract a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Announces completion of contract"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "announces Completion Of Contract"@en .
 
 :announcesContract a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Announces contract"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "announces Contract"@en .
+
+:announcesContractAmendment a owl:ObjectProperty ;
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "announces Contract Amendment"@en .
 
 :announcesLot a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Announces lot"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "announces Lot"@en .
 
 :announcesLotGroup a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Announces lot group"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "announces Lot Group"@en .
 
 :announcesLotGroupAwardInformation a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Announces lot group award information"@en .
-
-:announcesNonPublishedElement a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:definition "Relation indicating which parts of a document are not published. Additional Information: For example, elements in the Contract Award Notice that should be published at a later date. (epo-not:ResultNotice -> epo:PublicationProvision (+epo:announcesNonPublishedElement))"@en ;
-    skos:prefLabel "Announces non published element"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "announces Lot Group Award Information"@en .
 
 :announcesNoticeAwardInformation a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Announces notice award information"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "announces Notice Award Information"@en .
 
 :announcesPlannedProcurementPart a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Announces planned procurement part"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "announces Planned Procurement Part"@en .
 
 :announcesProcedure a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subPropertyOf :refersToProcedure ;
-    skos:prefLabel "Announces procedure"@en .
+    skos:prefLabel "announces Procedure"@en .
 
 :announcesReviewObject a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Announces review object"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "announces Review Object"@en .
 
 :announcesRole a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     skos:editorialNote "for ReviewBody"@en ;
-    skos:prefLabel "Announces role"@en .
+    skos:prefLabel "announces Role"@en .
 
-:describesContractModification a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Describes contract modification"@en .
+:describesDirectAwardPrenotificationNotice a owl:ObjectProperty ;
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "describes Direct Award Prenotification Notice"@en .
 
 :describesResultNotice a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Describes result notice"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "describes Result Notice"@en .
 
 :hasFormType a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Has form type"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "has Form Type"@en .
 
 :hasImplementingRegulation a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Has implementing regulation"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "has Implementing Regulation"@en .
 
 :hasLegalBasis a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Has legal basis"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "has Legal Basis"@en .
 
 :hasNoticeType a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Has notice type"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "has Notice Type"@en .
 
 :pin-buyer skos:editorialNote "this is a buyer profile, not a PIN."@en .
 
-:pmc skos:editorialNote "This value is NOT yet part of the notice-type controlled vocabulary."@en .
-
 :refersToAwardDecision a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Refers to award decision"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "refers To Award Decision"@en .
 
 :refersToContractToBeModified a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Refers to contract to be modified"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "refers To Contract To Be Modified"@en .
 
 :refersToLot a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Refers to lot"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "refers To Lot"@en .
 
 :refersToLotGroup a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Refers to lot group"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "refers To Lot Group"@en .
 
 :refersToLotGroupAwardInformation a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Refers to lot group award information"@en .
-
-:refersToNonPublishedElement a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Refers to non published element"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "refers To Lot Group Award Information"@en .
 
 :refersToNoticeAwardInformation a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Refers to notice award information"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "refers To Notice Award Information"@en .
 
 :refersToRole a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Refers to role"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "refers To Role"@en .
+
+rdf:PlainLiteral a rdfs:Datatype ;
+    skos:prefLabel "Plain Literal"@en .
+
+xsd:anyURI a rdfs:Datatype ;
+    skos:prefLabel "any URI"@en .
+
+xsd:boolean a rdfs:Datatype ;
+    skos:prefLabel "boolean"@en .
+
+xsd:date a rdfs:Datatype ;
+    skos:prefLabel "date"@en .
+
+xsd:dateTime a rdfs:Datatype ;
+    skos:prefLabel "date Time"@en .
+
+xsd:decimal a rdfs:Datatype ;
+    skos:prefLabel "decimal"@en .
+
+xsd:integer a rdfs:Datatype ;
+    skos:prefLabel "integer"@en .
 
 :DirectAwardPrenotificationNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :Notice ;
     skos:definition "Notice which sets out the Buyer's purchasing intention to award a Contract without prior notification of Competition."@en ;
-    skos:prefLabel "Direct award prenotification notice"@en .
+    skos:prefLabel "Direct Award Prenotification Notice"@en .
 
 :refersToProcedure a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Refers to procedure"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "refers To Procedure"@en .
 
 :SubcontractNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CompetitionNotice ;
-    skos:prefLabel "Subcontract notice"@en .
+    skos:prefLabel "Subcontract Notice"@en .
 
 :PIN-CFCStandardNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CompetitionNotice ;
-    skos:prefLabel "P i n- c f c standard notice"@en .
+    skos:prefLabel "PI N- CFC Standard Notice"@en .
 
 :QSNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CompetitionNotice ;
-    skos:prefLabel "Q s notice"@en .
+    skos:prefLabel "QS Notice"@en .
 
 :CNSocialNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CompetitionNotice ;
-    skos:prefLabel "C n social notice"@en .
+    skos:prefLabel "CN Social Notice"@en .
 
 :DesignContestNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :CompetitionNotice ;
-    skos:prefLabel "Design contest notice"@en .
+    skos:prefLabel "Design Contest Notice"@en .
 
 :DesignContestResultNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :ResultNotice ;
-    skos:prefLabel "Design contest result notice"@en .
-
-:ResultNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
-    rdfs:subClassOf :Notice ;
-    skos:definition "An announcement of the award or non-award of a Contract by a Buyer. (WG approval 27/03/2019)"@en ;
-    skos:prefLabel "Result notice"@en .
-
-:CANSocialNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
-    rdfs:subClassOf :ResultNotice ;
-    skos:prefLabel "C a n social notice"@en .
-
-:CANStandardNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
-    rdfs:subClassOf :ResultNotice ;
-    skos:prefLabel "C a n standard notice"@en .
-
-:CNStandardNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
-    rdfs:subClassOf :CompetitionNotice ;
-    skos:prefLabel "C n standard notice"@en .
-
-:PIN-CFCSocialNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
-    rdfs:subClassOf :CompetitionNotice ;
-    skos:prefLabel "P i n- c f c social notice"@en .
-
-:PINOnlyNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
-    rdfs:subClassOf :PlanningNotice ;
-    skos:definition "PriorInformationNotice"@en ;
-    skos:prefLabel "P i n only notice"@en .
-
-:PINTimeLimitNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
-    rdfs:subClassOf :PlanningNotice ;
-    skos:prefLabel "P i n time limit notice"@en .
+    skos:prefLabel "Design Contest Result Notice"@en .
 
 :PlanningNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :Notice ;
     skos:definition "Notice which sets out the Contracting Authority's purchasing intentions. It is used by Contracting Authorities to provide Suppliers with information about a Procurement Process."@en ;
     skos:editorialNote "When backwards compatibility to StandardForms is no longer required, switch to establishing the notice type constraint at this level."@en ;
-    skos:prefLabel "Planning notice"@en .
+    skos:prefLabel "Planning Notice"@en .
+
+:ResultNotice a owl:Class ;
+    rdfs:isDefinedBy :core ;
+    rdfs:subClassOf :Notice ;
+    skos:definition "An announcement of the award or non-award of a Contract by a Buyer. (WG approval 27/03/2019)"@en ;
+    skos:prefLabel "Result Notice"@en .
+
+:CANSocialNotice a owl:Class ;
+    rdfs:isDefinedBy :core ;
+    rdfs:subClassOf :ResultNotice ;
+    skos:prefLabel "CAN Social Notice"@en .
+
+:CANStandardNotice a owl:Class ;
+    rdfs:isDefinedBy :core ;
+    rdfs:subClassOf :ResultNotice ;
+    skos:prefLabel "CAN Standard Notice"@en .
+
+:CNStandardNotice a owl:Class ;
+    rdfs:isDefinedBy :core ;
+    rdfs:subClassOf :CompetitionNotice ;
+    skos:prefLabel "CN Standard Notice"@en .
+
+:PIN-CFCSocialNotice a owl:Class ;
+    rdfs:isDefinedBy :core ;
+    rdfs:subClassOf :CompetitionNotice ;
+    skos:prefLabel "PI N- CFC Social Notice"@en .
+
+:PINOnlyNotice a owl:Class ;
+    rdfs:isDefinedBy :core ;
+    rdfs:subClassOf :PlanningNotice ;
+    skos:definition "PriorInformationNotice"@en ;
+    skos:prefLabel "PIN Only Notice"@en .
+
+:PINTimeLimitNotice a owl:Class ;
+    rdfs:isDefinedBy :core ;
+    rdfs:subClassOf :PlanningNotice ;
+    skos:prefLabel "PIN Time Limit Notice"@en .
 
 :ContractModificationNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :Notice ;
     skos:definition "An announcement of the Modification Of a Contract/Concession during its term by a Procuring Entity."@en ;
-    skos:editorialNote "should we move refersToOriginalNotice at this level or should we use refersToNotice relation from the Notice level?"@en ;
-    skos:prefLabel "Contract modification notice"@en .
+    skos:prefLabel "Contract Modification Notice"@en .
 
 :PINProfileNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :PlanningNotice ;
-    skos:prefLabel "P i n profile notice"@en .
+    skos:prefLabel "PIN Profile Notice"@en .
 
 :CompetitionNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :Notice ;
     skos:definition "An announcement of the launch of a Procurement Procedure by a Procuring Entity. WG approval 18/05/2018"@en ;
-    skos:prefLabel "Competition notice"@en .
+    skos:prefLabel "Competition Notice"@en .
 
 :VoluntaryEx-AnteTransparencyNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy :core ;
     rdfs:subClassOf :DirectAwardPrenotificationNotice ;
     skos:definition "A Notice informing of the intention to award a Contract without prior publication of a Contract Notice. Additional Information: For European Notices above the threshold \"A means of advertising the intention to award the Contract without opening it up to formal Competition. A Contracting Authority may decide that a Contract does not require prior publication through a Contract Notice in the O.J.E.U. A reason for this decision may be that the Contract meets the exceptional conditions described in Article 31 of Directive 2004/18/EC. In a recent V.E.A.T notice the reason was listed as “extreme urgency brought about by events unforeseeable by the Contracting Entity and in accordance with the strict conditions stated in the Directive” . \"Voluntary Ex-Ante Transparency Notice\" (VEAT) where a Contracting Authority deems that a Contract does not require prior publication of a Contract Notice in the European Journal (OJEU). This may apply, for example, if the Contract meets the exceptional conditions justifying direct award of contracts. <b>This definition is still to be worked on.</b>"@en ;
-    skos:prefLabel "Voluntary ex- ante transparency notice"@en .
+    skos:prefLabel "Voluntary Ex- Ante Transparency Notice"@en .
 
 :StandardFormsNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "Standard forms notice"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "Standard Forms Notice"@en .
 
 :eFormsNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
-    skos:prefLabel "E forms notice"@en .
+    rdfs:isDefinedBy :core ;
+    skos:prefLabel "e Forms Notice"@en .
 
-:not a owl:Ontology ;
-    rdfs:label "eProcurement Ontology Ordering - core"@en ;
-    dcterms:created "2021-06-01"^^xsd:date ;
-    dcterms:description "The eProcurement Ontology Notice core describes the concepts and properties representing the European Public Procurement Notice domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en ;
-    dcterms:issued "2023-11-09"^^xsd:date ;
-    dcterms:license "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." ;
+:core a owl:Ontology ;
+    rdfs:label "This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:created "2025-02-24"^^xsd:date ;
+    dcterms:description "This artefact provides the definitions for the eProcurement Ontology Core.         This artefact excludes the restrictions.         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."@en ;
+    dcterms:issued "2025-02-24"^^xsd:date ;
+    dcterms:license "The Commission’s reuse policy is implemented by Commission Decision2011/833/EU of 12 December 2011 on the reuse of Commission documents          (OJ L 330,14.12.2011, p. 39 – https://eur-lex.europa.eu/eli/dec/2011/833/oj). Unlessotherwise noted, the reuse of this document is authorised under the          CreativeCommons Attribution 4.0 International (CC BY 4.0) licence (https://creativecommons.org/licenses/by/4.0/).This means that reuse is allowed, provided          that appropriate credit is given and any changes are indicated." ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "eProcurement Ontology Notice - core"@en ;
+    dcterms:title "ePO Core core"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from demo_ontology_module_CM.xml on 2023-11-09" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/home/index.html>,
-        <https://github.com/OP-TED/ePO/releases>,
+    rdfs:comment "This version is automatically generated from demo_ontology_module_CM.xml on 2025-02-24" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
         <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports cccev:,
-        <http://data.europa.eu/nuts>,
-        at-voc:,
-        dcterms:,
-        <http://www.opengis.net/ont/geosparql>,
-        <http://www.w3.org/2004/02/skos/core>,
-        <http://www.w3.org/2006/time>,
+    owl:imports dcterms:,
+        skos:,
         <http://www.w3.org/ns/adms>,
-        <http://www.w3.org/ns/locn>,
-        org:,
-        <http://www.w3.org/ns/person>,
-        foaf:,
-        <https://data.europa.eu/m8g/> ;
-    owl:incompatibleWith "3.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#not-3.1.0" ;
-    owl:versionIRI :not-4.0.0 ;
-    owl:versionInfo "4.0.0" .
+        <https://data.europa.eu/m8g> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#core-3.0.1" ;
+    owl:versionIRI :core-3.1.0 ;
+    owl:versionInfo "3.1.0" .
 

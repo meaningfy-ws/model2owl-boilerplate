@@ -80,11 +80,48 @@
                      <td>cccev:Evidence</td>
                      <td>Proof that a Requirement is met.
                         
+                        Additional Information:
+                        The class Evidence provides the means to support responses to Criteria or to a concrete
+                        Information Requirement or to an Information Concept inside an Information Requirement.
+                        The proof described by an Evidence can [1] verify a claim (i.e. is it true that John
+                        is 25, yes/no), [2] prove a condition (i.e. is John 18+, yes/no), or [3] simply provide
+                        data (i.e. the age of a person, namely 25). The proof can be given through documents
+                        or extracts of base registries, independently from its structure, format or medium
+                        used to exchange it: a pdf document, a video, a recording, etc.
                         </td>
                   </tr>
                   <tr>
                      <td>cccev:InformationConcept</td>
-                     <td>Piece of information that the Evidence provides or the Requirement needs.</td>
+                     <td>Piece of information that the Evidence provides or the Requirement needs.
+                        
+                        Additional Information:
+                        
+                        The Information Concept class offers the ability to describe conceptually the Requirements
+                        and provided facts in Evidences. In complementarity with the Supported Value class,
+                        this is a (first) step towards facilitating the assessment of the requirements in
+                        an automated way based on the Evidence provided.</td>
+                  </tr>
+                  <tr>
+                     <td>cccev:InformationRequirement</td>
+                     <td>Requested data that is to be proven by Evidence.
+                        
+                        Additional Information:
+                        
+                        Information Requirements are the most neutral kind of Requirements. They aim to request
+                        information in any form, e.g. a person's date of birth or a company's turnover. They
+                        represent requests for data that prove one or more facts of the real world in a formal
+                        manner, or that leads to the source of such a proof. They can be understood as 'requests
+                        for Evidences'. The response to an Information Requirement is an Evidence when the
+                        issuer of the response is an authoritative source (e.g. a Civil Registry providing
+                        data about a natural person for the provision of public service through the Single
+                        Digital Gateway). In other cases, the responses might not be issued by an authoritative
+                        source, but the issuer supports the responses with Evidences (or commits to support
+                        them timely, e.g. a self-declaration or a declaration of oath). The Information Requirement
+                        can require structured data or documents of any form. For structured data, the Requirement
+                        can use 'Concepts' to specify the structure and type of the data expected in the response.
+                        For both structured and unstructured data, the Information Requirement can indicate
+                        the expected Type of Evidence, its format, source, and other properties related to
+                        the Evidence.</td>
                   </tr>
                   <tr>
                      <td>cccev:Requirement</td>
@@ -136,11 +173,6 @@
                         WG Approval 28/04/2020</td>
                   </tr>
                   <tr>
-                     <td>cpv:Person</td>
-                     <td>A individual human being who may be dead or alive, but not imaginary.
-                        </td>
-                  </tr>
-                  <tr>
                      <td>cv:Channel</td>
                      <td>A medium through which Agents interact. 
                         
@@ -160,7 +192,8 @@
                   </tr>
                   <tr>
                      <td>dct:Location</td>
-                     <td>An identifiable geographic place or named place.</td>
+                     <td>An identifiable geographic place or named place.
+                        </td>
                   </tr>
                   <tr>
                      <td>epo:AccessTerm</td>
@@ -234,7 +267,13 @@
                   </tr>
                   <tr>
                      <td>epo:Awarder</td>
-                     <td>A Role of an Agent that signs the Award Decision.</td>
+                     <td>A Role of an Agent that signs the Award Decision.
+                        
+                        Additional information:
+                        BT-08 can be Awarding CBP; BG-03 is the Buyer. But Awarding CPB is not the same as
+                        the Buyer; the organisations may differ for these roles. Having the Awarder Role allows
+                        us to specify which Organisation is involved in the Award Decision.
+                        </td>
                   </tr>
                   <tr>
                      <td>epo:AwardEvaluationTerm</td>
@@ -251,6 +290,10 @@
                         
                         WG approval 05/08/2021
                         </td>
+                  </tr>
+                  <tr>
+                     <td>epo:AwardOutcome</td>
+                     <td></td>
                   </tr>
                   <tr>
                      <td>epo:BudgetProvider</td>
@@ -324,6 +367,42 @@
                         WG approval 05/08/2021</td>
                   </tr>
                   <tr>
+                     <td>epo:Certificate</td>
+                     <td>Proof of conformance of the instance of the concept to a defined set of criteria.
+                        
+                        
+                        Additional Information:
+                        Certificates provide assurance of credibility, trust, and transparency in the procurement
+                        process. 
+                        
+                        WG approval 16/05/2023
+                        </td>
+                  </tr>
+                  <tr>
+                     <td>epo:CertificationLabel</td>
+                     <td>Concept that stands for a set of norms, expectations, standards and policies.
+                        
+                        Additional Information:
+                        Such standards may relate to social, ethical and quality etc.
+                        
+                        WG approval 26/07/2022
+                        </td>
+                  </tr>
+                  <tr>
+                     <td>epo:Certifier</td>
+                     <td>The role of an agent who issues a certificate. 
+                        
+                        Additional Information:
+                        The certifier is responsible for verifying and confirming the conformance of the instance
+                        of the concept to a defined set of criteria.
+                        
+                        WG approval 16/05/2023</td>
+                  </tr>
+                  <tr>
+                     <td>epo:ChangeInformation</td>
+                     <td>Alteration to previously provided details.</td>
+                  </tr>
+                  <tr>
                      <td>epo:ConcessionContract</td>
                      <td>A Contract between one or more Buyers and one or more Economic Operators giving the
                         right to the Economic Operators to exploit the rights foreseen in the Contract which
@@ -336,7 +415,7 @@
                      <td></td>
                   </tr>
                   <tr>
-                     <td>epo:ContextSpecificDescription</td>
+                     <td>epo:ContextDescription</td>
                      <td>A description concerning a Procurement Object or a Notice in a specific Situation
                         Context. 
                         
@@ -344,7 +423,7 @@
                         The description has its own identity (+I) but is dependent (+D) on the concerned Entity.
                         
                         
-                        We say that ContextSpecificDescription *concerns* an Entity.
+                        We say that ContextDescription *concerns* an Entity.
                         </td>
                   </tr>
                   <tr>
@@ -369,16 +448,11 @@
                         Additional information:
                         This includes Concession Contracts.
                         
-                        (WG approval 01/06/2018)</td>
+                        WG approval 01/06/2018</td>
                   </tr>
                   <tr>
                      <td>epo:ContractLotCompletionInformation</td>
                      <td>Information related to a given Lot at the end of the procurement.</td>
-                  </tr>
-                  <tr>
-                     <td>epo:ContractModification</td>
-                     <td>An Announcement of the Modification Of a Contract/Concession during its Term by a
-                        Buyer.</td>
                   </tr>
                   <tr>
                      <td>epo:Contractor</td>
@@ -449,15 +523,6 @@
                         WG approval 23/05/2023</td>
                   </tr>
                   <tr>
-                     <td>epo:DynamicPurchasingSystem</td>
-                     <td>An electronic System that is set up by a Buyer which lists the Economic Operators
-                        that satisfy the Qualification Criteria, which may later be put into competition via
-                        a Mini-Competition in view of awarding a Purchase Contract.
-                        
-                        WG approval 23/05/2023
-                        </td>
-                  </tr>
-                  <tr>
                      <td>epo:EAuctionTechnique</td>
                      <td>A repetitive Technique in which new Prices, revised downwards, and/or new values concerning
                         certain elements of Tenders are bid on-line.
@@ -474,28 +539,6 @@
                   <tr>
                      <td>epo:ElectronicSignature</td>
                      <td></td>
-                  </tr>
-                  <tr>
-                     <td>epo:ElementChangeDescription</td>
-                     <td>Information about a specific field to be changed with regard to a previous Notice.</td>
-                  </tr>
-                  <tr>
-                     <td>epo:ElementConfidentialityDescription</td>
-                     <td>Information about a specific field not intended for publication. 
-                        
-                        Additional Information:
-                        In the model, a field is identified by a combination of a class and a property on
-                        that class. Therefore, these two references should be both provided.
-                        </td>
-                  </tr>
-                  <tr>
-                     <td>epo:ElementDescription</td>
-                     <td>Description about a specific resource.</td>
-                  </tr>
-                  <tr>
-                     <td>epo:ElementModificationDescription</td>
-                     <td>Information about a specific field to be changed with regard to the Modification Of
-                        a Contract.</td>
                   </tr>
                   <tr>
                      <td>epo:EmploymentInformationProvider</td>
@@ -591,7 +634,6 @@
                      <td>Approach whereby Buyers seek to procure with a reduced Environmental Impact.
                         
                         Additional Information:
-                        
                         The approach may apply to the complete life cycle. The reduced Environmental Impact
                         is in comparison to goods, services and works with the same primary function that
                         would otherwise be procured. 
@@ -607,16 +649,7 @@
                   </tr>
                   <tr>
                      <td>epo:InnovativeProcurement</td>
-                     <td>An instance of the class InnovativeProcurement is represented in eForms with the code
-                        "inn-pur" defined in the codelist Strategic-Procurement.
-                        
-                        Research (21/01/2020):
-                        
-                        Purchasing and early adoption of solutions which are not yet available on large scale
-                        commercial basis. 
-                        
-                        Source: Adapted from the Digital Single Market's Policy on Public Procurement of Innovative
-                        Solutions. https://ec.europa.eu/digital-single-market/en/public-procurement-innovative-solutions
+                     <td>Approach whereby Buyers seek to procure an innovative work, supply or service.
                         
                         Additional Information: 
                         ‘innovation’ means the implementation of a new or significantly improved product,
@@ -628,8 +661,7 @@
                         See: Directive 2014/24
                         Articles: 2, 26 (3), 31, 67 (2.a)
                         
-                        Question: 
-                        Is  Pre-Commercial Procurement (PCP) another type of Strategic Procurement?</td>
+                        </td>
                   </tr>
                   <tr>
                      <td>epo:JuryMember</td>
@@ -650,7 +682,7 @@
                         WG approval 12/09/2018</td>
                   </tr>
                   <tr>
-                     <td>epo:LotAwardDecision</td>
+                     <td>epo:LotAwardOutcome</td>
                      <td>Result concerning the Lot attributed by the Awarder.</td>
                   </tr>
                   <tr>
@@ -687,23 +719,16 @@
                         WG approval 20/04/2021</td>
                   </tr>
                   <tr>
-                     <td>epo:MiniCompetition</td>
-                     <td>A process where multiple winners or candidates of previous stages of a procedure bid
-                        for a specific procurement.
+                     <td>epo:MiniCompetitionAwardOutcome</td>
+                     <td>Result concerning the process where multiple winners or candidates of previous stages
+                        of a procedure bid for a specific procurement attributed by the Awarder.
                         
                         Additional Information:
                         It is typically used in framework agreements where the suppliers have already been
                         pre-selected, and the mini competition is used to determine which supplier is best
                         suited for a particular project or contract.
                         It is also used in a Dynamic Purchasing System where the suppliers come from a list
-                        of Candidates.
-                        
-                        WG approval 30/05/2023</td>
-                  </tr>
-                  <tr>
-                     <td>epo:MiniCompetitionAwardDecision</td>
-                     <td>Result concerning the Mini-Competition attributed by the Awarder.
-                        </td>
+                        of Candidates.</td>
                   </tr>
                   <tr>
                      <td>epo:MonetaryValue</td>
@@ -731,6 +756,18 @@
                      <td>Conditions and stipulations</td>
                   </tr>
                   <tr>
+                     <td>epo:NonPublishedInformation</td>
+                     <td>Information about fields not published in this Notice. 
+                        
+                        Additional Information:
+                        The non-published information may become available at a later date and may differ
+                        from one element to another within a given Document.
+                        
+                        Examples of fields that may not be immediately published are Winner, Tender and Procedure
+                        Lot Result, etc., e.g. for security reasons.
+                        </td>
+                  </tr>
+                  <tr>
                      <td>epo:Notice</td>
                      <td>Document published by the Buyer about market opportunities and results.
                         
@@ -740,14 +777,6 @@
                   <tr>
                      <td>epo:NoticeAwardInformation</td>
                      <td>Information about an Award Notice.</td>
-                  </tr>
-                  <tr>
-                     <td>epo:NoticeChange</td>
-                     <td>Information about a corrigendum in a Notice.</td>
-                  </tr>
-                  <tr>
-                     <td>epo:NoticeDescription</td>
-                     <td>Descriptions about the notice publishing, or providing evolutions of resources.</td>
                   </tr>
                   <tr>
                      <td>epo:Offer</td>
@@ -842,7 +871,7 @@
                      <td>epo:Period</td>
                      <td>A time interval or a Duration.
                         
-                        (WG approval 28/04/2020)
+                        WG approval 28/04/2020
                         </td>
                   </tr>
                   <tr>
@@ -987,27 +1016,9 @@
                      <td>A collaborative enterprise that is carefully planned to achieve a particular aim.</td>
                   </tr>
                   <tr>
-                     <td>epo:PublicationProvision</td>
-                     <td>Information about fields not intended for publication. 
-                        
-                        
-                        Additional Information:
-                        The non-published information may become available at a later date and may differ
-                        from one element to another within a given Document.
-                        
-                        Examples of fields that may not be immediately published are Winner, Tender and Procedure
-                        Lot Result, etc., e.g. for security reasons.
-                        
-                        WG Approval 16/05/2019
-                        
-                        
-                        
-                        
-                        </td>
-                  </tr>
-                  <tr>
                      <td>epo:PurchaseContract</td>
-                     <td>A Contract resulting from a Dynamic Purchasing System or Framework Agreement Contract.</td>
+                     <td>A Contract resulting from using a Dynamic Purchasing System Technique or Framework
+                        Agreement Technique.</td>
                   </tr>
                   <tr>
                      <td>epo:Purpose</td>
@@ -1117,6 +1128,12 @@
                         This class corresponds  in eForms to BG-612     Buyer Review Summary.</td>
                   </tr>
                   <tr>
+                     <td>epo:ReviewTerm</td>
+                     <td>Conditions and stipulations defining particularities of the review.
+                        
+                        WG approval 23/11/2018</td>
+                  </tr>
+                  <tr>
                      <td>epo:SecurityClearanceTerm</td>
                      <td>Conditions and stipulations about the status requested of individuals allowing them
                         access to classified information (state or organisational secrets) or to restricted
@@ -1158,13 +1175,10 @@
                   </tr>
                   <tr>
                      <td>epo:SocialProcurement</td>
-                     <td>An instance of the class SocialProcurement  is represented in eForms with the code
-                        "soc-obj" defined in the codelist Strategic-Procurement.
+                     <td>Approach whereby Buyers seek to procure by fulfilling social objectives.
                         
-                        
-                        Research (21/01/2020): 
-                        Socially Responsible Public Procurement (SRPP):
-                        
+                        Additional Information: 
+                        Socially Responsible Public Procurement (SRPP) -
                         ‘SRPP’ means Procurement Operations that take into account one or more of the following
                         social considerations: employment opportunities, decent work, compliance with social
                         and labour rights, social inclusion (including persons with disabilities), equal opportunities,
@@ -1233,7 +1247,7 @@
                         At tendering time, entities relied upon by the Economic Operators can be Subcontractors
                         or not. 
                         
-                        When modelling ESPD we well analyze whether we need or not a Role named "relied upon".
+                        When modelling ESPD we will analyze whether we need or not a Role named "relied upon".
                         
                         WG approval 05/08/2021
                         </td>
@@ -1276,6 +1290,13 @@
                   <tr>
                      <td>epo:TechnicalAbilitySummary</td>
                      <td></td>
+                  </tr>
+                  <tr>
+                     <td>epo:TechnicalSpecification</td>
+                     <td>A set of documented Requirements applicable to the object of the Procurement.
+                        Additional Information: 
+                        A specification often includes technical standards.
+                        WG approval: 20/04/2021</td>
                   </tr>
                   <tr>
                      <td>epo:Technique</td>
@@ -1332,6 +1353,10 @@
                   <tr>
                      <td>epo:Term</td>
                      <td>A governing condition or stipulation.</td>
+                  </tr>
+                  <tr>
+                     <td>epo:VehicleInformation</td>
+                     <td></td>
                   </tr>
                   <tr>
                      <td>epo:Winner</td>
@@ -1405,15 +1430,13 @@
                         </td>
                   </tr>
                   <tr>
-                     <td>owl:Thing</td>
-                     <td>Any individual in the domain of discourse is a Thing. 
-                        
-                        
-                        Additional Information:
-                        
-                        The most basic concepts in a domain should correspond to classes that are the roots
-                        of various taxonomic trees. Every individual in the OWL world is a member of the class
-                        owl:Thing.</td>
+                     <td>person:Person</td>
+                     <td>A individual human being who may be dead or alive, but not imaginary.
+                        </td>
+                  </tr>
+                  <tr>
+                     <td>time:Duration</td>
+                     <td>Duration of a temporal extent expressed as a number scaled by a temporal unit.</td>
                   </tr>
                </tbody>
             </table>
@@ -1472,7 +1495,7 @@
                      <td>The email of the Organisation.
                         
                         </td>
-                     <td>rdf:PlainLiteral [0..1]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
                      <td>cpov:ContactPoint</td>
@@ -1482,7 +1505,7 @@
                      <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>cpv:Person</td>
+                     <td>person:Person</td>
                      <td>cv:birthDate</td>
                      <td>The point in time on which the Person was born.</td>
                      <td>xsd:date [0..1]</td>
@@ -1506,14 +1529,14 @@
                      <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>cpv:Person</td>
+                     <td>person:Person</td>
                      <td>dct:alternative</td>
                      <td>Any name by which an individual is known other than their full name.
                         WG 09/11/2021</td>
-                     <td>rdf:langString [0..*]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:ProcurementElement<br>epo:System<br>epo:AgentInRole<br>cpov:ContactPoint<br>cv:Channel<br>epo:NonDisclosureAgreementTerm<br>epo:SecurityClearanceTerm<br>epo:SubcontractTerm<br>cccev:InformationConcept<br>cccev:Requirement<br>epo:Technique<br>epo:SubcontractingEstimate<br>epo:ElectronicSignature<br>epo:Document<br>epo:Fund<br></td>
+                     <td>cccev:Evidence<br>cccev:InformationConcept<br>cccev:Requirement<br>cpov:ContactPoint<br>cv:Channel<br>epo:AgentInRole<br>epo:Document<br>epo:ElectronicSignature<br>epo:Fund<br>epo:NonDisclosureAgreementTerm<br>epo:SecurityClearanceTerm<br>epo:SubcontractingEstimate<br>epo:SubcontractTerm<br>epo:System<br>epo:Technique<br>epo:LotGroup<br>epo:ProcurementElement<br>epo:TenderGroup<br></td>
                      <td>dct:description</td>
                      <td>An account of the resource.
                         
@@ -1551,6 +1574,31 @@
                         Description may include but is not limited to: an abstract, a table of contents, a
                         graphical representation, or a free-text account of the resource.
                         
+                        WG Approval 30/05/2023 An account of the resource.
+                        
+                        Additional Information:
+                        Description may include but is not limited to: an abstract, a table of contents, a
+                        graphical representation, or a free-text account of the resource.
+                        
+                        WG Approval 30/05/2023
+                         An account of the resource.
+                        
+                        Additional Information:
+                        Description may include but is not limited to: an abstract, a table of contents, a
+                        graphical representation, or a free-text account of the resource.
+                        
+                        WG Approval 30/05/2023 An account of the resource.
+                        
+                        Additional Information:
+                        Description may include but is not limited to: an abstract, a table of contents, a
+                        graphical representation, or a free-text account of the resource.
+                        
+                        WG Approval 30/05/2023 An account of the resource.
+                        
+                        Additional Information:
+                        Description may include but is not limited to: an abstract, a table of contents, a
+                        graphical representation, or a free-text account of the resource.
+                        
                         WG Approval 30/05/2023
                          An account of the resource.
                         
@@ -1588,7 +1636,8 @@
                         Description may include but is not limited to: an abstract, a table of contents, a
                         graphical representation, or a free-text account of the resource.
                         
-                        WG Approval 30/05/2023 An account of the resource.
+                        WG Approval 30/05/2023
+                         An account of the resource.
                         
                         Additional Information:
                         Description may include but is not limited to: an abstract, a table of contents, a
@@ -1601,14 +1650,8 @@
                         graphical representation, or a free-text account of the resource.
                         
                         WG Approval 30/05/2023
-                         An account of the resource.
-                        
-                        Additional Information:
-                        Description may include but is not limited to: an abstract, a table of contents, a
-                        graphical representation, or a free-text account of the resource.
-                        
-                        WG Approval 30/05/2023</td>
-                     <td>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..*]<br></td>
+                        </td>
+                     <td>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [1..1]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:Document</td>
@@ -1627,24 +1670,30 @@
                      <td>xsd:dateTime [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:ProcurementElement<br>foaf:Agent<br>epo:AgentInRole<br>epo:Document<br>epo:Fund<br></td>
+                     <td>epo:AgentInRole<br>epo:Document<br>epo:Fund<br>foaf:Agent<br>epo:LotGroup<br>epo:ProcurementElement<br>epo:TenderGroup<br></td>
                      <td>dct:title</td>
                      <td>A name given to the resource.
                         
-                        WG approval 30/05/2023 A name given to the resource.
-                        
-                        WG approval 30/05/2023 A name given to the resource.
-                        
                         WG approval 30/05/2023
                          A name given to the resource.
                         
                         WG approval 30/05/2023
                         
                          A name given to the resource.
+                        
+                        WG approval 30/05/2023
+                         A name given to the resource.
+                        
+                        WG approval 30/05/2023 A name given to the resource.
+                        
+                        WG approval 30/05/2023
+                         A name given to the resource.
+                        
+                        WG approval 30/05/2023 A name given to the resource.
                         
                         WG approval 30/05/2023
                         </td>
-                     <td>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..*]<br></td>
+                     <td>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:SelectionCriteriaSummary</td>
@@ -1705,7 +1754,7 @@
                      <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:ElementConfidentialityDescription</td>
+                     <td>epo:NonPublishedInformation</td>
                      <td>epo:hasAccessibilityDate</td>
                      <td>The date at which unpublished data shall be published.
                         
@@ -1733,17 +1782,19 @@
                      <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:ProcurementObject<br>epo:Notice<br>epo:ElementChangeDescription<br></td>
+                     <td>epo:ChangeInformation<br>epo:Notice<br>epo:ProcurementCriterion<br>epo:ProcurementObject<br></td>
                      <td>epo:hasAdditionalInformation</td>
                      <td>Supplementary data about the instance of the concept.
                         
-                        WG Approval 15/10/2019 Supplementary data about the instance of the concept.
-                        
-                        WG Approval 15/10/2019 Supplementary data about the instance of the concept.
-                        
                         WG Approval 15/10/2019
-                        </td>
-                     <td>rdf:PlainLiteral [0..*]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..1]<br></td>
+                         Supplementary data about the instance of the concept.
+                        
+                        WG Approval 15/10/2019 Supplementary data about the instance of the concept.
+                        
+                        WG Approval 15/10/2019 Supplementary data about the instance of the concept.
+                        
+                        WG Approval 15/10/2019</td>
+                     <td>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..1]<br>rdf:PlainLiteral [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:AccessTerm</td>
@@ -1909,7 +1960,15 @@
                      <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:ElementChangeDescription</td>
+                     <td>epo:Certificate</td>
+                     <td>epo:hasCertificationNumber</td>
+                     <td>The unique identifier of the certificate.
+                        
+                        WG approval 26/07/2022</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:ChangeInformation</td>
                      <td>epo:hasChangeDescription</td>
                      <td>Explanatory text about the instance of the concept.
                         
@@ -1917,7 +1976,7 @@
                      <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:ElementChangeDescription</td>
+                     <td>epo:ChangeInformation</td>
                      <td>epo:hasChangeReasonDescription</td>
                      <td>Explanatory text about why the element is altered.
                         
@@ -1926,7 +1985,7 @@
                      <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:GreenProcurement</td>
+                     <td>epo:VehicleInformation</td>
                      <td>epo:hasCleanVehicles</td>
                      <td>The number of all clean vehicles that have either been purchased, leased, rented,
                         hired-purchased or their use has been contractually committed to for the provision
@@ -1947,7 +2006,7 @@
                      <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:ElementConfidentialityDescription</td>
+                     <td>epo:NonPublishedInformation</td>
                      <td>epo:hasConfidentialityJustification</td>
                      <td>A narrative explanation of why data is not published.
                         
@@ -2035,12 +2094,18 @@
                      <td>xsd:date [0..1]</td>
                   </tr>
                   <tr>
+                     <td>epo:DesignContestRegimeTerm</td>
+                     <td>epo:hasDescriptionOfPrizes</td>
+                     <td></td>
+                     <td>rdf:PlainLiteral [0..1]</td>
+                  </tr>
+                  <tr>
                      <td>epo:Document</td>
                      <td>epo:hasDispatchDate</td>
-                     <td>Date of transmission of a record to an organisation.
+                     <td>Date and time of transmission of a record to an Organization.
                         
-                        WG Approval 12/05/2020</td>
-                     <td>xsd:date [0..1]</td>
+                        WG Approval 31/08/2023</td>
+                     <td>xsd:dateTime [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:FrameworkAgreementTerm</td>
@@ -2111,26 +2176,15 @@
                      <td>xsd:integer [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:ReviewObject<br>epo:ElementChangeDescription<br>epo:ElementModificationDescription<br></td>
+                     <td>epo:ReviewObject</td>
                      <td>epo:hasElementReference</td>
                      <td>Reference to the class instance in the current notice.
                         
                         Additional information: 
                         This corresponds in eForms to BT-13716 Change Previous Notice Section Identifier,
                         BT-786     Review Notice Section Identifier and BT-1501     Modification Previous
-                        Notice Section Identifier. Reference to the class instance in the current notice.
-                        
-                        Additional information: 
-                        This corresponds in eForms to BT-13716 Change Previous Notice Section Identifier,
-                        BT-786     Review Notice Section Identifier and BT-1501     Modification Previous
-                        Notice Section Identifier. Reference to the class instance in the current notice.
-                        
-                        Additional information: 
-                        This corresponds in eForms to BT-13716 Change Previous Notice Section Identifier,
-                        BT-786     Review Notice Section Identifier and BT-1501     Modification Previous
-                        Notice Section Identifier.
-                        </td>
-                     <td>xsd:anyURI [0..*]<br>xsd:anyURI [1..1]<br>xsd:anyURI [0..1]<br></td>
+                        Notice Section Identifier.</td>
+                     <td>xsd:anyURI [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:Period</td>
@@ -2281,7 +2335,7 @@
                      <td>epo:Notice</td>
                      <td>epo:hasFormNumber</td>
                      <td></td>
-                     <td>xsd:integer [0..1]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:ProcurementCriterion</td>
@@ -2348,23 +2402,17 @@
                      <td>xsd:integer [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:ElementConfidentialityDescription</td>
-                     <td>epo:hasInstanceReference</td>
-                     <td>The URI of a given class that is being referred to.</td>
-                     <td>xsd:anyURI [1..1]</td>
-                  </tr>
-                  <tr>
-                     <td>org:Organization<br>cpov:ContactPoint<br></td>
+                     <td>cpov:ContactPoint<br>org:Organization<br></td>
                      <td>epo:hasInternetAddress</td>
                      <td>The main web page used by the instance of the concept.
                         
                         WG Approval 01/06/2023
+                        
                          The main web page used by the instance of the concept.
                         
                         WG Approval 01/06/2023
-                        
                         </td>
-                     <td>xsd:anyURI [0..*]<br>xsd:anyURI [0..1]<br></td>
+                     <td>xsd:anyURI [0..1]<br>xsd:anyURI [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:DirectAwardTerm</td>
@@ -2419,12 +2467,6 @@
                         
                         WG Approval 10/01/2023</td>
                      <td>rdf:PlainLiteral [0..*]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:Notice</td>
-                     <td>epo:hasLongTitle</td>
-                     <td></td>
-                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:ProcedureTerm</td>
@@ -2595,32 +2637,6 @@
                      <td>xsd:decimal [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:ElementModificationDescription</td>
-                     <td>epo:hasModificationDescription</td>
-                     <td>An explanatory text about this context. 
-                        
-                        Additional Information
-                        
-                        This corresponds in Standard forms to Field VII.2.1 in F20
-                        This corresponds in eForms to BT-202 .
-                        
-                        WG Approval 5/11/2019</td>
-                     <td>rdf:PlainLiteral [0..*]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:ElementModificationDescription</td>
-                     <td>epo:hasModificationReasonDescription</td>
-                     <td>An explanation about the reasons for using the concept. 
-                        
-                        Additional Information
-                        This corresponds in Standard forms to Field VII.2.2.2 and VII.2.2.4 in F20.
-                        
-                        This corresponds in eForms to BT-201 .
-                        
-                        WG Approval 5/11/2019</td>
-                     <td>rdf:PlainLiteral [0..*]</td>
-                  </tr>
-                  <tr>
                      <td>epo:ProcedureTerm</td>
                      <td>epo:hasNationalProcedureRules</td>
                      <td></td>
@@ -2638,7 +2654,7 @@
                      <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:LotAwardDecision</td>
+                     <td>epo:LotAwardOutcome</td>
                      <td>epo:hasNonAwardedContractNumber</td>
                      <td>The number the contract would have had if it had been awarded. 
                         
@@ -2652,7 +2668,7 @@
                      <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:LotAwardDecision</td>
+                     <td>epo:LotAwardOutcome</td>
                      <td>epo:hasNonAwardedContractTitle</td>
                      <td>The title the contract would have had if it had been awarded. 
                         
@@ -2783,19 +2799,6 @@
                      <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>org:Organization</td>
-                     <td>epo:hasOrganisationUnitName</td>
-                     <td>The name of a subpart of an organisation.
-                        
-                        Additional Information:
-                        E.g. the relevant department of a large organisation.
-                        
-                        We added this attribute in case of eProcurement notices where the Buyer is actually
-                        a part of an Organization and the rest of the properties apply to the rest of the
-                        Organisation as well.</td>
-                     <td>rdf:PlainLiteral [0..1]</td>
-                  </tr>
-                  <tr>
                      <td>epo:SubmissionStatisticalInformation</td>
                      <td>epo:hasOtherCountriesReceivedTenders</td>
                      <td></td>
@@ -2879,27 +2882,6 @@
                      <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:PublicationProvision</td>
-                     <td>epo:hasPreferredPublicationDate</td>
-                     <td>The date the buyer would like to have the record made publicly available.
-                        
-                        Additional Information:
-                        This corresponds in eForms to BT-738 Notice Publication Date Preferred.
-                        
-                        WG Approval 12/05/2020</td>
-                     <td>xsd:date [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:ElementChangeDescription</td>
-                     <td>epo:hasPreviousVersionOfElementReference</td>
-                     <td>Reference to the class instance in the previous version of the notice, which was changed.
-                        
-                        Additional information: 
-                        This corresponds in eForms to BT-13716 Change Previous Notice Section Identifier.
-                        </td>
-                     <td>xsd:anyURI [0..1]</td>
-                  </tr>
-                  <tr>
                      <td>epo:Prize</td>
                      <td>epo:hasPrizeRank</td>
                      <td>The position of the prize (e.g. first place, second place) in a design contest list
@@ -2910,7 +2892,7 @@
                      <td>xsd:integer [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:ElementChangeDescription</td>
+                     <td>epo:ChangeInformation</td>
                      <td>epo:hasProcurementDocumentChangeDate</td>
                      <td>The date and time of the change.
                         
@@ -2919,13 +2901,7 @@
                         
                         WG Approval 5/11/2019
                         </td>
-                     <td>xsd:date [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:ElementConfidentialityDescription</td>
-                     <td>epo:hasPropertyReference</td>
-                     <td>The URI of a given attribute (property) that is being referred to.</td>
-                     <td>xsd:anyURI [1..1]</td>
+                     <td>xsd:dateTime [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:AccessTerm</td>
@@ -3069,6 +3045,15 @@
                      <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
+                     <td>epo:CertificationLabel</td>
+                     <td>epo:hasReferenceURI</td>
+                     <td>A reference to where the label specification (norms, expectations, standards and policies)
+                        can be found.
+                        
+                        WG approval 26/07/2022</td>
+                     <td>xsd:anyURI [0..1]</td>
+                  </tr>
+                  <tr>
                      <td>epo:ContractTerm</td>
                      <td>epo:hasRenewalDescription</td>
                      <td>Any other information about the renewal(s).
@@ -3087,21 +3072,6 @@
                      <td>xsd:date [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:ContractTerm</td>
-                     <td>epo:hasReservedExecution</td>
-                     <td>The execution of the contract is restricted to the framework of sheltered employment
-                        programmes.
-                        
-                        Additional information:
-                        This property corresponds in eForms to BT-736
-                        
-                        WG Approval 12/09/2019
-                        
-                        The codelist to be used is at-voc:applicability which is available at http://publications.europa.eu/resource/dataset/applicability
-                        </td>
-                     <td>xsd:boolean [0..1]</td>
-                  </tr>
-                  <tr>
                      <td>epo:AccessTerm</td>
                      <td>epo:hasRestrictedAccessURL</td>
                      <td>The internet address with information on accessing the restricted (part of the) procurement
@@ -3113,6 +3083,22 @@
                      <td>xsd:anyURI [0..1]</td>
                   </tr>
                   <tr>
+                     <td>epo:ReviewTerm</td>
+                     <td>epo:hasReviewDeadline</td>
+                     <td>The time limit for review procedures.
+                        
+                        WG Approval 09/11/2021</td>
+                     <td>xsd:dateTime [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:ReviewTerm</td>
+                     <td>epo:hasReviewDeadlineInformation</td>
+                     <td>The description of the time limits for review procedures.
+                        
+                        WG Approval 01/10/2019</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>epo:ReviewIrregularitySummary</td>
                      <td>epo:hasReviewIrregularityCount</td>
                      <td>The number of requests for a given irregularity.
@@ -3120,6 +3106,15 @@
                         Additional information:
                         This attribute corresponds in eForms to BT-635 Buyer Review Requests Count.</td>
                      <td>xsd:integer [1..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:ReviewTerm</td>
+                     <td>epo:hasReviewProcedure</td>
+                     <td>The description of the method used to request the verification that the procedure
+                        has been carried out correctly.
+                        
+                        WG Approval 09/11/2021</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:ReviewObject</td>
@@ -3167,6 +3162,12 @@
                         
                         WG Approval 05/03/2020
                         </td>
+                     <td>xsd:integer [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:SubmissionStatisticalInformation</td>
+                     <td>epo:hasSMEReceivedTendersExcludingSubcontractors</td>
+                     <td></td>
                      <td>xsd:integer [0..1]</td>
                   </tr>
                   <tr>
@@ -3256,7 +3257,7 @@
                      <td>xsd:integer [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:GreenProcurement</td>
+                     <td>epo:VehicleInformation</td>
                      <td>epo:hasTotalVehicles</td>
                      <td>The number of all vehicles (regardless of whether clean or not) that have either been
                         purchased, leased, rented, hired-purchased or their use has been contractually committed
@@ -3293,7 +3294,7 @@
                      <td>xsd:integer [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:Fund</td>
+                     <td>cccev:Evidence<br>epo:Fund<br></td>
                      <td>epo:hasURL</td>
                      <td>The identifier of a resource.
                         
@@ -3309,8 +3310,23 @@
                         5. The URL of the system used to exchange information between Buyer and EO for questions
                         and clarifications;
                         
+                        WG Approval 30/09/2019
+                         The identifier of a resource.
+                        
+                        Additional Information
+                        
+                        For example:
+                        
+                        1. The URL of the system from where to access the procurement documents;
+                        2. The URL of the system for the submission of tender documents;
+                        3. The URL of the system from where to download a tool to communicate with the Buyer;
+                        4. The URL of the system used by a Technique to allow Economic Operators to exchange
+                        information with the Buyer (e.g. eAuction and DPS Systems)
+                        5. The URL of the system used to exchange information between Buyer and EO for questions
+                        and clarifications;
+                        
                         WG Approval 30/09/2019</td>
-                     <td>xsd:anyURI [0..1]</td>
+                     <td>xsd:anyURI [0..1]<br>xsd:anyURI [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:Document</td>
@@ -3340,7 +3356,7 @@
                      <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:GreenProcurement</td>
+                     <td>epo:VehicleInformation</td>
                      <td>epo:hasZeroEmissionVehicles</td>
                      <td>The number of all zero-emission heavy-duty vehicles that have either been purchased,
                         leased, rented, hired-purchased or their use has been contractually committed to for
@@ -3492,12 +3508,6 @@
                      <td>xsd:boolean [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:Notice</td>
-                     <td>epo:isEUInstitution</td>
-                     <td></td>
-                     <td>xsd:boolean [0..1]</td>
-                  </tr>
-                  <tr>
                      <td>epo:SubmissionTerm</td>
                      <td>epo:isGuaranteeRequired</td>
                      <td>The submitted information must include a financial commitment to be used in case of
@@ -3579,7 +3589,7 @@
                      <td>xsd:boolean [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:ElementChangeDescription</td>
+                     <td>epo:ChangeInformation</td>
                      <td>epo:isProcurementDocumentChanged</td>
                      <td>One or more procurement documents have been changed.
                         
@@ -3650,15 +3660,8 @@
                   </tr>
                   <tr>
                      <td>epo:ProcedureTerm</td>
-                     <td>epo:isSubmissionForAllLotsAllowed</td>
-                     <td>Indicates whether tenders may be submitted for all Lots.
-                        
-                        Additional information:
-                        This field is used to complement the SubmissionTerms (which are at the Lot level)
-                        for the Procedure level which is covered by the regulation (EU)-2015-1986 (modeled
-                        in the TED Standard Forms)
-                        
-                        WG approval 23/08/2022
+                     <td>epo:isSubmissionForAllLotsRequired</td>
+                     <td>Indicates whether tenders must be submitted for all Lots.
                         </td>
                      <td>xsd:boolean [0..1]</td>
                   </tr>
@@ -3729,24 +3732,31 @@
                      <td>xsd:boolean [0..1]</td>
                   </tr>
                   <tr>
-                     <td>cpv:Person</td>
+                     <td>epo:GreenProcurement</td>
+                     <td>epo:usesCleanVehicleDirective</td>
+                     <td>The procurement falls within the scope of the European Parliament and Council 2009/33/EC
+                        (Clean Vehicles Directive – CVD).</td>
+                     <td>xsd:boolean [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>person:Person</td>
                      <td>foaf:familyName</td>
                      <td>The hereditary surname of a family.
                         </td>
-                     <td>rdf:langString [0..*]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>cpv:Person</td>
+                     <td>person:Person</td>
                      <td>foaf:givenName</td>
                      <td>The name(s) that identify the Person within a family with a common surname.
                         </td>
-                     <td>rdf:langString [0..*]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>cpv:Person</td>
+                     <td>person:Person</td>
                      <td>foaf:name</td>
                      <td>The complete name of the Person as one string.</td>
-                     <td>rdf:langString [0..*]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
                      <td>locn:Address</td>
@@ -3756,7 +3766,7 @@
                         
                         Additional Information:
                         This would typically be part of a city, a neighbourhood or village, e.g. Montmartre.</td>
-                     <td>rdf:langString [0..1]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>locn:Address</td>
@@ -3771,7 +3781,7 @@
                         either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing
                         the two. The Country controlled vocabulary from the Publications Office can be reused
                         for this.</td>
-                     <td>rdf:langString [0..1]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>locn:Address</td>
@@ -3787,7 +3797,7 @@
                         of Paris is for example expressed as "http://publications.europa.eu/resource/authority/atu/FRA_AR_PAR01"
                         in the ATU controlled vocabulary.
                         </td>
-                     <td>rdf:langString [0..1]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>locn:Address</td>
@@ -3802,7 +3812,7 @@
                         an address label, (2) vCard's label property has a domain of vCard Address; the fullAddress
                         property has no such restriction. An example of a full address is "Champ de Mars,
                         5 Avenue Anatole France, 75007 Paris, France".</td>
-                     <td>rdf:langString [0..1]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>dct:Location</td>
@@ -3836,8 +3846,9 @@
                         - use 'UK' in preference to the ISO 3166 code GB for the United Kingdom;
                         - use 'EL' in preference to the ISO 3166 code GR for Greece.
                         Where a country has changed its name or no longer exists (such as Czechoslovakia,
-                        Yugoslavia etc.) use the ISO 3166-3 code.</td>
-                     <td>rdf:langString [0..1]</td>
+                        Yugoslavia etc.) use the ISO 3166-3 code.
+                        </td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>locn:Address</td>
@@ -3864,7 +3875,7 @@
                         name and is unlikely to include digits. For example, "Shumann, Berlaymont" is a meeting
                         room within the European Commission headquarters for which locator name is more appropriate
                         than locator.</td>
-                     <td>rdf:langString [0..1]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>locn:Address</td>
@@ -3875,7 +3886,7 @@
                         Additional Information:
                         Post codes are common elements in many countries' postal address systems. One of the
                         many post codes of Paris is for example "75000".</td>
-                     <td>rdf:PlainLiteral [0..*]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>locn:Address</td>
@@ -3883,7 +3894,7 @@
                      <td>The key postal division of the address, usually the city. (INSPIRE's definition is
                         "One or more names created and maintained for postal purposes to identify a subdivision
                         of addresses and postal delivery points.) For example, "Paris".</td>
-                     <td>rdf:langString [0..*]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
                      <td>locn:Address</td>
@@ -3894,21 +3905,21 @@
                         
                         Additional Information:
                         For example, "Avenue des Champs-&amp;#201;lys&amp;#233;es".</td>
-                     <td>rdf:langString [0..*]</td>
+                     <td>rdf:PlainLiteral [0..1]</td>
                   </tr>
                   <tr>
-                     <td>cpv:Person</td>
+                     <td>person:Person</td>
                      <td>person:birthName</td>
                      <td>Family name of the Person given upon their birth.
                         WG Approval 09/11/2021</td>
-                     <td>rdf:langString [0..*]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
-                     <td>cpv:Person</td>
+                     <td>person:Person</td>
                      <td>person:patronymicName</td>
                      <td>Name based on the given name of the Person's father.
                         WG Approval 09/11/2021</td>
-                     <td>rdf:langString [0..*]</td>
+                     <td>rdf:PlainLiteral [0..*]</td>
                   </tr>
                   <tr>
                      <td>adms:Identifier</td>
@@ -3948,7 +3959,7 @@
                <tbody>
                   <tr>
                      <td>adms:identifier</td>
-                     <td>A unique identifier of the instance of the concept.
+                     <td>Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. A unique identifier of the instance of the concept.
                         
                         Additional Information
                         
@@ -3958,7 +3969,7 @@
                         
                         WG Approval 12/11/2019
                         
-                         A unique identifier of the instance of the concept.
+                         Links a resource to an adms:Identifier class. A unique identifier of the instance of the concept.
                         
                         Additional Information
                         
@@ -3975,8 +3986,17 @@
                         the service provider or any other stakeholder.
                         
                         WG Approval 12/11/2019
-                         Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class.    Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class.</td>
-                     <td>epo:Project -&gt; adms:Identifier [0..1]<br>epo:LotGroup -&gt; adms:Identifier [0..1]<br>epo:ProcurementElement -&gt; adms:Identifier [1]<br>foaf:Agent -&gt; adms:Identifier [0..*]<br>dct:Location -&gt; adms:Identifier [0..1]<br>cccev:InformationConcept -&gt; adms:Identifier [0..1]<br>epo:Document -&gt; adms:Identifier [0..*]<br>epo:Fund -&gt; adms:Identifier [0..1]<br>epo-ful:Consignment (external) -&gt; adms:Identifier [0..1]<br>epo-ful:TransportEquipment (external) -&gt; adms:Identifier [0..1]<br>epo-ful:ShipmentStage (external) -&gt; adms:Identifier [0..1]<br>epo-ful:TransportEquipmentSeal (external) -&gt; adms:Identifier [0..1]<br>epo-ful:ShipmentInformation (external) -&gt; adms:Identifier [0..1]<br>epo-cat:Line (external) -&gt; adms:Identifier [0..1]<br>epo-ful:AbstractContainer (external) -&gt; adms:Identifier [0..1]<br></td>
+                         A unique identifier of the instance of the concept.
+                        
+                        Additional Information
+                        
+                        For example, in the case of the Procurement Identifier, this could be the European
+                        Public Procurement Identifier, and/or any other identifier provided by the buyer,
+                        the service provider or any other stakeholder.
+                        
+                        WG Approval 12/11/2019
+                         Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class.    Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class. Links a resource to an adms:Identifier class.</td>
+                     <td>cccev:Evidence -&gt; adms:Identifier [1]<br>cccev:InformationConcept -&gt; adms:Identifier [0..1]<br>cccev:Requirement -&gt; adms:Identifier [0..1]<br>dct:Location -&gt; adms:Identifier [0..1]<br>epo:Document -&gt; adms:Identifier [0..*]<br>epo:Fund -&gt; adms:Identifier [0..1]<br>epo:Project -&gt; adms:Identifier [0..1]<br>foaf:Agent -&gt; adms:Identifier [0..*]<br>epo:LotGroup -&gt; adms:Identifier [0..1]<br>epo:ProcurementElement -&gt; adms:Identifier [1]<br>epo:TenderGroup -&gt; adms:Identifier [0..1]<br>cccev:EvidenceType (external) -&gt; adms:Identifier [0..1]<br>epo-ful:Consignment -&gt; adms:Identifier [0..1]<br>epo-ful:TransportEquipment -&gt; adms:Identifier [0..1]<br>epo-ful:ShipmentStage -&gt; adms:Identifier [0..1]<br>epo-ful:TransportEquipmentSeal -&gt; adms:Identifier [0..1]<br>cccev:EvidenceTypeList (external) -&gt; adms:Identifier [0..1]<br>epo-ful:ShipmentInformation -&gt; adms:Identifier [0..1]<br>epo-cat:Line -&gt; adms:Identifier [0..1]<br>epo-ful:AbstractContainer -&gt; adms:Identifier [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>cccev:confidentialityLevelType</td>
@@ -3986,8 +4006,13 @@
                         
                         Classifications should be defined by an organisation/country as an outcome of a security
                         assessment. 
-                        </td>
-                     <td>cccev:Evidence -&gt; at-voc:confidentiality-level [0..1]</td>
+                         Security classification assigned to an Evidence e.g. classified, sensitive, public.
+                        
+                        Additional Information:
+                        
+                        Classifications should be defined by an organisation/country as an outcome of a security
+                        assessment.</td>
+                     <td>cccev:Evidence -&gt; at-voc:access-rights [0..1]<br>epo-sub:Response (external) -&gt; at-voc:access-rights [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>cccev:constrains</td>
@@ -4003,18 +4028,54 @@
                      <td>cccev:Constraint -&gt; cccev:InformationConcept [0..*]</td>
                   </tr>
                   <tr>
+                     <td>cccev:hasConcept</td>
+                     <td>Information Concept for which a value is expected by the Requirement. 
+                        
+                        Additional Information:
+                        Information Concepts defined for specific Requirements also represent the basis for
+                        specifying the Supported Value an Evidence should provide. </td>
+                     <td>cccev:Requirement -&gt; cccev:InformationConcept [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cccev:hasEvidenceTypeList</td>
+                     <td>Evidence Type List that specifies the Evidence Types that are needed to meet the Requirement.
+                        
+                        Additional Information:
+                        One or several Lists of Evidence Types can support a Requirement. At least one of
+                        them must be satisfied by the response to the Requirement.</td>
+                     <td>cccev:Requirement -&gt; cccev:EvidenceTypeList (external) [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>cccev:hasRequirement</td>
                      <td>A more specific Requirement that is part of the Requirement.</td>
                      <td>cccev:Requirement -&gt; cccev:Requirement [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cccev:isDerivedFrom</td>
+                     <td>Reference Framework on which the Requirement is based, such as a law or regulation.
+                        
+                        Additional Information:
+                        The relation between a parent Requirement and a sub-Requirement can be complex. Therefore,
+                        qualified relations (see hasQualifiedRelation) can be used to represent this relationship
+                        on its own and qualify it with additional information such as a date, a place. This
+                        is left to implementers. In the case where the purpose is to link the two Requirements
+                        without additional information, the simple relationship as proposed here can be directly
+                        used.</td>
+                     <td>cccev:Requirement -&gt; eli:LegalResource (external) [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cccev:providesValueFor</td>
+                     <td>Information Concept for which the Supported Value provides a value.</td>
+                     <td>cccev:SupportedValue (external) -&gt; cccev:InformationConcept [0..*]</td>
                   </tr>
                   <tr>
                      <td>cccev:supportsConcept</td>
                      <td>Information Concept providing facts found/inferred from the Evidence.
                         
                         Additional Information:
-                        Examples of Information Concepts are values found explictly in the evidence such as
-                        a birth date or information derived from the Evidence such as "I am older that 18
-                        years" or "this is a FairTrade product".</td>
+                        Examples of Information Concepts are values found explicitly in the evidence such
+                        as a birth date or information derived from the Evidence such as "I am older that
+                        18 years" or "this is a Fair Trade product".</td>
                      <td>cccev:Evidence -&gt; cccev:InformationConcept [0..*]</td>
                   </tr>
                   <tr>
@@ -4023,12 +4084,20 @@
                      <td>cccev:Evidence -&gt; cccev:Requirement [0..*]</td>
                   </tr>
                   <tr>
-                     <td>cv:address</td>
-                     <td>Associates any Resource with the corresponding Address.
+                     <td>cccev:supportsValue</td>
+                     <td>Supported Value that the Evidence contains.</td>
+                     <td>cccev:Evidence -&gt; cccev:SupportedValue (external) [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>cccev:validityPeriodConstraint</td>
+                     <td>Temporal condition on the validity period of the Evidence Type.
                         
                         Additional Information:
-                        Asserting the address relationship implies that the Resource has an Address. </td>
-                     <td>org:Organization -&gt; locn:Address [0..*]<br>cpov:ContactPoint -&gt; locn:Address [0..1]<br></td>
+                        E.g. A Belgian birth evidence is valid for X months after emission. To express constraints
+                        on the validity period that must hold when assessing the evidence (e.g. the certificate
+                        of good conduct cannot be issued more than 3 months ago), we refer to the Constraint
+                        class.</td>
+                     <td>cccev:EvidenceType (external) -&gt; epo:Period [0..*]</td>
                   </tr>
                   <tr>
                      <td>cv:registeredAddress</td>
@@ -4040,7 +4109,20 @@
                         Additional Information:
                         It is the address to which formal communications can be sent, such as the postal address.
                         </td>
-                     <td>cpv:Person -&gt; locn:Address [0..1]<br>org:Organization -&gt; locn:Address [0..1]<br></td>
+                     <td>person:Person -&gt; locn:Address [0..1]<br>org:Organization -&gt; locn:Address [0..1]<br></td>
+                  </tr>
+                  <tr>
+                     <td>dct:conformsTo</td>
+                     <td>An established standard to which the described resource conforms.
+                        
+                        Additional Information:
+                        Examples of characteristics could be the layout or the configuration of the Evidence.</td>
+                     <td>cccev:Evidence -&gt; cccev:EvidenceType (external) [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>dct:language</td>
+                     <td>A language of the resource.</td>
+                     <td>eli:LegalExpression (external) -&gt; at-voc:language [1..*]</td>
                   </tr>
                   <tr>
                      <td>dct:type</td>
@@ -4048,98 +4130,80 @@
                      <td>cccev:Criterion -&gt; at-voc:criterion [0..1]</td>
                   </tr>
                   <tr>
+                     <td>eli:uri_schema</td>
+                     <td>Schema describing the URI of an ELI instance. ELI uses URI template specifications
+                        (IETF RFC 6570). Schemes should be associated with member states and will be published
+                        in a registry.
+                         Schema describing the URI of an ELI instance. ELI uses URI template specifications
+                        (IETF RFC 6570). Schemes should be associated with member states and will be published
+                        in a registry.
+                        </td>
+                     <td>eli:LegalResourceSubdivision (external) -&gt; adms:Identifier [0..*]<br>eli:LegalExpression (external) -&gt; adms:Identifier [0..*]<br></td>
+                  </tr>
+                  <tr>
                      <td>epo:actsOnBehalfOf</td>
-                     <td>Represents.</td>
-                     <td>epo:ProcurementServiceProvider -&gt; epo:Buyer [1..*]</td>
+                     <td>Represents. </td>
+                     <td>epo:ProcurementServiceProvider -&gt; epo:Buyer [1..*]<br>epo-sub:LegalRepresentative (external) -&gt; epo:OfferingParty [0..1]<br></td>
+                  </tr>
+                  <tr>
+                     <td>epo:amendsContract</td>
+                     <td></td>
+                     <td>epo-con:ContractAmendment -&gt; epo:Contract [1]</td>
                   </tr>
                   <tr>
                      <td>epo:announcesAwardDecision</td>
                      <td> </td>
-                     <td>epo-not:ResultNotice (external) -&gt; epo:AwardDecision [0..*]<br>epo-not:DirectAwardPrenotificationNotice (external) -&gt; epo:AwardDecision [0..*]<br></td>
+                     <td>epo-not:ResultNotice -&gt; epo:AwardDecision [0..*]<br>epo-not:DirectAwardPrenotificationNotice -&gt; epo:AwardDecision [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:announcesCompletionOfContract</td>
                      <td></td>
-                     <td>epo-not:CompletionNotice (external) -&gt; epo:Contract [1]</td>
+                     <td>epo-not:CompletionNotice -&gt; epo:Contract [1]</td>
                   </tr>
                   <tr>
                      <td>epo:announcesContract</td>
                      <td> </td>
-                     <td>epo-not:DirectAwardPrenotificationNotice (external) -&gt; epo:Contract [0..*]<br>epo-not:ResultNotice (external) -&gt; epo:Contract [0..*]<br></td>
-                  </tr>
-                  <tr>
-                     <td>epo:announcesExclusionGround</td>
-                     <td></td>
-                     <td>epo:ESPDRequest (external) -&gt; epo:ExclusionGround [1]</td>
+                     <td>epo-not:DirectAwardPrenotificationNotice -&gt; epo:Contract [0..*]<br>epo-not:ResultNotice -&gt; epo:Contract [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:announcesLot</td>
                      <td> </td>
-                     <td>epo-not:DirectAwardPrenotificationNotice (external) -&gt; epo:Lot [1..*]<br>epo-not:CompetitionNotice (external) -&gt; epo:Lot [1..*]<br></td>
+                     <td>epo-not:DirectAwardPrenotificationNotice -&gt; epo:Lot [1..*]<br>epo-not:CompetitionNotice -&gt; epo:Lot [1..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:announcesLotGroup</td>
                      <td> </td>
-                     <td>epo-not:CompetitionNotice (external) -&gt; epo:LotGroup [0..*]<br>epo-not:DirectAwardPrenotificationNotice (external) -&gt; epo:LotGroup [0..*]<br></td>
+                     <td>epo-not:CompetitionNotice -&gt; epo:LotGroup [0..*]<br>epo-not:DirectAwardPrenotificationNotice -&gt; epo:LotGroup [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:announcesLotGroupAwardInformation</td>
                      <td> </td>
-                     <td>epo-not:DirectAwardPrenotificationNotice (external) -&gt; epo:LotGroupAwardInformation [0..*]<br>epo-not:ResultNotice (external) -&gt; epo:LotGroupAwardInformation [0..*]<br></td>
-                  </tr>
-                  <tr>
-                     <td>epo:announcesNonPublishedElement</td>
-                     <td>Relation indicating which parts of a document are not published. 
-                        
-                        Additional Information:
-                        For example, elements in the Contract Award Notice that should be published at a later
-                        date. </td>
-                     <td>epo-not:ResultNotice (external) -&gt; epo:PublicationProvision [0..*]<br>epo-not:DirectAwardPrenotificationNotice (external) -&gt; epo:PublicationProvision [0..*]<br></td>
+                     <td>epo-not:DirectAwardPrenotificationNotice -&gt; epo:LotGroupAwardInformation [0..*]<br>epo-not:ResultNotice -&gt; epo:LotGroupAwardInformation [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:announcesNoticeAwardInformation</td>
                      <td> </td>
-                     <td>epo-not:DirectAwardPrenotificationNotice (external) -&gt; epo:NoticeAwardInformation [0..1]<br>epo-not:ResultNotice (external) -&gt; epo:NoticeAwardInformation [0..1]<br></td>
+                     <td>epo-not:DirectAwardPrenotificationNotice -&gt; epo:NoticeAwardInformation [0..1]<br>epo-not:ResultNotice -&gt; epo:NoticeAwardInformation [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:announcesPlannedProcurementPart</td>
                      <td></td>
-                     <td>epo-not:PlanningNotice (external) -&gt; epo:PlannedProcurementPart [0..*]</td>
+                     <td>epo-not:PlanningNotice -&gt; epo:PlannedProcurementPart [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:announcesProcedure</td>
                      <td> </td>
-                     <td>epo-not:DirectAwardPrenotificationNotice (external) -&gt; epo:Procedure [1]<br>epo-not:CompetitionNotice (external) -&gt; epo:Procedure [1]<br></td>
+                     <td>epo-not:DirectAwardPrenotificationNotice -&gt; epo:Procedure [1]<br>epo-not:CompetitionNotice -&gt; epo:Procedure [1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:announcesReviewObject</td>
                      <td></td>
-                     <td>epo-not:CompletionNotice (external) -&gt; epo:ReviewObject [1..*]</td>
+                     <td>epo-not:CompletionNotice -&gt; epo:ReviewObject [1..*]</td>
                   </tr>
                   <tr>
                      <td>epo:announcesRole</td>
                      <td>    </td>
-                     <td>epo-not:DirectAwardPrenotificationNotice (external) -&gt; epo:AgentInRole [1..*]<br>epo-not:ContractModificationNotice (external) -&gt; epo:AgentInRole [0..*]<br>epo-not:PlanningNotice (external) -&gt; epo:AgentInRole [1..*]<br>epo-not:CompetitionNotice (external) -&gt; epo:AgentInRole [1..*]<br>epo-not:CompletionNotice (external) -&gt; epo:AgentInRole [0..*]<br></td>
-                  </tr>
-                  <tr>
-                     <td>epo:announcesSelectionCriteria</td>
-                     <td></td>
-                     <td>epo:ESPDRequest (external) -&gt; epo:SelectionCriterion [1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:answersAwardCriteria</td>
-                     <td> </td>
-                     <td>epo:FinancialOffer (external) -&gt; epo:AwardCriterion [1]<br>epo:TechnicalOffer (external) -&gt; epo:AwardCriterion [1]<br></td>
-                  </tr>
-                  <tr>
-                     <td>epo:answersExclusionGround</td>
-                     <td></td>
-                     <td>epo:ESPDResponse (external) -&gt; epo:ExclusionGround [1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:answersSelectionCriteria</td>
-                     <td></td>
-                     <td>epo:ESPDResponse (external) -&gt; epo:SelectionCriterion [1]</td>
+                     <td>epo-not:DirectAwardPrenotificationNotice -&gt; epo:AgentInRole [1..*]<br>epo-not:ContractModificationNotice -&gt; epo:AgentInRole [0..*]<br>epo-not:PlanningNotice -&gt; epo:AgentInRole [1..*]<br>epo-not:CompetitionNotice -&gt; epo:AgentInRole [1..*]<br>epo-not:CompletionNotice -&gt; epo:AgentInRole [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:associatedWith</td>
@@ -4148,6 +4212,13 @@
                         WGM 01/03/2022
                         </td>
                      <td>epo:Document -&gt; epo:Document [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:attestedByLabel</td>
+                     <td>Relation indicating which label the certificate is about. 
+                        
+                        WG approval 28/07/2022</td>
+                     <td>epo:Certificate -&gt; epo:CertificationLabel [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:bindsBuyer</td>
@@ -4160,14 +4231,26 @@
                      <td>epo:Contract -&gt; epo:Contractor [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:comprisesLotAwardDecision</td>
-                     <td>Incorporates LotAwardOutcome.</td>
-                     <td>epo:AwardDecision -&gt; epo:LotAwardDecision [0..*]</td>
+                     <td>epo:canProvideNonDiscriminatoryEvidence</td>
+                     <td>Relation showing that an Organization can supply an Evidence with regard to the fulfilment
+                        of non-discriminatory criteria or the rules applied in order to reduce the number
+                        of participants.
+                        
+                        WG approval 12/03/2024</td>
+                     <td>org:Organization -&gt; cccev:Evidence [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:comprisesMiniCompetitionAwardDecision</td>
-                     <td></td>
-                     <td>epo:AwardDecision -&gt; epo:MiniCompetitionAwardDecision [0..*]</td>
+                     <td>epo:canProvideTaxAndSocialSecuritiesEvidence</td>
+                     <td>Relation showing that an Organization can supply an Evidence with regard to the payment
+                        of social security contributions and taxes.
+                        
+                        WG approval 12/03/2024</td>
+                     <td>org:Organization -&gt; cccev:Evidence [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:comprisesAwardOutcome</td>
+                     <td>Incorporates AwardOutcome.</td>
+                     <td>epo:AwardDecision -&gt; epo:AwardOutcome [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:comprisesTender</td>
@@ -4177,22 +4260,30 @@
                   <tr>
                      <td>epo:comprisesTenderAwardOutcome</td>
                      <td>Incorporates TenderAwardOutcome.</td>
-                     <td>epo:AwardDecision -&gt; epo:TenderAwardOutcome [0..*]</td>
+                     <td>epo:AwardOutcome -&gt; epo:TenderAwardOutcome [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:concernsGreenProcurement</td>
+                     <td></td>
+                     <td>epo:VehicleInformation -&gt; epo:GreenProcurement [1]</td>
                   </tr>
                   <tr>
                      <td>epo:concernsLot</td>
                      <td>Relates to Lot. Relates to Lot.</td>
-                     <td>epo:ProcurementProcessInformation -&gt; epo:Lot [0..1]<br>epo:LotAwardDecision -&gt; epo:Lot [1]<br></td>
+                     <td>epo:LotAwardOutcome -&gt; epo:Lot [1]<br>epo:ProcurementProcessInformation -&gt; epo:Lot [0..1]<br></td>
                   </tr>
                   <tr>
-                     <td>epo:concernsMiniCompetition</td>
-                     <td></td>
-                     <td>epo:MiniCompetitionAwardDecision -&gt; epo:MiniCompetition [0..1]</td>
+                     <td>epo:concernsNotice</td>
+                     <td> </td>
+                     <td>epo:ChangeInformation -&gt; epo:Notice [1]<br>epo:NonPublishedInformation -&gt; epo:Notice [1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:concernsProcedure</td>
-                     <td>Relates to Procedure.</td>
-                     <td>epo:ProcurementProcessInformation -&gt; epo:Procedure [0..1]</td>
+                     <td>Relates to Procedure. Relates to Procedure.
+                        
+                        WG approval 05/03/2024
+                        </td>
+                     <td>epo:ProcurementProcessInformation -&gt; epo:Procedure [0..1]<br>epo-acc:ESPDRequest (external) -&gt; epo:Procedure [1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:concernsReviewSummaryForLot</td>
@@ -4214,33 +4305,12 @@
                         Additional Information:
                         This Notice can be used for Procedures which do not have the same legal basis.
                         This holds for standard forms.</td>
-                     <td>epo:Notice -&gt; at-voc:legal-basis [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:conformsToSpecificLegalBasis</td>
-                     <td></td>
-                     <td>epo:Notice -&gt; at-voc:legal-basis [0..1]</td>
+                     <td>epo:Notice -&gt; at-voc:legal-basis [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:containsCandidate</td>
                      <td></td>
                      <td>epo:SelectedCandidateList -&gt; epo:Candidate [0..*]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:containsModificationsOf</td>
-                     <td>
-                        
-                        Additional information
-                        This relation shall be used between Instances of the SAME type/class. 
-                        
-                        The "modifying-instance" can be minimally instantiated, carrying the fields/information
-                        that override the fields in the "modified-instance".
-                        
-                        This means that the "modifying-instance" (is under-specified) and might violate minimal
-                        cardinality restrictions in case they are checked. But the purpose of such an instance
-                        is not to be used as a full instance.
-                        </td>
-                     <td>owl:Thing -&gt; owl:Thing [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:contextualisedBy</td>
@@ -4315,13 +4385,6 @@
                      <td>epo:ContractTerm -&gt; epo:PaymentExecutor [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:definesPlaceOfPerformance</td>
-                     <td>Relation indicating the place of performance of a Contract.
-                        
-                        WG approval 21/03/2023</td>
-                     <td>epo:ContractTerm -&gt; dct:Location [0..*]</td>
-                  </tr>
-                  <tr>
                      <td>epo:definesPrize</td>
                      <td>Relation indicating a DesignContestRegimeTerm has a Prize.</td>
                      <td>epo:DesignContestRegimeTerm -&gt; epo:Prize [0..*]</td>
@@ -4330,6 +4393,21 @@
                      <td>epo:definesProcurementProcedureInformationProvider</td>
                      <td>Relation indicating an AccessTerm has a ProcurementProcedureInformationProvider.</td>
                      <td>epo:AccessTerm -&gt; epo:ProcurementProcedureInformationProvider [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:definesReviewer</td>
+                     <td>Relation indicating a ReviewTerm has a Reviewer.</td>
+                     <td>epo:ReviewTerm -&gt; epo:Reviewer [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:definesReviewProcedureInformationProvider</td>
+                     <td>Relation indicating a ReviewTerm has a ReviewProcedureInformationProvider.</td>
+                     <td>epo:ReviewTerm -&gt; epo:ReviewProcedureInformationProvider [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:definesSpecificPlaceOfPerformance</td>
+                     <td>Relation indicating a ContractTerm has a specific place of performance.</td>
+                     <td>epo:ContractTerm -&gt; dct:Location [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:definesSubcontractingTerm</td>
@@ -4366,9 +4444,9 @@
                      <td>epo:Buyer -&gt; epo:ProcurementServiceProvider [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:describesContractModification</td>
+                     <td>epo:describesDirectAwardPrenotificationNotice</td>
                      <td></td>
-                     <td>epo-not:ContractModificationNotice (external) -&gt; epo:ContractModification [0..*]</td>
+                     <td>epo:NoticeAwardInformation -&gt; epo-not:DirectAwardPrenotificationNotice [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:describesLotCompletion</td>
@@ -4381,14 +4459,9 @@
                      <td>epo:LotGroupAwardInformation -&gt; epo:LotGroup [1]</td>
                   </tr>
                   <tr>
-                     <td>epo:describesNotice</td>
-                     <td></td>
-                     <td>epo:NoticeDescription -&gt; epo:Notice [1]</td>
-                  </tr>
-                  <tr>
                      <td>epo:describesResultNotice</td>
-                     <td> </td>
-                     <td>epo:NoticeAwardInformation -&gt; epo-not:DirectAwardPrenotificationNotice (external) [0..1]<br>epo:NoticeAwardInformation -&gt; epo-not:ResultNotice (external) [0..1]<br></td>
+                     <td></td>
+                     <td>epo:NoticeAwardInformation -&gt; epo-not:ResultNotice [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:distributesOffer</td>
@@ -4408,12 +4481,12 @@
                   <tr>
                      <td>epo:followsRulesSetBy</td>
                      <td></td>
-                     <td>epo:MiniCompetition -&gt; epo:FrameworkAgreement [0..1]</td>
+                     <td>epo:PurchaseContract -&gt; epo:FrameworkAgreement [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:foreseesConcession</td>
                      <td> </td>
-                     <td>epo:ProcurementObject -&gt; epo:ConcessionEstimate [0..1]<br>epo:Tender -&gt; epo:ConcessionEstimate [0..1]<br></td>
+                     <td>epo:Tender -&gt; epo:ConcessionEstimate [0..1]<br>epo:ProcurementObject -&gt; epo:ConcessionEstimate [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:foreseesContractSpecificTerm</td>
@@ -4445,6 +4518,8 @@
                      <td>epo:fulfillsRequirement</td>
                      <td>The requirement to which the concept meets.
                         WG Approval 09/11/2021
+                         The requirement to which the concept meets.
+                        WG Approval 09/11/2021
                         
                          The requirement to which the concept meets.
                         WG Approval 09/11/2021
@@ -4453,7 +4528,7 @@
                         WG Approval 09/11/2021
                         
                         </td>
-                     <td>epo:GreenProcurement -&gt; at-voc:environmental-impact [1..*]<br>epo:InnovativeProcurement -&gt; at-voc:innovative-acquisition [1..*]<br>epo:SocialProcurement -&gt; at-voc:social-objective [1..*]<br></td>
+                     <td>epo:GreenProcurement -&gt; at-voc:green-public-procurement-criteria [0..*]<br>epo:GreenProcurement -&gt; at-voc:environmental-impact [0..*]<br>epo:InnovativeProcurement -&gt; at-voc:innovative-acquisition [0..*]<br>epo:SocialProcurement -&gt; at-voc:social-objective [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:fulfillsStrategicProcurement</td>
@@ -4483,8 +4558,22 @@
                   </tr>
                   <tr>
                      <td>epo:hasApproximateFrameworkAgreementValue</td>
-                     <td> </td>
-                     <td>epo:LotAwardDecision -&gt; epo:MonetaryValue [0..1]<br>epo:NoticeAwardInformation -&gt; epo:MonetaryValue [0..1]<br></td>
+                     <td>The estimated value to be spent within the Framework Agreement(s).
+                        
+                        Additional information:
+                        In the case of an Award Decision for a Lot, this relation represents the estimated
+                        value for the awarded Framework Agreement. 
+                        In the case of a Notice, this relation represents the estimated value for all Framework
+                        Agreements covered by the Notice.
+                         The estimated value to be spent within the Framework Agreement(s).
+                        
+                        Additional information:
+                        In the case of an Award Decision for a Lot, this relation represents the estimated
+                        value for the awarded Framework Agreement. 
+                        In the case of a Notice, this relation represents the estimated value for all Framework
+                        Agreements covered by the Notice.
+                        </td>
+                     <td>epo:LotAwardOutcome -&gt; epo:MonetaryValue [0..1]<br>epo:NoticeAwardInformation -&gt; epo:MonetaryValue [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:hasAwardCriterionType</td>
@@ -4492,20 +4581,6 @@
                         
                         </td>
                      <td>epo:AwardCriterion -&gt; at-voc:award-criterion-type [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasAwardedEstimatedValue</td>
-                     <td>The estimated value that can be spent as provided by the Award Decision.
-                        
-                        &lt;u&gt;Additional Information&lt;/u&gt;:
-                        This property is used for framework agreements and dynamic purchasing systems. 
-                        Different cases of awarded values may refer to a lot, the global value of the procedure,
-                        or of a combinatorial value of a group of lots.
-                        
-                        WG Approval 12/12/2019
-                        
-                        </td>
-                     <td>epo:LotAwardDecision -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasAwardedValue</td>
@@ -4519,7 +4594,7 @@
                         the maximum awarded value.
                         
                         WG Approval 10/12/2019</td>
-                     <td>epo:AwardDecision -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo:AwardOutcome -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasAwardStatus</td>
@@ -4527,7 +4602,7 @@
                         WG Approval 03/12/2019
                         
                         </td>
-                     <td>epo:AwardDecision -&gt; at-voc:winner-selection-status [0..1]</td>
+                     <td>epo:AwardOutcome -&gt; at-voc:winner-selection-status [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasBargainPrice</td>
@@ -4535,14 +4610,14 @@
                         available for a very short time at a value considerably lower than normal market prices.
                         
                         WG approval 23/05/2023</td>
-                     <td>epo:AwardDecision -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo:AwardOutcome -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasBatchID</td>
                      <td>The identifier assigned to a specific batch of the produced Item.
                         WG Approval 16/05/2023
                         </td>
-                     <td>epo-cat:Batch (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-cat:Batch -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasBeneficialOwner</td>
@@ -4552,7 +4627,7 @@
                         This role is defined in the directive EU 2015/849 and it's beyond the scope for public
                         eProcurement domain.
                         WG approval 14/09/2021</td>
-                     <td>epo:Business -&gt; cpv:Person [0..*]</td>
+                     <td>epo:Business -&gt; person:Person [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:hasBroadPlaceOfPerformance</td>
@@ -4582,10 +4657,11 @@
                   </tr>
                   <tr>
                      <td>epo:hasBuyerItemID</td>
-                     <td>This refers to the identifier for the specific instance of the produced concept.
-                        WG Approval 16/05/2023
+                     <td>The general identifier assigned to the concept as defined by the Buyer.​
+                        
+                        WG approval 16/05/2023
                         </td>
-                     <td>epo-cat:Item (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-cat:Item -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasBuyerLegalType</td>
@@ -4600,18 +4676,15 @@
                      <td>org:Organization -&gt; at-voc:buyer-legal-type [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:hasCandidateList</td>
-                     <td></td>
-                     <td>epo:DynamicPurchasingSystem -&gt; epo:SelectedCandidateList [0..*]</td>
-                  </tr>
-                  <tr>
                      <td>epo:hasCertification</td>
                      <td>Relation to the proof of conformance.
                         
                         WG approval 30/05/2023 Relation to the proof of conformance.
                         
+                        WG approval 30/05/2023 Relation to the proof of conformance.
+                        
                         WG approval 30/05/2023</td>
-                     <td>foaf:Person -&gt; epo-cat:Certificate (external) [0..*]<br>org:Organization -&gt; epo-cat:Certificate (external) [0..*]<br></td>
+                     <td>foaf:Person -&gt; epo:Certificate [0..*]<br>org:Organization -&gt; epo:Certificate [0..*]<br>epo-cat:Item -&gt; epo:Certificate [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:hasChangeJustification</td>
@@ -4625,7 +4698,7 @@
                         The codelist to be used is at-voc:change-corrig-justification which is available at
                         
                         http://publications.europa.eu/resource/dataset/change-corrig-justification</td>
-                     <td>epo:ElementChangeDescription -&gt; at-voc:change-corrig-justification [1]</td>
+                     <td>epo:ChangeInformation -&gt; at-voc:change-corrig-justification [1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasConcessionEstimatedValue</td>
@@ -4640,18 +4713,13 @@
                   </tr>
                   <tr>
                      <td>epo:hasConstraint</td>
-                     <td></td>
-                     <td>epo:ProcurementCriterion -&gt; cccev:Constraint [0..*]</td>
+                     <td> </td>
+                     <td>cccev:InformationRequirement -&gt; cccev:Constraint [0..*]<br>epo:ProcurementCriterion -&gt; cccev:Constraint [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:hasContactPointInRole</td>
                      <td></td>
                      <td>epo:AgentInRole -&gt; cpov:ContactPoint [0..*]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasContractAmendment</td>
-                     <td></td>
-                     <td>epo:Contract -&gt; epo:AmendedContract (external) [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:hasContractNatureType</td>
@@ -4677,7 +4745,7 @@
                      <td>epo:hasCountryOfBirth</td>
                      <td>The country in which the Person was born.
                         </td>
-                     <td>cpv:Person -&gt; at-voc:country [0..1]</td>
+                     <td>person:Person -&gt; at-voc:country [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasCurrency</td>
@@ -4705,18 +4773,6 @@
                         WG Approval 09/03/2021
                         </td>
                      <td>epo:AccessTerm -&gt; at-voc:communication-justification [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasDocumentStatus</td>
-                     <td>https://test-docs.peppol.eu/logistics/transport-execution/codelist/DocumentStatusCode/</td>
-                     <td>epo:Document -&gt; at-voc-new:document-status (external) [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasDocumentType</td>
-                     <td>
-                        
-                        https://docs.peppol.eu/poacc/upgrade-3/2022-Q4/codelist/UNCL1001_T01/</td>
-                     <td>epo:Document -&gt; at-voc-new:document-type (external) [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasDPSScope</td>
@@ -4753,26 +4809,6 @@
                      <td>epo:hasElectronicSignature</td>
                      <td></td>
                      <td>epo:Document -&gt; epo:ElectronicSignature [0..*]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasElementChange</td>
-                     <td></td>
-                     <td>epo:NoticeChange -&gt; epo:ElementChangeDescription [1..*]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasElementConfidentiality</td>
-                     <td>Relation indication that the publication provision applies to a given field of a document.</td>
-                     <td>epo:PublicationProvision -&gt; epo:ElementConfidentialityDescription [1..*]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasElementDescription</td>
-                     <td></td>
-                     <td>epo:NoticeDescription -&gt; epo:ElementDescription [0..*]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasElementModification</td>
-                     <td></td>
-                     <td>epo:ContractModification -&gt; epo:ElementModificationDescription [1..*]</td>
                   </tr>
                   <tr>
                      <td>epo:hasEndpointIdentifier</td>
@@ -4834,10 +4870,27 @@
                         This property corresponds to BT-27 in eForms (for Lot and Procedure) and can be used
                         for BT-157 (for LotGroup).
                         &lt;b&gt;
+                        &lt;/b&gt;WG Approval 05/12/2019
+                         A forecast of the value of the procurement before competition.
+                        
+                        Additional Information:
+                        Different cases of estimated values may refer to a lot, the global value of the procedure,
+                        or of a combinatorial value of a group of lots.
+                        The forecast is calculated by the buyer and covers all revenues  whether coming from
+                        the buyer or third parties.
+                        See for example recital (19), Article 5 of Directive 2014/24/EU and other articles
+                        from the rest of Directives about procurement.
+                        
+                        In the case of framework agreements and dynamic purchasing systems this refers to
+                        the maximum estimated value.
+                        
+                        This property corresponds to BT-27 in eForms (for Lot and Procedure) and can be used
+                        for BT-157 (for LotGroup).
+                        &lt;b&gt;
                         &lt;/b&gt;&lt;b&gt;WG Approval 05/12/2019&lt;/b&gt;
                         
                         </td>
-                     <td>epo:ProcurementElement -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo:LotGroup -&gt; epo:MonetaryValue [0..1]<br>epo:ProcurementElement -&gt; epo:MonetaryValue [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:hasESubmissionPermission</td>
@@ -4847,12 +4900,6 @@
                         
                         </td>
                      <td>epo:SubmissionTerm -&gt; at-voc:permission [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasEvaluationMember</td>
-                     <td>An agent involved in an evaluation board.
-                        WG approval 14/09/2021</td>
-                     <td>epo:EvaluationBoard (external) -&gt; epo:JuryMember [1..*]</td>
                   </tr>
                   <tr>
                      <td>epo:hasFinancialOfferValue</td>
@@ -4884,14 +4931,9 @@
                      <td>epo:Notice -&gt; at-voc:form-type [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:hasFrameworkAgreementEstimatedValue</td>
-                     <td>This refers to BT-660 in eForms.</td>
-                     <td>epo:LotAwardDecision -&gt; epo:MonetaryValue [0..1]</td>
-                  </tr>
-                  <tr>
                      <td>epo:hasFrameworkAgreementMaximumValue</td>
                      <td></td>
-                     <td>epo:LotAwardDecision -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo:LotAwardOutcome -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasFrameworkAgreementType</td>
@@ -4937,8 +4979,8 @@
                   </tr>
                   <tr>
                      <td>epo:hasInternalIdentifier</td>
-                     <td></td>
-                     <td>epo:ProcurementElement -&gt; adms:Identifier [0..*]</td>
+                     <td> </td>
+                     <td>epo:LotGroup -&gt; adms:Identifier [0..*]<br>epo:ProcurementElement -&gt; adms:Identifier [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:hasIrregularityType</td>
@@ -4963,14 +5005,18 @@
                   </tr>
                   <tr>
                      <td>epo:hasItemStandardID</td>
-                     <td>The identifier for the instance of the concept based on a standard scheme.
+                     <td>The general identifier assigned to the concept based on a standard scheme.​
                         
                         Additional information: 
-                        For example the GTIN scheme (Global Trade Item Number). 
+                        For example the GTIN scheme (Global Trade Item Number).
                         
-                        WG Approval 24/02/2022
-                        </td>
-                     <td>epo-cat:Item (external) -&gt; adms:Identifier [0..1]</td>
+                        WG approval 16/05/2023</td>
+                     <td>epo-cat:Item -&gt; adms:Identifier [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:hasLabelType</td>
+                     <td>The label type such environmental, quality, social etc.</td>
+                     <td>epo:CertificationLabel -&gt; at-voc-new:certification-label-type [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasLanguage</td>
@@ -4996,13 +5042,8 @@
                   </tr>
                   <tr>
                      <td>epo:hasLaunchFrameworkAgreementMaximumValue</td>
-                     <td></td>
-                     <td>epo:FrameworkAgreementTerm -&gt; epo:MonetaryValue [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasLaunchGroupFrameworkAgreementMaximumValue</td>
-                     <td></td>
-                     <td>epo:FrameworkAgreementTerm -&gt; epo:MonetaryValue [0..1]</td>
+                     <td> </td>
+                     <td>epo:ProcurementObject -&gt; epo:MonetaryValue [0..1]<br>epo:LotGroup -&gt; epo:MonetaryValue [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:hasLegalBasis</td>
@@ -5029,11 +5070,6 @@
                      <td>epo:hasLegalIdentifier</td>
                      <td></td>
                      <td>org:Organization -&gt; adms:Identifier [0..*]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasLegalRegime</td>
-                     <td></td>
-                     <td>epo:ProcurementObject -&gt; epo:legal-regime [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:hasLotReference</td>
@@ -5080,17 +5116,15 @@
                      <td>epo:hasManufacturerID</td>
                      <td>The manufacturer's identifier for the item.
                         </td>
-                     <td>epo-cat:Manufacturer (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-cat:Manufacturer -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasManufacturerItemID</td>
-                     <td>This refers to the general identifier for the concept as defined by the manufacturer.
+                     <td>The general identifier assigned to the concept as defined by the Manufacturer. ​
                         
-                        
-                        WG Approval 16/05/2023
-                        
+                        WG approval 16/05/2023
                         </td>
-                     <td>epo-cat:Item (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-cat:Item -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasMaximumFrameworkAgreementAwardedValue</td>
@@ -5118,18 +5152,6 @@
                   <tr>
                      <td>epo:hasModificationJustification</td>
                      <td>Explanation of why a contract was modified.
-                        WG Approval 09/11/2021
-                        
-                        The codelist to be used is at-voc:modification-justification which is available at
-                        http://publications.europa.eu/resource/dataset/modification-justification
-                        
-                        Additional Information
-                        
-                        This corresponds in Standard forms to Field VII.2.2.1 and VII.2.2.3 in F20 .
-                        
-                        This corresponds in eForms to BT-200.
-                        
-                         Explanation of why a contract was modified.
                         
                         WG Approval 09/11/2021
                         
@@ -5144,13 +5166,13 @@
                         
                         
                         </td>
-                     <td>epo:ElementModificationDescription -&gt; at-voc:modification-justification [1]<br>epo:AmendedContract (external) -&gt; at-voc:modification-justification [1]<br></td>
+                     <td>epo-con:ContractModificationInformation -&gt; at-voc:modification-justification [1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasNationality</td>
                      <td>
                         </td>
-                     <td>cpv:Person -&gt; at-voc:country [0..*]</td>
+                     <td>person:Person -&gt; at-voc:country [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:hasNonAwardJustification</td>
@@ -5158,7 +5180,7 @@
                         
                         
                         </td>
-                     <td>epo:AwardDecision -&gt; at-voc:non-award-justification [0..1]</td>
+                     <td>epo:AwardOutcome -&gt; at-voc:non-award-justification [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasNonElectronicSubmissionJustification</td>
@@ -5173,22 +5195,13 @@
                      <td>epo:hasNonPublicationJustification</td>
                      <td>The reason why data is not published. 
                         WG Approval 11/06/2020 
-                        
                         </td>
-                     <td>epo:ElementConfidentialityDescription -&gt; at-voc:non-publication-justification [1]</td>
+                     <td>epo:NonPublishedInformation -&gt; at-voc:non-publication-justification [1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasNoticeType</td>
                      <td></td>
                      <td>epo:Notice -&gt; at-voc:notice-type [1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasNotificationContentType</td>
-                     <td>A categorisation of templates for sets of Procurement information to be conveyed in
-                        Notices.
-                        
-                        WG Approval 12/05/2020</td>
-                     <td>epo:Notice -&gt; epo:notification-phases-content-types [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasNutsCode</td>
@@ -5231,7 +5244,7 @@
                   <tr>
                      <td>epo:hasPrimaryContactPoint</td>
                      <td></td>
-                     <td>org:Organization -&gt; cpov:ContactPoint [0..*]</td>
+                     <td>org:Organization -&gt; cpov:ContactPoint [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasPrizeValue</td>
@@ -5253,11 +5266,6 @@
                         WG Approval 09/06/2020
                         </td>
                      <td>epo:Procedure -&gt; at-voc:procurement-procedure-type [1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:hasProcurementClassification</td>
-                     <td></td>
-                     <td>epo:Contract -&gt; at-voc:cpv [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasProcurementHighestReceivedTenderValue</td>
@@ -5282,8 +5290,8 @@
                   </tr>
                   <tr>
                      <td>epo:hasPurpose</td>
-                     <td>Relation indicating a procurement part has a puropse.</td>
-                     <td>epo:ProcurementObject -&gt; epo:Purpose [0..1]</td>
+                     <td> Relation indicating the Purpose of a concept.</td>
+                     <td>epo:Contract -&gt; epo:Purpose [0..1]<br>epo:ProcurementObject -&gt; epo:Purpose [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:hasQualificationSystemDuration</td>
@@ -5373,23 +5381,28 @@
                   </tr>
                   <tr>
                      <td>epo:hasSellerItemID</td>
-                     <td> The general identifier for the concept as defined by the seller.
+                     <td>The general identifier assigned to the concept as defined by the Seller.​
                         
-                        WG Approval 16/05/2023
+                        WG approval 16/05/2023
                         </td>
-                     <td>epo-cat:Item (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-cat:Item -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasSerialID</td>
                      <td>The identifier assigned to the specific instance of the produced concept.
                         WG Approval 16/05/2023
                         </td>
-                     <td>epo-cat:Item (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-cat:Item -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasStartDate</td>
                      <td></td>
                      <td>epo:SelectedCandidateList -&gt; epo:Period [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:hasSubcontracting</td>
+                     <td></td>
+                     <td>epo:Tender -&gt; at-voc:applicability [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasSubcontractingEstimatedValue</td>
@@ -5423,6 +5436,11 @@
                         
                         </td>
                      <td>epo:SubmissionTerm -&gt; at-voc:subcontracting-indication [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:hasTenderValidityDuration</td>
+                     <td></td>
+                     <td>epo:SubmissionTerm -&gt; epo:Duration [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:hasTenderValidityPeriod</td>
@@ -5478,7 +5496,7 @@
                   <tr>
                      <td>epo:hasTotalValue</td>
                      <td> </td>
-                     <td>epo:TenderGroup -&gt; epo:MonetaryValue [1]<br>epo:Deliverable (external) -&gt; epo:MonetaryValue [0..1]<br></td>
+                     <td>epo:TenderGroup -&gt; epo:MonetaryValue [0..1]<br>epo-con:Deliverable -&gt; epo:MonetaryValue [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:hasUnitCode</td>
@@ -5505,18 +5523,23 @@
                      <td>epo:hasUUID</td>
                      <td>A universally unique identifier for an instance of this document.
                         
-                        WG Approval 12/05/2020</td>
-                     <td>epo:Document -&gt; adms:Identifier [0..1]</td>
+                        WG Approval 12/05/2020 A universally unique identifier for an instance of this document.
+                        
+                        WG Approval 12/05/2020
+                        </td>
+                     <td>epo:Document -&gt; adms:Identifier [0..1]<br>epo-cat:CatalogueResponseLine -&gt; adms:Identifier [1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:hasValidityPeriod</td>
                      <td>The relation indicating until when a given instance of a concept is applicable.
                         
+                        WG approval 30/05/2023 The relation indicating until when a given instance of a concept is applicable.
+                        
                         WG approval 30/05/2023
                          The relation indicating until when a given instance of a concept is applicable.
                         
                         WG approval 30/05/2023</td>
-                     <td>epo:Technique -&gt; epo:Period [0..1]<br>epo-cat:Certificate (external) -&gt; epo:Period [0..1]<br></td>
+                     <td>cccev:Evidence -&gt; epo:Period [0..1]<br>epo:Technique -&gt; epo:Period [0..1]<br>epo-cat:Catalogue -&gt; epo:Period [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:hasVariantPermission</td>
@@ -5554,6 +5577,21 @@
                      <td>epo:StrategicProcurement -&gt; at-voc:accessibility [0..*]</td>
                   </tr>
                   <tr>
+                     <td>epo:includesNationalCriterion</td>
+                     <td>Relation indicating that a Criterion contains a Criterion that is specific to a given
+                        Member State.
+                        
+                        Additional Information:
+                        In the ESPD, a Subcriterion is used to define national sub-criteria; maps to a UBL-2.3
+                        cac:SubTenderingCriterion class. It is currently used only for purely national criteria,
+                        to be able to establish the mapping from eCertis.
+                        
+                        WG approval 07/11/2023
+                        
+                        </td>
+                     <td>epo:QualificationCriterion -&gt; epo:QualificationCriterion [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>epo:includesTender</td>
                      <td>Additional information:
                         This corresponds in eForms to BT-3202  Contract Tender Identifier.
@@ -5568,7 +5606,7 @@
                   <tr>
                      <td>epo:indicatesInvoiceeContactPoint</td>
                      <td></td>
-                     <td>epo:Buyer -&gt; cpov:ContactPoint []</td>
+                     <td>epo:Buyer -&gt; cpov:ContactPoint [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:involvesBuyer</td>
@@ -5578,17 +5616,7 @@
                   <tr>
                      <td>epo:involvesProcurementDocument</td>
                      <td></td>
-                     <td>epo:AccessTerm -&gt; epo:ProcurementDocument [1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:isAppointedBy</td>
-                     <td></td>
-                     <td>epo:EvaluationBoard (external) -&gt; epo:Buyer [1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:isAssignedForEvaluationOf</td>
-                     <td></td>
-                     <td>epo:EvaluationBoard (external) -&gt; epo:Lot [0..*]</td>
+                     <td>epo:AccessTerm -&gt; epo:ProcurementDocument [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:isBasedOnImplementingRegulation</td>
@@ -5605,7 +5633,7 @@
                         This role is defined in the directive EU 2015/849 and it's beyond the scope for public
                         eProcurement domain.
                         WG approval 14/09/2021</td>
-                     <td>epo:Business [,0..*] &lt;- cpv:Person</td>
+                     <td>epo:Business [,0..*] &lt;- person:Person</td>
                   </tr>
                   <tr>
                      <td>epo:isCalculatedOn</td>
@@ -5614,7 +5642,7 @@
                         
                          The monetary amount to which the multiplier factor is applied in calculating the amount
                         of this allowance or charge.</td>
-                     <td>epo-ord:AllowanceChargeInformation (external) -&gt; epo:MonetaryValue [0..1]<br>epo-ord:TaxInformation (external) -&gt; epo:MonetaryValue [0..1]<br></td>
+                     <td>epo-ord:AllowanceChargeInformation -&gt; epo:MonetaryValue [0..1]<br>epo-ord:TaxInformation -&gt; epo:MonetaryValue [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:isExecutedByProcurementServiceProvider</td>
@@ -5631,8 +5659,16 @@
                         Funds may change between the lot and the contract, for example in the case of an emergency
                         crisis, a contract may be financed by a budget that was not foreseen in the call.
                         
+                         Funding is provided either completely or partially by a Fund.
+                        
+                        Additional information:
+                        This corresponds in eForms to BG - 61 EU Funds (specified per Lot) and to BG - 611
+                        Contract EU Funds (applied per Contract lot)
+                        Funds may change between the lot and the contract, for example in the case of an emergency
+                        crisis, a contract may be financed by a budget that was not foreseen in the call.
+                        
                         </td>
-                     <td>epo:ProcurementObject -&gt; epo:Fund [0..*]</td>
+                     <td>epo:Contract -&gt; epo:Fund [0..*]<br>epo:ProcurementObject -&gt; epo:Fund [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:isOwnedByAgent</td>
@@ -5692,13 +5728,24 @@
                      <td>epo:TenderGroup -&gt; epo:LotGroup [1]</td>
                   </tr>
                   <tr>
+                     <td>epo:issuedByCertifier</td>
+                     <td>Relation indicating the Certifier responsible for providing the ItemCertificate.
+                        
+                        Additional Information:
+                        Certifier is a role played by an organisation.
+                        
+                        WG approval 26/07/2022</td>
+                     <td>epo:Certificate -&gt; epo:Certifier [0..1]</td>
+                  </tr>
+                  <tr>
                      <td>epo:isSupportedBy</td>
-                     <td>  </td>
-                     <td>epo:Tender -&gt; epo:TechnicalOffer (external) [1]<br>epo:Tender -&gt; epo:ESPDResponse (external) [1]<br>epo:Tender -&gt; epo:FinancialOffer (external) [1]<br></td>
+                     <td></td>
+                     <td>epo:Tender -&gt; epo-sub:ESPD (external) [1]</td>
                   </tr>
                   <tr>
                      <td>epo:leadBy</td>
-                     <td></td>
+                     <td>The epo:OrganisationGroup epo:leadBy org:Organization was implemented to be used in
+                        case of an Economic Operator Group.</td>
                      <td>epo:OrganisationGroup -&gt; org:Organization [0..1]</td>
                   </tr>
                   <tr>
@@ -5720,7 +5767,7 @@
                   <tr>
                      <td>epo:playedBy</td>
                      <td>  </td>
-                     <td>epo:AgentInRole -&gt; foaf:Agent [1]<br>epo-ful:TransportMeansOperator (external) -&gt; foaf:Person [0..1]<br>epo:JuryMember -&gt; foaf:Person [0..1]<br></td>
+                     <td>epo:AgentInRole -&gt; foaf:Agent [1]<br>epo:JuryMember -&gt; person:Person [0..1]<br>epo-ful:TransportMeansOperator -&gt; foaf:Person [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:providesContractTotalPaymentValue</td>
@@ -5744,7 +5791,7 @@
                   <tr>
                      <td>epo:refersToAwardDecision</td>
                      <td> </td>
-                     <td>epo-not:CompletionNotice (external) -&gt; epo:AwardDecision [0..*]<br>epo-not:ContractModificationNotice (external) -&gt; epo:AwardDecision [0..*]<br></td>
+                     <td>epo-not:CompletionNotice -&gt; epo:AwardDecision [0..*]<br>epo-not:ContractModificationNotice -&gt; epo:AwardDecision [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:refersToContract</td>
@@ -5754,27 +5801,22 @@
                   <tr>
                      <td>epo:refersToContractToBeModified</td>
                      <td></td>
-                     <td>epo-not:ContractModificationNotice (external) -&gt; epo:Contract [1]</td>
+                     <td>epo-not:ContractModificationNotice -&gt; epo:Contract [1]</td>
                   </tr>
                   <tr>
                      <td>epo:refersToLot</td>
                      <td>   </td>
-                     <td>epo:Notice -&gt; epo:Lot [1..*]<br>epo-not:CompletionNotice (external) -&gt; epo:Lot [1..*]<br>epo-not:ContractModificationNotice (external) -&gt; epo:Lot [1..*]<br>epo-not:ResultNotice (external) -&gt; epo:Lot [1..*]<br></td>
+                     <td>epo:Notice -&gt; epo:Lot [1..*]<br>epo-not:CompletionNotice -&gt; epo:Lot [1..*]<br>epo-not:ContractModificationNotice -&gt; epo:Lot [1..*]<br>epo-not:ResultNotice -&gt; epo:Lot [1..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:refersToLotGroup</td>
                      <td>  </td>
-                     <td>epo-not:ContractModificationNotice (external) -&gt; epo:LotGroup [0..*]<br>epo-not:ResultNotice (external) -&gt; epo:LotGroup [0..*]<br>epo-not:CompletionNotice (external) -&gt; epo:LotGroup [0..*]<br></td>
+                     <td>epo-not:ContractModificationNotice -&gt; epo:LotGroup [0..*]<br>epo-not:ResultNotice -&gt; epo:LotGroup [0..*]<br>epo-not:CompletionNotice -&gt; epo:LotGroup [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:refersToLotGroupAwardInformation</td>
                      <td> </td>
-                     <td>epo-not:CompletionNotice (external) -&gt; epo:LotGroupAwardInformation [0..*]<br>epo-not:ContractModificationNotice (external) -&gt; epo:LotGroupAwardInformation [0..*]<br></td>
-                  </tr>
-                  <tr>
-                     <td>epo:refersToNonPublishedElement</td>
-                     <td></td>
-                     <td>epo-not:CompletionNotice (external) -&gt; epo:PublicationProvision [0..*]</td>
+                     <td>epo-not:CompletionNotice -&gt; epo:LotGroupAwardInformation [0..*]<br>epo-not:ContractModificationNotice -&gt; epo:LotGroupAwardInformation [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:refersToNotice</td>
@@ -5783,13 +5825,8 @@
                   </tr>
                   <tr>
                      <td>epo:refersToNoticeAwardInformation</td>
-                     <td></td>
-                     <td>epo-not:CompletionNotice (external) -&gt; epo:NoticeAwardInformation [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>epo:refersToOriginalNotice</td>
-                     <td></td>
-                     <td>epo:ContractModification -&gt; epo:Notice [0..1]</td>
+                     <td> </td>
+                     <td>epo-not:ContractModificationNotice -&gt; epo:NoticeAwardInformation [0..1]<br>epo-not:CompletionNotice -&gt; epo:NoticeAwardInformation [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:refersToPlannedPart</td>
@@ -5806,7 +5843,7 @@
                      <td>
                         Additional information: 
                         This corresponds in eForms to BT-758 Change Notice Version Identifier.</td>
-                     <td>epo:NoticeChange -&gt; epo:Notice [0..1]</td>
+                     <td>epo:ChangeInformation -&gt; epo:Notice [1]</td>
                   </tr>
                   <tr>
                      <td>epo:refersToPreviousProcedure</td>
@@ -5843,17 +5880,22 @@
                   <tr>
                      <td>epo:refersToProcedure</td>
                      <td>   </td>
-                     <td>epo-not:ResultNotice (external) -&gt; epo:Procedure [1]<br>epo-not:ContractModificationNotice (external) -&gt; epo:Procedure [1]<br>epo-not:CompletionNotice (external) -&gt; epo:Procedure [1]<br>epo:Notice -&gt; epo:Procedure [1]<br></td>
+                     <td>epo:Notice -&gt; epo:Procedure [1]<br>epo-not:ResultNotice -&gt; epo:Procedure [1]<br>epo-not:ContractModificationNotice -&gt; epo:Procedure [1]<br>epo-not:CompletionNotice -&gt; epo:Procedure [1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:refersToProject</td>
                      <td></td>
-                     <td>epo-ord:Order (external) -&gt; epo:Project [0..1]</td>
+                     <td>epo-ord:Order -&gt; epo:Project [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:refersToRole</td>
                      <td></td>
-                     <td>epo-not:CompletionNotice (external) -&gt; epo:AgentInRole [0..*]</td>
+                     <td>epo-not:CompletionNotice -&gt; epo:AgentInRole [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:relatesToEFormSectionIdentifier</td>
+                     <td>  </td>
+                     <td>epo:ChangeInformation -&gt; adms:Identifier [1..*]<br>epo:NonPublishedInformation -&gt; adms:Identifier [1..*]<br>epo-con:ContractModificationInformation -&gt; adms:Identifier [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:requestsRemedyType</td>
@@ -5867,19 +5909,19 @@
                      <td>epo:ReviewDecision -&gt; epo:ReviewRequest [1]</td>
                   </tr>
                   <tr>
-                     <td>epo:resultsFromLotAwardDecision</td>
+                     <td>epo:resultsFromLotAwardOutcome</td>
                      <td> </td>
-                     <td>epo:DirectContract -&gt; epo:LotAwardDecision [0..*]<br>epo:FrameworkAgreement -&gt; epo:LotAwardDecision [0..*]<br></td>
+                     <td>epo:DirectContract -&gt; epo:LotAwardOutcome [0..*]<br>epo:FrameworkAgreement -&gt; epo:LotAwardOutcome [0..*]<br></td>
                   </tr>
                   <tr>
-                     <td>epo:resultsFromMiniCompetitionAwardDecision</td>
+                     <td>epo:resultsFromMiniCompetitionAwardOutcome</td>
                      <td></td>
-                     <td>epo:PurchaseContract -&gt; epo:MiniCompetitionAwardDecision [0..1]</td>
+                     <td>epo:PurchaseContract -&gt; epo:MiniCompetitionAwardOutcome [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:resultsInDynamicPurchasingSystem</td>
+                     <td>epo:resultsFromUsingCandidateList</td>
                      <td></td>
-                     <td>epo:DynamicPurchaseSystemTechnique -&gt; epo:DynamicPurchasingSystem [1]</td>
+                     <td>epo:MiniCompetitionAwardOutcome -&gt; epo:SelectedCandidateList [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:setsGroupingContextForLot</td>
@@ -5902,29 +5944,34 @@
                      <td>epo:Buyer -&gt; epo:AwardDecision [0..*]</td>
                   </tr>
                   <tr>
-                     <td>epo:specifiesAwardCriterion</td>
-                     <td></td>
-                     <td>epo:MiniCompetition -&gt; epo:AwardCriterion [0..*]</td>
-                  </tr>
-                  <tr>
                      <td>epo:specifiesBuyer</td>
                      <td> </td>
-                     <td>epo-cat:Catalogue (external) -&gt; epo:Buyer [0..*]<br>epo-ord:Order (external) -&gt; epo:Buyer [1]<br></td>
+                     <td>epo-cat:Catalogue -&gt; epo:Buyer [0..*]<br>epo-ord:Order -&gt; epo:Buyer [1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:specifiesCatalogueProvider</td>
-                     <td></td>
-                     <td>epo-cat:Catalogue (external) -&gt; epo:CatalogueProvider [0..1]</td>
+                     <td> </td>
+                     <td>epo-cat:Catalogue -&gt; epo:CatalogueProvider [0..1]<br>epo-cat:CatalogueResponse -&gt; epo:CatalogueProvider [1]<br></td>
                   </tr>
                   <tr>
                      <td>epo:specifiesCatalogueReceiver</td>
+                     <td> </td>
+                     <td>epo-cat:Catalogue -&gt; epo:CatalogueReceiver [0..1]<br>epo-cat:CatalogueResponse -&gt; epo:CatalogueReceiver [1]<br></td>
+                  </tr>
+                  <tr>
+                     <td>epo:specifiesCleanVehicleDirectiveContractType</td>
                      <td></td>
-                     <td>epo-cat:Catalogue (external) -&gt; epo:CatalogueReceiver [0..1]</td>
+                     <td>epo:VehicleInformation -&gt; at-voc:cvd-contract-type [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo:specifiesCleanVehicleDirectiveVehicleCategory</td>
+                     <td></td>
+                     <td>epo:VehicleInformation -&gt; at-voc:vehicle-category [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:specifiesDeliverable</td>
                      <td></td>
-                     <td>epo:Contract -&gt; epo:Deliverable (external) [0..*]</td>
+                     <td>epo:Contract -&gt; epo-con:Deliverable [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo:specifiesProcurementCriteriaSummary</td>
@@ -5933,8 +5980,8 @@
                   </tr>
                   <tr>
                      <td>epo:specifiesProcurementCriterion</td>
-                     <td> </td>
-                     <td>epo:Lot -&gt; epo:ProcurementCriterion [0..*]<br>epo:LotGroup -&gt; epo:ProcurementCriterion [0..*]<br></td>
+                     <td>  </td>
+                     <td>epo-acc:ESPDRequest (external) -&gt; epo:ProcurementCriterion [1..*]<br>epo:Lot -&gt; epo:ProcurementCriterion [0..*]<br>epo:LotGroup -&gt; epo:ProcurementCriterion [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>epo:specifiesSubcontractors</td>
@@ -5947,17 +5994,17 @@
                      <td>epo:Tenderer -&gt; epo:ExclusionGround [0..1]</td>
                   </tr>
                   <tr>
-                     <td>epo:summarisesInformationForAwardDecision</td>
+                     <td>epo:summarisesInformationForAwardOutcome</td>
                      <td>Relates to submission for the given competition, either at Lot level or Mini-Competition
                         level.
                         
                         WG approval 30/05/2023</td>
-                     <td>epo:SubmissionStatisticalInformation -&gt; epo:AwardDecision [1]</td>
+                     <td>epo:SubmissionStatisticalInformation -&gt; epo:AwardOutcome [1]</td>
                   </tr>
                   <tr>
-                     <td>epo:usesCandidateList</td>
+                     <td>epo:updatesContractValue</td>
                      <td></td>
-                     <td>epo:MiniCompetition -&gt; epo:SelectedCandidateList [0..1]</td>
+                     <td>epo-con:ContractAmendment -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo:usesChannel</td>
@@ -5970,6 +6017,13 @@
                      <td>epo:ProcurementObject -&gt; epo:Technique [0..*]</td>
                   </tr>
                   <tr>
+                     <td>epo-acc:refersToNotice</td>
+                     <td>Reference to a Notice.
+                        
+                        WG approval 12/03/2024</td>
+                     <td>epo-acc:ESPDRequest (external) -&gt; epo:Notice [0..*]</td>
+                  </tr>
+                  <tr>
                      <td>epo-cat:hasAmount</td>
                      <td>The predetermined monetary value charged in addition to the price.
                         
@@ -5978,17 +6032,19 @@
                         WG approval 26/07/2022
                         
                         </td>
-                     <td>epo-ord:AllowanceChargeInformation (external) -&gt; epo:MonetaryValue [1]<br>epo-ord:TaxInformation (external) -&gt; epo:MonetaryValue [0..1]<br></td>
+                     <td>epo-ord:AllowanceChargeInformation -&gt; epo:MonetaryValue [1]<br>epo-ord:TaxInformation -&gt; epo:MonetaryValue [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasBaseQuantity</td>
                      <td>The quantity at which the net monetary value applies.</td>
-                     <td>epo-cat:Price (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-cat:Price -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasCatalogueLineValidity</td>
-                     <td></td>
-                     <td>epo-cat:CatalogueLine (external) -&gt; epo:Period [0..1]</td>
+                     <td>The relation indicating until when a Catalogue Line instance is applicable.
+                        
+                        WG approval 21/09/2023</td>
+                     <td>epo-cat:CatalogueLine -&gt; epo:Period [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasCountryOfOrigin</td>
@@ -6001,13 +6057,13 @@
                         
                         WG Approval 07/01/2020
                         </td>
-                     <td>epo-cat:Item (external) -&gt; at-voc:country [0..1]</td>
+                     <td>epo-cat:Item -&gt; at-voc:country [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasDeliveryLocation</td>
                      <td>Location delivery area where the Item can be ordered to the given price.
                         </td>
-                     <td>epo-cat:Price (external) -&gt; dct:Location [0..1]</td>
+                     <td>epo-cat:Price -&gt; dct:Location [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasExpectedDeliveryTime</td>
@@ -6015,40 +6071,40 @@
                         
                         WG approval 26/07/2022
                         </td>
-                     <td>epo-cat:Price (external) -&gt; epo:Duration [0..1]</td>
+                     <td>epo-cat:Price -&gt; epo:Duration [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasExternalSpecification</td>
                      <td>URI reference to external item information or specifications, e.g. web address.
                         </td>
-                     <td>epo-cat:Item (external) -&gt; epo:Document []</td>
+                     <td>epo-cat:Item -&gt; epo:Document [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasMaximumOrderQuantity</td>
                      <td>The maximum number of orderable units that can be ordered according to details provided
                         in the catalogue line, such as price.
                         </td>
-                     <td>epo-cat:CatalogueLine (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-cat:CatalogueLine -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasMinimumQuantityGuaranteedForDelivery</td>
                      <td>The minimum quantity of an item that is guaranteed by the seller to be delivered.
                         
                         </td>
-                     <td>epo-cat:CatalogueLine (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-cat:CatalogueLine -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasNetMonetaryValue</td>
                      <td>The price amount of an Item exclusive of taxes and after substracting price discounts.
                         </td>
-                     <td>epo-cat:Price (external) -&gt; epo:MonetaryValue [1]</td>
+                     <td>epo-cat:Price -&gt; epo:MonetaryValue [1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasNetQuantity</td>
                      <td>The net quantity of the item that is contained in each consumable unit, excluding
                         any packaging materials.
                         </td>
-                     <td>epo-cat:Item (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-cat:Item -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasOrderabableUnitFactorRate</td>
@@ -6061,13 +6117,13 @@
                         orderable unit. 
                         
                         </td>
-                     <td>epo-cat:Price (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-cat:Price -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasPriceValidity</td>
                      <td>The period of time when the Item can be ordered to the given price.
                         </td>
-                     <td>epo-cat:Price (external) -&gt; epo:Period [1]</td>
+                     <td>epo-cat:Price -&gt; epo:Period [1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasQualifiedValue</td>
@@ -6078,57 +6134,57 @@
                         12 inches. 
                         
                         WG approval 28/07/2022</td>
-                     <td>epo-cat:ItemProperty (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-cat:ItemProperty -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasQuantity</td>
                      <td> </td>
-                     <td>epo-ord:OrderLine (external) -&gt; epo:Quantity [1]<br>epo:Deliverable (external) -&gt; epo:Quantity [0..1]<br></td>
+                     <td>epo-ord:OrderLine -&gt; epo:Quantity [1]<br>epo-con:Deliverable -&gt; epo:Quantity [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo-cat:hasQuantityThreshold</td>
                      <td>The minimum quantity of the item that can be ordered to the given net monetary value.</td>
-                     <td>epo-cat:Price (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-cat:Price -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-cat:isSubordinatedToContract</td>
                      <td></td>
-                     <td>epo-cat:Catalogue (external) -&gt; epo:Contract [0..1]</td>
+                     <td>epo-cat:Catalogue -&gt; epo:Contract [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:agreedByBuyer</td>
                      <td></td>
-                     <td>epo-ful:ShipmentAgreement (external) -&gt; epo:Buyer [1..*]</td>
+                     <td>epo-ful:ShipmentAgreement -&gt; epo:Buyer [1..*]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasAssociatedDocument</td>
-                     <td> </td>
-                     <td>epo-ful:DespatchAdvice (external) -&gt; epo:Document [0..1]<br>epo-ful:DespatchLine (external) -&gt; epo:Document [0..1]<br></td>
+                     <td>  </td>
+                     <td>epo-ful:ReceiptAdvice -&gt; epo:Document [0..1]<br>epo-ful:DespatchAdvice -&gt; epo:Document [0..1]<br>epo-ful:DespatchLine -&gt; epo:Document [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasCarrierConsignmentID</td>
                      <td></td>
-                     <td>epo-ful:Consignment (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-ful:Consignment -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasChargeableWeight</td>
                      <td></td>
-                     <td>epo-ful:Consignment (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-ful:Consignment -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasConsigneeConsignmentID</td>
                      <td></td>
-                     <td>epo-ful:Consignment (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-ful:Consignment -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasConsignmentDeclaredStatisticsValue</td>
                      <td></td>
-                     <td>epo-ful:Consignment (external) -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo-ful:Consignment -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasConsignmentFreeOnBoardValue</td>
                      <td></td>
-                     <td>epo-ful:Consignment (external) -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo-ful:Consignment -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasConsignmentInvoiceValue</td>
@@ -6138,217 +6194,324 @@
                         
                         This is a logistics information needed for logistics, security measures, customs check,
                         etc.</td>
-                     <td>epo-ful:Consignment (external) -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo-ful:Consignment -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasDeclaredStatisticalValue</td>
                      <td></td>
-                     <td>epo-ful:GoodsItem (external) -&gt; epo:MonetaryValue [0..*]</td>
+                     <td>epo-ful:GoodsItem -&gt; epo:MonetaryValue [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasDespatchedQuantity</td>
                      <td>Quantity despatched for delivered.</td>
-                     <td>epo-ful:DespatchLine (external) -&gt; epo:Quantity [1]</td>
+                     <td>epo-ful:DespatchLine -&gt; epo:Quantity [1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasEstimatedDeliveryPeriod</td>
                      <td></td>
-                     <td>epo-ful:ShipmentInformation (external) -&gt; epo:Period [0..1]</td>
+                     <td>epo-ful:ShipmentInformation -&gt; epo:Period [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasFreightForwarderConsignmentID</td>
                      <td></td>
-                     <td>epo-ful:Consignment (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-ful:Consignment -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasGrossVolume</td>
                      <td> </td>
-                     <td>epo-ful:AbstractContainer (external) -&gt; epo:Quantity [0..1]<br>epo-ful:Consignment (external) -&gt; epo:Quantity [0..1]<br></td>
+                     <td>epo-ful:AbstractContainer -&gt; epo:Quantity [0..1]<br>epo-ful:Consignment -&gt; epo:Quantity [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasGrossWeight</td>
                      <td> </td>
-                     <td>epo-ful:AbstractContainer (external) -&gt; epo:Quantity [0..1]<br>epo-ful:Consignment (external) -&gt; epo:Quantity [0..1]<br></td>
+                     <td>epo-ful:AbstractContainer -&gt; epo:Quantity [0..1]<br>epo-ful:Consignment -&gt; epo:Quantity [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasHeight</td>
                      <td></td>
-                     <td>epo-ful:AbstractContainer (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-ful:AbstractContainer -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasLength</td>
                      <td></td>
-                     <td>epo-ful:AbstractContainer (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-ful:AbstractContainer -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasLoadingLength</td>
                      <td></td>
-                     <td>epo-ful:Consignment (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-ful:Consignment -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasMaximumTemperature</td>
                      <td></td>
-                     <td>epo-ful:TemperatureSpecification (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-ful:TemperatureSpecification -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasMinimumTemperature</td>
                      <td></td>
-                     <td>epo-ful:TemperatureSpecification (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-ful:TemperatureSpecification -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasNetVolume</td>
                      <td></td>
-                     <td>epo-ful:AbstractContainer (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-ful:AbstractContainer -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasNetWeight</td>
                      <td> </td>
-                     <td>epo-ful:AbstractContainer (external) -&gt; epo:Quantity [0..1]<br>epo-ful:Consignment (external) -&gt; epo:Quantity [0..1]<br></td>
-                  </tr>
-                  <tr>
-                     <td>epo-ful:hasOperatorLicenceID</td>
-                     <td></td>
-                     <td>epo-ful:TransportMeansOperator (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-ful:AbstractContainer -&gt; epo:Quantity [0..1]<br>epo-ful:Consignment -&gt; epo:Quantity [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasOutstandingQuantity</td>
                      <td></td>
-                     <td>epo-ful:DespatchLine (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-ful:DespatchLine -&gt; epo:Quantity [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-ful:hasOversupplyQuantity</td>
+                     <td></td>
+                     <td>epo-ful:ReceiptAdviceLine -&gt; epo:Quantity [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-ful:hasReceivedQuantity</td>
+                     <td></td>
+                     <td>epo-ful:ReceiptAdviceLine -&gt; epo:Quantity [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-ful:hasRejectedQuantity</td>
+                     <td></td>
+                     <td>epo-ful:ReceiptAdviceLine -&gt; epo:Quantity [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-ful:hasShortQuantity</td>
+                     <td></td>
+                     <td>epo-ful:ReceiptAdviceLine -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasTotalGoodsItemQuantity</td>
                      <td> </td>
-                     <td>epo-ful:AbstractContainer (external) -&gt; epo:Quantity [0..1]<br>epo-ful:Consignment (external) -&gt; epo:Quantity [0..1]<br></td>
+                     <td>epo-ful:AbstractContainer -&gt; epo:Quantity [0..1]<br>epo-ful:Consignment -&gt; epo:Quantity [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasTraceID</td>
-                     <td></td>
-                     <td>epo-ful:GoodsItem (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>The identifier used for tracking the goods item
+                        
+                        Additional information:
+                        An example is the EPC number used in RFID.
+                        
+                        WG approval 21/09/2023
+                        </td>
+                     <td>epo-ful:GoodsItem -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasTrackingID</td>
                      <td></td>
-                     <td>epo-ord:DeliveryInformation (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-ord:DeliveryInformation -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasTransportHandlingUnitQuantity</td>
                      <td></td>
-                     <td>epo-ful:Consignment (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-ful:Consignment -&gt; epo:Quantity [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasVehicleID</td>
                      <td></td>
-                     <td>epo-ful:TransportMeans (external) -&gt; adms:Identifier [1]</td>
+                     <td>epo-ful:TransportMeans -&gt; adms:Identifier [1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasVehicleSegmentID</td>
                      <td></td>
-                     <td>epo-ful:TransportMeans (external) -&gt; adms:Identifier [0..1]</td>
+                     <td>epo-ful:TransportMeans -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:hasWidth</td>
                      <td></td>
-                     <td>epo-ful:AbstractContainer (external) -&gt; epo:Quantity [0..1]</td>
+                     <td>epo-ful:AbstractContainer -&gt; epo:Quantity [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-ful:specifiesBuyer</td>
+                     <td></td>
+                     <td>epo-ful:ReceiptAdvice -&gt; epo:Buyer [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ful:specifiesPlaceOfDespatch</td>
                      <td></td>
-                     <td>epo-ful:ShipmentInformation (external) -&gt; dct:Location [0..1]</td>
+                     <td>epo-ful:ShipmentInformation -&gt; dct:Location [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-not:announcesRole</td>
                      <td></td>
-                     <td>epo-not:ResultNotice (external) -&gt; epo:AgentInRole [0..*]</td>
+                     <td>epo-not:ResultNotice -&gt; epo:AgentInRole [0..*]</td>
                   </tr>
                   <tr>
                      <td>epo-not:refersToRole</td>
                      <td></td>
-                     <td>epo-not:ResultNotice (external) -&gt; epo:AgentInRole [1..*]</td>
+                     <td>epo-not:ResultNotice -&gt; epo:AgentInRole [1..*]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:concernsContract</td>
                      <td></td>
-                     <td>epo-ord:ContractInformation (external) -&gt; epo:Contract [1]</td>
+                     <td>epo-ord:ContractInformation -&gt; epo:Contract [1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:concernsOriginatorRequest</td>
                      <td></td>
-                     <td>epo-ord:OriginatorInformation (external) -&gt; epo:OriginatorRequest [0..1]</td>
+                     <td>epo-ord:OriginatorInformation -&gt; epo:OriginatorRequest [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:hasAmountDueForPayment</td>
                      <td></td>
-                     <td>epo-ord:Order (external) -&gt; epo:MonetaryValue [1]</td>
+                     <td>epo-ord:Order -&gt; epo:MonetaryValue [1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:hasDeliveryPeriod</td>
-                     <td></td>
-                     <td>epo-ord:DeliveryInformation (external) -&gt; epo:Period [0..1]</td>
+                     <td> </td>
+                     <td>epo-ord:OrderResponseInformation -&gt; epo:Period [0..1]<br>epo-ord:DeliveryInformation -&gt; epo:Period [0..1]<br></td>
                   </tr>
                   <tr>
                      <td>epo-ord:hasPrepaidAmount</td>
                      <td></td>
-                     <td>epo-ord:Order (external) -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo-ord:Order -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:hasRoundingAmount</td>
                      <td></td>
-                     <td>epo-ord:Order (external) -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo-ord:Order -&gt; epo:MonetaryValue [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-ord:hasSellerOrderID</td>
+                     <td></td>
+                     <td>epo-ord:Order -&gt; adms:Identifier [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:hasTaxInformation</td>
-                     <td> </td>
-                     <td>epo:Tender -&gt; epo-ord:TaxInformation (external) [0..1]<br>epo:Contract -&gt; epo-ord:TaxInformation (external) [0..1]<br></td>
+                     <td></td>
+                     <td>epo:Contract -&gt; epo-ord:TaxInformation [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:hasTotalAllowanceAmount</td>
                      <td></td>
-                     <td>epo-ord:Order (external) -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo-ord:Order -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:hasTotalChargeAmount</td>
                      <td></td>
-                     <td>epo-ord:Order (external) -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo-ord:Order -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:hasTotalLineAmount</td>
                      <td></td>
-                     <td>epo-ord:Order (external) -&gt; epo:MonetaryValue [1]</td>
+                     <td>epo-ord:Order -&gt; epo:MonetaryValue [1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:hasTotalTaxExclusiveAmount</td>
                      <td></td>
-                     <td>epo-ord:Order (external) -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo-ord:Order -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:hasTotalTaxInclusiveAmount</td>
                      <td></td>
-                     <td>epo-ord:Order (external) -&gt; epo:MonetaryValue [0..1]</td>
+                     <td>epo-ord:Order -&gt; epo:MonetaryValue [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:implementsContract</td>
                      <td></td>
-                     <td>epo-ord:OrderResponse (external) -&gt; epo:Contract [0..1]</td>
+                     <td>epo-ord:OrderResponse -&gt; epo:Contract [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:specifiesBuyer</td>
                      <td></td>
-                     <td>epo-ord:OrderResponse (external) -&gt; epo:Buyer [0..1]</td>
+                     <td>epo-ord:OrderResponse -&gt; epo:Buyer [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:specifiesDeliveryAgreementLocation</td>
                      <td></td>
-                     <td>epo-ord:DeliveryAgreement (external) -&gt; dct:Location [0..1]</td>
+                     <td>epo-ord:DeliveryAgreement -&gt; dct:Location [0..1]</td>
                   </tr>
                   <tr>
                      <td>epo-ord:specifiesPlaceOfDelivery</td>
                      <td></td>
-                     <td>epo-ord:DeliveryInformation (external) -&gt; dct:Location [0..1]</td>
+                     <td>epo-ord:DeliveryInformation -&gt; dct:Location [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-sub:answersQuestion</td>
+                     <td>Relation indicating that the Response replies to a question.
+                        
+                        WG approval 12/03/2024</td>
+                     <td>epo-sub:Response (external) -&gt; cccev:InformationRequirement [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-sub:concernsOrganisation</td>
+                     <td>Relates to Organization.
+                        
+                        WG approval 05/03/2024
+                        
+                        </td>
+                     <td>epo-sub:NationalPreQualificationData (external) -&gt; org:Organization [1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-sub:isReinforcedBy</td>
+                     <td>Relation indicating an Evidence that supports the Response.
+                        
+                        WG approval 12/03/2024</td>
+                     <td>epo-sub:Response (external) -&gt; cccev:Evidence [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-sub:providesInformationOn</td>
+                     <td>Offers information about an instance of a concept.
+                        
+                        WG approval 05/03/2024</td>
+                     <td>epo-sub:ESPD (external) -&gt; org:Organization [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-sub:providesOrganisationEmployeeQuantity</td>
+                     <td>The number of people hired by the Organization.
+                        
+                        WG approval 05/03/2024</td>
+                     <td>epo-sub:NationalPreQualificationData (external) -&gt; epo:Quantity [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-sub:providesOrganisationFinancialCapability</td>
+                     <td>A monetary amount representing the financial capability of the Organization.
+                        
+                        Additional information:
+                        Used to represent the general Turnover of the Organization (for statistical purposes).
+                        
+                        WG approval 05/03/2024</td>
+                     <td>epo-sub:NationalPreQualificationData (external) -&gt; epo:MonetaryValue [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-sub:providesOrganisationPreQualificationListingIdentifier</td>
+                     <td>The identifier assigned to an economic operator in a national pre-qualification system
+                        or official list.
+                        
+                        WG approval 05/03/2024</td>
+                     <td>epo-sub:NationalPreQualificationData (external) -&gt; adms:Identifier [0..*]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-sub:refersToApplicablePeriod</td>
+                     <td>Relation indicating the period to which the Response shall apply.
+                        
+                        WG approval 12/03/2024</td>
+                     <td>epo-sub:Response (external) -&gt; epo:Period [0..1]</td>
+                  </tr>
+                  <tr>
+                     <td>epo-sub:summarisesInformationAboutCertificate</td>
+                     <td>Relation indicating the Certificate that the information refers to.
+                        
+                        WG approval 12/03/2024 </td>
+                     <td>epo-sub:CertificateInformation (external) -&gt; epo:Certificate [1]</td>
                   </tr>
                   <tr>
                      <td>locn:address</td>
-                     <td></td>
-                     <td>dct:Location -&gt; locn:Address [0..1]</td>
+                     <td>Associates any Resource with the corresponding Address.
+                        
+                        Additional Information:
+                        Asserting the address relationship implies that the Resource has an Address.
+                          Associates any Resource with the corresponding Address.
+                        
+                        Additional Information:
+                        Asserting the address relationship implies that the Resource has an Address.</td>
+                     <td>cpov:ContactPoint -&gt; locn:Address [0..1]<br>dct:Location -&gt; locn:Address [0..1]<br>org:Organization -&gt; locn:Address [0..*]<br></td>
                   </tr>
                   <tr>
                      <td>locn:addressID</td>
@@ -6419,14 +6582,12 @@
                      <td>dct:Location -&gt; locn:Geometry [0..1]</td>
                   </tr>
                   <tr>
-                     <td>person:placeOfBirth</td>
-                     <td>The Location where the Person was born.</td>
-                     <td>cpv:Person -&gt; dct:Location [0..1]</td>
-                  </tr>
-                  <tr>
-                     <td>person:placeOfDeath</td>
-                     <td>The Location where the Person died.</td>
-                     <td>cpv:Person -&gt; dct:Location [0..1]</td>
+                     <td>org:subOrganizationOf</td>
+                     <td>Represents hierarchical containment of Organizations or OrganizationalUnits; indicates
+                        an Organization which contains this Organization.
+                        
+                        WG 31/08/2023</td>
+                     <td>org:Organization -&gt; org:Organization [0..*]</td>
                   </tr>
                   <tr>
                      <td>time:unitType</td>
