@@ -172,9 +172,22 @@ jobs:
 
             echo "+++++++++++++++++transform to turtle++++++++++++++++++++++++++++"
             echo $(ls ../${OUTPUT_PATH_OWL}*.rdf)
-            make convert-rdf-to-turtle ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_OWL
+            make convert-rdf-to-turtle \
+              ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_OWL \
+              NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH}
+            echo $(ls ../${OUTPUT_PATH_OWL}*.owl)
+            make convert-ontology-rdfxml-to-turtle \
+              ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_OWL \
+              NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH}
+
             echo $(ls ../${OUTPUT_PATH_SHACL}*.rdf)
-            make convert-rdf-to-turtle ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_SHACL
+            make convert-rdf-to-turtle \
+              ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_SHACL \
+              NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH}
+            echo $(ls ../${OUTPUT_PATH_SHACL}*.owl)
+            make convert-ontology-rdfxml-to-turtle \
+              ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_SHACL \
+              NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH}
             echo "-------------------end transform---------------------------------"
 
             sed -i "s/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" config-proxy.xsl
