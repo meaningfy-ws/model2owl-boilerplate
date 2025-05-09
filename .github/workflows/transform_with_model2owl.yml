@@ -143,7 +143,7 @@ jobs:
             CM_FILE_NAME=$(echo "${implementation}_CM.xml")
             CM_FILE_PATH=$(echo "implementation/$implementation/xmi_conceptual_model/${CM_FILE_NAME}")
             OUTPUT_PATH_OWL=$(echo "implementation/$implementation/owl_ontology/")
-            OUTPUT_PATH_SHACL=$(echo "implementation/$implementation/owl_ontology/")
+            OUTPUT_PATH_SHACL=$(echo "implementation/$implementation/shacl_shapes/")
 
             ls -la implementation/$implementation/xmi_conceptual_model/
             echo "CM_FILE_PATH is $CM_FILE_PATH"
@@ -154,9 +154,21 @@ jobs:
             cd model2owl
             ls -la
             echo "+++++++++++++++++transform to rdf++++++++++++++++++++++++++++"
-            make owl-core XMI_INPUT_FILE_PATH=../$CM_FILE_PATH OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_OWL
-            make owl-restrictions XMI_INPUT_FILE_PATH=../$CM_FILE_PATH OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_OWL
-            make shacl XMI_INPUT_FILE_PATH=../$CM_FILE_PATH OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_SHACL
+            make owl-core \
+              XMI_INPUT_FILE_PATH=../$CM_FILE_PATH \
+              OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_OWL \
+              NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH}
+            make owl-restrictions \
+              XMI_INPUT_FILE_PATH=../$CM_FILE_PATH \
+              OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_OWL \
+              NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH} \
+              CORE_OWL_FOLDER_PATH=../$OUTPUT_PATH_OWL
+            make shacl \
+              XMI_INPUT_FILE_PATH=../$CM_FILE_PATH \
+              OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_SHACL \
+              NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH} \
+              CORE_OWL_FOLDER_PATH=../$OUTPUT_PATH_OWL \
+              RESTR_OWL_FOLDER_PATH=../$OUTPUT_PATH_OWL
 
             echo "+++++++++++++++++transform to turtle++++++++++++++++++++++++++++"
             echo $(ls ../${OUTPUT_PATH_OWL}*.rdf)
