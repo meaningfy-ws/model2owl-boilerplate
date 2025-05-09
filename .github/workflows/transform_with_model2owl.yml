@@ -24,9 +24,6 @@ jobs:
       - name: get-saxon
         run: pwd && cd model2owl && make get-saxon
 
-      - name: get-robot
-        run: pwd && cd model2owl && make get-robot
-
 
       - name: generate convention report and glossary
         run: |
@@ -126,6 +123,9 @@ jobs:
 
       - name: get-saxon
         run: pwd && cd model2owl && make get-saxon
+
+      - name: get-robot
+        run: pwd && cd model2owl && make get-robot
 
       - name: get-rdflib
         run: cd model2owl && make create-virtual-env && make get-rdflib
