@@ -156,12 +156,14 @@ jobs:
             NS_XML_FILE_PATH="../implementation/${implementation}/model2owl-config/namespaces.xml"
             OUTPUT_PATH_OWL=$(echo "implementation/$implementation/owl_ontology/")
             OUTPUT_PATH_SHACL=$(echo "implementation/$implementation/shacl_shapes/")
+            OUTPUT_PATH_JSONLD=$(echo "implementation/$implementation/jsonld-context/")
 
             ls -la implementation/$implementation/xmi_conceptual_model/
             echo "CM_FILE_PATH is $CM_FILE_PATH"
             echo "NS_XML_FILE_PATH is $NS_XML_FILE_PATH"
             echo "OUTPUT_PATH_OWL is $OUTPUT_PATH_OWL"
             echo "OUTPUT_PATH_SHACL is $OUTPUT_PATH_SHACL"
+            echo "OUTPUT_PATH_JSONLD is $OUTPUT_PATH_JSONLD"
 
 
             cd model2owl
@@ -181,7 +183,7 @@ jobs:
               NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH}
             make generate-jsonld-context \
               XMI_INPUT_FILE_PATH=../$CM_FILE_PATH \
-              OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_SHACL
+              OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_JSONLD
 
             echo "+++++++++++++++++transform to turtle++++++++++++++++++++++++++++"
             echo $(ls ../${OUTPUT_PATH_OWL}*.rdf)
