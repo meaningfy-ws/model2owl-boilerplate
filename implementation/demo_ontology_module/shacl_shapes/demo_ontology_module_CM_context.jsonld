@@ -1,0 +1,276 @@
+{
+  "@context": {
+    "CompletionNotice.announcesCompletionOfContract": {
+      "@id": "http://data.europa.eu/a4g/ontology#announcesCompletionOfContract",
+      "@type": "@id"
+    },
+    "CompletionNotice.announcesReviewObject": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesReviewObject",
+      "@type": "@id"
+    },
+    "CompletionNotice.announcesRole": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesRole",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToAwardDecision": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToAwardDecision",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToLot": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToLot",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToLotGroup": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToLotGroup",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToLotGroupAwardInformation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToNonPublishedElement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToNonPublishedElement",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToNoticeAwardInformation": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToProcedure": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToProcedure",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToRole": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToRole",
+      "@type": "@id"
+    },
+    "ContractModificationNotice.describesContractModification": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#describesContractModification",
+      "@type": "@id"
+    },
+    "ContractModificationNotice.hasNoticeType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNoticeType",
+      "@type": "@id"
+    },
+    "ContractModificationNotice.refersToContractToBeModified": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToContractToBeModified",
+      "@type": "@id"
+    },
+    "DirectAwardPrenotificationNotice.announcesLot": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesLot",
+      "@type": "@id"
+    },
+    "DirectAwardPrenotificationNotice.announcesLotGroup": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesLotGroup",
+      "@type": "@id"
+    },
+    "DirectAwardPrenotificationNotice.announcesProcedure": {
+      "@id": "http://data.europa.eu/a4g/ontology#announcesProcedure",
+      "@type": "@id"
+    },
+    "Modification-D24.hasLegalBasis": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLegalBasis",
+      "@type": "@id"
+    },
+    "Notice1.hasFormType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFormType",
+      "@type": "@id"
+    },
+    "NoticeAwardInformation.describesResultNotice": {
+      "@id": "http://data.europa.eu/a4g/ontology#describesResultNotice",
+      "@type": "@id"
+    },
+    "PlanningNotice.announcesPlannedProcurementPart": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart",
+      "@type": "@id"
+    },
+    "ResultNotice.announcesAwardDecision": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesAwardDecision",
+      "@type": "@id"
+    },
+    "ResultNotice.announcesContract": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesContract",
+      "@type": "@id"
+    },
+    "ResultNotice.announcesLotGroupAwardInformation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation",
+      "@type": "@id"
+    },
+    "ResultNotice.announcesNonPublishedElement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesNonPublishedElement",
+      "@type": "@id"
+    },
+    "ResultNotice.announcesNoticeAwardInformation": {
+      "@id": "http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation",
+      "@type": "@id"
+    },
+    "ResultNotice.announcesRole": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesRole",
+      "@type": "@id"
+    },
+    "ResultNotice.refersToRole": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToRole",
+      "@type": "@id"
+    },
+    "VEAT-D81.hasLegalBasis": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLegalBasis",
+      "@type": "@id"
+    },
+    "adms": "http://www.w3.org/ns/adms#",
+    "at-voc": "http://publications.europa.eu/resource/authority/",
+    "at-voc-new": "http://publications.europa.eu/resource/authority/new/",
+    "cccev": "http://data.europa.eu/m8g/",
+    "core": "http://data.europa.eu/m8g/",
+    "core-res": "http://data.europa.eu/a4g/ontology#",
+    "core-shape": "http://data.europa.eu/a4g/data-shape#",
+    "cpov": "http://data.europa.eu/m8g/",
+    "cpsv": "http://data.europa.eu/m8g/",
+    "cpv": "http://data.europa.eu/m8g/",
+    "cv": "http://data.europa.eu/m8g/",
+    "dct": "http://purl.org/dc/terms/",
+    "dul": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
+    "eFormsNotice.hasImplementingRegulation": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasImplementingRegulation",
+      "@type": "@id"
+    },
+    "epo": "http://data.europa.eu/a4g/ontology#",
+    "epo-cat": "http://data.europa.eu/a4g/ontology#",
+    "epo-con": "http://data.europa.eu/a4g/ontology#",
+    "epo-ful": "http://data.europa.eu/a4g/ontology#",
+    "epo-not": "http://data.europa.eu/a4g/ontology#",
+    "epo-not:CANDefence-D81": "http://data.europa.eu/a4g/ontology#CANDefence-D81",
+    "epo-not:CANSocial-D25": "http://data.europa.eu/a4g/ontology#CANSocial-D25",
+    "epo-not:CANSocialNotice": "http://data.europa.eu/a4g/ontology#CANSocialNotice",
+    "epo-not:CANSocialNotice-D25": "http://data.europa.eu/a4g/ontology#CANSocialNotice-D25",
+    "epo-not:CANStandard-D24": "http://data.europa.eu/a4g/ontology#CANStandard-D24",
+    "epo-not:CANStandardNotice": "http://data.europa.eu/a4g/ontology#CANStandardNotice",
+    "epo-not:CNDefence-D81": "http://data.europa.eu/a4g/ontology#CNDefence-D81",
+    "epo-not:CNSocial-D25": "http://data.europa.eu/a4g/ontology#CNSocial-D25",
+    "epo-not:CNSocialNotice": "http://data.europa.eu/a4g/ontology#CNSocialNotice",
+    "epo-not:CNSocialNotice-D25": "http://data.europa.eu/a4g/ontology#CNSocialNotice-D25",
+    "epo-not:CNStandard-D24": "http://data.europa.eu/a4g/ontology#CNStandard-D24",
+    "epo-not:CNStandardNotice": "http://data.europa.eu/a4g/ontology#CNStandardNotice",
+    "epo-not:CompetitionNotice": "http://data.europa.eu/a4g/ontology#CompetitionNotice",
+    "epo-not:CompletionNotice": "http://data.europa.eu/a4g/ontology#CompletionNotice",
+    "epo-not:ConcessionAwardNotice-D23": "http://data.europa.eu/a4g/ontology#ConcessionAwardNotice-D23",
+    "epo-not:ConcessionNotice-D23": "http://data.europa.eu/a4g/ontology#ConcessionNotice-D23",
+    "epo-not:ContractModificationNotice": "http://data.europa.eu/a4g/ontology#ContractModificationNotice",
+    "epo-not:DesignContest-D24": "http://data.europa.eu/a4g/ontology#DesignContest-D24",
+    "epo-not:DesignContest-D25": "http://data.europa.eu/a4g/ontology#DesignContest-D25",
+    "epo-not:DesignContestNotice": "http://data.europa.eu/a4g/ontology#DesignContestNotice",
+    "epo-not:DesignContestResult-D24": "http://data.europa.eu/a4g/ontology#DesignContestResult-D24",
+    "epo-not:DesignContestResult-D25": "http://data.europa.eu/a4g/ontology#DesignContestResult-D25",
+    "epo-not:DesignContestResultNotice": "http://data.europa.eu/a4g/ontology#DesignContestResultNotice",
+    "epo-not:DirectAwardPrenotificationNotice": "http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice",
+    "epo-not:Modification-D23": "http://data.europa.eu/a4g/ontology#Modification-D23",
+    "epo-not:Modification-D24": "http://data.europa.eu/a4g/ontology#Modification-D24",
+    "epo-not:Modification-D25": "http://data.europa.eu/a4g/ontology#Modification-D25",
+    "epo-not:Notice1": "http://data.europa.eu/a4g/ontology#Notice1",
+    "epo-not:Notice10": "http://data.europa.eu/a4g/ontology#Notice10",
+    "epo-not:Notice11": "http://data.europa.eu/a4g/ontology#Notice11",
+    "epo-not:Notice12": "http://data.europa.eu/a4g/ontology#Notice12",
+    "epo-not:Notice13": "http://data.europa.eu/a4g/ontology#Notice13",
+    "epo-not:Notice14": "http://data.europa.eu/a4g/ontology#Notice14",
+    "epo-not:Notice15": "http://data.europa.eu/a4g/ontology#Notice15",
+    "epo-not:Notice16": "http://data.europa.eu/a4g/ontology#Notice16",
+    "epo-not:Notice17": "http://data.europa.eu/a4g/ontology#Notice17",
+    "epo-not:Notice18": "http://data.europa.eu/a4g/ontology#Notice18",
+    "epo-not:Notice19": "http://data.europa.eu/a4g/ontology#Notice19",
+    "epo-not:Notice2": "http://data.europa.eu/a4g/ontology#Notice2",
+    "epo-not:Notice20": "http://data.europa.eu/a4g/ontology#Notice20",
+    "epo-not:Notice21": "http://data.europa.eu/a4g/ontology#Notice21",
+    "epo-not:Notice22": "http://data.europa.eu/a4g/ontology#Notice22",
+    "epo-not:Notice23": "http://data.europa.eu/a4g/ontology#Notice23",
+    "epo-not:Notice24": "http://data.europa.eu/a4g/ontology#Notice24",
+    "epo-not:Notice25": "http://data.europa.eu/a4g/ontology#Notice25",
+    "epo-not:Notice26": "http://data.europa.eu/a4g/ontology#Notice26",
+    "epo-not:Notice27": "http://data.europa.eu/a4g/ontology#Notice27",
+    "epo-not:Notice28": "http://data.europa.eu/a4g/ontology#Notice28",
+    "epo-not:Notice29": "http://data.europa.eu/a4g/ontology#Notice29",
+    "epo-not:Notice3": "http://data.europa.eu/a4g/ontology#Notice3",
+    "epo-not:Notice30": "http://data.europa.eu/a4g/ontology#Notice30",
+    "epo-not:Notice31": "http://data.europa.eu/a4g/ontology#Notice31",
+    "epo-not:Notice32": "http://data.europa.eu/a4g/ontology#Notice32",
+    "epo-not:Notice33": "http://data.europa.eu/a4g/ontology#Notice33",
+    "epo-not:Notice34": "http://data.europa.eu/a4g/ontology#Notice34",
+    "epo-not:Notice35": "http://data.europa.eu/a4g/ontology#Notice35",
+    "epo-not:Notice36": "http://data.europa.eu/a4g/ontology#Notice36",
+    "epo-not:Notice37": "http://data.europa.eu/a4g/ontology#Notice37",
+    "epo-not:Notice38": "http://data.europa.eu/a4g/ontology#Notice38",
+    "epo-not:Notice39": "http://data.europa.eu/a4g/ontology#Notice39",
+    "epo-not:Notice4": "http://data.europa.eu/a4g/ontology#Notice4",
+    "epo-not:Notice40": "http://data.europa.eu/a4g/ontology#Notice40",
+    "epo-not:Notice5": "http://data.europa.eu/a4g/ontology#Notice5",
+    "epo-not:Notice6": "http://data.europa.eu/a4g/ontology#Notice6",
+    "epo-not:Notice7": "http://data.europa.eu/a4g/ontology#Notice7",
+    "epo-not:Notice8": "http://data.europa.eu/a4g/ontology#Notice8",
+    "epo-not:Notice9": "http://data.europa.eu/a4g/ontology#Notice9",
+    "epo-not:PIN-CFCSocial-D25": "http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25",
+    "epo-not:PIN-CFCSocialNotice": "http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice",
+    "epo-not:PIN-CFCSocialNotice-D25": "http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25",
+    "epo-not:PIN-CFCStandard-D24": "http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24",
+    "epo-not:PIN-CFCStandardNotice": "http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice",
+    "epo-not:PIN-RTL-D24": "http://data.europa.eu/a4g/ontology#PIN-RTL-D24",
+    "epo-not:PIN-RTL-D25": "http://data.europa.eu/a4g/ontology#PIN-RTL-D25",
+    "epo-not:PINDefence-D81": "http://data.europa.eu/a4g/ontology#PINDefence-D81",
+    "epo-not:PINOnly-D24": "http://data.europa.eu/a4g/ontology#PINOnly-D24",
+    "epo-not:PINOnly-D25": "http://data.europa.eu/a4g/ontology#PINOnly-D25",
+    "epo-not:PINOnlyNotice": "http://data.europa.eu/a4g/ontology#PINOnlyNotice",
+    "epo-not:PINProfile-D24": "http://data.europa.eu/a4g/ontology#PINProfile-D24",
+    "epo-not:PINProfile-D25": "http://data.europa.eu/a4g/ontology#PINProfile-D25",
+    "epo-not:PINProfile-D81": "http://data.europa.eu/a4g/ontology#PINProfile-D81",
+    "epo-not:PINProfileNotice": "http://data.europa.eu/a4g/ontology#PINProfileNotice",
+    "epo-not:PINTimeLimitNotice": "http://data.europa.eu/a4g/ontology#PINTimeLimitNotice",
+    "epo-not:PMCNotice": "http://data.europa.eu/a4g/ontology#PMCNotice",
+    "epo-not:PlanningNotice": "http://data.europa.eu/a4g/ontology#PlanningNotice",
+    "epo-not:QS-D25": "http://data.europa.eu/a4g/ontology#QS-D25",
+    "epo-not:QSNotice": "http://data.europa.eu/a4g/ontology#QSNotice",
+    "epo-not:QSNotice-D25": "http://data.europa.eu/a4g/ontology#QSNotice-D25",
+    "epo-not:ResultNotice": "http://data.europa.eu/a4g/ontology#ResultNotice",
+    "epo-not:SocialAndOtherSpecificServices-D23": "http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D23",
+    "epo-not:SocialAndOtherSpecificServices-D24": "http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D24",
+    "epo-not:StandardForm": "http://data.europa.eu/a4g/ontology#StandardForm",
+    "epo-not:StandardFormsNotice": "http://data.europa.eu/a4g/ontology#StandardFormsNotice",
+    "epo-not:Subcontract-D81": "http://data.europa.eu/a4g/ontology#Subcontract-D81",
+    "epo-not:SubcontractNotice": "http://data.europa.eu/a4g/ontology#SubcontractNotice",
+    "epo-not:VEAT-D23": "http://data.europa.eu/a4g/ontology#VEAT-D23",
+    "epo-not:VEAT-D24": "http://data.europa.eu/a4g/ontology#VEAT-D24",
+    "epo-not:VEAT-D25": "http://data.europa.eu/a4g/ontology#VEAT-D25",
+    "epo-not:VEAT-D81": "http://data.europa.eu/a4g/ontology#VEAT-D81",
+    "epo-not:VoluntaryEx-AnteTransparencyNotice": "http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice",
+    "epo-not:eFormsNotice": "http://data.europa.eu/a4g/ontology#eFormsNotice",
+    "epo-ord": "http://data.europa.eu/a4g/ontology#",
+    "espd": "https://github.com/ESPD/ESPD-EDM/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "nuts": "http://data.europa.eu/nuts/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "person": "http://www.w3.org/ns/person#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "time": "http://www.w3.org/2006/time#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}
