@@ -1,0 +1,2897 @@
+{
+  "@context": {
+    "AbstractContainer.hasGrossVolume": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasGrossVolume",
+      "@type": "@id"
+    },
+    "AbstractContainer.hasGrossWeight": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasGrossWeight",
+      "@type": "@id"
+    },
+    "AbstractContainer.hasHeight": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasHeight",
+      "@type": "@id"
+    },
+    "AbstractContainer.hasLength": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLength",
+      "@type": "@id"
+    },
+    "AbstractContainer.hasNetVolume": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNetVolume",
+      "@type": "@id"
+    },
+    "AbstractContainer.hasNetWeight": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNetWeight",
+      "@type": "@id"
+    },
+    "AbstractContainer.hasTotalGoodsItemQuantity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalGoodsItemQuantity",
+      "@type": "@id"
+    },
+    "AbstractContainer.hasWidth": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasWidth",
+      "@type": "@id"
+    },
+    "AccessTerm": "http://data.europa.eu/a4g/ontology#AccessTerm",
+    "AccessTerm.definesCatalogueProvider": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#definesCatalogueProvider",
+      "@type": "@id"
+    },
+    "AccessTerm.definesCatalogueReceiver": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#definesCatalogueReceiver",
+      "@type": "@id"
+    },
+    "AccessTerm.definesOfflineAccessProvider": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesOfflineAccessProvider",
+      "@type": "@id"
+    },
+    "AccessTerm.definesProcurementProcedureInformationProvider": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesProcurementProcedureInformationProvider",
+      "@type": "@id"
+    },
+    "AccessTerm.hasAdditionalInformationDeadline": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAdditionalInformationDeadline",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "AccessTerm.hasDocumentRestrictionJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDocumentRestrictionJustification",
+      "@type": "@id"
+    },
+    "AccessTerm.hasPublicAccessURL": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPublicAccessURL",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "AccessTerm.hasRestrictedAccessURL": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasRestrictedAccessURL",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "AccessTerm.involvesProcurementDocument": {
+      "@id": "http://data.europa.eu/a4g/ontology#involvesProcurementDocument",
+      "@type": "@id"
+    },
+    "AccessTerm.isProcurementDocumentRestricted": {
+      "@id": "http://data.europa.eu/a4g/ontology#isProcurementDocumentRestricted",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "AccessTerm.refersToPlannedPart": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToPlannedPart",
+      "@type": "@id"
+    },
+    "AcquiringCentralPurchasingBody": "http://data.europa.eu/a4g/ontology#AcquiringCentralPurchasingBody",
+    "AcquiringParty": "http://data.europa.eu/a4g/ontology#AcquiringParty",
+    "AdHocChannel": "http://data.europa.eu/a4g/ontology#AdHocChannel",
+    "Address.addressArea": {
+      "@id": "http://www.w3.org/ns/locn#addressArea",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.addressID": {
+      "@id": "http://www.w3.org/ns/locn#addressID",
+      "@type": "@id"
+    },
+    "Address.adminUnitL1": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL1",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.adminUnitL2": {
+      "@id": "http://www.w3.org/ns/locn#adminUnitL2",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.fullAddress": {
+      "@id": "http://www.w3.org/ns/locn#fullAddress",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.locatorDesignator": {
+      "@id": "http://www.w3.org/ns/locn#locatorDesignator",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Address.locatorName": {
+      "@id": "http://www.w3.org/ns/locn#locatorName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.postCode": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#postCode",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Address.postName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#postName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Address.thoroughfare": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/locn#thoroughfare",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Agent.hasAlias": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasAlias",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Agent.ownsSystem": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#ownsSystem",
+      "@type": "@id"
+    },
+    "Agent.title": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "AgentInRole": "http://data.europa.eu/a4g/ontology#AgentInRole",
+    "AgentInRole.contextualisedBy": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#contextualisedBy",
+      "@type": "@id"
+    },
+    "AgentInRole.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "AgentInRole.exposesChannel": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#exposesChannel",
+      "@type": "@id"
+    },
+    "AgentInRole.hasContactPointInRole": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasContactPointInRole",
+      "@type": "@id"
+    },
+    "AgentInRole.playedBy": {
+      "@id": "http://data.europa.eu/a4g/ontology#playedBy",
+      "@type": "@id"
+    },
+    "AgentInRole.title": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "AllowanceChargeInformation.hasAmount": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAmount",
+      "@type": "@id"
+    },
+    "AllowanceChargeInformation.isCalculatedOn": {
+      "@id": "http://data.europa.eu/a4g/ontology#isCalculatedOn",
+      "@type": "@id"
+    },
+    "AuxiliaryParty": "http://data.europa.eu/a4g/ontology#AuxiliaryParty",
+    "AwardCriteriaSummary": "http://data.europa.eu/a4g/ontology#AwardCriteriaSummary",
+    "AwardCriterion": "http://data.europa.eu/a4g/ontology#AwardCriterion",
+    "AwardCriterion.hasAwardCriteriaStatedInProcurementDocuments": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaStatedInProcurementDocuments",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "AwardCriterion.hasAwardCriterionType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAwardCriterionType",
+      "@type": "@id"
+    },
+    "AwardCriterion.hasFixedValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFixedValue",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "AwardCriterion.hasFixedValueType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFixedValueType",
+      "@type": "@id"
+    },
+    "AwardDecision": "http://data.europa.eu/a4g/ontology#AwardDecision",
+    "AwardDecision.comprisesLotAwardDecision": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#comprisesLotAwardDecision",
+      "@type": "@id"
+    },
+    "AwardDecision.comprisesMiniCompetitionAwardDecision": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#comprisesMiniCompetitionAwardDecision",
+      "@type": "@id"
+    },
+    "AwardDecision.comprisesTenderAwardOutcome": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#comprisesTenderAwardOutcome",
+      "@type": "@id"
+    },
+    "AwardDecision.hasAdditionalNonAwardJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAdditionalNonAwardJustification",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "AwardDecision.hasAwardDecisionDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAwardDecisionDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "AwardDecision.hasAwardStatus": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAwardStatus",
+      "@type": "@id"
+    },
+    "AwardDecision.hasAwardedValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAwardedValue",
+      "@type": "@id"
+    },
+    "AwardDecision.hasBargainPrice": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasBargainPrice",
+      "@type": "@id"
+    },
+    "AwardDecision.hasNonAwardJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNonAwardJustification",
+      "@type": "@id"
+    },
+    "AwardEvaluationTerm": "http://data.europa.eu/a4g/ontology#AwardEvaluationTerm",
+    "AwardEvaluationTerm.hasAwardCriteriaEvaluationFormula": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaEvaluationFormula",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "AwardEvaluationTerm.hasAwardCriteriaOrderJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAwardCriteriaOrderJustification",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "AwardEvaluationTerm.hasOverallCostAwardCriteriaPonderation": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOverallCostAwardCriteriaPonderation",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "AwardEvaluationTerm.hasOverallPriceAwardCriteriaPonderation": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOverallPriceAwardCriteriaPonderation",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "AwardEvaluationTerm.hasOverallQualityAwardCriteriaPonderation": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOverallQualityAwardCriteriaPonderation",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Awarder": "http://data.europa.eu/a4g/ontology#Awarder",
+    "AwardingCentralPurchasingBody": "http://data.europa.eu/a4g/ontology#AwardingCentralPurchasingBody",
+    "Batch.hasBatchID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasBatchID",
+      "@type": "@id"
+    },
+    "BudgetProvider": "http://data.europa.eu/a4g/ontology#BudgetProvider",
+    "Business": "http://data.europa.eu/a4g/ontology#Business",
+    "Business.hasBeneficialOwner": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasBeneficialOwner",
+      "@type": "@id"
+    },
+    "Business.hasBusinessSize": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasBusinessSize",
+      "@type": "@id"
+    },
+    "Business.isListedCompany": {
+      "@id": "http://data.europa.eu/a4g/ontology#isListedCompany",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Buyer": "http://data.europa.eu/a4g/ontology#Buyer",
+    "Buyer.delegatesAncillaryActivitiesTo": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#delegatesAncillaryActivitiesTo",
+      "@type": "@id"
+    },
+    "Buyer.exposesInvoiceeChannel": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#exposesInvoiceeChannel",
+      "@type": "@id"
+    },
+    "Buyer.hasActivityDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasActivityDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Buyer.hasBuyerProfile": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasBuyerProfile",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Buyer.indicatesInvoiceeContactPoint": {
+      "@id": "http://data.europa.eu/a4g/ontology#indicatesInvoiceeContactPoint",
+      "@type": "@id"
+    },
+    "Buyer.isContractingEntity": {
+      "@id": "http://data.europa.eu/a4g/ontology#isContractingEntity",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Buyer.signsAwardDecision": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#signsAwardDecision",
+      "@type": "@id"
+    },
+    "Candidate": "http://data.europa.eu/a4g/ontology#Candidate",
+    "Catalogue.isSubordinatedToContract": {
+      "@id": "http://data.europa.eu/a4g/ontology#isSubordinatedToContract",
+      "@type": "@id"
+    },
+    "Catalogue.specifiesBuyer": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesBuyer",
+      "@type": "@id"
+    },
+    "Catalogue.specifiesCatalogueProvider": {
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesCatalogueProvider",
+      "@type": "@id"
+    },
+    "Catalogue.specifiesCatalogueReceiver": {
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesCatalogueReceiver",
+      "@type": "@id"
+    },
+    "CatalogueLine.hasCatalogueLineValidity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasCatalogueLineValidity",
+      "@type": "@id"
+    },
+    "CatalogueLine.hasMaximumOrderQuantity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMaximumOrderQuantity",
+      "@type": "@id"
+    },
+    "CatalogueLine.hasMinimumQuantityGuaranteedForDelivery": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMinimumQuantityGuaranteedForDelivery",
+      "@type": "@id"
+    },
+    "CatalogueProvider": "http://data.europa.eu/a4g/ontology#CatalogueProvider",
+    "CatalogueReceiver": "http://data.europa.eu/a4g/ontology#CatalogueReceiver",
+    "CentralPurchasingBody": "http://data.europa.eu/a4g/ontology#CentralPurchasingBody",
+    "Channel.description": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Channel.hasAddressURL": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAddressURL",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Channel.hasEndpointIdentifier": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasEndpointIdentifier",
+      "@type": "@id"
+    },
+    "CompetitionNotice.announcesLotGroup": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesLotGroup",
+      "@type": "@id"
+    },
+    "CompletionNotice.announcesCompletionOfContract": {
+      "@id": "http://data.europa.eu/a4g/ontology#announcesCompletionOfContract",
+      "@type": "@id"
+    },
+    "CompletionNotice.announcesReviewObject": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesReviewObject",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToAwardDecision": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToAwardDecision",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToLotGroupAwardInformation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToNonPublishedElement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToNonPublishedElement",
+      "@type": "@id"
+    },
+    "CompletionNotice.refersToRole": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToRole",
+      "@type": "@id"
+    },
+    "ConcessionContract": "http://data.europa.eu/a4g/ontology#ConcessionContract",
+    "ConcessionEstimate": "http://data.europa.eu/a4g/ontology#ConcessionEstimate",
+    "ConcessionEstimate.hasCalculationMethod": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasCalculationMethod",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ConcessionEstimate.hasConcessionEstimatedValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasConcessionEstimatedValue",
+      "@type": "@id"
+    },
+    "ConcessionEstimate.hasEstimatedBuyerConcessionRevenue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedBuyerConcessionRevenue",
+      "@type": "@id"
+    },
+    "ConcessionEstimate.hasEstimatedUserConcessionRevenue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedUserConcessionRevenue",
+      "@type": "@id"
+    },
+    "Consignment.hasCarrierConsignmentID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasCarrierConsignmentID",
+      "@type": "@id"
+    },
+    "Consignment.hasChargeableWeight": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasChargeableWeight",
+      "@type": "@id"
+    },
+    "Consignment.hasConsigneeConsignmentID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasConsigneeConsignmentID",
+      "@type": "@id"
+    },
+    "Consignment.hasConsignmentDeclaredStatisticsValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasConsignmentDeclaredStatisticsValue",
+      "@type": "@id"
+    },
+    "Consignment.hasConsignmentFreeOnBoardValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasConsignmentFreeOnBoardValue",
+      "@type": "@id"
+    },
+    "Consignment.hasConsignmentInvoiceValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasConsignmentInvoiceValue",
+      "@type": "@id"
+    },
+    "Consignment.hasFreightForwarderConsignmentID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFreightForwarderConsignmentID",
+      "@type": "@id"
+    },
+    "Consignment.hasLoadingLength": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLoadingLength",
+      "@type": "@id"
+    },
+    "Consignment.hasTransportHandlingUnitQuantity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTransportHandlingUnitQuantity",
+      "@type": "@id"
+    },
+    "Constraint.constrains": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/constrains",
+      "@type": "@id"
+    },
+    "Constraint.hasThresholdType": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasThresholdType",
+      "@type": "@id"
+    },
+    "Constraint.hasThresholdValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasThresholdValue",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "ContactPoint.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContactPoint.email": {
+      "@id": "http://data.europa.eu/m8g/email",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContactPoint.hasContactName": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasContactName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContactPoint.hasFax": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasFax",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContactPoint.hasInternetAddress": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasInternetAddress",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ContactPoint.telephone": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/telephone",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContextSpecificDescription": "http://data.europa.eu/a4g/ontology#ContextSpecificDescription",
+    "ContextualProjection": "http://data.europa.eu/a4g/ontology#ContextualProjection",
+    "Contract": "http://data.europa.eu/a4g/ontology#Contract",
+    "Contract.bindsBuyer": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#bindsBuyer",
+      "@type": "@id"
+    },
+    "Contract.bindsContractor": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#bindsContractor",
+      "@type": "@id"
+    },
+    "Contract.hasContractAmendment": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasContractAmendment",
+      "@type": "@id"
+    },
+    "Contract.hasContractConclusionDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasContractConclusionDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Contract.hasContractValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasContractValue",
+      "@type": "@id"
+    },
+    "Contract.hasEntryIntoForceDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEntryIntoForceDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Contract.hasEstimatedDuration": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedDuration",
+      "@type": "@id"
+    },
+    "Contract.hasLotReference": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasLotReference",
+      "@type": "@id"
+    },
+    "Contract.hasProcurementClassification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasProcurementClassification",
+      "@type": "@id"
+    },
+    "Contract.includesTender": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#includesTender",
+      "@type": "@id"
+    },
+    "Contract.isSubjectToContractSpecificTerm": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#isSubjectToContractSpecificTerm",
+      "@type": "@id"
+    },
+    "Contract.signedByBuyer": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#signedByBuyer",
+      "@type": "@id"
+    },
+    "Contract.signedByContractor": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#signedByContractor",
+      "@type": "@id"
+    },
+    "Contract.specifiesDeliverable": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesDeliverable",
+      "@type": "@id"
+    },
+    "ContractInformation.concernsContract": {
+      "@id": "http://data.europa.eu/a4g/ontology#concernsContract",
+      "@type": "@id"
+    },
+    "ContractLotCompletionInformation": "http://data.europa.eu/a4g/ontology#ContractLotCompletionInformation",
+    "ContractLotCompletionInformation.describesLotCompletion": {
+      "@id": "http://data.europa.eu/a4g/ontology#describesLotCompletion",
+      "@type": "@id"
+    },
+    "ContractLotCompletionInformation.hasPaymentValueDiscrepancyJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPaymentValueDiscrepancyJustification",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContractLotCompletionInformation.providesContractTotalPaymentValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#providesContractTotalPaymentValue",
+      "@type": "@id"
+    },
+    "ContractLotCompletionInformation.providesContractTotalPenaltyValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#providesContractTotalPenaltyValue",
+      "@type": "@id"
+    },
+    "ContractLotCompletionInformation.refersToContract": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToContract",
+      "@type": "@id"
+    },
+    "ContractModification": "http://data.europa.eu/a4g/ontology#ContractModification",
+    "ContractModification.hasElementModification": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasElementModification",
+      "@type": "@id"
+    },
+    "ContractModification.refersToOriginalNotice": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToOriginalNotice",
+      "@type": "@id"
+    },
+    "ContractModificationNotice.describesContractModification": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#describesContractModification",
+      "@type": "@id"
+    },
+    "ContractModificationNotice.refersToContractToBeModified": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToContractToBeModified",
+      "@type": "@id"
+    },
+    "ContractModificationNotice.refersToLotGroup": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToLotGroup",
+      "@type": "@id"
+    },
+    "ContractModificationNotice.refersToNoticeAwardInformation": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation",
+      "@type": "@id"
+    },
+    "ContractSpecificTerm": "http://data.europa.eu/a4g/ontology#ContractSpecificTerm",
+    "ContractTerm": "http://data.europa.eu/a4g/ontology#ContractTerm",
+    "ContractTerm.definesContractDuration": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesContractDuration",
+      "@type": "@id"
+    },
+    "ContractTerm.definesContractPeriod": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesContractPeriod",
+      "@type": "@id"
+    },
+    "ContractTerm.definesPaymentExecutor": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesPaymentExecutor",
+      "@type": "@id"
+    },
+    "ContractTerm.definesPlaceOfPerformance": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#definesPlaceOfPerformance",
+      "@type": "@id"
+    },
+    "ContractTerm.definesSubcontractingTerm": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesSubcontractingTerm",
+      "@type": "@id"
+    },
+    "ContractTerm.hasAdditionalContractNature": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasAdditionalContractNature",
+      "@type": "@id"
+    },
+    "ContractTerm.hasBroadPlaceOfPerformance": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasBroadPlaceOfPerformance",
+      "@type": "@id"
+    },
+    "ContractTerm.hasContractNatureType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasContractNatureType",
+      "@type": "@id"
+    },
+    "ContractTerm.hasEInvoicing": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEInvoicing",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ContractTerm.hasEInvoicingPermission": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEInvoicingPermission",
+      "@type": "@id"
+    },
+    "ContractTerm.hasEOrdering": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEOrdering",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ContractTerm.hasEPayment": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEPayment",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ContractTerm.hasLegalFormRequirement": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLegalFormRequirement",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContractTerm.hasMaximumNumberOfRenewals": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMaximumNumberOfRenewals",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ContractTerm.hasOptions": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOptions",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ContractTerm.hasOptionsDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasOptionsDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContractTerm.hasPaymentArrangement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasPaymentArrangement",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContractTerm.hasPerformanceConditions": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasPerformanceConditions",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContractTerm.hasPlaceOfPerformanceAdditionalInformation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasPlaceOfPerformanceAdditionalInformation",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContractTerm.hasRenewalDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasRenewalDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ContractTerm.hasReservedExecution": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReservedExecution",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ContractTerm.hasReservedExecutionTerm": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReservedExecutionTerm",
+      "@type": "@id"
+    },
+    "ContractTerm.isRenewalIndicator": {
+      "@id": "http://data.europa.eu/a4g/ontology#isRenewalIndicator",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Contractor": "http://data.europa.eu/a4g/ontology#Contractor",
+    "Contractor.needsToBeAWinner": {
+      "@id": "http://data.europa.eu/a4g/ontology#needsToBeAWinner",
+      "@type": "@id"
+    },
+    "Criterion.bias": {
+      "@id": "http://data.europa.eu/m8g/bias",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Criterion.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "@id"
+    },
+    "Criterion.weight": {
+      "@id": "http://data.europa.eu/m8g/weight",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Criterion.weightingConsiderationDescription": {
+      "@id": "http://data.europa.eu/m8g/weightingConsiderationDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "DeliveryAgreement.specifiesDeliveryAgreementLocation": {
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesDeliveryAgreementLocation",
+      "@type": "@id"
+    },
+    "DeliveryInformation.hasDeliveryPeriod": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDeliveryPeriod",
+      "@type": "@id"
+    },
+    "DeliveryInformation.hasTrackingID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTrackingID",
+      "@type": "@id"
+    },
+    "DeliveryInformation.specifiesPlaceOfDelivery": {
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesPlaceOfDelivery",
+      "@type": "@id"
+    },
+    "DesignContestRegimeTerm": "http://data.europa.eu/a4g/ontology#DesignContestRegimeTerm",
+    "DesignContestRegimeTerm.definesPrize": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#definesPrize",
+      "@type": "@id"
+    },
+    "DesignContestRegimeTerm.hasFollowupContract": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFollowupContract",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "DesignContestRegimeTerm.hasFollowupContractInformation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasFollowupContractInformation",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "DesignContestRegimeTerm.hasParticipationPayment": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasParticipationPayment",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "DesignContestRegimeTerm.isJuryDecisionBinding": {
+      "@id": "http://data.europa.eu/a4g/ontology#isJuryDecisionBinding",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "DespatchAdvice.hasAssociatedDocument": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAssociatedDocument",
+      "@type": "@id"
+    },
+    "DespatchLine.hasDespatchedQuantity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDespatchedQuantity",
+      "@type": "@id"
+    },
+    "DespatchLine.hasOutstandingQuantity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOutstandingQuantity",
+      "@type": "@id"
+    },
+    "DirectAwardPrenotificationNotice.announcesContract": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesContract",
+      "@type": "@id"
+    },
+    "DirectAwardPrenotificationNotice.announcesLot": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesLot",
+      "@type": "@id"
+    },
+    "DirectAwardPrenotificationNotice.announcesLotGroupAwardInformation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation",
+      "@type": "@id"
+    },
+    "DirectAwardPrenotificationNotice.announcesNoticeAwardInformation": {
+      "@id": "http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation",
+      "@type": "@id"
+    },
+    "DirectAwardPrenotificationNotice.announcesProcedure": {
+      "@id": "http://data.europa.eu/a4g/ontology#announcesProcedure",
+      "@type": "@id"
+    },
+    "DirectAwardPrenotificationNotice.announcesRole": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesRole",
+      "@type": "@id"
+    },
+    "DirectAwardTerm": "http://data.europa.eu/a4g/ontology#DirectAwardTerm",
+    "DirectAwardTerm.hasDirectAwardJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDirectAwardJustification",
+      "@type": "@id"
+    },
+    "DirectAwardTerm.hasJustification": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasJustification",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "DirectAwardTerm.refersToPreviousProcedure": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToPreviousProcedure",
+      "@type": "@id"
+    },
+    "DirectAwardTerm.refersToPreviousProcedureLot": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToPreviousProcedureLot",
+      "@type": "@id"
+    },
+    "DirectContract": "http://data.europa.eu/a4g/ontology#DirectContract",
+    "DirectContract.resultsFromLotAwardDecision": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#resultsFromLotAwardDecision",
+      "@type": "@id"
+    },
+    "Document": "http://data.europa.eu/a4g/ontology#Document",
+    "Document.associatedWith": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#associatedWith",
+      "@type": "@id"
+    },
+    "Document.description": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Document.hasAccessURL": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasAccessURL",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Document.hasDispatchDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDispatchDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Document.hasDocumentStatus": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDocumentStatus",
+      "@type": "@id"
+    },
+    "Document.hasDocumentType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDocumentType",
+      "@type": "@id"
+    },
+    "Document.hasElectronicDigest": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasElectronicDigest",
+      "@type": "@id"
+    },
+    "Document.hasElectronicSignature": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasElectronicSignature",
+      "@type": "@id"
+    },
+    "Document.hasOfficialLanguage": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasOfficialLanguage",
+      "@type": "@id"
+    },
+    "Document.hasPublicationDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPublicationDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Document.hasReceptionDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceptionDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Document.hasUUID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasUUID",
+      "@type": "@id"
+    },
+    "Document.hasUnofficialLanguage": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasUnofficialLanguage",
+      "@type": "@id"
+    },
+    "Document.hasVersion": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasVersion",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Document.issued": {
+      "@id": "http://purl.org/dc/terms/issued",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Document.refersToPrevious": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToPrevious",
+      "@type": "@id"
+    },
+    "Document.title": {
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Duration": "http://data.europa.eu/a4g/ontology#Duration",
+    "DynamicPurchaseSystemTechnique": "http://data.europa.eu/a4g/ontology#DynamicPurchaseSystemTechnique",
+    "DynamicPurchaseSystemTechnique.hasDPSScope": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDPSScope",
+      "@type": "@id"
+    },
+    "DynamicPurchaseSystemTechnique.resultsInDynamicPurchasingSystem": {
+      "@id": "http://data.europa.eu/a4g/ontology#resultsInDynamicPurchasingSystem",
+      "@type": "@id"
+    },
+    "DynamicPurchasingSystem": "http://data.europa.eu/a4g/ontology#DynamicPurchasingSystem",
+    "DynamicPurchasingSystem.hasCandidateList": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasCandidateList",
+      "@type": "@id"
+    },
+    "EAuctionTechnique": "http://data.europa.eu/a4g/ontology#EAuctionTechnique",
+    "ESPDRequest.announcesExclusionGround": {
+      "@id": "http://data.europa.eu/a4g/ontology#announcesExclusionGround",
+      "@type": "@id"
+    },
+    "ESPDRequest.announcesSelectionCriteria": {
+      "@id": "http://data.europa.eu/a4g/ontology#announcesSelectionCriteria",
+      "@type": "@id"
+    },
+    "ESPDResponse.answersExclusionGround": {
+      "@id": "http://data.europa.eu/a4g/ontology#answersExclusionGround",
+      "@type": "@id"
+    },
+    "ESPDResponse.answersSelectionCriteria": {
+      "@id": "http://data.europa.eu/a4g/ontology#answersSelectionCriteria",
+      "@type": "@id"
+    },
+    "EconomicStandingSummary": "http://data.europa.eu/a4g/ontology#EconomicStandingSummary",
+    "ElectronicSignature": "http://data.europa.eu/a4g/ontology#ElectronicSignature",
+    "ElectronicSignature.description": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ElementChangeDescription": "http://data.europa.eu/a4g/ontology#ElementChangeDescription",
+    "ElementChangeDescription.hasAdditionalInformation": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAdditionalInformation",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ElementChangeDescription.hasChangeDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasChangeDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ElementChangeDescription.hasChangeJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasChangeJustification",
+      "@type": "@id"
+    },
+    "ElementChangeDescription.hasChangeReasonDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasChangeReasonDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ElementChangeDescription.hasElementReference": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasElementReference",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ElementChangeDescription.hasPreviousVersionOfElementReference": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPreviousVersionOfElementReference",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ElementChangeDescription.hasProcurementDocumentChangeDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasProcurementDocumentChangeDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ElementChangeDescription.isProcurementDocumentChanged": {
+      "@id": "http://data.europa.eu/a4g/ontology#isProcurementDocumentChanged",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ElementConfidentialityDescription": "http://data.europa.eu/a4g/ontology#ElementConfidentialityDescription",
+    "ElementConfidentialityDescription.hasAccessibilityDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAccessibilityDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ElementConfidentialityDescription.hasConfidentialityJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasConfidentialityJustification",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ElementConfidentialityDescription.hasInstanceReference": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasInstanceReference",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ElementConfidentialityDescription.hasNonPublicationJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNonPublicationJustification",
+      "@type": "@id"
+    },
+    "ElementConfidentialityDescription.hasPropertyReference": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPropertyReference",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ElementDescription": "http://data.europa.eu/a4g/ontology#ElementDescription",
+    "ElementModificationDescription": "http://data.europa.eu/a4g/ontology#ElementModificationDescription",
+    "ElementModificationDescription.hasElementReference": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasElementReference",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ElementModificationDescription.hasModificationDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasModificationDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ElementModificationDescription.hasModificationJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasModificationJustification",
+      "@type": "@id"
+    },
+    "ElementModificationDescription.hasModificationReasonDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasModificationReasonDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "EmploymentInformationProvider": "http://data.europa.eu/a4g/ontology#EmploymentInformationProvider",
+    "EnvironmentalProtectionInformationProvider": "http://data.europa.eu/a4g/ontology#EnvironmentalProtectionInformationProvider",
+    "Estimate": "http://data.europa.eu/a4g/ontology#Estimate",
+    "EvaluationBoard.hasEvaluationMember": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasEvaluationMember",
+      "@type": "@id"
+    },
+    "EvaluationBoard.isAppointedBy": {
+      "@id": "http://data.europa.eu/a4g/ontology#isAppointedBy",
+      "@type": "@id"
+    },
+    "EvaluationBoard.isAssignedForEvaluationOf": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#isAssignedForEvaluationOf",
+      "@type": "@id"
+    },
+    "EvaluationTerm": "http://data.europa.eu/a4g/ontology#EvaluationTerm",
+    "Evidence.confidentialityLevelType": {
+      "@id": "http://data.europa.eu/m8g/confidentialityLevelType",
+      "@type": "@id"
+    },
+    "Evidence.supportsConcept": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/supportsConcept",
+      "@type": "@id"
+    },
+    "Evidence.supportsRequirement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/supportsRequirement",
+      "@type": "@id"
+    },
+    "ExclusionGround": "http://data.europa.eu/a4g/ontology#ExclusionGround",
+    "ExclusionGroundsSummary": "http://data.europa.eu/a4g/ontology#ExclusionGroundsSummary",
+    "ExpressionOfInterest": "http://data.europa.eu/a4g/ontology#ExpressionOfInterest",
+    "FinancialOffer.answersAwardCriteria": {
+      "@id": "http://data.europa.eu/a4g/ontology#answersAwardCriteria",
+      "@type": "@id"
+    },
+    "FrameworkAgreement": "http://data.europa.eu/a4g/ontology#FrameworkAgreement",
+    "FrameworkAgreementTechnique": "http://data.europa.eu/a4g/ontology#FrameworkAgreementTechnique",
+    "FrameworkAgreementTerm": "http://data.europa.eu/a4g/ontology#FrameworkAgreementTerm",
+    "FrameworkAgreementTerm.hasBuyerCategoryDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasBuyerCategoryDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "FrameworkAgreementTerm.hasDurationExtensionJustification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDurationExtensionJustification",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "FrameworkAgreementTerm.hasFrameworkAgreementType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFrameworkAgreementType",
+      "@type": "@id"
+    },
+    "FrameworkAgreementTerm.hasLaunchFrameworkAgreementMaximumValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLaunchFrameworkAgreementMaximumValue",
+      "@type": "@id"
+    },
+    "FrameworkAgreementTerm.hasLaunchGroupFrameworkAgreementMaximumValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLaunchGroupFrameworkAgreementMaximumValue",
+      "@type": "@id"
+    },
+    "FrameworkAgreementTerm.hasMaximumParticipantsNumber": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMaximumParticipantsNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Fund": "http://data.europa.eu/a4g/ontology#Fund",
+    "Fund.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Fund.hasFundProgramme": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFundProgramme",
+      "@type": "@id"
+    },
+    "Fund.hasURL": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasURL",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Fund.title": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Geometry.coordinates": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/coordinates",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Geometry.latitude": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/latitude",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Geometry.longitude": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/longitude",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "GoodsItem.hasDeclaredStatisticalValue": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasDeclaredStatisticalValue",
+      "@type": "@id"
+    },
+    "GoodsItem.hasTraceID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTraceID",
+      "@type": "@id"
+    },
+    "GreenProcurement": "http://data.europa.eu/a4g/ontology#GreenProcurement",
+    "GreenProcurement.fulfillsRequirement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#fulfillsRequirement",
+      "@type": "@id"
+    },
+    "GreenProcurement.hasCleanVehicles": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasCleanVehicles",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "GreenProcurement.hasTotalVehicles": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalVehicles",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "GreenProcurement.hasZeroEmissionVehicles": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasZeroEmissionVehicles",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Identifier.hasScheme": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasScheme",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Identifier.hasSchemeVersion": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasSchemeVersion",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Identifier.notation": {
+      "@id": "http://www.w3.org/2004/02/skos/core#notation",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Identifier.schemaAgency": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/adms#schemaAgency",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "IndefiniteDuration": "http://data.europa.eu/a4g/ontology#IndefiniteDuration",
+    "InformationConcept.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "InformationConcept.prefLabel": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "InnovativeProcurement": "http://data.europa.eu/a4g/ontology#InnovativeProcurement",
+    "Item.hasBuyerItemID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasBuyerItemID",
+      "@type": "@id"
+    },
+    "Item.hasCountryOfOrigin": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasCountryOfOrigin",
+      "@type": "@id"
+    },
+    "Item.hasExternalSpecification": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasExternalSpecification",
+      "@type": "@id"
+    },
+    "Item.hasItemStandardID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasItemStandardID",
+      "@type": "@id"
+    },
+    "Item.hasManufacturerItemID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasManufacturerItemID",
+      "@type": "@id"
+    },
+    "Item.hasNetQuantity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNetQuantity",
+      "@type": "@id"
+    },
+    "Item.hasSellerItemID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasSellerItemID",
+      "@type": "@id"
+    },
+    "Item.hasSerialID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasSerialID",
+      "@type": "@id"
+    },
+    "ItemProperty.hasQualifiedValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasQualifiedValue",
+      "@type": "@id"
+    },
+    "JuryMember": "http://data.europa.eu/a4g/ontology#JuryMember",
+    "LeadBuyer": "http://data.europa.eu/a4g/ontology#LeadBuyer",
+    "Location.address": {
+      "@id": "http://www.w3.org/ns/locn#address",
+      "@type": "@id"
+    },
+    "Location.geographicIdentifier": {
+      "@id": "http://www.w3.org/ns/locn#geographicIdentifier",
+      "@type": "@id"
+    },
+    "Location.geographicName": {
+      "@id": "http://www.w3.org/ns/locn#geographicName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Location.geometry": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type": "@id"
+    },
+    "Location.hasCountryCode": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasCountryCode",
+      "@type": "@id"
+    },
+    "Location.hasNutsCode": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNutsCode",
+      "@type": "@id"
+    },
+    "Lot": "http://data.europa.eu/a4g/ontology#Lot",
+    "Lot.isSubjectToLotSpecificTerm": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#isSubjectToLotSpecificTerm",
+      "@type": "@id"
+    },
+    "Lot.specifiesProcurementCriterion": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesProcurementCriterion",
+      "@type": "@id"
+    },
+    "LotAwardDecision": "http://data.europa.eu/a4g/ontology#LotAwardDecision",
+    "LotAwardDecision.hasApproximateFrameworkAgreementValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasApproximateFrameworkAgreementValue",
+      "@type": "@id"
+    },
+    "LotAwardDecision.hasAwardedEstimatedValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAwardedEstimatedValue",
+      "@type": "@id"
+    },
+    "LotAwardDecision.hasFrameworkAgreementEstimatedValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFrameworkAgreementEstimatedValue",
+      "@type": "@id"
+    },
+    "LotAwardDecision.hasFrameworkAgreementMaximumValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFrameworkAgreementMaximumValue",
+      "@type": "@id"
+    },
+    "LotAwardDecision.hasNonAwardedContractNumber": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNonAwardedContractNumber",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "LotAwardDecision.hasNonAwardedContractTitle": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNonAwardedContractTitle",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "LotGroup": "http://data.europa.eu/a4g/ontology#LotGroup",
+    "LotGroup.setsGroupingContextForLot": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#setsGroupingContextForLot",
+      "@type": "@id"
+    },
+    "LotGroupAwardInformation": "http://data.europa.eu/a4g/ontology#LotGroupAwardInformation",
+    "LotGroupAwardInformation.describesLotGroup": {
+      "@id": "http://data.europa.eu/a4g/ontology#describesLotGroup",
+      "@type": "@id"
+    },
+    "LotGroupAwardInformation.hasGroupFrameworkAgreementMaximumValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasGroupFrameworkAgreementMaximumValue",
+      "@type": "@id"
+    },
+    "LotSpecificTerm": "http://data.europa.eu/a4g/ontology#LotSpecificTerm",
+    "Manufacturer.hasManufacturerID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasManufacturerID",
+      "@type": "@id"
+    },
+    "Mediator": "http://data.europa.eu/a4g/ontology#Mediator",
+    "MiniCompetition": "http://data.europa.eu/a4g/ontology#MiniCompetition",
+    "MiniCompetition.followsRulesSetBy": {
+      "@id": "http://data.europa.eu/a4g/ontology#followsRulesSetBy",
+      "@type": "@id"
+    },
+    "MiniCompetition.specifiesAwardCriterion": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesAwardCriterion",
+      "@type": "@id"
+    },
+    "MiniCompetition.usesCandidateList": {
+      "@id": "http://data.europa.eu/a4g/ontology#usesCandidateList",
+      "@type": "@id"
+    },
+    "MiniCompetitionAwardDecision": "http://data.europa.eu/a4g/ontology#MiniCompetitionAwardDecision",
+    "MiniCompetitionAwardDecision.concernsMiniCompetition": {
+      "@id": "http://data.europa.eu/a4g/ontology#concernsMiniCompetition",
+      "@type": "@id"
+    },
+    "MonetaryValue": "http://data.europa.eu/a4g/ontology#MonetaryValue",
+    "MonetaryValue.hasAmountValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAmountValue",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "MonetaryValue.hasCurrency": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasCurrency",
+      "@type": "@id"
+    },
+    "MonetaryValue.hasCurrencyCodeListAgencyID": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasCurrencyCodeListAgencyID",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "MonetaryValue.hasCurrencyCodeListAgencyName": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasCurrencyCodeListAgencyName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "MonetaryValue.hasCurrencyCodeListID": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasCurrencyCodeListID",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "MultipleStageProcedureTerm": "http://data.europa.eu/a4g/ontology#MultipleStageProcedureTerm",
+    "MultipleStageProcedureTerm.hasEstimatedInvitationToExpressInterestDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedInvitationToExpressInterestDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "MultipleStageProcedureTerm.hasEstimatedInvitationToTenderDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedInvitationToTenderDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "MultipleStageProcedureTerm.hasMaximumNumberOfCandidates": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMaximumNumberOfCandidates",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "MultipleStageProcedureTerm.hasMinimumNumberOfCandidates": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMinimumNumberOfCandidates",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "MultipleStageProcedureTerm.hasNoNegotiationNecessary": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNoNegotiationNecessary",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "MultipleStageProcedureTerm.hasQualificationSystemDuration": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasQualificationSystemDuration",
+      "@type": "@id"
+    },
+    "MultipleStageProcedureTerm.hasQualificationSystemRenewalDescription": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasQualificationSystemRenewalDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "MultipleStageProcedureTerm.hasSuccessiveReduction": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasSuccessiveReduction",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "NonDisclosureAgreementTerm": "http://data.europa.eu/a4g/ontology#NonDisclosureAgreementTerm",
+    "NonDisclosureAgreementTerm.description": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "NonDisclosureAgreementTerm.isNonDisclosureAgreementRequired": {
+      "@id": "http://data.europa.eu/a4g/ontology#isNonDisclosureAgreementRequired",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Notice": "http://data.europa.eu/a4g/ontology#Notice",
+    "Notice.conformsToLegalBasis": {
+      "@id": "http://data.europa.eu/a4g/ontology#conformsToLegalBasis",
+      "@type": "@id"
+    },
+    "Notice.conformsToSpecificLegalBasis": {
+      "@id": "http://data.europa.eu/a4g/ontology#conformsToSpecificLegalBasis",
+      "@type": "@id"
+    },
+    "Notice.hasAdditionalInformation": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAdditionalInformation",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Notice.hasEFormsSubtype": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEFormsSubtype",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Notice.hasESenderDispatchDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasESenderDispatchDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Notice.hasFormNumber": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFormNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Notice.hasFormType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFormType",
+      "@type": "@id"
+    },
+    "Notice.hasLongTitle": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLongTitle",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Notice.hasNoticePublicationNumber": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNoticePublicationNumber",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Notice.hasNoticeType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNoticeType",
+      "@type": "@id"
+    },
+    "Notice.hasNotificationContentType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNotificationContentType",
+      "@type": "@id"
+    },
+    "Notice.hasOJSIssueNumber": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOJSIssueNumber",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Notice.hasOJSType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOJSType",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Notice.isBasedOnImplementingRegulation": {
+      "@id": "http://data.europa.eu/a4g/ontology#isBasedOnImplementingRegulation",
+      "@type": "@id"
+    },
+    "Notice.isEUInstitution": {
+      "@id": "http://data.europa.eu/a4g/ontology#isEUInstitution",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Notice.refersToLot": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToLot",
+      "@type": "@id"
+    },
+    "Notice.refersToNotice": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToNotice",
+      "@type": "@id"
+    },
+    "NoticeAwardInformation": "http://data.europa.eu/a4g/ontology#NoticeAwardInformation",
+    "NoticeAwardInformation.describesResultNotice": {
+      "@id": "http://data.europa.eu/a4g/ontology#describesResultNotice",
+      "@type": "@id"
+    },
+    "NoticeAwardInformation.hasMaximumFrameworkAgreementAwardedValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMaximumFrameworkAgreementAwardedValue",
+      "@type": "@id"
+    },
+    "NoticeAwardInformation.hasProcurementHighestReceivedTenderValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasProcurementHighestReceivedTenderValue",
+      "@type": "@id"
+    },
+    "NoticeAwardInformation.hasProcurementLowestReceivedTenderValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasProcurementLowestReceivedTenderValue",
+      "@type": "@id"
+    },
+    "NoticeAwardInformation.hasTotalAwardedValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalAwardedValue",
+      "@type": "@id"
+    },
+    "NoticeChange": "http://data.europa.eu/a4g/ontology#NoticeChange",
+    "NoticeChange.hasElementChange": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasElementChange",
+      "@type": "@id"
+    },
+    "NoticeChange.refersToPreviousNotice": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToPreviousNotice",
+      "@type": "@id"
+    },
+    "NoticeDescription": "http://data.europa.eu/a4g/ontology#NoticeDescription",
+    "NoticeDescription.describesNotice": {
+      "@id": "http://data.europa.eu/a4g/ontology#describesNotice",
+      "@type": "@id"
+    },
+    "NoticeDescription.hasElementDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasElementDescription",
+      "@type": "@id"
+    },
+    "Offer": "http://data.europa.eu/a4g/ontology#Offer",
+    "OfferIssuer": "http://data.europa.eu/a4g/ontology#OfferIssuer",
+    "OfferIssuer.distributesOffer": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#distributesOffer",
+      "@type": "@id"
+    },
+    "OfferingParty": "http://data.europa.eu/a4g/ontology#OfferingParty",
+    "OfflineAccessProvider": "http://data.europa.eu/a4g/ontology#OfflineAccessProvider",
+    "OpeningTerm": "http://data.europa.eu/a4g/ontology#OpeningTerm",
+    "OpeningTerm.definesOpeningPlace": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesOpeningPlace",
+      "@type": "@id"
+    },
+    "OpeningTerm.hasOpeningDateTime": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOpeningDateTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "OpeningTerm.hasOpeningDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasOpeningDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "OpeningTerm.hasOpeningURL": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOpeningURL",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Order.hasAmountDueForPayment": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAmountDueForPayment",
+      "@type": "@id"
+    },
+    "Order.hasPrepaidAmount": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPrepaidAmount",
+      "@type": "@id"
+    },
+    "Order.hasRoundingAmount": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasRoundingAmount",
+      "@type": "@id"
+    },
+    "Order.hasTotalAllowanceAmount": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalAllowanceAmount",
+      "@type": "@id"
+    },
+    "Order.hasTotalChargeAmount": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalChargeAmount",
+      "@type": "@id"
+    },
+    "Order.hasTotalLineAmount": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalLineAmount",
+      "@type": "@id"
+    },
+    "Order.hasTotalTaxExclusiveAmount": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalTaxExclusiveAmount",
+      "@type": "@id"
+    },
+    "Order.hasTotalTaxInclusiveAmount": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalTaxInclusiveAmount",
+      "@type": "@id"
+    },
+    "Order.refersToProject": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToProject",
+      "@type": "@id"
+    },
+    "OrderLine.hasQuantity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasQuantity",
+      "@type": "@id"
+    },
+    "OrderResponse.implementsContract": {
+      "@id": "http://data.europa.eu/a4g/ontology#implementsContract",
+      "@type": "@id"
+    },
+    "OrderResponse.specifiesBuyer": {
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesBuyer",
+      "@type": "@id"
+    },
+    "OrganisationGroup": "http://data.europa.eu/a4g/ontology#OrganisationGroup",
+    "OrganisationGroup.hasGroupType": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasGroupType",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "OrganisationGroup.hasMember": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasMember",
+      "@type": "@id"
+    },
+    "OrganisationGroup.leadBy": {
+      "@id": "http://data.europa.eu/a4g/ontology#leadBy",
+      "@type": "@id"
+    },
+    "Organization.address": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/address",
+      "@type": "@id"
+    },
+    "Organization.hasBuyerLegalType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasBuyerLegalType",
+      "@type": "@id"
+    },
+    "Organization.hasBuyerLegalTypeDescription": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasBuyerLegalTypeDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Organization.hasInternetAddress": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasInternetAddress",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Organization.hasLegalFormType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLegalFormType",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Organization.hasLegalIdentifier": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasLegalIdentifier",
+      "@type": "@id"
+    },
+    "Organization.hasLegalName": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasLegalName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Organization.hasMainActivity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMainActivity",
+      "@type": "@id"
+    },
+    "Organization.hasMainActivityDescription": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMainActivityDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Organization.hasOrganisationUnitName": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOrganisationUnitName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Organization.hasPrimaryContactPoint": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasPrimaryContactPoint",
+      "@type": "@id"
+    },
+    "Organization.hasRegistrationCountry": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasRegistrationCountry",
+      "@type": "@id"
+    },
+    "Organization.hasTaxIdentifier": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasTaxIdentifier",
+      "@type": "@id"
+    },
+    "OriginatorInformation.concernsOriginatorRequest": {
+      "@id": "http://data.europa.eu/a4g/ontology#concernsOriginatorRequest",
+      "@type": "@id"
+    },
+    "OriginatorRequest": "http://data.europa.eu/a4g/ontology#OriginatorRequest",
+    "OtherEntity": "http://data.europa.eu/a4g/ontology#OtherEntity",
+    "ParticipationCondition": "http://data.europa.eu/a4g/ontology#ParticipationCondition",
+    "ParticipationCondition.hasReservedProcurement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasReservedProcurement",
+      "@type": "@id"
+    },
+    "ParticipationConditionsSummary": "http://data.europa.eu/a4g/ontology#ParticipationConditionsSummary",
+    "ParticipationConditionsSummary.describesObjectiveParticipationRules": {
+      "@id": "http://data.europa.eu/a4g/ontology#describesObjectiveParticipationRules",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ParticipationConditionsSummary.describesVerificationMethod": {
+      "@id": "http://data.europa.eu/a4g/ontology#describesVerificationMethod",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ParticipationRequestProcessor": "http://data.europa.eu/a4g/ontology#ParticipationRequestProcessor",
+    "ParticipationRequestReceiver": "http://data.europa.eu/a4g/ontology#ParticipationRequestReceiver",
+    "ParticipationRequestTerm": "http://data.europa.eu/a4g/ontology#ParticipationRequestTerm",
+    "ParticipationRequestTerm.definesParticipationRequestProcessor": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesParticipationRequestProcessor",
+      "@type": "@id"
+    },
+    "ParticipationRequestTerm.definesParticipationRequestReceiver": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesParticipationRequestReceiver",
+      "@type": "@id"
+    },
+    "PaymentExecutor": "http://data.europa.eu/a4g/ontology#PaymentExecutor",
+    "Period": "http://data.europa.eu/a4g/ontology#Period",
+    "Period.hasBeginning": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasBeginning",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Period.hasEnd": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEnd",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Period.hasTimePeriod": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasTimePeriod",
+      "@type": "@id"
+    },
+    "Person.alternative": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/alternative",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Person.birthDate": {
+      "@id": "http://data.europa.eu/m8g/birthDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Person.birthName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/person#birthName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Person.familyName": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/familyName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Person.givenName": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/givenName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Person.hasCertification": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasCertification",
+      "@type": "@id"
+    },
+    "Person.hasCountryOfBirth": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasCountryOfBirth",
+      "@type": "@id"
+    },
+    "Person.hasNationality": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasNationality",
+      "@type": "@id"
+    },
+    "Person.isBeneficialOwnerOf": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#isBeneficialOwnerOf",
+      "@type": "@id"
+    },
+    "Person.name": {
+      "@container": "@set",
+      "@id": "http://xmlns.com/foaf/0.1/name",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Person.patronymicName": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/person#patronymicName",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Person.placeOfBirth": {
+      "@id": "http://www.w3.org/ns/person#placeOfBirth",
+      "@type": "@id"
+    },
+    "Person.placeOfDeath": {
+      "@id": "http://www.w3.org/ns/person#placeOfDeath",
+      "@type": "@id"
+    },
+    "Person.registeredAddress": {
+      "@id": "http://data.europa.eu/m8g/registeredAddress",
+      "@type": "@id"
+    },
+    "PlannedProcurementPart": "http://data.europa.eu/a4g/ontology#PlannedProcurementPart",
+    "PlannedProcurementPart.foreseesProcurementObject": {
+      "@id": "http://data.europa.eu/a4g/ontology#foreseesProcurementObject",
+      "@type": "@id"
+    },
+    "PlannedProcurementPart.foreseesTechnique": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#foreseesTechnique",
+      "@type": "@id"
+    },
+    "PlannedProcurementPart.hasPlannedDuration": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPlannedDuration",
+      "@type": "@id"
+    },
+    "PlannedProcurementPart.hasPlannedPeriod": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPlannedPeriod",
+      "@type": "@id"
+    },
+    "PlanningNotice.announcesPlannedProcurementPart": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart",
+      "@type": "@id"
+    },
+    "Price.hasBaseQuantity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasBaseQuantity",
+      "@type": "@id"
+    },
+    "Price.hasDeliveryLocation": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDeliveryLocation",
+      "@type": "@id"
+    },
+    "Price.hasExpectedDeliveryTime": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasExpectedDeliveryTime",
+      "@type": "@id"
+    },
+    "Price.hasNetMonetaryValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNetMonetaryValue",
+      "@type": "@id"
+    },
+    "Price.hasOrderabableUnitFactorRate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOrderabableUnitFactorRate",
+      "@type": "@id"
+    },
+    "Price.hasPriceValidity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPriceValidity",
+      "@type": "@id"
+    },
+    "Price.hasQuantityThreshold": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasQuantityThreshold",
+      "@type": "@id"
+    },
+    "Prize": "http://data.europa.eu/a4g/ontology#Prize",
+    "Prize.hasPrizeRank": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPrizeRank",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Prize.hasPrizeValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPrizeValue",
+      "@type": "@id"
+    },
+    "Procedure": "http://data.europa.eu/a4g/ontology#Procedure",
+    "Procedure.hasAcceleratedProcedureJustification": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasAcceleratedProcedureJustification",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Procedure.hasMainFeature": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasMainFeature",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Procedure.hasProcedureType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasProcedureType",
+      "@type": "@id"
+    },
+    "Procedure.hasProcurementScopeDividedIntoLot": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasProcurementScopeDividedIntoLot",
+      "@type": "@id"
+    },
+    "Procedure.involvesBuyer": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#involvesBuyer",
+      "@type": "@id"
+    },
+    "Procedure.isAccelerated": {
+      "@id": "http://data.europa.eu/a4g/ontology#isAccelerated",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Procedure.isDesignContest": {
+      "@id": "http://data.europa.eu/a4g/ontology#isDesignContest",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Procedure.isExecutedByProcurementServiceProvider": {
+      "@id": "http://data.europa.eu/a4g/ontology#isExecutedByProcurementServiceProvider",
+      "@type": "@id"
+    },
+    "Procedure.isJointProcurement": {
+      "@id": "http://data.europa.eu/a4g/ontology#isJointProcurement",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Procedure.isResponsibilityOfBuyer": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#isResponsibilityOfBuyer",
+      "@type": "@id"
+    },
+    "Procedure.isSubjectToProcedureSpecificTerm": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#isSubjectToProcedureSpecificTerm",
+      "@type": "@id"
+    },
+    "Procedure.specifiesProcurementCriteriaSummary": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesProcurementCriteriaSummary",
+      "@type": "@id"
+    },
+    "ProcedureSpecificTerm": "http://data.europa.eu/a4g/ontology#ProcedureSpecificTerm",
+    "ProcedureTerm": "http://data.europa.eu/a4g/ontology#ProcedureTerm",
+    "ProcedureTerm.definesBudgetProvider": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesBudgetProvider",
+      "@type": "@id"
+    },
+    "ProcedureTerm.definesInformationProvider": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#definesInformationProvider",
+      "@type": "@id"
+    },
+    "ProcedureTerm.definesLotGroup": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#definesLotGroup",
+      "@type": "@id"
+    },
+    "ProcedureTerm.definesMediator": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesMediator",
+      "@type": "@id"
+    },
+    "ProcedureTerm.hasCrossBorderLaw": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasCrossBorderLaw",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProcedureTerm.hasGroupLotEvaluationMethod": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasGroupLotEvaluationMethod",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProcedureTerm.hasLotAwardCombination": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLotAwardCombination",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProcedureTerm.hasMaximumLotSubmissionAllowed": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMaximumLotSubmissionAllowed",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ProcedureTerm.hasMaximumNumberOfLotsToBeAwarded": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMaximumNumberOfLotsToBeAwarded",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ProcedureTerm.hasNationalProcedureRules": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasNationalProcedureRules",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ProcedureTerm.isAwardedByCPB": {
+      "@id": "http://data.europa.eu/a4g/ontology#isAwardedByCPB",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcedureTerm.isOneLotOnlyAllowed": {
+      "@id": "http://data.europa.eu/a4g/ontology#isOneLotOnlyAllowed",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcedureTerm.isSubmissionForAllLotsAllowed": {
+      "@id": "http://data.europa.eu/a4g/ontology#isSubmissionForAllLotsAllowed",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcessPlanningTerm": "http://data.europa.eu/a4g/ontology#ProcessPlanningTerm",
+    "ProcessPlanningTerm.hasAwardDateScheduled": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAwardDateScheduled",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ProcessPlanningTerm.hasEstimatedContractNoticePublicationDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedContractNoticePublicationDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ProcessPlanningTerm.hasEstimatedTenderInvitationDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedTenderInvitationDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ProcurementCriteriaSummary": "http://data.europa.eu/a4g/ontology#ProcurementCriteriaSummary",
+    "ProcurementCriteriaSummary.indicatesPerformingStaffInformationRequirement": {
+      "@id": "http://data.europa.eu/a4g/ontology#indicatesPerformingStaffInformationRequirement",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcurementCriterion": "http://data.europa.eu/a4g/ontology#ProcurementCriterion",
+    "ProcurementCriterion.hasConstraint": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasConstraint",
+      "@type": "@id"
+    },
+    "ProcurementCriterion.hasFormula": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFormula",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProcurementCriterion.hasPerformingStaffQualificationInformation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasPerformingStaffQualificationInformation",
+      "@type": "@id"
+    },
+    "ProcurementCriterion.hasWeightValueType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasWeightValueType",
+      "@type": "@id"
+    },
+    "ProcurementDocument": "http://data.europa.eu/a4g/ontology#ProcurementDocument",
+    "ProcurementElement": "http://data.europa.eu/a4g/ontology#ProcurementElement",
+    "ProcurementElement.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProcurementElement.hasEstimatedValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedValue",
+      "@type": "@id"
+    },
+    "ProcurementElement.hasInternalIdentifier": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasInternalIdentifier",
+      "@type": "@id"
+    },
+    "ProcurementElement.title": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProcurementElement.usesChannel": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#usesChannel",
+      "@type": "@id"
+    },
+    "ProcurementObject": "http://data.europa.eu/a4g/ontology#ProcurementObject",
+    "ProcurementObject.foreseesConcession": {
+      "@id": "http://data.europa.eu/a4g/ontology#foreseesConcession",
+      "@type": "@id"
+    },
+    "ProcurementObject.foreseesContractSpecificTerm": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#foreseesContractSpecificTerm",
+      "@type": "@id"
+    },
+    "ProcurementObject.fulfillsStrategicProcurement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#fulfillsStrategicProcurement",
+      "@type": "@id"
+    },
+    "ProcurementObject.hasAdditionalInformation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasAdditionalInformation",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProcurementObject.hasLegalBasis": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasLegalBasis",
+      "@type": "@id"
+    },
+    "ProcurementObject.hasLegalBasisDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasLegalBasisDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProcurementObject.hasLegalRegime": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasLegalRegime",
+      "@type": "@id"
+    },
+    "ProcurementObject.hasPurpose": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPurpose",
+      "@type": "@id"
+    },
+    "ProcurementObject.hasRecurrenceDescription": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasRecurrenceDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProcurementObject.isCoveredByGPA": {
+      "@id": "http://data.europa.eu/a4g/ontology#isCoveredByGPA",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcurementObject.isFundedBy": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#isFundedBy",
+      "@type": "@id"
+    },
+    "ProcurementObject.isRecurrent": {
+      "@id": "http://data.europa.eu/a4g/ontology#isRecurrent",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcurementObject.isSMESuitable": {
+      "@id": "http://data.europa.eu/a4g/ontology#isSMESuitable",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcurementObject.isSubjectToTerm": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#isSubjectToTerm",
+      "@type": "@id"
+    },
+    "ProcurementObject.isUsingEUFunds": {
+      "@id": "http://data.europa.eu/a4g/ontology#isUsingEUFunds",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcurementObject.usesTechnique": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#usesTechnique",
+      "@type": "@id"
+    },
+    "ProcurementProcedureInformationProvider": "http://data.europa.eu/a4g/ontology#ProcurementProcedureInformationProvider",
+    "ProcurementProcessInformation": "http://data.europa.eu/a4g/ontology#ProcurementProcessInformation",
+    "ProcurementProcessInformation.concernsLot": {
+      "@id": "http://data.europa.eu/a4g/ontology#concernsLot",
+      "@type": "@id"
+    },
+    "ProcurementProcessInformation.concernsProcedure": {
+      "@id": "http://data.europa.eu/a4g/ontology#concernsProcedure",
+      "@type": "@id"
+    },
+    "ProcurementProcessInformation.isCompetitionTerminated": {
+      "@id": "http://data.europa.eu/a4g/ontology#isCompetitionTerminated",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcurementProcessInformation.isDPSTerminated": {
+      "@id": "http://data.europa.eu/a4g/ontology#isDPSTerminated",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcurementProcessInformation.isToBeRelaunched": {
+      "@id": "http://data.europa.eu/a4g/ontology#isToBeRelaunched",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ProcurementServiceProvider": "http://data.europa.eu/a4g/ontology#ProcurementServiceProvider",
+    "ProcurementServiceProvider.actsOnBehalfOf": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#actsOnBehalfOf",
+      "@type": "@id"
+    },
+    "ProfessionalSuitabilitySummary": "http://data.europa.eu/a4g/ontology#ProfessionalSuitabilitySummary",
+    "ProfessionalSuitabilitySummary.describesProfession": {
+      "@id": "http://data.europa.eu/a4g/ontology#describesProfession",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProfessionalSuitabilitySummary.describesProfessionRelevantLaw": {
+      "@id": "http://data.europa.eu/a4g/ontology#describesProfessionRelevantLaw",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ProfessionalSuitabilitySummary.hasServiceReservedToParticularProfession": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasServiceReservedToParticularProfession",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Project": "http://data.europa.eu/a4g/ontology#Project",
+    "Project.identifier": {
+      "@id": "http://www.w3.org/ns/adms#identifier",
+      "@type": "@id"
+    },
+    "PublicationProvision": "http://data.europa.eu/a4g/ontology#PublicationProvision",
+    "PublicationProvision.hasElementConfidentiality": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasElementConfidentiality",
+      "@type": "@id"
+    },
+    "PublicationProvision.hasPreferredPublicationDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasPreferredPublicationDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "PurchaseContract": "http://data.europa.eu/a4g/ontology#PurchaseContract",
+    "PurchaseContract.resultsFromMiniCompetitionAwardDecision": {
+      "@id": "http://data.europa.eu/a4g/ontology#resultsFromMiniCompetitionAwardDecision",
+      "@type": "@id"
+    },
+    "Purpose": "http://data.europa.eu/a4g/ontology#Purpose",
+    "Purpose.hasAdditionalClassification": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasAdditionalClassification",
+      "@type": "@id"
+    },
+    "Purpose.hasMainClassification": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasMainClassification",
+      "@type": "@id"
+    },
+    "Purpose.hasTotalQuantity": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalQuantity",
+      "@type": "@id"
+    },
+    "QualificationCriteriaSummary": "http://data.europa.eu/a4g/ontology#QualificationCriteriaSummary",
+    "QualificationCriteriaSummary.hasConditionVerificationMethod": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasConditionVerificationMethod",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "QualificationCriteriaSummary.hasQualificationCondition": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasQualificationCondition",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "QualificationCriterion": "http://data.europa.eu/a4g/ontology#QualificationCriterion",
+    "Quantity": "http://data.europa.eu/a4g/ontology#Quantity",
+    "Quantity.hasQuantityValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasQuantityValue",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "Quantity.hasUnitCode": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasUnitCode",
+      "@type": "@id"
+    },
+    "Quantity.hasUnitDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasUnitDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "RequestForClarification": "http://data.europa.eu/a4g/ontology#RequestForClarification",
+    "RequestForParticipation": "http://data.europa.eu/a4g/ontology#RequestForParticipation",
+    "Requirement.description": {
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Requirement.hasRequirement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/m8g/hasRequirement",
+      "@type": "@id"
+    },
+    "Requirement.prefLabel": {
+      "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ResultNotice.announcesAwardDecision": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesAwardDecision",
+      "@type": "@id"
+    },
+    "ResultNotice.announcesNonPublishedElement": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesNonPublishedElement",
+      "@type": "@id"
+    },
+    "ResultNotice.announcesRole": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#announcesRole",
+      "@type": "@id"
+    },
+    "ResultNotice.refersToProcedure": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToProcedure",
+      "@type": "@id"
+    },
+    "ResultNotice.refersToRole": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#refersToRole",
+      "@type": "@id"
+    },
+    "ReviewDecision": "http://data.europa.eu/a4g/ontology#ReviewDecision",
+    "ReviewDecision.hasConfirmedIrregularityType": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasConfirmedIrregularityType",
+      "@type": "@id"
+    },
+    "ReviewDecision.hasDecisionDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDecisionDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ReviewDecision.hasRemedyValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasRemedyValue",
+      "@type": "@id"
+    },
+    "ReviewDecision.hasReviewDecisionType": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasReviewDecisionType",
+      "@type": "@id"
+    },
+    "ReviewDecision.providesRulingOnRemedy": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#providesRulingOnRemedy",
+      "@type": "@id"
+    },
+    "ReviewDecision.resolvesReviewRequest": {
+      "@id": "http://data.europa.eu/a4g/ontology#resolvesReviewRequest",
+      "@type": "@id"
+    },
+    "ReviewIrregularitySummary": "http://data.europa.eu/a4g/ontology#ReviewIrregularitySummary",
+    "ReviewIrregularitySummary.hasIrregularityType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasIrregularityType",
+      "@type": "@id"
+    },
+    "ReviewIrregularitySummary.hasReviewIrregularityCount": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReviewIrregularityCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ReviewObject": "http://data.europa.eu/a4g/ontology#ReviewObject",
+    "ReviewObject.hasElementReference": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasElementReference",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ReviewObject.hasReviewURL": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReviewURL",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "ReviewObject.refersToPreviousReview": {
+      "@id": "http://data.europa.eu/a4g/ontology#refersToPreviousReview",
+      "@type": "@id"
+    },
+    "ReviewProcedureInformationProvider": "http://data.europa.eu/a4g/ontology#ReviewProcedureInformationProvider",
+    "ReviewRequest": "http://data.europa.eu/a4g/ontology#ReviewRequest",
+    "ReviewRequest.hasAllegedIrregularityType": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasAllegedIrregularityType",
+      "@type": "@id"
+    },
+    "ReviewRequest.hasNumberOfReviewRequests": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNumberOfReviewRequests",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ReviewRequest.hasRequestDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasRequestDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ReviewRequest.hasReviewRequestFee": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReviewRequestFee",
+      "@type": "@id"
+    },
+    "ReviewRequest.hasWithdrawalDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasWithdrawalDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ReviewRequest.hasWithdrawalReason": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasWithdrawalReason",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "ReviewRequest.isWithdrawn": {
+      "@id": "http://data.europa.eu/a4g/ontology#isWithdrawn",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ReviewRequest.requestsRemedyType": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#requestsRemedyType",
+      "@type": "@id"
+    },
+    "ReviewRequestSummary": "http://data.europa.eu/a4g/ontology#ReviewRequestSummary",
+    "ReviewRequestSummary.concernsReviewSummaryForLot": {
+      "@id": "http://data.europa.eu/a4g/ontology#concernsReviewSummaryForLot",
+      "@type": "@id"
+    },
+    "ReviewRequestSummary.hasReviewIrregularitySummary": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasReviewIrregularitySummary",
+      "@type": "@id"
+    },
+    "ReviewRequestSummary.hasTotalNumberOfComplainants": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalNumberOfComplainants",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "ReviewRequester": "http://data.europa.eu/a4g/ontology#ReviewRequester",
+    "Reviewer": "http://data.europa.eu/a4g/ontology#Reviewer",
+    "Reviewer.hasReviewBodyType": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasReviewBodyType",
+      "@type": "@id"
+    },
+    "SecurityClearanceTerm": "http://data.europa.eu/a4g/ontology#SecurityClearanceTerm",
+    "SecurityClearanceTerm.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "SecurityClearanceTerm.hasDeadline": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasDeadline",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "SecurityClearanceTerm.isSecurityClearanceRequired": {
+      "@id": "http://data.europa.eu/a4g/ontology#isSecurityClearanceRequired",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "SelectedCandidateList": "http://data.europa.eu/a4g/ontology#SelectedCandidateList",
+    "SelectedCandidateList.containsCandidate": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#containsCandidate",
+      "@type": "@id"
+    },
+    "SelectedCandidateList.hasStartDate": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasStartDate",
+      "@type": "@id"
+    },
+    "SelectionCriteriaSummary": "http://data.europa.eu/a4g/ontology#SelectionCriteriaSummary",
+    "SelectionCriteriaSummary.describesMinimumLevelOfStandards": {
+      "@id": "http://data.europa.eu/a4g/ontology#describesMinimumLevelOfStandards",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "SelectionCriteriaSummary.hasSelectionCriteriaStatedInProcurementDocuments": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasSelectionCriteriaStatedInProcurementDocuments",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "SelectionCriterion": "http://data.europa.eu/a4g/ontology#SelectionCriterion",
+    "SelectionCriterion.hasSelectionCriteriaUsage": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasSelectionCriteriaUsage",
+      "@type": "@id"
+    },
+    "SelectionCriterion.hasSelectionCriterionType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasSelectionCriterionType",
+      "@type": "@id"
+    },
+    "SelectionCriterion.isUsedForCandidateRestriction": {
+      "@id": "http://data.europa.eu/a4g/ontology#isUsedForCandidateRestriction",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "SelectionEvaluationTerm": "http://data.europa.eu/a4g/ontology#SelectionEvaluationTerm",
+    "ShipmentAgreement.agreedByBuyer": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#agreedByBuyer",
+      "@type": "@id"
+    },
+    "ShipmentInformation.hasEstimatedDeliveryPeriod": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedDeliveryPeriod",
+      "@type": "@id"
+    },
+    "ShipmentInformation.specifiesPlaceOfDespatch": {
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesPlaceOfDespatch",
+      "@type": "@id"
+    },
+    "SocialProcurement": "http://data.europa.eu/a4g/ontology#SocialProcurement",
+    "SpecificDuration": "http://data.europa.eu/a4g/ontology#SpecificDuration",
+    "SpecificDuration.numericDuration": {
+      "@id": "http://www.w3.org/2006/time#numericDuration",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "SpecificDuration.unitType": {
+      "@id": "http://www.w3.org/2006/time#unitType",
+      "@type": "@id"
+    },
+    "StatisticalInformation": "http://data.europa.eu/a4g/ontology#StatisticalInformation",
+    "StrategicProcurement": "http://data.europa.eu/a4g/ontology#StrategicProcurement",
+    "StrategicProcurement.hasNonAccessibilityCriterionJustification": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasNonAccessibilityCriterionJustification",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "StrategicProcurement.hasStrategicProcurementDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasStrategicProcurementDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "StrategicProcurement.includesAccessibilityCriterion": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#includesAccessibilityCriterion",
+      "@type": "@id"
+    },
+    "SubcontractTerm": "http://data.europa.eu/a4g/ontology#SubcontractTerm",
+    "SubcontractTerm.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "SubcontractTerm.hasMaximumShare": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMaximumShare",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "SubcontractTerm.hasMinimumShare": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMinimumShare",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "SubcontractTerm.hasMinimumSubcontractorsProposedObligation": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMinimumSubcontractorsProposedObligation",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "SubcontractTerm.hasSubcontractingInvolved": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasSubcontractingInvolved",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "SubcontractTerm.hasSubcontractingObligation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasSubcontractingObligation",
+      "@type": "@id"
+    },
+    "SubcontractTerm.hasSubcontractorsProposedAboveObligation": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasSubcontractorsProposedAboveObligation",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "SubcontractingEstimate": "http://data.europa.eu/a4g/ontology#SubcontractingEstimate",
+    "SubcontractingEstimate.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "SubcontractingEstimate.hasEstimatedPercentage": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedPercentage",
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal"
+    },
+    "SubcontractingEstimate.hasSubcontractingEstimatedValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasSubcontractingEstimatedValue",
+      "@type": "@id"
+    },
+    "SubcontractingEstimate.hasSubjectMatter": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasSubjectMatter",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Subcontractor": "http://data.europa.eu/a4g/ontology#Subcontractor",
+    "SubmissionStatisticalInformation": "http://data.europa.eu/a4g/ontology#SubmissionStatisticalInformation",
+    "SubmissionStatisticalInformation.hasAbnormallyLowTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAbnormallyLowTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasEEAReceivedTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEEAReceivedTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasEUReceivedTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEUReceivedTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasElectronicTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasElectronicTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasEstimatedTotalSubcontracts": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEstimatedTotalSubcontracts",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasHighestReceivedTenderValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasHighestReceivedTenderValue",
+      "@type": "@id"
+    },
+    "SubmissionStatisticalInformation.hasInadmissibleTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasInadmissibleTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasLowestReceivedTenderValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLowestReceivedTenderValue",
+      "@type": "@id"
+    },
+    "SubmissionStatisticalInformation.hasMediumTenderPerLots": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMediumTenderPerLots",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasNonEEAReceivedTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNonEEAReceivedTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasNonEUReceivedTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNonEUReceivedTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasNumberOfTenderersInvited": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasNumberOfTenderersInvited",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasOtherCountriesReceivedTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOtherCountriesReceivedTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasReceivedMicroTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceivedMicroTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasReceivedParticipationRequests": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceivedParticipationRequests",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasReceivedSmallTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceivedSmallTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasReceivedSubmissionType": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceivedSubmissionType",
+      "@type": "@id"
+    },
+    "SubmissionStatisticalInformation.hasReceivedTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceivedTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasSMEReceivedTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasSMEReceivedTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.hasUnverifiedTenders": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasUnverifiedTenders",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "SubmissionStatisticalInformation.summarisesInformationForAwardDecision": {
+      "@id": "http://data.europa.eu/a4g/ontology#summarisesInformationForAwardDecision",
+      "@type": "@id"
+    },
+    "SubmissionTerm": "http://data.europa.eu/a4g/ontology#SubmissionTerm",
+    "SubmissionTerm.definesTenderProcessor": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesTenderProcessor",
+      "@type": "@id"
+    },
+    "SubmissionTerm.definesTenderReceiver": {
+      "@id": "http://data.europa.eu/a4g/ontology#definesTenderReceiver",
+      "@type": "@id"
+    },
+    "SubmissionTerm.hasEAuctionURL": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasEAuctionURL",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "SubmissionTerm.hasECataloguePermission": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasECataloguePermission",
+      "@type": "@id"
+    },
+    "SubmissionTerm.hasESubmissionPermission": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasESubmissionPermission",
+      "@type": "@id"
+    },
+    "SubmissionTerm.hasGuaranteeDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasGuaranteeDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "SubmissionTerm.hasLanguage": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasLanguage",
+      "@type": "@id"
+    },
+    "SubmissionTerm.hasLateSubmissionInformationDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasLateSubmissionInformationDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "SubmissionTerm.hasLateSubmissionPermission": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasLateSubmissionPermission",
+      "@type": "@id"
+    },
+    "SubmissionTerm.hasNonElectronicSubmissionDescription": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasNonElectronicSubmissionDescription",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "SubmissionTerm.hasNonElectronicSubmissionJustification": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasNonElectronicSubmissionJustification",
+      "@type": "@id"
+    },
+    "SubmissionTerm.hasReceiptDeadline": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceiptDeadline",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "SubmissionTerm.hasReceiptExpressionDeadline": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceiptExpressionDeadline",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "SubmissionTerm.hasReceiptParticipationRequestDeadline": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceiptParticipationRequestDeadline",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "SubmissionTerm.hasReceiptPreliminaryMarketConsultationDeadline": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceiptPreliminaryMarketConsultationDeadline",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "SubmissionTerm.hasReceiptTenderDeadline": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasReceiptTenderDeadline",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "SubmissionTerm.hasSubmissionURL": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasSubmissionURL",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "SubmissionTerm.hasTenderSubcontractingInformation": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasTenderSubcontractingInformation",
+      "@type": "@id"
+    },
+    "SubmissionTerm.hasTenderValidityPeriod": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTenderValidityPeriod",
+      "@type": "@id"
+    },
+    "SubmissionTerm.hasVariantPermission": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasVariantPermission",
+      "@type": "@id"
+    },
+    "SubmissionTerm.isAdvancedElectronicSignatureRequired": {
+      "@id": "http://data.europa.eu/a4g/ontology#isAdvancedElectronicSignatureRequired",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "SubmissionTerm.isGuaranteeRequired": {
+      "@id": "http://data.europa.eu/a4g/ontology#isGuaranteeRequired",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "SubmissionTerm.isMultipleTenderSubmissionAllowed": {
+      "@id": "http://data.europa.eu/a4g/ontology#isMultipleTenderSubmissionAllowed",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "System": "http://data.europa.eu/a4g/ontology#System",
+    "System.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "System.isOwnedByAgent": {
+      "@id": "http://data.europa.eu/a4g/ontology#isOwnedByAgent",
+      "@type": "@id"
+    },
+    "TaxInformationProvider": "http://data.europa.eu/a4g/ontology#TaxInformationProvider",
+    "TechnicalAbilitySummary": "http://data.europa.eu/a4g/ontology#TechnicalAbilitySummary",
+    "Technique": "http://data.europa.eu/a4g/ontology#Technique",
+    "Technique.description": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+    },
+    "Technique.hasUsage": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasUsage",
+      "@type": "@id"
+    },
+    "Technique.hasValidityPeriod": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasValidityPeriod",
+      "@type": "@id"
+    },
+    "TemperatureSpecification.hasMaximumTemperature": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMaximumTemperature",
+      "@type": "@id"
+    },
+    "TemperatureSpecification.hasMinimumTemperature": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasMinimumTemperature",
+      "@type": "@id"
+    },
+    "Tender": "http://data.europa.eu/a4g/ontology#Tender",
+    "Tender.foreseesSubcontracting": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#foreseesSubcontracting",
+      "@type": "@id"
+    },
+    "Tender.hasElectronicSubmission": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasElectronicSubmission",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Tender.hasFinancialOfferValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasFinancialOfferValue",
+      "@type": "@id"
+    },
+    "Tender.hasItemCountryOfOrigin": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#hasItemCountryOfOrigin",
+      "@type": "@id"
+    },
+    "Tender.hasTaxInformation": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTaxInformation",
+      "@type": "@id"
+    },
+    "Tender.isSubjectToGrouping": {
+      "@id": "http://data.europa.eu/a4g/ontology#isSubjectToGrouping",
+      "@type": "@id"
+    },
+    "Tender.isSubmitedBy": {
+      "@id": "http://data.europa.eu/a4g/ontology#isSubmitedBy",
+      "@type": "@id"
+    },
+    "Tender.isSubmittedForLot": {
+      "@id": "http://data.europa.eu/a4g/ontology#isSubmittedForLot",
+      "@type": "@id"
+    },
+    "Tender.isSupportedBy": {
+      "@id": "http://data.europa.eu/a4g/ontology#isSupportedBy",
+      "@type": "@id"
+    },
+    "Tender.isVariant": {
+      "@id": "http://data.europa.eu/a4g/ontology#isVariant",
+      "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Tender.specifiesSubcontractors": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#specifiesSubcontractors",
+      "@type": "@id"
+    },
+    "TenderAwardOutcome": "http://data.europa.eu/a4g/ontology#TenderAwardOutcome",
+    "TenderAwardOutcome.concernsTender": {
+      "@id": "http://data.europa.eu/a4g/ontology#concernsTender",
+      "@type": "@id"
+    },
+    "TenderAwardOutcome.hasAwardRank": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasAwardRank",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "TenderAwardOutcome.indicatesAwardToWinner": {
+      "@id": "http://data.europa.eu/a4g/ontology#indicatesAwardToWinner",
+      "@type": "@id"
+    },
+    "TenderGroup": "http://data.europa.eu/a4g/ontology#TenderGroup",
+    "TenderGroup.comprisesTender": {
+      "@container": "@set",
+      "@id": "http://data.europa.eu/a4g/ontology#comprisesTender",
+      "@type": "@id"
+    },
+    "TenderGroup.hasTotalValue": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasTotalValue",
+      "@type": "@id"
+    },
+    "TenderGroup.isSubmittedForLotGroup": {
+      "@id": "http://data.europa.eu/a4g/ontology#isSubmittedForLotGroup",
+      "@type": "@id"
+    },
+    "TenderProcessor": "http://data.europa.eu/a4g/ontology#TenderProcessor",
+    "TenderReceiver": "http://data.europa.eu/a4g/ontology#TenderReceiver",
+    "Tenderer": "http://data.europa.eu/a4g/ontology#Tenderer",
+    "Tenderer.substantiatesExclusionGround": {
+      "@id": "http://data.europa.eu/a4g/ontology#substantiatesExclusionGround",
+      "@type": "@id"
+    },
+    "Term": "http://data.europa.eu/a4g/ontology#Term",
+    "Thing.containsModificationsOf": {
+      "@id": "http://data.europa.eu/a4g/ontology#containsModificationsOf",
+      "@type": "@id"
+    },
+    "TransportMeans.hasVehicleID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasVehicleID",
+      "@type": "@id"
+    },
+    "TransportMeans.hasVehicleSegmentID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasVehicleSegmentID",
+      "@type": "@id"
+    },
+    "TransportMeansOperator.hasOperatorLicenceID": {
+      "@id": "http://data.europa.eu/a4g/ontology#hasOperatorLicenceID",
+      "@type": "@id"
+    },
+    "Winner": "http://data.europa.eu/a4g/ontology#Winner",
+    "Winner.needsToBeATenderer": {
+      "@id": "http://data.europa.eu/a4g/ontology#needsToBeATenderer",
+      "@type": "@id"
+    },
+    "adms": "http://www.w3.org/ns/adms#",
+    "adms:Identifier": "http://www.w3.org/ns/adms#Identifier",
+    "at-voc": "http://publications.europa.eu/resource/authority/",
+    "at-voc-new": "http://publications.europa.eu/resource/authority/new/",
+    "at-voc:EU-programme": "http://publications.europa.eu/resource/authority/EU-programme",
+    "at-voc:accessibility": "http://publications.europa.eu/resource/authority/accessibility",
+    "at-voc:applicability": "http://publications.europa.eu/resource/authority/applicability",
+    "at-voc:award-criterion-type": "http://publications.europa.eu/resource/authority/award-criterion-type",
+    "at-voc:buyer-legal-type": "http://publications.europa.eu/resource/authority/buyer-legal-type",
+    "at-voc:change-corrig-justification": "http://publications.europa.eu/resource/authority/change-corrig-justification",
+    "at-voc:communication-justification": "http://publications.europa.eu/resource/authority/communication-justification",
+    "at-voc:confidentiality-level": "http://publications.europa.eu/resource/authority/confidentiality-level",
+    "at-voc:contract-nature": "http://publications.europa.eu/resource/authority/contract-nature",
+    "at-voc:country": "http://publications.europa.eu/resource/authority/country",
+    "at-voc:cpv": "http://publications.europa.eu/resource/authority/cpv",
+    "at-voc:criterion": "http://publications.europa.eu/resource/authority/criterion",
+    "at-voc:currency": "http://publications.europa.eu/resource/authority/currency",
+    "at-voc:direct-award-justification": "http://publications.europa.eu/resource/authority/direct-award-justification",
+    "at-voc:dps-usage": "http://publications.europa.eu/resource/authority/dps-usage",
+    "at-voc:economic-operator-size": "http://publications.europa.eu/resource/authority/economic-operator-size",
+    "at-voc:environmental-impact": "http://publications.europa.eu/resource/authority/environmental-impact",
+    "at-voc:form-type": "http://publications.europa.eu/resource/authority/form-type",
+    "at-voc:framework-agreement": "http://publications.europa.eu/resource/authority/framework-agreement",
+    "at-voc:innovative-acquisition": "http://publications.europa.eu/resource/authority/innovative-acquisition",
+    "at-voc:irregularity-type": "http://publications.europa.eu/resource/authority/irregularity-type",
+    "at-voc:language": "http://publications.europa.eu/resource/authority/language",
+    "at-voc:legal-basis": "http://publications.europa.eu/resource/authority/legal-basis",
+    "at-voc:main-activity": "http://publications.europa.eu/resource/authority/main-activity",
+    "at-voc:measurement-unit": "http://publications.europa.eu/resource/authority/measurement-unit",
+    "at-voc:missing-info-submission": "http://publications.europa.eu/resource/authority/missing-info-submission",
+    "at-voc:modification-justification": "http://publications.europa.eu/resource/authority/modification-justification",
+    "at-voc:non-award-justification": "http://publications.europa.eu/resource/authority/non-award-justification",
+    "at-voc:non-publication-justification": "http://publications.europa.eu/resource/authority/non-publication-justification",
+    "at-voc:notice-type": "http://publications.europa.eu/resource/authority/notice-type",
+    "at-voc:number-fixed": "http://publications.europa.eu/resource/authority/number-fixed",
+    "at-voc:number-threshold": "http://publications.europa.eu/resource/authority/number-threshold",
+    "at-voc:number-weight": "http://publications.europa.eu/resource/authority/number-weight",
+    "at-voc:nuts": "http://publications.europa.eu/resource/authority/nuts",
+    "at-voc:other-place-service": "http://publications.europa.eu/resource/authority/other-place-service",
+    "at-voc:permission": "http://publications.europa.eu/resource/authority/permission",
+    "at-voc:procurement-procedure-type": "http://publications.europa.eu/resource/authority/procurement-procedure-type",
+    "at-voc:received-submission-type": "http://publications.europa.eu/resource/authority/received-submission-type",
+    "at-voc:remedy-type": "http://publications.europa.eu/resource/authority/remedy-type",
+    "at-voc:requirement-stage": "http://publications.europa.eu/resource/authority/requirement-stage",
+    "at-voc:reserved-procurement": "http://publications.europa.eu/resource/authority/reserved-procurement",
+    "at-voc:review-body-type": "http://publications.europa.eu/resource/authority/review-body-type",
+    "at-voc:review-decision-type": "http://publications.europa.eu/resource/authority/review-decision-type",
+    "at-voc:selection-criterion": "http://publications.europa.eu/resource/authority/selection-criterion",
+    "at-voc:social-objective": "http://publications.europa.eu/resource/authority/social-objective",
+    "at-voc:subcontracting-indication": "http://publications.europa.eu/resource/authority/subcontracting-indication",
+    "at-voc:subcontracting-obligation": "http://publications.europa.eu/resource/authority/subcontracting-obligation",
+    "at-voc:timeperiod": "http://publications.europa.eu/resource/authority/timeperiod",
+    "at-voc:usage": "http://publications.europa.eu/resource/authority/usage",
+    "at-voc:winner-selection-status": "http://publications.europa.eu/resource/authority/winner-selection-status",
+    "cccev": "http://data.europa.eu/m8g/",
+    "cccev:Constraint": "http://data.europa.eu/m8g/Constraint",
+    "cccev:Criterion": "http://data.europa.eu/m8g/Criterion",
+    "cccev:Evidence": "http://data.europa.eu/m8g/Evidence",
+    "cccev:InformationConcept": "http://data.europa.eu/m8g/InformationConcept",
+    "cccev:Requirement": "http://data.europa.eu/m8g/Requirement",
+    "core": "http://data.europa.eu/m8g/",
+    "core-res": "http://data.europa.eu/a4g/ontology#",
+    "core-shape": "http://data.europa.eu/a4g/data-shape#",
+    "cpov": "http://data.europa.eu/m8g/",
+    "cpov:ContactPoint": "http://data.europa.eu/m8g/ContactPoint",
+    "cpov:PublicOrganisation": "http://data.europa.eu/m8g/PublicOrganisation",
+    "cpsv": "http://data.europa.eu/m8g/",
+    "cpv": "http://data.europa.eu/m8g/",
+    "cpv:Person": "http://data.europa.eu/m8g/Person",
+    "cv": "http://data.europa.eu/m8g/",
+    "cv:Channel": "http://data.europa.eu/m8g/Channel",
+    "dct": "http://purl.org/dc/terms/",
+    "dct:Location": "http://purl.org/dc/terms/Location",
+    "dul": "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
+    "epo": "http://data.europa.eu/a4g/ontology#",
+    "epo-cat": "http://data.europa.eu/a4g/ontology#",
+    "epo-con": "http://data.europa.eu/a4g/ontology#",
+    "epo-ful": "http://data.europa.eu/a4g/ontology#",
+    "epo-not": "http://data.europa.eu/a4g/ontology#",
+    "epo-ord": "http://data.europa.eu/a4g/ontology#",
+    "espd": "https://github.com/ESPD/ESPD-EDM/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "foaf:Agent": "http://xmlns.com/foaf/0.1/Agent",
+    "foaf:Person": "http://xmlns.com/foaf/0.1/Person",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "legal-regime": "http://data.europa.eu/a4g/ontology#legal-regime",
+    "locn": "http://www.w3.org/ns/locn#",
+    "locn:Address": "http://www.w3.org/ns/locn#Address",
+    "locn:Geometry": "http://www.w3.org/ns/locn#Geometry",
+    "notification-phases-content-types": "http://data.europa.eu/a4g/ontology#notification-phases-content-types",
+    "nuts": "http://data.europa.eu/nuts/",
+    "org": "http://www.w3.org/ns/org#",
+    "org:Organization": "http://www.w3.org/ns/org#Organization",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "owl:Thing": "http://www.w3.org/2002/07/owl#Thing",
+    "person": "http://www.w3.org/ns/person#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdf:PlainLiteral": "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "time": "http://www.w3.org/2006/time#",
+    "time:TemporalUnit": "http://www.w3.org/2006/time#TemporalUnit",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "xsd:anyURI": "http://www.w3.org/2001/XMLSchema#anyURI",
+    "xsd:boolean": "http://www.w3.org/2001/XMLSchema#boolean",
+    "xsd:date": "http://www.w3.org/2001/XMLSchema#date",
+    "xsd:dateTime": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "xsd:decimal": "http://www.w3.org/2001/XMLSchema#decimal",
+    "xsd:integer": "http://www.w3.org/2001/XMLSchema#integer"
+  }
+}
