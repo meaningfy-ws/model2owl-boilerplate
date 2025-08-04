@@ -18,7 +18,7 @@ jobs:
 
       - name: get model2owl
         run: |
-          git clone https://github.com/meaningfy-ws/model2owl.git
+          git clone --branch feature/M2O3-59 https://github.com/meaningfy-ws/model2owl.git
           pwd
 
       - name: get-saxon
@@ -132,7 +132,7 @@ jobs:
 
       - name: get model2owl
         run: |
-          git clone https://github.com/meaningfy-ws/model2owl.git
+          git clone --branch feature/M2O3-59 https://github.com/meaningfy-ws/model2owl.git
           pwd
 
       - name: get-saxon
@@ -179,6 +179,9 @@ jobs:
               XMI_INPUT_FILE_PATH=../$CM_FILE_PATH \
               OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_SHACL \
               NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH}
+            make generate-jsonld-context \
+              XMI_INPUT_FILE_PATH=../$CM_FILE_PATH \
+              OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_SHACL
 
             echo "+++++++++++++++++transform to turtle++++++++++++++++++++++++++++"
             echo $(ls ../${OUTPUT_PATH_OWL}*.rdf)
