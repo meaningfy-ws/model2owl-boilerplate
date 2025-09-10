@@ -56,8 +56,8 @@ jobs:
             sed -i "s/..\/implementation\/${implementation}\/model2owl-config/test\/ePO-default-config/g" config-proxy.xsl
             cd ..
           done
-#        shell: bash
-#
+        shell: bash
+
 #      - name: merge implementations xmi files into one
 #        run: |
 #          AVAILABLE_IMPLEMENTATIONS=(demo_ontology demo_ontology_module)
@@ -80,18 +80,18 @@ jobs:
 #          cd model2owl
 #          make generate-glossary XMI_INPUT_FILE_PATH=output/combined-xmi/ontologies-combined.xmi OUTPUT_GLOSSARY_PATH=../$OUTPUT_GLOSSARY_PATH
 #
-#      - name: remove unnecessary files
-#        run: |
-#          sudo rm -rf model2owl
-#        shell: bash
-#
-#      - name: commit files
-#        id: commit
-#        run: |
-#          git config --local user.email "action@github.com"
-#          git config --local user.name "github-actions"
-#          git pull
-#          git status
+      - name: remove unnecessary files
+        run: |
+          sudo rm -rf model2owl
+        shell: bash
+
+      - name: commit files
+        id: commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "github-actions"
+          git pull
+          git status
 
           git add .
           if [ -z "$(git status --porcelain)" ]; then
