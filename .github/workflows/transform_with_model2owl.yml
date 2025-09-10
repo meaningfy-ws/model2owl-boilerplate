@@ -18,40 +18,11 @@ jobs:
 
       - name: get model2owl
         run: |
-          git clone https://github.com/OP-TED/model2owl.git
+          git clone --branch develop-updated-deps https://github.com/OP-TED/model2owl.git
           pwd
 
-#      - name: get-saxon
-#        run: pwd && cd model2owl && make get-saxon
-      - name: Get Saxon + resolver and launcher
-        run: |
-          mkdir -p model2owl/tools model2owl/saxon
-          SAXON_VERSION=12.4
-          XMLRESOLVER_VERSION=5.2.2
-          
-          # Download jars from Maven Central (stable)
-          curl -fL --retry 5 --retry-all-errors -4 \
-            -o "model2owl/tools/Saxon-HE-${SAXON_VERSION}.jar" \
-            "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/${SAXON_VERSION}/Saxon-HE-${SAXON_VERSION}.jar"
-          
-          curl -fL --retry 5 --retry-all-errors -4 \
-            -o "model2owl/tools/xmlresolver-${XMLRESOLVER_VERSION}.jar" \
-            "https://repo1.maven.org/maven2/org/xmlresolver/xmlresolver/${XMLRESOLVER_VERSION}/xmlresolver-${XMLRESOLVER_VERSION}.jar"
-          
-          # Create a tiny launcher jar so 'java -jar model2owl/saxon/saxon.jar' works
-          cat > MANIFEST.MF <<EOF
-          Manifest-Version: 1.0
-          Main-Class: net.sf.saxon.Transform
-          Class-Path: ../tools/Saxon-HE-${SAXON_VERSION}.jar ../tools/xmlresolver-${XMLRESOLVER_VERSION}.jar
-          EOF
-          jar cfm model2owl/saxon/saxon.jar MANIFEST.MF
-          rm MANIFEST.MF
-          
-          # Compatibility symlink some scripts expect
-          ln -sf saxon.jar model2owl/saxon/saxon9he.jar || true
-          
-          # Quick sanity check (prints Saxon usage)
-          java -jar model2owl/saxon/saxon.jar -? | head -n 3
+      - name: get-saxon
+        run: pwd && cd model2owl && make get-saxon
 
 
       - name: generate convention report and glossary
@@ -109,10 +80,10 @@ jobs:
 #          cd model2owl
 #          make generate-glossary XMI_INPUT_FILE_PATH=output/combined-xmi/ontologies-combined.xmi OUTPUT_GLOSSARY_PATH=../$OUTPUT_GLOSSARY_PATH
 #
-      - name: remove unnecessary files
-        run: |
-          sudo rm -rf model2owl
-        shell: bash
+#      - name: remove unnecessary files
+#        run: |
+#          sudo rm -rf model2owl
+#        shell: bash
 
       - name: commit files
         id: commit
@@ -147,41 +118,11 @@ jobs:
 
       - name: get model2owl
         run: |
-          git clone https://github.com/OP-TED/model2owl.git
+         git clone --branch develop-updated-deps https://github.com/OP-TED/model2owl.git
           pwd
 
-#      - name: get-saxon
-#        run: pwd && cd model2owl && make get-saxon
-      - name: Get Saxon + resolver and launcher
-        run: |
-          mkdir -p model2owl/tools model2owl/saxon
-          SAXON_VERSION=12.4
-          XMLRESOLVER_VERSION=5.2.2
-          
-          # Download jars from Maven Central (stable)
-          curl -fL --retry 5 --retry-all-errors -4 \
-            -o "model2owl/tools/Saxon-HE-${SAXON_VERSION}.jar" \
-            "https://repo1.maven.org/maven2/net/sf/saxon/Saxon-HE/${SAXON_VERSION}/Saxon-HE-${SAXON_VERSION}.jar"
-          
-          curl -fL --retry 5 --retry-all-errors -4 \
-            -o "model2owl/tools/xmlresolver-${XMLRESOLVER_VERSION}.jar" \
-            "https://repo1.maven.org/maven2/org/xmlresolver/xmlresolver/${XMLRESOLVER_VERSION}/xmlresolver-${XMLRESOLVER_VERSION}.jar"
-          
-          # Create a tiny launcher jar so 'java -jar model2owl/saxon/saxon.jar' works
-          cat > MANIFEST.MF <<EOF
-          Manifest-Version: 1.0
-          Main-Class: net.sf.saxon.Transform
-          Class-Path: ../tools/Saxon-HE-${SAXON_VERSION}.jar ../tools/xmlresolver-${XMLRESOLVER_VERSION}.jar
-          EOF
-          jar cfm model2owl/saxon/saxon.jar MANIFEST.MF
-          rm MANIFEST.MF
-          
-          # Compatibility symlink some scripts expect
-          ln -sf saxon.jar model2owl/saxon/saxon9he.jar || true
-          
-          # Quick sanity check (prints Saxon usage)
-          java -jar model2owl/saxon/saxon.jar -? | head -n 3
-
+      - name: get-saxon
+        run: pwd && cd model2owl && make get-saxon
 
       - name: get-rdflib
         run: cd model2owl && make create-virtual-env && make get-rdflib
