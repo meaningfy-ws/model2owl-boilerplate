@@ -25,7 +25,7 @@ jobs:
 
       - name: generate convention report and glossary
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(core eNotice eContract)
+          AVAILABLE_IMPLEMENTATIONS=(ePO_core eNotice eContract)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation}---------------------------------"
@@ -66,7 +66,7 @@ jobs:
 
       - name: merge implementations xmi files into one
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(core eNotice eContract)
+          AVAILABLE_IMPLEMENTATIONS=(ePO_core eNotice eContract)
           cd model2owl
           mkdir -p merge-xmis
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
@@ -141,7 +141,7 @@ jobs:
 
       - name: transform step
         run: |
-          AVAILABLE_IMPLEMENTATIONS=(core eNotice eContract)
+          AVAILABLE_IMPLEMENTATIONS=(ePO_core eNotice eContract)
           for implementation in "${AVAILABLE_IMPLEMENTATIONS[@]}"
           do
             echo "-------------------${implementation} transform---------------------------------"
