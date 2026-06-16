@@ -148,6 +148,11 @@
     -->
     <xsl:variable name="translatePlainLiteralToStringTypesInSHACL" select="fn:true()"/>
 
+    <!-- If true, this option will annotate all defined concepts in the OWL core
+    artefact with the name of the core ontology using rdfs:isDefinedBy. -->
+
+    <xsl:variable name="annotateDefinedConceptsWithOntology" select="fn:true()"/>
+
     <!-- If true, this option will annotate all SHACL concepts in the shapes
     artefact with the ontology IRI defined therein, using rdfs:isDefinedBy. -->
 

@@ -24,3 +24,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   (`enableGenerationOfConceptSchemes`, the notice module's `moduleReference`).
 - Dropped the `_CM` suffix from UML model export file names to align with the upstream
   naming convention.
+- Adopted upstream's sample XMI conceptual models for the demo modules (the models the
+  ReSpec/JSON-LD-context features are built against), replacing the prior project-specific
+  exports that were incompatible with the new generators.
+- Added the `annotateDefinedConceptsWithOntology` config toggle required by the
+  `meaningfy-ws/model2owl` engine's OWL-core generator.
