@@ -339,6 +339,13 @@ Each workflow run generates a summary visible in the GitHub Actions run page. Th
 shows which modules were processed, with links to the generated diff reports. If a module
 fails (e.g., no preexisting files to compare to), it will be noted in the summary.
 
+### Troubleshooting failed CI runs
+When a transform/diff/pages run fails, the [`debugging-ci-runs`](.claude/skills/debugging-ci-runs/SKILL.md)
+Claude Code skill describes how to inspect the run with `gh`, filter the logs down to the real
+error, classify the failure, and fix it iteratively. **Important:** on a (partially) successful
+run the workflows commit generated artefacts back to the branch, so always `git pull` before
+editing, committing, or rebasing.
+
 ## ReSpec Documentation Generation
 
 The workflow also generates **ReSpec documentation** - a comprehensive HTML documentation package that includes your ontology artifacts and examples. This section explains how to customize and work with ReSpec resources.
