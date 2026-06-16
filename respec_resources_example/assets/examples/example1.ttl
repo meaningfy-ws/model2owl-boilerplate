@@ -1,0 +1,28 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cccev: <http://data.europa.eu/m8g/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:announcesAwardDecision rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :ResultNotice :DirectAwardPrenotificationNotice ) ] ;
+    rdfs:range :AwardDecision .
+
+:announcesContract rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :DirectAwardPrenotificationNotice :ResultNotice ) ] ;
+    rdfs:range :Contract .
+
+:announcesLotGroup rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :CompetitionNotice :DirectAwardPrenotificationNotice ) ] ;
+    rdfs:range :LotGroup .
