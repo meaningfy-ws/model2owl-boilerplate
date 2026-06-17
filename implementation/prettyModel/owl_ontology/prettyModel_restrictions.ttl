@@ -1,0 +1,134 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:forSub rdfs:domain :Insurance ;
+    rdfs:range :Boat .
+
+:hasIns rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :SomeOtherClass :Vehicle ) ] ;
+    rdfs:range :Insurance .
+
+:ownedby rdfs:domain :Vehicle ;
+    rdfs:range :RentalCompany .
+
+:prettyModel-restriction a owl:Ontology ;
+    rdfs:label """This artefact provides the restrictions and inference-related specifications for the prettyModel demonstration ontology.
+        This artefact excludes the definitions of concepts.
+        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
+    dcterms:created "2025-09-04"^^xsd:date ;
+    dcterms:description """This artefact provides the restrictions and inference-related specifications for the prettyModel demonstration ontology.
+        This artefact excludes the definitions of concepts.
+        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
+    dcterms:issued "2026-06-17"^^xsd:date ;
+    dcterms:license "CC BY 4.0" ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:title "prettyModel restrictions"@en ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment """This version is automatically generated from prettyModel.xml on
+                2026-06-17""" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports :prettyModel,
+        <http://data.europa.eu/m8g>,
+        dcterms:,
+        skos:,
+        <http://www.w3.org/ns/adms> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#prettyModel-restriction-3.0.1" ;
+    owl:versionIRI :prettyModel-restriction-3.1.0 ;
+    owl:versionInfo "3.1.0" .
+
+:source rdfs:domain :SomeOtherClass ;
+    rdfs:range :ClassForQualAssoc .
+
+:target rdfs:domain :ClassForQualAssoc ;
+    rdfs:range :SomeOtherClass .
+
+:Cycle rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality 1 ;
+            owl:onDataRange :short ;
+            owl:onProperty :colour ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 3 ;
+            owl:onDataRange :short ;
+            owl:onProperty :colour ] .
+
+:engravedID a owl:FunctionalProperty ;
+    rdfs:domain :Vehicle ;
+    rdfs:range :int .
+
+:for rdf:domain :Insurance ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( :Vehicle :SomeOtherClass ) ] .
+
+:hasInsSub rdfs:domain :Boat ;
+    rdfs:range :Insurance .
+
+:lends rdfs:domain :RentalCompany ;
+    rdfs:range :Vehicle .
+
+:nickName a owl:FunctionalProperty ;
+    rdfs:domain :Vehicle ;
+    rdfs:range :long .
+
+:AssocClass1 rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange :date ;
+            owl:onProperty :date ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onDataRange :short ;
+            owl:onProperty :name ;
+            owl:qualifiedCardinality 1 ] .
+
+:Boat rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Insurance ;
+            owl:onProperty :hasInsSub ;
+            owl:qualifiedCardinality 2 ] .
+
+:colour rdfs:domain :Cycle ;
+    rdfs:range :short .
+
+:RentalCompany rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :lends ;
+            owl:someValuesFrom :Vehicle ],
+        [ a owl:Restriction ;
+            owl:onDataRange :long ;
+            owl:onProperty :name ;
+            owl:qualifiedCardinality 1 ] .
+
+:date a owl:FunctionalProperty ;
+    rdfs:domain :AssocClass1 ;
+    rdfs:range :date .
+
+:name a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :AssocClass1 :RentalCompany :Vehicle ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( :short :long ) ] .
+
+:Insurance rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :for ;
+            owl:someValuesFrom :Vehicle ] .
+
+:Vehicle rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange :int ;
+            owl:onProperty :engravedID ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onDataRange :long ;
+            owl:onProperty :nickName ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onDataRange :short ;
+            owl:onProperty :name ;
+            owl:qualifiedCardinality 1 ] .
+

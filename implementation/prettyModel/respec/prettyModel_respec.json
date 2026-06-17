@@ -1,0 +1,929 @@
+{
+  "classes": [
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Assoc class1"
+      },
+      "name": "AssocClass1",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "1..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "AssocClass1",
+              "uri": "http://data.europa.eu/a4g/ontology#AssocClass1"
+            }
+          ],
+          "label": {
+            "en": "Date"
+          },
+          "name": "date",
+          "propertyOrigin": "reused",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "date",
+              "range_label": {
+                "en": "Date"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#date",
+              "range_uri": "http://data.europa.eu/a4g/ontology#date"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#date",
+          "usage": {}
+        },
+        {
+          "cardinality": "1..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "AssocClass1",
+              "uri": "http://data.europa.eu/a4g/ontology#AssocClass1"
+            }
+          ],
+          "label": {
+            "en": "Name"
+          },
+          "name": "name",
+          "propertyOrigin": "reused",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "short",
+              "range_label": {
+                "en": "Short"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#short",
+              "range_uri": "http://data.europa.eu/a4g/ontology#short"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#name",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#AssocClass1",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Bicycle"
+      },
+      "name": "Bicycle",
+      "parents": [
+        {
+          "label": {
+            "en": "Cycle"
+          },
+          "name": "Cycle",
+          "scoped_uri": "http://data.europa.eu/a4g/ontology#Cycle"
+        }
+      ],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#Bicycle",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Boat"
+      },
+      "name": "Boat",
+      "parents": [
+        {
+          "label": {
+            "en": "Vehicle"
+          },
+          "name": "Vehicle",
+          "scoped_uri": "http://data.europa.eu/a4g/ontology#Vehicle"
+        }
+      ],
+      "properties": [
+        {
+          "cardinality": "2",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Boat",
+              "uri": "http://data.europa.eu/a4g/ontology#Boat"
+            }
+          ],
+          "label": {
+            "en": "Has ins sub"
+          },
+          "name": "hasInsSub",
+          "propertyOrigin": "reused",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "Insurance",
+              "range_label": {
+                "en": "Insurance"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#Insurance",
+              "range_uri": "http://data.europa.eu/a4g/ontology#Insurance"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#hasInsSub",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#Boat",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Boring wheel"
+      },
+      "name": "BoringWheel",
+      "parents": [
+        {
+          "label": {
+            "en": "Wheel"
+          },
+          "name": "Wheel",
+          "scoped_uri": "http://data.europa.eu/a4g/ontology#Wheel"
+        }
+      ],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#BoringWheel",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Car"
+      },
+      "name": "Car",
+      "parents": [
+        {
+          "label": {
+            "en": "Vehicle"
+          },
+          "name": "Vehicle",
+          "scoped_uri": "http://data.europa.eu/a4g/ontology#Vehicle"
+        }
+      ],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#Car",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Class for qual assoc"
+      },
+      "name": "ClassForQualAssoc",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "0..*",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "ClassForQualAssoc",
+              "uri": "http://data.europa.eu/a4g/ontology#ClassForQualAssoc"
+            }
+          ],
+          "label": {
+            "en": "Target"
+          },
+          "name": "target",
+          "propertyOrigin": "reused",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "SomeOtherClass",
+              "range_label": {
+                "en": "Some other class"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#SomeOtherClass",
+              "range_uri": "http://data.europa.eu/a4g/ontology#SomeOtherClass"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#target",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#ClassForQualAssoc",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Contractor"
+      },
+      "name": "Contractor",
+      "parents": [],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#Contractor",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Cycle"
+      },
+      "name": "Cycle",
+      "parents": [
+        {
+          "label": {
+            "en": "Vehicle"
+          },
+          "name": "Vehicle",
+          "scoped_uri": "http://data.europa.eu/a4g/ontology#Vehicle"
+        }
+      ],
+      "properties": [
+        {
+          "cardinality": "1..3",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Cycle",
+              "uri": "http://data.europa.eu/a4g/ontology#Cycle"
+            }
+          ],
+          "label": {
+            "en": "Colour"
+          },
+          "name": "colour",
+          "propertyOrigin": "reused",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "short",
+              "range_label": {
+                "en": "Short"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#short",
+              "range_uri": "http://data.europa.eu/a4g/ontology#short"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#colour",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#Cycle",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Fancy wheel"
+      },
+      "name": "FancyWheel",
+      "parents": [
+        {
+          "label": {
+            "en": "Wheel"
+          },
+          "name": "Wheel",
+          "scoped_uri": "http://data.europa.eu/a4g/ontology#Wheel"
+        }
+      ],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#FancyWheel",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Insurance"
+      },
+      "name": "Insurance",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "1..*",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Insurance",
+              "uri": "http://data.europa.eu/a4g/ontology#Insurance"
+            }
+          ],
+          "label": {
+            "en": "For"
+          },
+          "name": "for",
+          "propertyOrigin": "reused",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "Vehicle",
+              "range_label": {
+                "en": "Vehicle"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#Vehicle",
+              "range_uri": "http://data.europa.eu/a4g/ontology#Vehicle"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#for",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#Insurance",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Monocycle"
+      },
+      "name": "Monocycle",
+      "parents": [
+        {
+          "label": {
+            "en": "Cycle"
+          },
+          "name": "Cycle",
+          "scoped_uri": "http://data.europa.eu/a4g/ontology#Cycle"
+        }
+      ],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#Monocycle",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Parts class"
+      },
+      "name": "PartsClass",
+      "parents": [],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#PartsClass",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Rental company"
+      },
+      "name": "RentalCompany",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "1..*",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "RentalCompany",
+              "uri": "http://data.europa.eu/a4g/ontology#RentalCompany"
+            }
+          ],
+          "label": {
+            "en": "Lends"
+          },
+          "name": "lends",
+          "propertyOrigin": "reused",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "Vehicle",
+              "range_label": {
+                "en": "Vehicle"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#Vehicle",
+              "range_uri": "http://data.europa.eu/a4g/ontology#Vehicle"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#lends",
+          "usage": {}
+        },
+        {
+          "cardinality": "1..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "RentalCompany",
+              "uri": "http://data.europa.eu/a4g/ontology#RentalCompany"
+            }
+          ],
+          "label": {
+            "en": "Name"
+          },
+          "name": "name",
+          "propertyOrigin": "reused",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "long",
+              "range_label": {
+                "en": "Long"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#long",
+              "range_uri": "http://data.europa.eu/a4g/ontology#long"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#name",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#RentalCompany",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Some other class"
+      },
+      "name": "SomeOtherClass",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "0..*",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "SomeOtherClass",
+              "uri": "http://data.europa.eu/a4g/ontology#SomeOtherClass"
+            }
+          ],
+          "label": {
+            "en": "Has ins"
+          },
+          "name": "hasIns",
+          "propertyOrigin": "reused",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "Insurance",
+              "range_label": {
+                "en": "Insurance"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#Insurance",
+              "range_uri": "http://data.europa.eu/a4g/ontology#Insurance"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#hasIns",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#SomeOtherClass",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Vehicle"
+      },
+      "name": "Vehicle",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "1..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Vehicle",
+              "uri": "http://data.europa.eu/a4g/ontology#Vehicle"
+            }
+          ],
+          "label": {
+            "en": "Engraved ID"
+          },
+          "name": "engravedID",
+          "propertyOrigin": "reused",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "int",
+              "range_label": {
+                "en": "Int"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#int",
+              "range_uri": "http://data.europa.eu/a4g/ontology#int"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#engravedID",
+          "usage": {}
+        },
+        {
+          "cardinality": "1..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Vehicle",
+              "uri": "http://data.europa.eu/a4g/ontology#Vehicle"
+            }
+          ],
+          "label": {
+            "en": "Name"
+          },
+          "name": "name",
+          "propertyOrigin": "reused",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "short",
+              "range_label": {
+                "en": "Short"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#short",
+              "range_uri": "http://data.europa.eu/a4g/ontology#short"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#name",
+          "usage": {}
+        },
+        {
+          "cardinality": "1..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Vehicle",
+              "uri": "http://data.europa.eu/a4g/ontology#Vehicle"
+            }
+          ],
+          "label": {
+            "en": "Nick name"
+          },
+          "name": "nickName",
+          "propertyOrigin": "reused",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "long",
+              "range_label": {
+                "en": "Long"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#long",
+              "range_uri": "http://data.europa.eu/a4g/ontology#long"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#nickName",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#Vehicle",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Wheel"
+      },
+      "name": "Wheel",
+      "parents": [],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#Wheel",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Yet another C"
+      },
+      "name": "YetAnotherC",
+      "parents": [],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "tags": {},
+      "uri": "http://data.europa.eu/a4g/ontology#YetAnotherC",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "reference",
+      "label": {
+        "en": "Ternary test"
+      },
+      "name": "TernaryTest",
+      "properties": [
+        {
+          "cardinality": "0..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "TernaryTest",
+              "uri": "http://data.europa.eu/a4g/ontology#TernaryTest"
+            }
+          ],
+          "label": {
+            "en": "To AC"
+          },
+          "name": "toAC",
+          "propertyOrigin": "reused",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "YetAnotherC",
+              "range_label": {
+                "en": "Yet another C"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#YetAnotherC",
+              "range_uri": "http://data.europa.eu/a4g/ontology#YetAnotherC"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#toAC",
+          "usage": {}
+        },
+        {
+          "cardinality": "0..*",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "TernaryTest",
+              "uri": "http://data.europa.eu/a4g/ontology#TernaryTest"
+            }
+          ],
+          "label": {
+            "en": "To ins"
+          },
+          "name": "toIns",
+          "propertyOrigin": "reused",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "Insurance",
+              "range_label": {
+                "en": "Insurance"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#Insurance",
+              "range_uri": "http://data.europa.eu/a4g/ontology#Insurance"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#toIns",
+          "usage": {}
+        },
+        {
+          "cardinality": "1..*",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "TernaryTest",
+              "uri": "http://data.europa.eu/a4g/ontology#TernaryTest"
+            }
+          ],
+          "label": {
+            "en": "To other C"
+          },
+          "name": "toOtherC",
+          "propertyOrigin": "reused",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "SomeOtherClass",
+              "range_label": {
+                "en": "Some other class"
+              },
+              "range_puri": "http://data.europa.eu/a4g/ontology#SomeOtherClass",
+              "range_uri": "http://data.europa.eu/a4g/ontology#SomeOtherClass"
+            }
+          ],
+          "tags": {},
+          "uri": "http://data.europa.eu/a4g/ontology#toOtherC",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "supportive"
+      },
+      "uri": "http://data.europa.eu/a4g/ontology#TernaryTest"
+    }
+  ],
+  "datatypes": [
+    {
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Date"
+      },
+      "scopeduri": "date",
+      "uri": "http://data.europa.eu/a4g/ontology#date"
+    },
+    {
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Short"
+      },
+      "scopeduri": "short",
+      "uri": "http://data.europa.eu/a4g/ontology#short"
+    },
+    {
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Long"
+      },
+      "scopeduri": "long",
+      "uri": "http://data.europa.eu/a4g/ontology#long"
+    },
+    {
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Int"
+      },
+      "scopeduri": "int",
+      "uri": "http://data.europa.eu/a4g/ontology#int"
+    }
+  ],
+  "prefixes": []
+}

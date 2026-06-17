@@ -1,0 +1,150 @@
+{
+  "@context": {
+    "AssocClass1": {
+      "@context": {
+        "date": {
+          "@id": "http://data.europa.eu/a4g/ontology#date",
+          "@type": "http://data.europa.eu/a4g/ontology#date"
+        },
+        "name": {
+          "@id": "http://data.europa.eu/a4g/ontology#name",
+          "@type": "http://data.europa.eu/a4g/ontology#short"
+        }
+      },
+      "@id": "http://data.europa.eu/a4g/ontology#AssocClass1"
+    },
+    "Bicycle": "http://data.europa.eu/a4g/ontology#Bicycle",
+    "Boat": {
+      "@context": {
+        "hasInsSub": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/a4g/ontology#hasInsSub",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://data.europa.eu/a4g/ontology#Boat"
+    },
+    "BoringWheel": "http://data.europa.eu/a4g/ontology#BoringWheel",
+    "Car": "http://data.europa.eu/a4g/ontology#Car",
+    "ClassForQualAssoc": {
+      "@context": {
+        "target": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/a4g/ontology#target",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://data.europa.eu/a4g/ontology#ClassForQualAssoc"
+    },
+    "Contractor": "http://data.europa.eu/a4g/ontology#Contractor",
+    "Cycle": {
+      "@context": {
+        "colour": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/a4g/ontology#colour",
+          "@type": "http://data.europa.eu/a4g/ontology#short"
+        }
+      },
+      "@id": "http://data.europa.eu/a4g/ontology#Cycle"
+    },
+    "FancyWheel": "http://data.europa.eu/a4g/ontology#FancyWheel",
+    "Insurance": {
+      "@context": {
+        "for": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/a4g/ontology#for",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://data.europa.eu/a4g/ontology#Insurance"
+    },
+    "Monocycle": "http://data.europa.eu/a4g/ontology#Monocycle",
+    "PartsClass": "http://data.europa.eu/a4g/ontology#PartsClass",
+    "RentalCompany": {
+      "@context": {
+        "lends": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/a4g/ontology#lends",
+          "@type": "@id"
+        },
+        "name": {
+          "@id": "http://data.europa.eu/a4g/ontology#name",
+          "@type": "http://data.europa.eu/a4g/ontology#long"
+        }
+      },
+      "@id": "http://data.europa.eu/a4g/ontology#RentalCompany"
+    },
+    "SomeOtherClass": {
+      "@context": {
+        "hasIns": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/a4g/ontology#hasIns",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://data.europa.eu/a4g/ontology#SomeOtherClass"
+    },
+    "Vehicle": {
+      "@context": {
+        "engravedID": {
+          "@id": "http://data.europa.eu/a4g/ontology#engravedID",
+          "@type": "http://data.europa.eu/a4g/ontology#int"
+        },
+        "name": {
+          "@id": "http://data.europa.eu/a4g/ontology#name",
+          "@type": "http://data.europa.eu/a4g/ontology#short"
+        },
+        "nickName": {
+          "@id": "http://data.europa.eu/a4g/ontology#nickName",
+          "@type": "http://data.europa.eu/a4g/ontology#long"
+        }
+      },
+      "@id": "http://data.europa.eu/a4g/ontology#Vehicle"
+    },
+    "Wheel": "http://data.europa.eu/a4g/ontology#Wheel",
+    "YetAnotherC": "http://data.europa.eu/a4g/ontology#YetAnotherC",
+    "adms": "http://www.w3.org/ns/adms#",
+    "at-voc": "http://publications.europa.eu/resource/authority/",
+    "at-voc-new": "http://publications.europa.eu/resource/authority/new/",
+    "cccev": "http://data.europa.eu/m8g/",
+    "cfg": "http://www.example.org#",
+    "core": "http://data.europa.eu/m8g/",
+    "cpov": "http://data.europa.eu/m8g/",
+    "cpsv": "http://data.europa.eu/m8g/",
+    "cpv": "http://data.europa.eu/m8g/",
+    "cv": "http://data.europa.eu/m8g/",
+    "dct": "http://purl.org/dc/terms/",
+    "dul": "http://www.loa-cnr.it/ontologies/DUL.owl#",
+    "eli": "http://data.europa.eu/eli/ontology#",
+    "epo": "http://data.europa.eu/a4g/ontology#",
+    "epo-acc": "http://data.europa.eu/a4g/ontology#",
+    "epo-awa": "http://data.europa.eu/a4g/ontology#",
+    "epo-cat": "http://data.europa.eu/a4g/ontology#",
+    "epo-con": "http://data.europa.eu/a4g/ontology#",
+    "epo-eva": "http://data.europa.eu/a4g/ontology#",
+    "epo-ful": "http://data.europa.eu/a4g/ontology#",
+    "epo-inv": "http://data.europa.eu/a4g/ontology#",
+    "epo-not": "http://data.europa.eu/a4g/ontology#",
+    "epo-ord": "http://data.europa.eu/a4g/ontology#",
+    "epo-pay": "http://data.europa.eu/a4g/ontology#",
+    "epo-qua": "http://data.europa.eu/a4g/ontology#",
+    "epo-req": "http://data.europa.eu/a4g/ontology#",
+    "epo-sub": "http://data.europa.eu/a4g/ontology#",
+    "espd": "https://github.com/ESPD/ESPD-EDM/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "nuts": "http://data.europa.eu/nuts/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "person": "http://www.w3.org/ns/person#",
+    "prettyModel-res": "http://data.europa.eu/a4g/ontology#",
+    "prettyModel-shape": "http://data.europa.eu/a4g/data-shape#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "time": "http://www.w3.org/2006/time#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

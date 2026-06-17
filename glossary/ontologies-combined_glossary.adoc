@@ -35,6 +35,10 @@
       
     
       
+| AssocClass1 | 
+      
+    
+      
 | epo:AuxiliaryParty | Role of an Agent who may be mentioned in the information exchanged during the Procurement Process but who does not play an active part in it.
       
     
@@ -64,6 +68,18 @@
     
       
 | epo:AwardingCentralPurchasingBody | Role of an Agent procuring activities conducted on a permanent basis in the form of the award of Public Contracts or the conclusion of Framework Agreements for works, supplies or services intended for other Buyers. Additional Information: In Public Procurement the Role of Awarding Central purchasing Body is carried out by a Central Purchasing Body for other Contracting Authorities.
+      
+    
+      
+| Bicycle | 
+      
+    
+      
+| Boat | 
+      
+    
+      
+| BoringWheel | 
       
     
       
@@ -131,6 +147,10 @@
       
     
       
+| Car | 
+      
+    
+      
 | epo:CatalogueProvider | A Role of an Agent compiling and supplying a Catalogue. Additional Information: The Catalogue Provider Role is usually played by the Agent that acts as a Seller, or by another Agent that acts on behalf of the Seller.
       
     
@@ -160,6 +180,10 @@
     
       
 | cv:Channel | +++External concept defined by <xref scope="external" href=""http://data.europa.eu/m8g/Channel""><foreign otherprops="#0000ff"><u>http://data.europa.eu/m8g/Channel</u></foreign></xref> Additional Information Software solutions and electronic devices for communication and exchange of information between Buyers and economic Operators. Lots may use ad-hoc electronic means of communication that are not generally available such as specific solutions for secure and dedicated communication or non-standard eCatalogues. See also Directive recitals 53 to 56.+++
+      
+    
+      
+| ClassForQualAssoc | 
       
     
       
@@ -223,11 +247,19 @@
       
     
       
+| Contractor | 
+      
+    
+      
 | epo:Contractor | The Role of an Agent that has signed a Contract with a Buyer.
       
     
       
 | cccev:Criterion | +++External concept defined by <xref scope="external" href=""http://data.europa.eu/m8g/Criterion""><foreign otherprops="#0000ff"><u>http://data.europa.eu/m8g/Criterion</u></foreign></xref>+++
+      
+    
+      
+| Cycle | 
       
     
       
@@ -347,6 +379,10 @@
       
     
       
+| FancyWheel | 
+      
+    
+      
 | epo:FrameworkAgreement | An agreement between one or more Contracting Authorities and one or more Economic Operators. Additional Information: When a Framework Agreement is concerned, the FA will result from LotAwardOutcome which describes a Lot which specifies the both the Qualification and Award Criteria.
       
     
@@ -388,6 +424,10 @@
     
       
 | time:Instant | +++External concept defined by <xref scope="external" href=""https://www.w3.org/TR/owl-time/#time:Instant""><foreign otherprops="#0000ff"><u>https://www.w3.org/TR/owl-time/#time:Instant</u></foreign></xref>+++
+      
+    
+      
+| Insurance | 
       
     
       
@@ -456,6 +496,10 @@
     
       
 | epo:MonetaryValue | A number of monetary units specified using a given unit of currency. Additional information: In the pre-award phase of the procurement, all monetary values are considered to exclude VAT based on the Directive 2014/24/EU.
+      
+    
+      
+| Monocycle | 
       
     
       
@@ -759,6 +803,10 @@
       
     
       
+| PartsClass | 
+      
+    
+      
 | epo:PaymentExecutor | A Role of an Agent responsible for executing the Payment.
       
     
@@ -891,6 +939,10 @@
       
     
       
+| RentalCompany | 
+      
+    
+      
 | cccev:Requirement | +++External concept defined by <xref scope="external" href=""http://data.europa.eu/m8g/Requirement""><foreign otherprops="#0000ff"><u>http://data.europa.eu/m8g/Requirement</u></foreign></xref> Additional Information: To stay consistent to how identification is realised in the eProcurement ontology, we switch to using `adms:identifier` instead of `dct:identifier` as per CCCEV specification.+++
       
     
@@ -964,6 +1016,10 @@
     
       
 | epo:SocialProcurement | Approach whereby Buyers seek to procure by fulfilling social objectives. Additional Information: Socially Responsible Public Procurement (SRPP) - ï¿½SRPPï¿½ means Procurement Operations that take into account one or more of the following social considerations: employment opportunities, decent work, compliance with social and labour rights, social inclusion (including persons with disabilities), equal opportunities, accessibility design for all, taking account of sustainability criteria, including ethical trade issues and wider voluntary compliance with corporate social responsibility (CSR), while observing the principles enshrined in the Treaty for the European Union (TFEU) and the Procurement Directives. See Article 18 and Annex X Directive 2014/24.
+      
+    
+      
+| SomeOtherClass | 
       
     
       
@@ -1091,11 +1147,25 @@
       
     
       
+| Vehicle | 
+      
+    
+      
 | epo-not:VoluntaryEx-AnteTransparencyNotice | A Notice informing of the intention to award a Contract without prior publication of a Contract Notice. Additional Information: For European Notices above the threshold "A means of advertising the intention to award the Contract without opening it up to formal Competition. A Contracting Authority may decide that a Contract does not require prior publication through a Contract Notice in the O.J.E.U. A reason for this decision may be that the Contract meets the exceptional conditions described in Article 31 of Directive 2004/18/EC. In a recent V.E.A.T notice the reason was listed as “extreme urgency brought about by events unforeseeable by the Contracting Entity and in accordance with the strict conditions stated in the Directive” . "Voluntary Ex-Ante Transparency Notice" (VEAT) where a Contracting Authority deems that a Contract does not require prior publication of a Contract Notice in the European Journal (OJEU). This may apply, for example, if the Contract meets the exceptional conditions justifying direct award of contracts. <b>This definition is still to be worked on.</b>
       
     
       
+| Wheel | 
+      
+    
+      
 | epo:Winner | A Role of an Agent to whom a Lot is awarded.
+      
+    
+      
+| YetAnotherC | 
+      
+    
       
     
       
@@ -1422,6 +1492,22 @@ epo:TenderGroup
   
   
   
+| AssocClass1
+| date| 
+  |date [1..1]
+  
+  
+  
+| AssocClass1 + 
+RentalCompany + 
+Vehicle
+| name| 
+  |short [1..1] +
+  long [1..1] +
+  short [1..1]
+  
+  
+  
   
   
 | epo:AwardCriterion
@@ -1483,6 +1569,8 @@ epo:TenderGroup
 | epo:AwardOutcome
 | epo:hasAwardJustification| 
   Description of the reason behind an award or non-award of a given Tender. Additional information: This is generally used when the non award justification code is set to "Other" and when the Lot is awarded. It may highlight the justification of the non-award of a Tender with regard to awarded Tenders.|rdf:PlainLiteral [0..1]
+  
+  
   
   
   
@@ -1591,6 +1679,8 @@ epo:Documentation
 | epo:hasAddressURL| 
   The resource identifier for a Channel.|xsd:anyURI [0..1] +
   xsd:anyURI [0..1]
+  
+  
   
   
   
@@ -1886,6 +1976,12 @@ org:Organization
   
   
   
+| Cycle
+| colour| 
+  |short [1..3]
+  
+  
+  
   
   
 | epo:DesignContestRegimeTerm
@@ -2145,6 +2241,8 @@ cccev:Requirement
 | time:Instant
 | time:inXSDDateTimeStamp| 
   +++External concept defined by <xref scope="external" href=""https://www.w3.org/TR/owl-time/#time:inXSDDateTimeStamp""><foreign otherprops="#0000ff"><u>https://www.w3.org/TR/owl-time/#time:inXSDDateTimeStamp</u></foreign></xref>+++|xsd:dateTime [0..1]
+  
+  
   
   
   
@@ -2850,6 +2948,8 @@ epo:ProcurementElement
   
   
   
+  
+  
 | epo:ReviewDecision
 | epo:hasWithdrawalDate| 
   The date and time when the request for review was withdrawn.|xsd:date [0..1]
@@ -2977,6 +3077,8 @@ epo:ProcurementElement
 | epo:SocialProcurement
 | epo:hasNonAccessibilityCriterionJustification| 
   Reason for not applying accessibility criteria.|rdf:PlainLiteral [0..&#42;]
+  
+  
   
   
   
@@ -3319,6 +3421,24 @@ epo:ProcurementElement
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+| Vehicle
+| engravedID| 
+  |int [1..1]
+  
+  
+  
+| Vehicle
+| nickName| 
+  |long [1..1]
   
   
   
@@ -3776,6 +3896,14 @@ epo-eva:Evaluator → person:Person [0..1]
 
   
   
+  
+
+  
+  
+  
+
+  
+  
 | epo:providesDocumentation| 
   |epo:AuxiliaryParty → epo:Documentation [0..&#42;]
 
@@ -3870,6 +3998,13 @@ epo-eva:Evaluator → person:Person [0..1]
   
 | epo:hasNonAwardJustification| 
   On hold; Enumeration.|epo:AwardOutcome → at-voc:non-award-justification [0..1]
+
+  
+
+  
+  
+| hasInsSub| 
+  |Boat → Insurance [2]
 
   
 
@@ -3998,6 +4133,13 @@ epo-con:ContractModificationInformation → adms:Identifier [0..&#42;]
   
 | epo:hasEndpointIdentifier| 
   |cv:Channel → adms:Identifier [0..&#42;]
+
+  
+
+  
+  
+| target| 
+  |ClassForQualAssoc → SomeOtherClass [0..&#42;]
 
   
 
@@ -4613,6 +4755,10 @@ org:Organization → epo:Subcontractor [0..&#42;]
 
   
   
+  
+
+  
+  
 | epo:definesPrize| 
   Relation indicating a DesignContestRegimeTerm has a Prize.|epo:DesignContestRegimeTerm → epo:Prize [0..&#42;]
 
@@ -5046,6 +5192,13 @@ epo:ProcurementCriterion → cccev:Constraint [0..&#42;]
 
   
   
+  
+
+  
+  
+| for| 
+  |Insurance → Vehicle [1..&#42;]
+
   
 
   
@@ -6029,6 +6182,13 @@ epo-sub:LegalRepresentative → epo:OfferingParty [0..1]
 
   
   
+| lends| 
+  |RentalCompany → Vehicle [1..&#42;]
+
+  
+
+  
+  
 | cccev:hasConcept| 
   +++External concept defined by <xref scope="external" href=""http://data.europa.eu/m8g/hasConcept""><foreign otherprops="#0000ff"><u>http://data.europa.eu/m8g/hasConcept</u></foreign></xref>+++|cccev:Requirement → cccev:InformationConcept [0..&#42;]
 
@@ -6294,6 +6454,13 @@ epo-eva:ExcludedCandidateList → epo:Candidate [0..&#42;]
   
 | epo:includesAccessibilityCriterion| 
   Explanation as to whether accessibility Criterion are used or not.|epo:SocialProcurement → at-voc:accessibility [0..&#42;]
+
+  
+
+  
+  
+| hasIns| 
+  |SomeOtherClass → Insurance [0..&#42;]
 
   
 
@@ -6763,8 +6930,37 @@ epo-con:Deliverable → epo:MonetaryValue [0..1]
 
   
   
+  
+
+  
+  
+  
+
+  
+  
 | epo:needsToBeATenderer| 
   The Winner must be a Tenderer.|epo:Winner → epo:Tenderer [0..1]
+
+  
+
+  
+  
+| toAC| 
+  |TernaryTest → YetAnotherC [0..1]
+
+  
+
+  
+  
+| toIns| 
+  |TernaryTest → Insurance [0..&#42;]
+
+  
+
+  
+  
+| toOtherC| 
+  |TernaryTest → SomeOtherClass [1..&#42;]
 
   
 

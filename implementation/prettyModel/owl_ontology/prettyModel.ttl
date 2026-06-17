@@ -1,0 +1,173 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:AssocClass1 a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Assoc Class1"@en .
+
+:Bicycle a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Cycle ;
+    skos:prefLabel "Bicycle"@en .
+
+:Boat a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Vehicle ;
+    skos:prefLabel "Boat"@en .
+
+:BoringWheel a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Wheel ;
+    skos:prefLabel "Boring Wheel"@en .
+
+:Car a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Vehicle ;
+    skos:prefLabel "Car"@en .
+
+:ClassForQualAssoc a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Class For Qual Assoc"@en .
+
+:Contractor a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Contractor"@en .
+
+:FancyWheel a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Wheel ;
+    skos:prefLabel "Fancy Wheel"@en .
+
+:Insurance a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Insurance"@en .
+
+:Monocycle a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Cycle ;
+    skos:prefLabel "Monocycle"@en .
+
+:PartsClass a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Parts Class"@en .
+
+:RentalCompany a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Rental Company"@en .
+
+:SomeOtherClass a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Some Other Class"@en .
+
+:YetAnotherC a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Yet Another C"@en .
+
+:colour a rdf:Property ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "colour"@en .
+
+:date a rdf:Property ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "date"@en .
+
+:engravedID a rdf:Property ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "engraved ID"@en .
+
+:forSub a owl:ObjectProperty ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subPropertyOf :hasIns ;
+    skos:prefLabel "for Sub"@en .
+
+:hasInsSub a owl:ObjectProperty ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subPropertyOf :for ;
+    skos:prefLabel "has Ins Sub"@en .
+
+:lends a owl:ObjectProperty ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "lends"@en .
+
+:name a rdf:Property ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "name"@en .
+
+:nickName a rdf:Property ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "nick Name"@en .
+
+:ownedby a owl:ObjectProperty ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "ownedby"@en .
+
+:source a owl:ObjectProperty ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "source"@en .
+
+:target a owl:ObjectProperty ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "target"@en .
+
+:for a owl:ObjectProperty ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "for"@en .
+
+:hasIns a owl:ObjectProperty ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "has Ins"@en .
+
+:Cycle a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Vehicle ;
+    skos:prefLabel "Cycle"@en .
+
+:Wheel a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Wheel"@en .
+
+:Vehicle a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Vehicle"@en .
+
+:prettyModel a owl:Ontology ;
+    rdfs:label """This artefact provides the definitions for the prettyModel demonstration ontology.
+        This artefact excludes the restrictions.
+        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
+    dcterms:created "2025-09-04"^^xsd:date ;
+    dcterms:description """This artefact provides the definitions for the prettyModel demonstration ontology.
+        This artefact excludes the restrictions.
+        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
+    dcterms:issued "2026-06-17"^^xsd:date ;
+    dcterms:license "CC BY 4.0" ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:title "prettyModel core"@en ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-17" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports eli:,
+        <http://data.europa.eu/m8g>,
+        dcterms:,
+        skos:,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/locn>,
+        org:,
+        <http://www.w3.org/ns/person> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology#prettyModel-3.0.1" ;
+    owl:versionIRI :prettyModel-3.1.0 ;
+    owl:versionInfo "3.1.0" .
+

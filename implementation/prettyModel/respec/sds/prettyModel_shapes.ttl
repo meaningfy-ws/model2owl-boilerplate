@@ -1,0 +1,179 @@
+@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prettyModel-shape: <http://data.europa.eu/a4g/data-shape#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+prettyModel-shape:AssocClass1Shape a sh:NodeShape ;
+    rdfs:label "Assoc Class1" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:property prettyModel-shape:AssocClass1-date,
+        prettyModel-shape:AssocClass1-name ;
+    sh:targetClass :AssocClass1 .
+
+prettyModel-shape:BicycleShape a sh:NodeShape ;
+    rdfs:label "Bicycle" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :Bicycle .
+
+prettyModel-shape:BoatShape a sh:NodeShape ;
+    rdfs:label "Boat" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :Boat .
+
+prettyModel-shape:BoringWheelShape a sh:NodeShape ;
+    rdfs:label "Boring Wheel" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :BoringWheel .
+
+prettyModel-shape:CarShape a sh:NodeShape ;
+    rdfs:label "Car" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :Car .
+
+prettyModel-shape:ClassForQualAssocShape a sh:NodeShape ;
+    rdfs:label "Class For Qual Assoc" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :ClassForQualAssoc .
+
+prettyModel-shape:ContractorShape a sh:NodeShape ;
+    rdfs:label "Contractor" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :Contractor .
+
+prettyModel-shape:CycleShape a sh:NodeShape ;
+    rdfs:label "Cycle" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:property prettyModel-shape:Cycle-colour ;
+    sh:targetClass :Cycle .
+
+prettyModel-shape:FancyWheelShape a sh:NodeShape ;
+    rdfs:label "Fancy Wheel" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :FancyWheel .
+
+prettyModel-shape:InsuranceShape a sh:NodeShape ;
+    rdfs:label "Insurance" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :Insurance .
+
+prettyModel-shape:MonocycleShape a sh:NodeShape ;
+    rdfs:label "Monocycle" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :Monocycle .
+
+prettyModel-shape:PartsClassShape a sh:NodeShape ;
+    rdfs:label "Parts Class" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :PartsClass .
+
+prettyModel-shape:RentalCompanyShape a sh:NodeShape ;
+    rdfs:label "Rental Company" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:property prettyModel-shape:RentalCompany-name ;
+    sh:targetClass :RentalCompany .
+
+prettyModel-shape:SomeOtherClassShape a sh:NodeShape ;
+    rdfs:label "Some Other Class" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :SomeOtherClass .
+
+prettyModel-shape:VehicleShape a sh:NodeShape ;
+    rdfs:label "Vehicle" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:property prettyModel-shape:Vehicle-engravedID,
+        prettyModel-shape:Vehicle-name,
+        prettyModel-shape:Vehicle-nickName ;
+    sh:targetClass :Vehicle .
+
+prettyModel-shape:WheelShape a sh:NodeShape ;
+    rdfs:label "Wheel" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :Wheel .
+
+prettyModel-shape:YetAnotherCShape a sh:NodeShape ;
+    rdfs:label "Yet Another C" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:targetClass :YetAnotherC .
+
+prettyModel-shape:AssocClass1-date a sh:PropertyShape ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Date" ;
+    sh:path :date .
+
+prettyModel-shape:AssocClass1-name a sh:PropertyShape ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Name" ;
+    sh:path :name .
+
+prettyModel-shape:Cycle-colour a sh:PropertyShape ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:maxCount 3 ;
+    sh:minCount 1 ;
+    sh:name "Colour" ;
+    sh:path :colour .
+
+prettyModel-shape:RentalCompany-name a sh:PropertyShape ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Name" ;
+    sh:path :name .
+
+prettyModel-shape:Vehicle-engravedID a sh:PropertyShape ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Engraved ID" ;
+    sh:path :engravedID .
+
+prettyModel-shape:Vehicle-name a sh:PropertyShape ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Name" ;
+    sh:path :name .
+
+prettyModel-shape:Vehicle-nickName a sh:PropertyShape ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Nick name" ;
+    sh:path :nickName .
+
+prettyModel-shape:prettyModel-shape a owl:Ontology ;
+    rdfs:label """This artefact provides the generic datashape specifications for the prettyModel demonstration ontology.
+        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
+    dcterms:created "2025-09-04"^^xsd:date ;
+    dcterms:description """This artefact provides the generic datashape specifications for the prettyModel demonstration ontology.
+        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
+    dcterms:issued "2026-06-17"^^xsd:date ;
+    dcterms:license "CC BY 4.0" ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:title "prettyModel shapes"@en ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-17" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports :prettyModel,
+        :prettyModel-restriction,
+        <http://data.europa.eu/m8g>,
+        dcterms:,
+        skos:,
+        <http://www.w3.org/ns/adms> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/data-shape#prettyModel-shape-3.0.1" ;
+    owl:versionIRI prettyModel-shape:prettyModel-shape-3.1.0 ;
+    owl:versionInfo "3.1.0" .
+

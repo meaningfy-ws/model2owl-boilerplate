@@ -1,0 +1,233 @@
+
+
+
+
+= Glossary
+
+== Class names and definitions
+
+[options="header"]
+|===
+| Class name | Definition
+
+      
+| AssocClass1 | 
+      
+    
+      
+| Bicycle | 
+      
+    
+      
+| Boat | 
+      
+    
+      
+| BoringWheel | 
+      
+    
+      
+| Car | 
+      
+    
+      
+| ClassForQualAssoc | 
+      
+    
+      
+| Contractor | 
+      
+    
+      
+| Cycle | 
+      
+    
+      
+| FancyWheel | 
+      
+    
+      
+| Insurance | 
+      
+    
+      
+| Monocycle | 
+      
+    
+      
+| PartsClass | 
+      
+    
+      
+| RentalCompany | 
+      
+    
+      
+| SomeOtherClass | 
+      
+    
+      
+| Vehicle | 
+      
+    
+      
+| Wheel | 
+      
+    
+      
+| YetAnotherC | 
+      
+    
+      
+    
+|===
+
+== Attributes (datatype properties) names and definitions
+
+[cols="20%,20%,40%,20%", options="header"]
+|===
+| Class name | Attribute name | Definition | Data type / cardinality
+
+
+
+
+  
+  
+| AssocClass1
+| date| 
+  |date [1..1]
+  
+  
+  
+| AssocClass1 + 
+RentalCompany + 
+Vehicle
+| name| 
+  |short [1..1] +
+  long [1..1] +
+  short [1..1]
+  
+  
+  
+  
+  
+  
+  
+| Cycle
+| colour| 
+  |short [1..3]
+  
+  
+  
+  
+  
+  
+  
+  
+  
+| Vehicle
+| engravedID| 
+  |int [1..1]
+  
+  
+  
+| Vehicle
+| nickName| 
+  |long [1..1]
+  
+  
+  
+  
+  
+  
+  
+|===
+
+== Predicates (object properties) and definitions
+
+[cols="20%,50%,30%", options="header"]
+|===
+| Predicate name | Definition | Domain, Range and Cardinality
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+| hasInsSub| 
+  |Boat → Insurance [2]
+
+  
+
+  
+  
+| target| 
+  |ClassForQualAssoc → SomeOtherClass [0..&#42;]
+
+  
+
+  
+  
+  
+
+  
+  
+| for| 
+  |Insurance → Vehicle [1..&#42;]
+
+  
+
+  
+  
+| lends| 
+  |RentalCompany → Vehicle [1..&#42;]
+
+  
+
+  
+  
+| hasIns| 
+  |SomeOtherClass → Insurance [0..&#42;]
+
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+| toAC| 
+  |TernaryTest → YetAnotherC [0..1]
+
+  
+
+  
+  
+| toIns| 
+  |TernaryTest → Insurance [0..&#42;]
+
+  
+
+  
+  
+| toOtherC| 
+  |TernaryTest → SomeOtherClass [1..&#42;]
+
+  
+
+
+|===
+
+
+This document is generated automatically by the link:https://github.com/OP-TED/model2owl[model2owl tool] developed in the context of link:https://interoperable-europe.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology[the eProcurement Ontology initiative].
