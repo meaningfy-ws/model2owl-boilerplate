@@ -29,7 +29,7 @@ jobs:
       count: ${{ steps.detect.outputs.count }}
       matrix: ${{ steps.detect.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0  # Needed for git diff
@@ -66,7 +66,7 @@ jobs:
     env:
       OUTPUT_GLOSSARY_PATH: glossary/
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.ref }}
 
@@ -161,7 +161,7 @@ jobs:
           done
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: report-glossary-output
           path: |
@@ -173,7 +173,7 @@ jobs:
     needs: detect_modules
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.ref }}
 
@@ -236,14 +236,14 @@ jobs:
           done
 
       - name: Upload OWL artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: transform-owl-output
           path: implementation/*/owl_ontology/
           retention-days: 1
 
       - name: Upload SHACL artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: transform-shacl-output
           path: implementation/*/shacl_shapes/
@@ -253,7 +253,7 @@ jobs:
     needs: detect_modules
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.ref }}
 
@@ -295,7 +295,7 @@ jobs:
           done
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: jsonld-output
           path: implementation/*/jsonld_context/
@@ -306,12 +306,12 @@ jobs:
     needs: [detect_modules, transform]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.ref }}
 
       - name: Download SHACL artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: transform-shacl-output
           path: implementation/
@@ -401,7 +401,7 @@ jobs:
           done
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: respec-output
           path: implementation/*/respec/
@@ -412,13 +412,13 @@ jobs:
     needs: [detect_modules, report_and_glossary, transform, generate_jsonld_context, generate_respec]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0
 
       - name: Download all transform artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           path: artifacts/
 
@@ -484,7 +484,7 @@ jobs:
     if: always() && !cancelled()
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0
@@ -493,7 +493,7 @@ jobs:
         run: git pull origin ${{ github.ref_name }}
 
       - name: Download diff artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: diff-*
           path: artifacts/
@@ -569,10 +569,10 @@ jobs:
     needs: [detect_modules, commit_transform]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/configure-pages@v4
+      - uses: actions/configure-pages@v6
 
       - name: Download respec artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: respec-output
           path: respec-artifacts/
@@ -619,7 +619,7 @@ jobs:
 
           echo "    </div></body></html>" >> _site/index.html
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
 
   deploy_pages:
     needs: build_pages
@@ -630,4 +630,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
