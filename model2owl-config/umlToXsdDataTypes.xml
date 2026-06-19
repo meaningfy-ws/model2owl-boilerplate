@@ -1,45 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mappings xmlns="http://publications.europa.eu/ns/">
-    
-    <!-- epo prefixed datatypes -->
-    <mapping>
-        <from  qname="epo:Indicator"/>
-        <to  qname="xsd:boolean"/>
-    </mapping>
-    <mapping>
-        <from  qname="epo:Date"/>
-        <to  qname="xsd:date"/>
-    </mapping>
-    <mapping>
-        <from  qname="epo:DateTime"/>
-        <to  qname="xsd:dateTime"/>
-    </mapping>    
-    <mapping>
-        <from  qname="epo:Numeric"/>
-        <to  qname="xsd:decimal"/>
-    </mapping>
-    <mapping>
-        <from  qname="epo:Text"/>
-        <to  qname="rdfs:Literal"/>
-    </mapping>
-    <mapping>
-        <from  qname="epo:Time"/>
-        <to  qname="xsd:time"/>
-    </mapping>
-    <mapping>
-        <from  qname="epo:URI"/>
-        <to  qname="xsd:anyURI"/>
-    </mapping>
-    <mapping>
-        <from  qname="epo:Integer"/>
-        <to  qname="xsd:integer"/>
-    </mapping>
-    <mapping>
-        <from  qname="epo:Code"/>
-        <to  qname="skos:Concept"/>
-    </mapping>
-<!-- end of section -->
-
 
 <!-- XSD datatypes -->
     <!-- no mapping necessary as they are already defined in xsdAndRdfDataTypes.xml as the valid set of OWL2 datatypes in -->
@@ -48,10 +8,10 @@
 <!-- UML primitive datatypes (capitalised forms) per docs "Mapping of UML primitive
      types to XSD datatypes" (rule:datatype-core, tab:type-mapping) plus the UML 2.5
      standard primitives (String, Boolean, UnlimitedNatural, Real).
-     NOTE: capitalised names that collide with this project's own datatype local
-     names (Boolean, Integer, Date, DateTime, Time, Numeric, Text — see the
-     epo:* entries above) are intentionally NOT added here, so a bare occurrence of
-     such a name keeps its project-specific (epo:) semantics rather than being
+     NOTE: capitalised names that collide with one of your own datatype local names
+     (e.g. Boolean, Integer, Date, DateTime, Time, Numeric, Text — see the custom
+     domain-type mappings at the bottom) are intentionally NOT added here, so a bare
+     occurrence of such a name keeps its project-specific semantics rather than being
      rewritten to an XSD primitive. -->
     <mapping><from qname="Float"/>            <to qname="xsd:float"/></mapping>
     <mapping><from qname="Double"/>           <to qname="xsd:double"/></mapping>
@@ -90,6 +50,51 @@
     <mapping><from qname="unsignedShort"/>    <to qname="xsd:unsignedShort"/></mapping>
     <mapping><from qname="unsignedLong"/>     <to qname="xsd:unsignedLong"/></mapping>
     <mapping><from qname="unsignedByte"/>     <to qname="xsd:unsignedByte"/></mapping>
+<!-- end of section -->
+
+<!-- Custom domain-type mappings (EXAMPLE).
+     Map your ontology's own datatype names to an XSD/RDFS type here. The entries
+     below are an illustrative example (from the eProcurement Ontology, using the
+     `epo:` prefix) — replace them with your project's custom datatypes, or remove
+     this section if you have none. A name mapped here is intentionally NOT also
+     listed among the UML primitive mappings above, so it keeps these
+     project-specific semantics. -->
+    <mapping>
+        <from  qname="epo:Indicator"/>
+        <to  qname="xsd:boolean"/>
+    </mapping>
+    <mapping>
+        <from  qname="epo:Date"/>
+        <to  qname="xsd:date"/>
+    </mapping>
+    <mapping>
+        <from  qname="epo:DateTime"/>
+        <to  qname="xsd:dateTime"/>
+    </mapping>
+    <mapping>
+        <from  qname="epo:Numeric"/>
+        <to  qname="xsd:decimal"/>
+    </mapping>
+    <mapping>
+        <from  qname="epo:Text"/>
+        <to  qname="rdfs:Literal"/>
+    </mapping>
+    <mapping>
+        <from  qname="epo:Time"/>
+        <to  qname="xsd:time"/>
+    </mapping>
+    <mapping>
+        <from  qname="epo:URI"/>
+        <to  qname="xsd:anyURI"/>
+    </mapping>
+    <mapping>
+        <from  qname="epo:Integer"/>
+        <to  qname="xsd:integer"/>
+    </mapping>
+    <mapping>
+        <from  qname="epo:Code"/>
+        <to  qname="skos:Concept"/>
+    </mapping>
 <!-- end of section -->
 
 </mappings>
