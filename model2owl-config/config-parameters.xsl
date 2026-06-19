@@ -109,7 +109,7 @@
     <xsl:variable name="mandatoryStatusTagName" select="'cfg:usage'"/>
 
     <!-- Tag name/key that is used to provide reference links/reuse information for a class or property-->
-    <xsl:variable name="referenceTagName" select="'dct:references'"/>
+    <xsl:variable name="referenceTagName" select="'dcterms:references'"/>
     <!-- Label that will be used in the ReSpec docs to describe values of `referenceTagName` for properties -->
     <xsl:variable name="propertyReferenceRespecLabel" select="'Reuse'"/>
     <!-- Label that will be used in the ReSpec docs to describe values of `referenceTagName` for classes -->
