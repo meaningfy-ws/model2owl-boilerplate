@@ -9,7 +9,9 @@ your ontology.
 
 ## Placeholders to replace
 
-Values written as placeholders signal "put your own value here":
+The files come pre-filled with dummy values for demonstration purposes. These act as
+placeholders: replace each with the real value for your ontology. The table below lists
+the recurring placeholder values and what each one stands for.
 
 | Placeholder | Meaning |
 |---|---|
