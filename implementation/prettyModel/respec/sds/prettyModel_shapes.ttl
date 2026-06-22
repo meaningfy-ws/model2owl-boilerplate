@@ -1,10 +1,9 @@
-@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix : <http://example.com/ex#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prettyModel-shape: <http://data.europa.eu/a4g/data-shape#> .
+@prefix prettyModel-shape: <http://example.com/ex-shape#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -102,6 +101,7 @@ prettyModel-shape:YetAnotherCShape a sh:NodeShape ;
 
 prettyModel-shape:AssocClass1-date a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:datatype xsd:date ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Date" ;
@@ -109,6 +109,7 @@ prettyModel-shape:AssocClass1-date a sh:PropertyShape ;
 
 prettyModel-shape:AssocClass1-name a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:datatype xsd:short ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Name" ;
@@ -116,6 +117,7 @@ prettyModel-shape:AssocClass1-name a sh:PropertyShape ;
 
 prettyModel-shape:Cycle-colour a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:datatype xsd:short ;
     sh:maxCount 3 ;
     sh:minCount 1 ;
     sh:name "Colour" ;
@@ -123,6 +125,7 @@ prettyModel-shape:Cycle-colour a sh:PropertyShape ;
 
 prettyModel-shape:RentalCompany-name a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:datatype xsd:long ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Name" ;
@@ -130,6 +133,7 @@ prettyModel-shape:RentalCompany-name a sh:PropertyShape ;
 
 prettyModel-shape:Vehicle-engravedID a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:datatype xsd:int ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Engraved ID" ;
@@ -137,6 +141,7 @@ prettyModel-shape:Vehicle-engravedID a sh:PropertyShape ;
 
 prettyModel-shape:Vehicle-name a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:datatype xsd:short ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Name" ;
@@ -144,36 +149,26 @@ prettyModel-shape:Vehicle-name a sh:PropertyShape ;
 
 prettyModel-shape:Vehicle-nickName a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:datatype xsd:long ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Nick name" ;
     sh:path :nickName .
 
 prettyModel-shape:prettyModel-shape a owl:Ontology ;
-    rdfs:label """This artefact provides the generic datashape specifications for the prettyModel demonstration ontology.
-        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
-    dcterms:created "2025-09-04"^^xsd:date ;
+    rdfs:label "prettyModel — shapes"@en ;
+    dcterms:created "2024-01-01"^^xsd:date ;
     dcterms:description """This artefact provides the generic datashape specifications for the prettyModel demonstration ontology.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
     dcterms:issued "2026-06-22"^^xsd:date ;
     dcterms:license "CC BY 4.0" ;
-    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:publisher "https://example.com/publisher" ;
     dcterms:title "prettyModel shapes"@en ;
-    vann:preferredNamespacePrefix "epo" ;
-    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    vann:preferredNamespacePrefix "ex" ;
+    vann:preferredNamespaceUri "http://example.com/ex#" ;
     rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-22" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
-        <https://github.com/eprocurementontology/eprocurementontology>,
-        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
-        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
     owl:imports :prettyModel,
-        :prettyModel-restriction,
-        <http://data.europa.eu/m8g>,
-        dcterms:,
-        skos:,
-        <http://www.w3.org/ns/adms> ;
-    owl:incompatibleWith "2.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/data-shape#prettyModel-shape-3.0.1" ;
-    owl:versionIRI prettyModel-shape:prettyModel-shape-3.1.0 ;
-    owl:versionInfo "3.1.0" .
+        :prettyModel-restriction ;
+    owl:versionIRI prettyModel-shape:prettyModel-shape-1.0.0 ;
+    owl:versionInfo "1.0.0" .
 

@@ -1,9 +1,8 @@
-@prefix : <http://data.europa.eu/a4g/ontology#> .
+@prefix : <http://example.com/ex#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -18,34 +17,22 @@
     rdfs:range :RentalCompany .
 
 :prettyModel-restriction a owl:Ontology ;
-    rdfs:label """This artefact provides the restrictions and inference-related specifications for the prettyModel demonstration ontology.
-        This artefact excludes the definitions of concepts.
-        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
-    dcterms:created "2025-09-04"^^xsd:date ;
+    rdfs:label "prettyModel — restrictions"@en ;
+    dcterms:created "2024-01-01"^^xsd:date ;
     dcterms:description """This artefact provides the restrictions and inference-related specifications for the prettyModel demonstration ontology.
         This artefact excludes the definitions of concepts.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
     dcterms:issued "2026-06-22"^^xsd:date ;
     dcterms:license "CC BY 4.0" ;
-    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:publisher "https://example.com/publisher" ;
     dcterms:title "prettyModel restrictions"@en ;
-    vann:preferredNamespacePrefix "epo" ;
-    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    vann:preferredNamespacePrefix "ex" ;
+    vann:preferredNamespaceUri "http://example.com/ex#" ;
     rdfs:comment """This version is automatically generated from prettyModel.xml on
                 2026-06-22""" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
-        <https://github.com/eprocurementontology/eprocurementontology>,
-        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
-        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports :prettyModel,
-        <http://data.europa.eu/m8g>,
-        dcterms:,
-        skos:,
-        <http://www.w3.org/ns/adms> ;
-    owl:incompatibleWith "2.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology#prettyModel-restriction-3.0.1" ;
-    owl:versionIRI :prettyModel-restriction-3.1.0 ;
-    owl:versionInfo "3.1.0" .
+    owl:imports :prettyModel ;
+    owl:versionIRI :prettyModel-restriction-1.0.0 ;
+    owl:versionInfo "1.0.0" .
 
 :source rdfs:domain :SomeOtherClass ;
     rdfs:range :ClassForQualAssoc .
@@ -54,17 +41,21 @@
     rdfs:range :SomeOtherClass .
 
 :Cycle rdfs:subClassOf [ a owl:Restriction ;
-            owl:minQualifiedCardinality 1 ;
-            owl:onDataRange :short ;
+            owl:maxQualifiedCardinality 3 ;
+            owl:onDataRange xsd:short ;
             owl:onProperty :colour ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 3 ;
-            owl:onDataRange :short ;
+            owl:minQualifiedCardinality 1 ;
+            owl:onDataRange xsd:short ;
             owl:onProperty :colour ] .
+
+:date a owl:FunctionalProperty ;
+    rdfs:domain :AssocClass1 ;
+    rdfs:range xsd:date .
 
 :engravedID a owl:FunctionalProperty ;
     rdfs:domain :Vehicle ;
-    rdfs:range :int .
+    rdfs:range xsd:int .
 
 :for rdfs:domain :Insurance ;
     rdfs:range [ a owl:Class ;
@@ -78,15 +69,15 @@
 
 :nickName a owl:FunctionalProperty ;
     rdfs:domain :Vehicle ;
-    rdfs:range :long .
+    rdfs:range xsd:long .
 
 :AssocClass1 rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange :short ;
-            owl:onProperty :name ;
+            owl:onDataRange xsd:date ;
+            owl:onProperty :date ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onDataRange :date ;
-            owl:onProperty :date ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :name ;
             owl:qualifiedCardinality 1 ] .
 
 :Boat rdfs:subClassOf [ a owl:Restriction ;
@@ -95,19 +86,15 @@
             owl:qualifiedCardinality 2 ] .
 
 :colour rdfs:domain :Cycle ;
-    rdfs:range :short .
+    rdfs:range xsd:short .
 
 :RentalCompany rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange :long ;
+            owl:onDataRange xsd:long ;
             owl:onProperty :name ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onProperty :lends ;
             owl:someValuesFrom :Vehicle ] .
-
-:date a owl:FunctionalProperty ;
-    rdfs:domain :AssocClass1 ;
-    rdfs:range :date .
 
 :name a owl:FunctionalProperty ;
     rdfs:domain [ a owl:Class ;
@@ -120,15 +107,15 @@
             owl:someValuesFrom :Vehicle ] .
 
 :Vehicle rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange :short ;
-            owl:onProperty :name ;
+            owl:onDataRange xsd:int ;
+            owl:onProperty :engravedID ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onDataRange :long ;
+            owl:onDataRange xsd:long ;
             owl:onProperty :nickName ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onDataRange :int ;
-            owl:onProperty :engravedID ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :name ;
             owl:qualifiedCardinality 1 ] .
 
