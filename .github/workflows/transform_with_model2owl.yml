@@ -382,7 +382,7 @@ jobs:
               OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_RESPEC \
               RESPEC_INPUT_ASSETS_DIR=${RESPEC_ASSETS_PATH} \
               RESPEC_DATA_JSON_PATH=../$OUTPUT_PATH_RESPEC/${implementation}_respec.json \
-              RESPEC_METADATA_JSON_PATH=${ALTERED_METADATA_JSON_PATH} \
+              METADATA_JSON_PATH=${ALTERED_METADATA_JSON_PATH} \
               NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH}
 
             if [ -d "../implementation/${implementation}/respec_resources/js" ]; then
