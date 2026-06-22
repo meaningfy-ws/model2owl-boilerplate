@@ -34,8 +34,9 @@ implementation
 * Create xmi_conceptual_model folder inside the folder created at the previous step
 * Put the UML export in the xmi_conceptual_model folder following the naming conventions
 ## Adding model2owl config
-* Copy model2owl-config folder into UML model implementation folder created at the previous step
-* Configure model2owl using the files inside model2owl-config folder
+The top-level [`model2owl-config`](./model2owl-config) folder is a **configuration template**: a generic, documented set of config files to copy and adapt. See [`model2owl-config/README.md`](./model2owl-config/README.md) for the purpose of each file, the placeholder values to replace, and the parameter/metadata groups.
+* Copy the `model2owl-config` folder into the UML model implementation folder created at the previous step
+* Configure model2owl by editing the files inside that copied `model2owl-config` folder (see [`model2owl-config/README.md`](./model2owl-config/README.md) for details)
 ### Configuration Files
 
 As presented above, this validator will use a maximum of three configuration files, depending on the UML model validation option you have selected (check the **Validator Options** section).
