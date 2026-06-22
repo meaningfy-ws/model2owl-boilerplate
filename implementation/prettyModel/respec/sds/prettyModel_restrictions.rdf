@@ -6,230 +6,218 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#prettyModel-restriction">
+  <rdf:Description rdf:nodeID="N462a618ce2d24086922aaf8cd6516aed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N4a8e17354fd34de68576b32a4f4cf0db"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#prettyModel-restriction">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
-    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
-    <owl:imports rdf:resource="http://data.europa.eu/m8g"/>
-    <owl:imports rdf:resource="http://www.w3.org/ns/adms"/>
-    <owl:imports rdf:resource="http://data.europa.eu/a4g/ontology#prettyModel"/>
+    <owl:imports rdf:resource="http://example.com/ex#prettyModel"/>
     <dcterms:title xml:lang="en">prettyModel restrictions</dcterms:title>
-    <rdfs:label xml:lang="en">This artefact provides the restrictions and inference-related specifications for the prettyModel demonstration ontology.
-        This artefact excludes the definitions of concepts.
-        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI.</rdfs:label>
-    <dcterms:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dcterms:publisher>
+    <rdfs:label xml:lang="en">prettyModel — restrictions</rdfs:label>
+    <dcterms:publisher>https://example.com/publisher</dcterms:publisher>
     <dcterms:description xml:lang="en">This artefact provides the restrictions and inference-related specifications for the prettyModel demonstration ontology.
         This artefact excludes the definitions of concepts.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI.</dcterms:description>
     <rdfs:comment>This version is automatically generated from prettyModel.xml on
                 2026-06-22</rdfs:comment>
-    <rdfs:seeAlso rdf:resource="https://github.com/eprocurementontology/eprocurementontology"/>
-    <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
-    <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
-    <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/EPO/latest/index.html"/>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-22</dcterms:issued>
-    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-04</dcterms:created>
-    <owl:versionInfo>3.1.0</owl:versionInfo>
-    <owl:incompatibleWith>2.1.0</owl:incompatibleWith>
-    <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology#prettyModel-restriction-3.1.0"/>
-    <owl:priorVersion>http://data.europa.eu/a4g/ontology#prettyModel-restriction-3.0.1</owl:priorVersion>
-    <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
-    <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-01</dcterms:created>
+    <owl:versionInfo>1.0.0</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://example.com/ex#prettyModel-restriction-1.0.0"/>
+    <vann:preferredNamespaceUri>http://example.com/ex#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>ex</vann:preferredNamespacePrefix>
     <dcterms:license>CC BY 4.0</dcterms:license>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N808ec0fc9e9343b2b93cb6774212521c">
+  <rdf:Description rdf:nodeID="Nf8e68d28f0b842809ebbbfb1c3c0e757">
+    <rdf:first rdf:resource="http://example.com/ex#SomeOtherClass"/>
+    <rdf:rest rdf:nodeID="N73d106df81d74d53b898c8e47c0ebc2f"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#AssocClass1">
+    <rdfs:subClassOf rdf:nodeID="Nc3da2be9bbc4432ebfae98180972d00a"/>
+    <rdfs:subClassOf rdf:nodeID="N308e1d939d804066a572bbbad2df6149"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2d1b609e85f2462e9164fcc3c3651b55">
+    <rdf:first rdf:resource="http://example.com/ex#AssocClass1"/>
+    <rdf:rest rdf:nodeID="Ne74ccb4b492a48edb129a16f9939b365"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2cdece470e4a413096d6453d62926ce9">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#name"/>
-    <owl:onDataRange rdf:resource="http://data.europa.eu/a4g/ontology#long"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#nickName"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne7bfbb9a190b48f0a1efc9e3c80c1f84">
-    <rdf:first rdf:resource="http://data.europa.eu/a4g/ontology#long"/>
+  <rdf:Description rdf:nodeID="N47e98d12cb6443b7986c251aabc56ae9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N2d4b4a0dd96449b99737cd91c58c71af"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#hasInsSub">
+    <rdfs:domain rdf:resource="http://example.com/ex#Boat"/>
+    <rdfs:range rdf:resource="http://example.com/ex#Insurance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc482141f671e4c8d80b8d4d04c2a2383">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#lends"/>
+    <owl:someValuesFrom rdf:resource="http://example.com/ex#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#forSub">
+    <rdfs:domain rdf:resource="http://example.com/ex#Insurance"/>
+    <rdfs:range rdf:resource="http://example.com/ex#Boat"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#engravedID">
+    <rdfs:domain rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne74ccb4b492a48edb129a16f9939b365">
+    <rdf:first rdf:resource="http://example.com/ex#RentalCompany"/>
+    <rdf:rest rdf:nodeID="Nc506917edb3b49aaa7cc3ebeea6bb8e8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N151094785d6b4041ac9d625b2ab9a931">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N2d1b609e85f2462e9164fcc3c3651b55"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#date">
+    <rdfs:domain rdf:resource="http://example.com/ex#AssocClass1"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#ownedby">
+    <rdfs:domain rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.com/ex#RentalCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na4e74643ee324d2f801ebacefe1d0e61">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#engravedID"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb19f44d3eb1646aab18b09b8b32eb429">
+    <rdf:first rdf:resource="http://example.com/ex#SomeOtherClass"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N56d95d49c9fe431e966feb99b40b27a3">
+  <rdf:Description rdf:nodeID="Ne1e7261bfa40417bb639ab6338ce28f5">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#name"/>
-    <owl:onDataRange rdf:resource="http://data.europa.eu/a4g/ontology#short"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#name"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#colour">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#Cycle"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#short"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#name">
-    <rdfs:domain rdf:nodeID="N154f3afe632d4615a8b2f96913ac5a52"/>
-    <rdfs:range rdf:nodeID="N68066d156ffc4d13a1ed84f499dc3cf2"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N405e924f8b714dbd8fe5ef694a4a076b">
+  <rdf:Description rdf:nodeID="N308e1d939d804066a572bbbad2df6149">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#engravedID"/>
-    <owl:onDataRange rdf:resource="http://data.europa.eu/a4g/ontology#int"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#name"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf93d4d863da840639754faef62852d9d">
+  <rdf:Description rdf:about="http://example.com/ex#hasIns">
+    <rdfs:domain rdf:nodeID="Nf6ec25139ee043ee96671432a5fafeef"/>
+    <rdfs:range rdf:resource="http://example.com/ex#Insurance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Boat">
+    <rdfs:subClassOf rdf:nodeID="N7ac4f983d4164cada01adafdcd817c56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na8081327148441abb39c2bab1547a712">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#lends"/>
-    <owl:someValuesFrom rdf:resource="http://data.europa.eu/a4g/ontology#Vehicle"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf8a325e42be344569abd38f0e3b75974">
-    <rdf:first rdf:resource="http://data.europa.eu/a4g/ontology#SomeOtherClass"/>
-    <rdf:rest rdf:nodeID="N1c851153994442b6b6d1d2e3a60fe47b"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#date">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#AssocClass1"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#date"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#nickName">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#Vehicle"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#long"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#engravedID">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#Vehicle"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#int"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N3172736ddd8f466bbd2212c43cd3dae1">
-    <rdf:first rdf:resource="http://data.europa.eu/a4g/ontology#AssocClass1"/>
-    <rdf:rest rdf:nodeID="Nb9a6e5364c134f8e8b5b7985e871673d"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb2281d5374594c79b89df59e6c711394">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#colour"/>
-    <owl:onDataRange rdf:resource="http://data.europa.eu/a4g/ontology#short"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#colour"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
     <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minQualifiedCardinality>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#AssocClass1">
-    <rdfs:subClassOf rdf:nodeID="N862f8f8e642c4234ae07c53dfaed9eda"/>
-    <rdfs:subClassOf rdf:nodeID="N0e8503dfa8b2475ea19388df6dba2de1"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1c851153994442b6b6d1d2e3a60fe47b">
-    <rdf:first rdf:resource="http://data.europa.eu/a4g/ontology#Vehicle"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0e8503dfa8b2475ea19388df6dba2de1">
+  <rdf:Description rdf:nodeID="Nc9876bb8244b424d87cedea5bffe5d34">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#name"/>
-    <owl:onDataRange rdf:resource="http://data.europa.eu/a4g/ontology#short"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#name"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#hasIns">
-    <rdfs:domain rdf:nodeID="N20da0fcc9a0f4c38bc57a214bc422933"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#Insurance"/>
+  <rdf:Description rdf:about="http://example.com/ex#target">
+    <rdfs:domain rdf:resource="http://example.com/ex#ClassForQualAssoc"/>
+    <rdfs:range rdf:resource="http://example.com/ex#SomeOtherClass"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#forSub">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#Insurance"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#Boat"/>
+  <rdf:Description rdf:nodeID="N73d106df81d74d53b898c8e47c0ebc2f">
+    <rdf:first rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#hasInsSub">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#Boat"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#Insurance"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf6a4f3cff58c46bdb67be25777ccabb2">
+  <rdf:Description rdf:nodeID="N7ac4f983d4164cada01adafdcd817c56">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#hasInsSub"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#hasInsSub"/>
     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:qualifiedCardinality>
-    <owl:onClass rdf:resource="http://data.europa.eu/a4g/ontology#Insurance"/>
+    <owl:onClass rdf:resource="http://example.com/ex#Insurance"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#target">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#ClassForQualAssoc"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#SomeOtherClass"/>
+  <rdf:Description rdf:about="http://example.com/ex#name">
+    <rdfs:domain rdf:nodeID="N151094785d6b4041ac9d625b2ab9a931"/>
+    <rdfs:range rdf:nodeID="N47e98d12cb6443b7986c251aabc56ae9"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#ownedby">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#Vehicle"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#RentalCompany"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N20da0fcc9a0f4c38bc57a214bc422933">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nf8a325e42be344569abd38f0e3b75974"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7f27199fcbcc46d4a7dc0e30a8f4c36a">
+  <rdf:Description rdf:nodeID="Nc9fed11b03544eeda4ccae2a02397b87">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#colour"/>
-    <owl:onDataRange rdf:resource="http://data.europa.eu/a4g/ontology#short"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#for"/>
+    <owl:someValuesFrom rdf:resource="http://example.com/ex#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc3da2be9bbc4432ebfae98180972d00a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#date"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Insurance">
+    <rdfs:subClassOf rdf:nodeID="Nc9fed11b03544eeda4ccae2a02397b87"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc506917edb3b49aaa7cc3ebeea6bb8e8">
+    <rdf:first rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na4884c27957246aeb17600bbb7ffcb64">
+    <rdf:first rdf:resource="http://example.com/ex#long"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#for">
+    <rdfs:domain rdf:resource="http://example.com/ex#Insurance"/>
+    <rdfs:range rdf:nodeID="N462a618ce2d24086922aaf8cd6516aed"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N75a5a68e35c34e7cbf82b0c02bde3298">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#colour"/>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
     <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owl:maxQualifiedCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N68066d156ffc4d13a1ed84f499dc3cf2">
+  <rdf:Description rdf:about="http://example.com/ex#Vehicle">
+    <rdfs:subClassOf rdf:nodeID="Na4e74643ee324d2f801ebacefe1d0e61"/>
+    <rdfs:subClassOf rdf:nodeID="Ne1e7261bfa40417bb639ab6338ce28f5"/>
+    <rdfs:subClassOf rdf:nodeID="N2cdece470e4a413096d6453d62926ce9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#nickName">
+    <rdfs:domain rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Cycle">
+    <rdfs:subClassOf rdf:nodeID="Na8081327148441abb39c2bab1547a712"/>
+    <rdfs:subClassOf rdf:nodeID="N75a5a68e35c34e7cbf82b0c02bde3298"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2d4b4a0dd96449b99737cd91c58c71af">
+    <rdf:first rdf:resource="http://example.com/ex#short"/>
+    <rdf:rest rdf:nodeID="Na4884c27957246aeb17600bbb7ffcb64"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf6ec25139ee043ee96671432a5fafeef">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N7803ebc163f64f07b051aea7139a59c0"/>
+    <owl:unionOf rdf:nodeID="Nf8e68d28f0b842809ebbbfb1c3c0e757"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N862f8f8e642c4234ae07c53dfaed9eda">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#date"/>
-    <owl:onDataRange rdf:resource="http://data.europa.eu/a4g/ontology#date"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
+  <rdf:Description rdf:about="http://example.com/ex#colour">
+    <rdfs:domain rdf:resource="http://example.com/ex#Cycle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nedc5bfe34c1747409a211cb7372d5857">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#nickName"/>
-    <owl:onDataRange rdf:resource="http://data.europa.eu/a4g/ontology#long"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
+  <rdf:Description rdf:nodeID="N4a8e17354fd34de68576b32a4f4cf0db">
+    <rdf:first rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdf:rest rdf:nodeID="Nb19f44d3eb1646aab18b09b8b32eb429"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N154f3afe632d4615a8b2f96913ac5a52">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N3172736ddd8f466bbd2212c43cd3dae1"/>
+  <rdf:Description rdf:about="http://example.com/ex#source">
+    <rdfs:domain rdf:resource="http://example.com/ex#SomeOtherClass"/>
+    <rdfs:range rdf:resource="http://example.com/ex#ClassForQualAssoc"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#Insurance">
-    <rdfs:subClassOf rdf:nodeID="Nfd1ac7db6bab4c65ab70635afe794767"/>
+  <rdf:Description rdf:about="http://example.com/ex#RentalCompany">
+    <rdfs:subClassOf rdf:nodeID="Nc9876bb8244b424d87cedea5bffe5d34"/>
+    <rdfs:subClassOf rdf:nodeID="Nc482141f671e4c8d80b8d4d04c2a2383"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N7803ebc163f64f07b051aea7139a59c0">
-    <rdf:first rdf:resource="http://data.europa.eu/a4g/ontology#short"/>
-    <rdf:rest rdf:nodeID="Ne7bfbb9a190b48f0a1efc9e3c80c1f84"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nff6aced6695b456c9669f80b7cfddbaf">
-    <rdf:first rdf:resource="http://data.europa.eu/a4g/ontology#SomeOtherClass"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nfd1ac7db6bab4c65ab70635afe794767">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://data.europa.eu/a4g/ontology#for"/>
-    <owl:someValuesFrom rdf:resource="http://data.europa.eu/a4g/ontology#Vehicle"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#Vehicle">
-    <rdfs:subClassOf rdf:nodeID="N405e924f8b714dbd8fe5ef694a4a076b"/>
-    <rdfs:subClassOf rdf:nodeID="N56d95d49c9fe431e966feb99b40b27a3"/>
-    <rdfs:subClassOf rdf:nodeID="Nedc5bfe34c1747409a211cb7372d5857"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nff24dd87af3549bda9bab6b22f0c72b0">
-    <rdf:first rdf:resource="http://data.europa.eu/a4g/ontology#Vehicle"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#lends">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#RentalCompany"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#Vehicle"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#Cycle">
-    <rdfs:subClassOf rdf:nodeID="Nb2281d5374594c79b89df59e6c711394"/>
-    <rdfs:subClassOf rdf:nodeID="N7f27199fcbcc46d4a7dc0e30a8f4c36a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#RentalCompany">
-    <rdfs:subClassOf rdf:nodeID="N808ec0fc9e9343b2b93cb6774212521c"/>
-    <rdfs:subClassOf rdf:nodeID="Nf93d4d863da840639754faef62852d9d"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#for">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#Insurance"/>
-    <rdfs:range rdf:nodeID="N1e34b824d75e4150ba5852abda766e3a"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#Boat">
-    <rdfs:subClassOf rdf:nodeID="Nf6a4f3cff58c46bdb67be25777ccabb2"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1e34b824d75e4150ba5852abda766e3a">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N30b847d2a1fd429eab900481b0ef6827"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/ontology#source">
-    <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#SomeOtherClass"/>
-    <rdfs:range rdf:resource="http://data.europa.eu/a4g/ontology#ClassForQualAssoc"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb9a6e5364c134f8e8b5b7985e871673d">
-    <rdf:first rdf:resource="http://data.europa.eu/a4g/ontology#RentalCompany"/>
-    <rdf:rest rdf:nodeID="Nff24dd87af3549bda9bab6b22f0c72b0"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N30b847d2a1fd429eab900481b0ef6827">
-    <rdf:first rdf:resource="http://data.europa.eu/a4g/ontology#Vehicle"/>
-    <rdf:rest rdf:nodeID="Nff6aced6695b456c9669f80b7cfddbaf"/>
+  <rdf:Description rdf:about="http://example.com/ex#lends">
+    <rdfs:domain rdf:resource="http://example.com/ex#RentalCompany"/>
+    <rdfs:range rdf:resource="http://example.com/ex#Vehicle"/>
   </rdf:Description>
 </rdf:RDF>
