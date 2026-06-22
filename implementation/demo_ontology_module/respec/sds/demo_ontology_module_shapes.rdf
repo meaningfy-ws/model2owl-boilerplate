@@ -7,84 +7,138 @@
    xmlns:sh="http://www.w3.org/ns/shacl#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice28Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice8Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice28"/>
-    <rdfs:label>Notice28</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice8"/>
+    <rdfs:label>Notice8</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesAwardDecision">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AwardDecision"/>
-    <sh:sparql rdf:nodeID="Nc706563f99d34021a5abee3dba5ad58a"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesAwardDecision"/>
-    <sh:name>Announces award decision</sh:name>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-CFCStandardNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice"/>
+    <rdfs:label>PI N- CFC Standard Notice</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesRole">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PlanningNotice-epo-announcesRole">
     <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
     <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="N3392f37d06de48ff919d22138e2be5e4"/>
+    <sh:sparql rdf:nodeID="Nb23fa7427e2b4a0aa63cb366d974991c"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
     <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
     <sh:name>Announces role</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINDefence-D81Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINDefence-D81"/>
-    <rdfs:label>PIN Defence- D81</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <rdfs:comment>What is the notice type here?</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#ResultNotice"/>
-    <rdfs:label>Result Notice</rdfs:label>
-    <rdfs:comment>An announcement of the award or non-award of a Contract by a Buyer. (WG approval 27/03/2019)</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-not-refersToRole"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesContract"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesAwardDecision"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToLot"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-not-announcesRole"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToProcedure"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToLotGroup"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesNoticeAwardInformation"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesLotGroupAwardInformation"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesLotGroup">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroup"/>
-    <sh:sparql rdf:nodeID="N4d4225e1793043dab4de35106318e9b4"/>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToProcedure">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Procedure"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="Ndf1fbeee7eb745cfaa55a0e12a482dbb"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLotGroup"/>
-    <sh:name>Announces lot group</sh:name>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToProcedure"/>
+    <sh:name>Refers to procedure</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PlanningNoticeShape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-SocialAndOtherSpecificServices-D23Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PlanningNotice"/>
-    <rdfs:label>Planning Notice</rdfs:label>
-    <rdfs:comment>Notice which sets out the Contracting Authority's purchasing intentions. It is used by Contracting Authorities to provide Suppliers with information about a Procurement Process.</rdfs:comment>
-    <rdfs:comment>When backwards compatibility to StandardForms is no longer required, switch to establishing the notice type constraint at this level.</rdfs:comment>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D23"/>
+    <rdfs:label>Social And Other Specific Services- D23</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-PlanningNotice-epo-announcesPlannedProcurementPart"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-PlanningNotice-epo-announcesRole"/>
+    <rdfs:comment>This can be PIN or Concession award notice</rdfs:comment>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice23Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesAwardDecision">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AwardDecision"/>
+    <sh:sparql rdf:nodeID="Na98f4050cf5c42ee8aa3a73ad151fb37"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesAwardDecision"/>
+    <sh:name>Announces award decision</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-eFormsNoticeShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice23"/>
-    <rdfs:label>Notice23</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#eFormsNotice"/>
+    <rdfs:label>e Forms Notice</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0061e455c64847d49ccc58fa73968496">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesReviewObject&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesReviewObject&gt; ?this .}</sh:select>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-NoticeAwardInformation-epo-describesResultNotice">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#ResultNotice"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:sparql rdf:nodeID="Na13f236d32424d5594e0ad2bf89b5fe3"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#describesResultNotice"/>
+    <sh:name>Describes result notice</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINTimeLimitNoticeShape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToRole">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
+    <sh:sparql rdf:nodeID="N54f97d88599a41bd85a0d14babe440ba"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToRole"/>
+    <sh:name>Refers to role</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice5Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINTimeLimitNotice"/>
-    <rdfs:label>PIN Time Limit Notice</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice5"/>
+    <rdfs:label>Notice5</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na419260687534ce8be6fd775eff406b2">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToAwardDecision&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToAwardDecision&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToLotGroup">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroup"/>
+    <sh:sparql rdf:nodeID="N58c223199bbe466287819905cbf41030"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLotGroup"/>
+    <sh:name>Refers to lot group</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesProcedure">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Procedure"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="N390bb73674f645de9ff4fe5e66cd6309"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesProcedure"/>
+    <sh:name>Announces procedure</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANStandard-D24Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANStandard-D24"/>
+    <rdfs:label>CAN Standard- D24</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-QSNotice-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#QSNotice-D25"/>
+    <rdfs:label>QS Notice- D25</rdfs:label>
+    <rdfs:comment>Additional information: Social and other specific services – utilities</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice31Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice31"/>
+    <rdfs:label>Notice31</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToLot">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Lot"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="Nd27b7e0671a94f328ebb2cba75954135"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLot"/>
+    <sh:name>Refers to lot</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNSocialNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNSocialNotice"/>
+    <rdfs:label>CN Social Notice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4a13777c92734d4aa42141618b5749aa">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice&gt; ?this .}</sh:select>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#not-shape">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -102,12 +156,12 @@
     <dcterms:description xml:lang="en">This artefact provides the generic datashape specifications for the eProcurement Ontology Core.
         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.
         The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</dcterms:description>
-    <rdfs:comment>This version is automatically generated from demo_ontology_module.xml on 2026-06-17</rdfs:comment>
+    <rdfs:comment>This version is automatically generated from demo_ontology_module.xml on 2026-06-22</rdfs:comment>
     <rdfs:seeAlso rdf:resource="https://github.com/eprocurementontology/eprocurementontology"/>
     <rdfs:seeAlso rdf:resource="https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about"/>
     <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
     <rdfs:seeAlso rdf:resource="https://docs.ted.europa.eu/EPO/latest/index.html"/>
-    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-17</dcterms:issued>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-22</dcterms:issued>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-04</dcterms:created>
     <owl:versionInfo>3.1.0</owl:versionInfo>
     <owl:incompatibleWith>2.1.0</owl:incompatibleWith>
@@ -117,176 +171,47 @@
     <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
     <dcterms:license>CC BY 4.0</dcterms:license>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice19Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice19"/>
-    <rdfs:label>Notice19</rdfs:label>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLot">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Lot"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="N3f4badd159b742428bb8549d34f48ac3"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLot"/>
+    <sh:name>Announces lot</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ConcessionNotice-D23Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#ConcessionNotice-D23"/>
-    <rdfs:label>Concession Notice- D23</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <rdfs:comment>where does this belong to?</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice22Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice22"/>
-    <rdfs:label>Notice22</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"/>
-    <rdfs:label>Direct Award Prenotification Notice</rdfs:label>
-    <rdfs:comment>Notice which sets out the Buyer's purchasing intention to award a Contract without prior notification of Competition.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLotGroupAwardInformation"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesContract"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLot"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesRole"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesNoticeAwardInformation"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesProcedure"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLotGroup"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesAwardDecision"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesNoticeAwardInformation">
     <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#NoticeAwardInformation"/>
     <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:sparql rdf:nodeID="N5900dc640c9a4728bf724c5110fad63f"/>
+    <sh:sparql rdf:nodeID="N2341fe746bf548a8b69d200c27066ae2"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
     <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation"/>
     <sh:name>Announces notice award information</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N50e1e7ae9b1c4cb1af0fbeae7d1eafdc">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#describesResultNotice&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#describesResultNotice&gt; ?this .}</sh:select>
+  <rdf:Description rdf:nodeID="N74c2bf5c02d9455991b955992d3a0835">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?this .}</sh:select>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNoticeShape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice14Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CompetitionNotice"/>
-    <rdfs:label>Competition Notice</rdfs:label>
-    <rdfs:comment>An announcement of the launch of a Procurement Procedure by a Procuring Entity. WG approval 18/05/2018</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesLot"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesLotGroup"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesRole"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesProcedure"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANStandardNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANStandardNotice"/>
-    <rdfs:label>CAN Standard Notice</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice14"/>
+    <rdfs:label>Notice14</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNSocial-D25Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice30Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNSocial-D25"/>
-    <rdfs:label>CN Social- D25</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice30"/>
+    <rdfs:label>Notice30</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINOnly-D25Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINOnly-D25"/>
-    <rdfs:label>PIN Only- D25</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-NoticeAwardInformation-epo-describesDirectAwardPrenotificationNotice">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"/>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesProcedure">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Procedure"/>
     <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:sparql rdf:nodeID="Nc73b15b33d1c4b3bb8160f1c03678cd2"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice"/>
-    <sh:name>Describes direct award prenotification notice</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-announcesReviewObject">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#ReviewObject"/>
     <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="N0061e455c64847d49ccc58fa73968496"/>
+    <sh:sparql rdf:nodeID="Nbac7348cff2643c984d3f20a073a9839"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesReviewObject"/>
-    <sh:name>Announces review object</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-not-announcesRole">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
-    <sh:sparql rdf:nodeID="Nc09adddd03614924ac471db08b83ed72"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
-    <sh:name>Announces role</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-CFCStandard-D24Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24"/>
-    <rdfs:label>PI N- CFC Standard- D24</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice13Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice13"/>
-    <rdfs:label>Notice13</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANSocialNotice-D25Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANSocialNotice-D25"/>
-    <rdfs:label>CAN Social Notice- D25</rdfs:label>
-    <rdfs:comment>Additional information: Social and other specific services – utilities</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice27Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice27"/>
-    <rdfs:label>Notice27</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice18Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice18"/>
-    <rdfs:label>Notice18</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Modification-D25Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Modification-D25"/>
-    <rdfs:label>Modification- D25</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice37Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice37"/>
-    <rdfs:label>Notice37</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToLotGroupAwardInformation">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroupAwardInformation"/>
-    <sh:sparql rdf:nodeID="N811a1c580c3440269633a69a1348d7e7"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation"/>
-    <sh:name>Refers to lot group award information</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice24Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice24"/>
-    <rdfs:label>Notice24</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToAwardDecision">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AwardDecision"/>
-    <sh:sparql rdf:nodeID="N9547de6dd1d54e4c8d2c3adf27236e7b"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToAwardDecision"/>
-    <sh:name>Refers to award decision</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNStandardNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNStandardNotice"/>
-    <rdfs:label>CN Standard Notice</rdfs:label>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesProcedure"/>
+    <sh:name>Announces procedure</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice7Shape">
@@ -295,34 +220,21 @@
     <rdfs:label>Notice7</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-NoticeAwardInformation-epo-describesResultNotice">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#ResultNotice"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:sparql rdf:nodeID="N50e1e7ae9b1c4cb1af0fbeae7d1eafdc"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#describesResultNotice"/>
-    <sh:name>Describes result notice</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLot">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Lot"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="N91462cf20e0e4cd0a971253ae537d19e"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLot"/>
-    <sh:name>Announces lot</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINProfileNoticeShape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Modification-D24Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINProfileNotice"/>
-    <rdfs:label>PIN Profile Notice</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Modification-D24"/>
+    <rdfs:label>Modification- D24</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-CFCSocial-D25Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25"/>
-    <rdfs:label>PI N- CFC Social- D25</rdfs:label>
+  <rdf:Description rdf:nodeID="N3f4badd159b742428bb8549d34f48ac3">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLot&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLot&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToLotGroup">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroup"/>
+    <sh:sparql rdf:nodeID="N7e31214e44e2495abee4f8b1f88da40d"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLotGroup"/>
+    <sh:name>Refers to lot group</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNoticeShape">
@@ -342,109 +254,10 @@
     <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToLotGroup"/>
     <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToProcedure"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANSocialNoticeShape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice26Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANSocialNotice"/>
-    <rdfs:label>CAN Social Notice</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice1Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice1"/>
-    <rdfs:label>Notice1</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANSocial-D25Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANSocial-D25"/>
-    <rdfs:label>CAN Social- D25</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice30Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice30"/>
-    <rdfs:label>Notice30</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Modification-D24Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Modification-D24"/>
-    <rdfs:label>Modification- D24</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesAwardDecision">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AwardDecision"/>
-    <sh:sparql rdf:nodeID="N243c76670b534f07ac155d252754808e"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesAwardDecision"/>
-    <sh:name>Announces award decision</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToProcedure">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Procedure"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="Nf5b7f8b56d17428faefd388a2fa11813"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToProcedure"/>
-    <sh:name>Refers to procedure</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNSocialNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNSocialNotice"/>
-    <rdfs:label>CN Social Notice</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice21Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice21"/>
-    <rdfs:label>Notice21</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesContract">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Contract"/>
-    <sh:sparql rdf:nodeID="N0b5e35127b73425b8826f6a3c5aed3f0"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesContract"/>
-    <sh:name>Announces contract</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice36Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice36"/>
-    <rdfs:label>Notice36</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToProcedure">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Procedure"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="N54dbced6c3fb42f99f7153c6b279c41f"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToProcedure"/>
-    <sh:name>Refers to procedure</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToLotGroupAwardInformation">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroupAwardInformation"/>
-    <sh:sparql rdf:nodeID="N98249cf499054ec1af098c0d66c0af6b"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation"/>
-    <sh:name>Refers to lot group award information</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nee82ca1db0b6407286aa35836291e248">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesProcedure&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesProcedure&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToProcedure">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Procedure"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="N7901014f63e948569b6797ae54bf60f0"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToProcedure"/>
-    <sh:name>Refers to procedure</sh:name>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice26"/>
+    <rdfs:label>Notice26</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DesignContestResult-D25Shape">
@@ -453,275 +266,10 @@
     <rdfs:label>Design Contest Result- D25</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb130cd0c9f8f4718aad2687fbf898fb7">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-RTL-D24Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-RTL-D24"/>
-    <rdfs:label>PI N- RT L- D24</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-VoluntaryEx-AnteTransparencyNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice"/>
-    <rdfs:label>Voluntary Ex- Ante Transparency Notice</rdfs:label>
-    <rdfs:comment>A Notice informing of the intention to award a Contract without prior publication of a Contract Notice. Additional Information: For European Notices above the threshold "A means of advertising the intention to award the Contract without opening it up to formal Competition. A Contracting Authority may decide that a Contract does not require prior publication through a Contract Notice in the O.J.E.U. A reason for this decision may be that the Contract meets the exceptional conditions described in Article 31 of Directive 2004/18/EC. In a recent V.E.A.T notice the reason was listed as “extreme urgency brought about by events unforeseeable by the Contracting Entity and in accordance with the strict conditions stated in the Directive” . "Voluntary Ex-Ante Transparency Notice" (VEAT) where a Contracting Authority deems that a Contract does not require prior publication of a Contract Notice in the European Journal (OJEU). This may apply, for example, if the Contract meets the exceptional conditions justifying direct award of contracts. &lt;b&gt;This definition is still to be worked on.&lt;/b&gt;</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANStandard-D24Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANStandard-D24"/>
-    <rdfs:label>CAN Standard- D24</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesProcedure">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Procedure"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="Nee82ca1db0b6407286aa35836291e248"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesProcedure"/>
-    <sh:name>Announces procedure</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-announcesCompletionOfContract">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Contract"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="N1a9bceb940ed4734a24eca772faf9412"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesCompletionOfContract"/>
-    <sh:name>Announces completion of contract</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice29Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice29"/>
-    <rdfs:label>Notice29</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANDefence-D81Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANDefence-D81"/>
-    <rdfs:label>CAN Defence- D81</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <rdfs:comment>What is the notice type here?</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice15Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice15"/>
-    <rdfs:label>Notice15</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PlanningNotice-epo-announcesRole">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="N66259a8553684f5fbfcbdedebd09e7a1"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
-    <sh:name>Announces role</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-QSNotice-D25Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#QSNotice-D25"/>
-    <rdfs:label>QS Notice- D25</rdfs:label>
-    <rdfs:comment>Additional information: Social and other specific services – utilities</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToRole">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
-    <sh:sparql rdf:nodeID="N40772ff8bfec481283e27ce0594b2118"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToRole"/>
-    <sh:name>Refers to role</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DesignContestResultNoticeShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
     <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#DesignContestResultNotice"/>
     <rdfs:label>Design Contest Result Notice</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLotGroupAwardInformation">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroupAwardInformation"/>
-    <sh:sparql rdf:nodeID="Nec8f00daf5ee4f53a86d00f9b289c48a"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation"/>
-    <sh:name>Announces lot group award information</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice35Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice35"/>
-    <rdfs:label>Notice35</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice32Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice32"/>
-    <rdfs:label>Notice32</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc8432cdb747743f6b7f990435174a71a">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesContractAmendment&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesContractAmendment&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice9Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice9"/>
-    <rdfs:label>Notice9</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesNoticeAwardInformation">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#NoticeAwardInformation"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:sparql rdf:nodeID="Ndcbff36bd6a048cab9f08662dcfb6159"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation"/>
-    <sh:name>Announces notice award information</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2a87651c4cac4f20b0d39e72cb1c630f">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N40772ff8bfec481283e27ce0594b2118">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToRole&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DesignContestNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#DesignContestNotice"/>
-    <rdfs:label>Design Contest Notice</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice10Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice10"/>
-    <rdfs:label>Notice10</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-VEAT-D25Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#VEAT-D25"/>
-    <rdfs:label>VEA T- D25</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DesignContest-D25Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#DesignContest-D25"/>
-    <rdfs:label>Design Contest- D25</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNDefence-D81Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNDefence-D81"/>
-    <rdfs:label>CN Defence- D81</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <rdfs:comment>What is the notice type here?</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINProfile-D81Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINProfile-D81"/>
-    <rdfs:label>PIN Profile- D81</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice17Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice17"/>
-    <rdfs:label>Notice17</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToLot">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Lot"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="Nd12d6d110c9045ee83e48daa0747c991"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLot"/>
-    <sh:name>Refers to lot</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNSocialNotice-D25Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNSocialNotice-D25"/>
-    <rdfs:label>CN Social Notice- D25</rdfs:label>
-    <rdfs:comment>Additional information: Social and other specific services – utilities</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToNoticeAwardInformation">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#NoticeAwardInformation"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:sparql rdf:nodeID="Nb130cd0c9f8f4718aad2687fbf898fb7"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation"/>
-    <sh:name>Refers to notice award information</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-not-refersToRole">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="Nff62e21e3b6c411687d7bcb4f12b4164"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToRole"/>
-    <sh:name>Refers to role</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice4Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice4"/>
-    <rdfs:label>Notice4</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb06c8a2dff314e16897033e10f99961e">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesRole">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="Nb06c8a2dff314e16897033e10f99961e"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
-    <sh:name>Announces role</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice40Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice40"/>
-    <rdfs:label>Notice40</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N9acc6b0402fb43ce993bd60d9b32a86a">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-announcesRole">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
-    <sh:sparql rdf:nodeID="N8f0ae040c58741f4b88989f8873b5f84"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
-    <sh:name>Announces role</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <sh:description>for ReviewBody</sh:description>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToLot">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Lot"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="Na47913b4a2ae4e6690a2e709c60dd332"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLot"/>
-    <sh:name>Refers to lot</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice11Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice11"/>
-    <rdfs:label>Notice11</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToAwardDecision">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AwardDecision"/>
-    <sh:sparql rdf:nodeID="N132b51d512454c29847e021105959767"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToAwardDecision"/>
-    <sh:name>Refers to award decision</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNoticeShape">
@@ -740,49 +288,148 @@
     <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToLotGroupAwardInformation"/>
     <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-announcesContractAmendment"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-CFCSocialNotice-D25Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANSocialNotice-D25Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25"/>
-    <rdfs:label>PI N- CFC Social Notice- D25</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANSocialNotice-D25"/>
+    <rdfs:label>CAN Social Notice- D25</rdfs:label>
     <rdfs:comment>Additional information: Social and other specific services – utilities</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToLotGroup">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroup"/>
-    <sh:sparql rdf:nodeID="N8ed4ef8452f24d768da7b33c8a1d8df1"/>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINProfile-D81Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINProfile-D81"/>
+    <rdfs:label>PIN Profile- D81</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc5c2aed741204f759f1a291d760d3000">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ConcessionNotice-D23Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#ConcessionNotice-D23"/>
+    <rdfs:label>Concession Notice- D23</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+    <rdfs:comment>where does this belong to?</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice17Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice17"/>
+    <rdfs:label>Notice17</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToProcedure">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Procedure"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="N0c49456403a74ba0a9c94e4805c031dd"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLotGroup"/>
-    <sh:name>Refers to lot group</sh:name>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToProcedure"/>
+    <sh:name>Refers to procedure</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToLotGroup">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroup"/>
-    <sh:sparql rdf:nodeID="Ndf808b4edef148849d4ddb45e61fe33b"/>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"/>
+    <rdfs:label>Direct Award Prenotification Notice</rdfs:label>
+    <rdfs:comment>Notice which sets out the Buyer's purchasing intention to award a Contract without prior notification of Competition.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLotGroupAwardInformation"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesContract"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLot"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesRole"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesNoticeAwardInformation"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesProcedure"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLotGroup"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesAwardDecision"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Modification-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Modification-D25"/>
+    <rdfs:label>Modification- D25</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice19Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice19"/>
+    <rdfs:label>Notice19</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice10Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice10"/>
+    <rdfs:label>Notice10</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANStandardNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANStandardNotice"/>
+    <rdfs:label>CAN Standard Notice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncc64f89abce6422fab97f4af77bc27ee">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesContract">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Contract"/>
+    <sh:sparql rdf:nodeID="N2d35b39ca0c0485a80d7c3f40dbfcc45"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLotGroup"/>
-    <sh:name>Refers to lot group</sh:name>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesContract"/>
+    <sh:name>Announces contract</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice6Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PlanningNoticeShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice6"/>
-    <rdfs:label>Notice6</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PlanningNotice"/>
+    <rdfs:label>Planning Notice</rdfs:label>
+    <rdfs:comment>Notice which sets out the Contracting Authority's purchasing intentions. It is used by Contracting Authorities to provide Suppliers with information about a Procurement Process.</rdfs:comment>
+    <rdfs:comment>When backwards compatibility to StandardForms is no longer required, switch to establishing the notice type constraint at this level.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-PlanningNotice-epo-announcesPlannedProcurementPart"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-PlanningNotice-epo-announcesRole"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesLotGroup">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroup"/>
+    <sh:sparql rdf:nodeID="N94c65d0ea867414bb014a28bffdc57c2"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLotGroup"/>
+    <sh:name>Announces lot group</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-eFormsNoticeShape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice2Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#eFormsNotice"/>
-    <rdfs:label>e Forms Notice</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice2"/>
+    <rdfs:label>Notice2</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINProfile-D25Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-SubcontractNoticeShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINProfile-D25"/>
-    <rdfs:label>PIN Profile- D25</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#SubcontractNotice"/>
+    <rdfs:label>Subcontract Notice</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0b5e35127b73425b8826f6a3c5aed3f0">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesContract&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesContract&gt; ?this .}</sh:select>
+  <rdf:Description rdf:nodeID="N58c223199bbe466287819905cbf41030">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNStandardNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNStandardNotice"/>
+    <rdfs:label>CN Standard Notice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice27Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice27"/>
+    <rdfs:label>Notice27</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesNoticeAwardInformation">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#NoticeAwardInformation"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:sparql rdf:nodeID="N5b6bd8f7e8904d6ea9dd788ce3f21acd"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation"/>
+    <sh:name>Announces notice award information</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice25Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
@@ -790,94 +437,73 @@
     <rdfs:label>Notice25</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-announcesContractAmendment">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#ContractAmendment"/>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice1Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice1"/>
+    <rdfs:label>Notice1</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToContractToBeModified">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Contract"/>
     <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
     <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="Nc8432cdb747743f6b7f990435174a71a"/>
+    <sh:sparql rdf:nodeID="N7804320d5c364d94ad81127ad749234f"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesContractAmendment"/>
-    <sh:name>Announces contract amendment</sh:name>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToContractToBeModified"/>
+    <sh:name>Refers to contract to be modified</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-QSNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#QSNotice"/>
-    <rdfs:label>QS Notice</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ConcessionAwardNotice-D23Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#ConcessionAwardNotice-D23"/>
-    <rdfs:label>Concession Award Notice- D23</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <rdfs:comment>where does this belong to?</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PreMarketConsultationNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice"/>
-    <rdfs:label>Pre Market Consultation Notice</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-announcesRole">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
-    <sh:sparql rdf:nodeID="N9acc6b0402fb43ce993bd60d9b32a86a"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
-    <sh:name>Announces role</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice14Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice14"/>
-    <rdfs:label>Notice14</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-VEAT-D23Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#VEAT-D23"/>
-    <rdfs:label>VEA T- D23</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PlanningNotice-epo-announcesPlannedProcurementPart">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#PlannedProcurementPart"/>
-    <sh:sparql rdf:nodeID="N115591bad3bf4f1fac12067e1b1bd4c1"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart"/>
-    <sh:name>Announces planned procurement part</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice16Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice16"/>
-    <rdfs:label>Notice16</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice20Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice20"/>
-    <rdfs:label>Notice20</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesContract">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-announcesCompletionOfContract">
     <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Contract"/>
-    <sh:sparql rdf:nodeID="N81abda9796af4e53b0afdb48ef64b69b"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="N320541fa1451432fbf907453a2a414e1"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesContract"/>
-    <sh:name>Announces contract</sh:name>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesCompletionOfContract"/>
+    <sh:name>Announces completion of contract</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-NoticeAwardInformationShape">
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-NoticeAwardInformation-epo-describesDirectAwardPrenotificationNotice"/>
-    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-NoticeAwardInformation-epo-describesResultNotice"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N257e0edfff1f4dd1b043aeeeb953bbbd">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice3Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-CFCSocial-D25Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice3"/>
-    <rdfs:label>Notice3</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-CFCSocial-D25"/>
+    <rdfs:label>PI N- CFC Social- D25</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice35Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice35"/>
+    <rdfs:label>Notice35</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINOnly-D24Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINOnly-D24"/>
+    <rdfs:label>PIN Only- D24</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-VEAT-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#VEAT-D25"/>
+    <rdfs:label>VEA T- D25</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANDefence-D81Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANDefence-D81"/>
+    <rdfs:label>CAN Defence- D81</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+    <rdfs:comment>What is the notice type here?</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-RTL-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-RTL-D25"/>
+    <rdfs:label>PI N- RT L- D25</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-StandardFormsNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#StandardFormsNotice"/>
+    <rdfs:label>Standard Forms Notice</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-VEAT-D24Shape">
@@ -886,41 +512,125 @@
     <rdfs:label>VEA T- D24</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N115591bad3bf4f1fac12067e1b1bd4c1">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart&gt; ?this .}</sh:select>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-announcesReviewObject">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#ReviewObject"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="N9e824d3aab3840159c3578255663fdb2"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesReviewObject"/>
+    <sh:name>Announces review object</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DesignContestResult-D24Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#DesignContestResult-D24"/>
+    <rdfs:label>Design Contest Result- D24</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice4Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice4"/>
+    <rdfs:label>Notice4</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#ResultNotice"/>
+    <rdfs:label>Result Notice</rdfs:label>
+    <rdfs:comment>An announcement of the award or non-award of a Contract by a Buyer. (WG approval 27/03/2019)</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-not-refersToRole"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesContract"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesAwardDecision"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToLot"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-not-announcesRole"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToProcedure"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToLotGroup"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesNoticeAwardInformation"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesLotGroupAwardInformation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesLot">
     <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Lot"/>
     <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="N8c97b43f6fbd46e59bcfca1ca859b855"/>
+    <sh:sparql rdf:nodeID="Nbeb2449eda1741868c14876bf95a92bf"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
     <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLot"/>
     <sh:name>Announces lot</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesProcedure">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Procedure"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CompetitionNotice"/>
+    <rdfs:label>Competition Notice</rdfs:label>
+    <rdfs:comment>An announcement of the launch of a Procurement Procedure by a Procuring Entity. WG approval 18/05/2018</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesLot"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesLotGroup"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesRole"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesProcedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PreMarketConsultationNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PreMarketConsultationNotice"/>
+    <rdfs:label>Pre Market Consultation Notice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompetitionNotice-epo-announcesRole">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
     <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="Na80121081b31485c9d134542c7214cb9"/>
+    <sh:sparql rdf:nodeID="Nfd9fce18d67a47059bf99ad871a46d94"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesProcedure"/>
-    <sh:name>Announces procedure</sh:name>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
+    <sh:name>Announces role</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice33Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-announcesRole">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
+    <sh:sparql rdf:nodeID="N81760f71193746b38ba1de085de8e5a3"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
+    <sh:name>Announces role</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+    <sh:description>for ReviewBody</sh:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice13Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice33"/>
-    <rdfs:label>Notice33</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice13"/>
+    <rdfs:label>Notice13</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Na47913b4a2ae4e6690a2e709c60dd332">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?this .}</sh:select>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToLot">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Lot"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="N8483e62c25954ff6b777939a29fefefd"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLot"/>
+    <sh:name>Refers to lot</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNStandard-D24Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINOnlyNoticeShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNStandard-D24"/>
-    <rdfs:label>CN Standard- D24</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINOnlyNotice"/>
+    <rdfs:label>PIN Only Notice</rdfs:label>
+    <rdfs:comment>PriorInformationNotice</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice37Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice37"/>
+    <rdfs:label>Notice37</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNSocial-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNSocial-D25"/>
+    <rdfs:label>CN Social- D25</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice21Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice21"/>
+    <rdfs:label>Notice21</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-SocialAndOtherSpecificServices-D24Shape">
@@ -931,31 +641,82 @@
     <rdfs:comment>This can be PIN (maybe CFC), CN or CAN.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-refersToLot">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Lot"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="N257e0edfff1f4dd1b043aeeeb953bbbd"/>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-VEAT-D23Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#VEAT-D23"/>
+    <rdfs:label>VEA T- D23</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNStandard-D24Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNStandard-D24"/>
+    <rdfs:label>CN Standard- D24</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na98f4050cf5c42ee8aa3a73ad151fb37">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesAwardDecision&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesAwardDecision&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice18Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice18"/>
+    <rdfs:label>Notice18</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice29Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice29"/>
+    <rdfs:label>Notice29</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ConcessionAwardNotice-D23Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#ConcessionAwardNotice-D23"/>
+    <rdfs:label>Concession Award Notice- D23</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+    <rdfs:comment>where does this belong to?</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToAwardDecision">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AwardDecision"/>
+    <sh:sparql rdf:nodeID="Na419260687534ce8be6fd775eff406b2"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLot"/>
-    <sh:name>Refers to lot</sh:name>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToAwardDecision"/>
+    <sh:name>Refers to award decision</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-VEAT-D81Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#VEAT-D81"/>
-    <rdfs:label>VEA T- D81</rdfs:label>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLotGroup">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroup"/>
+    <sh:sparql rdf:nodeID="N9047d299d95341269eac82389b38e503"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLotGroup"/>
+    <sh:name>Announces lot group</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice12Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-VoluntaryEx-AnteTransparencyNoticeShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice12"/>
-    <rdfs:label>Notice12</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#VoluntaryEx-AnteTransparencyNotice"/>
+    <rdfs:label>Voluntary Ex- Ante Transparency Notice</rdfs:label>
+    <rdfs:comment>A Notice informing of the intention to award a Contract without prior publication of a Contract Notice. Additional Information: For European Notices above the threshold "A means of advertising the intention to award the Contract without opening it up to formal Competition. A Contracting Authority may decide that a Contract does not require prior publication through a Contract Notice in the O.J.E.U. A reason for this decision may be that the Contract meets the exceptional conditions described in Article 31 of Directive 2004/18/EC. In a recent V.E.A.T notice the reason was listed as “extreme urgency brought about by events unforeseeable by the Contracting Entity and in accordance with the strict conditions stated in the Directive” . "Voluntary Ex-Ante Transparency Notice" (VEAT) where a Contracting Authority deems that a Contract does not require prior publication of a Contract Notice in the European Journal (OJEU). This may apply, for example, if the Contract meets the exceptional conditions justifying direct award of contracts. &lt;b&gt;This definition is still to be worked on.&lt;/b&gt;</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINProfile-D24Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice9Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINProfile-D24"/>
-    <rdfs:label>PIN Profile- D24</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice9"/>
+    <rdfs:label>Notice9</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToNoticeAwardInformation">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#NoticeAwardInformation"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:sparql rdf:nodeID="Nd13686641af1423baa9b8b165db5629a"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation"/>
+    <sh:name>Refers to notice award information</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Modification-D23Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Modification-D23"/>
+    <rdfs:label>Modification- D23</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Subcontract-D81Shape">
@@ -964,158 +725,16 @@
     <rdfs:label>Subcontract- D81</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice5Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice16Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice5"/>
-    <rdfs:label>Notice5</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice16"/>
+    <rdfs:label>Notice16</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINOnlyNoticeShape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice32Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINOnlyNotice"/>
-    <rdfs:label>PIN Only Notice</rdfs:label>
-    <rdfs:comment>PriorInformationNotice</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToNoticeAwardInformation">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#NoticeAwardInformation"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:sparql rdf:nodeID="N7821dbeb5bc7426bb5db6ce15f335b81"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation"/>
-    <sh:name>Refers to notice award information</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToContractToBeModified">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Contract"/>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:sparql rdf:nodeID="N257b9811f03c43619dd1edb0402deb2b"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToContractToBeModified"/>
-    <sh:name>Refers to contract to be modified</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-StandardFormsNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#StandardFormsNotice"/>
-    <rdfs:label>Standard Forms Notice</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DesignContestResult-D24Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#DesignContestResult-D24"/>
-    <rdfs:label>Design Contest Result- D24</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice8Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice8"/>
-    <rdfs:label>Notice8</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINOnly-D24Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINOnly-D24"/>
-    <rdfs:label>PIN Only- D24</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-SocialAndOtherSpecificServices-D23Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#SocialAndOtherSpecificServices-D23"/>
-    <rdfs:label>Social And Other Specific Services- D23</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-    <rdfs:comment>This can be PIN or Concession award notice</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice34Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice34"/>
-    <rdfs:label>Notice34</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc73b15b33d1c4b3bb8160f1c03678cd2">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7821dbeb5bc7426bb5db6ce15f335b81">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-RTL-D25Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-RTL-D25"/>
-    <rdfs:label>PI N- RT L- D25</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice2Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice2"/>
-    <rdfs:label>Notice2</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7901014f63e948569b6797ae54bf60f0">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToProcedure&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToProcedure&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice39Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice39"/>
-    <rdfs:label>Notice39</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N257b9811f03c43619dd1edb0402deb2b">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToContractToBeModified&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToContractToBeModified&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N8f0ae040c58741f4b88989f8873b5f84">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-CFCStandardNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-CFCStandardNotice"/>
-    <rdfs:label>PI N- CFC Standard Notice</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na80121081b31485c9d134542c7214cb9">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesProcedure&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesProcedure&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesLotGroupAwardInformation">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroupAwardInformation"/>
-    <sh:sparql rdf:nodeID="N2a87651c4cac4f20b0d39e72cb1c630f"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation"/>
-    <sh:name>Announces lot group award information</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-CFCSocialNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice"/>
-    <rdfs:label>PI N- CFC Social Notice</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-SubcontractNoticeShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#SubcontractNotice"/>
-    <rdfs:label>Subcontract Notice</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLotGroup">
-    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroup"/>
-    <sh:sparql rdf:nodeID="N2b5f344fb7dc4b06a71a6124efe981ca"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLotGroup"/>
-    <sh:name>Announces lot group</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice31Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice31"/>
-    <rdfs:label>Notice31</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N54dbced6c3fb42f99f7153c6b279c41f">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToProcedure&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToProcedure&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Modification-D23Shape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Modification-D23"/>
-    <rdfs:label>Modification- D23</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice32"/>
+    <rdfs:label>Notice32</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice38Shape">
@@ -1124,24 +743,115 @@
     <rdfs:label>Notice38</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToLotGroup">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice12Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice12"/>
+    <rdfs:label>Notice12</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice23Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice23"/>
+    <rdfs:label>Notice23</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNDefence-D81Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNDefence-D81"/>
+    <rdfs:label>CN Defence- D81</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+    <rdfs:comment>What is the notice type here?</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-announcesRole">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
+    <sh:sparql rdf:nodeID="N021d2462b81945788fc29f3297784869"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
+    <sh:name>Announces role</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesContract">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Contract"/>
+    <sh:sparql rdf:nodeID="Nfd2fe1ec2e8f4051bfebe050ea10b03c"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesContract"/>
+    <sh:name>Announces contract</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToLotGroup">
     <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroup"/>
-    <sh:sparql rdf:nodeID="N445ad70dbf35492d8d3d1f1df79cdc7d"/>
+    <sh:sparql rdf:nodeID="Ncc64f89abce6422fab97f4af77bc27ee"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
     <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLotGroup"/>
     <sh:name>Refers to lot group</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd12d6d110c9045ee83e48daa0747c991">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?this .}</sh:select>
+  <rdf:Description rdf:nodeID="N0c49456403a74ba0a9c94e4805c031dd">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToProcedure&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToProcedure&gt; ?this .}</sh:select>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nff62e21e3b6c411687d7bcb4f12b4164">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToRole&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice26Shape">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-CFCStandard-D24Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice26"/>
-    <rdfs:label>Notice26</rdfs:label>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-CFCStandard-D24"/>
+    <rdfs:label>PI N- CFC Standard- D24</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice36Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice36"/>
+    <rdfs:label>Notice36</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice11Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice11"/>
+    <rdfs:label>Notice11</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#pin-buyerShape">
+    <rdfs:comment>this is a buyer profile, not a PIN.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToLotGroupAwardInformation">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroupAwardInformation"/>
+    <sh:sparql rdf:nodeID="Nc5c2aed741204f759f1a291d760d3000"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation"/>
+    <sh:name>Refers to lot group award information</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-CFCSocialNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice"/>
+    <rdfs:label>PI N- CFC Social Notice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINProfileNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINProfileNotice"/>
+    <rdfs:label>PIN Profile Notice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N94c65d0ea867414bb014a28bffdc57c2">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLotGroup&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLotGroup&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice28Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice28"/>
+    <rdfs:label>Notice28</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesRole">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="Nb22d404d0f0f4f8e9520f86f62ea38c8"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
+    <sh:name>Announces role</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice40Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice40"/>
+    <rdfs:label>Notice40</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DesignContest-D24Shape">
@@ -1150,11 +860,134 @@
     <rdfs:label>Design Contest- D24</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N81abda9796af4e53b0afdb48ef64b69b">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesContract&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesContract&gt; ?this .}</sh:select>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-CFCSocialNotice-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-CFCSocialNotice-D25"/>
+    <rdfs:label>PI N- CFC Social Notice- D25</rdfs:label>
+    <rdfs:comment>Additional information: Social and other specific services – utilities</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nec8f00daf5ee4f53a86d00f9b289c48a">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation&gt; ?this .}</sh:select>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANSocial-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANSocial-D25"/>
+    <rdfs:label>CAN Social- D25</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DirectAwardPrenotificationNotice-epo-announcesLotGroupAwardInformation">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroupAwardInformation"/>
+    <sh:sparql rdf:nodeID="N6a6775f93a514a33af54ceb77e5f76ac"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation"/>
+    <sh:name>Announces lot group award information</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PlanningNotice-epo-announcesPlannedProcurementPart">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#PlannedProcurementPart"/>
+    <sh:sparql rdf:nodeID="N935c11f874904755b0b043cf8123918e"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart"/>
+    <sh:name>Announces planned procurement part</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice33Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice33"/>
+    <rdfs:label>Notice33</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CNSocialNotice-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CNSocialNotice-D25"/>
+    <rdfs:label>CN Social Notice- D25</rdfs:label>
+    <rdfs:comment>Additional information: Social and other specific services – utilities</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINOnly-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINOnly-D25"/>
+    <rdfs:label>PIN Only- D25</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToLot">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Lot"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="N74c2bf5c02d9455991b955992d3a0835"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLot"/>
+    <sh:name>Refers to lot</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice20Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice20"/>
+    <rdfs:label>Notice20</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8483e62c25954ff6b777939a29fefefd">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice15Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice15"/>
+    <rdfs:label>Notice15</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice39Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice39"/>
+    <rdfs:label>Notice39</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4ced714d66e54a5e8ba8b0592a5a49ab">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToAwardDecision&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToAwardDecision&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na13f236d32424d5594e0ad2bf89b5fe3">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#describesResultNotice&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#describesResultNotice&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DesignContest-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#DesignContest-D25"/>
+    <rdfs:label>Design Contest- D25</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToLotGroupAwardInformation">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroupAwardInformation"/>
+    <sh:sparql rdf:nodeID="Ndeb7eb65f73e4a67b7955d7ce63c189d"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation"/>
+    <sh:name>Refers to lot group award information</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-VEAT-D81Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#VEAT-D81"/>
+    <rdfs:label>VEA T- D81</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice24Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice24"/>
+    <rdfs:label>Notice24</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-announcesContractAmendment">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#ContractAmendment"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="N2039b4ea0cd14803a6b04359fc36ff71"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesContractAmendment"/>
+    <sh:name>Announces contract amendment</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndeb7eb65f73e4a67b7955d7ce63c189d">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-DesignContestNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#DesignContestNotice"/>
+    <rdfs:label>Design Contest Notice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-QS-D25Shape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
@@ -1162,67 +995,234 @@
     <rdfs:label>Q S- D25</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N8c97b43f6fbd46e59bcfca1ca859b855">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLot&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLot&gt; ?this .}</sh:select>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice3Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice3"/>
+    <rdfs:label>Notice3</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N243c76670b534f07ac155d252754808e">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesAwardDecision&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesAwardDecision&gt; ?this .}</sh:select>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-not-announcesRole">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
+    <sh:sparql rdf:nodeID="Nfde1c55d69154996ac82c10ae8843d03"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesRole"/>
+    <sh:name>Announces role</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Ndcbff36bd6a048cab9f08662dcfb6159">
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-NoticeAwardInformationShape">
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-NoticeAwardInformation-epo-describesDirectAwardPrenotificationNotice"/>
+    <sh:property rdf:resource="http://data.europa.eu/a4g/data-shape#epo-NoticeAwardInformation-epo-describesResultNotice"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINDefence-D81Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINDefence-D81"/>
+    <rdfs:label>PIN Defence- D81</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+    <rdfs:comment>What is the notice type here?</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ContractModificationNotice-epo-refersToAwardDecision">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AwardDecision"/>
+    <sh:sparql rdf:nodeID="N4ced714d66e54a5e8ba8b0592a5a49ab"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToAwardDecision"/>
+    <sh:name>Refers to award decision</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINTimeLimitNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINTimeLimitNotice"/>
+    <rdfs:label>PIN Time Limit Notice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PIN-RTL-D24Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PIN-RTL-D24"/>
+    <rdfs:label>PI N- RT L- D24</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-NoticeAwardInformation-epo-describesDirectAwardPrenotificationNotice">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#DirectAwardPrenotificationNotice"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:sparql rdf:nodeID="N4a13777c92734d4aa42141618b5749aa"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#describesDirectAwardPrenotificationNotice"/>
+    <sh:name>Describes direct award prenotification notice</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd27b7e0671a94f328ebb2cba75954135">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLot&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CANSocialNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#CANSocialNotice"/>
+    <rdfs:label>CAN Social Notice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5b6bd8f7e8904d6ea9dd788ce3f21acd">
     <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation&gt; ?this .}</sh:select>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc706563f99d34021a5abee3dba5ad58a">
+  <rdf:Description rdf:nodeID="Nb23fa7427e2b4a0aa63cb366d974991c">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINProfile-D25Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINProfile-D25"/>
+    <rdfs:label>PIN Profile- D25</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesLotGroupAwardInformation">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#LotGroupAwardInformation"/>
+    <sh:sparql rdf:nodeID="Nf58c6784587c47a78537d7417a61c82b"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation"/>
+    <sh:name>Announces lot group award information</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-not-refersToRole">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AgentInRole"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="N2cdcb79d4990456eac67d58cfde4497d"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToRole"/>
+    <sh:name>Refers to role</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice22Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice22"/>
+    <rdfs:label>Notice22</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToProcedure">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#Procedure"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:sparql rdf:nodeID="N5c8fc573d82042cca7c525e4e53a06de"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToProcedure"/>
+    <sh:name>Refers to procedure</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-QSNoticeShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#QSNotice"/>
+    <rdfs:label>QS Notice</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice6Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice6"/>
+    <rdfs:label>Notice6</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbac7348cff2643c984d3f20a073a9839">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesProcedure&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesProcedure&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfd2fe1ec2e8f4051bfebe050ea10b03c">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesContract&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesContract&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6a6775f93a514a33af54ceb77e5f76ac">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N81760f71193746b38ba1de085de8e5a3">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-Notice34Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#Notice34"/>
+    <rdfs:label>Notice34</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N54f97d88599a41bd85a0d14babe440ba">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToRole&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2d35b39ca0c0485a80d7c3f40dbfcc45">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesContract&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesContract&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb22d404d0f0f4f8e9520f86f62ea38c8">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-CompletionNotice-epo-refersToNoticeAwardInformation">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#NoticeAwardInformation"/>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:sparql rdf:nodeID="N803534ae7c7c4bfbb462b27cdaae4820"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation"/>
+    <sh:name>Refers to notice award information</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N390bb73674f645de9ff4fe5e66cd6309">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesProcedure&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesProcedure&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-ResultNotice-epo-announcesAwardDecision">
+    <sh:class rdf:resource="http://data.europa.eu/a4g/ontology#AwardDecision"/>
+    <sh:sparql rdf:nodeID="N471b8965cc454ecc9b6c4ae5af9c7b4c"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://data.europa.eu/a4g/ontology#announcesAwardDecision"/>
+    <sh:name>Announces award decision</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfde1c55d69154996ac82c10ae8843d03">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7804320d5c364d94ad81127ad749234f">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToContractToBeModified&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToContractToBeModified&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd13686641af1423baa9b8b165db5629a">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#epo-not-PINProfile-D24Shape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://data.europa.eu/a4g/ontology#PINProfile-D24"/>
+    <rdfs:label>PIN Profile- D24</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/data-shape#not-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N471b8965cc454ecc9b6c4ae5af9c7b4c">
     <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesAwardDecision&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesAwardDecision&gt; ?this .}</sh:select>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N1a9bceb940ed4734a24eca772faf9412">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesCompletionOfContract&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesCompletionOfContract&gt; ?this .}</sh:select>
+  <rdf:Description rdf:nodeID="N2cdcb79d4990456eac67d58cfde4497d">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToRole&gt; ?this .}</sh:select>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N3392f37d06de48ff919d22138e2be5e4">
+  <rdf:Description rdf:nodeID="Nf58c6784587c47a78537d7417a61c82b">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLotGroupAwardInformation&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfd9fce18d67a47059bf99ad871a46d94">
     <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N811a1c580c3440269633a69a1348d7e7">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N8ed4ef8452f24d768da7b33c8a1d8df1">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N445ad70dbf35492d8d3d1f1df79cdc7d">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N91462cf20e0e4cd0a971253ae537d19e">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLot&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLot&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N9547de6dd1d54e4c8d2c3adf27236e7b">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToAwardDecision&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToAwardDecision&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N5900dc640c9a4728bf724c5110fad63f">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2b5f344fb7dc4b06a71a6124efe981ca">
+  <rdf:Description rdf:nodeID="N9047d299d95341269eac82389b38e503">
     <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLotGroup&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLotGroup&gt; ?this .}</sh:select>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Ndf808b4edef148849d4ddb45e61fe33b">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N4d4225e1793043dab4de35106318e9b4">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLotGroup&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLotGroup&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N132b51d512454c29847e021105959767">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToAwardDecision&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToAwardDecision&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc09adddd03614924ac471db08b83ed72">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N98249cf499054ec1af098c0d66c0af6b">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLotGroupAwardInformation&gt; ?this .}</sh:select>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf5b7f8b56d17428faefd388a2fa11813">
+  <rdf:Description rdf:nodeID="Ndf1fbeee7eb745cfaa55a0e12a482dbb">
     <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToProcedure&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToProcedure&gt; ?this .}</sh:select>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N66259a8553684f5fbfcbdedebd09e7a1">
-    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
+  <rdf:Description rdf:nodeID="N320541fa1451432fbf907453a2a414e1">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesCompletionOfContract&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesCompletionOfContract&gt; ?this .}</sh:select>
   </rdf:Description>
-  <rdf:Description rdf:about="http://data.europa.eu/a4g/data-shape#pin-buyerShape">
-    <rdfs:comment>this is a buyer profile, not a PIN.</rdfs:comment>
+  <rdf:Description rdf:nodeID="N5c8fc573d82042cca7c525e4e53a06de">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToProcedure&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToProcedure&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2341fe746bf548a8b69d200c27066ae2">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesNoticeAwardInformation&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbeb2449eda1741868c14876bf95a92bf">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesLot&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesLot&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2039b4ea0cd14803a6b04359fc36ff71">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesContractAmendment&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesContractAmendment&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7e31214e44e2495abee4f8b1f88da40d">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToLotGroup&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9e824d3aab3840159c3578255663fdb2">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesReviewObject&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesReviewObject&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N803534ae7c7c4bfbb462b27cdaae4820">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#refersToNoticeAwardInformation&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N935c11f874904755b0b043cf8123918e">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesPlannedProcurementPart&gt; ?this .}</sh:select>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N021d2462b81945788fc29f3297784869">
+    <sh:select>SELECT ?this ?that WHERE { ?this &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?that . ?that &lt;http://data.europa.eu/a4g/ontology#announcesRole&gt; ?this .}</sh:select>
   </rdf:Description>
 </rdf:RDF>

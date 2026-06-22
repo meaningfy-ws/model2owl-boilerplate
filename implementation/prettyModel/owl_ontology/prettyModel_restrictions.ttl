@@ -25,14 +25,14 @@
     dcterms:description """This artefact provides the restrictions and inference-related specifications for the prettyModel demonstration ontology.
         This artefact excludes the definitions of concepts.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
-    dcterms:issued "2026-06-17"^^xsd:date ;
+    dcterms:issued "2026-06-22"^^xsd:date ;
     dcterms:license "CC BY 4.0" ;
     dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
     dcterms:title "prettyModel restrictions"@en ;
     vann:preferredNamespacePrefix "epo" ;
     vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
     rdfs:comment """This version is automatically generated from prettyModel.xml on
-                2026-06-17""" ;
+                2026-06-22""" ;
     rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
         <https://github.com/eprocurementontology/eprocurementontology>,
         <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
@@ -66,7 +66,7 @@
     rdfs:domain :Vehicle ;
     rdfs:range :int .
 
-:for rdf:domain :Insurance ;
+:for rdfs:domain :Insurance ;
     rdfs:range [ a owl:Class ;
             owl:unionOf ( :Vehicle :SomeOtherClass ) ] .
 
@@ -81,12 +81,12 @@
     rdfs:range :long .
 
 :AssocClass1 rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange :date ;
-            owl:onProperty :date ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
             owl:onDataRange :short ;
             owl:onProperty :name ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onDataRange :date ;
+            owl:onProperty :date ;
             owl:qualifiedCardinality 1 ] .
 
 :Boat rdfs:subClassOf [ a owl:Restriction ;
@@ -98,12 +98,12 @@
     rdfs:range :short .
 
 :RentalCompany rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty :lends ;
-            owl:someValuesFrom :Vehicle ],
-        [ a owl:Restriction ;
             owl:onDataRange :long ;
             owl:onProperty :name ;
-            owl:qualifiedCardinality 1 ] .
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onProperty :lends ;
+            owl:someValuesFrom :Vehicle ] .
 
 :date a owl:FunctionalProperty ;
     rdfs:domain :AssocClass1 ;
@@ -120,15 +120,15 @@
             owl:someValuesFrom :Vehicle ] .
 
 :Vehicle rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange :int ;
-            owl:onProperty :engravedID ;
+            owl:onDataRange :short ;
+            owl:onProperty :name ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onDataRange :long ;
             owl:onProperty :nickName ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onDataRange :short ;
-            owl:onProperty :name ;
+            owl:onDataRange :int ;
+            owl:onProperty :engravedID ;
             owl:qualifiedCardinality 1 ] .
 
