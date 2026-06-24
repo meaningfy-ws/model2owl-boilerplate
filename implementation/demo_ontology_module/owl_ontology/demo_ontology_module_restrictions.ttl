@@ -137,15 +137,15 @@
     rdfs:range :Procedure .
 
 :CompetitionNotice rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty :announcesLot ;
-            owl:someValuesFrom :Lot ],
+            owl:onClass :Procedure ;
+            owl:onProperty :announcesProcedure ;
+            owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onProperty :announcesRole ;
             owl:someValuesFrom :AgentInRole ],
         [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :announcesProcedure ;
-            owl:qualifiedCardinality 1 ] .
+            owl:onProperty :announcesLot ;
+            owl:someValuesFrom :Lot ] .
 
 :NoticeAwardInformation rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
@@ -157,24 +157,24 @@
             owl:onProperty :describesDirectAwardPrenotificationNotice ] .
 
 :ContractModificationNotice rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :refersToProcedure ;
-            owl:qualifiedCardinality 1 ],
+            owl:onProperty :refersToLot ;
+            owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass :NoticeAwardInformation ;
             owl:onProperty :refersToNoticeAwardInformation ],
         [ a owl:Restriction ;
-            owl:onClass :ContractAmendment ;
-            owl:onProperty :announcesContractAmendment ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
             owl:onClass :Contract ;
             owl:onProperty :refersToContractToBeModified ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onProperty :refersToLot ;
-            owl:someValuesFrom :Lot ] .
+            owl:onClass :Procedure ;
+            owl:onProperty :refersToProcedure ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass :ContractAmendment ;
+            owl:onProperty :announcesContractAmendment ;
+            owl:qualifiedCardinality 1 ] .
 
 :CompletionNotice rdfs:subClassOf [ a owl:Restriction ;
             owl:onClass :Procedure ;
@@ -187,28 +187,28 @@
             owl:onProperty :refersToLot ;
             owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass :NoticeAwardInformation ;
+            owl:onProperty :refersToNoticeAwardInformation ],
+        [ a owl:Restriction ;
             owl:onClass :Contract ;
             owl:onProperty :announcesCompletionOfContract ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass :NoticeAwardInformation ;
-            owl:onProperty :refersToNoticeAwardInformation ] .
+            owl:qualifiedCardinality 1 ] .
 
 :DirectAwardPrenotificationNotice rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty :announcesLot ;
-            owl:someValuesFrom :Lot ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass :NoticeAwardInformation ;
-            owl:onProperty :announcesNoticeAwardInformation ],
+            owl:onProperty :announcesRole ;
+            owl:someValuesFrom :AgentInRole ],
         [ a owl:Restriction ;
             owl:onClass :Procedure ;
             owl:onProperty :announcesProcedure ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onProperty :announcesRole ;
-            owl:someValuesFrom :AgentInRole ] .
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass :NoticeAwardInformation ;
+            owl:onProperty :announcesNoticeAwardInformation ],
+        [ a owl:Restriction ;
+            owl:onProperty :announcesLot ;
+            owl:someValuesFrom :Lot ] .
 
 :ResultNotice rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;

@@ -41,11 +41,11 @@
     rdfs:range :SomeOtherClass .
 
 :Cycle rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 3 ;
+            owl:minQualifiedCardinality 1 ;
             owl:onDataRange xsd:short ;
             owl:onProperty :colour ],
         [ a owl:Restriction ;
-            owl:minQualifiedCardinality 1 ;
+            owl:maxQualifiedCardinality 3 ;
             owl:onDataRange xsd:short ;
             owl:onProperty :colour ] .
 
