@@ -397,6 +397,7 @@ The foundation template that provides:
 #### Main Template (`main.j2`)
 Your customizable template that **extends** `base.j2`:
 
+{% raw %}
 ```jinja2
 {% extends "base.j2" %}
 
@@ -413,6 +414,7 @@ Your customizable template that **extends** `base.j2`:
 </section>
 {% endblock %}
 ```
+{% endraw %}
 
 ### Customizing Your Documentation
 
