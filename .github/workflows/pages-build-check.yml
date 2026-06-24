@@ -1,0 +1,26 @@
+name: Pages build check
+
+# Build the GitHub Pages site on pull requests to develop so Jekyll/Liquid
+# rendering errors are caught before they reach the develop branch (where the
+# built-in pages-build-deployment publishes from). This job only builds; it
+# does not deploy.
+
+on:
+  pull_request:
+    branches: [develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
