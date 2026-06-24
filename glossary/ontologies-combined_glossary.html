@@ -41,10 +41,6 @@
                            otherprops="#0000ff"&gt;&lt;u&gt;https://semiceu.github.io/ADMS/releases/2.00/#Identifier&lt;/u&gt;&lt;/foreign&gt;&lt;/xref&gt;</td>
                      </tr>
                      <tr>
-                        <td>AssocClass1</td>
-                        <td></td>
-                     </tr>
-                     <tr>
                         <td>Bicycle</td>
                         <td></td>
                      </tr>
@@ -1805,12 +1801,6 @@
                         <td>External concept defined by &lt;xref scope="external" href="http://data.europa.eu/m8g/longitude"&gt;&lt;foreign
                            otherprops="#0000ff"&gt;&lt;u&gt;http://data.europa.eu/m8g/longitude&lt;/u&gt;&lt;/foreign&gt;&lt;/xref&gt;</td>
                         <td>rdf:PlainLiteral [0..*]</td>
-                     </tr>
-                     <tr>
-                        <td>AssocClass1</td>
-                        <td>date</td>
-                        <td></td>
-                        <td>date [1..1]</td>
                      </tr>
                      <tr>
                         <td>person:Person</td>
@@ -3714,10 +3704,10 @@
                         <td>rdf:PlainLiteral [0..1]</td>
                      </tr>
                      <tr>
-                        <td>AssocClass1<br>RentalCompany<br>Vehicle<br></td>
+                        <td>RentalCompany<br>Vehicle<br></td>
                         <td>name</td>
-                        <td>  </td>
-                        <td>short [1..1]<br>long [1..1]<br>short [1..1]<br></td>
+                        <td> </td>
+                        <td>long [1..1]<br>short [1..1]<br></td>
                      </tr>
                      <tr>
                         <td>Vehicle</td>
@@ -6450,16 +6440,6 @@
                         <td>RentalCompany [,1] &lt;- Vehicle</td>
                      </tr>
                      <tr>
-                        <td>part</td>
-                        <td></td>
-                        <td>Contractor [,] &lt;- RentalCompany</td>
-                     </tr>
-                     <tr>
-                        <td>ppart</td>
-                        <td></td>
-                        <td>Wheel [,1..*] &lt;- Cycle</td>
-                     </tr>
-                     <tr>
                         <td>source</td>
                         <td></td>
                         <td>ClassForQualAssoc [,1] &lt;- SomeOtherClass</td>
@@ -6498,26 +6478,6 @@
                         <td>External concept defined by &lt;xref scope="external" href="https://www.w3.org/TR/owl-time/#time:unitType"&gt;&lt;foreign
                            otherprops="#0000ff"&gt;&lt;u&gt;https://www.w3.org/TR/owl-time/#time:unitType&lt;/u&gt;&lt;/foreign&gt;&lt;/xref&gt;</td>
                         <td>time:Duration -&gt; time:TemporalUnit [1]</td>
-                     </tr>
-                     <tr>
-                        <td>toAC</td>
-                        <td></td>
-                        <td>TernaryTest -&gt; YetAnotherC [0..1]</td>
-                     </tr>
-                     <tr>
-                        <td>toIns</td>
-                        <td></td>
-                        <td>TernaryTest -&gt; Insurance [0..*]</td>
-                     </tr>
-                     <tr>
-                        <td>toOtherC</td>
-                        <td></td>
-                        <td>TernaryTest -&gt; SomeOtherClass [1..*]</td>
-                     </tr>
-                     <tr>
-                        <td>whole</td>
-                        <td> </td>
-                        <td>Contractor -&gt; RentalCompany []<br>Wheel -&gt; Cycle []<br></td>
                      </tr>
                   </tbody>
                </table>

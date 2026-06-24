@@ -35,10 +35,6 @@
       
     
       
-| AssocClass1 | 
-      
-    
-      
 | epo:AuxiliaryParty | Role of an Agent who may be mentioned in the information exchanged during the Procurement Process but who does not play an active part in it.
       
     
@@ -1316,8 +1312,6 @@
     
       
     
-      
-    
 |===
 
 == Attributes (datatype properties) names and definitions
@@ -1489,22 +1483,6 @@ epo:TenderGroup
   rdf:PlainLiteral [0..&#42;] +
   rdf:PlainLiteral [0..&#42;] +
   rdf:PlainLiteral [0..&#42;]
-  
-  
-  
-| AssocClass1
-| date| 
-  |date [1..1]
-  
-  
-  
-| AssocClass1 + 
-RentalCompany + 
-Vehicle
-| name| 
-  |short [1..1] +
-  long [1..1] +
-  short [1..1]
   
   
   
@@ -2928,6 +2906,14 @@ epo:ProcurementElement
   
   
   
+| RentalCompany + 
+Vehicle
+| name| 
+  |long [1..1] +
+  short [1..1]
+  
+  
+  
   
   
   
@@ -3708,12 +3694,6 @@ epo:ProcurementElement
   
   
   
-  
-  
-  
-  
-  
-  
 |===
 
 == Predicates (object properties) and definitions
@@ -3888,14 +3868,6 @@ epo:UniqueResponsibleOfTheProcurement → person:Person [0..1] +
 epo-ful:TransportMeansOperator → foaf:Person [0..1] +
 epo-eva:Evaluator → person:Person [0..1]
 
-  
-
-  
-  
-  
-
-  
-  
   
 
   
@@ -6189,6 +6161,10 @@ epo-sub:LegalRepresentative → epo:OfferingParty [0..1]
 
   
   
+  
+
+  
+  
 | cccev:hasConcept| 
   +++External concept defined by <xref scope="external" href=""http://data.europa.eu/m8g/hasConcept""><foreign otherprops="#0000ff"><u>http://data.europa.eu/m8g/hasConcept</u></foreign></xref>+++|cccev:Requirement → cccev:InformationConcept [0..&#42;]
 
@@ -6940,27 +6916,6 @@ epo-con:Deliverable → epo:MonetaryValue [0..1]
   
 | epo:needsToBeATenderer| 
   The Winner must be a Tenderer.|epo:Winner → epo:Tenderer [0..1]
-
-  
-
-  
-  
-| toAC| 
-  |TernaryTest → YetAnotherC [0..1]
-
-  
-
-  
-  
-| toIns| 
-  |TernaryTest → Insurance [0..&#42;]
-
-  
-
-  
-  
-| toOtherC| 
-  |TernaryTest → SomeOtherClass [1..&#42;]
 
   
 

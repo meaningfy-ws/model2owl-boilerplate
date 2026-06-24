@@ -6,10 +6,6 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:AssocClass1 a owl:Class ;
-    rdfs:isDefinedBy :prettyModel ;
-    skos:prefLabel "Assoc Class1"@en .
-
 :Bicycle a owl:Class ;
     rdfs:isDefinedBy :prettyModel ;
     rdfs:subClassOf :Cycle ;
@@ -71,10 +67,6 @@
 :colour a owl:DatatypeProperty ;
     rdfs:isDefinedBy :prettyModel ;
     skos:prefLabel "colour"@en .
-
-:date a owl:DatatypeProperty ;
-    rdfs:isDefinedBy :prettyModel ;
-    skos:prefLabel "date"@en .
 
 :engravedID a owl:DatatypeProperty ;
     rdfs:isDefinedBy :prettyModel ;
@@ -141,13 +133,13 @@
     dcterms:description """This artefact provides the definitions for the prettyModel demonstration ontology.
         This artefact excludes the restrictions.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
-    dcterms:issued "2026-06-22"^^xsd:date ;
+    dcterms:issued "2026-06-24"^^xsd:date ;
     dcterms:license "CC BY 4.0" ;
     dcterms:publisher "https://example.com/publisher" ;
     dcterms:title "prettyModel core"@en ;
     vann:preferredNamespacePrefix "ex" ;
     vann:preferredNamespaceUri "http://example.com/ex#" ;
-    rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-22" ;
+    rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-24" ;
     owl:versionIRI :prettyModel-1.0.0 ;
     owl:versionInfo "1.0.0" .
 

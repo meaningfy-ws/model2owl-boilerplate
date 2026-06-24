@@ -486,10 +486,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top"><p class="tableblock">Relative concept that ties an Agent to a part they play in a given Situational Context. Additional information: The classification of roles is based is based on the degree of involvement into the Procurement Process: - Primary (Procurement) Pole is directly involved in the Procurement Process; - Secondary (Procurement sub-) Role is secondary to the Procurement Process - Tertiary (Related) Role is not involved in the Procurement Process.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AssocClass1</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:AuxiliaryParty</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Role of an Agent who may be mentioned in the information exchanged during the Procurement Process but who does not play an active part in it.</p></td>
 </tr>
@@ -1770,22 +1766,6 @@ epo:TenderGroup</p></td>
   rdf:PlainLiteral [0..&#42;]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AssocClass1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">date</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">date [1..1]</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AssocClass1<br>
-RentalCompany<br>
-Vehicle</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">short [1..1]<br>
-  long [1..1]<br>
-  short [1..1]</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:AwardCriterion</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasAwardCriteriaStatedInProcurementDocuments</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The Award Criteria are provided in the Procurement Documents.</p></td>
@@ -2778,6 +2758,14 @@ epo:ProcurementElement</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasUnitDescription</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A narrative explanation defining the units of items being counted Additional information: This could be for example individual items or pack or two.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rdf:PlainLiteral [0..&#42;]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RentalCompany<br>
+Vehicle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">long [1..1]<br>
+  short [1..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:ReviewDecision</p></td>
@@ -4831,21 +4819,6 @@ epo-con:Deliverable → epo:MonetaryValue [0..1]</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:Winner → epo:Tenderer [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">toAC</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TernaryTest → YetAnotherC [0..1]</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">toIns</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TernaryTest → Insurance [0..&#42;]</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">toOtherC</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TernaryTest → SomeOtherClass [1..&#42;]</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo-ord:hasAmountDueForPayment</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo-ord:Order → epo:MonetaryValue [1]<br>
@@ -5552,7 +5525,7 @@ epo-cat:EnvironmentalEmissionInformation → epo:Quantity [1]</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-22 10:43:49 UTC
+Last updated 2026-06-24 12:45:09 UTC
 </div>
 </div>
 </body>

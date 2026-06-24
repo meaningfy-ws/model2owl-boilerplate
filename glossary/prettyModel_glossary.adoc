@@ -11,10 +11,6 @@
 | Class name | Definition
 
       
-| AssocClass1 | 
-      
-    
-      
 | Bicycle | 
       
     
@@ -78,8 +74,6 @@
 | YetAnotherC | 
       
     
-      
-    
 |===
 
 == Attributes (datatype properties) names and definitions
@@ -91,22 +85,6 @@
 
 
 
-  
-  
-| AssocClass1
-| date| 
-  |date [1..1]
-  
-  
-  
-| AssocClass1 + 
-RentalCompany + 
-Vehicle
-| name| 
-  |short [1..1] +
-  long [1..1] +
-  short [1..1]
-  
   
   
   
@@ -123,6 +101,14 @@ Vehicle
   
   
   
+| RentalCompany + 
+Vehicle
+| name| 
+  |long [1..1] +
+  short [1..1]
+  
+  
+  
   
   
 | Vehicle
@@ -135,12 +121,6 @@ Vehicle
 | nickName| 
   |long [1..1]
   
-  
-  
-  
-  
-  
-  
 |===
 
 == Predicates (object properties) and definitions
@@ -149,14 +129,6 @@ Vehicle
 |===
 | Predicate name | Definition | Domain, Range and Cardinality
 
-
-  
-  
-  
-
-  
-  
-  
 
   
   
@@ -192,6 +164,10 @@ Vehicle
 
   
   
+  
+
+  
+  
 | hasIns| 
   |SomeOtherClass → Insurance [0..&#42;]
 
@@ -203,27 +179,6 @@ Vehicle
 
   
   
-  
-
-  
-  
-| toAC| 
-  |TernaryTest → YetAnotherC [0..1]
-
-  
-
-  
-  
-| toIns| 
-  |TernaryTest → Insurance [0..&#42;]
-
-  
-
-  
-  
-| toOtherC| 
-  |TernaryTest → SomeOtherClass [1..&#42;]
-
   
 
 

@@ -7,19 +7,17 @@
    xmlns:sh="http://www.w3.org/ns/shacl#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
-  <rdf:Description rdf:about="http://example.com/ex-shape#SomeOtherClassShape">
+  <rdf:Description rdf:about="http://example.com/ex-shape#FancyWheelShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#SomeOtherClass"/>
-    <rdfs:label>Some Other Class</rdfs:label>
+    <sh:targetClass rdf:resource="http://example.com/ex#FancyWheel"/>
+    <rdfs:label>Fancy Wheel</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#AssocClass1Shape">
+  <rdf:Description rdf:about="http://example.com/ex-shape#ContractorShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#AssocClass1"/>
-    <rdfs:label>Assoc Class1</rdfs:label>
+    <sh:targetClass rdf:resource="http://example.com/ex#Contractor"/>
+    <rdfs:label>Contractor</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-    <sh:property rdf:resource="http://example.com/ex-shape#AssocClass1-date"/>
-    <sh:property rdf:resource="http://example.com/ex-shape#AssocClass1-name"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex-shape#MonocycleShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
@@ -27,25 +25,10 @@
     <rdfs:label>Monocycle</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#WheelShape">
+  <rdf:Description rdf:about="http://example.com/ex-shape#YetAnotherCShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#Wheel"/>
-    <rdfs:label>Wheel</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#AssocClass1-date">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://example.com/ex#date"/>
-    <sh:name>Date</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#FancyWheelShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#FancyWheel"/>
-    <rdfs:label>Fancy Wheel</rdfs:label>
+    <sh:targetClass rdf:resource="http://example.com/ex#YetAnotherC"/>
+    <rdfs:label>Yet Another C</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex-shape#RentalCompany-name">
@@ -57,25 +40,10 @@
     <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
     <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#AssocClass1-name">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://example.com/ex#name"/>
-    <sh:name>Name</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#ContractorShape">
+  <rdf:Description rdf:about="http://example.com/ex-shape#InsuranceShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#Contractor"/>
-    <rdfs:label>Contractor</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#PartsClassShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#PartsClass"/>
-    <rdfs:label>Parts Class</rdfs:label>
+    <sh:targetClass rdf:resource="http://example.com/ex#Insurance"/>
+    <rdfs:label>Insurance</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex-shape#prettyModel-shape">
@@ -87,8 +55,8 @@
     <dcterms:publisher>https://example.com/publisher</dcterms:publisher>
     <dcterms:description xml:lang="en">This artefact provides the generic datashape specifications for the prettyModel demonstration ontology.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI.</dcterms:description>
-    <rdfs:comment>This version is automatically generated from prettyModel.xml on 2026-06-22</rdfs:comment>
-    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-22</dcterms:issued>
+    <rdfs:comment>This version is automatically generated from prettyModel.xml on 2026-06-24</rdfs:comment>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-24</dcterms:issued>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-01</dcterms:created>
     <owl:versionInfo>1.0.0</owl:versionInfo>
     <owl:versionIRI rdf:resource="http://example.com/ex-shape#prettyModel-shape-1.0.0"/>
@@ -96,12 +64,29 @@
     <vann:preferredNamespacePrefix>ex</vann:preferredNamespacePrefix>
     <dcterms:license>CC BY 4.0</dcterms:license>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#CycleShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#Cycle"/>
-    <rdfs:label>Cycle</rdfs:label>
+  <rdf:Description rdf:about="http://example.com/ex-shape#Vehicle-name">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://example.com/ex#name"/>
+    <sh:name>Name</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-    <sh:property rdf:resource="http://example.com/ex-shape#Cycle-colour"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex-shape#Vehicle-engravedID">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+    <sh:path rdf:resource="http://example.com/ex#engravedID"/>
+    <sh:name>Engraved ID</sh:name>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
+    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex-shape#BoatShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://example.com/ex#Boat"/>
+    <rdfs:label>Boat</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex-shape#Vehicle-nickName">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
@@ -112,37 +97,10 @@
     <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
     <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#CarShape">
+  <rdf:Description rdf:about="http://example.com/ex-shape#SomeOtherClassShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#Car"/>
-    <rdfs:label>Car</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#BoatShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#Boat"/>
-    <rdfs:label>Boat</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#Cycle-colour">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://example.com/ex#colour"/>
-    <sh:name>Colour</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sh:maxCount>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#BicycleShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#Bicycle"/>
-    <rdfs:label>Bicycle</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#YetAnotherCShape">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#YetAnotherC"/>
-    <rdfs:label>Yet Another C</rdfs:label>
+    <sh:targetClass rdf:resource="http://example.com/ex#SomeOtherClass"/>
+    <rdfs:label>Some Other Class</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex-shape#VehicleShape">
@@ -154,20 +112,32 @@
     <sh:property rdf:resource="http://example.com/ex-shape#Vehicle-name"/>
     <sh:property rdf:resource="http://example.com/ex-shape#Vehicle-nickName"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#BoringWheelShape">
+  <rdf:Description rdf:about="http://example.com/ex-shape#WheelShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#BoringWheel"/>
-    <rdfs:label>Boring Wheel</rdfs:label>
+    <sh:targetClass rdf:resource="http://example.com/ex#Wheel"/>
+    <rdfs:label>Wheel</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#Vehicle-name">
+  <rdf:Description rdf:about="http://example.com/ex-shape#Cycle-colour">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://example.com/ex#name"/>
-    <sh:name>Name</sh:name>
+    <sh:path rdf:resource="http://example.com/ex#colour"/>
+    <sh:name>Colour</sh:name>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
     <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
     <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sh:maxCount>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex-shape#ClassForQualAssocShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://example.com/ex#ClassForQualAssoc"/>
+    <rdfs:label>Class For Qual Assoc</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex-shape#BicycleShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://example.com/ex#Bicycle"/>
+    <rdfs:label>Bicycle</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex-shape#RentalCompanyShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
@@ -176,25 +146,29 @@
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
     <sh:property rdf:resource="http://example.com/ex-shape#RentalCompany-name"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#Vehicle-engravedID">
-    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
-    <sh:path rdf:resource="http://example.com/ex#engravedID"/>
-    <sh:name>Engraved ID</sh:name>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-    <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
-    <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#InsuranceShape">
+  <rdf:Description rdf:about="http://example.com/ex-shape#PartsClassShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#Insurance"/>
-    <rdfs:label>Insurance</rdfs:label>
+    <sh:targetClass rdf:resource="http://example.com/ex#PartsClass"/>
+    <rdfs:label>Parts Class</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex-shape#ClassForQualAssocShape">
+  <rdf:Description rdf:about="http://example.com/ex-shape#CycleShape">
     <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
-    <sh:targetClass rdf:resource="http://example.com/ex#ClassForQualAssoc"/>
-    <rdfs:label>Class For Qual Assoc</rdfs:label>
+    <sh:targetClass rdf:resource="http://example.com/ex#Cycle"/>
+    <rdfs:label>Cycle</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
+    <sh:property rdf:resource="http://example.com/ex-shape#Cycle-colour"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex-shape#BoringWheelShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://example.com/ex#BoringWheel"/>
+    <rdfs:label>Boring Wheel</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex-shape#CarShape">
+    <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+    <sh:targetClass rdf:resource="http://example.com/ex#Car"/>
+    <rdfs:label>Car</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
   </rdf:Description>
 </rdf:RDF>
