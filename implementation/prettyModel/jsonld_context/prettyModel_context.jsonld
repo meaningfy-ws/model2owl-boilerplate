@@ -1,0 +1,114 @@
+{
+  "@context": {
+    "Bicycle": "http://example.com/ex#Bicycle",
+    "Boat": {
+      "@context": {
+        "hasInsSub": {
+          "@container": "@set",
+          "@id": "http://example.com/ex#hasInsSub",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://example.com/ex#Boat"
+    },
+    "BoringWheel": "http://example.com/ex#BoringWheel",
+    "Car": "http://example.com/ex#Car",
+    "ClassForQualAssoc": {
+      "@context": {
+        "target": {
+          "@container": "@set",
+          "@id": "http://example.com/ex#target",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://example.com/ex#ClassForQualAssoc"
+    },
+    "Contractor": "http://example.com/ex#Contractor",
+    "Cycle": {
+      "@context": {
+        "colour": {
+          "@container": "@set",
+          "@id": "http://example.com/ex#colour",
+          "@type": "http://www.w3.org/2001/XMLSchema#short"
+        }
+      },
+      "@id": "http://example.com/ex#Cycle"
+    },
+    "FancyWheel": "http://example.com/ex#FancyWheel",
+    "Insurance": {
+      "@context": {
+        "for": {
+          "@container": "@set",
+          "@id": "http://example.com/ex#for",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://example.com/ex#Insurance"
+    },
+    "Monocycle": "http://example.com/ex#Monocycle",
+    "PartsClass": "http://example.com/ex#PartsClass",
+    "RentalCompany": {
+      "@context": {
+        "lends": {
+          "@container": "@set",
+          "@id": "http://example.com/ex#lends",
+          "@type": "@id"
+        },
+        "name": {
+          "@id": "http://example.com/ex#name",
+          "@type": "http://www.w3.org/2001/XMLSchema#long"
+        }
+      },
+      "@id": "http://example.com/ex#RentalCompany"
+    },
+    "SomeOtherClass": {
+      "@context": {
+        "hasIns": {
+          "@container": "@set",
+          "@id": "http://example.com/ex#hasIns",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://example.com/ex#SomeOtherClass"
+    },
+    "Vehicle": {
+      "@context": {
+        "engravedID": {
+          "@id": "http://example.com/ex#engravedID",
+          "@type": "http://www.w3.org/2001/XMLSchema#int"
+        },
+        "name": {
+          "@id": "http://example.com/ex#name",
+          "@type": "http://www.w3.org/2001/XMLSchema#short"
+        },
+        "nickName": {
+          "@id": "http://example.com/ex#nickName",
+          "@type": "http://www.w3.org/2001/XMLSchema#long"
+        }
+      },
+      "@id": "http://example.com/ex#Vehicle"
+    },
+    "Wheel": "http://example.com/ex#Wheel",
+    "YetAnotherC": "http://example.com/ex#YetAnotherC",
+    "adms": "http://www.w3.org/ns/adms#",
+    "dct": "http://purl.org/dc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "ex": "http://example.com/ex#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "legal": "http://www.w3.org/ns/legal-entity#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "person": "http://www.w3.org/ns/person#",
+    "prettyModel-res": "http://example.com/ex#",
+    "prettyModel-shape": "http://example.com/ex-shape#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "time": "http://www.w3.org/2006/time#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

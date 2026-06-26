@@ -1,0 +1,107 @@
+@prefix : <http://example.com/ex#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:forSub rdfs:domain :Insurance ;
+    rdfs:range :Boat .
+
+:hasIns rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :SomeOtherClass :Vehicle ) ] ;
+    rdfs:range :Insurance .
+
+:ownedby rdfs:domain :Vehicle ;
+    rdfs:range :RentalCompany .
+
+:prettyModel-restriction a owl:Ontology ;
+    rdfs:label "prettyModel — restrictions"@en ;
+    dcterms:created "2024-01-01"^^xsd:date ;
+    dcterms:description """This artefact provides the restrictions and inference-related specifications for the prettyModel demonstration ontology.
+        This artefact excludes the definitions of concepts.
+        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
+    dcterms:issued "2026-06-25"^^xsd:date ;
+    dcterms:license "CC BY 4.0" ;
+    dcterms:publisher "https://example.com/publisher" ;
+    dcterms:title "prettyModel restrictions"@en ;
+    vann:preferredNamespacePrefix "ex" ;
+    vann:preferredNamespaceUri "http://example.com/ex#" ;
+    rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-25" ;
+    owl:imports :prettyModel ;
+    owl:versionIRI :prettyModel-restriction-1.0.0 ;
+    owl:versionInfo "1.0.0" .
+
+:source rdfs:domain :SomeOtherClass ;
+    rdfs:range :ClassForQualAssoc .
+
+:target rdfs:domain :ClassForQualAssoc ;
+    rdfs:range :SomeOtherClass .
+
+:Cycle rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality 1 ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :colour ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 3 ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :colour ] .
+
+:engravedID a owl:FunctionalProperty ;
+    rdfs:domain :Vehicle ;
+    rdfs:range xsd:int .
+
+:for rdfs:domain :Insurance ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( :Vehicle :SomeOtherClass ) ] .
+
+:hasInsSub rdfs:domain :Boat ;
+    rdfs:range :Insurance .
+
+:lends rdfs:domain :RentalCompany ;
+    rdfs:range :Vehicle .
+
+:nickName a owl:FunctionalProperty ;
+    rdfs:domain :Vehicle ;
+    rdfs:range xsd:long .
+
+:Boat rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Insurance ;
+            owl:onProperty :hasInsSub ;
+            owl:qualifiedCardinality 2 ] .
+
+:colour rdfs:domain :Cycle ;
+    rdfs:range xsd:short .
+
+:name a owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :RentalCompany :Vehicle ) ] ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:unionOf ( xsd:long xsd:short ) ] .
+
+:RentalCompany rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:long ;
+            owl:onProperty :name ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onProperty :lends ;
+            owl:someValuesFrom :Vehicle ] .
+
+:Insurance rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :for ;
+            owl:someValuesFrom :Vehicle ] .
+
+:Vehicle rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:int ;
+            owl:onProperty :engravedID ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:long ;
+            owl:onProperty :nickName ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :name ;
+            owl:qualifiedCardinality 1 ] .
+

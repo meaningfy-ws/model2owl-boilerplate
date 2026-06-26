@@ -68,7 +68,7 @@ jobs:
       modules: ${{ steps.resolve.outputs.modules }}
       count: ${{ steps.resolve.outputs.count }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           sparse-checkout: |
             ${{ env.DIFF_CONFIG }}
@@ -112,13 +112,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0  # Needed to fetch old version
 
       - name: Download transform artifacts
         if: inputs.from_workflow_artifacts == true
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: transform-*
           path: new-artifacts/
@@ -331,7 +331,7 @@ jobs:
           fi
 
       - name: Upload diff artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: diff-${{ matrix.module }}
           path: ${{ steps.config.outputs.outdir }}/${{ matrix.module }}/
@@ -343,12 +343,12 @@ jobs:
     needs: [resolve, diff]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: ${{ github.ref }}
           fetch-depth: 0
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           pattern: diff-*
           path: artifacts/

@@ -1,0 +1,740 @@
+{
+  "classes": [
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Bicycle"
+      },
+      "name": "Bicycle",
+      "parents": [
+        {
+          "label": {
+            "en": "Cycle"
+          },
+          "name": "Cycle",
+          "scoped_uri": "http://example.com/ex#Cycle"
+        }
+      ],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#Bicycle",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Boat"
+      },
+      "name": "Boat",
+      "parents": [
+        {
+          "label": {
+            "en": "Vehicle"
+          },
+          "name": "Vehicle",
+          "scoped_uri": "http://example.com/ex#Vehicle"
+        }
+      ],
+      "properties": [
+        {
+          "cardinality": "2",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Boat",
+              "uri": "http://example.com/ex#Boat"
+            }
+          ],
+          "label": {
+            "en": "Has ins sub"
+          },
+          "name": "hasInsSub",
+          "propertyOrigin": "internal",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "Insurance",
+              "range_label": {
+                "en": "Insurance"
+              },
+              "range_puri": "http://example.com/ex#Insurance",
+              "range_uri": "http://example.com/ex#Insurance"
+            }
+          ],
+          "tags": {},
+          "uri": "http://example.com/ex#hasInsSub",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#Boat",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Boring wheel"
+      },
+      "name": "BoringWheel",
+      "parents": [
+        {
+          "label": {
+            "en": "Wheel"
+          },
+          "name": "Wheel",
+          "scoped_uri": "http://example.com/ex#Wheel"
+        }
+      ],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#BoringWheel",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Car"
+      },
+      "name": "Car",
+      "parents": [
+        {
+          "label": {
+            "en": "Vehicle"
+          },
+          "name": "Vehicle",
+          "scoped_uri": "http://example.com/ex#Vehicle"
+        }
+      ],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#Car",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Class for qual assoc"
+      },
+      "name": "ClassForQualAssoc",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "0..*",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "ClassForQualAssoc",
+              "uri": "http://example.com/ex#ClassForQualAssoc"
+            }
+          ],
+          "label": {
+            "en": "Target"
+          },
+          "name": "target",
+          "propertyOrigin": "internal",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "SomeOtherClass",
+              "range_label": {
+                "en": "Some other class"
+              },
+              "range_puri": "http://example.com/ex#SomeOtherClass",
+              "range_uri": "http://example.com/ex#SomeOtherClass"
+            }
+          ],
+          "tags": {},
+          "uri": "http://example.com/ex#target",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#ClassForQualAssoc",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Contractor"
+      },
+      "name": "Contractor",
+      "parents": [],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#Contractor",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Cycle"
+      },
+      "name": "Cycle",
+      "parents": [
+        {
+          "label": {
+            "en": "Vehicle"
+          },
+          "name": "Vehicle",
+          "scoped_uri": "http://example.com/ex#Vehicle"
+        }
+      ],
+      "properties": [
+        {
+          "cardinality": "1..3",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Cycle",
+              "uri": "http://example.com/ex#Cycle"
+            }
+          ],
+          "label": {
+            "en": "Colour"
+          },
+          "name": "colour",
+          "propertyOrigin": "internal",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "short",
+              "range_label": {
+                "en": "Short"
+              },
+              "range_puri": "http://example.com/ex#short",
+              "range_uri": "http://example.com/ex#short"
+            }
+          ],
+          "tags": {},
+          "uri": "http://example.com/ex#colour",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#Cycle",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Fancy wheel"
+      },
+      "name": "FancyWheel",
+      "parents": [
+        {
+          "label": {
+            "en": "Wheel"
+          },
+          "name": "Wheel",
+          "scoped_uri": "http://example.com/ex#Wheel"
+        }
+      ],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#FancyWheel",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Insurance"
+      },
+      "name": "Insurance",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "1..*",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Insurance",
+              "uri": "http://example.com/ex#Insurance"
+            }
+          ],
+          "label": {
+            "en": "For"
+          },
+          "name": "for",
+          "propertyOrigin": "internal",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "Vehicle",
+              "range_label": {
+                "en": "Vehicle"
+              },
+              "range_puri": "http://example.com/ex#Vehicle",
+              "range_uri": "http://example.com/ex#Vehicle"
+            }
+          ],
+          "tags": {},
+          "uri": "http://example.com/ex#for",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#Insurance",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Monocycle"
+      },
+      "name": "Monocycle",
+      "parents": [
+        {
+          "label": {
+            "en": "Cycle"
+          },
+          "name": "Cycle",
+          "scoped_uri": "http://example.com/ex#Cycle"
+        }
+      ],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#Monocycle",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Parts class"
+      },
+      "name": "PartsClass",
+      "parents": [],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#PartsClass",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Rental company"
+      },
+      "name": "RentalCompany",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "1..*",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "RentalCompany",
+              "uri": "http://example.com/ex#RentalCompany"
+            }
+          ],
+          "label": {
+            "en": "Lends"
+          },
+          "name": "lends",
+          "propertyOrigin": "internal",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "Vehicle",
+              "range_label": {
+                "en": "Vehicle"
+              },
+              "range_puri": "http://example.com/ex#Vehicle",
+              "range_uri": "http://example.com/ex#Vehicle"
+            }
+          ],
+          "tags": {},
+          "uri": "http://example.com/ex#lends",
+          "usage": {}
+        },
+        {
+          "cardinality": "1..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "RentalCompany",
+              "uri": "http://example.com/ex#RentalCompany"
+            }
+          ],
+          "label": {
+            "en": "Name"
+          },
+          "name": "name",
+          "propertyOrigin": "internal",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "long",
+              "range_label": {
+                "en": "Long"
+              },
+              "range_puri": "http://example.com/ex#long",
+              "range_uri": "http://example.com/ex#long"
+            }
+          ],
+          "tags": {},
+          "uri": "http://example.com/ex#name",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#RentalCompany",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Some other class"
+      },
+      "name": "SomeOtherClass",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "0..*",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "SomeOtherClass",
+              "uri": "http://example.com/ex#SomeOtherClass"
+            }
+          ],
+          "label": {
+            "en": "Has ins"
+          },
+          "name": "hasIns",
+          "propertyOrigin": "internal",
+          "propertyType": "object property",
+          "range": [
+            {
+              "range_curie": "Insurance",
+              "range_label": {
+                "en": "Insurance"
+              },
+              "range_puri": "http://example.com/ex#Insurance",
+              "range_uri": "http://example.com/ex#Insurance"
+            }
+          ],
+          "tags": {},
+          "uri": "http://example.com/ex#hasIns",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#SomeOtherClass",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Vehicle"
+      },
+      "name": "Vehicle",
+      "parents": [],
+      "properties": [
+        {
+          "cardinality": "1..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Vehicle",
+              "uri": "http://example.com/ex#Vehicle"
+            }
+          ],
+          "label": {
+            "en": "Engraved ID"
+          },
+          "name": "engravedID",
+          "propertyOrigin": "internal",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "int",
+              "range_label": {
+                "en": "Int"
+              },
+              "range_puri": "http://example.com/ex#int",
+              "range_uri": "http://example.com/ex#int"
+            }
+          ],
+          "tags": {},
+          "uri": "http://example.com/ex#engravedID",
+          "usage": {}
+        },
+        {
+          "cardinality": "1..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Vehicle",
+              "uri": "http://example.com/ex#Vehicle"
+            }
+          ],
+          "label": {
+            "en": "Name"
+          },
+          "name": "name",
+          "propertyOrigin": "internal",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "short",
+              "range_label": {
+                "en": "Short"
+              },
+              "range_puri": "http://example.com/ex#short",
+              "range_uri": "http://example.com/ex#short"
+            }
+          ],
+          "tags": {},
+          "uri": "http://example.com/ex#name",
+          "usage": {}
+        },
+        {
+          "cardinality": "1..1",
+          "description": {
+            "en": ""
+          },
+          "domain": [
+            {
+              "name": "Vehicle",
+              "uri": "http://example.com/ex#Vehicle"
+            }
+          ],
+          "label": {
+            "en": "Nick name"
+          },
+          "name": "nickName",
+          "propertyOrigin": "internal",
+          "propertyType": "datatype property",
+          "range": [
+            {
+              "range_curie": "long",
+              "range_label": {
+                "en": "Long"
+              },
+              "range_puri": "http://example.com/ex#long",
+              "range_uri": "http://example.com/ex#long"
+            }
+          ],
+          "tags": {},
+          "uri": "http://example.com/ex#nickName",
+          "usage": {}
+        }
+      ],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#Vehicle",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Wheel"
+      },
+      "name": "Wheel",
+      "parents": [],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#Wheel",
+      "usage": {
+        "en": ""
+      }
+    },
+    {
+      "classType": "definition",
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Yet another C"
+      },
+      "name": "YetAnotherC",
+      "parents": [],
+      "properties": [],
+      "rawTags": {
+        "class-usage-scope": "main"
+      },
+      "tags": {},
+      "uri": "http://example.com/ex#YetAnotherC",
+      "usage": {
+        "en": ""
+      }
+    }
+  ],
+  "datatypes": [
+    {
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Date"
+      },
+      "scopeduri": "date",
+      "uri": "http://example.com/ex#date"
+    },
+    {
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Short"
+      },
+      "scopeduri": "short",
+      "uri": "http://example.com/ex#short"
+    },
+    {
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Long"
+      },
+      "scopeduri": "long",
+      "uri": "http://example.com/ex#long"
+    },
+    {
+      "description": {
+        "en": ""
+      },
+      "label": {
+        "en": "Int"
+      },
+      "scopeduri": "int",
+      "uri": "http://example.com/ex#int"
+    }
+  ],
+  "prefixes": []
+}
