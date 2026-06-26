@@ -311,6 +311,13 @@ below.
         |___modelTwo
 ```
 
+When a module's model2owl configuration enables the optional consolidated
+OWL-full form (`generateOWLFull`), its `owl_ontology` folder instead contains a
+single self-contained ontology — `<module>_full.owl`, `<module>_full.rdf` and
+`<module>_full.ttl` — and the separate core/restrictions files are not produced.
+This is an alternative form of the same ontology; see the model2owl documentation
+for details.
+
 Diffing reports are stored in a directory specified by the user in
 `RDF_DIFF_OUTDIR` config parameter stored as [GitHub
 Variable](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-variables#creating-configuration-variables-for-a-repository).
