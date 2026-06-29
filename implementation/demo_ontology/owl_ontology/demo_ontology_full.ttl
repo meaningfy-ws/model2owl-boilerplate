@@ -6673,11 +6673,11 @@ org:OrganizationalUnit a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :isCalculatedOn ],
+            owl:onProperty :hasAmount ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :hasAmount ] .
+            owl:onProperty :isCalculatedOn ] .
 
 :AuxiliaryParty a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -6740,13 +6740,13 @@ org:OrganizationalUnit a owl:Class ;
 
 :CreditTransferInformation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty :hasPaymentAccountIdentifier ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
-            owl:onProperty :hasPaymentServiceProviderIdentifier ] .
+            owl:onProperty :hasPaymentServiceProviderIdentifier ],
+        [ a owl:Restriction ;
+            owl:onClass adms:Identifier ;
+            owl:onProperty :hasPaymentAccountIdentifier ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
 
 :DespatchLine a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -6789,13 +6789,13 @@ org:OrganizationalUnit a owl:Class ;
 
 :EvaluationReport a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :AwardEvaluationTerm ;
-            owl:onProperty :usesEvaluationFormula ],
-        [ a owl:Restriction ;
             owl:onClass :TenderAwardOutcome ;
             owl:onProperty :providesRankToTender ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :AwardEvaluationTerm ;
+            owl:onProperty :usesEvaluationFormula ] .
 
 :EvaluationTerm a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -6824,12 +6824,12 @@ org:OrganizationalUnit a owl:Class ;
 :Line a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty adms:identifier ],
+            owl:onClass :Document ;
+            owl:onProperty :hasAssociatedDocument ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Document ;
-            owl:onProperty :hasAssociatedDocument ] .
+            owl:onClass adms:Identifier ;
+            owl:onProperty adms:identifier ] .
 
 :Mediator a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -6881,12 +6881,12 @@ org:OrganizationalUnit a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ParticipationRequestProcessor ;
-            owl:onProperty :definesParticipationRequestProcessor ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :ParticipationRequestReceiver ;
             owl:onProperty :definesParticipationRequestReceiver ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :ParticipationRequestProcessor ;
+            owl:onProperty :definesParticipationRequestProcessor ],
         :Term ;
     skos:definition "Conditions and stipulations defining particularities of requesting participation in a Procedure."@en ;
     skos:prefLabel "Participation Request Term"@en .
@@ -7396,16 +7396,16 @@ foaf:Document a owl:Class .
 :CatalogueLine a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass time:Interval ;
+            owl:onProperty :hasCatalogueLineValidity ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
             owl:onProperty :hasMinimumQuantityGuaranteedForDelivery ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasMaximumOrderQuantity ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Interval ;
-            owl:onProperty :hasCatalogueLineValidity ] .
+            owl:onProperty :hasMaximumOrderQuantity ] .
 
 :Deliverable a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -7421,24 +7421,24 @@ foaf:Document a owl:Class .
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasMaximumMeasure ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Quantity ;
             owl:onProperty :hasMinimumMeasure ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasMeasure ] .
+            owl:onProperty :hasMeasure ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Quantity ;
+            owl:onProperty :hasMaximumMeasure ] .
 
 :ESPDRequest a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :specifiesProcurementCriterion ;
+            owl:someValuesFrom :ProcurementCriterion ],
+        [ a owl:Restriction ;
             owl:onClass :Procedure ;
             owl:onProperty :concernsProcedure ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onProperty :specifiesProcurementCriterion ;
-            owl:someValuesFrom :ProcurementCriterion ] .
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
 
 :EvaluationBoard a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -7448,15 +7448,15 @@ foaf:Document a owl:Class .
 
 :EvidenceRequest a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :concernsProcedure ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:onProperty :concernsLot ;
             owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:onClass :OfferingParty ;
             owl:onProperty :specifiesEconomicOperator ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass :Procedure ;
+            owl:onProperty :concernsProcedure ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
 
 :ExclusionGround a owl:Class ;
@@ -7487,13 +7487,13 @@ foaf:Document a owl:Class .
 :LocalLegalBasisInformation a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :ProcurementElement ;
-            owl:onProperty :concernsProcurementElement ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty dcterms:description ] ;
+            owl:onProperty dcterms:description ],
+        [ a owl:Restriction ;
+            owl:onClass :ProcurementElement ;
+            owl:onProperty :concernsProcurementElement ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:prefLabel "Local Legal Basis Information"@en .
 
 :MiniCompetitionAwardOutcome a owl:Class ;
@@ -7510,12 +7510,12 @@ foaf:Document a owl:Class .
 :OrganisationGroup a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :hasMember ;
+            owl:someValuesFrom org:Organization ],
+        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass org:Organization ;
             owl:onProperty :leadBy ],
-        [ a owl:Restriction ;
-            owl:onProperty :hasMember ;
-            owl:someValuesFrom org:Organization ],
         org:Organization ;
     skos:definition "Agreed collaboration of several Organisations. Additional Information: This concept has been created to fulfill the need to represent a grouping of Organisations that is not necessarily registered i.e, consortia."@en ;
     skos:historyNote "WG approval 15/04/2021"@en ;
@@ -7523,28 +7523,28 @@ foaf:Document a owl:Class .
 
 :OrganisationInformationSummary a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass org:Organization ;
-            owl:onProperty :concernsOrganisation ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :providesOrganisationFinancialCapability ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
             owl:onProperty :providesOrganisationEmployeeQuantity ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :providesOrganisationFinancialCapability ] .
+            owl:onClass org:Organization ;
+            owl:onProperty :concernsOrganisation ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
 
 :ParticipationConditionsSummary a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :describesObjectiveParticipationRules ],
+            owl:onProperty :describesVerificationMethod ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :describesVerificationMethod ],
+            owl:onProperty :describesObjectiveParticipationRules ],
         :ProcurementCriteriaSummary ;
     skos:definition "Overview of the Participation Conditions."@en ;
     skos:historyNote "WG approval 19/03/2024"@en ;
@@ -7554,7 +7554,7 @@ foaf:Document a owl:Class .
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
-            owl:onProperty :hasDebitedAccountIdentifier ],
+            owl:onProperty :hasBankingIdentifier ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
@@ -7562,7 +7562,7 @@ foaf:Document a owl:Class .
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
-            owl:onProperty :hasBankingIdentifier ] .
+            owl:onProperty :hasDebitedAccountIdentifier ] .
 
 :Prize a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -7601,15 +7601,15 @@ foaf:Document a owl:Class .
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :describesProfessionRelevantLaw ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :describesProfession ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :hasServiceReservedToParticularProfession ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :describesProfessionRelevantLaw ],
         :SelectionCriteriaSummary ;
     skos:definition "Overview of the professional ability required for the economic operator to execute the contract."@en ;
     skos:historyNote "WG approval 19/03/2024"@en ;
@@ -7619,15 +7619,15 @@ foaf:Document a owl:Class .
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :hasCreditAmount ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
             owl:onProperty :hasBalanceAmount ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :hasDebitAmount ] .
+            owl:onProperty :hasDebitAmount ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasCreditAmount ] .
 
 :ReviewIrregularitySummary a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -7652,12 +7652,12 @@ foaf:Document a owl:Class .
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:dateTime ;
-            owl:onProperty :hasDeadline ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :isSecurityClearanceRequired ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty :hasDeadline ],
         :Term ;
     skos:definition "Conditions and stipulations about the status requested of individuals allowing them access to classified information (state or organisational secrets) or to restricted areas, after completion of a thorough background check."@en ;
     skos:editorialNote "Used by eForms BT-578, eForms BT-78, eForms BT-732"@en ;
@@ -7775,12 +7775,12 @@ foaf:Person a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:decimal ;
-            owl:onProperty :hasFixedValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :hasAwardCriteriaStatedInProcurementDocuments ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:decimal ;
+            owl:onProperty :hasFixedValue ],
         :MaskableObject,
         :ProcurementCriterion ;
     skos:definition "Criterion that describes a Requirement that the Tender needs to resolve and on which the Tender is evaluated and ranked."@en ;
@@ -7801,12 +7801,12 @@ foaf:Person a owl:Class ;
 :Catalogue a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :CatalogueReceiver ;
-            owl:onProperty :specifiesCatalogueReceiver ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :CatalogueProvider ;
             owl:onProperty :specifiesCatalogueProvider ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :CatalogueReceiver ;
+            owl:onProperty :specifiesCatalogueReceiver ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass time:Interval ;
@@ -7830,16 +7830,16 @@ foaf:Person a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasCertificationNumber ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Certifier ;
             owl:onProperty :issuedByCertifier ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :CertificationLabel ;
             owl:onProperty :attestedByLabel ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasCertificationNumber ],
         cccev:Evidence ;
     skos:definition "Proof of conformance of the instance of the concept to a defined set of criteria. Additional Information: Certificates provide assurance of credibility, trust, and transparency in the procurement process."@en ;
     skos:historyNote "WG approval 16/05/2023"@en ;
@@ -7858,21 +7858,21 @@ foaf:Person a owl:Class ;
 
 :CompetitionNotice a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Procedure ;
+            owl:onProperty :announcesProcedure ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
             owl:onProperty :announcesLot ;
             owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:onProperty :announcesRole ;
-            owl:someValuesFrom :AgentInRole ],
-        [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :announcesProcedure ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+            owl:someValuesFrom :AgentInRole ] .
 
 :DeliveryInformation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Interval ;
-            owl:onProperty :hasDeliveryPeriod ],
+            owl:onClass adms:Identifier ;
+            owl:onProperty :hasTrackingID ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass dcterms:Location ;
@@ -7883,8 +7883,8 @@ foaf:Person a owl:Class ;
             owl:onProperty :hasRequestedDeliveryPeriod ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty :hasTrackingID ] .
+            owl:onClass time:Interval ;
+            owl:onProperty :hasDeliveryPeriod ] .
 
 :DirectAwardTerm a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -7903,12 +7903,12 @@ foaf:Person a owl:Class ;
             owl:onProperty :concernsLot ;
             owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
-            owl:onClass :OfferingParty ;
-            owl:onProperty :specifiesEconomicOperator ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:onClass :Procedure ;
             owl:onProperty :concernsProcedure ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass :OfferingParty ;
+            owl:onProperty :specifiesEconomicOperator ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
 
 :FrameworkAgreementTerm a owl:Class ;
@@ -7927,31 +7927,31 @@ foaf:Person a owl:Class ;
 
 :InvoiceLine a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Quantity ;
-            owl:onProperty :hasQuantity ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasNetAmount ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass time:Interval ;
             owl:onProperty :hasInvoiceLinePeriod ],
         [ a owl:Restriction ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasNetAmount ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
-            owl:onProperty :hasInvoiceLineObjectIdentifier ] .
+            owl:onProperty :hasInvoiceLineObjectIdentifier ],
+        [ a owl:Restriction ;
+            owl:onClass :Quantity ;
+            owl:onProperty :hasQuantity ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
 
 :ItemProperty a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasMaximumValue ],
+            owl:onProperty :hasQualifiedValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasQualifiedValue ],
+            owl:onProperty :hasMinimumValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
@@ -7959,7 +7959,7 @@ foaf:Person a owl:Class ;
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasMinimumValue ] .
+            owl:onProperty :hasMaximumValue ] .
 
 :Offer a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -7979,12 +7979,12 @@ foaf:Person a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasOpeningPlace ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:anyURI ;
             owl:onProperty :hasOpeningURL ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasOpeningPlace ],
         :Term ;
     skos:definition "Conditions and stipulations defining particularities of the opening of Tenders. Additional Information: The opening of Tenders is the event when Tenders are made accessible for evaluation, it is generally the same date and time for all Tenders."@en ;
     skos:historyNote "WG Approval 15/04/2021"@en ;
@@ -8021,11 +8021,11 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasReceivedQuantity ],
+            owl:onProperty :hasShortQuantity ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasShortQuantity ],
+            owl:onProperty :hasReceivedQuantity ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
@@ -8037,21 +8037,21 @@ foaf:Person a owl:Class ;
 
 :RemittanceAdvice a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Buyer ;
-            owl:onProperty :specifiesBuyer ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasTotalDebitAmount ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :hasTotalPaymentAmount ],
+            owl:onProperty :hasTotalCreditAmount ],
+        [ a owl:Restriction ;
+            owl:onClass :Buyer ;
+            owl:onProperty :specifiesBuyer ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :hasTotalCreditAmount ] .
+            owl:onProperty :hasTotalPaymentAmount ] .
 
 :Response a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -8063,32 +8063,32 @@ foaf:Person a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ReviewDecision ;
-            owl:onProperty :concernsReviewDecision ],
+            owl:onClass :ReviewRequest ;
+            owl:onProperty :concernsReviewRequest ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
             owl:onProperty :relatesToEFormSectionIdentifier ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ReviewRequest ;
-            owl:onProperty :concernsReviewRequest ] ;
+            owl:onClass :ReviewDecision ;
+            owl:onProperty :concernsReviewDecision ] ;
     skos:prefLabel "Review Information"@en .
 
 :ReviewRequestSummary a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Lot ;
-            owl:onProperty :concernsReviewSummaryForLot ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty :hasTotalNumberOfComplainants ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:integer ;
             owl:onProperty :hasNumberOfReviewRequests ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty :hasTotalNumberOfComplainants ],
+            owl:onClass :Lot ;
+            owl:onProperty :concernsReviewSummaryForLot ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         :MaskableObject,
         :StatisticalInformation ;
     skos:definition "Overview of the requests received by the Buyer to review any of its decisions (e.g. the technical specifications, award decision), as set out in Art. 1(5) of Directive 89/665/EEC and Directive 92/13/EEC, and about the complainants that submitted the requests."@en ;
@@ -8115,20 +8115,20 @@ foaf:Person a owl:Class ;
 :ShipmentInformation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Interval ;
-            owl:onProperty :hasEstimatedDeliveryPeriod ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Interval ;
-            owl:onProperty :hasDespatchPeriod ],
+            owl:onClass dcterms:Location ;
+            owl:onProperty :specifiesPlaceOfDespatch ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
             owl:onProperty adms:identifier ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass dcterms:Location ;
-            owl:onProperty :specifiesPlaceOfDespatch ] .
+            owl:onClass time:Interval ;
+            owl:onProperty :hasEstimatedDeliveryPeriod ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass time:Interval ;
+            owl:onProperty :hasDespatchPeriod ] .
 
 :SpecificationInformation a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -8157,11 +8157,11 @@ foaf:Person a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :isCalculatedOn ],
+            owl:onProperty :hasAmount ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :hasAmount ] .
+            owl:onProperty :isCalculatedOn ] .
 
 :UniqueResponsibleOfTheProcurement a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -8270,12 +8270,12 @@ dcterms:AgentClass a owl:Class,
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasPublicInterestExceptionJustification ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
             owl:onProperty :hasNumberOfTendersConcerned ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasPublicInterestExceptionJustification ],
         :ContextDescription ;
     skos:prefLabel "International Procurement Instrument Measures Information"@en .
 
@@ -8284,7 +8284,7 @@ dcterms:AgentClass a owl:Class,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :hasGroupFrameworkAgreementMaximumValue ],
+            owl:onProperty :hasApproximateGroupFrameworkAgreementValue ],
         [ a owl:Restriction ;
             owl:onClass :LotGroup ;
             owl:onProperty :describesLotGroup ;
@@ -8292,7 +8292,7 @@ dcterms:AgentClass a owl:Class,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :hasApproximateGroupFrameworkAgreementValue ],
+            owl:onProperty :hasGroupFrameworkAgreementMaximumValue ],
         :ContextDescription ;
     skos:definition "Award information related to a given Group of Lots."@en ;
     skos:prefLabel "Lot Group Award Information"@en .
@@ -8312,8 +8312,16 @@ dcterms:AgentClass a owl:Class,
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Procedure ;
+            owl:onProperty :concernsProcedure ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :isCompetitionTerminated ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :isDPSTerminated ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Lot ;
@@ -8322,14 +8330,6 @@ dcterms:AgentClass a owl:Class,
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :isToBeRelaunched ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Procedure ;
-            owl:onProperty :concernsProcedure ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isDPSTerminated ],
         :ContextDescription ;
     skos:definition "Information about the temporal unfolding or succession of Procurement Objects."@en ;
     skos:prefLabel "Procurement Process Information"@en .
@@ -8338,12 +8338,12 @@ dcterms:AgentClass a owl:Class,
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ReviewProcedureInformationProvider ;
-            owl:onProperty :definesReviewProcedureInformationProvider ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:dateTime ;
             owl:onProperty :hasReviewDeadline ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :ReviewProcedureInformationProvider ;
+            owl:onProperty :definesReviewProcedureInformationProvider ],
         :Term ;
     skos:definition "Conditions and stipulations defining particularities of the review."@en ;
     skos:historyNote "WG approval 23/11/2018"@en ;
@@ -8407,12 +8407,12 @@ time:TemporalDuration a owl:Class ;
             owl:onProperty :hasTotalVehicles ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :GreenProcurement ;
-            owl:onProperty :concernsGreenProcurement ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
             owl:onProperty :hasZeroEmissionVehicles ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :GreenProcurement ;
+            owl:onProperty :concernsGreenProcurement ],
         :ContextDescription ;
     skos:definition "Information related to clean vehicles legislation. Additional information: In the European Union, the legislation concerned is the European Parliament and Council 2009/33/EC (Clean Vehicles Directive ï¿½ CVD)."@en ;
     skos:historyNote "WG approval 07/05/2024"@en ;
@@ -8422,24 +8422,24 @@ time:TemporalDuration a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :LotGroup ;
-            owl:onProperty :concernsLotGroup ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :providesContractTotalPaymentValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :providesContractTotalPenaltyValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasPaymentValueDiscrepancyJustification ],
         [ a owl:Restriction ;
             owl:onClass :Contract ;
             owl:onProperty :refersToContract ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :LotGroup ;
+            owl:onProperty :concernsLotGroup ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :providesContractTotalPenaltyValue ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :providesContractTotalPaymentValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Lot ;
@@ -8452,20 +8452,20 @@ time:TemporalDuration a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :hasFollowupContract ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasParticipationPayment ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasDescriptionOfPrizes ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
+            owl:onProperty :hasFollowupContract ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
             owl:onProperty :isJuryDecisionBinding ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasParticipationPayment ],
         :Term ;
     skos:definition "Conditions and stipulations defining particularities of a Design Contest."@en ;
     skos:historyNote "WG approval 04/02/2021"@en ;
@@ -8489,15 +8489,11 @@ time:TemporalDuration a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasConfidentialityJustification ],
+            owl:onDataRange xsd:date ;
+            owl:onProperty :hasAccessibilityDate ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:anyURI ;
             owl:onProperty :hasMaskableProperty ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass :MaskableObject ;
-            owl:onProperty :concernsMaskedObject ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onClass :Notice ;
@@ -8505,8 +8501,12 @@ time:TemporalDuration a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:date ;
-            owl:onProperty :hasAccessibilityDate ],
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasConfidentialityJustification ],
+        [ a owl:Restriction ;
+            owl:onClass :MaskableObject ;
+            owl:onProperty :concernsMaskedObject ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         :ContextDescription ;
     skos:definition "Information about fields not published in this Notice. Additional Information: The non-published information may become available at a later date and may differ from one element to another within a given Document. Examples of fields that may not be immediately published are Winner, Tender and Procedure Lot Result, etc., e.g. for security reasons."@en ;
     skos:prefLabel "Non Published Information"@en .
@@ -8515,16 +8515,16 @@ time:TemporalDuration a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Duration ;
-            owl:onProperty :hasPlannedDuration ],
+            owl:onClass time:Interval ;
+            owl:onProperty :hasPlannedPeriod ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :ProcurementObject ;
             owl:onProperty :foreseesProcurementObject ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Interval ;
-            owl:onProperty :hasPlannedPeriod ],
+            owl:onClass time:Duration ;
+            owl:onProperty :hasPlannedDuration ],
         :ProcurementElement ;
     skos:definition "A subdivision of a Planned Procurement that may later become one or more Lots or a self-standing Procedure. A Lot or a Procedure can also cover one or more parts of the Planned Procurement."@en ;
     skos:historyNote "WG Approval 20/06/2019"@en ;
@@ -8533,15 +8533,15 @@ time:TemporalDuration a owl:Class ;
 :PlanningNotice a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Procedure ;
+            owl:onProperty :announcesProcedure ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :PlannedProcurement ;
             owl:onProperty :announcesPlannedProcurement ],
         [ a owl:Restriction ;
             owl:onProperty :announcesRole ;
-            owl:someValuesFrom :AgentInRole ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Procedure ;
-            owl:onProperty :announcesProcedure ] .
+            owl:someValuesFrom :AgentInRole ] .
 
 :Purpose a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -8570,20 +8570,20 @@ time:TemporalDuration a owl:Class ;
 :TenderGroup a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty adms:identifier ],
-        [ a owl:Restriction ;
             owl:onClass :LotGroup ;
             owl:onProperty :isSubmittedForLotGroup ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty :comprisesTender ;
+            owl:someValuesFrom :Tender ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasTotalValue ],
         [ a owl:Restriction ;
-            owl:onProperty :comprisesTender ;
-            owl:someValuesFrom :Tender ] ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass adms:Identifier ;
+            owl:onProperty adms:identifier ] ;
     skos:definition "Specific Offer in response to a Lot Group. Additional Information: This class is generally used to provide the Monetary Value in response to a Lot Group."@en ;
     skos:prefLabel "Tender Group"@en .
 
@@ -8610,7 +8610,7 @@ cccev:Criterion a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:decimal ;
-            owl:onProperty cccev:weight ],
+            owl:onProperty cccev:bias ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
@@ -8618,7 +8618,7 @@ cccev:Criterion a owl:Class ;
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:decimal ;
-            owl:onProperty cccev:bias ],
+            owl:onProperty cccev:weight ],
         cccev:Requirement ;
     skos:definition "External concept defined by <xref scope=\"external\" href=\"http://data.europa.eu/m8g/Criterion\"><foreign otherprops=\"#0000ff\"><u>http://data.europa.eu/m8g/Criterion</u></foreign></xref>"@en ;
     skos:prefLabel "Criterion"@en ;
@@ -8652,20 +8652,20 @@ time:Instant a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:decimal ;
+            owl:onProperty :hasOverallPriceAwardCriteriaPonderation ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasAwardCriteriaOrderJustification ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:decimal ;
-            owl:onProperty :hasOverallQualityAwardCriteriaPonderation ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:decimal ;
-            owl:onProperty :hasOverallPriceAwardCriteriaPonderation ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:decimal ;
             owl:onProperty :hasOverallCostAwardCriteriaPonderation ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:decimal ;
+            owl:onProperty :hasOverallQualityAwardCriteriaPonderation ],
         :EvaluationTerm,
         :MaskableObject ;
     skos:definition "Conditions and stipulations defining particularities of the evaluation of Award Criteria."@en ;
@@ -8675,20 +8675,20 @@ time:Instant a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasConcessionEstimatedValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasEstimatedUserConcessionRevenue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasCalculationMethod ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasEstimatedBuyerConcessionRevenue ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasConcessionEstimatedValue ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasEstimatedUserConcessionRevenue ],
         :Estimate,
         :MaskableObject ;
     skos:definition "Approximation concerning the foreseen Concession Contract."@en ;
@@ -8699,16 +8699,16 @@ time:Instant a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Winner ;
-            owl:onProperty :needsToBeAWinner ],
+            owl:onClass :Subcontractor ;
+            owl:onProperty :hasSubcontractor ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Subcontractor ;
             owl:onProperty :foreseesSubcontractor ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Subcontractor ;
-            owl:onProperty :hasSubcontractor ],
+            owl:onClass :Winner ;
+            owl:onProperty :needsToBeAWinner ],
         :OfferingParty ;
     skos:definition "The Role of an Agent that has signed a Contract with a Buyer."@en ;
     skos:historyNote "WG approval 08/11/2022"@en ;
@@ -8718,20 +8718,20 @@ time:Instant a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Quantity ;
-            owl:onProperty :hasItemConsumptionSavings ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:decimal ;
             owl:onProperty :concernsTotalItems ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :GreenProcurement ;
-            owl:onProperty :concernsGreenProcurement ],
+            owl:onClass :Quantity ;
+            owl:onProperty :hasItemConsumption ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasItemConsumption ],
+            owl:onProperty :hasItemConsumptionSavings ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :GreenProcurement ;
+            owl:onProperty :concernsGreenProcurement ],
         :ContextDescription ;
     skos:prefLabel "Energy Efficiency Information"@en .
 
@@ -8740,7 +8740,7 @@ time:Instant a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
-            owl:onProperty :hasQualificationCriteriaStatedInNotice ],
+            owl:onProperty :hasQualificationCriteriaStatedInProcurementDocuments ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
@@ -8748,7 +8748,7 @@ time:Instant a owl:Class ;
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
-            owl:onProperty :hasQualificationCriteriaStatedInProcurementDocuments ],
+            owl:onProperty :hasQualificationCriteriaStatedInNotice ],
         :ProcurementCriterion ;
     skos:definition "Criterion used in the first stage of procurement."@en ;
     skos:historyNote "WG approval 30/05/2023"@en ;
@@ -8782,16 +8782,16 @@ time:Instant a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Winner ;
+            owl:onProperty :indicatesAwardToWinner ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
             owl:onProperty :hasAwardRank ],
         [ a owl:Restriction ;
             owl:onClass :Tender ;
             owl:onProperty :concernsTender ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Winner ;
-            owl:onProperty :indicatesAwardToWinner ],
         :ContextualProjection,
         :MaskableObject ;
     skos:definition "Result concerning the Tender attributed by the Awarder."@en ;
@@ -8828,8 +8828,8 @@ eruptions."""@en ;
 time:TemporalEntity a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:TemporalDuration ;
-            owl:onProperty time:hasTemporalDuration ],
+            owl:onClass time:Instant ;
+            owl:onProperty time:hasBeginning ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass time:TemporalDuration ;
@@ -8840,8 +8840,8 @@ time:TemporalEntity a owl:Class ;
             owl:onProperty time:hasEnd ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Instant ;
-            owl:onProperty time:hasBeginning ] ;
+            owl:onClass time:TemporalDuration ;
+            owl:onProperty time:hasTemporalDuration ] ;
     skos:definition "External concept defined by <xref scope=\"external\" href=\"https://www.w3.org/TR/owl-time/#time:TemporalEntity\"><foreign otherprops=\"#0000ff\"><u>https://www.w3.org/TR/owl-time/#time:TemporalEntity</u></foreign></xref>"@en ;
     skos:prefLabel "Temporal Entity"@en .
 
@@ -8851,24 +8851,28 @@ locn:Geometry a owl:Class ;
 
 :ContractModificationNotice a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :concernsProcedure ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onProperty :concernsLot ;
-            owl:someValuesFrom :Lot ],
-        [ a owl:Restriction ;
             owl:onClass :Contract ;
             owl:onProperty :refersToContractToBeModified ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :NoticeAwardInformation ;
-            owl:onProperty :refersToNoticeAwardInformation ] .
+            owl:onProperty :refersToNoticeAwardInformation ],
+        [ a owl:Restriction ;
+            owl:onProperty :concernsLot ;
+            owl:someValuesFrom :Lot ],
+        [ a owl:Restriction ;
+            owl:onClass :Procedure ;
+            owl:onProperty :concernsProcedure ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
 
 :LotAwardOutcome a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasNonAwardedContractTitle ],
+        [ a owl:Restriction ;
             owl:onClass :Lot ;
             owl:onProperty :concernsLot ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
@@ -8878,16 +8882,12 @@ locn:Geometry a owl:Class ;
             owl:onProperty :hasFrameworkAgreementMaximumValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasApproximateFrameworkAgreementValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasNonAwardedContractTitle ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasNonAwardedContractNumber ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasApproximateFrameworkAgreementValue ],
         :AwardOutcome,
         :MaskableObject ;
     skos:definition "Result concerning the Lot that was attributed by the Awarder."@en ;
@@ -8898,8 +8898,12 @@ locn:Geometry a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:date ;
+            owl:onProperty :hasEstimatedInvitationToTenderDate ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
-            owl:onProperty :hasMinimumNumberOfCandidates ],
+            owl:onProperty :hasMaximumNumberOfCandidates ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
@@ -8910,16 +8914,8 @@ locn:Geometry a owl:Class ;
             owl:onProperty :hasQualificationSystemDuration ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:date ;
-            owl:onProperty :hasEstimatedInvitationToTenderDate ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
-            owl:onProperty :hasMaximumNumberOfCandidates ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :hasNoNegotiationNecessary ],
+            owl:onProperty :hasMinimumNumberOfCandidates ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:date ;
@@ -8928,6 +8924,10 @@ locn:Geometry a owl:Class ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :hasSuccessiveReduction ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :hasNoNegotiationNecessary ],
         :Term ;
     skos:definition "Conditions and stipulations defining particularities of Procedures carried out in several steps Additional Information: Generally this refers to Procedures where selection is carried out to qualify Tenderers who are then requested to submit the rest of their Tender for evaluation is Restricted Procedure."@en ;
     skos:historyNote "WG Approval 15/04/2021"@en ;
@@ -8935,33 +8935,33 @@ locn:Geometry a owl:Class ;
 
 :Price a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasGrossMonetaryValue ],
+        [ a owl:Restriction ;
             owl:onClass time:Interval ;
             owl:onProperty :hasPriceValidity ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasOrderabableUnitFactorRate ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasGrossMonetaryValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Quantity ;
             owl:onProperty :hasBaseQuantity ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Duration ;
-            owl:onProperty :hasExpectedDeliveryTime ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
             owl:onProperty :hasQuantityThreshold ],
         [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass time:Duration ;
+            owl:onProperty :hasExpectedDeliveryTime ],
+        [ a owl:Restriction ;
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasNetMonetaryValue ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Quantity ;
+            owl:onProperty :hasOrderabableUnitFactorRate ] .
 
 :Technique a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -9002,7 +9002,19 @@ dcterms:date a owl:AnnotationProperty,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
+            owl:onProperty :hasLength ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Quantity ;
+            owl:onProperty :hasWidth ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Quantity ;
             owl:onProperty :hasTotalGoodsItemQuantity ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Quantity ;
+            owl:onProperty :hasNetVolume ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
@@ -9014,23 +9026,11 @@ dcterms:date a owl:AnnotationProperty,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasHeight ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Quantity ;
             owl:onProperty :hasGrossWeight ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasWidth ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Quantity ;
-            owl:onProperty :hasLength ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Quantity ;
-            owl:onProperty :hasNetVolume ],
+            owl:onProperty :hasHeight ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
@@ -9040,27 +9040,27 @@ dcterms:date a owl:AnnotationProperty,
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isProcurementDocumentChanged ],
-        [ a owl:Restriction ;
-            owl:onClass :Notice ;
-            owl:onProperty :concernsNotice ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasAdditionalInformation ],
         [ a owl:Restriction ;
             owl:onClass :Notice ;
             owl:onProperty :refersToPreviousNotice ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasAdditionalInformation ],
-        [ a owl:Restriction ;
-            owl:onProperty :relatesToEFormSectionIdentifier ;
-            owl:someValuesFrom adms:Identifier ],
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :isProcurementDocumentChanged ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:dateTime ;
             owl:onProperty :hasProcurementDocumentChangeDate ],
+        [ a owl:Restriction ;
+            owl:onClass :Notice ;
+            owl:onProperty :concernsNotice ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty :relatesToEFormSectionIdentifier ;
+            owl:someValuesFrom adms:Identifier ],
         :ContextDescription ;
     skos:definition "Alteration to previously provided details."@en ;
     skos:editorialNote "Added hasAdditionalInformation to cover for section VII.2 in F14, since we do not have the Corrigendum notice type anymore in eForms."@en ;
@@ -9070,12 +9070,12 @@ dcterms:date a owl:AnnotationProperty,
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ReviewRequester ;
-            owl:onProperty :specifiesReviewRequester ],
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasReviewRequestFee ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasReviewRequestFee ] ;
+            owl:onClass :ReviewRequester ;
+            owl:onProperty :specifiesReviewRequester ] ;
     skos:definition "Information about requests to review procedures."@en ;
     skos:historyNote "WG Approval 23/10/2021"@en ;
     skos:prefLabel "Review Request"@en .
@@ -9085,11 +9085,11 @@ dcterms:date a owl:AnnotationProperty,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:decimal ;
-            owl:onProperty :hasMinimumShare ],
+            owl:onProperty :hasMaximumShare ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :hasSubcontractingInvolved ],
+            owl:onDataRange xsd:decimal ;
+            owl:onProperty :hasMinimumShare ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:decimal ;
@@ -9097,11 +9097,11 @@ dcterms:date a owl:AnnotationProperty,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:decimal ;
-            owl:onProperty :hasMaximumShare ],
+            owl:onProperty :hasMinimumSubcontractorsProposedObligation ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:decimal ;
-            owl:onProperty :hasMinimumSubcontractorsProposedObligation ],
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :hasSubcontractingInvolved ],
         :Term ;
     skos:definition "A concept to describe the main information regarding the share of parts of the Contract to third parties."@en ;
     skos:prefLabel "Subcontract Term"@en .
@@ -9150,11 +9150,7 @@ dcterms:description a owl:DatatypeProperty,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
-            owl:onProperty :hasManufacturerItemID ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Quantity ;
-            owl:onProperty :hasNetQuantity ],
+            owl:onProperty :hasSellerItemID ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
@@ -9162,46 +9158,38 @@ dcterms:description a owl:DatatypeProperty,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
-            owl:onProperty :hasBuyerItemID ],
+            owl:onProperty :hasManufacturerItemID ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
-            owl:onProperty :hasSellerItemID ] .
+            owl:onProperty :hasBuyerItemID ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Quantity ;
+            owl:onProperty :hasNetQuantity ] .
 
 :CompletionNotice a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :concernsProcedure ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :NoticeAwardInformation ;
             owl:onProperty :refersToNoticeAwardInformation ],
         [ a owl:Restriction ;
-            owl:onProperty :concernsLot ;
-            owl:someValuesFrom :Lot ],
-        [ a owl:Restriction ;
             owl:onClass :Contract ;
             owl:onProperty :announcesCompletionOfContract ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass :Procedure ;
+            owl:onProperty :concernsProcedure ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty :concernsLot ;
+            owl:someValuesFrom :Lot ] .
 
 :Consignment a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasTransportHandlingUnitQuantity ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty adms:identifier ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasDeclaredStatisticalValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Quantity ;
-            owl:onProperty :hasGrossWeight ],
+            owl:onProperty :hasNetWeight ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
@@ -9209,7 +9197,7 @@ dcterms:description a owl:DatatypeProperty,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
-            owl:onProperty :hasConsigneeConsignmentID ],
+            owl:onProperty adms:identifier ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
@@ -9217,15 +9205,27 @@ dcterms:description a owl:DatatypeProperty,
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasNetWeight ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Quantity ;
             owl:onProperty :hasLoadingMeter ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Quantity ;
-            owl:onProperty :hasGrossVolume ] .
+            owl:onProperty :hasGrossVolume ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass adms:Identifier ;
+            owl:onProperty :hasConsigneeConsignmentID ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Quantity ;
+            owl:onProperty :hasTransportHandlingUnitQuantity ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasDeclaredStatisticalValue ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Quantity ;
+            owl:onProperty :hasGrossWeight ] .
 
 :DirectAwardPrenotificationNotice a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -9233,15 +9233,15 @@ dcterms:description a owl:DatatypeProperty,
             owl:onProperty :announcesProcedure ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
-            owl:onProperty :announcesLot ;
-            owl:someValuesFrom :Lot ],
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :NoticeAwardInformation ;
+            owl:onProperty :announcesNoticeAwardInformation ],
         [ a owl:Restriction ;
             owl:onProperty :announcesRole ;
             owl:someValuesFrom :AgentInRole ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :NoticeAwardInformation ;
-            owl:onProperty :announcesNoticeAwardInformation ] .
+            owl:onProperty :announcesLot ;
+            owl:someValuesFrom :Lot ] .
 
 :specifiesBuyer a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -9261,11 +9261,11 @@ dcterms:description a owl:DatatypeProperty,
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasFormula ],
+            owl:onProperty :hasAdditionalInformation ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasAdditionalInformation ],
+            owl:onProperty :hasFormula ],
         cccev:Criterion ;
     skos:definition "A criterion specific to Procurement. Additional Information: This Procurement Criterion can be only Exclusion Ground, Selection Criterion or Award Criterion. Each of these Criteria can contain subcriteria (Criterion class)."@en ;
     skos:historyNote "WG Approval 23/04/2020"@en ;
@@ -9277,12 +9277,12 @@ cccev:ContactPoint a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasContactName ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:anyURI ;
             owl:onProperty :hasInternetAddress ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasContactName ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass locn:Address ;
@@ -9297,14 +9297,6 @@ cccev:ContactPoint a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :hasTotalTaxInclusiveAmount ],
-        [ a owl:Restriction ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasAmountDueForPayment ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
             owl:onProperty :hasRoundingAmount ],
         [ a owl:Restriction ;
             owl:onClass :MonetaryValue ;
@@ -9316,75 +9308,83 @@ cccev:ContactPoint a owl:Class ;
             owl:onProperty :hasTotalTaxExclusiveAmount ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasPrepaidAmount ],
+            owl:onClass :Project ;
+            owl:onProperty :refersToProject ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasTotalAllowanceAmount ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasPrepaidAmount ],
+        [ a owl:Restriction ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasAmountDueForPayment ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasTotalTaxInclusiveAmount ],
         [ a owl:Restriction ;
             owl:onClass :Buyer ;
             owl:onProperty :specifiesBuyer ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasTotalChargeAmount ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass time:Interval ;
             owl:onProperty :hasValidityPeriod ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty :hasSellerOrderID ],
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasTotalChargeAmount ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Project ;
-            owl:onProperty :refersToProject ] .
+            owl:onClass adms:Identifier ;
+            owl:onProperty :hasSellerOrderID ] .
 
 :ResultNotice a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Procedure ;
+            owl:onProperty :concernsProcedure ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
             owl:onProperty :refersToRole ;
             owl:someValuesFrom :AgentInRole ],
-        [ a owl:Restriction ;
-            owl:onProperty :concernsLot ;
-            owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :NoticeAwardInformation ;
             owl:onProperty :announcesNoticeAwardInformation ],
         [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :concernsProcedure ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+            owl:onProperty :concernsLot ;
+            owl:someValuesFrom :Lot ] .
 
 :ReviewDecision a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:date ;
-            owl:onProperty :hasWithdrawalDate ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ReviewRequester ;
-            owl:onProperty :specifiesReviewRequester ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Reviewer ;
-            owl:onProperty :specifiesReviewer ],
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasRemedyValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasWithdrawalReason ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasRemedyValue ],
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :isWithdrawn ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isWithdrawn ] ;
+            owl:onClass :Reviewer ;
+            owl:onProperty :specifiesReviewer ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:date ;
+            owl:onProperty :hasWithdrawalDate ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :ReviewRequester ;
+            owl:onProperty :specifiesReviewRequester ] ;
     skos:definition "Information about Review Decisions."@en ;
     skos:prefLabel "Review Decision"@en .
 
@@ -9406,24 +9406,24 @@ foaf:Agent a owl:Class ;
             owl:onProperty :hasRestrictedAccessURL ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ProcurementDocument ;
-            owl:onProperty :involvesProcurementDocument ],
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty :hasAdditionalInformationDeadline ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :OfflineAccessProvider ;
-            owl:onProperty :definesOfflineAccessProvider ],
+            owl:onClass :ProcurementDocument ;
+            owl:onProperty :involvesProcurementDocument ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:anyURI ;
             owl:onProperty :hasPublicAccessURL ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ProcurementProcedureInformationProvider ;
-            owl:onProperty :definesProcurementProcedureInformationProvider ],
+            owl:onClass :OfflineAccessProvider ;
+            owl:onProperty :definesOfflineAccessProvider ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:dateTime ;
-            owl:onProperty :hasAdditionalInformationDeadline ],
+            owl:onClass :ProcurementProcedureInformationProvider ;
+            owl:onProperty :definesProcurementProcedureInformationProvider ],
         :Term ;
     skos:definition "Conditions and stipulations about where and how to access the Procurement Documents."@en ;
     skos:historyNote "WG Approval 09/03/2021"@en ;
@@ -9452,32 +9452,32 @@ foaf:Agent a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasTotalAwardedValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasApproximateFrameworkAgreementValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasProcurementHighestReceivedTenderValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :DirectAwardPrenotificationNotice ;
             owl:onProperty :describesDirectAwardPrenotificationNotice ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasMaximumFrameworkAgreementAwardedValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasProcurementLowestReceivedTenderValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasTotalAwardedValue ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasMaximumFrameworkAgreementAwardedValue ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :ResultNotice ;
             owl:onProperty :describesResultNotice ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasProcurementHighestReceivedTenderValue ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasApproximateFrameworkAgreementValue ],
         :ContextDescription ;
     skos:definition "Information about an Award Notice."@en ;
     skos:prefLabel "Notice Award Information"@en .
@@ -9486,36 +9486,36 @@ foaf:Agent a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :BudgetProvider ;
-            owl:onProperty :definesBudgetProvider ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
-            owl:onProperty :isAwardedByCPB ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasLotAwardCombination ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isOneLotOnlyAllowed ],
+            owl:onProperty :isSubmissionForAllLotsRequired ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Mediator ;
             owl:onProperty :definesMediator ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isSubmissionForAllLotsRequired ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
             owl:onProperty :hasMaximumLotSubmissionAllowed ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :isAwardedByCPB ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :BudgetProvider ;
+            owl:onProperty :definesBudgetProvider ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
             owl:onProperty :hasMaximumNumberOfLotsToBeAwarded ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :isOneLotOnlyAllowed ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasLotAwardCombination ],
         :MaskableObject,
         :Term ;
     skos:definition "Conditions and stipulations defining particularities of the Procedure."@en ;
@@ -9527,6 +9527,10 @@ foaf:Agent a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :isRecurrent ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasRecurrenceDescription ],
         [ a owl:Restriction ;
@@ -9537,10 +9541,6 @@ foaf:Agent a owl:Class ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasLaunchFrameworkAgreementMaximumValue ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isRecurrent ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :ConcessionEstimate ;
@@ -9571,45 +9571,45 @@ dc:relation a owl:AnnotationProperty .
 
 :Invoice a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasAmountDueForPayment ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onProperty :hasTotalLineAmount ;
-            owl:someValuesFrom :MonetaryValue ],
-        [ a owl:Restriction ;
-            owl:onProperty :hasLotReference ;
-            owl:someValuesFrom :Lot ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty :hasInvoicedObjectIdentifier ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Contract ;
-            owl:onProperty :refersToContract ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Project ;
             owl:onProperty :refersToProject ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasTotalLineAmount ;
+            owl:someValuesFrom :MonetaryValue ],
         [ a owl:Restriction ;
             owl:onClass :Buyer ;
             owl:onProperty :specifiesBuyer ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass adms:Identifier ;
+            owl:onProperty :hasInvoicedObjectIdentifier ],
+        [ a owl:Restriction ;
             owl:onClass :MonetaryValue ;
-            owl:onProperty :hasRoundingAmount ],
+            owl:onProperty :hasAmountDueForPayment ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass time:Interval ;
             owl:onProperty :hasInvoicingPeriod ],
         [ a owl:Restriction ;
+            owl:onProperty :hasTotalTaxInclusiveAmount ;
+            owl:someValuesFrom :MonetaryValue ],
+        [ a owl:Restriction ;
             owl:onProperty :hasTotalTaxExclusiveAmount ;
             owl:someValuesFrom :MonetaryValue ],
         [ a owl:Restriction ;
-            owl:onProperty :hasTotalTaxInclusiveAmount ;
-            owl:someValuesFrom :MonetaryValue ] .
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Contract ;
+            owl:onProperty :refersToContract ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasLotReference ;
+            owl:someValuesFrom :Lot ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasRoundingAmount ] .
 
 dcterms:relation a owl:AnnotationProperty,
         owl:NamedIndividual ;
@@ -9641,11 +9641,11 @@ locn:Address a owl:Class ;
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty locn:locatorName ],
+            owl:onProperty locn:addressArea ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty locn:addressArea ],
+            owl:onProperty locn:postCode ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
@@ -9653,15 +9653,15 @@ locn:Address a owl:Class ;
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty locn:thoroughfare ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty locn:locatorDesignator ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty locn:postCode ] ;
+            owl:onProperty locn:thoroughfare ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty locn:locatorName ] ;
     skos:definition "External concept defined by <xref scope=\"external\" href=\"https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Address\"><foreign otherprops=\"#0000ff\"><u>https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Address</u></foreign></xref>"@en ;
     skos:historyNote "WG Approval 28/04/2020"@en ;
     skos:prefLabel "Address"@en .
@@ -9680,37 +9680,37 @@ locn:Address a owl:Class ;
 :Tender a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Lot ;
-            owl:onProperty :isSubmittedForLot ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :hasElectronicSubmission ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :isVariant ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Tenderer ;
-            owl:onProperty :isSubmittedBy ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ConcessionEstimate ;
-            owl:onProperty :foreseesConcession ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasFinancialOfferValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Offer ;
             owl:onProperty :isSupportedBy ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :ConcessionEstimate ;
+            owl:onProperty :foreseesConcession ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Tenderer ;
+            owl:onProperty :isSubmittedBy ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasFinancialOfferValue ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :LotGroup ;
             owl:onProperty :isSubjectToGrouping ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :hasElectronicSubmission ],
+        [ a owl:Restriction ;
+            owl:onClass :Lot ;
+            owl:onProperty :isSubmittedForLot ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         :MaskableObject ;
     skos:definition "Information submitted by the Economic Operator to specify its Offer regarding a specific Lot, in response to the call for Tender."@en ;
     skos:historyNote "WG approval 03/05/2022"@en ;
@@ -9724,24 +9724,24 @@ dcterms:Location a owl:Class,
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass locn:Geometry ;
-            owl:onProperty locn:geometry ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty locn:geographicIdentifier ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty adms:identifier ],
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty locn:geographicName ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass locn:Address ;
             owl:onProperty locn:address ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty locn:geographicName ],
+            owl:onClass adms:Identifier ;
+            owl:onProperty adms:identifier ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass adms:Identifier ;
+            owl:onProperty locn:geographicIdentifier ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass locn:Geometry ;
+            owl:onProperty locn:geometry ],
         dcterms:LocationPeriodOrJurisdiction ;
     skos:definition "External concept defined by <xref scope=\"external\" href=\"https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location\"><foreign otherprops=\"#0000ff\"><u>https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/Location</u></foreign></xref>"@en ;
     skos:prefLabel "Location"@en .
@@ -9750,28 +9750,28 @@ dcterms:Location a owl:Class,
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:dateTime ;
-            owl:onProperty :hasESenderDispatchDate ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasOJSIssueNumber ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasFormNumber ],
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty :hasESenderDispatchDate ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasNoticePublicationNumber ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Procedure ;
+            owl:onProperty :refersToProcedure ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Notice ;
             owl:onProperty :refersToNotice ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Procedure ;
-            owl:onProperty :refersToProcedure ] ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasFormNumber ] ;
     skos:definition "Document published by the Buyer about market opportunities and results."@en ;
     skos:historyNote "WG Approval 23/05/2019"@en ;
     skos:prefLabel "Notice"@en .
@@ -9794,23 +9794,23 @@ adms:identifier a owl:FunctionalProperty,
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty adms:identifier ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasEstimatedValue ],
+        [ a owl:Restriction ;
+            owl:onProperty :setsGroupingContextForLot ;
+            owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasLaunchFrameworkAgreementMaximumValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isSMESuitable ],
+            owl:onClass adms:Identifier ;
+            owl:onProperty adms:identifier ],
         [ a owl:Restriction ;
-            owl:onProperty :setsGroupingContextForLot ;
-            owl:someValuesFrom :Lot ] ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :isSMESuitable ] ;
     skos:definition "Combination of several Lots to conduct comparative assessment of the Tenders. Additional Information: The comparative assessment may refer to the Selection Criteria, Award and Value that apply to several Lots. Pending of discussion with eForms Member States may provide that, where more than one lot may be awarded to the same tenderer, contracting authorities may award contracts combining several or all lots where they have specified in the contract notice or in the invitation to confirm interest that they reserve the possibility of doing so and indicate the lots or groups of lots that may be combined."@en ;
     skos:prefLabel "Lot Group"@en .
 
@@ -9856,35 +9856,39 @@ person:Person a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
-            owl:onProperty :hasEUReceivedTenders ],
+            owl:onProperty :hasReceivedMicroTenders ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
-            owl:onProperty :hasNonEUReceivedTenders ],
+            owl:onProperty :hasReceivedParticipationRequests ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
-            owl:onProperty :hasReceivedTenders ],
+            owl:onProperty :hasAbnormallyLowTenders ],
+        [ a owl:Restriction ;
+            owl:onClass :AwardOutcome ;
+            owl:onProperty :summarisesInformationForAwardOutcome ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty :hasOtherCountriesReceivedTenders ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
             owl:onProperty :hasSMEReceivedTendersExcludingSubcontractors ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty :hasUnverifiedTenders ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasLowestReceivedTenderValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty :hasEstimatedTotalSubcontracts ],
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasHighestReceivedTenderValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
-            owl:onProperty :hasAbnormallyLowTenders ],
+            owl:onProperty :hasReceivedSmallTenders ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
@@ -9892,15 +9896,23 @@ person:Person a owl:Class ;
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
-            owl:onProperty :hasReceivedMicroTenders ],
+            owl:onProperty :hasUnverifiedTenders ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
-            owl:onProperty :hasReceivedSmallTenders ],
+            owl:onProperty :hasMediumTenderPerLots ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasHighestReceivedTenderValue ],
+            owl:onDataRange xsd:integer ;
+            owl:onProperty :hasReceivedTenders ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty :hasEstimatedTotalSubcontracts ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty :hasEUReceivedTenders ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
@@ -9912,27 +9924,15 @@ person:Person a owl:Class ;
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
-            owl:onProperty :hasReceivedParticipationRequests ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty :hasOtherCountriesReceivedTenders ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty :hasNumberOfTenderersInvited ],
-        [ a owl:Restriction ;
-            owl:onClass :AwardOutcome ;
-            owl:onProperty :summarisesInformationForAwardOutcome ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:integer ;
             owl:onProperty :hasNonEEAReceivedTenders ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
-            owl:onProperty :hasMediumTenderPerLots ],
+            owl:onProperty :hasNonEUReceivedTenders ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty :hasNumberOfTenderersInvited ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:integer ;
@@ -9950,24 +9950,24 @@ cccev:Evidence a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:anyURI ;
-            owl:onProperty :hasURL ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Interval ;
-            owl:onProperty :hasValidityPeriod ],
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass adms:Identifier ;
             owl:onProperty adms:identifier ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty dcterms:description ],
+            owl:onClass time:Interval ;
+            owl:onProperty :hasValidityPeriod ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:anyURI ;
+            owl:onProperty :hasURL ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty dcterms:title ] ;
+            owl:onProperty dcterms:description ] ;
     skos:definition "External concept defined by <xref scope=\"external\" href=\"http://data.europa.eu/m8g/Evidence\"><foreign otherprops=\"#0000ff\"><u>http://data.europa.eu/m8g/Evidence</u></foreign></xref>"@en ;
     skos:prefLabel "Evidence"@en ;
     skos:scopeNote """Although the wording of the definition is different, the semantics are an exact match for CPSV's Input class which it replaces.
@@ -9985,19 +9985,31 @@ The proof can be given through documents or extracts of base registries, indepen
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass time:Duration ;
+            owl:onProperty :definesContractDuration ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:integer ;
+            owl:onProperty :hasMaximumNumberOfRenewals ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass time:Duration ;
             owl:onProperty :definesEstimatedContractDuration ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
-            owl:onProperty :hasEPayment ],
+            owl:onProperty :hasOptions ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasLegalFormRequirement ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass time:Interval ;
+            owl:onProperty :definesContractPeriod ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :SubcontractTerm ;
             owl:onProperty :definesSubcontractingTerm ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isRenewalIndicator ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :PaymentExecutor ;
@@ -10005,31 +10017,19 @@ The proof can be given through documents or extracts of base registries, indepen
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
-            owl:onProperty :hasEOrdering ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasLegalFormRequirement ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:integer ;
-            owl:onProperty :hasMaximumNumberOfRenewals ],
+            owl:onProperty :isRenewalIndicator ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :hasEInvoicing ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Interval ;
-            owl:onProperty :definesContractPeriod ],
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :hasEOrdering ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
-            owl:onProperty :hasOptions ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Duration ;
-            owl:onProperty :definesContractDuration ],
+            owl:onProperty :hasEPayment ],
         :Term ;
     skos:definition "Conditions and stipulations defining particularities of the Post Award Phase."@en ;
     skos:historyNote "WG approval 23/11/2018"@en ;
@@ -10039,36 +10039,36 @@ The proof can be given through documents or extracts of base registries, indepen
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:dateTime ;
-            owl:onProperty dcterms:issued ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty dcterms:title ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:dateTime ;
-            owl:onProperty :hasDispatchDate ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:date ;
-            owl:onProperty :hasReceptionDate ],
+            owl:onProperty dcterms:description ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasVersion ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty dcterms:description ],
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty :hasDispatchDate ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty :hasUUID ],
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty dcterms:title ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:date ;
-            owl:onProperty :hasPublicationDate ] ;
+            owl:onProperty :hasPublicationDate ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:date ;
+            owl:onProperty :hasReceptionDate ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty dcterms:issued ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass adms:Identifier ;
+            owl:onProperty :hasUUID ] ;
     skos:definition "A set of interrelated Business Information representing the Business facts and associated metadata. The information may be conveyed in any language, medium or form, including textual, numerical, graphic, cartographic, audio-visual forms, etc."@en ;
     skos:historyNote "WG approval 23/05/2019"@en ;
     skos:prefLabel "Document"@en .
@@ -10080,25 +10080,25 @@ The proof can be given through documents or extracts of base registries, indepen
             owl:onClass :MonetaryValue ;
             owl:onProperty :hasEstimatedValue ],
         [ a owl:Restriction ;
-            owl:onClass adms:Identifier ;
-            owl:onProperty adms:identifier ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :appliesForeignSubsidiesRegulation ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :isSMESuitable ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isCoveredByGPA ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :Purpose ;
             owl:onProperty :hasPurpose ],
         [ a owl:Restriction ;
+            owl:onClass adms:Identifier ;
+            owl:onProperty adms:identifier ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
-            owl:onProperty :appliesForeignSubsidiesRegulation ] ;
+            owl:onProperty :isCoveredByGPA ] ;
     skos:definition "Gathering class for critical/central elements in the Procurement Process. TODO: add definition Additional information: Alias: ProcurementComponent"@en ;
     skos:prefLabel "Procurement Element"@en .
 
@@ -10106,56 +10106,56 @@ The proof can be given through documents or extracts of base registries, indepen
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:dateTime ;
-            owl:onProperty :hasReceiptParticipationRequestDeadline ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isMultipleTenderSubmissionAllowed ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :isGuaranteeRequired ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass time:Interval ;
+            owl:onProperty :hasTenderValidityPeriod ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty :hasReceiptParticipationRequestDeadline ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:dateTime ;
             owl:onProperty :hasReceiptDeadline ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :TenderReceiver ;
-            owl:onProperty :definesTenderReceiver ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:anyURI ;
-            owl:onProperty :hasEAuctionURL ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:dateTime ;
             owl:onProperty :hasReceiptTenderDeadline ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isAdvancedElectronicSignatureRequired ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :TenderProcessor ;
-            owl:onProperty :definesTenderProcessor ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:dateTime ;
-            owl:onProperty :hasReceiptPreliminaryMarketConsultationDeadline ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:dateTime ;
-            owl:onProperty :hasReceiptExpressionDeadline ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass time:Duration ;
             owl:onProperty :hasTenderValidityDuration ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass time:Interval ;
-            owl:onProperty :hasTenderValidityPeriod ],
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty :hasReceiptPreliminaryMarketConsultationDeadline ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :TenderReceiver ;
+            owl:onProperty :definesTenderReceiver ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :TenderProcessor ;
+            owl:onProperty :definesTenderProcessor ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :isMultipleTenderSubmissionAllowed ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:anyURI ;
+            owl:onProperty :hasEAuctionURL ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :isAdvancedElectronicSignatureRequired ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:dateTime ;
+            owl:onProperty :hasReceiptExpressionDeadline ],
         :Term ;
     skos:definition "Conditions and stipulations defining particularities of submitting Documents to the Buyer. Additional Information: These Documents can be Tenders, Request To Participate and expressions of interest."@en ;
     skos:historyNote "WG Approval 14/07/2020"@en ;
@@ -10192,23 +10192,23 @@ xsd:date a rdfs:Datatype ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ProcurementServiceProvider ;
-            owl:onProperty :isExecutedByProcurementServiceProvider ],
+            owl:onDataRange xsd:boolean ;
+            owl:onProperty :isJointProcurement ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :isDesignContest ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasProcurementScopeDividedIntoLot ;
+            owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:boolean ;
             owl:onProperty :isAccelerated ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:boolean ;
-            owl:onProperty :isJointProcurement ],
-        [ a owl:Restriction ;
-            owl:onProperty :hasProcurementScopeDividedIntoLot ;
-            owl:someValuesFrom :Lot ],
+            owl:onClass :ProcurementServiceProvider ;
+            owl:onProperty :isExecutedByProcurementServiceProvider ],
         :ProcurementObject ;
     skos:definition "A legally defined set of administrative activities conducted to conclude one or more Contracts. Additional Information The Procedure is categorised in the law according to different rules determining whether the Procedure is Open, Restricted, Negotiated with or without publicity, etc. (see Procedure Type)."@en ;
     skos:historyNote "WG Approval 20/08/2019"@en ;
@@ -10220,12 +10220,16 @@ xsd:dateTime a rdfs:Datatype ;
 org:Organization a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass locn:Address ;
-            owl:onProperty cccev:registeredAddress ],
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasBuyerLegalTypeDescription ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasBuyerLegalTypeDescription ],
+            owl:onProperty :hasLegalFormType ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass locn:Address ;
+            owl:onProperty cccev:registeredAddress ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass cccev:ContactPoint ;
@@ -10234,10 +10238,6 @@ org:Organization a owl:Class ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty :hasMainActivityDescription ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasLegalFormType ],
         foaf:Agent ;
     skos:definition "External concept defined by <xref scope=\"external\" href=\"by https://www.w3.org/TR/vocab-org/#org:Organization\"><foreign otherprops=\"#0000ff\"><u>https://www.w3.org/TR/vocab-org/#org:Organization</u></foreign></xref>"@en ;
     skos:historyNote "WG approval 23/11/2018"@en ;
@@ -10246,24 +10246,24 @@ org:Organization a owl:Class ;
 :Contract a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Purpose ;
-            owl:onProperty :hasPurpose ],
+            owl:onProperty :hasLotReference ;
+            owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :TaxInformation ;
             owl:onProperty :hasTaxInformation ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :MonetaryValue ;
-            owl:onProperty :hasContractValue ],
-        [ a owl:Restriction ;
-            owl:onProperty :hasLotReference ;
-            owl:someValuesFrom :Lot ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:date ;
             owl:onProperty :hasEntryIntoForceDate ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Purpose ;
+            owl:onProperty :hasPurpose ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :MonetaryValue ;
+            owl:onProperty :hasContractValue ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:date ;
@@ -10294,13 +10294,13 @@ xsd:integer a rdfs:Datatype ;
 
 adms:Identifier a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange rdf:PlainLiteral ;
-            owl:onProperty :hasExtension ],
-        [ a owl:Restriction ;
             owl:onDataRange rdf:PlainLiteral ;
             owl:onProperty skos:notation ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange rdf:PlainLiteral ;
+            owl:onProperty :hasExtension ] ;
     skos:definition "External concept defined by <xref scope=\"external\" href=\"https://semiceu.github.io/ADMS/releases/2.00/#Identifier\"><foreign otherprops=\"#0000ff\"><u>https://semiceu.github.io/ADMS/releases/2.00/#Identifier</u></foreign></xref>"@en ;
     skos:prefLabel "Identifier"@en .
 
