@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:vann="http://purl.org/vocab/vann/"
+>
+  <rdf:Description rdf:about="http://example.com/ex#BoringWheel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Boring Wheel</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Wheel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Contractor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Contractor</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#prettyModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:title xml:lang="en">prettyModel core</dcterms:title>
+    <rdfs:label xml:lang="en">prettyModel — core</rdfs:label>
+    <dcterms:publisher>https://example.com/publisher</dcterms:publisher>
+    <dcterms:description xml:lang="en">This artefact provides the definitions for the prettyModel demonstration ontology.
+        This artefact excludes the restrictions.
+        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI.</dcterms:description>
+    <rdfs:comment>This version is automatically generated from prettyModel.xml on 2026-06-29</rdfs:comment>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-29</dcterms:issued>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-01</dcterms:created>
+    <owl:versionInfo>1.0.0</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://example.com/ex#prettyModel-1.0.0"/>
+    <vann:preferredNamespaceUri>http://example.com/ex#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>ex</vann:preferredNamespacePrefix>
+    <dcterms:license>CC BY 4.0</dcterms:license>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Vehicle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Vehicle</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#ownedby">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <skos:prefLabel xml:lang="en">ownedby</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#lends">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <skos:prefLabel xml:lang="en">lends</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Monocycle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Monocycle</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Cycle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Wheel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Wheel</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#colour">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <skos:prefLabel xml:lang="en">colour</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Bicycle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Bicycle</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Cycle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#PartsClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Parts Class</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Car">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Car</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Cycle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Cycle</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <skos:prefLabel xml:lang="en">source</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#for">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <skos:prefLabel xml:lang="en">for</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#nickName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <skos:prefLabel xml:lang="en">nick Name</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#YetAnotherC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Yet Another C</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Insurance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Insurance</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#forSub">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.com/ex#hasIns"/>
+    <skos:prefLabel xml:lang="en">for Sub</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <skos:prefLabel xml:lang="en">name</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#target">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <skos:prefLabel xml:lang="en">target</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#FancyWheel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Fancy Wheel</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Wheel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#hasInsSub">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.com/ex#for"/>
+    <skos:prefLabel xml:lang="en">has Ins Sub</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Boat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Boat</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#SomeOtherClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Some Other Class</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#hasIns">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <skos:prefLabel xml:lang="en">has Ins</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#ClassForQualAssoc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Class For Qual Assoc</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#engravedID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <skos:prefLabel xml:lang="en">engraved ID</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#RentalCompany">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <skos:prefLabel xml:lang="en">Rental Company</skos:prefLabel>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+  </rdf:Description>
+</rdf:RDF>
