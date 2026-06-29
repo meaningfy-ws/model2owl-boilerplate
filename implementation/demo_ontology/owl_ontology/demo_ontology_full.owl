@@ -3,39 +3,28 @@
      xml:base="http://data.europa.eu/a4g/ontology"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:ns="http://creativecommons.org/ns#"
-     xmlns:cfg="http://www.example.org#"
-     xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:dul="http://www.loa-cnr.it/ontologies/DUL.owl#"
-     xmlns:eli="http://data.europa.eu/eli/ontology#"
+     xmlns:m8g="http://data.europa.eu/m8g/"
      xmlns:ns2="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:org="http://www.w3.org/ns/org#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:www="http://www.example.org#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:adms="http://www.w3.org/ns/adms#"
      xmlns:dcam="http://purl.org/dc/dcam/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
-     xmlns:espd="https://github.com/ESPD/ESPD-EDM/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:locn="http://www.w3.org/ns/locn#"
-     xmlns:nuts="http://data.europa.eu/nuts/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:voaf="http://purl.org/vocommons/voaf#"
-     xmlns:cccev="http://data.europa.eu/m8g/"
      xmlns:rec54="http://www.w3.org/2001/02pd/rec54#"
-     xmlns:at-voc="http://publications.europa.eu/resource/authority/"
-     xmlns:person="http://www.w3.org/ns/person#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/"
      xmlns:schema1="http://schema.org/"
-     xmlns:core-res="http://data.europa.eu/a4g/ontology#"
-     xmlns:powder-s="http://www.w3.org/2007/05/powder-s#"
-     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
-     xmlns:at-voc-new="http://publications.europa.eu/resource/authority/new/"
-     xmlns:core-shape="http://data.europa.eu/a4g/data-shape#">
+     xmlns:ontology="http://data.europa.eu/eli/ontology#"
+     xmlns:powder-s="http://www.w3.org/2007/05/powder-s#">
     <owl:Ontology rdf:about="http://data.europa.eu/a4g/ontology">
         <owl:versionIRI rdf:resource="http://data.europa.eu/a4g/ontology-3.1.0"/>
         <owl:imports rdf:resource="http://data.europa.eu/eli/ontology#"/>
@@ -45,14 +34,14 @@
         <owl:imports rdf:resource="http://www.w3.org/ns/locn"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/person"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/org#"/>
-        <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-04</dct:created>
-        <dct:description xml:lang="en">This artefact consolidates both the definitions (OWL core) and the restrictions and inference-related specifications (OWL restrictions) of the eProcurement Ontology Core into a single self-contained ontology.
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-04</terms:created>
+        <terms:description xml:lang="en">This artefact consolidates both the definitions (OWL core) and the restrictions and inference-related specifications (OWL restrictions) of the eProcurement Ontology Core into a single self-contained ontology.
         The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.
-        The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-29</dct:issued>
-        <dct:license>CC BY 4.0</dct:license>
-        <dct:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</dct:publisher>
-        <dct:title xml:lang="en">ePO Core full</dct:title>
+        The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-29</terms:issued>
+        <terms:license>CC BY 4.0</terms:license>
+        <terms:publisher>http://publications.europa.eu/resource/authority/corporate-body/PUBL</terms:publisher>
+        <terms:title xml:lang="en">ePO Core full</terms:title>
         <vann:preferredNamespacePrefix>epo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://data.europa.eu/a4g/ontology#</vann:preferredNamespaceUri>
         <rdfs:comment>This version is automatically generated from demo_ontology.xml on 2026-06-29</rdfs:comment>
@@ -199,15 +188,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/abstract -->
-
-    <rdf:Description rdf:about="http://purl.org/dc/terms/abstract">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
-    </rdf:Description>
-    
-
-
     <!-- http://purl.org/dc/terms/accessRights -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accessRights">
@@ -260,7 +240,6 @@
     <!-- http://purl.org/dc/terms/available -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/available">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:AnnotationProperty>
     
@@ -269,7 +248,6 @@
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:AnnotationProperty>
     
@@ -304,7 +282,6 @@
     <!-- http://purl.org/dc/terms/created -->
 
     <rdf:Description rdf:about="http://purl.org/dc/terms/created">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Description>
     
@@ -322,7 +299,6 @@
     <!-- http://purl.org/dc/terms/date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/date">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:AnnotationProperty>
     
@@ -331,7 +307,6 @@
     <!-- http://purl.org/dc/terms/dateAccepted -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateAccepted">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:AnnotationProperty>
     
@@ -340,7 +315,6 @@
     <!-- http://purl.org/dc/terms/dateCopyrighted -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateCopyrighted">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:AnnotationProperty>
     
@@ -349,7 +323,6 @@
     <!-- http://purl.org/dc/terms/dateSubmitted -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/dateSubmitted">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:AnnotationProperty>
     
@@ -358,7 +331,6 @@
     <!-- http://purl.org/dc/terms/description -->
 
     <rdf:Description rdf:about="http://purl.org/dc/terms/description">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
     </rdf:Description>
     
@@ -419,7 +391,6 @@
     <!-- http://purl.org/dc/terms/identifier -->
 
     <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Description>
     
@@ -482,7 +453,6 @@
     <!-- http://purl.org/dc/terms/issued -->
 
     <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </rdf:Description>
@@ -527,7 +497,6 @@
     <!-- http://purl.org/dc/terms/modified -->
 
     <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </rdf:Description>
     
@@ -612,10 +581,7 @@
 
     <!-- http://purl.org/dc/terms/tableOfContents -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/tableOfContents">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/tableOfContents"/>
     
 
 
@@ -650,7 +616,6 @@
     <!-- http://purl.org/dc/terms/valid -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/valid">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:AnnotationProperty>
     
@@ -6436,9 +6401,7 @@ the Legal Resource under which the Service Concession Contracts are being define
 
     <!-- http://data.europa.eu/m8g/hasRelatedService -->
 
-    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/hasRelatedService">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/hasRelatedService"/>
     
 
 
@@ -6675,9 +6638,7 @@ For more structured data use the model in Time Ontology, see an &lt;a href=&quot
 
     <!-- http://data.europa.eu/m8g/relatedService -->
 
-    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/relatedService">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://data.europa.eu/m8g/relatedService"/>
     
 
 
@@ -8896,8 +8857,8 @@ For more structured data use the model in Time Ontology, see an &lt;a href=&quot
     <owl:DatatypeProperty rdf:about="http://data.europa.eu/a4g/ontology#hasRecurrenceDescription">
         <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#ProcurementObject"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-        <dct:references xml:lang="en">&lt;a href=&quot;https://example.com/link1&quot;&gt;Link 1&lt;/a&gt;</dct:references>
-        <cfg:usage xml:lang="en">Recommended</cfg:usage>
+        <terms:references xml:lang="en">&lt;a href=&quot;https://example.com/link1&quot;&gt;Link 1&lt;/a&gt;</terms:references>
+        <www:usage xml:lang="en">Recommended</www:usage>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <skos:definition xml:lang="en">Any additional information about the recurrence of the Procurement. Additional Information: For example estimated timing of the Procedure. (epo:ProcurementObject)</skos:definition>
         <skos:editorialNote xml:lang="en">Used by eForms BT-95</skos:editorialNote>
@@ -9527,7 +9488,7 @@ For more structured data use the model in Time Ontology, see an &lt;a href=&quot
     <owl:DatatypeProperty rdf:about="http://data.europa.eu/a4g/ontology#isRecurrent">
         <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#ProcurementObject"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <dct:references xml:lang="en">&lt;a href=&quot;https://example.com/link1&quot;&gt;Link 1&lt;/a&gt;, &lt;a href=&quot;https://example.com/link2&quot;&gt;Link 2&lt;/a&gt;</dct:references>
+        <terms:references xml:lang="en">&lt;a href=&quot;https://example.com/link1&quot;&gt;Link 1&lt;/a&gt;, &lt;a href=&quot;https://example.com/link2&quot;&gt;Link 2&lt;/a&gt;</terms:references>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <skos:definition xml:lang="en">The Procurement being notified is likely to be included in another procedure in the foreseeable future. Additional Information: For example, a regularly re-tendered municipal service. This does not include awarding multiple contracts within a single qualification system, framework agreement, or a dynamic purchasing system. (epo:ProcurementObject)</skos:definition>
         <skos:editorialNote xml:lang="en">Used by eForms BT-94</skos:editorialNote>
@@ -9989,6 +9950,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/abstract -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/abstract">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
     </owl:DatatypeProperty>
     
@@ -9999,7 +9961,6 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/alternative">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/person#Person"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -10007,8 +9968,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/available -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/available">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -10016,8 +9977,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -10025,8 +9986,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/created -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -10034,7 +9995,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/date -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
     </owl:DatatypeProperty>
     
 
@@ -10042,8 +10003,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/dateAccepted -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/dateAccepted">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -10051,8 +10012,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/dateCopyrighted -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/dateCopyrighted">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -10060,8 +10021,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/dateSubmitted -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/dateSubmitted">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -10069,6 +10030,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/description -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -10101,7 +10063,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/identifier -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
     </owl:DatatypeProperty>
     
 
@@ -10109,9 +10071,9 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
         <rdfs:domain rdf:resource="http://data.europa.eu/a4g/ontology#Document"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -10119,8 +10081,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/modified">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -10128,6 +10090,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/tableOfContents -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/tableOfContents">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/description"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
     </owl:DatatypeProperty>
     
@@ -10150,7 +10113,6 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -10158,8 +10120,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
     <!-- http://purl.org/dc/terms/valid -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/valid">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/date"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -14251,7 +14213,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:references xml:lang="en">&lt;a href=&quot;https://example.com/link1&quot;&gt;Link&lt;/a&gt;</dct:references>
+        <terms:references xml:lang="en">&lt;a href=&quot;https://example.com/link1&quot;&gt;Link&lt;/a&gt;</terms:references>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <skos:definition xml:lang="en">The whole or a division of goods, services or works to be procured. Additional Information: Anything that can specify the procurement content (i.e. goods, services, work) is a Procurement Object. In a sense, such an &quot;object&quot; can constitute the &quot;object of a Contract&quot;. To test whether something is a Procedure Object check if it can have a Purpose and/or CPV classification (&lt;i&gt;The CPV establishes a single classification system for public procurement aimed at standardising the references used by Contracting Authorities and entities to describe the subject of Procurement Contracts.&lt;/i&gt;). Note: Procedure, seems to be an exception from this rule. Because it is a conflated term: it carries process properties and &quot;purpose&quot; properties.</skos:definition>
         <skos:note xml:lang="en">This class should be used to represent the whole or a part of goods, services, or works intended for procurement. Each instance can be linked to a Purpose or a CPV classification to specify its content, facilitating standardization and clarity in procurement documentation.</skos:note>
@@ -14328,7 +14290,7 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
                 <owl:someValuesFrom rdf:resource="http://data.europa.eu/a4g/ontology#Buyer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:source xml:lang="en">Directive 2014/24/EU, Article 2, paragraphs 17 and 15.</dct:source>
+        <terms:source xml:lang="en">Directive 2014/24/EU, Article 2, paragraphs 17 and 15.</terms:source>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <skos:definition xml:lang="en">Role of a public or private body which offers ancillary purchasing activities on the market. Additional information: &quot;Ancillary Purchasing Activities&quot; means activities consisting in the provision of support to purchasing activities, in particular in the following forms: (a) technical infrastructure enabling Contracting Authorities to award Public Contracts or to conclude Framework Agreements for works, supplies or services; (b) advice on the conduct or design of public Procurement Procedures; (c) preparation and management of Procurement Procedures on behalf and for the account of the Contracting Authority concerned; This would be equivalent to the concept of &apos;ProcuringEntity&apos; in OCDS: &apos;The Entity managing the Procurement, which may be different from the Buyer who is paying / using the items being procured&apos;.</skos:definition>
         <skos:historyNote xml:lang="en">WG Approval 24/03/2020</skos:historyNote>
@@ -15093,8 +15055,8 @@ This approach is consistent with both schema.org and the W3C OWL Time Ontology.<
 
     <owl:Class rdf:about="http://data.europa.eu/a4g/ontology#SocialProcurement">
         <rdfs:subClassOf rdf:resource="http://data.europa.eu/a4g/ontology#StrategicProcurement"/>
-        <dct:source xml:lang="en">Buying Social - A Guide to Taking Account of Social Considerations in Public Procurement (Publications Office of the European Union, 2011) https://op.europa.eu/en/publication-detail/-/publication/cb70c481-0e29-4040-9be2-c408cddf081f/language-en
-</dct:source>
+        <terms:source xml:lang="en">Buying Social - A Guide to Taking Account of Social Considerations in Public Procurement (Publications Office of the European Union, 2011) https://op.europa.eu/en/publication-detail/-/publication/cb70c481-0e29-4040-9be2-c408cddf081f/language-en
+</terms:source>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <skos:definition xml:lang="en">Approach whereby Buyers seek to procure by fulfilling social objectives. Additional Information: Socially Responsible Public Procurement (SRPP) - ï¿½SRPPï¿½ means Procurement Operations that take into account one or more of the following social considerations: employment opportunities, decent work, compliance with social and labour rights, social inclusion (including persons with disabilities), equal opportunities, accessibility design for all, taking account of sustainability criteria, including ethical trade issues and wider voluntary compliance with corporate social responsibility (CSR), while observing the principles enshrined in the Treaty for the European Union (TFEU) and the Procurement Directives. See Article 18 and Annex X Directive 2014/24.</skos:definition>
         <skos:prefLabel xml:lang="en">Social Procurement</skos:prefLabel>
@@ -18252,9 +18214,9 @@ Implementers are free to choose their language. It is recommended to document th
     <!-- http://purl.org/dc/terms/ -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/">
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</dct:modified>
-        <dct:title xml:lang="en">DCMI Metadata Terms - other</dct:title>
-        <dct:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+        <terms:title xml:lang="en">DCMI Metadata Terms - other</terms:title>
     </owl:NamedIndividual>
     
 
@@ -18263,32 +18225,25 @@ Implementers are free to choose their language. It is recommended to document th
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Agent">
         <rdf:type rdf:resource="http://purl.org/dc/terms/AgentClass"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
     </owl:NamedIndividual>
     
 
 
     <!-- http://purl.org/dc/terms/AgentClass -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/AgentClass">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/AgentClass"/>
     
 
 
     <!-- http://purl.org/dc/terms/BibliographicResource -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/BibliographicResource">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/BibliographicResource"/>
     
 
 
     <!-- http://purl.org/dc/terms/Box -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Box">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Box"/>
     
 
 
@@ -18296,7 +18251,7 @@ Implementers are free to choose their language. It is recommended to document th
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/DCMIType">
         <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">DCMI Type Vocabulary</rdfs:label>
@@ -18309,7 +18264,7 @@ Implementers are free to choose their language. It is recommended to document th
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/DDC">
         <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of conceptual resources specified by the Dewey Decimal Classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">DDC</rdfs:label>
@@ -18320,17 +18275,13 @@ Implementers are free to choose their language. It is recommended to document th
 
     <!-- http://purl.org/dc/terms/FileFormat -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/FileFormat">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/FileFormat"/>
     
 
 
     <!-- http://purl.org/dc/terms/Frequency -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Frequency">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Frequency"/>
     
 
 
@@ -18338,7 +18289,7 @@ Implementers are free to choose their language. It is recommended to document th
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/IMT">
         <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of media types specified by the Internet Assigned Numbers Authority.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">IMT</rdfs:label>
@@ -18349,33 +18300,25 @@ Implementers are free to choose their language. It is recommended to document th
 
     <!-- http://purl.org/dc/terms/ISO3166 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ISO3166">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ISO3166"/>
     
 
 
     <!-- http://purl.org/dc/terms/ISO639-2 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ISO639-2">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ISO639-2"/>
     
 
 
     <!-- http://purl.org/dc/terms/ISO639-3 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ISO639-3">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ISO639-3"/>
     
 
 
     <!-- http://purl.org/dc/terms/Jurisdiction -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Jurisdiction">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Jurisdiction"/>
     
 
 
@@ -18383,7 +18326,7 @@ Implementers are free to choose their language. It is recommended to document th
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LCC">
         <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of conceptual resources specified by the Library of Congress Classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">LCC</rdfs:label>
@@ -18396,7 +18339,7 @@ Implementers are free to choose their language. It is recommended to document th
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LCSH">
         <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of labeled concepts specified by the Library of Congress Subject Headings.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">LCSH</rdfs:label>
@@ -18406,33 +18349,25 @@ Implementers are free to choose their language. It is recommended to document th
 
     <!-- http://purl.org/dc/terms/LicenseDocument -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LicenseDocument">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LicenseDocument"/>
     
 
 
     <!-- http://purl.org/dc/terms/LinguisticSystem -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LinguisticSystem">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LinguisticSystem"/>
     
 
 
     <!-- http://purl.org/dc/terms/Location -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Location">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Location"/>
     
 
 
     <!-- http://purl.org/dc/terms/LocationPeriodOrJurisdiction -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LocationPeriodOrJurisdiction"/>
     
 
 
@@ -18440,7 +18375,7 @@ Implementers are free to choose their language. It is recommended to document th
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MESH">
         <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of labeled concepts specified by the Medical Subject Headings.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">MeSH</rdfs:label>
@@ -18451,33 +18386,25 @@ Implementers are free to choose their language. It is recommended to document th
 
     <!-- http://purl.org/dc/terms/MediaType -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MediaType">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MediaType"/>
     
 
 
     <!-- http://purl.org/dc/terms/MediaTypeOrExtent -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MediaTypeOrExtent">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MediaTypeOrExtent"/>
     
 
 
     <!-- http://purl.org/dc/terms/MethodOfAccrual -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MethodOfAccrual">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MethodOfAccrual"/>
     
 
 
     <!-- http://purl.org/dc/terms/MethodOfInstruction -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MethodOfInstruction">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MethodOfInstruction"/>
     
 
 
@@ -18485,7 +18412,7 @@ Implementers are free to choose their language. It is recommended to document th
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/NLM">
         <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</terms:issued>
         <rdfs:comment xml:lang="en">The set of conceptual resources specified by the National Library of Medicine Classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">NLM</rdfs:label>
@@ -18496,113 +18423,85 @@ Implementers are free to choose their language. It is recommended to document th
 
     <!-- http://purl.org/dc/terms/Period -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Period">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Period"/>
     
 
 
     <!-- http://purl.org/dc/terms/PeriodOfTime -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/PeriodOfTime">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/PeriodOfTime"/>
     
 
 
     <!-- http://purl.org/dc/terms/PhysicalMedium -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/PhysicalMedium">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/PhysicalMedium"/>
     
 
 
     <!-- http://purl.org/dc/terms/PhysicalResource -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/PhysicalResource">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/PhysicalResource"/>
     
 
 
     <!-- http://purl.org/dc/terms/Point -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Point">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Point"/>
     
 
 
     <!-- http://purl.org/dc/terms/Policy -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Policy">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Policy"/>
     
 
 
     <!-- http://purl.org/dc/terms/ProvenanceStatement -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ProvenanceStatement">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ProvenanceStatement"/>
     
 
 
     <!-- http://purl.org/dc/terms/RFC1766 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RFC1766">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RFC1766"/>
     
 
 
     <!-- http://purl.org/dc/terms/RFC3066 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RFC3066">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RFC3066"/>
     
 
 
     <!-- http://purl.org/dc/terms/RFC4646 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RFC4646">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RFC4646"/>
     
 
 
     <!-- http://purl.org/dc/terms/RFC5646 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RFC5646">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RFC5646"/>
     
 
 
     <!-- http://purl.org/dc/terms/RightsStatement -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RightsStatement">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RightsStatement"/>
     
 
 
     <!-- http://purl.org/dc/terms/SizeOrDuration -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/SizeOrDuration">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/SizeOrDuration"/>
     
 
 
     <!-- http://purl.org/dc/terms/Standard -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Standard">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Standard"/>
     
 
 
@@ -18610,7 +18509,7 @@ Implementers are free to choose their language. It is recommended to document th
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/TGN">
         <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of places specified by the Getty Thesaurus of Geographic Names.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">TGN</rdfs:label>
@@ -18623,7 +18522,7 @@ Implementers are free to choose their language. It is recommended to document th
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/UDC">
         <rdf:type rdf:resource="http://purl.org/dc/dcam/VocabularyEncodingScheme"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of conceptual resources specified by the Universal Decimal Classification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">UDC</rdfs:label>
@@ -18634,234 +18533,178 @@ Implementers are free to choose their language. It is recommended to document th
 
     <!-- http://purl.org/dc/terms/URI -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/URI">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/URI"/>
     
 
 
     <!-- http://purl.org/dc/terms/W3CDTF -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/W3CDTF">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/W3CDTF"/>
     
 
 
     <!-- http://purl.org/dc/terms/abstract -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/abstract">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/abstract"/>
     
 
 
     <!-- http://purl.org/dc/terms/accessRights -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/accessRights">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-02-15</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/accessRights"/>
     
 
 
     <!-- http://purl.org/dc/terms/accrualMethod -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/accrualMethod">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/accrualMethod"/>
     
 
 
     <!-- http://purl.org/dc/terms/accrualPeriodicity -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/accrualPeriodicity"/>
     
 
 
     <!-- http://purl.org/dc/terms/accrualPolicy -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/accrualPolicy">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/accrualPolicy"/>
     
 
 
     <!-- http://purl.org/dc/terms/alternative -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/alternative">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/alternative"/>
     
 
 
     <!-- http://purl.org/dc/terms/audience -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/audience">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/audience"/>
     
 
 
     <!-- http://purl.org/dc/terms/available -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/available">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/available"/>
     
 
 
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/bibliographicCitation">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-02-15</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
     
 
 
     <!-- http://purl.org/dc/terms/conformsTo -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/conformsTo">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/conformsTo"/>
     
 
 
     <!-- http://purl.org/dc/terms/contributor -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/contributor">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
     <!-- http://purl.org/dc/terms/coverage -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/coverage">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/coverage"/>
     
 
 
     <!-- http://purl.org/dc/terms/created -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/created">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/created"/>
     
 
 
     <!-- http://purl.org/dc/terms/creator -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/creator">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
     <!-- http://purl.org/dc/terms/date -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/date">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/date"/>
     
 
 
     <!-- http://purl.org/dc/terms/dateAccepted -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/dateAccepted">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/dateAccepted"/>
     
 
 
     <!-- http://purl.org/dc/terms/dateCopyrighted -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/dateCopyrighted">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/dateCopyrighted"/>
     
 
 
     <!-- http://purl.org/dc/terms/dateSubmitted -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/dateSubmitted">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/dateSubmitted"/>
     
 
 
     <!-- http://purl.org/dc/terms/description -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/description">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/description"/>
     
 
 
     <!-- http://purl.org/dc/terms/educationLevel -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/educationLevel">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/educationLevel"/>
     
 
 
     <!-- http://purl.org/dc/terms/extent -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/extent">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/extent"/>
     
 
 
     <!-- http://purl.org/dc/terms/format -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/format">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/format"/>
     
 
 
     <!-- http://purl.org/dc/terms/hasFormat -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/hasFormat">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/hasFormat"/>
     
 
 
     <!-- http://purl.org/dc/terms/hasPart -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/hasPart">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/hasPart"/>
     
 
 
     <!-- http://purl.org/dc/terms/hasVersion -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/hasVersion">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/hasVersion"/>
     
 
 
     <!-- http://purl.org/dc/terms/identifier -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/identifier">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/identifier"/>
     
 
 
     <!-- http://purl.org/dc/terms/instructionalMethod -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/instructionalMethod">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dct:issued>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/MethodOfInstruction"/>
-        <dct:description xml:lang="en">Instructional Method typically includes ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback.</dct:description>
+        <terms:description xml:lang="en">Instructional Method typically includes ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</terms:issued>
         <rdfs:comment xml:lang="en">A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Instructional Method</rdfs:label>
@@ -18871,106 +18714,82 @@ Implementers are free to choose their language. It is recommended to document th
 
     <!-- http://purl.org/dc/terms/isFormatOf -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isFormatOf">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isFormatOf"/>
     
 
 
     <!-- http://purl.org/dc/terms/isPartOf -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isPartOf">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isPartOf"/>
     
 
 
     <!-- http://purl.org/dc/terms/isReferencedBy -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isReferencedBy">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isReferencedBy"/>
     
 
 
     <!-- http://purl.org/dc/terms/isReplacedBy -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isReplacedBy">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isReplacedBy"/>
     
 
 
     <!-- http://purl.org/dc/terms/isRequiredBy -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isRequiredBy">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isRequiredBy"/>
     
 
 
     <!-- http://purl.org/dc/terms/isVersionOf -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isVersionOf">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/isVersionOf"/>
     
 
 
     <!-- http://purl.org/dc/terms/issued -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/issued">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/issued"/>
     
 
 
     <!-- http://purl.org/dc/terms/language -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/language">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/language"/>
     
 
 
     <!-- http://purl.org/dc/terms/license -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/license">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-06-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
     <!-- http://purl.org/dc/terms/mediator -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/mediator">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/mediator"/>
     
 
 
     <!-- http://purl.org/dc/terms/medium -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/medium">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/medium"/>
     
 
 
     <!-- http://purl.org/dc/terms/modified -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/modified">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 
     <!-- http://purl.org/dc/terms/provenance -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/provenance">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-09-20</dct:issued>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/ProvenanceStatement"/>
-        <dct:description xml:lang="en">The statement may include a description of any changes successive custodians made to the resource.</dct:description>
+        <terms:description xml:lang="en">The statement may include a description of any changes successive custodians made to the resource.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-09-20</terms:issued>
         <rdfs:comment xml:lang="en">A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Provenance</rdfs:label>
@@ -18980,58 +18799,46 @@ Implementers are free to choose their language. It is recommended to document th
 
     <!-- http://purl.org/dc/terms/publisher -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/publisher">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/publisher"/>
     
 
 
     <!-- http://purl.org/dc/terms/references -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/references">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/references"/>
     
 
 
     <!-- http://purl.org/dc/terms/relation -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/relation">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/relation"/>
     
 
 
     <!-- http://purl.org/dc/terms/replaces -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/replaces">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/replaces"/>
     
 
 
     <!-- http://purl.org/dc/terms/requires -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/requires">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/requires"/>
     
 
 
     <!-- http://purl.org/dc/terms/rights -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/rights">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/rights"/>
     
 
 
     <!-- http://purl.org/dc/terms/rightsHolder -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/rightsHolder">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-06-14</dct:issued>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Agent"/>
-        <dct:description xml:lang="en">Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided.</dct:description>
+        <terms:description xml:lang="en">Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-06-14</terms:issued>
         <rdfs:comment xml:lang="en">A person or organization owning or managing rights over the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Rights Holder</rdfs:label>
@@ -19041,65 +18848,49 @@ Implementers are free to choose their language. It is recommended to document th
 
     <!-- http://purl.org/dc/terms/source -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/source">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/source"/>
     
 
 
     <!-- http://purl.org/dc/terms/spatial -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/spatial">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/spatial"/>
     
 
 
     <!-- http://purl.org/dc/terms/subject -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/subject">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/subject"/>
     
 
 
     <!-- http://purl.org/dc/terms/tableOfContents -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/tableOfContents">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/tableOfContents"/>
     
 
 
     <!-- http://purl.org/dc/terms/temporal -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/temporal">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/temporal"/>
     
 
 
     <!-- http://purl.org/dc/terms/title -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/title">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
     <!-- http://purl.org/dc/terms/type -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/type">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/type"/>
     
 
 
     <!-- http://purl.org/dc/terms/valid -->
 
-    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/valid">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/valid"/>
     
 
 
@@ -19381,84 +19172,84 @@ Implementers are free to choose their language. It is recommended to document th
         <skos:prefLabel xml:lang="en">certification-label-type</skos:prefLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Agent">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A resource that acts or has the power to act.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Agent</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/AgentClass">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A group of agents.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Agent Class</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/BibliographicResource">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A book, article, or other documentary resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Bibliographic Resource</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Box">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of regions in space defined by their geographic coordinates according to the DCMI Box Encoding Scheme.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">DCMI Box</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-box/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/FileFormat">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A digital resource format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">File Format</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Frequency">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A rate at which something recurs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Frequency</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/ISO3166">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of codes listed in ISO 3166-1 for the representation of names of countries.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">ISO 3166</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.iso.org/obp/ui/#search"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/ISO639-2">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The three-letter alphabetic codes listed in ISO639-2 for the representation of names of languages.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">ISO 639-2</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://lcweb.loc.gov/standards/iso639-2/langhome.html"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/ISO639-3">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">The set of three-letter codes listed in ISO 639-3 for the representation of names of languages.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">ISO 639-3</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.sil.org/iso639-3/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Jurisdiction">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">The extent or range of judicial, law enforcement, or other authority.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Jurisdiction</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/LicenseDocument">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A legal document giving official permission to do something with a resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">License Document</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/LinguisticSystem">
-        <dct:description xml:lang="en">Written, spoken, sign, and computer languages are linguistic systems.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Written, spoken, sign, and computer languages are linguistic systems.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A system of signs, symbols, sounds, gestures, or rules used in communication.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Linguistic System</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A spatial region or named place.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Location</rdfs:label>
@@ -19466,185 +19257,185 @@ Implementers are free to choose their language. It is recommended to document th
         <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/LocationPeriodOrJurisdiction">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A location, period of time, or jurisdiction.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Location, Period, or Jurisdiction</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/MediaType">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A file format or physical medium.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Media Type</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/MediaTypeOrExtent">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A media type or extent.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Media Type or Extent</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/MethodOfAccrual">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A method by which resources are added to a collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Method of Accrual</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/MethodOfInstruction">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A process that is used to engender knowledge, attitudes, and skills.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Method of Instruction</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Period">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of time intervals defined by their limits according to the DCMI Period Encoding Scheme.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">DCMI Period</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-period/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/PeriodOfTime">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">An interval of time that is named or defined by its start and end dates.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Period of Time</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/PhysicalMedium">
-        <dct:description xml:lang="en">Examples include paper, canvas, or DVD.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Examples include paper, canvas, or DVD.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A physical material or carrier.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Physical Medium</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/PhysicalResource">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A material thing.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Physical Resource</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Point">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of points in space defined by their geographic coordinates according to the DCMI Point Encoding Scheme.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">DCMI Point</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.dublincore.org/specifications/dublin-core/dcmi-point/"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Policy">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Policy</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/ProvenanceStatement">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">Any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Provenance Statement</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/RFC1766">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of tags, constructed according to RFC 1766, for the identification of languages.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">RFC 1766</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc1766.txt"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/RFC3066">
-        <dct:description xml:lang="en">RFC 3066 has been obsoleted by RFC 4646.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dct:issued>
+        <terms:description xml:lang="en">RFC 3066 has been obsoleted by RFC 4646.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</terms:issued>
         <rdfs:comment xml:lang="en">The set of tags constructed according to RFC 3066 for the identification of languages.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">RFC 3066</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc3066.txt"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/RFC4646">
-        <dct:description xml:lang="en">RFC 4646 obsoletes RFC 3066.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">RFC 4646 obsoletes RFC 3066.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">The set of tags constructed according to RFC 4646 for the identification of languages.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">RFC 4646</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/RFC5646">
-        <dct:description xml:lang="en">RFC 5646 obsoletes RFC 4646.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-11</dct:issued>
+        <terms:description xml:lang="en">RFC 5646 obsoletes RFC 4646.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-10-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of tags constructed according to RFC 5646 for the identification of languages.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">RFC 5646</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc5646.txt"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/RightsStatement">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Rights Statement</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/SizeOrDuration">
-        <dct:description xml:lang="en">Examples include a number of pages, a specification of length, width, and breadth, or a period in hours, minutes, and seconds.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Examples include a number of pages, a specification of length, width, and breadth, or a period in hours, minutes, and seconds.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A dimension or extent, or a time taken to play or execute.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Size or Duration</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/Standard">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A reference point against which other things can be evaluated or compared.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Standard</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/URI">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">URI</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc3986.txt"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/W3CDTF">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The set of dates and times constructed according to the W3C Date and Time Formats Specification.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">W3C-DTF</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/NOTE-datetime"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/abstract">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A summary of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Abstract</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/accessRights">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
-        <dct:description xml:lang="en">Access Rights may include information regarding access or restrictions based on privacy, security, or other policies.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-02-15</dct:issued>
+        <terms:description xml:lang="en">Access Rights may include information regarding access or restrictions based on privacy, security, or other policies.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-02-15</terms:issued>
         <rdfs:comment xml:lang="en">Information about who access the resource or an indication of its security status.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Access Rights</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/accrualMethod">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/MethodOfAccrual"/>
-        <dct:description xml:lang="en">Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary [[DCMI-ACCRUALMETHOD](https://dublincore.org/groups/collections/accrual-method/)].</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary [[DCMI-ACCRUALMETHOD](https://dublincore.org/groups/collections/accrual-method/)].</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</terms:issued>
         <rdfs:comment xml:lang="en">The method by which items are added to a collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Accrual Method</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Frequency"/>
-        <dct:description xml:lang="en">Recommended practice is to use a value from the Collection Description Frequency Vocabulary [[DCMI-COLLFREQ](https://dublincore.org/groups/collections/frequency/)].</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to use a value from the Collection Description Frequency Vocabulary [[DCMI-COLLFREQ](https://dublincore.org/groups/collections/frequency/)].</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</terms:issued>
         <rdfs:comment xml:lang="en">The frequency with which items are added to a collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Accrual Periodicity</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/accrualPolicy">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Policy"/>
-        <dct:description xml:lang="en">Recommended practice is to use a value from the Collection Description Accrual Policy Vocabulary [[DCMI-ACCRUALPOLICY](https://dublincore.org/groups/collections/accrual-policy/)].</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to use a value from the Collection Description Accrual Policy Vocabulary [[DCMI-ACCRUALPOLICY](https://dublincore.org/groups/collections/accrual-policy/)].</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-06-13</terms:issued>
         <rdfs:comment xml:lang="en">The policy governing the addition of items to a collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Accrual Policy</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/alternative">
-        <dct:description xml:lang="en">The distinction between titles and alternative titles is application-specific.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">The distinction between titles and alternative titles is application-specific.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">An alternative name for the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Alternative Title</rdfs:label>
@@ -19654,29 +19445,29 @@ Implementers are free to choose their language. It is recommended to document th
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/audience">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/AgentClass"/>
-        <dct:description xml:lang="en">Recommended practice is to use this property with non-literal values from a vocabulary of audience types.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to use this property with non-literal values from a vocabulary of audience types.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</terms:issued>
         <rdfs:comment xml:lang="en">A class of agents for whom the resource is intended or useful.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Audience</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/available">
-        <dct:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">Date that the resource became or will become available.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Date Available</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/bibliographicCitation">
-        <dct:description xml:lang="en">Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-02-15</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-02-15</terms:issued>
         <rdfs:comment xml:lang="en">A bibliographic reference for the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Bibliographic Citation</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/conformsTo">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Standard"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</terms:issued>
         <rdfs:comment xml:lang="en">An established standard to which the described resource conforms.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Conforms To</rdfs:label>
@@ -19685,8 +19476,8 @@ Implementers are free to choose their language. It is recommended to document th
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Agent"/>
-        <dct:description xml:lang="en">The guidelines for using names of persons or organizations as creators apply to contributors.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">The guidelines for using names of persons or organizations as creators apply to contributors.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Contributor</rdfs:label>
@@ -19695,58 +19486,58 @@ Implementers are free to choose their language. It is recommended to document th
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Jurisdiction"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Location"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Period"/>
-        <dct:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Coverage</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/created">
-        <dct:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">Date of creation of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Date Created</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Agent"/>
-        <dct:description xml:lang="en">Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">An entity responsible for making the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Creator</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/date">
-        <dct:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character.  Either the start or end date may be missing.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a &apos;/&apos; (slash) character.  Either the start or end date may be missing.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Date</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/dateAccepted">
-        <dct:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or an article (accepted by a journal).</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or an article (accepted by a journal).</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</terms:issued>
         <rdfs:comment xml:lang="en">Date of acceptance of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Date Accepted</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/dateCopyrighted">
-        <dct:description xml:lang="en">Typically a year.  Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dct:issued>
+        <terms:description xml:lang="en">Typically a year.  Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</terms:issued>
         <rdfs:comment xml:lang="en">Date of copyright of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Date Copyrighted</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/dateSubmitted">
-        <dct:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a &apos;Date Submitted&apos; may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal).</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a &apos;Date Submitted&apos; may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal).</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</terms:issued>
         <rdfs:comment xml:lang="en">Date of submission of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Date Submitted</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/description">
-        <dct:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Description</rdfs:label>
@@ -19755,15 +19546,15 @@ Implementers are free to choose their language. It is recommended to document th
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/educationLevel">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/AgentClass"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-07-13</terms:issued>
         <rdfs:comment xml:lang="en">A class of agents, defined in terms of progression through an educational or training context, for which the described resource is intended.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Audience Education Level</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/extent">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/SizeOrDuration"/>
-        <dct:description xml:lang="en">Recommended practice is to specify the file size in megabytes and duration in ISO 8601 format.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to specify the file size in megabytes and duration in ISO 8601 format.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The size or duration of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Extent</rdfs:label>
@@ -19771,85 +19562,85 @@ Implementers are free to choose their language. It is recommended to document th
     <rdf:Description rdf:about="http://purl.org/dc/terms/format">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Extent"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/MediaType"/>
-        <dct:description xml:lang="en">Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Format</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/hasFormat">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Format Of.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Format Of.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource that is substantially the same as the pre-existing described resource, but in another format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Has Format</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Part Of.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Part Of.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource that is included either physically or logically in the described resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Has Part</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/hasVersion">
-        <dct:description xml:lang="en">Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource that is a version, edition, or adaptation of the described resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Has Version</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
-        <dct:description xml:lang="en">Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Identifier</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/isFormatOf">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Has Format.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Has Format.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A pre-existing related resource that is substantially the same as the described resource, but in another format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Is Format Of</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/isPartOf">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Has Part.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Has Part.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource in which the described resource is physically or logically included.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Is Part Of</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/isReferencedBy">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of References.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of References.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource that references, cites, or otherwise points to the described resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Is Referenced By</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/isReplacedBy">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Replaces.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Replaces.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource that supplants, displaces, or supersedes the described resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Is Replaced By</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/isRequiredBy">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Requires.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Requires.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource that requires the described resource to support its function, delivery, or coherence.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Is Required By</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/isVersionOf">
-        <dct:description xml:lang="en">Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Has Version.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Has Version.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource of which the described resource is a version, edition, or adaptation.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Is Version Of</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
-        <dct:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">Date of formal issuance of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Date Issued</rdfs:label>
@@ -19859,8 +19650,8 @@ Implementers are free to choose their language. It is recommended to document th
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/language">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
-        <dct:description xml:lang="en">Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Language</rdfs:label>
@@ -19869,16 +19660,16 @@ Implementers are free to choose their language. It is recommended to document th
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/license">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
-        <dct:description xml:lang="en">Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-06-14</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-06-14</terms:issued>
         <rdfs:comment xml:lang="en">A legal document giving official permission to do something with the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">License</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/mediator">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/AgentClass"/>
-        <dct:description xml:lang="en">In an educational context, a mediator might be a parent, teacher, teaching assistant, or care-giver.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</dct:issued>
+        <terms:description xml:lang="en">In an educational context, a mediator might be a parent, teacher, teaching assistant, or care-giver.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-05-21</terms:issued>
         <rdfs:comment xml:lang="en">An entity that mediates access to the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Mediator</rdfs:label>
@@ -19886,97 +19677,97 @@ Implementers are free to choose their language. It is recommended to document th
     <rdf:Description rdf:about="http://purl.org/dc/terms/medium">
         <dcam:domainIncludes rdf:resource="http://purl.org/dc/terms/PhysicalResource"/>
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/PhysicalMedium"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">The material or physical carrier of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Medium</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
-        <dct:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">Date on which the resource was changed.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Date Modified</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Agent"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Publisher</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/references">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Referenced By.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Referenced By.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource that is referenced, cited, or otherwise pointed to by the described resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">References</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/relation">
-        <dct:description xml:lang="en">Recommended practice is to identify the related resource by means of a URI.  If this is not possible or feasible, a string conforming to a formal identification system may be provided.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to identify the related resource by means of a URI.  If this is not possible or feasible, a string conforming to a formal identification system may be provided.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Relation</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/replaces">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Replaced By.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Replaced By.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource that is supplanted, displaced, or superseded by the described resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Replaces</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/requires">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Required By.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. This property is an inverse property of Is Required By.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A related resource that is required by the described resource to support its function, delivery, or coherence.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Requires</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/rights">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
-        <dct:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Rights</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/source">
-        <dct:description xml:lang="en">This property is intended to be used with non-literal values. The described resource may be derived from the related resource in whole or in part. Best practice is to identify the related resource by means of a URI or a string conforming to a formal identification system.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">This property is intended to be used with non-literal values. The described resource may be derived from the related resource in whole or in part. Best practice is to identify the related resource by means of a URI or a string conforming to a formal identification system.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Source</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/spatial">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/Location"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">Spatial characteristics of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Spatial Coverage</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/subject">
-        <dct:description xml:lang="en">Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A topic of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Subject</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/tableOfContents">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">A list of subunits of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Table Of Contents</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/temporal">
         <dcam:rangeIncludes rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">Temporal characteristics of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Temporal Coverage</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Title</rdfs:label>
@@ -19985,8 +19776,8 @@ Implementers are free to choose their language. It is recommended to document th
         <skos:prefLabel xml:lang="en">title</skos:prefLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/type">
-        <dct:description xml:lang="en">Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:issued>
         <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Type</rdfs:label>
@@ -19994,8 +19785,8 @@ Implementers are free to choose their language. It is recommended to document th
         <skos:prefLabel xml:lang="en">type</skos:prefLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.org/dc/terms/valid">
-        <dct:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</dct:description>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</dct:issued>
+        <terms:description xml:lang="en">Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2000-07-11</terms:issued>
         <rdfs:comment xml:lang="en">Date (often a range) of validity of a resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/a4g/ontology"/>
         <rdfs:label xml:lang="en">Date Valid</rdfs:label>

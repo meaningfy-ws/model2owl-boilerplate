@@ -2478,12 +2478,12 @@ eruptions."""@en ;
 :NoticeAwardInformation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :DirectAwardPrenotificationNotice ;
-            owl:onProperty :describesDirectAwardPrenotificationNotice ],
+            owl:onClass :ResultNotice ;
+            owl:onProperty :describesResultNotice ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :ResultNotice ;
-            owl:onProperty :describesResultNotice ] .
+            owl:onClass :DirectAwardPrenotificationNotice ;
+            owl:onProperty :describesDirectAwardPrenotificationNotice ] .
 
 :VoluntaryEx-AnteTransparencyNotice a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
@@ -2509,23 +2509,23 @@ dc:date a owl:AnnotationProperty .
 :CompletionNotice a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :refersToProcedure ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onProperty :announcesReviewObject ;
-            owl:someValuesFrom :ReviewObject ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :NoticeAwardInformation ;
-            owl:onProperty :refersToNoticeAwardInformation ],
+            owl:onProperty :refersToLot ;
+            owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:onClass :Contract ;
             owl:onProperty :announcesCompletionOfContract ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
-            owl:onProperty :refersToLot ;
-            owl:someValuesFrom :Lot ],
+            owl:onProperty :announcesReviewObject ;
+            owl:someValuesFrom :ReviewObject ],
+        [ a owl:Restriction ;
+            owl:onClass :Procedure ;
+            owl:onProperty :refersToProcedure ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :NoticeAwardInformation ;
+            owl:onProperty :refersToNoticeAwardInformation ],
         :Notice ;
     skos:definition "An announcement of the end of a Procurement by a Buyer."@en ;
     skos:prefLabel "Completion Notice"@en .
@@ -2549,19 +2549,19 @@ dc:date a owl:AnnotationProperty .
 :DirectAwardPrenotificationNotice a owl:Class ;
     rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty :announcesRole ;
-            owl:someValuesFrom :AgentInRole ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :NoticeAwardInformation ;
-            owl:onProperty :announcesNoticeAwardInformation ],
+            owl:onProperty :announcesLot ;
+            owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:onClass :Procedure ;
             owl:onProperty :announcesProcedure ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
-            owl:onProperty :announcesLot ;
-            owl:someValuesFrom :Lot ],
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :NoticeAwardInformation ;
+            owl:onProperty :announcesNoticeAwardInformation ],
+        [ a owl:Restriction ;
+            owl:onProperty :announcesRole ;
+            owl:someValuesFrom :AgentInRole ],
         :Notice ;
     skos:definition "Notice which sets out the Buyer's purchasing intention to award a Contract without prior notification of Competition."@en ;
     skos:prefLabel "Direct Award Prenotification Notice"@en .
@@ -2589,12 +2589,12 @@ dc:relation a owl:AnnotationProperty .
             owl:onClass :NoticeAwardInformation ;
             owl:onProperty :refersToNoticeAwardInformation ],
         [ a owl:Restriction ;
+            owl:onProperty :refersToLot ;
+            owl:someValuesFrom :Lot ],
+        [ a owl:Restriction ;
             owl:onClass :ContractAmendment ;
             owl:onProperty :announcesContractAmendment ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onProperty :refersToLot ;
-            owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:onClass :Contract ;
             owl:onProperty :refersToContractToBeModified ;
@@ -2610,11 +2610,11 @@ dc:relation a owl:AnnotationProperty .
             owl:onClass :NoticeAwardInformation ;
             owl:onProperty :announcesNoticeAwardInformation ],
         [ a owl:Restriction ;
-            owl:onProperty :refersToLot ;
-            owl:someValuesFrom :Lot ],
-        [ a owl:Restriction ;
             owl:onProperty :refersToRole ;
             owl:someValuesFrom :AgentInRole ],
+        [ a owl:Restriction ;
+            owl:onProperty :refersToLot ;
+            owl:someValuesFrom :Lot ],
         [ a owl:Restriction ;
             owl:onClass :Procedure ;
             owl:onProperty :refersToProcedure ;
