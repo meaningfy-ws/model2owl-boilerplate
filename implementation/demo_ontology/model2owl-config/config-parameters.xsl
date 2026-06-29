@@ -99,7 +99,7 @@
     <!-- Optional OWL-full artefact: when true, `make owl-full` consolidates the OWL core
          and OWL restrictions artefacts into a single self-contained ontology and drops the
          standalone core/restrictions outputs. Disabled by default. -->
-    <xsl:variable name="generateOWLFull" select="fn:true()"/>
+    <xsl:variable name="generateOWLFull" select="fn:false()"/>
 
     <!--    This set of variables controls generation of comments and how they will generate in the output -->
     <xsl:variable name="commentsGeneration" select="fn:true()"/>
