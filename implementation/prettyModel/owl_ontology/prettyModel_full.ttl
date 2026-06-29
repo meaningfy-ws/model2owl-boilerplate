@@ -181,11 +181,11 @@ skos:prefLabel a owl:AnnotationProperty .
 :Cycle a owl:Class ;
     rdfs:isDefinedBy :prettyModel ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:short ;
             owl:onProperty :colour ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:short ;
             owl:onProperty :colour ],
         :Vehicle ;
@@ -216,16 +216,16 @@ skos:prefLabel a owl:AnnotationProperty .
 :Vehicle a owl:Class ;
     rdfs:isDefinedBy :prettyModel ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:short ;
-            owl:onProperty :name ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:onDataRange xsd:long ;
             owl:onProperty :nickName ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:int ;
             owl:onProperty :engravedID ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :name ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:prefLabel "Vehicle"@en .
 

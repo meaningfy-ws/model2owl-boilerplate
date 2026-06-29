@@ -7,6 +7,149 @@
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
    xmlns:vann="http://purl.org/vocab/vann/"
 >
+  <rdf:Description rdf:about="http://example.com/ex#BoringWheel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Wheel"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Boring Wheel</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd41e09802abf4aa99a9340e70557f2bc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#colour"/>
+    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nee6d50b4a4f14086becf06e9aa51c8c6">
+    <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Vehicle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N45b42300699349b194ae5cdeff6b3f9c"/>
+    <rdfs:subClassOf rdf:nodeID="Nad3e935863da4a94b791e9b7abb4574a"/>
+    <rdfs:subClassOf rdf:nodeID="N3968dcb4f2744d928cb7fed4d43bd61e"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Vehicle</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N24c826d10192423bb836eceff92e0d50">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:unionOf rdf:nodeID="Na1764d995a8a4ea2a7714772e4369e4b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#ownedby">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdfs:range rdf:resource="http://example.com/ex#RentalCompany"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">ownedby</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne5a4c8c470ca4f11ad2b7edade31bb24">
+    <rdf:first rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#YetAnotherC">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Yet Another C</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Wheel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Wheel</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#source">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ex#SomeOtherClass"/>
+    <rdfs:range rdf:resource="http://example.com/ex#ClassForQualAssoc"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">source</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfccba58283fd4a57bd55fb927a5e583b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Ncd0e03c8c2cd4a79bcdc57ca7af487aa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#RentalCompany">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N2f7c46cf3e8f4ab782effe1962abfafa"/>
+    <rdfs:subClassOf rdf:nodeID="Ndd4c509ce54c47118287770e676313e7"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Rental Company</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#FancyWheel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Wheel"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Fancy Wheel</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne872e6b3705c43128e3d51f6b953ead6">
+    <rdf:first rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#PartsClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Parts Class</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#engravedID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">engraved ID</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Contractor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Contractor</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#colour">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ex#Cycle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">colour</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#lends">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ex#RentalCompany"/>
+    <rdfs:range rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">lends</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3968dcb4f2744d928cb7fed4d43bd61e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#nickName"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#ClassForQualAssoc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Class For Qual Assoc</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#hasInsSub">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://example.com/ex#for"/>
+    <rdfs:domain rdf:resource="http://example.com/ex#Boat"/>
+    <rdfs:range rdf:resource="http://example.com/ex#Insurance"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">has Ins Sub</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#hasIns">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="N6f6dc9431c0f4c9781112adaec3522f9"/>
+    <rdfs:range rdf:resource="http://example.com/ex#Insurance"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">has Ins</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6d4d8c6aba144afdb8175a00602934c3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#for"/>
+    <owl:someValuesFrom rdf:resource="http://example.com/ex#Vehicle"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex#forSub">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://example.com/ex#hasIns"/>
@@ -15,22 +158,30 @@
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
     <skos:prefLabel xml:lang="en">for Sub</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#Boat">
+  <rdf:Description rdf:nodeID="Na1764d995a8a4ea2a7714772e4369e4b">
+    <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+    <rdf:rest rdf:nodeID="Nee6d50b4a4f14086becf06e9aa51c8c6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Bicycle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://example.com/ex#Vehicle"/>
-    <rdfs:subClassOf rdf:nodeID="N65750b2660564e41b7506895b0e4eeec"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Cycle"/>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Boat</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Bicycle</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N871ae0d1e79c40778157d27d633a26d3">
-    <rdf:first rdf:resource="http://example.com/ex#Vehicle"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:about="http://example.com/ex#name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:nodeID="Nfccba58283fd4a57bd55fb927a5e583b"/>
+    <rdfs:range rdf:nodeID="N24c826d10192423bb836eceff92e0d50"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">name</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nac523ee59b904edab12c710cf294a76b">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://example.com/ex#nickName"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  <rdf:Description rdf:about="http://example.com/ex#for">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ex#Insurance"/>
+    <rdfs:range rdf:nodeID="N202a91abc81944068959eb8218f63ff1"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">for</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex#nickName">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -40,49 +191,25 @@
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
     <skos:prefLabel xml:lang="en">nick Name</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#Wheel">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Wheel</skos:prefLabel>
+  <rdf:Description rdf:nodeID="N45b42300699349b194ae5cdeff6b3f9c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#engravedID"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#lends">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://example.com/ex#RentalCompany"/>
-    <rdfs:range rdf:resource="http://example.com/ex#Vehicle"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">lends</skos:prefLabel>
+  <rdf:Description rdf:nodeID="Ndd4c509ce54c47118287770e676313e7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#name"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#Monocycle">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://example.com/ex#Cycle"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Monocycle</skos:prefLabel>
+  <rdf:Description rdf:nodeID="N80b780c10bfd4e5eb62c1569317a1250">
+    <rdf:first rdf:resource="http://example.com/ex#SomeOtherClass"/>
+    <rdf:rest rdf:nodeID="Na5be7a7e51b347189f740f403fa12742"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#for">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://example.com/ex#Insurance"/>
-    <rdfs:range rdf:nodeID="Neb2d9917a1ea433dbfa093a9df49174e"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">for</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#source">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://example.com/ex#SomeOtherClass"/>
-    <rdfs:range rdf:resource="http://example.com/ex#ClassForQualAssoc"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">source</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#BoringWheel">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://example.com/ex#Wheel"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Boring Wheel</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#Insurance">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="N2d9e0c1c402343acad38ced038e778d0"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Insurance</skos:prefLabel>
+  <rdf:Description rdf:nodeID="N4ec1b8fbc18b480797657c85c38904ed">
+    <rdf:first rdf:resource="http://example.com/ex#SomeOtherClass"/>
+    <rdf:rest rdf:nodeID="Ne5a4c8c470ca4f11ad2b7edade31bb24"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
@@ -101,92 +228,11 @@
     <rdfs:label xml:lang="en">prettyModel — core</rdfs:label>
     <owl:versionInfo>1.0.0</owl:versionInfo>
   </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#target">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://example.com/ex#ClassForQualAssoc"/>
-    <rdfs:range rdf:resource="http://example.com/ex#SomeOtherClass"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">target</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#FancyWheel">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://example.com/ex#Wheel"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Fancy Wheel</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#colour">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:domain rdf:resource="http://example.com/ex#Cycle"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">colour</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#hasInsSub">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://example.com/ex#for"/>
-    <rdfs:domain rdf:resource="http://example.com/ex#Boat"/>
-    <rdfs:range rdf:resource="http://example.com/ex#Insurance"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">has Ins Sub</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#Cycle">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://example.com/ex#Vehicle"/>
-    <rdfs:subClassOf rdf:nodeID="Nf953721cdf164e89967fb0f54c1e990b"/>
-    <rdfs:subClassOf rdf:nodeID="N4b8f62115290455b8826c8e430c5b8b7"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Cycle</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf0c07dd5d2fc4901996465ccaf645f79">
+  <rdf:Description rdf:nodeID="Nad3e935863da4a94b791e9b7abb4574a">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://example.com/ex#lends"/>
-    <owl:someValuesFrom rdf:resource="http://example.com/ex#Vehicle"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#name">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:nodeID="N3af504f060434548899bb776fb12d94c"/>
-    <rdfs:range rdf:nodeID="N642e3a62c20c49ae8b45b95389b72f14"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">name</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#Bicycle">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://example.com/ex#Cycle"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Bicycle</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#ClassForQualAssoc">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Class For Qual Assoc</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#engravedID">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="http://example.com/ex#Vehicle"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">engraved ID</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#Contractor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Contractor</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc92b265dd68249c8a8d55f37e9c69e84">
-    <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#RentalCompany">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="Nf0c07dd5d2fc4901996465ccaf645f79"/>
-    <rdfs:subClassOf rdf:nodeID="N71d98aea2a4e4645bcfe2ae784b43763"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Rental Company</skos:prefLabel>
+    <owl:onProperty rdf:resource="http://example.com/ex#name"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex#Car">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -194,147 +240,101 @@
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
     <skos:prefLabel xml:lang="en">Car</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nec0992ccd3594363b15cd164599161db">
-    <rdf:first rdf:resource="http://example.com/ex#SomeOtherClass"/>
-    <rdf:rest rdf:nodeID="N871ae0d1e79c40778157d27d633a26d3"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#Vehicle">
+  <rdf:Description rdf:about="http://example.com/ex#Monocycle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="N5bfa086b82aa48858aa1219174e82a13"/>
-    <rdfs:subClassOf rdf:nodeID="N8f4ca90c44f84aea8224505b99bdb362"/>
-    <rdfs:subClassOf rdf:nodeID="Nac523ee59b904edab12c710cf294a76b"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Cycle"/>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Vehicle</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Monocycle</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N65750b2660564e41b7506895b0e4eeec">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://example.com/ex#hasInsSub"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-    <owl:onClass rdf:resource="http://example.com/ex#Insurance"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N6e654ac64cd742b980b2529312fe30af">
-    <rdf:first rdf:resource="http://example.com/ex#RentalCompany"/>
-    <rdf:rest rdf:nodeID="Na156657f1ba94cb08cbdd50847c332e8"/>
+  <rdf:Description rdf:about="http://example.com/ex#target">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.com/ex#ClassForQualAssoc"/>
+    <rdfs:range rdf:resource="http://example.com/ex#SomeOtherClass"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">target</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://example.com/ex#SomeOtherClass">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
     <skos:prefLabel xml:lang="en">Some Other Class</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N642e3a62c20c49ae8b45b95389b72f14">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
-    <owl:unionOf rdf:nodeID="Ncf1a3a0920534271b4ff49e5343ab10d"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na4a2df640fbf48339c51f1784ef99325">
-    <rdf:first rdf:resource="http://example.com/ex#Vehicle"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Neb2d9917a1ea433dbfa093a9df49174e">
+  <rdf:Description rdf:about="http://example.com/ex#Cycle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nbb4496fbbd524ac49babcef890e54d7b"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdfs:subClassOf rdf:nodeID="N4927a417b2fc44a3be400fc335543124"/>
+    <rdfs:subClassOf rdf:nodeID="Nd41e09802abf4aa99a9340e70557f2bc"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Cycle</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N8f4ca90c44f84aea8224505b99bdb362">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://example.com/ex#name"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#PartsClass">
+  <rdf:Description rdf:about="http://example.com/ex#Insurance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="N6d4d8c6aba144afdb8175a00602934c3"/>
     <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Parts Class</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Insurance</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N2d9e0c1c402343acad38ced038e778d0">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://example.com/ex#for"/>
-    <owl:someValuesFrom rdf:resource="http://example.com/ex#Vehicle"/>
+  <rdf:Description rdf:nodeID="Ncd0e03c8c2cd4a79bcdc57ca7af487aa">
+    <rdf:first rdf:resource="http://example.com/ex#RentalCompany"/>
+    <rdf:rest rdf:nodeID="Ne872e6b3705c43128e3d51f6b953ead6"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#hasIns">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:nodeID="N3560ff7c661a452d862afeb8343d3d06"/>
-    <rdfs:range rdf:resource="http://example.com/ex#Insurance"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">has Ins</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N3560ff7c661a452d862afeb8343d3d06">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nec0992ccd3594363b15cd164599161db"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nbb4496fbbd524ac49babcef890e54d7b">
-    <rdf:first rdf:resource="http://example.com/ex#SomeOtherClass"/>
-    <rdf:rest rdf:nodeID="Na4a2df640fbf48339c51f1784ef99325"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N5bfa086b82aa48858aa1219174e82a13">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://example.com/ex#engravedID"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N4b8f62115290455b8826c8e430c5b8b7">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://example.com/ex#colour"/>
-    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ncf1a3a0920534271b4ff49e5343ab10d">
-    <rdf:first rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
-    <rdf:rest rdf:nodeID="Nc92b265dd68249c8a8d55f37e9c69e84"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N71d98aea2a4e4645bcfe2ae784b43763">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://example.com/ex#name"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#YetAnotherC">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">Yet Another C</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://example.com/ex#ownedby">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:domain rdf:resource="http://example.com/ex#Vehicle"/>
-    <rdfs:range rdf:resource="http://example.com/ex#RentalCompany"/>
-    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
-    <skos:prefLabel xml:lang="en">ownedby</skos:prefLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf953721cdf164e89967fb0f54c1e990b">
+  <rdf:Description rdf:nodeID="N4927a417b2fc44a3be400fc335543124">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://example.com/ex#colour"/>
     <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
     <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Na156657f1ba94cb08cbdd50847c332e8">
-    <rdf:first rdf:resource="http://example.com/ex#Vehicle"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N3af504f060434548899bb776fb12d94c">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N6e654ac64cd742b980b2529312fe30af"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N68c592fb0190441aa5a0cb95370e4ac5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#hasInsSub"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+    <owl:onClass rdf:resource="http://example.com/ex#Insurance"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2f7c46cf3e8f4ab782effe1962abfafa">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://example.com/ex#lends"/>
+    <owl:someValuesFrom rdf:resource="http://example.com/ex#Vehicle"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N202a91abc81944068959eb8218f63ff1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N80b780c10bfd4e5eb62c1569317a1250"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.com/ex#Boat">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdfs:subClassOf rdf:nodeID="N68c592fb0190441aa5a0cb95370e4ac5"/>
+    <rdfs:isDefinedBy rdf:resource="http://example.com/ex#prettyModel"/>
+    <skos:prefLabel xml:lang="en">Boat</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6f6dc9431c0f4c9781112adaec3522f9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N4ec1b8fbc18b480797657c85c38904ed"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na5be7a7e51b347189f740f403fa12742">
+    <rdf:first rdf:resource="http://example.com/ex#Vehicle"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
