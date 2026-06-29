@@ -205,6 +205,12 @@ jobs:
             MODULE_DIR=$(realpath "implementation/${implementation}")
             IMPORTS_XML_FILE_PATH="$MODULE_DIR/model2owl-config/imports.xml"
 
+            # Remove all OWL artefacts before regenerating so that toggling
+            # generateOWLFull never leaves stale files in the artifact.
+            # (runs from repo root before 'cd model2owl', so no leading '../')
+            mkdir -p $OUTPUT_PATH_OWL
+            rm -f $OUTPUT_PATH_OWL*.owl $OUTPUT_PATH_OWL*.rdf $OUTPUT_PATH_OWL*.ttl
+
             cd model2owl
             make owl-core \
               XMI_INPUT_FILE_PATH=../$CM_FILE_PATH \
@@ -224,9 +230,39 @@ jobs:
               NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH} \
               IMPORTS_XML_FILE_PATH=${IMPORTS_XML_FILE_PATH}
 
+            # Optional consolidated OWL-full artefact. `make owl-full` is a no-op
+            # unless the module's config enables `generateOWLFull`. When enabled it
+            # merges the core + restrictions OWL artefacts (generated above, and still
+            # needed by `shacl`) into a single self-contained ontology. Per its
+            # ownership rule it does NOT delete the core/restrictions files it did not
+            # create, so this workflow removes them explicitly below, once the
+            # consolidated artefact exists. Runs before the turtle conversion so that
+            # *_full.ttl is produced with proper namespace prefixes.
+            make owl-full \
+              XMI_INPUT_FILE_PATH=../$CM_FILE_PATH \
+              OUTPUT_FOLDER_PATH=../$OUTPUT_PATH_OWL \
+              NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH} \
+              IMPORTS_XML_FILE_PATH=${IMPORTS_XML_FILE_PATH}
+
             make convert-rdf-to-turtle \
               ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_OWL \
               NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH}
+
+            # If the consolidated OWL-full artefact was produced (i.e. the module
+            # enabled generateOWLFull), the standalone core/restrictions files - which
+            # this workflow generated above for the `shacl` step - are now redundant.
+            # Remove them here, explicitly and conditionally, so the published
+            # owl_ontology folder contains only the consolidated *_full.* files.
+            if [ -f "../$OUTPUT_PATH_OWL/${implementation}_full.owl" ]; then
+              echo "generateOWLFull enabled for ${implementation}: removing the standalone core/restrictions artefacts"
+              rm -f "../$OUTPUT_PATH_OWL/${implementation}.owl" \
+                    "../$OUTPUT_PATH_OWL/${implementation}.rdf" \
+                    "../$OUTPUT_PATH_OWL/${implementation}.ttl" \
+                    "../$OUTPUT_PATH_OWL/${implementation}_restrictions.owl" \
+                    "../$OUTPUT_PATH_OWL/${implementation}_restrictions.rdf" \
+                    "../$OUTPUT_PATH_OWL/${implementation}_restrictions.ttl"
+            fi
+
             make convert-rdf-to-turtle \
               ONTOLOGY_FOLDER_PATH=../$OUTPUT_PATH_SHACL \
               NAMESPACES_USER_XML_FILE_PATH=${NS_XML_FILE_PATH}
@@ -433,6 +469,16 @@ jobs:
           fi
 
           if [ -d "artifacts/transform-owl-output" ]; then
+            # Clear existing OWL artefacts for every processed module before copying
+            # fresh ones. This prevents stale files when generateOWLFull is toggled
+            # between runs (e.g. old *_full.* lingering after switching back to
+            # core/restrictions mode, or old core/restrictions after enabling full).
+            MODULES_JSON='${{ needs.detect_modules.outputs.modules }}'
+            for module in $(echo $MODULES_JSON | jq -r '.[]'); do
+              rm -f "implementation/${module}/owl_ontology/"*.owl \
+                    "implementation/${module}/owl_ontology/"*.rdf \
+                    "implementation/${module}/owl_ontology/"*.ttl
+            done
             cp -r artifacts/transform-owl-output/* implementation/ 2>/dev/null || true
           fi
 

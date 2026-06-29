@@ -208,7 +208,13 @@ jobs:
               git clone "${REPO_URL}" old-repo
               cd old-repo && git checkout "${REVISION}" && cd ..
             }
-            cp "old-repo/${OLD_ONTOLOGY}" old-files/old_ontology.ttl
+            # Prefer the consolidated OWL-full ontology when present.
+            OLD_ONTOLOGY_FULL="old-repo/${OLD_ONTOLOGY%/*}/${MODULE}_full.ttl"
+            if [ -f "${OLD_ONTOLOGY_FULL}" ]; then
+              cp "${OLD_ONTOLOGY_FULL}" old-files/old_ontology.ttl
+            else
+              cp "old-repo/${OLD_ONTOLOGY}" old-files/old_ontology.ttl
+            fi
             cp "old-repo/${OLD_SHACL}" old-files/old_shacl.ttl
             rm -rf old-repo
           else
@@ -219,10 +225,16 @@ jobs:
               REF="origin/${REVISION}"
             fi
             echo "Using ref: ${REF}"
-            git show "${REF}:${OLD_ONTOLOGY}" > old-files/old_ontology.ttl || {
-              echo "::error::Comparison with module ${MODULE} failed: No preexisting files to compare to (${OLD_ONTOLOGY} not found at ${REF})"
-              exit 1
-            }
+            # Prefer the consolidated OWL-full ontology when present at the ref.
+            OLD_ONTOLOGY_FULL="${OLD_ONTOLOGY%/*}/${MODULE}_full.ttl"
+            if git show "${REF}:${OLD_ONTOLOGY_FULL}" > old-files/old_ontology.ttl 2>/dev/null; then
+              echo "Using consolidated OWL-full ontology: ${OLD_ONTOLOGY_FULL}"
+            else
+              git show "${REF}:${OLD_ONTOLOGY}" > old-files/old_ontology.ttl || {
+                echo "::error::Comparison with module ${MODULE} failed: No preexisting files to compare to (${OLD_ONTOLOGY} nor its _full variant found at ${REF})"
+                exit 1
+              }
+            fi
             git show "${REF}:${OLD_SHACL}" > old-files/old_shacl.ttl || {
               echo "::error::Comparison with module ${MODULE} failed: No preexisting files to compare to (${OLD_SHACL} not found at ${REF})"
               exit 1
@@ -241,11 +253,19 @@ jobs:
           # If artifact was downloaded, use those files
           if [ -d "new-artifacts" ]; then
             echo "Using new TTL files from artifact"
-            NEW_ONTOLOGY_PATH=$(find new-artifacts -name "${MODULE}.ttl" -path "*/owl_ontology/*" | head -1)
+            # Prefer the consolidated OWL-full ontology when the module enables it
+            # (generateOWLFull replaces ${MODULE}.ttl with ${MODULE}_full.ttl).
+            NEW_ONTOLOGY_PATH=$(find new-artifacts -name "${MODULE}_full.ttl" -path "*/owl_ontology/*" | head -1)
+            [ -z "${NEW_ONTOLOGY_PATH}" ] && NEW_ONTOLOGY_PATH=$(find new-artifacts -name "${MODULE}.ttl" -path "*/owl_ontology/*" | head -1)
             NEW_SHACL_PATH=$(find new-artifacts -name "${MODULE}_shapes.ttl" | head -1)
           else
             echo "Using new TTL files from repository"
-            NEW_ONTOLOGY_PATH="${NEW_ONTOLOGY}"
+            NEW_ONTOLOGY_FULL="${NEW_ONTOLOGY%/*}/${MODULE}_full.ttl"
+            if [ -f "${NEW_ONTOLOGY_FULL}" ]; then
+              NEW_ONTOLOGY_PATH="${NEW_ONTOLOGY_FULL}"
+            else
+              NEW_ONTOLOGY_PATH="${NEW_ONTOLOGY}"
+            fi
             NEW_SHACL_PATH="${NEW_SHACL}"
           fi
 
