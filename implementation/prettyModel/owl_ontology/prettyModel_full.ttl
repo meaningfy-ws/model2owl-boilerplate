@@ -8,15 +8,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.com/ex> a owl:Ontology ;
-    rdfs:label "prettyModel — core"@en ;
+    rdfs:label "prettyModel — full"@en ;
     dcterms:created "2024-01-01"^^xsd:date ;
-    dcterms:description """This artefact provides the definitions for the prettyModel demonstration ontology.
-        This artefact excludes the restrictions.
+    dcterms:description """This artefact consolidates both the definitions (OWL core) and the restrictions and inference-related specifications (OWL restrictions) of the prettyModel demonstration ontology into a single self-contained ontology.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
     dcterms:issued "2026-06-29"^^xsd:date ;
     dcterms:license "CC BY 4.0" ;
     dcterms:publisher "https://example.com/publisher" ;
-    dcterms:title "prettyModel core"@en ;
+    dcterms:title "prettyModel full"@en ;
     vann:preferredNamespacePrefix "ex" ;
     vann:preferredNamespaceUri "http://example.com/ex#" ;
     rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-29" ;
@@ -181,11 +180,11 @@ skos:prefLabel a owl:AnnotationProperty .
 :Cycle a owl:Class ;
     rdfs:isDefinedBy :prettyModel ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:short ;
             owl:onProperty :colour ],
         [ a owl:Restriction ;
-            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:short ;
             owl:onProperty :colour ],
         :Vehicle ;
@@ -194,12 +193,12 @@ skos:prefLabel a owl:AnnotationProperty .
 :RentalCompany a owl:Class ;
     rdfs:isDefinedBy :prettyModel ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :lends ;
+            owl:someValuesFrom :Vehicle ],
+        [ a owl:Restriction ;
             owl:onDataRange xsd:long ;
             owl:onProperty :name ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onProperty :lends ;
-            owl:someValuesFrom :Vehicle ] ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:prefLabel "Rental Company"@en .
 
 :SomeOtherClass a owl:Class ;
@@ -216,16 +215,16 @@ skos:prefLabel a owl:AnnotationProperty .
 :Vehicle a owl:Class ;
     rdfs:isDefinedBy :prettyModel ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:long ;
-            owl:onProperty :nickName ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:onDataRange xsd:int ;
             owl:onProperty :engravedID ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:short ;
             owl:onProperty :name ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:long ;
+            owl:onProperty :nickName ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     skos:prefLabel "Vehicle"@en .
 
