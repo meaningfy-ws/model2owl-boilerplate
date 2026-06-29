@@ -205,6 +205,11 @@ jobs:
             MODULE_DIR=$(realpath "implementation/${implementation}")
             IMPORTS_XML_FILE_PATH="$MODULE_DIR/model2owl-config/imports.xml"
 
+            # Remove all OWL artefacts before regenerating so that toggling
+            # generateOWLFull never leaves stale files in the artifact.
+            mkdir -p ../$OUTPUT_PATH_OWL
+            rm -f ../$OUTPUT_PATH_OWL*.owl ../$OUTPUT_PATH_OWL*.rdf ../$OUTPUT_PATH_OWL*.ttl
+
             cd model2owl
             make owl-core \
               XMI_INPUT_FILE_PATH=../$CM_FILE_PATH \
@@ -463,20 +468,17 @@ jobs:
           fi
 
           if [ -d "artifacts/transform-owl-output" ]; then
-            cp -r artifacts/transform-owl-output/* implementation/ 2>/dev/null || true
-            # Where a module produced the consolidated OWL-full artefact, the standalone
-            # core/restrictions files are superseded. The additive cp above does not
-            # delete files absent from the new artefact, so remove any stale copies
-            # (committed by earlier runs) here, driven by the presence of *_full.owl, so
-            # the committed owl_ontology folder reflects only the consolidated form.
-            for full_owl in implementation/*/owl_ontology/*_full.owl; do
-              [ -e "$full_owl" ] || continue
-              dir=$(dirname "$full_owl")
-              module=$(basename "$full_owl" _full.owl)
-              echo "Consolidated form present for ${module}: removing superseded core/restrictions files"
-              rm -f "$dir/${module}.owl" "$dir/${module}.rdf" "$dir/${module}.ttl" \
-                    "$dir/${module}_restrictions.owl" "$dir/${module}_restrictions.rdf" "$dir/${module}_restrictions.ttl"
+            # Clear existing OWL artefacts for every processed module before copying
+            # fresh ones. This prevents stale files when generateOWLFull is toggled
+            # between runs (e.g. old *_full.* lingering after switching back to
+            # core/restrictions mode, or old core/restrictions after enabling full).
+            MODULES_JSON='${{ needs.detect_modules.outputs.modules }}'
+            for module in $(echo $MODULES_JSON | jq -r '.[]'); do
+              rm -f "implementation/${module}/owl_ontology/"*.owl \
+                    "implementation/${module}/owl_ontology/"*.rdf \
+                    "implementation/${module}/owl_ontology/"*.ttl
             done
+            cp -r artifacts/transform-owl-output/* implementation/ 2>/dev/null || true
           fi
 
           if [ -d "artifacts/transform-shacl-output" ]; then
