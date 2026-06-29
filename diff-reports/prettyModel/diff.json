@@ -2,7 +2,34 @@
   "added_instance_class.rq": "No changes found.",
   "added_instance_datatype_property.rq": "No changes found.",
   "added_instance_object_property.rq": "No changes found.",
-  "added_instance_ontology.rq": "No changes found.",
+  "added_instance_ontology.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          }
+        }
+      ]
+    }
+  },
   "added_property_class_alt_label.rq": "No changes found.",
   "added_property_class_change_note.rq": "No changes found.",
   "added_property_class_comment.rq": "No changes found.",
@@ -23,7 +50,91 @@
   "added_property_datatype_property_comment.rq": "No changes found.",
   "added_property_datatype_property_definition.rq": "No changes found.",
   "added_property_datatype_property_description.rq": "No changes found.",
-  "added_property_datatype_property_domain.rq": "No changes found.",
+  "added_property_datatype_property_domain.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "colour",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#colour"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Cycle"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "engraved ID",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#engravedID"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Vehicle"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "nick Name",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#nickName"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Vehicle"
+          }
+        }
+      ]
+    }
+  },
   "added_property_datatype_property_editorial_note.rq": "No changes found.",
   "added_property_datatype_property_example.rq": "No changes found.",
   "added_property_datatype_property_hidden_label.rq": "No changes found.",
@@ -32,7 +143,91 @@
   "added_property_datatype_property_label.rq": "No changes found.",
   "added_property_datatype_property_note.rq": "No changes found.",
   "added_property_datatype_property_pref_label.rq": "No changes found.",
-  "added_property_datatype_property_range.rq": "No changes found.",
+  "added_property_datatype_property_range.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "colour",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#range"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#colour"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://www.w3.org/2001/XMLSchema#short"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "engraved ID",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#range"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#engravedID"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://www.w3.org/2001/XMLSchema#int"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "nick Name",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#range"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#nickName"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://www.w3.org/2001/XMLSchema#long"
+          }
+        }
+      ]
+    }
+  },
   "added_property_datatype_property_scope_note.rq": "No changes found.",
   "added_property_datatype_property_sub_property_of.rq": "No changes found.",
   "added_property_object_property_alt_label.rq": "No changes found.",
@@ -40,7 +235,183 @@
   "added_property_object_property_comment.rq": "No changes found.",
   "added_property_object_property_definition.rq": "No changes found.",
   "added_property_object_property_description.rq": "No changes found.",
-  "added_property_object_property_domain.rq": "No changes found.",
+  "added_property_object_property_domain.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "for",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#for"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Insurance"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "for Sub",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#forSub"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Insurance"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "has Ins Sub",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#hasInsSub"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Boat"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "lends",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#lends"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#RentalCompany"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "ownedby",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#ownedby"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Vehicle"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "source",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#source"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#SomeOtherClass"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "target",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#domain"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#target"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#ClassForQualAssoc"
+          }
+        }
+      ]
+    }
+  },
   "added_property_object_property_editorial_note.rq": "No changes found.",
   "added_property_object_property_example.rq": "No changes found.",
   "added_property_object_property_hidden_label.rq": "No changes found.",
@@ -49,25 +420,706 @@
   "added_property_object_property_label.rq": "No changes found.",
   "added_property_object_property_note.rq": "No changes found.",
   "added_property_object_property_pref_label.rq": "No changes found.",
-  "added_property_object_property_range.rq": "No changes found.",
+  "added_property_object_property_range.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "for Sub",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#range"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#forSub"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Boat"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "has Ins",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#range"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#hasIns"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Insurance"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "has Ins Sub",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#range"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#hasInsSub"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Insurance"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "lends",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#range"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#lends"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#Vehicle"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "ownedby",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#range"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#ownedby"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#RentalCompany"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "source",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#range"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#source"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#ClassForQualAssoc"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "target",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#range"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#target"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#SomeOtherClass"
+          }
+        }
+      ]
+    }
+  },
   "added_property_object_property_scope_note.rq": "No changes found.",
   "added_property_object_property_sub_property_of.rq": "No changes found.",
-  "added_property_ontology_comment.rq": "No changes found.",
-  "added_property_ontology_created.rq": "No changes found.",
-  "added_property_ontology_description.rq": "No changes found.",
+  "added_property_ontology_comment.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#comment"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "type": "literal",
+            "value": "This version is automatically generated from prettyModel.xml on 2026-06-29"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "added_property_ontology_created.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/created"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#date",
+            "type": "literal",
+            "value": "2024-01-01"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "added_property_ontology_description.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/description"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "type": "literal",
+            "value": "This artefact consolidates both the definitions (OWL core) and the restrictions and inference-related specifications (OWL restrictions) of the prettyModel demonstration ontology into a single self-contained ontology.\n        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI.",
+            "xml:lang": "en"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": "en"
+          }
+        }
+      ]
+    }
+  },
   "added_property_ontology_imports.rq": "No changes found.",
   "added_property_ontology_incompatible_with.rq": "No changes found.",
-  "added_property_ontology_issued.rq": "No changes found.",
-  "added_property_ontology_label.rq": "No changes found.",
-  "added_property_ontology_license.rq": "No changes found.",
-  "added_property_ontology_preferred_namespace_prefix.rq": "No changes found.",
-  "added_property_ontology_preferred_namespace_uri.rq": "No changes found.",
+  "added_property_ontology_issued.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/issued"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#date",
+            "type": "literal",
+            "value": "2026-06-29"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "added_property_ontology_label.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#label"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": "en"
+          }
+        }
+      ]
+    }
+  },
+  "added_property_ontology_license.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/license"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "type": "literal",
+            "value": "CC BY 4.0"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "added_property_ontology_preferred_namespace_prefix.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/vocab/vann/preferredNamespacePrefix"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "type": "literal",
+            "value": "ex"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "added_property_ontology_preferred_namespace_uri.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/vocab/vann/preferredNamespaceUri"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "type": "literal",
+            "value": "http://example.com/ex#"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
   "added_property_ontology_prior_version.rq": "No changes found.",
-  "added_property_ontology_publisher.rq": "No changes found.",
+  "added_property_ontology_publisher.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/publisher"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "type": "literal",
+            "value": "https://example.com/publisher"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
   "added_property_ontology_see_also.rq": "No changes found.",
-  "added_property_ontology_title.rq": "No changes found.",
-  "added_property_ontology_version_info.rq": "No changes found.",
-  "added_property_ontology_version_iri.rq": "No changes found.",
+  "added_property_ontology_title.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/title"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "type": "literal",
+            "value": "prettyModel full",
+            "xml:lang": "en"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": "en"
+          }
+        }
+      ]
+    }
+  },
+  "added_property_ontology_version_info.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2002/07/owl#versionInfo"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "type": "literal",
+            "value": "1.0.0"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "added_property_ontology_version_iri.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — full",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2002/07/owl#versionIRI"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex-1.0.0"
+          }
+        }
+      ]
+    }
+  },
   "application_profile": "owl-core-en-only",
   "changed_property_class_alt_label.rq": "No changes found.",
   "changed_property_class_change_note.rq": "No changes found.",
@@ -200,7 +1252,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -578,7 +1630,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "3"
           }
         }
       ]
@@ -740,7 +1792,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "3"
           }
         }
       ]
@@ -884,7 +1936,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "7"
           }
         }
       ]
@@ -1046,7 +2098,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "7"
           }
         }
       ]
@@ -1100,7 +2152,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1118,7 +2170,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1136,7 +2188,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1190,7 +2242,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1208,7 +2260,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1226,7 +2278,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1244,7 +2296,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1262,7 +2314,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1298,7 +2350,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1334,7 +2386,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1352,7 +2404,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -1370,7 +2422,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -2612,7 +3664,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -2792,7 +3844,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "16"
           }
         }
       ]
@@ -3080,7 +4132,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "4"
           }
         }
       ]
@@ -3386,7 +4438,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "8"
           }
         }
       ]
@@ -3512,7 +4564,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3530,7 +4582,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3548,7 +4600,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3602,7 +4654,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3620,7 +4672,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3638,7 +4690,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3656,7 +4708,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3674,7 +4726,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3710,7 +4762,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3746,7 +4798,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3764,7 +4816,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -3782,7 +4834,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -4700,7 +5752,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -4808,7 +5860,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -4826,7 +5878,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -4844,7 +5896,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -4880,7 +5932,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -4934,7 +5986,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "1"
           }
         }
       ]
@@ -5132,7 +6184,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "16"
           }
         }
       ]
@@ -5420,7 +6472,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "4"
           }
         }
       ]
@@ -5726,7 +6778,7 @@
           "entries": {
             "datatype": "http://www.w3.org/2001/XMLSchema#integer",
             "type": "literal",
-            "value": "0"
+            "value": "8"
           }
         }
       ]
@@ -6128,11 +7180,38 @@
       ]
     }
   },
-  "dataset_name": "diffushiy4PUMC",
+  "dataset_name": "diffuscMLcZkeG",
   "deleted_instance_class.rq": "No changes found.",
   "deleted_instance_datatype_property.rq": "No changes found.",
   "deleted_instance_object_property.rq": "No changes found.",
-  "deleted_instance_ontology.rq": "No changes found.",
+  "deleted_instance_ontology.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        }
+      ]
+    }
+  },
   "deleted_property_class_alt_label.rq": "No changes found.",
   "deleted_property_class_change_note.rq": "No changes found.",
   "deleted_property_class_comment.rq": "No changes found.",
@@ -6142,7 +7221,390 @@
   "deleted_property_class_example.rq": "No changes found.",
   "deleted_property_class_hidden_label.rq": "No changes found.",
   "deleted_property_class_history_note.rq": "No changes found.",
-  "deleted_property_class_is_defined_by.rq": "No changes found.",
+  "deleted_property_class_is_defined_by.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "Bicycle",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Bicycle"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Boat",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Boat"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Boring Wheel",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#BoringWheel"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Car",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Car"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Class For Qual Assoc",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#ClassForQualAssoc"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Contractor",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Contractor"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Cycle",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Cycle"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Fancy Wheel",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#FancyWheel"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Insurance",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Insurance"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Monocycle",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Monocycle"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Parts Class",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#PartsClass"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Rental Company",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#RentalCompany"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Some Other Class",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#SomeOtherClass"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Vehicle",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Vehicle"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Wheel",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Wheel"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Yet Another C",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#YetAnotherC"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        }
+      ]
+    }
+  },
   "deleted_property_class_label.rq": "No changes found.",
   "deleted_property_class_note.rq": "No changes found.",
   "deleted_property_class_pref_label.rq": "No changes found.",
@@ -6158,7 +7620,114 @@
   "deleted_property_datatype_property_example.rq": "No changes found.",
   "deleted_property_datatype_property_hidden_label.rq": "No changes found.",
   "deleted_property_datatype_property_history_note.rq": "No changes found.",
-  "deleted_property_datatype_property_is_defined_by.rq": "No changes found.",
+  "deleted_property_datatype_property_is_defined_by.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "colour",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#colour"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "engraved ID",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#engravedID"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "name",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#name"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "nick Name",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#nickName"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        }
+      ]
+    }
+  },
   "deleted_property_datatype_property_label.rq": "No changes found.",
   "deleted_property_datatype_property_note.rq": "No changes found.",
   "deleted_property_datatype_property_pref_label.rq": "No changes found.",
@@ -6175,29 +7744,733 @@
   "deleted_property_object_property_example.rq": "No changes found.",
   "deleted_property_object_property_hidden_label.rq": "No changes found.",
   "deleted_property_object_property_history_note.rq": "No changes found.",
-  "deleted_property_object_property_is_defined_by.rq": "No changes found.",
+  "deleted_property_object_property_is_defined_by.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "for",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#for"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "for Sub",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#forSub"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "has Ins",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#hasIns"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "has Ins Sub",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#hasInsSub"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "lends",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#lends"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "ownedby",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#ownedby"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "source",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#source"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "target",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#target"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          }
+        }
+      ]
+    }
+  },
   "deleted_property_object_property_label.rq": "No changes found.",
   "deleted_property_object_property_note.rq": "No changes found.",
   "deleted_property_object_property_pref_label.rq": "No changes found.",
   "deleted_property_object_property_range.rq": "No changes found.",
   "deleted_property_object_property_scope_note.rq": "No changes found.",
   "deleted_property_object_property_sub_property_of.rq": "No changes found.",
-  "deleted_property_ontology_comment.rq": "No changes found.",
-  "deleted_property_ontology_created.rq": "No changes found.",
-  "deleted_property_ontology_description.rq": "No changes found.",
+  "deleted_property_ontology_comment.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#comment"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "type": "literal",
+            "value": "This version is automatically generated from prettyModel.xml on 2026-06-26"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "deleted_property_ontology_created.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/created"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#date",
+            "type": "literal",
+            "value": "2024-01-01"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "deleted_property_ontology_description.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/description"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "type": "literal",
+            "value": "This artefact provides the definitions for the prettyModel demonstration ontology.\n        This artefact excludes the restrictions.\n        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI.",
+            "xml:lang": "en"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": "en"
+          }
+        }
+      ]
+    }
+  },
   "deleted_property_ontology_imports.rq": "No changes found.",
   "deleted_property_ontology_incompatible_with.rq": "No changes found.",
-  "deleted_property_ontology_issued.rq": "No changes found.",
-  "deleted_property_ontology_label.rq": "No changes found.",
-  "deleted_property_ontology_license.rq": "No changes found.",
-  "deleted_property_ontology_preferred_namespace_prefix.rq": "No changes found.",
-  "deleted_property_ontology_preferred_namespace_uri.rq": "No changes found.",
+  "deleted_property_ontology_issued.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/issued"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#date",
+            "type": "literal",
+            "value": "2026-06-26"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "deleted_property_ontology_label.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#label"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": "en"
+          }
+        }
+      ]
+    }
+  },
+  "deleted_property_ontology_license.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/license"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "type": "literal",
+            "value": "CC BY 4.0"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "deleted_property_ontology_preferred_namespace_prefix.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/vocab/vann/preferredNamespacePrefix"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "type": "literal",
+            "value": "ex"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "deleted_property_ontology_preferred_namespace_uri.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/vocab/vann/preferredNamespaceUri"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "type": "literal",
+            "value": "http://example.com/ex#"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
   "deleted_property_ontology_prior_version.rq": "No changes found.",
-  "deleted_property_ontology_publisher.rq": "No changes found.",
+  "deleted_property_ontology_publisher.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/publisher"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "type": "literal",
+            "value": "https://example.com/publisher"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
   "deleted_property_ontology_see_also.rq": "No changes found.",
-  "deleted_property_ontology_title.rq": "No changes found.",
-  "deleted_property_ontology_version_info.rq": "No changes found.",
-  "deleted_property_ontology_version_iri.rq": "No changes found.",
+  "deleted_property_ontology_title.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://purl.org/dc/terms/title"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "type": "literal",
+            "value": "prettyModel core",
+            "xml:lang": "en"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": "en"
+          }
+        }
+      ]
+    }
+  },
+  "deleted_property_ontology_version_info.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2002/07/owl#versionInfo"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "type": "literal",
+            "value": "1.0.0"
+          },
+          "valueLang": {
+            "type": "literal",
+            "value": ""
+          }
+        }
+      ]
+    }
+  },
+  "deleted_property_ontology_version_iri.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "value",
+        "valueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "prettyModel — core",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2002/07/owl#versionIRI"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "value": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel-1.0.0"
+          }
+        }
+      ]
+    }
+  },
   "moved_property_class_alt_label.rq": "No changes found.",
   "moved_property_class_change_note.rq": "No changes found.",
   "moved_property_class_comment.rq": "No changes found.",
@@ -6263,7 +8536,7 @@
   "moved_property_ontology_title.rq": "No changes found.",
   "moved_property_ontology_version_info.rq": "No changes found.",
   "moved_property_ontology_version_iri.rq": "No changes found.",
-  "timestamp": "29-Jun-2026T14:55:33",
+  "timestamp": "29-Jun-2026T16:25:07",
   "updated_property_class_alt_label.rq": "No changes found.",
   "updated_property_class_change_note.rq": "No changes found.",
   "updated_property_class_comment.rq": "No changes found.",
@@ -6273,7 +8546,456 @@
   "updated_property_class_example.rq": "No changes found.",
   "updated_property_class_hidden_label.rq": "No changes found.",
   "updated_property_class_history_note.rq": "No changes found.",
-  "updated_property_class_is_defined_by.rq": "No changes found.",
+  "updated_property_class_is_defined_by.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "oldValue",
+        "oldValueLang",
+        "newValue",
+        "newValueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "Bicycle",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Bicycle"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Boat",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Boat"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Boring Wheel",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#BoringWheel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Car",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Car"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Class For Qual Assoc",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#ClassForQualAssoc"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Contractor",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Contractor"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Cycle",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Cycle"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Fancy Wheel",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#FancyWheel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Insurance",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Insurance"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Monocycle",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Monocycle"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Parts Class",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#PartsClass"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Rental Company",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#RentalCompany"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Some Other Class",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#SomeOtherClass"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Vehicle",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Vehicle"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Wheel",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#Wheel"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "Yet Another C",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#YetAnotherC"
+          }
+        }
+      ]
+    }
+  },
   "updated_property_class_label.rq": "No changes found.",
   "updated_property_class_note.rq": "No changes found.",
   "updated_property_class_pref_label.rq": "No changes found.",
@@ -6289,7 +9011,132 @@
   "updated_property_datatype_property_example.rq": "No changes found.",
   "updated_property_datatype_property_hidden_label.rq": "No changes found.",
   "updated_property_datatype_property_history_note.rq": "No changes found.",
-  "updated_property_datatype_property_is_defined_by.rq": "No changes found.",
+  "updated_property_datatype_property_is_defined_by.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "oldValue",
+        "oldValueLang",
+        "newValue",
+        "newValueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "colour",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#colour"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "engraved ID",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#engravedID"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "name",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#name"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "nick Name",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#nickName"
+          }
+        }
+      ]
+    }
+  },
   "updated_property_datatype_property_label.rq": "No changes found.",
   "updated_property_datatype_property_note.rq": "No changes found.",
   "updated_property_datatype_property_pref_label.rq": "No changes found.",
@@ -6306,7 +9153,240 @@
   "updated_property_object_property_example.rq": "No changes found.",
   "updated_property_object_property_hidden_label.rq": "No changes found.",
   "updated_property_object_property_history_note.rq": "No changes found.",
-  "updated_property_object_property_is_defined_by.rq": "No changes found.",
+  "updated_property_object_property_is_defined_by.rq": {
+    "head": {
+      "vars": [
+        "resource",
+        "label",
+        "labelLang",
+        "property",
+        "oldValue",
+        "oldValueLang",
+        "newValue",
+        "newValueLang"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "label": {
+            "type": "literal",
+            "value": "for",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#for"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "for Sub",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#forSub"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "has Ins",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#hasIns"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "has Ins Sub",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#hasInsSub"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "lends",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#lends"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "ownedby",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#ownedby"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "source",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#source"
+          }
+        },
+        {
+          "label": {
+            "type": "literal",
+            "value": "target",
+            "xml:lang": "en"
+          },
+          "labelLang": {
+            "type": "literal",
+            "value": "en"
+          },
+          "newValue": {
+            "type": "uri",
+            "value": "http://example.com/ex"
+          },
+          "oldValue": {
+            "type": "uri",
+            "value": "http://example.com/ex#prettyModel"
+          },
+          "property": {
+            "type": "uri",
+            "value": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+          },
+          "resource": {
+            "type": "uri",
+            "value": "http://example.com/ex#target"
+          }
+        }
+      ]
+    }
+  },
   "updated_property_object_property_label.rq": "No changes found.",
   "updated_property_object_property_note.rq": "No changes found.",
   "updated_property_object_property_pref_label.rq": "No changes found.",
