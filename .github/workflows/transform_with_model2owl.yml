@@ -207,8 +207,9 @@ jobs:
 
             # Remove all OWL artefacts before regenerating so that toggling
             # generateOWLFull never leaves stale files in the artifact.
-            mkdir -p ../$OUTPUT_PATH_OWL
-            rm -f ../$OUTPUT_PATH_OWL*.owl ../$OUTPUT_PATH_OWL*.rdf ../$OUTPUT_PATH_OWL*.ttl
+            # (runs from repo root before 'cd model2owl', so no leading '../')
+            mkdir -p $OUTPUT_PATH_OWL
+            rm -f $OUTPUT_PATH_OWL*.owl $OUTPUT_PATH_OWL*.rdf $OUTPUT_PATH_OWL*.ttl
 
             cd model2owl
             make owl-core \
