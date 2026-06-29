@@ -6,6 +6,8 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+:Bicycle owl:disjointWith :Monocycle .
+
 :forSub rdfs:domain :Insurance ;
     rdfs:range :Boat .
 
@@ -39,15 +41,6 @@
 :target rdfs:domain :ClassForQualAssoc ;
     rdfs:range :SomeOtherClass .
 
-:Cycle rdfs:subClassOf [ a owl:Restriction ;
-            owl:minQualifiedCardinality 1 ;
-            owl:onDataRange xsd:short ;
-            owl:onProperty :colour ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 3 ;
-            owl:onDataRange xsd:short ;
-            owl:onProperty :colour ] .
-
 :engravedID a owl:FunctionalProperty ;
     rdfs:domain :Vehicle ;
     rdfs:range xsd:int .
@@ -66,10 +59,14 @@
     rdfs:domain :Vehicle ;
     rdfs:range xsd:long .
 
-:Boat rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Insurance ;
-            owl:onProperty :hasInsSub ;
-            owl:qualifiedCardinality 2 ] .
+:Cycle rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality 1 ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :colour ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 3 ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :colour ] .
 
 :colour rdfs:domain :Cycle ;
     rdfs:range xsd:short .
@@ -79,6 +76,11 @@
             owl:unionOf ( :RentalCompany :Vehicle ) ] ;
     rdfs:range [ a rdfs:Datatype ;
             owl:unionOf ( xsd:long xsd:short ) ] .
+
+:Boat rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Insurance ;
+            owl:onProperty :hasInsSub ;
+            owl:qualifiedCardinality 2 ] .
 
 :RentalCompany rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty :lends ;
@@ -93,15 +95,18 @@
             owl:someValuesFrom :Vehicle ] .
 
 :Vehicle rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange xsd:long ;
-            owl:onProperty :nickName ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :name ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:int ;
             owl:onProperty :engravedID ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onDataRange xsd:short ;
-            owl:onProperty :name ;
+            owl:onDataRange xsd:long ;
+            owl:onProperty :nickName ;
             owl:qualifiedCardinality 1 ] .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( :Boat :Car :Cycle ) .
 

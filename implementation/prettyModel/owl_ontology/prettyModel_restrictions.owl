@@ -213,6 +213,14 @@
     
 
 
+    <!-- http://example.com/ex#Bicycle -->
+
+    <rdf:Description rdf:about="http://example.com/ex#Bicycle">
+        <owl:disjointWith rdf:resource="http://example.com/ex#Monocycle"/>
+    </rdf:Description>
+    
+
+
     <!-- http://example.com/ex#Boat -->
 
     <rdf:Description rdf:about="http://example.com/ex#Boat">
@@ -305,6 +313,25 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/ex#Boat"/>
+            <rdf:Description rdf:about="http://example.com/ex#Car"/>
+            <rdf:Description rdf:about="http://example.com/ex#Cycle"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
