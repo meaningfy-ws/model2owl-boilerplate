@@ -1,0 +1,231 @@
+@prefix : <http://example.com/ex#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/ex> a owl:Ontology ;
+    rdfs:label "prettyModel — core"@en ;
+    dcterms:created "2024-01-01"^^xsd:date ;
+    dcterms:description """This artefact provides the definitions for the prettyModel demonstration ontology.
+        This artefact excludes the restrictions.
+        prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
+    dcterms:issued "2026-06-29"^^xsd:date ;
+    dcterms:license "CC BY 4.0" ;
+    dcterms:publisher "https://example.com/publisher" ;
+    dcterms:title "prettyModel core"@en ;
+    vann:preferredNamespacePrefix "ex" ;
+    vann:preferredNamespaceUri "http://example.com/ex#" ;
+    rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-29" ;
+    owl:versionIRI <http://example.com/ex-1.0.0> ;
+    owl:versionInfo "1.0.0" .
+
+:Bicycle a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Cycle ;
+    skos:prefLabel "Bicycle"@en .
+
+:BoringWheel a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Wheel ;
+    skos:prefLabel "Boring Wheel"@en .
+
+:Car a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Vehicle ;
+    skos:prefLabel "Car"@en .
+
+:Contractor a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Contractor"@en .
+
+:FancyWheel a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Wheel ;
+    skos:prefLabel "Fancy Wheel"@en .
+
+:Monocycle a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf :Cycle ;
+    skos:prefLabel "Monocycle"@en .
+
+:PartsClass a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Parts Class"@en .
+
+:YetAnotherC a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Yet Another C"@en .
+
+:forSub a owl:ObjectProperty ;
+    rdfs:domain :Insurance ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range :Boat ;
+    rdfs:subPropertyOf :hasIns ;
+    skos:prefLabel "for Sub"@en .
+
+:ownedby a owl:ObjectProperty ;
+    rdfs:domain :Vehicle ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range :RentalCompany ;
+    skos:prefLabel "ownedby"@en .
+
+:source a owl:ObjectProperty ;
+    rdfs:domain :SomeOtherClass ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range :ClassForQualAssoc ;
+    skos:prefLabel "source"@en .
+
+:target a owl:ObjectProperty ;
+    rdfs:domain :ClassForQualAssoc ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range :SomeOtherClass ;
+    skos:prefLabel "target"@en .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:publisher a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+xsd:date a rdfs:Datatype .
+
+skos:prefLabel a owl:AnnotationProperty .
+
+:engravedID a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Vehicle ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range xsd:int ;
+    skos:prefLabel "engraved ID"@en .
+
+:hasIns a owl:ObjectProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :SomeOtherClass :Vehicle ) ] ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range :Insurance ;
+    skos:prefLabel "has Ins"@en .
+
+:hasInsSub a owl:ObjectProperty ;
+    rdfs:domain :Boat ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range :Insurance ;
+    rdfs:subPropertyOf :for ;
+    skos:prefLabel "has Ins Sub"@en .
+
+:lends a owl:ObjectProperty ;
+    rdfs:domain :RentalCompany ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range :Vehicle ;
+    skos:prefLabel "lends"@en .
+
+:nickName a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain :Vehicle ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range xsd:long ;
+    skos:prefLabel "nick Name"@en .
+
+:Boat a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Insurance ;
+            owl:onProperty :hasInsSub ;
+            owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ],
+        :Vehicle ;
+    skos:prefLabel "Boat"@en .
+
+:ClassForQualAssoc a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Class For Qual Assoc"@en .
+
+:Wheel a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Wheel"@en .
+
+:colour a owl:DatatypeProperty ;
+    rdfs:domain :Cycle ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range xsd:short ;
+    skos:prefLabel "colour"@en .
+
+:for a owl:ObjectProperty ;
+    rdfs:domain :Insurance ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( :SomeOtherClass :Vehicle ) ] ;
+    skos:prefLabel "for"@en .
+
+:name a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( :RentalCompany :Vehicle ) ] ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:range [ a rdfs:Datatype ;
+            owl:unionOf ( xsd:long xsd:short ) ] ;
+    skos:prefLabel "name"@en .
+
+:Cycle a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :colour ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :colour ],
+        :Vehicle ;
+    skos:prefLabel "Cycle"@en .
+
+:RentalCompany a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:long ;
+            owl:onProperty :name ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty :lends ;
+            owl:someValuesFrom :Vehicle ] ;
+    skos:prefLabel "Rental Company"@en .
+
+:SomeOtherClass a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Some Other Class"@en .
+
+:Insurance a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :for ;
+            owl:someValuesFrom :Vehicle ] ;
+    skos:prefLabel "Insurance"@en .
+
+:Vehicle a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange xsd:short ;
+            owl:onProperty :name ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:long ;
+            owl:onProperty :nickName ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:int ;
+            owl:onProperty :engravedID ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
+    skos:prefLabel "Vehicle"@en .
+
