@@ -16,502 +16,475 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://data.europa.eu/a4g/ontology> a owl:NamedIndividual,
-        owl:Ontology ;
-    rdfs:label """This artefact consolidates both the definitions (OWL core) and the restrictions and inference-related specifications (OWL restrictions) of the eProcurement Ontology Core into a single self-contained ontology.
-        The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.
-        The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."""@en ;
-    dcterms:created "2025-09-04"^^xsd:date ;
-    dcterms:description """This artefact consolidates both the definitions (OWL core) and the restrictions and inference-related specifications (OWL restrictions) of the eProcurement Ontology Core into a single self-contained ontology.
-        The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.
-        The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."""@en ;
-    dcterms:issued "2026-06-29"^^xsd:date ;
-    dcterms:license "CC BY 4.0" ;
-    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
-    dcterms:title "ePO Core full"@en ;
-    vann:preferredNamespacePrefix "epo" ;
-    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
-    rdfs:comment "This version is automatically generated from demo_ontology_module.xml on 2026-06-29" ;
-    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
-        <https://github.com/eprocurementontology/eprocurementontology>,
-        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
-        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
-    owl:imports skos:,
-        <http://www.w3.org/ns/adms> ;
-    owl:incompatibleWith "2.1.0" ;
-    owl:priorVersion "http://data.europa.eu/a4g/ontology-3.0.1" ;
-    owl:versionIRI <http://data.europa.eu/a4g/ontology-3.1.0> ;
-    owl:versionInfo "3.1.0" .
-
 :CANDefence-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :ResultNotice,
         :StandardFormsNotice ;
     skos:editorialNote "What is the notice type here?"@en ;
     skos:prefLabel "CAN Defence- D81"@en .
 
 :CANSocial-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CANSocialNotice,
         :StandardFormsNotice ;
     skos:prefLabel "CAN Social- D25"@en .
 
 :CANSocialNotice-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CANSocialNotice,
         :StandardFormsNotice ;
     skos:definition "Additional information: Social and other specific services – utilities"@en ;
     skos:prefLabel "CAN Social Notice- D25"@en .
 
 :CANStandard-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CANStandardNotice,
         :StandardFormsNotice ;
     skos:prefLabel "CAN Standard- D24"@en .
 
 :CNDefence-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:editorialNote "What is the notice type here?"@en ;
     skos:prefLabel "CN Defence- D81"@en .
 
 :CNSocial-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CNSocialNotice,
         :StandardFormsNotice ;
     skos:prefLabel "CN Social- D25"@en .
 
 :CNSocialNotice-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CNSocialNotice,
         :StandardFormsNotice ;
     skos:definition "Additional information: Social and other specific services – utilities"@en ;
     skos:prefLabel "CN Social Notice- D25"@en .
 
 :CNStandard-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CNStandardNotice,
         :StandardFormsNotice ;
     skos:prefLabel "CN Standard- D24"@en .
 
 :ConcessionAwardNotice-D23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:editorialNote "where does this belong to?"@en ;
     skos:prefLabel "Concession Award Notice- D23"@en .
 
 :ConcessionNotice-D23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:editorialNote "where does this belong to?"@en ;
     skos:prefLabel "Concession Notice- D23"@en .
 
 :DesignContest-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :DesignContestNotice,
         :StandardFormsNotice ;
     skos:prefLabel "Design Contest- D24"@en .
 
 :DesignContest-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :DesignContestNotice,
         :StandardFormsNotice ;
     skos:prefLabel "Design Contest- D25"@en .
 
 :DesignContestResult-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :DesignContestResultNotice,
         :StandardFormsNotice ;
     skos:prefLabel "Design Contest Result- D24"@en .
 
 :DesignContestResult-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :DesignContestResultNotice,
         :StandardFormsNotice ;
     skos:prefLabel "Design Contest Result- D25"@en .
 
 :Modification-D23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :ContractModificationNotice,
         :StandardFormsNotice ;
     skos:prefLabel "Modification- D23"@en .
 
 :Modification-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :ContractModificationNotice,
         :StandardFormsNotice ;
     skos:prefLabel "Modification- D24"@en .
 
 :Modification-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :ContractModificationNotice,
         :StandardFormsNotice ;
     skos:prefLabel "Modification- D25"@en .
 
 :Notice1 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINProfileNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice1"@en .
 
 :Notice10 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PIN-CFCStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice10"@en .
 
 :Notice11 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PIN-CFCStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice11"@en .
 
 :Notice12 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice12"@en .
 
 :Notice13 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice13"@en .
 
 :Notice14 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice14"@en .
 
 :Notice15 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :QSNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice15"@en .
 
 :Notice16 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CNStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice16"@en .
 
 :Notice17 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CNStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice17"@en .
 
 :Notice18 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CNStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice18"@en .
 
 :Notice19 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CNStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice19"@en .
 
 :Notice2 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINProfileNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice2"@en .
 
 :Notice20 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CNSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice20"@en .
 
 :Notice21 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CNSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice21"@en .
 
 :Notice22 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :SubcontractNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice22"@en .
 
 :Notice23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :DesignContestNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice23"@en .
 
 :Notice24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :DesignContestNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice24"@en .
 
 :Notice25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :VoluntaryEx-AnteTransparencyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice25"@en .
 
 :Notice26 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :VoluntaryEx-AnteTransparencyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice26"@en .
 
 :Notice27 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :VoluntaryEx-AnteTransparencyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice27"@en .
 
 :Notice28 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :VoluntaryEx-AnteTransparencyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice28"@en .
 
 :Notice29 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CANStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice29"@en .
 
 :Notice3 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINProfileNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice3"@en .
 
 :Notice30 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CANStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice30"@en .
 
 :Notice31 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CANStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice31"@en .
 
 :Notice32 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CANStandardNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice32"@en .
 
 :Notice33 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CANSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice33"@en .
 
 :Notice34 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CANSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice34"@en .
 
 :Notice35 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CANSocialNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice35"@en .
 
 :Notice36 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :DesignContestResultNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice36"@en .
 
 :Notice37 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :DesignContestResultNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice37"@en .
 
 :Notice38 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :ContractModificationNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice38"@en .
 
 :Notice39 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :ContractModificationNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice39"@en .
 
 :Notice4 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINOnlyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice4"@en .
 
 :Notice40 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :ContractModificationNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice40"@en .
 
 :Notice5 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINOnlyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice5"@en .
 
 :Notice6 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINOnlyNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice6"@en .
 
 :Notice7 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINTimeLimitNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice7"@en .
 
 :Notice8 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINTimeLimitNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice8"@en .
 
 :Notice9 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINTimeLimitNotice,
         :eFormsNotice ;
     skos:prefLabel "Notice9"@en .
 
 :PIN-CFCSocial-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :StandardFormsNotice ;
     skos:prefLabel "PI N- CFC Social- D25"@en .
 
 :PIN-CFCSocialNotice-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PIN-CFCSocialNotice,
         :StandardFormsNotice ;
     skos:definition "Additional information: Social and other specific services – utilities"@en ;
     skos:prefLabel "PI N- CFC Social Notice- D25"@en .
 
 :PIN-CFCStandard-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PIN-CFCStandardNotice,
         :StandardFormsNotice ;
     skos:prefLabel "PI N- CFC Standard- D24"@en .
 
 :PIN-RTL-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINTimeLimitNotice,
         :StandardFormsNotice ;
     skos:prefLabel "PI N- RT L- D24"@en .
 
 :PIN-RTL-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINTimeLimitNotice,
         :StandardFormsNotice ;
     skos:prefLabel "PI N- RT L- D25"@en .
 
 :PINDefence-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PlanningNotice ;
     skos:editorialNote "What is the notice type here?"@en ;
     skos:prefLabel "PIN Defence- D81"@en .
 
 :PINOnly-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINOnlyNotice,
         :StandardFormsNotice ;
     skos:prefLabel "PIN Only- D24"@en .
 
 :PINOnly-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINOnlyNotice,
         :StandardFormsNotice ;
     skos:prefLabel "PIN Only- D25"@en .
 
 :PINProfile-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINProfileNotice,
         :StandardFormsNotice ;
     skos:prefLabel "PIN Profile- D24"@en .
 
 :PINProfile-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINProfileNotice,
         :StandardFormsNotice ;
     skos:prefLabel "PIN Profile- D25"@en .
 
 :PINProfile-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PINProfileNotice,
         :StandardFormsNotice ;
     skos:prefLabel "PIN Profile- D81"@en .
 
 :PreMarketConsultationNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :Notice ;
     skos:prefLabel "Pre Market Consultation Notice"@en .
 
 :QS-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :QSNotice,
         :StandardFormsNotice ;
     skos:prefLabel "Q S- D25"@en .
 
 :QSNotice-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :QSNotice,
         :StandardFormsNotice ;
     skos:definition "Additional information: Social and other specific services – utilities"@en ;
     skos:prefLabel "QS Notice- D25"@en .
 
 :SocialAndOtherSpecificServices-D23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:editorialNote "This can be PIN or Concession award notice"@en ;
     skos:prefLabel "Social And Other Specific Services- D23"@en .
 
 :SocialAndOtherSpecificServices-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :StandardFormsNotice ;
     skos:definition "public contracts"@en ;
     skos:editorialNote "This can be PIN (maybe CFC), CN or CAN."@en ;
     skos:prefLabel "Social And Other Specific Services- D24"@en .
 
 :Subcontract-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :StandardFormsNotice,
         :SubcontractNotice ;
     skos:prefLabel "Subcontract- D81"@en .
 
 :VEAT-D23 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :StandardFormsNotice,
         :VoluntaryEx-AnteTransparencyNotice ;
     skos:prefLabel "VEA T- D23"@en .
 
 :VEAT-D24 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :StandardFormsNotice,
         :VoluntaryEx-AnteTransparencyNotice ;
     skos:prefLabel "VEA T- D24"@en .
 
 :VEAT-D25 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :StandardFormsNotice,
         :VoluntaryEx-AnteTransparencyNotice ;
     skos:prefLabel "VEA T- D25"@en .
 
 :VEAT-D81 a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :StandardFormsNotice,
         :VoluntaryEx-AnteTransparencyNotice ;
     skos:prefLabel "VEA T- D81"@en .
@@ -519,80 +492,82 @@
 :announcesAwardDecision a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :DirectAwardPrenotificationNotice :ResultNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :AwardDecision ;
     skos:prefLabel "announces Award Decision"@en .
 
 :announcesContract a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :DirectAwardPrenotificationNotice :ResultNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :Contract ;
     skos:prefLabel "announces Contract"@en .
 
 :announcesLotGroup a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompetitionNotice :DirectAwardPrenotificationNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :LotGroup ;
     skos:prefLabel "announces Lot Group"@en .
 
 :announcesLotGroupAwardInformation a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :DirectAwardPrenotificationNotice :ResultNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :LotGroupAwardInformation ;
     skos:prefLabel "announces Lot Group Award Information"@en .
 
 :announcesPlannedProcurementPart a owl:ObjectProperty ;
     rdfs:domain :PlanningNotice ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :PlannedProcurementPart ;
     skos:prefLabel "announces Planned Procurement Part"@en .
 
 :hasFormType a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:prefLabel "has Form Type"@en .
 
 :hasImplementingRegulation a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:prefLabel "has Implementing Regulation"@en .
 
 :hasLegalBasis a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:prefLabel "has Legal Basis"@en .
 
 :hasNoticeType a owl:ObjectProperty ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:prefLabel "has Notice Type"@en .
+
+:not a owl:NamedIndividual .
 
 :pin-buyer skos:editorialNote "this is a buyer profile, not a PIN."@en .
 
 :refersToAwardDecision a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompletionNotice :ContractModificationNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :AwardDecision ;
     skos:prefLabel "refers To Award Decision"@en .
 
 :refersToLotGroup a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompletionNotice :ContractModificationNotice :ResultNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :LotGroup ;
     skos:prefLabel "refers To Lot Group"@en .
 
 :refersToLotGroupAwardInformation a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompletionNotice :ContractModificationNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :LotGroupAwardInformation ;
     skos:prefLabel "refers To Lot Group Award Information"@en .
 
 cccev:AccountingDocument a owl:Class ;
     rdfs:label "Accounting Document"@en ;
     rdfs:comment "Financial and non-financial information as a result of an activity of an organisation."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote """Accounting documents, might include:
 <ul>
 <li> Financial statements (incl. the list of participating interests, subsidiary undertakings and associated undertakings, their registered office address and proportion of capital held), audit reports.</li> 
@@ -618,12 +593,12 @@ cccev:Cost a owl:Class ;
 cccev:ImageObject a owl:Class ;
     rdfs:label "Image Object"@en ;
     rdfs:comment "A logo to describe / represent an entity."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 cccev:InformationRequirement a owl:Class ;
     rdfs:label "Information Requirement"@en ;
     rdfs:comment "Requested data that is to be proven by Evidence."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf cccev:Requirement ;
     skos:scopeNote "Information Requirements are the most neutral kind of Requirements. They aim to request information in any form, e.g. a person's date of birth or a company's turnover. They represent requests for data that prove one or more facts of the real world in a formal manner, or that leads to the source of such a proof. They can be understood as 'requests for Evidences'. The response to an Information Requirement is an Evidence when the issuer of the response is an authoritative source (e.g. a Civil Registry providing data about a natural person for the provision of public service through the Single Digital Gateway). In other cases, the responses might not be issued by an authoritative source, but the issuer supports the responses with Evidences (or commits to support them timely, e.g. a self-declaration or a declaration of oath). The Information Requirement can require structured data or documents of any form. For structured data, the Requirement can use 'Concepts' to specify the structure and type of the data expected in the response. For both structured and unstructured data, the Information Requirement can indicate the expected Type of Evidence, its format, source, and other properties related to the Evidence."@en .
 
@@ -642,7 +617,7 @@ cccev:PublicOrganisation a owl:Class ;
     rdfs:label "Public Organisation"@en,
         "Public Organization"@en ;
     rdfs:comment "An Organization that is defined as being part of the public sector by a legal framework at any level."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf org:Organization ;
     skos:scopeNote """Organizations which exist to provide services for its citizens and companies are called Public Organizations. The Public Organization class represents the organization. One organization may comprise several sub-organizations and any organization may have one or more organizational units. Each of these is described using the same properties and relationships.
 <br/><br/>
@@ -662,7 +637,7 @@ cccev:accessibility a owl:DatatypeProperty ;
     rdfs:label "accessibility"@en ;
     rdfs:comment "Information about how the Public Event can be approached, reached or entered, in particular for people with special needs."@en ;
     rdfs:domain cccev:PublicEvent ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdf:langString ;
     skos:scopeNote "This property may be provided in multiple languages with multiple instances of the accessibility property."@en .
 
@@ -670,14 +645,14 @@ cccev:audience a owl:ObjectProperty ;
     rdfs:label "audience"@en ;
     rdfs:comment "The target group of people for whom the Public Event is created."@en ;
     rdfs:domain cccev:PublicEvent ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept .
 
 cccev:bias a owl:DatatypeProperty ;
     rdfs:label "bias"@en ;
     rdfs:comment "Parameter used to adjust the evaluation of the Criterion."@en ;
     rdfs:domain cccev:Criterion ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range xsd:decimal ;
     skos:scopeNote "The bias parameter tries to correct a systematic error. For example in procurement, a home bias corresponds to the \"presence of local preferences distorting international specialisation and resource allocation\". When quantified, this systematic error can be removed."@en .
 
@@ -686,7 +661,7 @@ cccev:birthDate a owl:DatatypeProperty,
     rdfs:label "date of birth"@en ;
     rdfs:comment "The point in time on which the Person was born."@en ;
     rdfs:domain person:Person ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:GenericDate ;
     skos:scopeNote """The date of birth could be expressed as date, gYearMonth or gYear, example:
 <ul>
@@ -699,14 +674,14 @@ cccev:code a owl:ObjectProperty ;
     rdfs:label "code"@en ;
     rdfs:comment "The classification of the administrative unit."@en ;
     rdfs:domain cccev:AdminUnit ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept .
 
 cccev:confidentialityLevelType a owl:ObjectProperty ;
     rdfs:label "confidentiality level type"@en ;
     rdfs:comment "Security classification assigned to an Evidence e.g. classified, sensitive, public."@en ;
     rdfs:domain cccev:Evidence ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote "Classifications should be defined by an organisation/country as an outcome of a security assessment."@en .
 
@@ -714,7 +689,7 @@ cccev:constrains a owl:ObjectProperty ;
     rdfs:label "constrains"@en ;
     rdfs:comment "Information Concept about which a Constraint expresses a limitation."@en ;
     rdfs:domain cccev:Constraint ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:InformationConcept ;
     skos:scopeNote "Information Concepts are tools to make Requirements more machine processable: they allow to provide more detail about a Requirement. This way, Constraints can be made very precise, namely the limit that must be achieved, is a limit on the value for the associated Information Concept. For example, the Information Concept would be the age of a person and the Constraint would be the required age in the context of a specific evaluation."@en .
 
@@ -722,7 +697,7 @@ cccev:contactPage a owl:ObjectProperty ;
     rdfs:label "contact page"@en ;
     rdfs:comment "A web page that could be used to reach out the Contact Point."@en ;
     rdfs:domain cccev:ContactPoint ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range foaf:Document .
 
 cccev:contactPoint a owl:ObjectProperty ;
@@ -734,7 +709,7 @@ cccev:coordinates a owl:DatatypeProperty ;
     rdfs:label "coordinates"@en ;
     rdfs:comment "	A list of geographic coordinates that define the extent of the Geometry."@en ;
     rdfs:domain locn:Geometry ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range xsd:string ;
     skos:scopeNote "Can be expressed as longitude, latitude, elevation."@en .
 
@@ -742,7 +717,7 @@ cccev:crs a owl:DatatypeProperty ;
     rdfs:label "crs"@en ;
     rdfs:comment "An identifier for the coordinate reference system."@en ;
     rdfs:domain locn:Geometry ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range xsd:anyURI ;
     skos:scopeNote "Can be a coordinate-based local, regional or global system used to locate geographical entities."@en .
 
@@ -757,7 +732,7 @@ cccev:deathDate a owl:DatatypeProperty,
     rdfs:label "date of death"@en ;
     rdfs:comment "The point in time on which the Person died."@en ;
     rdfs:domain person:Person ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:GenericDate ;
     skos:scopeNote """The date of birth could be expressed as date, gYearMonth or gYear, example:
 <ul>
@@ -770,7 +745,7 @@ cccev:email a owl:DatatypeProperty ;
     rdfs:label "has email"@en ;
     rdfs:comment "An electronic address through which the Contact Point can be contacted."@en ;
     rdfs:domain cccev:ContactPoint ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal .
 
 cccev:establishedUnder a owl:ObjectProperty ;
@@ -782,7 +757,7 @@ cccev:eventNumber a owl:DatatypeProperty ;
     rdfs:label "event number"@en ;
     rdfs:comment "The sequence position of the Public Event."@en ;
     rdfs:domain cccev:PublicEvent ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdf:langString ;
     skos:scopeNote "Examples could be the ''4th\" or \"2022\"."@en .
 
@@ -790,7 +765,7 @@ cccev:eventStatus a owl:ObjectProperty ;
     rdfs:label "event status"@en ;
     rdfs:comment " This property defines the overall status of the event."@en ;
     rdfs:domain cccev:PublicEvent ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote "The recomended code list is the <a href=\"https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/event-status\">  Event Status Controlled vocabulary </a> maintained by the Publications Office of the EU."@en .
 
@@ -798,7 +773,7 @@ cccev:evidenceTypeClassification a owl:ObjectProperty ;
     rdfs:label "evidence type classification"@en ;
     rdfs:comment "Category to which the Evidence Type belongs."@en ;
     rdfs:domain cccev:EvidenceType ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote "The categories agreed are left open but could for example specify the layout and content expected for an Evidence."@en,
         "The categories agreed are left open but could for example specify the layout and content expected for an Evidence. An example could be id cards."@en .
@@ -807,14 +782,14 @@ cccev:expectedNumberOfParticipants a owl:DatatypeProperty ;
     rdfs:label "expected number of participants"@en ;
     rdfs:comment "The number of participants expected to participate in the event."@en ;
     rdfs:domain cccev:PublicEvent ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range xsd:integer .
 
 cccev:expressionOfExpectedValue a owl:DatatypeProperty ;
     rdfs:label "expression of expected value"@en ;
     rdfs:comment "Formulation in a formal language of the expected value(s) for the Information Concept which is aligned with the concepts from the Requirements defined and must be respected by the supplied Supported Values ."@en ;
     rdfs:domain cccev:InformationConcept ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     skos:scopeNote """The property encapsulates all kind of expectations on the required and provided values one could have. 
 This may range from representational expectations such as the type (e.g. the value is expected to be a xsd:decimal) to expectations that reduce the allowed value range. Commonly this is done using min or max bounderary expressions (e.g. the maximum value is 1 Million Euro).
@@ -832,7 +807,7 @@ cccev:format a owl:ObjectProperty ;
     rdfs:label "format"@en ;
     rdfs:comment "A plan of organisation or arrangement of the Public Event."@en ;
     rdfs:domain cccev:PublicEvent ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote "Examples include conference call, physical meeting or hybrid."@en .
 
@@ -840,7 +815,7 @@ cccev:frequency a owl:ObjectProperty ;
     rdfs:label "frequency"@en ;
     rdfs:comment "The recurrence of an instant or period."@en ;
     rdfs:domain time:TemporalEntity ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote "It is recommended to use the frequency from an existing vocabulary like the <a href=\"https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/frequency\">Frequency</a> from the Publications Office."@en .
 
@@ -852,7 +827,7 @@ cccev:gender a owl:ObjectProperty ;
     rdfs:label "gender"@en ;
     rdfs:comment "The identities, expressions and societal roles of the Person."@en ;
     rdfs:domain person:Person ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote "The gender of an individual should be recorded using a controlled vocabulary that is appropriate for the specific context. In some cases, the chromosomal or physical state of an individual will be more important than the gender that they express, in others the reverse will be true. What is always important is that the controlled vocabulary used to describe an individual's gender is stated explicitly."@en .
 
@@ -860,7 +835,7 @@ cccev:geometryType a owl:ObjectProperty ;
     rdfs:label "geometry type"@en ;
     rdfs:comment "The classification of the Geometry."@en ;
     rdfs:domain locn:Geometry ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote "Can be a point, line or polygon."@en .
 
@@ -877,7 +852,7 @@ cccev:hasConcept a owl:ObjectProperty ;
     rdfs:label "has concept"@en ;
     rdfs:comment "Information Concept for which a value is expected by the Requirement."@en ;
     rdfs:domain cccev:Requirement ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:InformationConcept ;
     skos:scopeNote "Information Concepts defined for specific Requirements also represent the basis for specifying the Supported Value an Evidence should provide."@en .
 
@@ -898,7 +873,7 @@ cccev:hasEvidenceTypeList a owl:ObjectProperty ;
     rdfs:label "has evidence type list"@en ;
     rdfs:comment "Evidence Type List that specifies the Evidence Types that are needed to meet the Requirement."@en ;
     rdfs:domain cccev:Requirement ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:EvidenceTypeList ;
     skos:scopeNote "One or several Lists of Evidence Types can support a Requirement. At least  one of them must be satisfied by the response to the Requirement."@en .
 
@@ -923,7 +898,7 @@ cccev:hasQualifiedRelation a owl:ObjectProperty ;
     rdfs:label "has qualified relation"@en ;
     rdfs:comment "Described and/or categorised relation to another Requirement."@en ;
     rdfs:domain cccev:Requirement ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:Requirement ;
     skos:scopeNote "This property leaves the possiblity to define a qualified relation from Requirement to Information Requirement or Constraint as well as a qualified relation from Requirement to Requirement.  A use case would be to specialize an EU requirement in Member States' specific requirements."@en .
 
@@ -938,14 +913,14 @@ cccev:hasRequirement a owl:ObjectProperty ;
     rdfs:label "has requirement"@en ;
     rdfs:comment "A more specific Requirement that is part of the Requirement."@en ;
     rdfs:domain cccev:Requirement ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:Requirement .
 
 cccev:hasSupportingEvidence a owl:ObjectProperty ;
     rdfs:label "has supporting evidence"@en ;
     rdfs:comment "Evidence that supplies information, proof or support for the Requirement."@en ;
     rdfs:domain cccev:Requirement ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:Evidence .
 
 cccev:hasValue a owl:DatatypeProperty ;
@@ -977,7 +952,7 @@ cccev:isDerivedFrom a owl:ObjectProperty ;
     rdfs:label "is derived from"@en ;
     rdfs:comment "Reference Framework on which the Requirement is based, such as a law or regulation."@en ;
     rdfs:domain cccev:Requirement ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:ReferenceFramework ;
     skos:scopeNote "Note that a Requirement can have several Reference Frameworks from which it is derived."@en .
 
@@ -990,7 +965,7 @@ cccev:isRequirementOf a owl:ObjectProperty ;
     rdfs:label "is requirement of"@en ;
     rdfs:comment "A reference between a sub-Requirement and its parent Requirement."@en ;
     rdfs:domain cccev:Requirement ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:Requirement ;
     skos:scopeNote """The relation between a parent Requirement and a sub-Requirement can be complex. Therefore, qualified relations (see hasQualifiedRelation) can be used to represent this relationship on its own and qualify it with additional information such as a date, a place. This is left to implementers.
 
@@ -1000,21 +975,21 @@ cccev:isSpecifiedIn a owl:ObjectProperty ;
     rdfs:label "is specified in"@en ;
     rdfs:comment "Evidence Type List in which the Evidence Type is included."@en ;
     rdfs:domain cccev:EvidenceType ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:EvidenceTypeList .
 
 cccev:latitude a owl:DatatypeProperty ;
     rdfs:label "latitude"@en ;
     rdfs:comment "The geographic coordinate that specifies the north / south position of the Geomerty on the Earth's surface."@en ;
     rdfs:domain locn:Geometry ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range xsd:string .
 
 cccev:level a owl:ObjectProperty ;
     rdfs:label "level"@en ;
     rdfs:comment "The level of the administrative unit in the hierarchy."@en ;
     rdfs:domain cccev:AdminUnit ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote "The recommended code list to indicate the level of an Admin Unit is the <a href=https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/atu-type>Administrative territorial unit type</a> Controlled Vocabulary maintained by the Publications Office of the EU. "@en .
 
@@ -1022,14 +997,14 @@ cccev:longitude a owl:DatatypeProperty ;
     rdfs:label "longitude"@en ;
     rdfs:comment "The geographic coordinate that specifies the east / west position of the Geometry on the Earth's surface."@en ;
     rdfs:domain locn:Geometry ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range xsd:string .
 
 cccev:matronymicName a owl:DatatypeProperty ;
     rdfs:label "matronymic name"@en ;
     rdfs:comment "Name based on the given name of the Person's mother."@en ;
     rdfs:domain person:Person ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdf:langString .
 
 cccev:openingHours a owl:ObjectProperty ;
@@ -1077,14 +1052,14 @@ cccev:providesValueFor a owl:ObjectProperty ;
     rdfs:label "provides value for"@en ;
     rdfs:comment "Information Concept for which the Supported Value provides a value."@en ;
     rdfs:domain cccev:SupportedValue ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:InformationConcept .
 
 cccev:query a owl:DatatypeProperty ;
     rdfs:label "query"@en ;
     rdfs:comment "Search statement that allows the value for the Information Concept to be retrieved from the Evidence data."@en ;
     rdfs:domain cccev:SupportedValue ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     skos:scopeNote "The query must be executed on the business data provided by the supporting Evidence. In order to be able to evaluate the query on the provided data, the format of the provided data must be aligned with the query expression. For instance if the provided data is XML, a query in <a href=\"https://www.w3.org/TR/xpath-31/\">XPath</a> could be expected. This alignment is part of the implementation agreements that implementors must make."@en .
 
@@ -1092,14 +1067,14 @@ cccev:registrationDate a owl:DatatypeProperty ;
     rdfs:label "registration date"@en ;
     rdfs:comment "The date on which the legal entity has registered in some jurisdiction for regulatory and / or for tax purposes."@en ;
     rdfs:domain <http://www.w3.org/ns/legal#LegalEntity> ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range xsd:date .
 
 cccev:registrationPage a owl:ObjectProperty ;
     rdfs:label "registration page"@en ;
     rdfs:comment "A web page that provides means to attend the Public Event."@en ;
     rdfs:domain cccev:PublicEvent ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range foaf:Document .
 
 cccev:relatedService a owl:AnnotationProperty,
@@ -1113,7 +1088,7 @@ cccev:role a owl:ObjectProperty ;
     rdfs:label "role"@en ;
     rdfs:comment "The function of an Agent within a Participation."@en ;
     rdfs:domain cccev:Participation ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote """This should be provided using a controlled vocabulary.
 Since this is an extension mechanism for the CSPV-AP, the controlled vocabulary should be decided to suit local implementations."""@en .
@@ -1127,7 +1102,7 @@ cccev:sex a owl:ObjectProperty ;
     rdfs:label "sex"@en ;
     rdfs:comment "The organism's biological sex."@en ;
     rdfs:domain person:Person ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote "The recommended controlled vocabulary for this property is <a href=\"https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/human-sex\">the sex authority table of the Publications Office.</a>"@en .
 
@@ -1147,14 +1122,14 @@ cccev:specifiesEvidenceType a owl:ObjectProperty ;
     rdfs:label "specifies evidence type"@en ;
     rdfs:comment "Evidence Type included in this Evidence Type List."@en ;
     rdfs:domain cccev:EvidenceTypeList ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:EvidenceType .
 
 cccev:supportsConcept a owl:ObjectProperty ;
     rdfs:label "supports concept"@en ;
     rdfs:comment "Information Concept providing facts found/inferred from the Evidence."@en ;
     rdfs:domain cccev:Evidence ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:InformationConcept ;
     skos:scopeNote "Examples of Information Concepts are values found explictly in the evidence such as a birth date or information derived from the Evidence such as \"I am older that 18 years\"."@en .
 
@@ -1162,21 +1137,21 @@ cccev:supportsRequirement a owl:ObjectProperty ;
     rdfs:label "supports requirement"@en ;
     rdfs:comment "Requirement for which the Evidence provides proof."@en ;
     rdfs:domain cccev:Evidence ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:Requirement .
 
 cccev:supportsValue a owl:ObjectProperty ;
     rdfs:label "supports value"@en ;
     rdfs:comment "Supported Value that the Evidence contains."@en ;
     rdfs:domain cccev:Evidence ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range cccev:SupportedValue .
 
 cccev:telephone a owl:DatatypeProperty ;
     rdfs:label "has telephone"@en ;
     rdfs:comment "A telephone number through which the Contact Point can be contacted."@en ;
     rdfs:domain cccev:ContactPoint ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal .
 
 cccev:thematicArea a owl:ObjectProperty ;
@@ -1188,14 +1163,14 @@ cccev:validityPeriod a owl:ObjectProperty ;
     rdfs:label "validity period"@en ;
     rdfs:comment "Period of Time during which the Evidence holds true or has force."@en ;
     rdfs:domain cccev:Evidence ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range time:ProperInterval .
 
 cccev:validityPeriodConstraint a owl:ObjectProperty ;
     rdfs:label "validity period constraint"@en ;
     rdfs:comment "Temporal condition on the validity period of the Evidence Type."@en ;
     rdfs:domain cccev:EvidenceType ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range time:ProperInterval ;
     skos:scopeNote "E.g. A Belgian birth evidence is valid for X months after emission. To express constraints on the validity period that must hold when assessing the evidence (e.g. the certificate of good conduct cannot be issued more than 3 months ago), we refer to the Constraint class."@en .
 
@@ -1203,14 +1178,14 @@ cccev:value a owl:DatatypeProperty ;
     rdfs:label "value"@en ;
     rdfs:comment "Value for the Information Concept that the Evidence supports."@en ;
     rdfs:domain cccev:SupportedValue ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal .
 
 cccev:weight a owl:DatatypeProperty ;
     rdfs:label "weight"@en ;
     rdfs:comment "Relative importance of the Criterion."@en ;
     rdfs:domain cccev:Criterion ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range xsd:decimal ;
     skos:scopeNote "The weight must be between 0 and 1. Usually, all Criteria can be integrated within a weighted sum equal to 1."@en .
 
@@ -1218,7 +1193,7 @@ cccev:weightingConsiderationDescription a owl:DatatypeProperty ;
     rdfs:label "weighting consideration description"@en ;
     rdfs:comment "Explanation of how the weighting of a Criterion is to be used."@en ;
     rdfs:domain cccev:Criterion ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range xsd:string ;
     skos:scopeNote "This description gives the view of the creator of the Criterion weights on how to interpret and use them during the evaluation process."@en .
 
@@ -1226,7 +1201,7 @@ cccev:weightingType a owl:ObjectProperty ;
     rdfs:label "weighting type"@en ;
     rdfs:comment "Indication of how the weight should be interpreted in a complex evaluation expression, e.g. as a percentage in an evaluation expression."@en ;
     rdfs:domain cccev:Criterion ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range skos:Concept ;
     skos:scopeNote "An existing codelist which can be used is <a href=\"https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/number-weight\" >OP's Number weigth controlled vocabulary</a>"@en .
 
@@ -1234,19 +1209,24 @@ dcam:domainIncludes a owl:AnnotationProperty .
 
 dcam:rangeIncludes a owl:AnnotationProperty .
 
+dcterms: a owl:NamedIndividual ;
+    dcterms:modified "2012-06-14"^^xsd:date ;
+    dcterms:publisher <http://purl.org/dc/aboutdcmi#DCMI> ;
+    dcterms:title "DCMI Metadata Terms - other"@en .
+
 dcterms:BibliographicResource a owl:Class,
         owl:NamedIndividual ;
     rdfs:label "Bibliographic Resource"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A book, article, or other documentary resource."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:Box a rdfs:Datatype,
         owl:NamedIndividual ;
     rdfs:label "DCMI Box"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of regions in space defined by their geographic coordinates according to the DCMI Box Encoding Scheme."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-box/> .
 
 dcterms:DCMIType a dcam:VocabularyEncodingScheme,
@@ -1254,7 +1234,7 @@ dcterms:DCMIType a dcam:VocabularyEncodingScheme,
     rdfs:label "DCMI Type Vocabulary"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso dcmitype: .
 
 dcterms:DDC a dcam:VocabularyEncodingScheme,
@@ -1262,7 +1242,7 @@ dcterms:DDC a dcam:VocabularyEncodingScheme,
     rdfs:label "DDC"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of conceptual resources specified by the Dewey Decimal Classification."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.oclc.org/dewey/> .
 
 dcterms:FileFormat a owl:Class,
@@ -1270,7 +1250,7 @@ dcterms:FileFormat a owl:Class,
     rdfs:label "File Format"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A digital resource format."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf dcterms:MediaType .
 
 dcterms:IMT a dcam:VocabularyEncodingScheme,
@@ -1278,7 +1258,7 @@ dcterms:IMT a dcam:VocabularyEncodingScheme,
     rdfs:label "IMT"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of media types specified by the Internet Assigned Numbers Authority."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.iana.org/assignments/media-types/> .
 
 dcterms:ISO3166 a rdfs:Datatype,
@@ -1286,7 +1266,7 @@ dcterms:ISO3166 a rdfs:Datatype,
     rdfs:label "ISO 3166"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of codes listed in ISO 3166-1 for the representation of names of countries."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <https://www.iso.org/obp/ui/#search> .
 
 dcterms:ISO639-2 a rdfs:Datatype,
@@ -1294,7 +1274,7 @@ dcterms:ISO639-2 a rdfs:Datatype,
     rdfs:label "ISO 639-2"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The three-letter alphabetic codes listed in ISO639-2 for the representation of names of languages."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://lcweb.loc.gov/standards/iso639-2/langhome.html> .
 
 dcterms:ISO639-3 a rdfs:Datatype,
@@ -1302,7 +1282,7 @@ dcterms:ISO639-3 a rdfs:Datatype,
     rdfs:label "ISO 639-3"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "The set of three-letter codes listed in ISO 639-3 for the representation of names of languages."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.sil.org/iso639-3/> .
 
 dcterms:LCC a dcam:VocabularyEncodingScheme,
@@ -1310,7 +1290,7 @@ dcterms:LCC a dcam:VocabularyEncodingScheme,
     rdfs:label "LCC"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of conceptual resources specified by the Library of Congress Classification."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html> .
 
 dcterms:LCSH a dcam:VocabularyEncodingScheme,
@@ -1318,14 +1298,14 @@ dcterms:LCSH a dcam:VocabularyEncodingScheme,
     rdfs:label "LCSH"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of labeled concepts specified by the Library of Congress Subject Headings."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:MESH a dcam:VocabularyEncodingScheme,
         owl:NamedIndividual ;
     rdfs:label "MeSH"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of labeled concepts specified by the Medical Subject Headings."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.nlm.nih.gov/mesh/meshhome.html> .
 
 dcterms:NLM a dcam:VocabularyEncodingScheme,
@@ -1333,7 +1313,7 @@ dcterms:NLM a dcam:VocabularyEncodingScheme,
     rdfs:label "NLM"@en ;
     dcterms:issued "2005-06-13"^^xsd:date ;
     rdfs:comment "The set of conceptual resources specified by the National Library of Medicine Classification."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://wwwcf.nlm.nih.gov/class/> .
 
 dcterms:Point a rdfs:Datatype,
@@ -1341,7 +1321,7 @@ dcterms:Point a rdfs:Datatype,
     rdfs:label "DCMI Point"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of points in space defined by their geographic coordinates according to the DCMI Point Encoding Scheme."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-point/> .
 
 dcterms:RFC1766 a rdfs:Datatype,
@@ -1349,7 +1329,7 @@ dcterms:RFC1766 a rdfs:Datatype,
     rdfs:label "RFC 1766"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of tags, constructed according to RFC 1766, for the identification of languages."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.ietf.org/rfc/rfc1766.txt> .
 
 dcterms:RFC3066 a rdfs:Datatype,
@@ -1358,7 +1338,7 @@ dcterms:RFC3066 a rdfs:Datatype,
     dcterms:description "RFC 3066 has been obsoleted by RFC 4646."@en ;
     dcterms:issued "2002-07-13"^^xsd:date ;
     rdfs:comment "The set of tags constructed according to RFC 3066 for the identification of languages."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.ietf.org/rfc/rfc3066.txt> .
 
 dcterms:RFC4646 a rdfs:Datatype,
@@ -1367,7 +1347,7 @@ dcterms:RFC4646 a rdfs:Datatype,
     dcterms:description "RFC 4646 obsoletes RFC 3066."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "The set of tags constructed according to RFC 4646 for the identification of languages."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.ietf.org/rfc/rfc4646.txt> .
 
 dcterms:RFC5646 a rdfs:Datatype,
@@ -1376,7 +1356,7 @@ dcterms:RFC5646 a rdfs:Datatype,
     dcterms:description "RFC 5646 obsoletes RFC 4646."@en ;
     dcterms:issued "2010-10-11"^^xsd:date ;
     rdfs:comment "The set of tags constructed according to RFC 5646 for the identification of languages."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.ietf.org/rfc/rfc5646.txt> .
 
 dcterms:TGN a dcam:VocabularyEncodingScheme,
@@ -1384,7 +1364,7 @@ dcterms:TGN a dcam:VocabularyEncodingScheme,
     rdfs:label "TGN"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of places specified by the Getty Thesaurus of Geographic Names."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.getty.edu/research/tools/vocabulary/tgn/index.html> .
 
 dcterms:UDC a dcam:VocabularyEncodingScheme,
@@ -1392,7 +1372,7 @@ dcterms:UDC a dcam:VocabularyEncodingScheme,
     rdfs:label "UDC"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of conceptual resources specified by the Universal Decimal Classification."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.udcc.org/> .
 
 dcterms:URI a rdfs:Datatype,
@@ -1400,7 +1380,7 @@ dcterms:URI a rdfs:Datatype,
     rdfs:label "URI"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.ietf.org/rfc/rfc3986.txt> .
 
 dcterms:W3CDTF a rdfs:Datatype,
@@ -1408,7 +1388,7 @@ dcterms:W3CDTF a rdfs:Datatype,
     rdfs:label "W3C-DTF"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of dates and times constructed according to the W3C Date and Time Formats Specification."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <http://www.w3.org/TR/NOTE-datetime> .
 
 dcterms:abstract a owl:AnnotationProperty,
@@ -1416,7 +1396,7 @@ dcterms:abstract a owl:AnnotationProperty,
     rdfs:label "Abstract"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A summary of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:description,
         dcterms:description .
 
@@ -1427,7 +1407,7 @@ dcterms:accessRights a owl:AnnotationProperty,
     dcterms:description "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies."@en ;
     dcterms:issued "2003-02-15"^^xsd:date ;
     rdfs:comment "Information about who access the resource or an indication of its security status."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:rights,
         dcterms:rights .
 
@@ -1439,7 +1419,7 @@ dcterms:accrualMethod a owl:AnnotationProperty,
     dcterms:issued "2005-06-13"^^xsd:date ;
     rdfs:comment "The method by which items are added to a collection."@en ;
     rdfs:domain dcmitype:Collection ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:accrualPeriodicity a owl:AnnotationProperty,
         owl:NamedIndividual ;
@@ -1449,7 +1429,7 @@ dcterms:accrualPeriodicity a owl:AnnotationProperty,
     dcterms:issued "2005-06-13"^^xsd:date ;
     rdfs:comment "The frequency with which items are added to a collection."@en ;
     rdfs:domain dcmitype:Collection ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:accrualPolicy a owl:AnnotationProperty,
         owl:NamedIndividual ;
@@ -1459,7 +1439,7 @@ dcterms:accrualPolicy a owl:AnnotationProperty,
     dcterms:issued "2005-06-13"^^xsd:date ;
     rdfs:comment "The policy governing the addition of items to a collection."@en ;
     rdfs:domain dcmitype:Collection ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:alternative a owl:AnnotationProperty,
         owl:DatatypeProperty,
@@ -1468,7 +1448,7 @@ dcterms:alternative a owl:AnnotationProperty,
     dcterms:description "The distinction between titles and alternative titles is application-specific."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "An alternative name for the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:title,
         dcterms:title .
@@ -1480,7 +1460,7 @@ dcterms:available a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "Date that the resource became or will become available."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:date,
         dcterms:date .
@@ -1492,7 +1472,7 @@ dcterms:bibliographicCitation a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible."@en ;
     dcterms:issued "2003-02-15"^^xsd:date ;
     rdfs:comment "A bibliographic reference for the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:identifier,
         dcterms:identifier .
@@ -1503,7 +1483,7 @@ dcterms:conformsTo a owl:AnnotationProperty,
     dcam:rangeIncludes dcterms:Standard ;
     dcterms:issued "2001-05-21"^^xsd:date ;
     rdfs:comment "An established standard to which the described resource conforms."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1514,7 +1494,7 @@ dcterms:created a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "Date of creation of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:date,
         dcterms:date .
@@ -1525,7 +1505,7 @@ dcterms:creator a owl:NamedIndividual ;
     dcterms:description "Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "An entity responsible for making the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:creator,
         dcterms:contributor .
 
@@ -1536,7 +1516,7 @@ dcterms:dateAccepted a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or an article (accepted by a journal)."@en ;
     dcterms:issued "2002-07-13"^^xsd:date ;
     rdfs:comment "Date of acceptance of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:date,
         dcterms:date .
@@ -1548,7 +1528,7 @@ dcterms:dateCopyrighted a owl:AnnotationProperty,
     dcterms:description "Typically a year.  Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
     dcterms:issued "2002-07-13"^^xsd:date ;
     rdfs:comment "Date of copyright of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:date,
         dcterms:date .
@@ -1560,7 +1540,7 @@ dcterms:dateSubmitted a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a 'Date Submitted' may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal)."@en ;
     dcterms:issued "2002-07-13"^^xsd:date ;
     rdfs:comment "Date of submission of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:date,
         dcterms:date .
@@ -1571,7 +1551,7 @@ dcterms:educationLevel a owl:AnnotationProperty,
     dcam:rangeIncludes dcterms:AgentClass ;
     dcterms:issued "2002-07-13"^^xsd:date ;
     rdfs:comment "A class of agents, defined in terms of progression through an educational or training context, for which the described resource is intended."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dcterms:audience .
 
 dcterms:extent a owl:AnnotationProperty,
@@ -1581,7 +1561,7 @@ dcterms:extent a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to specify the file size in megabytes and duration in ISO 8601 format."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The size or duration of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:format,
         dcterms:format .
 
@@ -1591,7 +1571,7 @@ dcterms:hasFormat a owl:AnnotationProperty,
     dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Is Format Of."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource that is substantially the same as the pre-existing described resource, but in another format."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1601,7 +1581,7 @@ dcterms:hasPart a owl:AnnotationProperty,
     dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Is Part Of."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource that is included either physically or logically in the described resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1611,7 +1591,7 @@ dcterms:hasVersion a owl:AnnotationProperty,
     dcterms:description "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource that is a version, edition, or adaptation of the described resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1621,7 +1601,7 @@ dcterms:instructionalMethod a owl:NamedIndividual ;
     dcterms:description "Instructional Method typically includes ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback."@en ;
     dcterms:issued "2005-06-13"^^xsd:date ;
     rdfs:comment "A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:isFormatOf a owl:AnnotationProperty,
         owl:NamedIndividual ;
@@ -1629,7 +1609,7 @@ dcterms:isFormatOf a owl:AnnotationProperty,
     dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Has Format."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A pre-existing related resource that is substantially the same as the described resource, but in another format."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1639,7 +1619,7 @@ dcterms:isPartOf a owl:AnnotationProperty,
     dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Has Part."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource in which the described resource is physically or logically included."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1649,7 +1629,7 @@ dcterms:isReferencedBy a owl:AnnotationProperty,
     dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of References."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource that references, cites, or otherwise points to the described resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1658,7 +1638,7 @@ dcterms:isReplacedBy a owl:NamedIndividual ;
     dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Replaces."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource that supplants, displaces, or supersedes the described resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1668,7 +1648,7 @@ dcterms:isRequiredBy a owl:AnnotationProperty,
     dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Requires."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource that requires the described resource to support its function, delivery, or coherence."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1678,7 +1658,7 @@ dcterms:isVersionOf a owl:AnnotationProperty,
     dcterms:description "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Has Version."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource of which the described resource is a version, edition, or adaptation."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1688,7 +1668,7 @@ dcterms:issued a owl:DatatypeProperty,
     dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "Date of formal issuance of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:date,
         dcterms:date .
@@ -1700,7 +1680,7 @@ dcterms:language a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A language of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:language .
 
 dcterms:license a owl:NamedIndividual ;
@@ -1709,7 +1689,7 @@ dcterms:license a owl:NamedIndividual ;
     dcterms:description "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."@en ;
     dcterms:issued "2004-06-14"^^xsd:date ;
     rdfs:comment "A legal document giving official permission to do something with the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:rights,
         dcterms:rights .
 
@@ -1719,7 +1699,7 @@ dcterms:mediator a owl:NamedIndividual ;
     dcterms:description "In an educational context, a mediator might be a parent, teacher, teaching assistant, or care-giver."@en ;
     dcterms:issued "2001-05-21"^^xsd:date ;
     rdfs:comment "An entity that mediates access to the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dcterms:audience .
 
 dcterms:medium a owl:AnnotationProperty,
@@ -1729,7 +1709,7 @@ dcterms:medium a owl:AnnotationProperty,
     dcam:rangeIncludes dcterms:PhysicalMedium ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The material or physical carrier of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:format,
         dcterms:format .
 
@@ -1740,7 +1720,7 @@ dcterms:modified a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "Date on which the resource was changed."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:date,
         dcterms:date .
@@ -1751,7 +1731,7 @@ dcterms:provenance a owl:NamedIndividual ;
     dcterms:description "The statement may include a description of any changes successive custodians made to the resource."@en ;
     dcterms:issued "2004-09-20"^^xsd:date ;
     rdfs:comment "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:publisher a owl:AnnotationProperty,
         owl:NamedIndividual ;
@@ -1759,7 +1739,7 @@ dcterms:publisher a owl:AnnotationProperty,
     dcam:rangeIncludes dcterms:Agent ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "An entity responsible for making the resource available."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:publisher .
 
 dcterms:references a owl:AnnotationProperty,
@@ -1768,7 +1748,7 @@ dcterms:references a owl:AnnotationProperty,
     dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Is Referenced By."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1778,7 +1758,7 @@ dcterms:replaces a owl:AnnotationProperty,
     dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Is Replaced By."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource that is supplanted, displaced, or superseded by the described resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1788,7 +1768,7 @@ dcterms:requires a owl:AnnotationProperty,
     dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Is Required By."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A related resource that is required by the described resource to support its function, delivery, or coherence."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation,
         dcterms:relation .
 
@@ -1798,7 +1778,7 @@ dcterms:rightsHolder a owl:NamedIndividual ;
     dcterms:description "Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided."@en ;
     dcterms:issued "2004-06-14"^^xsd:date ;
     rdfs:comment "A person or organization owning or managing rights over the resource."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:source a owl:AnnotationProperty,
         owl:NamedIndividual ;
@@ -1806,7 +1786,7 @@ dcterms:source a owl:AnnotationProperty,
     dcterms:description "This property is intended to be used with non-literal values. The described resource may be derived from the related resource in whole or in part. Best practice is to identify the related resource by means of a URI or a string conforming to a formal identification system."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A related resource from which the described resource is derived."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:source,
         dcterms:relation .
 
@@ -1816,7 +1796,7 @@ dcterms:spatial a owl:AnnotationProperty,
     dcam:rangeIncludes dcterms:Location ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "Spatial characteristics of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:coverage,
         dcterms:coverage .
 
@@ -1826,7 +1806,7 @@ dcterms:subject a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A topic of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:subject .
 
 dcterms:tableOfContents a owl:AnnotationProperty,
@@ -1834,7 +1814,7 @@ dcterms:tableOfContents a owl:AnnotationProperty,
     rdfs:label "Table Of Contents"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "A list of subunits of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:description,
         dcterms:description .
 
@@ -1844,7 +1824,7 @@ dcterms:temporal a owl:AnnotationProperty,
     dcam:rangeIncludes dcterms:PeriodOfTime ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "Temporal characteristics of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:coverage,
         dcterms:coverage .
 
@@ -1854,7 +1834,7 @@ dcterms:type a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "The nature or genre of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:type .
 
 dcterms:valid a owl:AnnotationProperty,
@@ -1864,7 +1844,7 @@ dcterms:valid a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "Date (often a range) of validity of a resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:date,
         dcterms:date .
@@ -1889,7 +1869,7 @@ xsd:dateTime a rdfs:Datatype ;
 :StandardForm a owl:Class,
         owl:NamedIndividual,
         skos:ConceptScheme ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf skos:Concept ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:hasValue :StandardForm ;
@@ -1899,60 +1879,60 @@ xsd:dateTime a rdfs:Datatype ;
 :announcesCompletionOfContract a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :CompletionNotice ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :Contract ;
     skos:prefLabel "announces Completion Of Contract"@en .
 
 :announcesContractAmendment a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :ContractModificationNotice ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :ContractAmendment ;
     skos:prefLabel "announces Contract Amendment"@en .
 
 :announcesReviewObject a owl:ObjectProperty ;
     rdfs:domain :CompletionNotice ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :ReviewObject ;
     skos:prefLabel "announces Review Object"@en .
 
 :describesDirectAwardPrenotificationNotice a owl:ObjectProperty ;
     rdfs:domain :NoticeAwardInformation ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :DirectAwardPrenotificationNotice ;
     skos:prefLabel "describes Direct Award Prenotification Notice"@en .
 
 :describesResultNotice a owl:ObjectProperty ;
     rdfs:domain :NoticeAwardInformation ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :ResultNotice ;
     skos:prefLabel "describes Result Notice"@en .
 
 :refersToContractToBeModified a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:domain :ContractModificationNotice ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :Contract ;
     skos:prefLabel "refers To Contract To Be Modified"@en .
 
 :refersToRole a owl:ObjectProperty ;
     rdfs:domain :CompletionNotice,
         :ResultNotice ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :AgentInRole ;
     skos:prefLabel "refers To Role"@en .
 
 cccev:Constraint a owl:Class ;
     rdfs:label "Constraint"@en ;
     rdfs:comment "Limitation applied to an Information Concept."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf cccev:Requirement ;
     skos:scopeNote "Constraints are requirements in themselves, since they impose prerequisites which influence the definition, use and/or fulfilment of the requirement. They represent hard conditions such as minimum or maximum expressions which can be used to evaluate pieces of information, the required age, income, involvement in activities, etc. An example from the eProcurement domain is a threshold as the minimum turnover required by the buying organisation to select the candidates. Note that CCCEV does not provide any specific guidance on when which kind of Requirement should be used. Users of this vocabulary should make decisions on this topic in their specific context."@en .
 
 cccev:Participation a owl:Class ;
     rdfs:label "Participation"@en ;
     rdfs:comment "The Participation class allows to define roles within a certain context."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote """The CPSV-AP recognises a common role connected with public services, i.e. the Competent Authority.
 <br/><br/>
 This simple structure does not allow statements to be made about those participants, such as the start and end date of a contract, nor does it support the inclusion of other roles. The Participation class supports this extra complexity if required, for instance, the description of a service user or a service provider. The model is consistent with the CPOV which in turn is based on the W3C Organization Ontology that supports the common cases simply but allows the complex cases where necessary. The Participation class can be mapped to the Organization Ontology&#39;s Membership class that allows more complex relationships and richer metadata to be applied to a role filled by a given Agent."""@en .
@@ -1960,7 +1940,7 @@ This simple structure does not allow statements to be made about those participa
 cccev:ReferenceFramework a owl:Class ;
     rdfs:label "Reference Framework"@en ;
     rdfs:comment "Legislation or official policy from which Requirements are derived."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote "Usual Reference Frameworks are legal and non-legal specifications. Examples include procedures, tendering legislation, etc."@en .
 
 dc:contributor a owl:AnnotationProperty .
@@ -1982,14 +1962,14 @@ dcterms:Frequency a owl:Class,
     rdfs:label "Frequency"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A rate at which something recurs."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:Jurisdiction a owl:Class,
         owl:NamedIndividual ;
     rdfs:label "Jurisdiction"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "The extent or range of judicial, law enforcement, or other authority."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf dcterms:LocationPeriodOrJurisdiction .
 
 dcterms:LicenseDocument a owl:Class,
@@ -1997,7 +1977,7 @@ dcterms:LicenseDocument a owl:Class,
     rdfs:label "License Document"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A legal document giving official permission to do something with a resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf dcterms:RightsStatement .
 
 dcterms:LinguisticSystem a owl:Class,
@@ -2006,28 +1986,28 @@ dcterms:LinguisticSystem a owl:Class,
     dcterms:description "Written, spoken, sign, and computer languages are linguistic systems."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A system of signs, symbols, sounds, gestures, or rules used in communication."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:MethodOfAccrual a owl:Class,
         owl:NamedIndividual ;
     rdfs:label "Method of Accrual"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A method by which resources are added to a collection."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:MethodOfInstruction a owl:Class,
         owl:NamedIndividual ;
     rdfs:label "Method of Instruction"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A process that is used to engender knowledge, attitudes, and skills."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:Period a rdfs:Datatype,
         owl:NamedIndividual ;
     rdfs:label "DCMI Period"@en ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:comment "The set of time intervals defined by their limits according to the DCMI Period Encoding Scheme."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-period/> .
 
 dcterms:PeriodOfTime a owl:Class,
@@ -2035,7 +2015,7 @@ dcterms:PeriodOfTime a owl:Class,
     rdfs:label "Period of Time"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "An interval of time that is named or defined by its start and end dates."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf dcterms:LocationPeriodOrJurisdiction .
 
 dcterms:PhysicalMedium a owl:Class,
@@ -2044,7 +2024,7 @@ dcterms:PhysicalMedium a owl:Class,
     dcterms:description "Examples include paper, canvas, or DVD."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A physical material or carrier."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf dcterms:MediaType .
 
 dcterms:PhysicalResource a owl:Class,
@@ -2052,21 +2032,21 @@ dcterms:PhysicalResource a owl:Class,
     rdfs:label "Physical Resource"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A material thing."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:Policy a owl:Class,
         owl:NamedIndividual ;
     rdfs:label "Policy"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:ProvenanceStatement a owl:Class,
         owl:NamedIndividual ;
     rdfs:label "Provenance Statement"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "Any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:SizeOrDuration a owl:Class,
         owl:NamedIndividual ;
@@ -2074,7 +2054,7 @@ dcterms:SizeOrDuration a owl:Class,
     dcterms:description "Examples include a number of pages, a specification of length, width, and breadth, or a period in hours, minutes, and seconds."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A dimension or extent, or a time taken to play or execute."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf dcterms:MediaTypeOrExtent .
 
 dcterms:Standard a owl:Class,
@@ -2082,7 +2062,7 @@ dcterms:Standard a owl:Class,
     rdfs:label "Standard"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A reference point against which other things can be evaluated or compared."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:contributor a owl:NamedIndividual ;
     rdfs:label "Contributor"@en ;
@@ -2090,7 +2070,7 @@ dcterms:contributor a owl:NamedIndividual ;
     dcterms:description "The guidelines for using names of persons or organizations as creators apply to contributors."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "An entity responsible for making contributions to the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:contributor .
 
 dcterms:identifier a owl:AnnotationProperty,
@@ -2100,7 +2080,7 @@ dcterms:identifier a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "An unambiguous reference to the resource within a given context."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:identifier .
 
@@ -2109,7 +2089,7 @@ dcterms:title a owl:DatatypeProperty,
     rdfs:label "Title"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A name given to the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:title .
 
@@ -2141,21 +2121,21 @@ org:Organization a owl:Class .
 :ReviewObject a owl:Class .
 
 :SubcontractNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CompetitionNotice ;
     skos:prefLabel "Subcontract Notice"@en .
 
 :announcesLot a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompetitionNotice :DirectAwardPrenotificationNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :Lot ;
     skos:prefLabel "announces Lot"@en .
 
 :announcesNoticeAwardInformation a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :DirectAwardPrenotificationNotice :ResultNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :NoticeAwardInformation ;
     skos:prefLabel "announces Notice Award Information"@en .
 
@@ -2163,7 +2143,7 @@ org:Organization a owl:Class .
         owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompetitionNotice :DirectAwardPrenotificationNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :Procedure ;
     rdfs:subPropertyOf :refersToProcedure ;
     skos:prefLabel "announces Procedure"@en .
@@ -2171,14 +2151,14 @@ org:Organization a owl:Class .
 :refersToNoticeAwardInformation a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompletionNotice :ContractModificationNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :NoticeAwardInformation ;
     skos:prefLabel "refers To Notice Award Information"@en .
 
 cccev:AdminUnit a owl:Class ;
     rdfs:label "Administrative Unit"@en ;
     rdfs:comment "A detailed administrative unit organized in a hierarchy."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote "This class should be used whenever a classification mechanism is in place, in alternative to the properties adminUnitL1 and adminUnitL2 of the Address class which allow free text."@en .
 
 cccev:Event a owl:Class ;
@@ -2189,7 +2169,7 @@ cccev:Event a owl:Class ;
 cccev:GenericDate a owl:Class ;
     rdfs:label "Generic date"@en ;
     rdfs:comment "The date data type is the union of  xs:date, xs:gYearMonth and xs:gYear"@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dc:identifier a owl:AnnotationProperty .
 
@@ -2200,7 +2180,7 @@ dcterms:Location a owl:Class,
     rdfs:label "Location"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A spatial region or named place."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf dcterms:LocationPeriodOrJurisdiction .
 
 dcterms:MediaTypeOrExtent a owl:Class,
@@ -2208,7 +2188,7 @@ dcterms:MediaTypeOrExtent a owl:Class,
     rdfs:label "Media Type or Extent"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A media type or extent."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:audience a owl:AnnotationProperty,
         owl:NamedIndividual ;
@@ -2217,7 +2197,7 @@ dcterms:audience a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to use this property with non-literal values from a vocabulary of audience types."@en ;
     dcterms:issued "2001-05-21"^^xsd:date ;
     rdfs:comment "A class of agents for whom the resource is intended or useful."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:coverage a owl:AnnotationProperty,
         owl:NamedIndividual ;
@@ -2228,7 +2208,7 @@ dcterms:coverage a owl:AnnotationProperty,
     dcterms:description "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:coverage .
 
 dcterms:description a owl:NamedIndividual ;
@@ -2236,7 +2216,7 @@ dcterms:description a owl:NamedIndividual ;
     dcterms:description "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "An account of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:description .
 
 dcterms:format a owl:AnnotationProperty,
@@ -2247,7 +2227,7 @@ dcterms:format a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:format .
 
 dcterms:rights a owl:AnnotationProperty,
@@ -2257,7 +2237,7 @@ dcterms:rights a owl:AnnotationProperty,
     dcterms:description "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "Information about rights held in and over the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:rights .
 
 xsd:decimal a rdfs:Datatype ;
@@ -2268,12 +2248,12 @@ time:ProperInterval a owl:Class .
 foaf:Document a owl:Class .
 
 :PIN-CFCStandardNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CompetitionNotice ;
     skos:prefLabel "PI N- CFC Standard Notice"@en .
 
 :QSNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CompetitionNotice ;
     skos:prefLabel "QS Notice"@en .
 
@@ -2281,7 +2261,7 @@ foaf:Document a owl:Class .
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompetitionNotice :CompletionNotice :ContractModificationNotice :DirectAwardPrenotificationNotice :PlanningNotice ) ],
         :ResultNotice ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :AgentInRole ;
     skos:editorialNote "for ReviewBody"@en ;
     skos:prefLabel "announces Role"@en .
@@ -2289,21 +2269,21 @@ foaf:Document a owl:Class .
 :refersToLot a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompletionNotice :ContractModificationNotice :ResultNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :Lot ;
     skos:prefLabel "refers To Lot"@en .
 
 cccev:ContactPoint a owl:Class ;
     rdfs:label "Contact Point"@en ;
     rdfs:comment "Information (e.g. e-mail address, telephone number) of a person or department through which the user can get in touch with."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote "Similarly to the Channel class, a Contact Point may have regular opening hours that are then overridden by, for example, public holidays, using the Temporal Entity class."@en,
         "The Core Public Organization Vocabulary defines properties for telephone number, e-mail address and opening hours although it is noteworthy that the class is based on schema.org's <a href=\"http://schema.org/ContactPoint\"> ContactPoint </a> class  that has additional properties that some implementations may find useful."@en .
 
 cccev:EvidenceTypeList a owl:Class ;
     rdfs:label "Evidence Type List"@en ;
     rdfs:comment "Group of Evidence Types for conforming to a Requirement."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote """An Evidence Type List is satisfied, if and only if, for all included Evidence Types in this List, corresponding conformant Evidence(s) are supporting the Requirement having this List. 
 
 The Evidence Type List describes thus an AND condition on the different Evidence Types within the list and an OR condition between two or more Evidence Type Lists. Combinations of alternative Lists can be provided for a respondent of a Requirement to choose amongst them."""@en .
@@ -2321,14 +2301,14 @@ dcterms:LocationPeriodOrJurisdiction a owl:Class,
     rdfs:label "Location, Period, or Jurisdiction"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A location, period of time, or jurisdiction."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:MediaType a owl:Class,
         owl:NamedIndividual ;
     rdfs:label "Media Type"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A file format or physical medium."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf dcterms:MediaTypeOrExtent .
 
 dcterms:RightsStatement a owl:Class,
@@ -2336,20 +2316,20 @@ dcterms:RightsStatement a owl:Class,
     rdfs:label "Rights Statement"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 :CNSocialNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CompetitionNotice ;
     skos:prefLabel "CN Social Notice"@en .
 
 :DesignContestNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CompetitionNotice ;
     skos:prefLabel "Design Contest Notice"@en .
 
 :DesignContestResultNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :ResultNotice ;
     skos:prefLabel "Design Contest Result Notice"@en .
 
@@ -2357,14 +2337,14 @@ dcterms:RightsStatement a owl:Class,
         owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( :CompletionNotice :ContractModificationNotice :ResultNotice ) ] ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range :Procedure ;
     skos:prefLabel "refers To Procedure"@en .
 
 cccev:Criterion a owl:Class ;
     rdfs:label "Criterion"@en ;
     rdfs:comment "Condition for evaluation or assessment."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf cccev:Requirement ;
     skos:scopeNote """In general, Criteria are used for comparison, filtering or selection purposes. Criteria usually set minimum conditions (e.g. limits, intervals, thresholds, etc.) that need to be met in order to pass the requirements or to fulfil them to a certain degree or quality. The concept of Criteria is broader than the concept of Constraint since it covers more usages. The evaluation of the fulfilment is usually supported by the provision of Evidence. 
 For example in the eProcurement domain, the eProcurement Ontology defines different subclasses of Criterion such as exclusion grounds, selection criteria or award criteria. A concrete example of a Criterion is 'participation in a criminal organisation' which could also be considered as an exclusion ground criterion in the procurement domain or for requiring a public service."""@en .
@@ -2372,13 +2352,13 @@ For example in the eProcurement domain, the eProcurement Ontology defines differ
 cccev:EvidenceType a owl:Class ;
     rdfs:label "Evidence Type"@en ;
     rdfs:comment "Information about the characteristics of an Evidence."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote "The Evidence Type and the characteristics it describes are not concrete individual responses to a Requirement (i.e. Evidence), but descriptions about the desired form, content, source and/or other characteristics that an actual response should have and provide (e.g. membership of a class of Evidences)."@en .
 
 cccev:SupportedValue a owl:Class ;
     rdfs:label "Supported Value"@en ;
     rdfs:comment "Value for an Information Concept that is provided by an Evidence."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote """The notion of Supported Value is closely related to actual data exchange between two parties: 
 (a) the Requirement processor, i.e. the Agent setting out Requirements for an objective and processing the supplied Evidences in the context of the Requirements, and 
 (b) the Evidence provider, i.e. the Agent supplying information to an information request expressed as Requirements.
@@ -2396,53 +2376,53 @@ dcterms:Agent a dcterms:AgentClass,
     rdfs:label "Agent"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A resource that acts or has the power to act."@en ;
-    rdfs:isDefinedBy dcterms: .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 dcterms:AgentClass a owl:Class,
         owl:NamedIndividual ;
     rdfs:label "Agent Class"@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A group of agents."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf rdfs:Class .
 
 :CANSocialNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :ResultNotice ;
     skos:prefLabel "CAN Social Notice"@en .
 
 :CANStandardNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :ResultNotice ;
     skos:prefLabel "CAN Standard Notice"@en .
 
 :CNStandardNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CompetitionNotice ;
     skos:prefLabel "CN Standard Notice"@en .
 
 :Contract a owl:Class .
 
 :PIN-CFCSocialNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :CompetitionNotice ;
     skos:prefLabel "PI N- CFC Social Notice"@en .
 
 :PINOnlyNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PlanningNotice ;
     skos:definition "PriorInformationNotice"@en ;
     skos:prefLabel "PIN Only Notice"@en .
 
 :PINTimeLimitNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PlanningNotice ;
     skos:prefLabel "PIN Time Limit Notice"@en .
 
 cccev:InformationConcept a owl:Class ;
     rdfs:label "Information Concept"@en ;
     rdfs:comment "Piece of information that the Evidence provides or the Requirement needs."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote "The Information Concept class offers the ability to describe conceptually the Requirements and provided facts in Evidences. In complementarity with the Supported Value class, this is a (first) step towards facilitating the assessment of the requirements in an automated way based on the Evidence provided."@en .
 
 locn:Geometry a owl:Class .
@@ -2452,12 +2432,12 @@ person:Person a owl:Class .
 :AgentInRole a owl:Class .
 
 :PINProfileNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :PlanningNotice ;
     skos:prefLabel "PIN Profile Notice"@en .
 
 :PlanningNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty :announcesRole ;
             owl:someValuesFrom :AgentInRole ],
@@ -2470,7 +2450,7 @@ cccev:Evidence a owl:Class ;
     rdfs:label "Evidence"@en ;
     rdfs:comment "Proof that a Requirement is met."@en,
         "The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can prove that a specific requirement is met."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote """Although the wording of the definition is different, the semantics are an exact match for CPSV's Input class which it replaces.
 
 Evidence can be any resource - document, artefact - anything needed for executing the Public Service. In the context of Public Services, Evidence is usually administrative documents or completed application forms. A specific Public Service may require the presence of certain Evidence or combinations of Evidence in order to be delivered.
@@ -2493,7 +2473,7 @@ cccev:PublicEvent a owl:Class ;
 organised by one or more agents for a particular purpose, and is of interest to a general
  audience. This definition excludes natural events such as earthquakes and volcanic 
 eruptions."""@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> .
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> .
 
 :NoticeAwardInformation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -2506,7 +2486,7 @@ eruptions."""@en ;
             owl:onProperty :describesResultNotice ] .
 
 :VoluntaryEx-AnteTransparencyNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf :DirectAwardPrenotificationNotice ;
     skos:definition "A Notice informing of the intention to award a Contract without prior publication of a Contract Notice. Additional Information: For European Notices above the threshold \"A means of advertising the intention to award the Contract without opening it up to formal Competition. A Contracting Authority may decide that a Contract does not require prior publication through a Contract Notice in the O.J.E.U. A reason for this decision may be that the Contract meets the exceptional conditions described in Article 31 of Directive 2004/18/EC. In a recent V.E.A.T notice the reason was listed as “extreme urgency brought about by events unforeseeable by the Contracting Entity and in accordance with the strict conditions stated in the Directive” . \"Voluntary Ex-Ante Transparency Notice\" (VEAT) where a Contracting Authority deems that a Contract does not require prior publication of a Contract Notice in the European Journal (OJEU). This may apply, for example, if the Contract meets the exceptional conditions justifying direct award of contracts. <b>This definition is still to be worked on.</b>"@en ;
     skos:prefLabel "Voluntary Ex- Ante Transparency Notice"@en .
@@ -2518,7 +2498,7 @@ dcterms:date a owl:AnnotationProperty,
     dcterms:description "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A point or period of time associated with an event in the lifecycle of the resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:range rdfs:Literal ;
     rdfs:subPropertyOf dc:date .
 
@@ -2527,61 +2507,61 @@ dcam:VocabularyEncodingScheme a owl:Class .
 dc:date a owl:AnnotationProperty .
 
 :CompletionNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty :refersToLot ;
             owl:someValuesFrom :Lot ],
+        [ a owl:Restriction ;
+            owl:onProperty :announcesReviewObject ;
+            owl:someValuesFrom :ReviewObject ],
         [ a owl:Restriction ;
             owl:onClass :Contract ;
             owl:onProperty :announcesCompletionOfContract ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :refersToProcedure ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onProperty :announcesReviewObject ;
-            owl:someValuesFrom :ReviewObject ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :NoticeAwardInformation ;
             owl:onProperty :refersToNoticeAwardInformation ],
+        [ a owl:Restriction ;
+            owl:onClass :Procedure ;
+            owl:onProperty :refersToProcedure ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         :Notice ;
     skos:definition "An announcement of the end of a Procurement by a Buyer."@en ;
     skos:prefLabel "Completion Notice"@en .
 
 :CompetitionNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Procedure ;
+            owl:onProperty :announcesProcedure ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
             owl:onProperty :announcesRole ;
             owl:someValuesFrom :AgentInRole ],
         [ a owl:Restriction ;
             owl:onProperty :announcesLot ;
             owl:someValuesFrom :Lot ],
-        [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :announcesProcedure ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         :Notice ;
     skos:definition "An announcement of the launch of a Procurement Procedure by a Procuring Entity. WG approval 18/05/2018"@en ;
     skos:prefLabel "Competition Notice"@en .
 
 :DirectAwardPrenotificationNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Procedure ;
+            owl:onProperty :announcesProcedure ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty :announcesRole ;
+            owl:someValuesFrom :AgentInRole ],
+        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :NoticeAwardInformation ;
             owl:onProperty :announcesNoticeAwardInformation ],
         [ a owl:Restriction ;
             owl:onProperty :announcesLot ;
             owl:someValuesFrom :Lot ],
-        [ a owl:Restriction ;
-            owl:onClass :Procedure ;
-            owl:onProperty :announcesProcedure ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onProperty :announcesRole ;
-            owl:someValuesFrom :AgentInRole ],
         :Notice ;
     skos:definition "Notice which sets out the Buyer's purchasing intention to award a Contract without prior notification of Competition."@en ;
     skos:prefLabel "Direct Award Prenotification Notice"@en .
@@ -2589,7 +2569,7 @@ dc:date a owl:AnnotationProperty .
 cccev:Requirement a owl:Class ;
     rdfs:label "Requirement"@en ;
     rdfs:comment "Condition or prerequisite that is to be proven by Evidence."@en ;
-    rdfs:isDefinedBy <http://data.europa.eu/m8g> ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:scopeNote """Not all public services are needed or are used by everyone. For example, the visa service operated by European countries is not needed by European citizens but is needed by some citizens from elsewhere, or public services offering unemployment benefits and grants are targeting specific societal groups. The CPSV-AP reuses the Core Criterion and Core Evidence Vocabulary for this class.
 
 Requirement is a generic class representing any type of prerequisite that may be desired, needed or imposed as an obligation. CCCEV recommends to not use the Requirement class directly, but rather a more semantically-enriched subclass such as Criterion, Information Requirement or Constraint. Also note that the Requirement class is specified at a more abstract level and is not to be used as the instantiation of a Requirement for a specific Agent.
@@ -2599,11 +2579,15 @@ To illustrate the notion: the European Directive on services in the internal mar
 dc:relation a owl:AnnotationProperty .
 
 :ContractModificationNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass :NoticeAwardInformation ;
             owl:onProperty :refersToNoticeAwardInformation ],
+        [ a owl:Restriction ;
+            owl:onClass :Contract ;
+            owl:onProperty :refersToContractToBeModified ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         [ a owl:Restriction ;
             owl:onProperty :refersToLot ;
             owl:someValuesFrom :Lot ],
@@ -2615,21 +2599,13 @@ dc:relation a owl:AnnotationProperty .
             owl:onClass :ContractAmendment ;
             owl:onProperty :announcesContractAmendment ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass :Contract ;
-            owl:onProperty :refersToContractToBeModified ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         :Notice ;
     skos:definition "An announcement of the Modification Of a Contract/Concession during its term by a Procuring Entity."@en ;
     skos:prefLabel "Contract Modification Notice"@en .
 
 :ResultNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :NoticeAwardInformation ;
-            owl:onProperty :announcesNoticeAwardInformation ],
-        [ a owl:Restriction ;
             owl:onProperty :refersToRole ;
             owl:someValuesFrom :AgentInRole ],
         [ a owl:Restriction ;
@@ -2639,6 +2615,10 @@ dc:relation a owl:AnnotationProperty .
             owl:onClass :Procedure ;
             owl:onProperty :refersToProcedure ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :NoticeAwardInformation ;
+            owl:onProperty :announcesNoticeAwardInformation ],
         :Notice ;
     skos:definition "An announcement of the award or non-award of a Contract by a Buyer. (WG approval 27/03/2019)"@en ;
     skos:prefLabel "Result Notice"@en .
@@ -2649,21 +2629,41 @@ dcterms:relation a owl:AnnotationProperty,
     dcterms:description "Recommended practice is to identify the related resource by means of a URI.  If this is not possible or feasible, a string conforming to a formal identification system may be provided."@en ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:comment "A related resource."@en ;
-    rdfs:isDefinedBy dcterms: ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     rdfs:subPropertyOf dc:relation .
 
 :StandardFormsNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:prefLabel "Standard Forms Notice"@en .
 
 :eFormsNotice a owl:Class ;
-    rdfs:isDefinedBy :not ;
+    rdfs:isDefinedBy <http://data.europa.eu/a4g/ontology> ;
     skos:prefLabel "e Forms Notice"@en .
 
-dcterms: a owl:NamedIndividual ;
-    dcterms:modified "2012-06-14"^^xsd:date ;
-    dcterms:publisher <http://purl.org/dc/aboutdcmi#DCMI> ;
-    dcterms:title "DCMI Metadata Terms - other"@en .
-
-:not a owl:NamedIndividual .
+<http://data.europa.eu/a4g/ontology> a owl:NamedIndividual,
+        owl:Ontology ;
+    rdfs:label """This artefact consolidates both the definitions (OWL core) and the restrictions and inference-related specifications (OWL restrictions) of the eProcurement Ontology Core into a single self-contained ontology.
+        The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.
+        The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."""@en ;
+    dcterms:created "2025-09-04"^^xsd:date ;
+    dcterms:description """This artefact consolidates both the definitions (OWL core) and the restrictions and inference-related specifications (OWL restrictions) of the eProcurement Ontology Core into a single self-contained ontology.
+        The eProcurement Ontology describes objects and concepts, with definitions, attributes and relationships which are present within the European public procurement domain.
+        The provision of these concepts provides the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency."""@en ;
+    dcterms:issued "2026-06-29"^^xsd:date ;
+    dcterms:license "CC BY 4.0" ;
+    dcterms:publisher "http://publications.europa.eu/resource/authority/corporate-body/PUBL" ;
+    dcterms:title "ePO Core full"@en ;
+    vann:preferredNamespacePrefix "epo" ;
+    vann:preferredNamespaceUri "http://data.europa.eu/a4g/ontology#" ;
+    rdfs:comment "This version is automatically generated from demo_ontology_module.xml on 2026-06-29" ;
+    rdfs:seeAlso <https://docs.ted.europa.eu/EPO/latest/index.html>,
+        <https://github.com/eprocurementontology/eprocurementontology>,
+        <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about>,
+        <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> ;
+    owl:imports skos:,
+        <http://www.w3.org/ns/adms> ;
+    owl:incompatibleWith "2.1.0" ;
+    owl:priorVersion "http://data.europa.eu/a4g/ontology-3.0.1" ;
+    owl:versionIRI <http://data.europa.eu/a4g/ontology-3.1.0> ;
+    owl:versionInfo "3.1.0" .
 
