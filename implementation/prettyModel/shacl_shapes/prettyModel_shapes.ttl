@@ -7,6 +7,13 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+prettyModel-shape:AssocClass1Shape a sh:NodeShape ;
+    rdfs:label "Assoc Class1" ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:property prettyModel-shape:AssocClass1-date,
+        prettyModel-shape:AssocClass1-name ;
+    sh:targetClass :AssocClass1 .
+
 prettyModel-shape:BicycleShape a sh:NodeShape ;
     rdfs:label "Bicycle" ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
@@ -92,9 +99,22 @@ prettyModel-shape:YetAnotherCShape a sh:NodeShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
     sh:targetClass :YetAnotherC .
 
+prettyModel-shape:AssocClass1-date a sh:PropertyShape ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Date" ;
+    sh:path :date .
+
+prettyModel-shape:AssocClass1-name a sh:PropertyShape ;
+    rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:name "Name" ;
+    sh:path :name .
+
 prettyModel-shape:Cycle-colour a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
-    sh:datatype xsd:short ;
     sh:maxCount 3 ;
     sh:minCount 1 ;
     sh:name "Colour" ;
@@ -102,7 +122,6 @@ prettyModel-shape:Cycle-colour a sh:PropertyShape ;
 
 prettyModel-shape:RentalCompany-name a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
-    sh:datatype xsd:long ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Name" ;
@@ -110,7 +129,6 @@ prettyModel-shape:RentalCompany-name a sh:PropertyShape ;
 
 prettyModel-shape:Vehicle-engravedID a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
-    sh:datatype xsd:int ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Engraved ID" ;
@@ -118,7 +136,6 @@ prettyModel-shape:Vehicle-engravedID a sh:PropertyShape ;
 
 prettyModel-shape:Vehicle-name a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
-    sh:datatype xsd:short ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Name" ;
@@ -126,7 +143,6 @@ prettyModel-shape:Vehicle-name a sh:PropertyShape ;
 
 prettyModel-shape:Vehicle-nickName a sh:PropertyShape ;
     rdfs:isDefinedBy prettyModel-shape:prettyModel-shape ;
-    sh:datatype xsd:long ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name "Nick name" ;
@@ -137,15 +153,17 @@ prettyModel-shape:prettyModel-shape a owl:Ontology ;
     dcterms:created "2024-01-01"^^xsd:date ;
     dcterms:description """This artefact provides the generic datashape specifications for the prettyModel demonstration ontology.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
-    dcterms:issued "2026-06-26"^^xsd:date ;
+    dcterms:issued "2026-06-30"^^xsd:date ;
     dcterms:license "CC BY 4.0" ;
     dcterms:publisher "https://example.com/publisher" ;
     dcterms:title "prettyModel shapes"@en ;
     vann:preferredNamespacePrefix "ex" ;
     vann:preferredNamespaceUri "http://example.com/ex#" ;
-    rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-26" ;
+    rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-30" ;
     owl:imports :prettyModel,
         :prettyModel-restriction ;
+    owl:incompatibleWith "" ;
+    owl:priorVersion "http://example.com/ex-shape#prettyModel-shape-" ;
     owl:versionIRI prettyModel-shape:prettyModel-shape-1.0.0 ;
     owl:versionInfo "1.0.0" .
 

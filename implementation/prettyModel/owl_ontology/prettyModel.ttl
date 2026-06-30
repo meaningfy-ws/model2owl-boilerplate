@@ -1,10 +1,15 @@
 @prefix : <http://example.com/ex#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:AssocClass1 a owl:Class ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "Assoc Class1"@en .
 
 :Bicycle a owl:Class ;
     rdfs:isDefinedBy :prettyModel ;
@@ -64,11 +69,15 @@
     rdfs:isDefinedBy :prettyModel ;
     skos:prefLabel "Yet Another C"@en .
 
-:colour a owl:DatatypeProperty ;
+:colour a rdf:Property ;
     rdfs:isDefinedBy :prettyModel ;
     skos:prefLabel "colour"@en .
 
-:engravedID a owl:DatatypeProperty ;
+:date a rdf:Property ;
+    rdfs:isDefinedBy :prettyModel ;
+    skos:prefLabel "date"@en .
+
+:engravedID a rdf:Property ;
     rdfs:isDefinedBy :prettyModel ;
     skos:prefLabel "engraved ID"@en .
 
@@ -86,11 +95,11 @@
     rdfs:isDefinedBy :prettyModel ;
     skos:prefLabel "lends"@en .
 
-:name a owl:DatatypeProperty ;
+:name a rdf:Property ;
     rdfs:isDefinedBy :prettyModel ;
     skos:prefLabel "name"@en .
 
-:nickName a owl:DatatypeProperty ;
+:nickName a rdf:Property ;
     rdfs:isDefinedBy :prettyModel ;
     skos:prefLabel "nick Name"@en .
 
@@ -133,13 +142,15 @@
     dcterms:description """This artefact provides the definitions for the prettyModel demonstration ontology.
         This artefact excludes the restrictions.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI."""@en ;
-    dcterms:issued "2026-06-26"^^xsd:date ;
+    dcterms:issued "2026-06-30"^^xsd:date ;
     dcterms:license "CC BY 4.0" ;
     dcterms:publisher "https://example.com/publisher" ;
     dcterms:title "prettyModel core"@en ;
     vann:preferredNamespacePrefix "ex" ;
     vann:preferredNamespaceUri "http://example.com/ex#" ;
-    rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-26" ;
+    rdfs:comment "This version is automatically generated from prettyModel.xml on 2026-06-30" ;
+    owl:incompatibleWith "" ;
+    owl:priorVersion "http://example.com/ex#prettyModel-" ;
     owl:versionIRI :prettyModel-1.0.0 ;
     owl:versionInfo "1.0.0" .
 

@@ -28,16 +28,36 @@
         <dcterms:description xml:lang="en">This artefact provides the restrictions and inference-related specifications for the prettyModel demonstration ontology.
         This artefact excludes the definitions of concepts.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI.</dcterms:description>
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-26</dcterms:issued>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-30</dcterms:issued>
         <dcterms:license>CC BY 4.0</dcterms:license>
         <dcterms:publisher>https://example.com/publisher</dcterms:publisher>
         <dcterms:title xml:lang="en">prettyModel restrictions</dcterms:title>
         <vann:preferredNamespacePrefix>ex</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://example.com/ex#</vann:preferredNamespaceUri>
-        <rdfs:comment>This version is automatically generated from prettyModel.xml on 2026-06-26</rdfs:comment>
+        <rdfs:comment>This version is automatically generated from prettyModel.xml on 
+                2026-06-30</rdfs:comment>
         <rdfs:label xml:lang="en">prettyModel — restrictions</rdfs:label>
+        <owl:incompatibleWith></owl:incompatibleWith>
+        <owl:priorVersion>http://example.com/ex#prettyModel-restriction-</owl:priorVersion>
         <owl:versionInfo>1.0.0</owl:versionInfo>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
     
 
 
@@ -55,7 +75,6 @@
     <!-- http://example.com/ex#for -->
 
     <rdf:Description rdf:about="http://example.com/ex#for">
-        <rdfs:domain rdf:resource="http://example.com/ex#Insurance"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -111,6 +130,31 @@
     
 
 
+    <!-- http://example.com/ex#name -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/ex#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/ex#AssocClass1"/>
+                    <rdf:Description rdf:about="http://example.com/ex#RentalCompany"/>
+                    <rdf:Description rdf:about="http://example.com/ex#Vehicle"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/ex#long"/>
+                    <rdf:Description rdf:about="http://example.com/ex#short"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://example.com/ex#ownedby -->
 
     <rdf:Description rdf:about="http://example.com/ex#ownedby">
@@ -151,54 +195,40 @@
 
     <!-- http://example.com/ex#colour -->
 
-    <rdf:Description rdf:about="http://example.com/ex#colour">
+    <owl:DatatypeProperty rdf:about="http://example.com/ex#colour">
         <rdfs:domain rdf:resource="http://example.com/ex#Cycle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
-    </rdf:Description>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/ex#date -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/ex#date">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.com/ex#AssocClass1"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://example.com/ex#engravedID -->
 
-    <rdf:Description rdf:about="http://example.com/ex#engravedID">
+    <owl:DatatypeProperty rdf:about="http://example.com/ex#engravedID">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://example.com/ex#Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://example.com/ex#name -->
-
-    <rdf:Description rdf:about="http://example.com/ex#name">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://example.com/ex#RentalCompany"/>
-                    <rdf:Description rdf:about="http://example.com/ex#Vehicle"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <rdfs:Datatype>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#long"/>
-                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#short"/>
-                </owl:unionOf>
-            </rdfs:Datatype>
-        </rdfs:range>
-    </rdf:Description>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://example.com/ex#nickName -->
 
-    <rdf:Description rdf:about="http://example.com/ex#nickName">
+    <owl:DatatypeProperty rdf:about="http://example.com/ex#nickName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://example.com/ex#Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
-    </rdf:Description>
+    </owl:DatatypeProperty>
     
 
 
@@ -210,6 +240,21 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://example.com/ex#AssocClass1 -->
+
+    <rdf:Description rdf:about="http://example.com/ex#AssocClass1">
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error3"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/ex#date"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
     
 
 
@@ -264,17 +309,11 @@
     <!-- http://example.com/ex#RentalCompany -->
 
     <rdf:Description rdf:about="http://example.com/ex#RentalCompany">
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://example.com/ex#lends"/>
                 <owl:someValuesFrom rdf:resource="http://example.com/ex#Vehicle"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.com/ex#name"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </rdf:Description>
@@ -284,6 +323,7 @@
     <!-- http://example.com/ex#Vehicle -->
 
     <rdf:Description rdf:about="http://example.com/ex#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error1"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://example.com/ex#engravedID"/>
@@ -293,18 +333,50 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://example.com/ex#name"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://example.com/ex#nickName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://example.com/ex#long -->
+
+    <owl:Class rdf:about="http://example.com/ex#long"/>
+    
+
+
+    <!-- http://example.com/ex#short -->
+
+    <owl:Class rdf:about="http://example.com/ex#short"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error1 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error1"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error2 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error2"/>
+    
+
+
+    <!-- http://org.semanticweb.owlapi/error#Error3 -->
+
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error3"/>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:qualifiedCardinality>
     </rdf:Description>
 </rdf:RDF>
 

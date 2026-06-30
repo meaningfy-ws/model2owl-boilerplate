@@ -29,14 +29,16 @@
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-01</dcterms:created>
         <dcterms:description xml:lang="en">This artefact provides the generic datashape specifications for the prettyModel demonstration ontology.
         prettyModel is a sample non-ePO UML conceptual model used to exercise the model2owl transformation pipeline in CI.</dcterms:description>
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-26</dcterms:issued>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-30</dcterms:issued>
         <dcterms:license>CC BY 4.0</dcterms:license>
         <dcterms:publisher>https://example.com/publisher</dcterms:publisher>
         <dcterms:title xml:lang="en">prettyModel shapes</dcterms:title>
         <vann:preferredNamespacePrefix>ex</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://example.com/ex#</vann:preferredNamespaceUri>
-        <rdfs:comment>This version is automatically generated from prettyModel.xml on 2026-06-26</rdfs:comment>
+        <rdfs:comment>This version is automatically generated from prettyModel.xml on 2026-06-30</rdfs:comment>
         <rdfs:label xml:lang="en">prettyModel — shapes</rdfs:label>
+        <owl:incompatibleWith></owl:incompatibleWith>
+        <owl:priorVersion>http://example.com/ex-shape#prettyModel-shape-</owl:priorVersion>
         <owl:versionInfo>1.0.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -50,12 +52,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.w3.org/ns/shacl#datatype -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#datatype"/>
     
 
 
@@ -126,6 +122,45 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://example.com/ex-shape#AssocClass1-date -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/ex-shape#AssocClass1-date">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name>Date</sh:name>
+        <sh:path rdf:resource="http://example.com/ex#date"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/ex-shape#AssocClass1-name -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/ex-shape#AssocClass1-name">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
+        <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
+        <sh:name>Name</sh:name>
+        <sh:path rdf:resource="http://example.com/ex#name"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/ex-shape#AssocClass1Shape -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/ex-shape#AssocClass1Shape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
+        <rdfs:label>Assoc Class1</rdfs:label>
+        <sh:property rdf:resource="http://example.com/ex-shape#AssocClass1-date"/>
+        <sh:property rdf:resource="http://example.com/ex-shape#AssocClass1-name"/>
+        <sh:targetClass rdf:resource="http://example.com/ex#AssocClass1"/>
+    </owl:NamedIndividual>
     
 
 
@@ -200,7 +235,6 @@
     <owl:NamedIndividual rdf:about="http://example.com/ex-shape#Cycle-colour">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
         <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
         <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sh:maxCount>
         <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
         <sh:name>Colour</sh:name>
@@ -270,7 +304,6 @@
     <owl:NamedIndividual rdf:about="http://example.com/ex-shape#RentalCompany-name">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
         <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
         <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
         <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
         <sh:name>Name</sh:name>
@@ -307,7 +340,6 @@
     <owl:NamedIndividual rdf:about="http://example.com/ex-shape#Vehicle-engravedID">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
         <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
         <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
         <sh:name>Engraved ID</sh:name>
@@ -321,7 +353,6 @@
     <owl:NamedIndividual rdf:about="http://example.com/ex-shape#Vehicle-name">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
         <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
         <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
         <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
         <sh:name>Name</sh:name>
@@ -335,7 +366,6 @@
     <owl:NamedIndividual rdf:about="http://example.com/ex-shape#Vehicle-nickName">
         <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
         <rdfs:isDefinedBy rdf:resource="http://example.com/ex-shape#prettyModel-shape"/>
-        <sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
         <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:maxCount>
         <sh:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minCount>
         <sh:name>Nick name</sh:name>

@@ -22,7 +22,7 @@
 
 <head>	
     <meta charset="utf-8" />
-    <title>prettyModel core</title>
+    <title>ePO Core core</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
     // All config options at https://respec.org/docs/
@@ -30,17 +30,21 @@
 	var myeditors = [
 	
 	
+	
+	
 	    
 	    
 		
 		   {
-		    name: "Meaningfy ",
+		    name: "Alice Example",
 		      
-		    companyURL: "https://meaningfy.ws",
+		    companyURL: "https://acme.example",
 		      
 		      
-		    company: "Meaningfy",
+		    company: "ACME Labs",
 		      
+		      
+		    mailto: "alice@example.org"
 		      
 		    }
 		
@@ -53,6 +57,27 @@
 	var myauthors = [
 	
 	
+	    
+	    
+		
+		   {
+		    name: "John Smith",
+		      
+		    companyURL: "https://acme.example",
+		      
+		      
+		    company: "ACME Labs",
+		      
+		      
+		    mailto: "john@example.org"
+		      
+		    }
+		
+		
+             
+        
+	
+	
 	
 		]
 	
@@ -63,35 +88,55 @@
    
     var respecConfig = {
       postProcess: [quickreference],
-      edDraftURI: "",
-      latestVersion: "",
+      edDraftURI: "https://OP-TED.github.io/ePO/releases/5.0.0/",
+      latestVersion: "https://OP-TED.github.io/ePO/releases/4.2.0/",
       specStatus: "base",
-      publishDate: "2026-06-26",
+      publishDate: "2026-06-30",
       editors: myeditors,
       authors: myauthors,
-      github: "",
-      shortName: "prettyModel core",
+      github: "OP-TED/ePO",
+      shortName: "ePO Core core",
       xref: "web-platform",
       doJsonLd: true,
-      
-        logos: [{
-            src: "assets/img/logo.png",
-            url: "https://example.com",
-            alt: "logo",
-            width: 154,
-            height: 140,
-            id: "vocab-logo",
-        },],
       
       generatedSubtitle: "",
       additionalCopyrightHolders: "",
       
-        localBiblio: {'W3ID': {'href': 'https://w3id.org/', 'title': 'Permanent Identifiers for the Web', 'publisher': 'W3C Permanent Identifier Community Group'}},
+        localBiblio: {'W3ID': {'href': 'https://w3id.org/', 'title': 'Permanent Identifiers for the Web', 'publisher': 'W3C Permanent Identifier Community Group'}, 'FAIR': {'href': 'https://www.openaire.eu/how-to-make-your-data-fair', 'title': 'How to make your data FAIR', 'publisher': 'OpenAire'}},
       
       
         otherLinks: [
           
+          {
+            key: "Owners:",
+            data: [
+              
+                {
+                  value: "ACME",
+                  
+                  href: "https://joinup.ec.europa.eu/collection/semic-support-centre"
+                  
+                }, 
+              
+                {
+                  value: "Tom White",
+                  
+                }
+              
+            ]
+          },
           
+          
+          
+          {
+            key: "Source:",
+            data: [
+                {
+                  value: "https://github.com/OP-TED/ePO",
+                  href: "https://github.com/OP-TED/ePO"
+                }
+            ]
+          },
           
           
           
@@ -166,11 +211,11 @@
     </p>
     <p>
         
-            This application profile has the status <i>Draft</i> and has been published on 2026-06-26.
+            This application profile has the status <i>Draft</i> and has been published on 2026-06-30.
         
     </p>
     <p>
-        History of changes to the project is available in <a href="">Changelog</a>.
+        History of changes to the project is available in <a href="https://github.com/OP-TED/ePO/releases">Changelog</a>.
     </p>
 </section>
 
@@ -185,7 +230,7 @@
     </p>
     <p>
         
-            This specification of prettyModel core is published under CC BY 4.0.
+            This specification of ePO Core core is published under CC BY 4.0.
         
     </p>
 </section>
@@ -213,9 +258,12 @@
             
                 
     <h3>Used Prefixes</h3>
-    
-    <p>No custom prefixes are defined in this project.</p>
-    
+    <table id="table-namespaces" class="simple">
+        <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+        <tbody>
+        
+        </tbody>
+    </table>
     
             
         </section>
@@ -232,6 +280,7 @@
                         This document describes the usage of the following main entities for a correct usage of the vocabulary:
                         <br />
                         |
+                <a href="#Assocclass1">Assoc class1</a> |
                 <a href="#Bicycle">Bicycle</a> |
                 <a href="#Boat">Boat</a> |
                 <a href="#Boringwheel">Boring wheel</a> |
@@ -249,8 +298,11 @@
                 <a href="#Wheel">Wheel</a> |
                 <a href="#Yetanotherc">Yet another C</a> |
                     </p>
-                    
-                    
+                    <p>
+                        The main entities are supported by:
+                        <br />
+                        |
+                    </p>
             
         
         
@@ -286,6 +338,217 @@
             
                 
     <section>
+        <h3 id="Assocclass1">
+            <a href="http://example.com/ex#AssocClass1"
+                data-toggle="tooltip"
+                data-content="http://example.com/ex#AssocClass1"
+                data-placement="right">Assoc class1</a>
+
+        </h3>
+        <span style="float:right;margin-right:10px;">
+        
+        
+        
+        
+        
+            
+            
+        
+
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Assoc class1'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Assocclass1" target="_blank" rel="noopener noreferrer" >
+            <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
+        </a>
+    
+</span>
+        
+        <dl>
+            <dt>
+                Definition
+            </dt>
+            <dd>
+                
+            </dd>
+            
+            
+            
+            <dt>
+                Properties
+            </dt>
+            
+                <dd>
+                    For this entity the following properties are defined:
+                        
+                        
+                        <a href="#Assocclass1.date">date</a>,
+                        
+                        
+                        <a href="#Assocclass1.name">name</a>.
+                </dd>
+            
+        </dl>
+        
+            <div class="u-table-overflow">
+                <table class="data-table simple" id="table-mandatory-classes">
+                    <thead>
+                        <tr class="data-table__header">
+                            <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:12%">
+                                Property
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:12%">
+                                Range
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:6%">
+                                Card
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Definition 
+                            </th>
+                            <th class="data-table__header-title--sortable" style="width:30%">
+                                Usage
+                            </th>
+                            
+                            <th class="data-table__header-title--sortable" style="width:20%">
+                                Reuse
+                            </th>
+                            
+                            
+                                <th class="data-table__header-title--sortable data-table__header-title--sortable-active" style="width:5%">
+                                    Feedback
+                                </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody class="supertype">
+                        
+                            <tr id="Assocclass1.date"
+                                typeof="rdf:Property"
+                                resource="http://example.com/ex#date"
+                                class="class mandatory">
+                                <td>
+                                        
+                                        
+                                        <a href="http://example.com/ex#date"
+                                        data-toggle="tooltip"
+                                        data-content="http://example.com/ex#date"
+                                        data-placement="right">
+                                        date</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            
+                                                <a href="#Date"
+                                                data-toggle="tooltip"
+                                                data-content="http://example.com/ex#date"
+                                                data-placement="right">Date</a>
+                                            
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+        
+        
+        
+        
+        
+            
+            
+       
+            
+
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Date'%20in%20'Assoc class1'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Assocclass1.date" target="_blank" rel="noopener noreferrer" >
+            <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
+        </a>
+    
+
+                                </td>
+                            </tr>
+                        
+                            <tr id="Assocclass1.name"
+                                typeof="rdf:Property"
+                                resource="http://example.com/ex#name"
+                                class="class mandatory">
+                                <td>
+                                        
+                                        
+                                        <a href="http://example.com/ex#name"
+                                        data-toggle="tooltip"
+                                        data-content="http://example.com/ex#name"
+                                        data-placement="right">
+                                        name</a>
+                                </td>
+                                <td>
+                                    
+                                        
+                                            
+                                                <a href="#Short"
+                                                data-toggle="tooltip"
+                                                data-content="http://example.com/ex#short"
+                                                data-placement="right">Short</a>
+                                            
+                                        
+                                    
+                                </td>
+                                <td>
+                                    1..1
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+                                </td>
+                                
+                                <td>
+                                    
+        
+        
+        
+        
+        
+            
+            
+       
+            
+
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Name'%20in%20'Assoc class1'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Assocclass1.name" target="_blank" rel="noopener noreferrer" >
+            <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
+        </a>
+    
+
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        
+    </section>
+
+            
+        
+            
+                
+    <section>
         <h3 id="Bicycle">
             <a href="http://example.com/ex#Bicycle"
                 data-toggle="tooltip"
@@ -303,7 +566,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Bicycle'&body=Explain%20your%20issue%20for%20%23Bicycle" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Bicycle'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Bicycle" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -360,7 +623,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Boat'&body=Explain%20your%20issue%20for%20%23Boat" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Boat'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Boat" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -480,7 +743,7 @@
        
             
 
-        <a href="/new?title=Issue%20for%20'Has ins sub'%20in%20'Boat'&body=Explain%20your%20issue%20for%20%23Boat.hasinssub" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Has ins sub'%20in%20'Boat'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Boat.hasinssub" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -516,7 +779,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Boring wheel'&body=Explain%20your%20issue%20for%20%23Boringwheel" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Boring wheel'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Boringwheel" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -573,7 +836,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Car'&body=Explain%20your%20issue%20for%20%23Car" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Car'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Car" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -630,7 +893,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Class for qual assoc'&body=Explain%20your%20issue%20for%20%23Classforqualassoc" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Class for qual assoc'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Classforqualassoc" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -743,7 +1006,7 @@
        
             
 
-        <a href="/new?title=Issue%20for%20'Target'%20in%20'Class for qual assoc'&body=Explain%20your%20issue%20for%20%23Classforqualassoc.target" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Target'%20in%20'Class for qual assoc'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Classforqualassoc.target" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -779,7 +1042,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Contractor'&body=Explain%20your%20issue%20for%20%23Contractor" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Contractor'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Contractor" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -829,7 +1092,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Cycle'&body=Explain%20your%20issue%20for%20%23Cycle" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Cycle'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Cycle" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -949,7 +1212,7 @@
        
             
 
-        <a href="/new?title=Issue%20for%20'Colour'%20in%20'Cycle'&body=Explain%20your%20issue%20for%20%23Cycle.colour" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Colour'%20in%20'Cycle'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Cycle.colour" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -985,7 +1248,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Fancy wheel'&body=Explain%20your%20issue%20for%20%23Fancywheel" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Fancy wheel'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Fancywheel" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1042,7 +1305,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Insurance'&body=Explain%20your%20issue%20for%20%23Insurance" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Insurance'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Insurance" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1155,7 +1418,7 @@
        
             
 
-        <a href="/new?title=Issue%20for%20'For'%20in%20'Insurance'&body=Explain%20your%20issue%20for%20%23Insurance.for" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'For'%20in%20'Insurance'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Insurance.for" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1191,7 +1454,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Monocycle'&body=Explain%20your%20issue%20for%20%23Monocycle" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Monocycle'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Monocycle" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1248,7 +1511,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Parts class'&body=Explain%20your%20issue%20for%20%23Partsclass" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Parts class'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Partsclass" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1298,7 +1561,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Rental company'&body=Explain%20your%20issue%20for%20%23Rentalcompany" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Rental company'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Rentalcompany" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1414,7 +1677,7 @@
        
             
 
-        <a href="/new?title=Issue%20for%20'Lends'%20in%20'Rental company'&body=Explain%20your%20issue%20for%20%23Rentalcompany.lends" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Lends'%20in%20'Rental company'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Rentalcompany.lends" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1473,7 +1736,7 @@
        
             
 
-        <a href="/new?title=Issue%20for%20'Name'%20in%20'Rental company'&body=Explain%20your%20issue%20for%20%23Rentalcompany.name" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Name'%20in%20'Rental company'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Rentalcompany.name" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1509,7 +1772,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Some other class'&body=Explain%20your%20issue%20for%20%23Someotherclass" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Some other class'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Someotherclass" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1622,7 +1885,7 @@
        
             
 
-        <a href="/new?title=Issue%20for%20'Has ins'%20in%20'Some other class'&body=Explain%20your%20issue%20for%20%23Someotherclass.hasins" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Has ins'%20in%20'Some other class'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Someotherclass.hasins" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1658,7 +1921,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Vehicle'&body=Explain%20your%20issue%20for%20%23Vehicle" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Vehicle'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Vehicle" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1777,7 +2040,7 @@
        
             
 
-        <a href="/new?title=Issue%20for%20'Engraved ID'%20in%20'Vehicle'&body=Explain%20your%20issue%20for%20%23Vehicle.engravedid" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Engraved ID'%20in%20'Vehicle'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Vehicle.engravedid" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1836,7 +2099,7 @@
        
             
 
-        <a href="/new?title=Issue%20for%20'Name'%20in%20'Vehicle'&body=Explain%20your%20issue%20for%20%23Vehicle.name" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Name'%20in%20'Vehicle'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Vehicle.name" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1895,7 +2158,7 @@
        
             
 
-        <a href="/new?title=Issue%20for%20'Nick name'%20in%20'Vehicle'&body=Explain%20your%20issue%20for%20%23Vehicle.nickname" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Nick name'%20in%20'Vehicle'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Vehicle.nickname" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1931,7 +2194,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Wheel'&body=Explain%20your%20issue%20for%20%23Wheel" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Wheel'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Wheel" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -1981,7 +2244,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Yet another C'&body=Explain%20your%20issue%20for%20%23Yetanotherc" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Yet another C'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Yetanotherc" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -2020,9 +2283,44 @@
         
 <section>
     <h2>Supportive Entities</h2>
+    The supportive entities are supporting the main entities in the vocabulary. They are included in the vocabulary because they form the range of properties.
+
     
-    
-    This vocabulary does not define any supportive entities.
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
     
 </section>
 
@@ -2079,7 +2377,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Date'&body=Explain%20your%20issue%20for%20%23Date" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Date'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Date" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -2111,7 +2409,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Short'&body=Explain%20your%20issue%20for%20%23Short" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Short'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Short" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -2143,7 +2441,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Long'&body=Explain%20your%20issue%20for%20%23Long" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Long'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Long" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -2175,7 +2473,7 @@
             
         
 
-        <a href="/new?title=Issue%20for%20'Int'&body=Explain%20your%20issue%20for%20%23Int" target="_blank" rel="noopener noreferrer" >
+        <a href="https://github.com/OP-TED/ePO/issues/new?title=Issue%20for%20'Int'&body=Explain%20your%20issue%20for%20https://OP-TED.github.io/ePO/releases/5.0.0/%23Int" target="_blank" rel="noopener noreferrer" >
             <img src="./assets/img/callout.png" loading="lazy" alt="[o]" title="Report an issue or share feedback" class="feedbackButton"/>
         </a>
     
@@ -2240,6 +2538,46 @@
                 </tr>
             </thead>
             <tbody>
+                
+                    
+                        
+                            
+                            
+                            <tr>
+                                <td><a href="#Assocclass1">Assoc class1</a></td>
+                                <td><div class="compact-uri">http://example.com/ex#AssocClass1</div></td>
+                                <td>
+    
+    
+        
+        
+            Mandatory
+        
+    
+</td>
+                                <td><a href="#Assocclass1.date">date </a></td>
+                                <td><div class="compact-uri">http://example.com/ex#date</div></td>
+                            </tr>
+                        
+                            
+                            
+                            <tr>
+                                <td><a href="#Assocclass1">Assoc class1</a></td>
+                                <td><div class="compact-uri">http://example.com/ex#AssocClass1</div></td>
+                                <td>
+    
+    
+        
+        
+            Mandatory
+        
+    
+</td>
+                                <td><a href="#Assocclass1.name">name </a></td>
+                                <td><div class="compact-uri">http://example.com/ex#name</div></td>
+                            </tr>
+                        
+                    
                 
                     
                 
@@ -2481,22 +2819,6 @@
     <p>
         The following list provides links to semantic data specifications and other resources related to this vocabulary.
     </p>
-    
-        <ul>
-            
-                <li><a href="./sds/prettyModel.rdf">OWL core file</a></li>
-            
-                <li><a href="./sds/prettyModel_restrictions.rdf">OWL restrictions file</a></li>
-            
-                <li><a href="./sds/prettyModel_shapes.rdf">SHACL shapes file (RDF)</a></li>
-            
-                <li><a href="./sds/prettyModel_shapes.ttl">SHACL shapes file (TTL)</a></li>
-            
-                <li><a href="./sds/prettyModel_context.jsonld">JSON-LD context file</a></li>
-            
-                <li><a href="./sds/prettyModel.xml">UML XMI model file</a></li>
-            
-        </ul>
     
 </section>
 
