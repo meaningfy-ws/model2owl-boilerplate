@@ -17,6 +17,7 @@ Main steps:
 > If the branching option is used, the branch will not be merged into `master`. 
 > It is recommended to delete the branch once the desired output is generated and the work is complete.
 # Usage
+This section covers the practical steps for setting up a model: follow the [naming conventions](#naming-conventions), create the expected [folder structure](#folder-structure-conventions), [add a UML model](#adding-a-uml-model), and copy and adapt the [model2owl config](#adding-model2owl-config). It also explains the [GitHub Actions](#adjust-github-actions) used to generate OWL, SHACL, glossaries, diff reports, and [ReSpec documentation](#respec-documentation-generation), along with where those outputs are written. The remaining subsections describe the [output layout](#output), [commit-message conventions](#commit-messages-for-automatically-generated-reports), [workflow summary](#workflow-summary), and [CI troubleshooting](#troubleshooting-failed-ci-runs).
 ## Naming conventions
 * The name of the created folders should not contain spaces. It can contain underscores or hyphen if it's strictly necessary 
 * The name of the UML model export file should match its folder name (i.e mymodel.xml)
@@ -198,6 +199,15 @@ Two GitHub Action scripts are located in the [.github](./.github) directory:
  * [diff-combined.yml](.github/workflows/diff-combined.yml) is used to compute a
    difference between two versions of RDF artefacts and generate
    machine-readable (JSON) and human-readable (AsciiDoc) reports.
+
+### CI workflow and customization
+
+`transform_with_model2owl.yml` first detects the affected modules, then runs the generation jobs for glossary/conventions report, OWL/SHACL, JSON-LD context, and ReSpec. The ReSpec job depends on the SHACL output, `commit_transform` collects the generated files, `diff` compares the new OWL/SHACL artefacts with the previous revision, and `build_pages` publishes the ReSpec output to GitHub Pages.
+
+To customize the workflow, disable the generation you do not need by removing or guarding the corresponding job or step; the generated files and their paths are listed in [Generated Output](#generated-output). 
+
+When adjusting the workflow to your needs, keep the dependency chain in mind: ReSpec needs SHACL, diff needs the transform outputs, and Pages needs ReSpec.
+That means `generate_respec` cannot run unless `transform` has already produced `implementation/*/shacl_shapes/`, because the ReSpec job copies `ontology_shapes.ttl` from that output into the documentation package. The `diff` job is tied to the OWL and SHACL artefacts emitted by `transform`, so disabling those outputs also removes the input that diff uses to compare revisions. Likewise, `build_pages` only publishes the `respec/` artefact, so if you turn off ReSpec generation there is nothing for GitHub Pages to deploy.
 
 ### Transform with model2owl
 
@@ -527,17 +537,15 @@ ReSpec documentation uses metadata from `model2owl-config/metadata.json`:
 
 ### Generated Output
 
-The workflow generates a complete documentation package in the `respec/` directory:
-- **`index.html`**: Main documentation page
-- **`sds/`**: All semantic artifacts (OWL, SHACL, JSON-LD context files)
-- **`assets/`**: Your images and examples
-- **Static resources**: CSS, JavaScript for functionality
+The workflow writes the generated artefacts back into the repository using the same paths that GitHub Actions packages and commits:
+- **Glossary**: `glossary/`
+- **Conventions report**: `implementation/*/conventions_report/`
+- **Formal OWL ontology**: `implementation/*/owl_ontology/`
+- **SHACL shapes**: `implementation/*/shacl_shapes/`
+- **JSON-LD context**: `implementation/*/jsonld_context/`
+- **ReSpec documentation**: `implementation/*/respec/`
+- **Diff reports**: `diff-reports/`
 
 ### GitHub Pages Integration
 
-The generated ReSpec documentation is automatically published to GitHub Pages, creating a documentation website for your ontology that includes:
-- Interactive examples
-- Downloadable artifacts
-- Search functionality
-
-
+ReSpec output is also published to GitHub Pages as a documentation site for each processed model. The preferred Pages setup is **Build and deployment** -> **Source** = **GitHub Actions**; see GitHub Docs for [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
