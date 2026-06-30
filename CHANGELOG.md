@@ -29,3 +29,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
   exports that were incompatible with the new generators.
 - Added the `annotateDefinedConceptsWithOntology` config toggle required by the
   `meaningfy-ws/model2owl` engine's OWL-core generator.
+
+
+## [3.3.0-beta] - 2026-06-30
+### Added
+- `generateOWLFull` and `fullArtefactURI` configuration variables added to all
+  module configs to opt into the optional OWL-full consolidated artefact.
+- Top-level `model2owl-config/` directory converted into a documented generic
+  configuration template, with its own `README.md` explaining the purpose of each
+  file and how to adapt the template to a new project.
+
+### Changed
+- OWL artefacts are cleaned before generation to prevent stale files when the
+  `generateOWLFull` toggle is changed between runs.
+- README updated to clarify workflow outputs, CI dependencies, and how to use the
+  boilerplate for a new project.
+
+### Fixed
+- Spurious `../` in the pre-cleanup path of the transform job.
